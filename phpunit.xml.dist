@@ -21,7 +21,7 @@
         </whitelist>
     </filter>
     <testsuites>
-        <testsuite name="webeweb/library-template">
+        <testsuite name="webeweb/xmltv-library">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>

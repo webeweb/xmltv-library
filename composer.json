@@ -1,12 +1,12 @@
 {
-    "name": "webeweb/library-template",
+    "name": "webeweb/xmltv-library",
     "type": "library",
     "description": "",
     "keywords": [
         "library",
         "webeweb"
     ],
-    "homepage": "https://github.com/webeweb/library-template",
+    "homepage": "https://github.com/webeweb/xmltv-library",
     "license": "MIT",
     "authors": [
         {
@@ -30,15 +30,15 @@
     },
     "autoload": {
         "psr-4": {
-            "WBW\\Library\\Template\\": "src/"
+            "WBW\\Library\\XMLTV\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WBW\\Library\\Template\\Tests\\": "tests/"
+            "WBW\\Library\\XMLTV\\Tests\\": "tests/"
         }
     },
     "support": {
-        "issues": "https://github.com/webeweb/library-template/issues"
+        "issues": "https://github.com/webeweb/xmltv-library/issues"
     }
 }

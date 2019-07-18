@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the library-template package.
+ * This file is part of the xmltv-library package.
  *
  * (c) 2019 WEBEWEB
  *
