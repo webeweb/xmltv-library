@@ -35,6 +35,13 @@ class Programme extends AbstractModel {
     private $country;
 
     /**
+     * Credits.
+     *
+     * @var Credits
+     */
+    private $credits;
+
+    /**
      * Date.
      *
      * @var Date
@@ -115,6 +122,15 @@ class Programme extends AbstractModel {
      */
     public function getCountry() {
         return $this->country;
+    }
+
+    /**
+     * Get the credits.
+     *
+     * @return Credits Returns the credits.
+     */
+    public function getCredits() {
+        return $this->credits;
     }
 
     /**
@@ -219,6 +235,16 @@ class Programme extends AbstractModel {
      */
     public function setCountry(Country $country = null) {
         $this->country = $country;
+        return $this;
+    }
+
+    /** Set the credit.
+     *
+     * @param Credits|null $credits The credits.
+     * @return Programme Returns this programme.
+     */
+    public function setCredits(Credits $credits = null) {
+        $this->credits = $credits;
         return $this;
     }
 

@@ -42,6 +42,7 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getCategory());
         $this->assertNull($obj->getChannel());
         $this->assertNull($obj->getCountry());
+        $this->assertNull($obj->getCredits());
         $this->assertNull($obj->getDate());
         $this->assertNull($obj->getIcon());
         $this->assertNull($obj->getLength());
@@ -98,6 +99,22 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj->setCountry($country);
         $this->assertSame($country, $obj->getCountry());
+    }
+
+    /**
+     * Tests the setCredits() method.
+     *
+     * @return void
+     */
+    public function testSetCredits() {
+
+        // Set an Credits mock.
+        $credits = new Credits();
+
+        $obj = new Programme();
+
+        $obj->setCredits($credits);
+        $this->assertSame($credits, $obj->getCredits());
     }
 
     /**
