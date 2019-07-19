@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Tests\Model;
 use WBW\Library\XMLTV\Model\Category;
 use WBW\Library\XMLTV\Model\Channel;
 use WBW\Library\XMLTV\Model\Country;
+use WBW\Library\XMLTV\Model\Credits;
 use WBW\Library\XMLTV\Model\Date;
 use WBW\Library\XMLTV\Model\Icon;
 use WBW\Library\XMLTV\Model\Length;
