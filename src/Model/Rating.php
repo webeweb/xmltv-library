@@ -73,7 +73,7 @@ class Rating extends AbstractModel {
      * @param Icon|null $icon The icon.
      * @return Rating Returns this rating.
      */
-    public function setIcon(Icon $icon = null ) {
+    public function setIcon(Icon $icon = null) {
         $this->icon = $icon;
         return $this;
     }
