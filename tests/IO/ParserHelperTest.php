@@ -34,7 +34,7 @@ class ParserHelperTest extends AbstractTestCase {
 
         $this->assertNull(ParserHelper::getDOMAttributeValue($displayNameNode, ""));
         $this->assertNull(ParserHelper::getDOMAttributeValue($tvNode, ""));
-        $this->assertEquals("https://api.github.com", ParserHelper::getDOMAttributeValue($tvNode, "source-info-url"));
+        $this->assertEquals("https://github.com", ParserHelper::getDOMAttributeValue($tvNode, "generator-info-url"));
     }
 
     /**
