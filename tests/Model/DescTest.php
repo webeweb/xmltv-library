@@ -31,7 +31,21 @@ class DescTest extends AbstractTestCase {
 
         $obj = new Desc();
 
+        $this->assertNull($obj->getContent());
         $this->assertNull($obj->getLang());
+    }
+
+    /**
+     * Tests the setContent() method.
+     *
+     * @return void
+     */
+    public function testSetContent() {
+
+        $obj = new Desc();
+
+        $obj->setContent("content");
+        $this->assertEquals("content", $obj->getContent());
     }
 
     /**

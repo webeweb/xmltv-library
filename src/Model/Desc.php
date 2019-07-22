@@ -27,12 +27,31 @@ class Desc extends AbstractModel {
     private $lang;
 
     /**
+     * Get the content.
+     *
+     * @return int Returns the content.
+     */
+    public function getContent() {
+        return parent::getContent();
+    }
+
+    /**
      * Get the lang.
      *
      * @return string Returns the lang.
      */
     public function getLang() {
         return $this->lang;
+    }
+
+    /**
+     * Set the content.
+     *
+     * @param int $content The content.
+     * @return Date Returns this date.
+     */
+    public function setContent($content) {
+        return parent::setContent($content);
     }
 
     /**
