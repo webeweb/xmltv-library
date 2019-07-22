@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv source-info-url="https://api.github.com" source-data-url="https://api.github.com" generator-info-name="Github" generator-info-url="https://github.com">
+<tv source-info-url="https://info.github.com" source-data-url="https://data.github.com" generator-info-name="GitHub" generator-info-url="https://github.com">
     <channel id="C10.api.github.com">
         <display-name>Action</display-name>
         <icon src="https://television.github.com/sites/tr_master/files/sheet_media/tv/500x500/10.png"/>
@@ -25,6 +25,7 @@
             <writer>Fulvio Gicca Palli</writer>
             <writer>Víctor Andrés Catena</writer>
             <composer>Giovanni Fusco</composer>
+            <guest>Ian Kennedy Martin</guest>
         </credits>
         <date>1964</date>
         <category lang="fr">film d'aventures</category>
@@ -33,13 +34,18 @@
         <country>Espagne - Italie</country>
         <video>
             <aspect>16:9</aspect>
+            <quality>HDTV</quality>
         </video>
-        <previously-shown/>
         <rating system="CSA">
             <value>Tout public</value>
+            <icon src="https://television.github.com/sites/tr_master/files/sheet_media/media/169_emi_867956.jpg"/>
         </rating>
         <star-rating>
             <value>1/5</value>
         </star-rating>
+        <audio>
+            <stereo>bilingual</stereo>
+        </audio>
+        <previously-shown/>
     </programme>
 </tv>
