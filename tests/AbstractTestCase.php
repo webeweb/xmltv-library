@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Tests;
 
+use DOMDocument;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -22,4 +23,22 @@ use PHPUnit\Framework\TestCase;
  */
 abstract class AbstractTestCase extends TestCase {
 
+    /**
+     * Document
+     *
+     * @var DOMDocument
+     */
+    protected $document;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        $filename = getcwd() . "/tests/Fixtures/xmltv.xml";
+
+        // Set a DOM document mock.
+        $this->document = DOMDocument::load($filename);
+    }
 }

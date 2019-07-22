@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+<tv source-info-url="https://api.github.com" source-data-url="https://api.github.com" generator-info-name="Github" generator-info-url="https://github.com">
+    <channel id="C10.api.github.com">
+        <display-name>Action</display-name>
+        <icon src="https://television.github.com/sites/tr_master/files/sheet_media/tv/500x500/10.png"/>
+    </channel>
+    <programme start="20190711070900 +0200" stop="20190711084200 +0200" showview="" channel="C10.api.github.com">
+        <title>Les trois sergents de Fort Madras</title>
+        <desc lang="fr">En 1890, aux Indes, trois sergents britanniques, Frankie, Burt et John, croupissent dans la même cellule pour insubordination grave. Leurs chefs leur offrent une occasion de se racheter et le trio accepte de visiter
+            deux forts avancés en territoire indigène, alors que sévissent tout à la fois les prémices d'une révolte hindoue et les ravages de la typhoïde. Accompagnés d'un guide, Risk Gamal, les trois hommes affrontent toutes sortes de
+            catastrophes, une charge d'éléphants, des pluies diluviennes, des chasseurs de tête, la pire trahison, les geôles les plus sombres et même l'amour d'une prisonnière anglaise, survivante d'un massacre...
+        </desc>
+        <credits>
+            <director>Umberto Lenzi</director>
+            <actor>Richard Harrison (Frankie Ross)</actor>
+            <actor>Wandisa Guida (Mary Stark)</actor>
+            <actor>Ugo Arden (Burt Wallace)</actor>
+            <actor>Nick Anderson (John Foster)</actor>
+            <actor>Aldo Sambrell (Risk Gamal)</actor>
+            <actor>Luz Márquez (Helen)</actor>
+            <actor>Andrea Bosic (le colonel McDonald)</actor>
+            <actor>Marco Tulli</actor>
+            <writer>Umberto Lenzi</writer>
+            <writer>Fulvio Gicca Palli</writer>
+            <writer>Víctor Andrés Catena</writer>
+            <composer>Giovanni Fusco</composer>
+        </credits>
+        <date>1964</date>
+        <category lang="fr">film d'aventures</category>
+        <length units="minutes">93</length>
+        <icon src="https://television.github.com/sites/tr_master/files/sheet_media/media/169_emi_867956.jpg"/>
+        <country>Espagne - Italie</country>
+        <video>
+            <aspect>16:9</aspect>
+        </video>
+        <previously-shown/>
+        <rating system="CSA">
+            <value>Tout public</value>
+        </rating>
+        <star-rating>
+            <value>1/5</value>
+        </star-rating>
+    </programme>
+</tv>
