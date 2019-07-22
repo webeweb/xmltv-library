@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Helper;
+namespace WBW\Library\XMLTV\Tests\IO;
 
-use WBW\Library\XMLTV\Helper\ReaderHelper;
+use WBW\Library\XMLTV\IO\ParserHelper;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
- * Reader helper test.
+ * Parser helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Helper
+ * @package WBW\Library\XMLTV\Tests\IO
  */
-class ReaderHelperTest extends AbstractTestCase {
+class ParserHelperTest extends AbstractTestCase {
 
     /**
      * Tests the getDOMAttributeValue() method.
@@ -32,9 +32,9 @@ class ReaderHelperTest extends AbstractTestCase {
         $tvNode          = $this->document->documentElement;
         $displayNameNode = $tvNode->childNodes->item(1)->childNodes->item(1);
 
-        $this->assertNull(ReaderHelper::getDOMAttributeValue($displayNameNode, ""));
-        $this->assertNull(ReaderHelper::getDOMAttributeValue($tvNode, ""));
-        $this->assertEquals("https://api.github.com", ReaderHelper::getDOMAttributeValue($tvNode, "source-info-url"));
+        $this->assertNull(ParserHelper::getDOMAttributeValue($displayNameNode, ""));
+        $this->assertNull(ParserHelper::getDOMAttributeValue($tvNode, ""));
+        $this->assertEquals("https://api.github.com", ParserHelper::getDOMAttributeValue($tvNode, "source-info-url"));
     }
 
     /**
@@ -44,11 +44,11 @@ class ReaderHelperTest extends AbstractTestCase {
 
         $tvNode = $this->document->documentElement;
 
-        $res = ReaderHelper::getDOMNodeByName($tvNode->childNodes, "channel");
+        $res = ParserHelper::getDOMNodeByName($tvNode->childNodes, "channel");
         $this->assertNotNull($res);
         $this->assertEquals("channel", $res->nodeName);
 
-        $this->assertNull(ReaderHelper::getDOMNodeByName($tvNode->childNodes, "name"));;
+        $this->assertNull(ParserHelper::getDOMNodeByName($tvNode->childNodes, "name"));;
     }
 
     /**
@@ -60,7 +60,7 @@ class ReaderHelperTest extends AbstractTestCase {
 
         $tvNode = $this->document->documentElement;
 
-        $res = ReaderHelper::getDOMNodesByName($tvNode->childNodes, "channel");
+        $res = ParserHelper::getDOMNodesByName($tvNode->childNodes, "channel");
         $this->assertCount(1, $res);
         $this->assertEquals("channel", $res[0]->nodeName);
     }
@@ -72,6 +72,6 @@ class ReaderHelperTest extends AbstractTestCase {
      */
     public function testGetDOMNodesByNameWithNull() {
 
-        $this->assertEquals([], ReaderHelper::getDOMNodesByName(null, "channel"));
+        $this->assertEquals([], ParserHelper::getDOMNodesByName(null, "channel"));
     }
 }

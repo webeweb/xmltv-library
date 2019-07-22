@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Helper;
+namespace WBW\Library\XMLTV\IO;
 
 use DOMNode;
 use DOMNodeList;
 
 /**
- * Reader helper.
+ * Parser helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Helper
+ * @package WBW\Library\XMLTV\IO
  */
-class ReaderHelper {
+class ParserHelper {
 
     /**
      * Get a DOM attribute value.
