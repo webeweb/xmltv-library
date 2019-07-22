@@ -49,6 +49,13 @@ class Programme extends AbstractModel {
     private $date;
 
     /**
+     * Desc.
+     *
+     * @var Desc
+     */
+    private $desc;
+
+    /**
      * Icon.
      *
      * @var Icon
@@ -140,6 +147,15 @@ class Programme extends AbstractModel {
      */
     public function getDate() {
         return $this->date;
+    }
+
+    /**
+     * Get the desc.
+     *
+     * @return Desc Returns the desc.
+     */
+    public function getDesc() {
+        return $this->desc;
     }
 
     /**
@@ -256,6 +272,17 @@ class Programme extends AbstractModel {
      */
     public function setDate(Date $date = null) {
         $this->date = $date;
+        return $this;
+    }
+
+    /**
+     * Set the desc.
+     *
+     * @param Desc $desc The desc.
+     * @return Programme Returns this programme.
+     */
+    public function setDesc($desc) {
+        $this->desc = $desc;
         return $this;
     }
 

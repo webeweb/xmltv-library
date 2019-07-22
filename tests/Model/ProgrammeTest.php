@@ -16,6 +16,7 @@ use WBW\Library\XMLTV\Model\Channel;
 use WBW\Library\XMLTV\Model\Country;
 use WBW\Library\XMLTV\Model\Credits;
 use WBW\Library\XMLTV\Model\Date;
+use WBW\Library\XMLTV\Model\Desc;
 use WBW\Library\XMLTV\Model\Icon;
 use WBW\Library\XMLTV\Model\Length;
 use WBW\Library\XMLTV\Model\Programme;
@@ -45,6 +46,7 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getCountry());
         $this->assertNull($obj->getCredits());
         $this->assertNull($obj->getDate());
+        $this->assertNull($obj->getDesc());
         $this->assertNull($obj->getIcon());
         $this->assertNull($obj->getLength());
         $this->assertNull($obj->getRating());
@@ -132,6 +134,22 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj->setDate($date);
         $this->assertSame($date, $obj->getDate());
+    }
+
+    /**
+     * Tests the setDesc() method.
+     *
+     * @return void
+     */
+    public function testSetDesc() {
+
+        // Set an Desc mock.
+        $desc = new Desc();
+
+        $obj = new Programme();
+
+        $obj->setDesc($desc);
+        $this->assertSame($desc, $obj->getDesc());
     }
 
     /**
