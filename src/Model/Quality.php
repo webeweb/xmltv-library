@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\ContentTrait;
+
 /**
  * Quality.
  *
@@ -19,22 +21,5 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Quality extends AbstractModel {
 
-    /**
-     * Get the content.
-     *
-     * @return string Returns the content.
-     */
-    public function getContent() {
-        return parent::getContent();
-    }
-
-    /**
-     * Set the content.
-     *
-     * @param string $content The content.
-     * @return Quality Returns this quality.
-     */
-    public function setContent($content) {
-        return parent::setContent($content);
-    }
+    use ContentTrait;
 }
