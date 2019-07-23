@@ -32,18 +32,6 @@ class DisplayNameTest extends AbstractTestCase {
         $obj = new DisplayName();
 
         $this->assertNull($obj->getContent());
-    }
-
-    /**
-     * Tests the setContent() method.
-     *
-     * @return void
-     */
-    public function testSetContent() {
-
-        $obj = new DisplayName();
-
-        $obj->setContent("content");
-        $this->assertEquals("content", $obj->getContent());
+        $this->assertNull($obj->getLang());
     }
 }

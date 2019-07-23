@@ -11,6 +11,9 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\ContentTrait;
+use WBW\Library\XMLTV\Traits\LangTrait;
+
 /**
  * Display name.
  *
@@ -19,22 +22,6 @@ namespace WBW\Library\XMLTV\Model;
  */
 class DisplayName extends AbstractModel {
 
-    /**
-     * Get the content.
-     *
-     * @return string Returns the content.
-     */
-    public function getContent() {
-        return parent::getContent();
-    }
-
-    /**
-     * Set the content.
-     *
-     * @param string $content The content.
-     * @return DisplayName Returns this display name.
-     */
-    public function setContent($content) {
-        return parent::setContent($content);
-    }
+    use ContentTrait;
+    use LangTrait;
 }
