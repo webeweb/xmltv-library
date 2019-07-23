@@ -12,7 +12,6 @@
 namespace WBW\Library\XMLTV\Tests\Model;
 
 use WBW\Library\XMLTV\Model\StarRating;
-use WBW\Library\XMLTV\Model\Value;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
@@ -33,21 +32,5 @@ class StarRatingTest extends AbstractTestCase {
         $obj = new StarRating();
 
         $this->assertNull($obj->getValue());
-    }
-
-    /**
-     * Tests the setValue() method.
-     *
-     * @return void
-     */
-    public function testSetValue() {
-
-        // Set an Value mock.
-        $aspect = new Value();
-
-        $obj = new StarRating();
-
-        $obj->setValue($aspect);
-        $this->assertSame($aspect, $obj->getValue());
     }
 }

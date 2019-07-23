@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\ValueTrait;
+
 /**
  * Star rating.
  *
@@ -19,30 +21,5 @@ namespace WBW\Library\XMLTV\Model;
  */
 class StarRating extends AbstractModel {
 
-    /**
-     * Value.
-     *
-     * @var Value
-     */
-    private $value;
-
-    /**
-     * Get the value.
-     *
-     * @return Value Returns the value.
-     */
-    public function getValue() {
-        return $this->value;
-    }
-
-    /**
-     * Set the value.
-     *
-     * @param Value|null $value The value.
-     * @return StarRating Returns this star rating.
-     */
-    public function setValue(Value $value = null) {
-        $this->value = $value;
-        return $this;
-    }
+    use ValueTrait;
 }
