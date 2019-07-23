@@ -40,7 +40,7 @@ trait ValueTrait {
     /**
      * Set the value.
      *
-     * @param Value $value The value.
+     * @param Value|null $value The value.
      */
     public function setValue(Value $value = null) {
         $this->value = $value;
