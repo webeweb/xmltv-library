@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\ContentTrait;
+
 /**
  * Length.
  *
@@ -18,6 +20,8 @@ namespace WBW\Library\XMLTV\Model;
  * @package WBW\Library\XMLTV\Model
  */
 class Length extends AbstractModel {
+
+    use ContentTrait;
 
     /**
      * Units.
@@ -27,31 +31,12 @@ class Length extends AbstractModel {
     private $units;
 
     /**
-     * Get the content.
-     *
-     * @return int Returns the content.
-     */
-    public function getContent() {
-        return parent::getContent();
-    }
-
-    /**
      * Get the units.
      *
      * @return string Returns the units.
      */
     public function getUnits() {
         return $this->units;
-    }
-
-    /**
-     * Set the content.
-     *
-     * @param int $content The content.
-     * @return Length Returns this length.
-     */
-    public function setContent($content) {
-        return parent::setContent($content);
     }
 
     /**

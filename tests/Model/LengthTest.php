@@ -36,19 +36,6 @@ class LengthTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setContent() method.
-     *
-     * @return void
-     */
-    public function testSetContent() {
-
-        $obj = new Length();
-
-        $obj->setContent("content");
-        $this->assertEquals("content", $obj->getContent());
-    }
-
-    /**
      * Tests the setUnits() method.
      *
      * @return void
