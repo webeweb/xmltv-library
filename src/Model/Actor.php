@@ -19,4 +19,30 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Actor extends AbstractCredit {
 
+    /**
+     * Role.
+     *
+     * @var string
+     */
+    private $role;
+
+    /**
+     * Get the role.
+     *
+     * @return string Returns the role.
+     */
+    public function getRole() {
+        return $this->role;
+    }
+
+    /**
+     * Set the role.
+     *
+     * @param string $role The role.
+     * @return Actor Returns this actor.
+     */
+    public function setRole($role) {
+        $this->role = $role;
+        return $this;
+    }
 }

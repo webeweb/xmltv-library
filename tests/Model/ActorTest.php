@@ -32,5 +32,19 @@ class ActorTest extends AbstractTestCase {
         $obj = new Actor();
 
         $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getRole());
+    }
+
+    /**
+     * Tests the setRole() method.
+     *
+     * @return void
+     */
+    public function testSetRole() {
+
+        $obj = new Actor();
+
+        $obj->setRole("role");
+        $this->assertEquals("role", $obj->getRole());
     }
 }
