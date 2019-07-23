@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\ContentTrait;
+
 /**
  * Date.
  *
@@ -19,22 +21,5 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Date extends AbstractModel {
 
-    /**
-     * Get the content.
-     *
-     * @return int Returns the content.
-     */
-    public function getContent() {
-        return parent::getContent();
-    }
-
-    /**
-     * Set the content.
-     *
-     * @param int $content The content.
-     * @return Date Returns this date.
-     */
-    public function setContent($content) {
-        return parent::setContent($content);
-    }
+    use ContentTrait;
 }

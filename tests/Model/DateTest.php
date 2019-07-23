@@ -33,17 +33,4 @@ class DateTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
-
-    /**
-     * Tests the setContent() method.
-     *
-     * @return void
-     */
-    public function testSetContent() {
-
-        $obj = new Date();
-
-        $obj->setContent(1);
-        $this->assertEquals(1, $obj->getContent());
-    }
 }
