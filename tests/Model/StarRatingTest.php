@@ -31,6 +31,7 @@ class StarRatingTest extends AbstractTestCase {
 
         $obj = new StarRating();
 
+        $this->assertEquals([], $obj->getIcons());
         $this->assertNull($obj->getValue());
     }
 }
