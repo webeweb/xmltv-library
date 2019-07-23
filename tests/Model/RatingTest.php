@@ -11,7 +11,6 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
-use WBW\Library\XMLTV\Model\Icon;
 use WBW\Library\XMLTV\Model\Rating;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
@@ -32,25 +31,9 @@ class RatingTest extends AbstractTestCase {
 
         $obj = new Rating();
 
-        $this->assertNull($obj->getIcon());
+        $this->assertEquals([], $obj->getIcons());
         $this->assertNull($obj->getSystem());
         $this->assertNull($obj->getValue());
-    }
-
-    /**
-     * Tests the setIcon() method.
-     *
-     * @return void
-     */
-    public function testSetIcon() {
-
-        // Set an Icon mock.
-        $aspect = new Icon();
-
-        $obj = new Rating();
-
-        $obj->setIcon($aspect);
-        $this->assertSame($aspect, $obj->getIcon());
     }
 
     /**

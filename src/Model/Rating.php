@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\IconsTrait;
 use WBW\Library\XMLTV\Traits\SystemTrait;
 use WBW\Library\XMLTV\Traits\ValueTrait;
 
@@ -22,33 +23,14 @@ use WBW\Library\XMLTV\Traits\ValueTrait;
  */
 class Rating extends AbstractModel {
 
+    use IconsTrait;
     use SystemTrait;
     use ValueTrait;
 
     /**
-     * Icon.
-     *
-     * @var Icon
+     * Constructor.
      */
-    private $icon;
-
-    /**
-     * Get the icon.
-     *
-     * @return Icon Returns the icon.
-     */
-    public function getIcon() {
-        return $this->icon;
-    }
-
-    /**
-     * Set the icon.
-     *
-     * @param Icon|null $icon The icon.
-     * @return Rating Returns this rating.
-     */
-    public function setIcon(Icon $icon = null) {
-        $this->icon = $icon;
-        return $this;
+    public function __construct() {
+        $this->setIcons([]);
     }
 }
