@@ -31,7 +31,22 @@ class IconTest extends AbstractTestCase {
 
         $obj = new Icon();
 
+        $this->assertNull($obj->getHeight());
         $this->assertNull($obj->getSrc());
+        $this->assertNull($obj->getWidth());
+    }
+
+    /**
+     * Tests the setHeight() method.
+     *
+     * @return void
+     */
+    public function testSetHeight() {
+
+        $obj = new Icon();
+
+        $obj->setHeight(768);
+        $this->assertEquals(768, $obj->getHeight());
     }
 
     /**
@@ -45,5 +60,18 @@ class IconTest extends AbstractTestCase {
 
         $obj->setSrc("src");
         $this->assertEquals("src", $obj->getSrc());
+    }
+
+    /**
+     * Tests the setWidth() method.
+     *
+     * @return void
+     */
+    public function testSetWidth() {
+
+        $obj = new Icon();
+
+        $obj->setWidth(1024);
+        $this->assertEquals(1024, $obj->getWidth());
     }
 }
