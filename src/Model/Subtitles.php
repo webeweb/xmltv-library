@@ -22,4 +22,31 @@ use WBW\Library\XMLTV\Traits\TypeTrait;
 class Subtitles extends AbstractModel {
 
     use TypeTrait;
+
+    /**
+     * Language.
+     *
+     * @var Language
+     */
+    private $language;
+
+    /**
+     * Get the language.
+     *
+     * @return Language Returns the language.
+     */
+    public function getLanguage() {
+        return $this->language;
+    }
+
+    /**
+     * Get the language.
+     *
+     * @param Language|null $language The language.
+     * @return Subtitles Returns this subtitles.
+     */
+    public function setLanguage(Language $language = null) {
+        $this->language = $language;
+        return $this;
+    }
 }
