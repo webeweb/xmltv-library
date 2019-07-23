@@ -22,16 +22,16 @@ class Channel extends AbstractModel {
     /**
      * Display name.
      *
-     * @var DisplayName
+     * @var DisplayName[]
      */
-    private $displayName;
+    private $displayNames;
 
     /**
-     * Icon.
+     * Icons.
      *
-     * @var Icon
+     * @var Icon[]
      */
-    private $icon;
+    private $icons;
 
     /**
      * Id.
@@ -41,21 +41,70 @@ class Channel extends AbstractModel {
     private $id;
 
     /**
-     * Get the display name.
+     * URLs.
      *
-     * @return DisplayName Returns the display name.
+     * @var Url[]
      */
-    public function getDisplayName() {
-        return $this->displayName;
+    private $urls;
+
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        $this->setDisplayNames([]);
+        $this->setIcons([]);
+        $this->setUrls([]);
     }
 
     /**
-     * Get the icon.
+     * Add a display name.
      *
-     * @return Icon Returns the icon.
+     * @param DisplayName $displayName The display name.
+     * @return Channel Returns this channel.
      */
-    public function getIcon() {
-        return $this->icon;
+    public function addDisplayName(DisplayName $displayName) {
+        $this->displayNames[] = $displayName;
+        return $this;
+    }
+
+    /**
+     * Add an icon.
+     *
+     * @param Icon $icon The icon.
+     * @return Channel Returns this channel.
+     */
+    public function addIcon(Icon $icon) {
+        $this->icons[] = $icon;
+        return $this;
+    }
+
+    /**
+     * Add an URL.
+     *
+     * @param Url $url The URL.
+     * @return Channel Returns this channel.
+     */
+    public function addUrl(Url $url) {
+        $this->urls[] = $url;
+        return $this;
+    }
+
+    /**
+     * Get the display names.
+     *
+     * @return DisplayName[] Returns the display names.
+     */
+    public function getDisplayNames() {
+        return $this->displayNames;
+    }
+
+    /**
+     * Get the icons.
+     *
+     * @return Icon[] Returns the icons.
+     */
+    public function getIcons() {
+        return $this->icons;
     }
 
     /**
@@ -68,24 +117,60 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Set the display name.
+     * Get the urls.
      *
-     * @param DisplayName|null $displayName The display name.
+     * @return Url[] Returns the urls.
+     */
+    public function getUrls() {
+        return $this->urls;
+    }
+
+    /**
+     * Determines if this channel has display names.
+     *
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    public function hasDisplayNames() {
+        return 1 <= count($this->displayNames);
+    }
+
+    /**
+     * Determines if this channel has icons.
+     *
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    public function hasIcons() {
+        return 1 <= count($this->icons);
+    }
+
+    /**
+     * Determines if this channel has URLs.
+     *
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    public function hasURLs() {
+        return 1 <= count($this->urls);
+    }
+
+    /**
+     * Set the display names.
+     *
+     * @param DisplayName[] $displayNames The display names.
      * @return Channel Returns this channel.
      */
-    public function setDisplayName(DisplayName $displayName = null) {
-        $this->displayName = $displayName;
+    protected function setDisplayNames(array $displayNames) {
+        $this->displayNames = $displayNames;
         return $this;
     }
 
     /**
-     * Set the icon.
+     * Set the icons.
      *
-     * @param Icon|null $icon The icon.
+     * @param Icon[] $icons The icons.
      * @return Channel Returns this channel.
      */
-    public function setIcon(Icon $icon = null) {
-        $this->icon = $icon;
+    protected function setIcons(array $icons) {
+        $this->icons = $icons;
         return $this;
     }
 
@@ -97,6 +182,17 @@ class Channel extends AbstractModel {
      */
     public function setId($id) {
         $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * Set the URLs.
+     *
+     * @param Url[] $urls The URLs.
+     * @return Channel Returns this channel.
+     */
+    protected function setUrls(array $urls) {
+        $this->urls = $urls;
         return $this;
     }
 }

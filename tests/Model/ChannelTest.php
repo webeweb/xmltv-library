@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Tests\Model;
 use WBW\Library\XMLTV\Model\Channel;
 use WBW\Library\XMLTV\Model\DisplayName;
 use WBW\Library\XMLTV\Model\Icon;
+use WBW\Library\XMLTV\Model\Url;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
@@ -25,6 +26,60 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class ChannelTest extends AbstractTestCase {
 
     /**
+     * Tests the addDisplayName() method.
+     *
+     * @return void
+     */
+    public function testAddDisplayName() {
+
+        // Set a Display name mock.
+        $icon = new DisplayName();
+
+        $obj = new Channel();
+
+        $obj->addDisplayName($icon);
+        $this->assertCount(1, $obj->getDisplayNames());
+        $this->assertSame($icon, $obj->getDisplayNames()[0]);
+        $this->assertTrue($obj->hasDisplayNames());
+    }
+
+    /**
+     * Tests the addIcon() method.
+     *
+     * @return void
+     */
+    public function testAddIcon() {
+
+        // Set a Icon mock.
+        $icon = new Icon();
+
+        $obj = new Channel();
+
+        $obj->addIcon($icon);
+        $this->assertCount(1, $obj->getIcons());
+        $this->assertSame($icon, $obj->getIcons()[0]);
+        $this->assertTrue($obj->hasIcons());
+    }
+
+    /**
+     * Tests the addUrl() method.
+     *
+     * @return void
+     */
+    public function testAddUrl() {
+
+        // Set a Url mock.
+        $icon = new Url();
+
+        $obj = new Channel();
+
+        $obj->addUrl($icon);
+        $this->assertCount(1, $obj->getUrls());
+        $this->assertSame($icon, $obj->getUrls()[0]);
+        $this->assertTrue($obj->hasUrls());
+    }
+
+    /**
      * Tests the __construct() method.
      *
      * @return void
@@ -33,41 +88,13 @@ class ChannelTest extends AbstractTestCase {
 
         $obj = new Channel();
 
-        $this->assertNull($obj->getDisplayName());
-        $this->assertNull($obj->getIcon());
+        $this->assertEquals([], $obj->getDisplayNames());
+        $this->assertEquals([], $obj->getIcons());
         $this->assertNull($obj->getId());
-    }
-
-    /**
-     * Tests the setDisplayName() method.
-     *
-     * @return void
-     */
-    public function testSetDisplayName() {
-
-        // Set a Display name mock.
-        $icon = new DisplayName();
-
-        $obj = new Channel();
-
-        $obj->setDisplayName($icon);
-        $this->assertSame($icon, $obj->getDisplayName());
-    }
-
-    /**
-     * Tests the setIcon() method.
-     *
-     * @return void
-     */
-    public function testSetIcon() {
-
-        // Set a Icon mock.
-        $icon = new Icon();
-
-        $obj = new Channel();
-
-        $obj->setIcon($icon);
-        $this->assertSame($icon, $obj->getIcon());
+        $this->assertEquals([], $obj->getUrls());
+        $this->assertFalse($obj->hasDisplayNames());
+        $this->assertFalse($obj->hasIcons());
+        $this->assertFalse($obj->hasUrls());
     }
 
     /**
