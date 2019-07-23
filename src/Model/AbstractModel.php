@@ -25,36 +25,9 @@ namespace WBW\Library\XMLTV\Model;
 abstract class AbstractModel {
 
     /**
-     * Content.
-     *
-     * @var mixed
-     */
-    private $content;
-
-    /**
      * Constructor.
      */
     public function __construct() {
         // NOTHING TO DO.
-    }
-
-    /**
-     * Get the content.
-     *
-     * @return mixed Returns the content.
-     */
-    protected function getContent() {
-        return $this->content;
-    }
-
-    /**
-     * Set the content.
-     *
-     * @param mixed $content The content.
-     * @return AbstractModel Returns this model.
-     */
-    protected function setContent($content) {
-        $this->content = $content;
-        return $this;
     }
 }
