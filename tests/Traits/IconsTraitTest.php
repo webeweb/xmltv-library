@@ -37,7 +37,6 @@ class IconsTraitTest extends AbstractTestCase {
 
         $obj->addIcon($icon);
         $this->assertCount(1, $obj->getIcons());
-
         $this->assertSame($icon, $obj->getIcons()[0]);
         $this->assertTrue($obj->hasIcons());
     }
