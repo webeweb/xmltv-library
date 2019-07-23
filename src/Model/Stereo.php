@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\ContentTrait;
+
 /**
  * Stereo.
  *
@@ -19,22 +21,5 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Stereo extends AbstractModel {
 
-    /**
-     * Get the content.
-     *
-     * @return string Returns the content.
-     */
-    public function getContent() {
-        return parent::getContent();
-    }
-
-    /**
-     * Set the content.
-     *
-     * @param string $content The content.
-     * @return Stereo Returns this stereo.
-     */
-    public function setContent($content) {
-        return parent::setContent($content);
-    }
+    use ContentTrait;
 }
