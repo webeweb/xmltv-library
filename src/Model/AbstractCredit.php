@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\ContentTrait;
+
 /**
  * Abstract credit.
  *
@@ -20,22 +22,5 @@ namespace WBW\Library\XMLTV\Model;
  */
 abstract class AbstractCredit extends AbstractModel {
 
-    /**
-     * Get the content.
-     *
-     * @return string Returns the content.
-     */
-    public function getContent() {
-        return parent::getContent();
-    }
-
-    /**
-     * Set the content.
-     *
-     * @param string $content The content.
-     * @return AbstractCredit Returns this credit.
-     */
-    public function setContent($content) {
-        return parent::setContent($content);
-    }
+    use ContentTrait;
 }

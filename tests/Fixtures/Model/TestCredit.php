@@ -21,17 +21,4 @@ use WBW\Library\XMLTV\Model\AbstractCredit;
  */
 class TestCredit extends AbstractCredit {
 
-    /**
-     * {@inheritDoc}
-     */
-    public function getContent() {
-        return parent::getContent();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setContent($content) {
-        return parent::setContent($content);
-    }
 }

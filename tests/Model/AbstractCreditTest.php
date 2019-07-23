@@ -33,17 +33,4 @@ class AbstractCreditTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
-
-    /**
-     * Tests the setContent() method.
-     *
-     * @return void
-     */
-    public function testSetContent() {
-
-        $obj = new TestCredit();
-
-        $obj->setContent("content");
-        $this->assertEquals("content", $obj->getContent());
-    }
 }
