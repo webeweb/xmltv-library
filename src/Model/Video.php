@@ -31,6 +31,13 @@ class Video extends AbstractModel {
     private $aspect;
 
     /**
+     * Colour.
+     *
+     * @var Colour
+     */
+    private $colour;
+
+    /**
      * Quality.
      *
      * @var Quality
@@ -44,6 +51,15 @@ class Video extends AbstractModel {
      */
     public function getAspect() {
         return $this->aspect;
+    }
+
+    /**
+     * Get the colour.
+     *
+     * @return Colour Returns the colour.
+     */
+    public function getColour() {
+        return $this->colour;
     }
 
     /**
@@ -63,6 +79,17 @@ class Video extends AbstractModel {
      */
     public function setAspect(Aspect $aspect = null) {
         $this->aspect = $aspect;
+        return $this;
+    }
+
+    /**
+     * Set the colour.
+     *
+     * @param Colour|null $colour The colour.
+     * @return Video Returns this video.
+     */
+    public function setColour(Colour $colour = null) {
+        $this->colour = $colour;
         return $this;
     }
 

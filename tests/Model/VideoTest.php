@@ -12,6 +12,7 @@
 namespace WBW\Library\XMLTV\Tests\Model;
 
 use WBW\Library\XMLTV\Model\Aspect;
+use WBW\Library\XMLTV\Model\Colour;
 use WBW\Library\XMLTV\Model\Quality;
 use WBW\Library\XMLTV\Model\Video;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
@@ -34,6 +35,7 @@ class VideoTest extends AbstractTestCase {
         $obj = new Video();
 
         $this->assertNull($obj->getAspect());
+        $this->assertNull($obj->getColour());
         $this->assertNull($obj->getPresent());
         $this->assertNull($obj->getQuality());
     }
@@ -52,6 +54,22 @@ class VideoTest extends AbstractTestCase {
 
         $obj->setAspect($aspect);
         $this->assertSame($aspect, $obj->getAspect());
+    }
+
+    /**
+     * Tests the setColour() method.
+     *
+     * @return void
+     */
+    public function testSetColour() {
+
+        // Set an Colour mock.
+        $aspect = new Colour();
+
+        $obj = new Video();
+
+        $obj->setColour($aspect);
+        $this->assertSame($aspect, $obj->getColour());
     }
 
     /**
