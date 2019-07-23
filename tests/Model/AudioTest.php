@@ -32,6 +32,7 @@ class AudioTest extends AbstractTestCase {
 
         $obj = new Audio();
 
+        $this->assertNull($obj->getPresent());
         $this->assertNull($obj->getStereo());
     }
 

@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\PresentTrait;
+
 /**
  * Audio.
  *
@@ -18,6 +20,8 @@ namespace WBW\Library\XMLTV\Model;
  * @package WBW\Library\XMLTV\Model
  */
 class Audio extends AbstractModel {
+
+    use PresentTrait;
 
     /**
      * Stereo.
