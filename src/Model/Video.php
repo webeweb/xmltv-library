@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\PresentTrait;
+
 /**
  * Video.
  *
@@ -18,6 +20,8 @@ namespace WBW\Library\XMLTV\Model;
  * @package WBW\Library\XMLTV\Model
  */
 class Video extends AbstractModel {
+
+    use PresentTrait;
 
     /**
      * Aspect.

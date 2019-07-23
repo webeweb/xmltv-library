@@ -34,6 +34,7 @@ class VideoTest extends AbstractTestCase {
         $obj = new Video();
 
         $this->assertNull($obj->getAspect());
+        $this->assertNull($obj->getPresent());
         $this->assertNull($obj->getQuality());
     }
 
