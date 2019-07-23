@@ -11,16 +11,16 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
+use WBW\Library\XMLTV\Model\Url;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Model\TestModel;
 
 /**
- * Abstract model test.
+ * URL test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model
  */
-class AbstractModelTest extends AbstractTestCase {
+class UrlTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,21 +29,8 @@ class AbstractModelTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new TestModel();
+        $obj = new Url();
 
         $this->assertNull($obj->getContent());
-    }
-
-    /**
-     * Tests the setContent() method.
-     *
-     * @return void
-     */
-    public function testSetContent() {
-
-        $obj = new TestModel();
-
-        $obj->setContent("content");
-        $this->assertEquals("content", $obj->getContent());
     }
 }
