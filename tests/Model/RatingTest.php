@@ -13,7 +13,6 @@ namespace WBW\Library\XMLTV\Tests\Model;
 
 use WBW\Library\XMLTV\Model\Icon;
 use WBW\Library\XMLTV\Model\Rating;
-use WBW\Library\XMLTV\Model\Value;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
@@ -65,21 +64,5 @@ class RatingTest extends AbstractTestCase {
 
         $obj->setSystem("system");
         $this->assertEquals("system", $obj->getSystem());
-    }
-
-    /**
-     * Tests the setValue() method.
-     *
-     * @return void
-     */
-    public function testSetValue() {
-
-        // Set an Value mock.
-        $aspect = new Value();
-
-        $obj = new Rating();
-
-        $obj->setValue($aspect);
-        $this->assertSame($aspect, $obj->getValue());
     }
 }

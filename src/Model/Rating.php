@@ -11,6 +11,9 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\SystemTrait;
+use WBW\Library\XMLTV\Traits\ValueTrait;
+
 /**
  * Rating.
  *
@@ -19,26 +22,15 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Rating extends AbstractModel {
 
+    use SystemTrait;
+    use ValueTrait;
+
     /**
      * Icon.
      *
      * @var Icon
      */
     private $icon;
-
-    /**
-     * System.
-     *
-     * @var string
-     */
-    private $system;
-
-    /**
-     * Value.
-     *
-     * @var Value
-     */
-    private $value;
 
     /**
      * Get the icon.
@@ -50,24 +42,6 @@ class Rating extends AbstractModel {
     }
 
     /**
-     * Get tje system.
-     *
-     * @return string Returns the system.
-     */
-    public function getSystem() {
-        return $this->system;
-    }
-
-    /**
-     * Get the value.
-     *
-     * @return Value Returns the value.
-     */
-    public function getValue() {
-        return $this->value;
-    }
-
-    /**
      * Set the icon.
      *
      * @param Icon|null $icon The icon.
@@ -75,28 +49,6 @@ class Rating extends AbstractModel {
      */
     public function setIcon(Icon $icon = null) {
         $this->icon = $icon;
-        return $this;
-    }
-
-    /**
-     * Set the system.
-     *
-     * @param string $system The system.
-     * @return Rating Returns this rating.
-     */
-    public function setSystem($system) {
-        $this->system = $system;
-        return $this;
-    }
-
-    /**
-     * Set the value.
-     *
-     * @param Value|null $value The value.
-     * @return Rating Returns this rating.
-     */
-    public function setValue(Value $value = null) {
-        $this->value = $value;
         return $this;
     }
 }
