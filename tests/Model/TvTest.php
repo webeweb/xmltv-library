@@ -13,7 +13,7 @@ namespace WBW\Library\XMLTV\Tests\Model;
 
 use WBW\Library\XMLTV\Model\Channel;
 use WBW\Library\XMLTV\Model\Programme;
-use WBW\Library\XMLTV\Model\TV;
+use WBW\Library\XMLTV\Model\Tv;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model
  */
-class TVTest extends AbstractTestCase {
+class TvTest extends AbstractTestCase {
 
     /**
      * Tests the addChannel() method.
@@ -34,11 +34,12 @@ class TVTest extends AbstractTestCase {
         // Set a Channel mock.
         $channel = new Channel();
 
-        $obj = new TV();
+        $obj = new Tv();
 
         $obj->addChannel($channel);
         $this->assertCount(1, $obj->getChannels());
         $this->assertSame($channel, $obj->getChannels()[0]);
+        $this->assertTrue($obj->hasChannels());
     }
 
     /**
@@ -51,11 +52,12 @@ class TVTest extends AbstractTestCase {
         // Set a Programme mock.
         $channel = new Programme();
 
-        $obj = new TV();
+        $obj = new Tv();
 
         $obj->addProgramme($channel);
         $this->assertCount(1, $obj->getProgrammes());
         $this->assertSame($channel, $obj->getProgrammes()[0]);
+        $this->assertTrue($obj->hasProgrammes());
     }
 
     /**
@@ -65,14 +67,31 @@ class TVTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new TV();
+        $obj = new Tv();
 
         $this->assertEquals([], $obj->getChannels());
+        $this->assertNull($obj->getDate());
         $this->assertNull($obj->getGeneratorInfoName());
         $this->assertNull($obj->getGeneratorInfoURL());
         $this->assertEquals([], $obj->getProgrammes());
         $this->assertNull($obj->getSourceDataURL());
+        $this->assertNull($obj->getSourceInfoName());
         $this->assertNull($obj->getSourceInfoURL());
+        $this->assertFalse($obj->hasChannels());
+        $this->assertFalse($obj->hasProgrammes());
+    }
+
+    /**
+     * Tests the setDate() method.
+     *
+     * @return void
+     */
+    public function testSetDate() {
+
+        $obj = new Tv();
+
+        $obj->setDate("date");
+        $this->assertEquals("date", $obj->getDate());
     }
 
     /**
@@ -82,7 +101,7 @@ class TVTest extends AbstractTestCase {
      */
     public function testSetGeneratorInfoName() {
 
-        $obj = new TV();
+        $obj = new Tv();
 
         $obj->setGeneratorInfoName("generatorInfoName");
         $this->assertEquals("generatorInfoName", $obj->getGeneratorInfoName());
@@ -95,7 +114,7 @@ class TVTest extends AbstractTestCase {
      */
     public function testSetGeneratorInfoURL() {
 
-        $obj = new TV();
+        $obj = new Tv();
 
         $obj->setGeneratorInfoURL("generatorInfoURL");
         $this->assertEquals("generatorInfoURL", $obj->getGeneratorInfoURL());
@@ -108,10 +127,23 @@ class TVTest extends AbstractTestCase {
      */
     public function testSetSourceDataURL() {
 
-        $obj = new TV();
+        $obj = new Tv();
 
         $obj->setSourceDataURL("sourceDataURL");
         $this->assertEquals("sourceDataURL", $obj->getSourceDataURL());
+    }
+
+    /**
+     * Tests the setSourceInfoName() method.
+     *
+     * @return void
+     */
+    public function testSetSourceInfoName() {
+
+        $obj = new Tv();
+
+        $obj->setSourceInfoName("sourceInfoName");
+        $this->assertEquals("sourceInfoName", $obj->getSourceInfoName());
     }
 
     /**
@@ -121,7 +153,7 @@ class TVTest extends AbstractTestCase {
      */
     public function testSetSourceInfoURL() {
 
-        $obj = new TV();
+        $obj = new Tv();
 
         $obj->setSourceInfoURL("sourceInfoURL");
         $this->assertEquals("sourceInfoURL", $obj->getSourceInfoURL());

@@ -21,7 +21,7 @@ namespace WBW\Library\XMLTV\Model;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Model
  */
-class TV extends AbstractModel {
+class Tv extends AbstractModel {
 
     /**
      * Channels.
@@ -29,6 +29,13 @@ class TV extends AbstractModel {
      * @var Channel[]
      */
     private $channels;
+
+    /**
+     * Date.
+     *
+     * @var string
+     */
+    private $date;
 
     /**
      * Generator info name.
@@ -59,6 +66,13 @@ class TV extends AbstractModel {
     private $sourceDataURL;
 
     /**
+     * Source info name.
+     *
+     * @var string
+     */
+    private $sourceInfoName;
+
+    /**
      * Source info URL.
      *
      * @var string
@@ -78,7 +92,7 @@ class TV extends AbstractModel {
      * Add a channel.
      *
      * @param Channel $channel The channel.
-     * @return TV Returns this TV.
+     * @return Tv Returns this TV.
      */
     public function addChannel(Channel $channel) {
         $this->channels[] = $channel;
@@ -89,7 +103,7 @@ class TV extends AbstractModel {
      * Add a programme.
      *
      * @param Programme $programme The programme.
-     * @return TV Returns this TV.
+     * @return Tv Returns this TV.
      */
     public function addProgramme(Programme $programme) {
         $this->programmes[] = $programme;
@@ -103,6 +117,15 @@ class TV extends AbstractModel {
      */
     public function getChannels() {
         return $this->channels;
+    }
+
+    /**
+     * Get the date.
+     *
+     * @return string Returns the date.
+     */
+    public function getDate() {
+        return $this->date;
     }
 
     /**
@@ -142,6 +165,15 @@ class TV extends AbstractModel {
     }
 
     /**
+     * Get the source info name.
+     *
+     * @return string Returns the source info name.
+     */
+    public function getSourceInfoName() {
+        return $this->sourceInfoName;
+    }
+
+    /**
      * Get the source info URL.
      *
      * @return string Returns the source info URL.
@@ -151,10 +183,28 @@ class TV extends AbstractModel {
     }
 
     /**
+     * Determines if this TV has channels.
+     *
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    public function hasChannels() {
+        return 1 <= count($this->channels);
+    }
+
+    /**
+     * Determines if this TV has programmes.
+     *
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    public function hasProgrammes() {
+        return 1 <= count($this->programmes);
+    }
+
+    /**
      * Set the channels.
      *
      * @param Channel[] $channels The channels.
-     * @return TV Returns this TV.
+     * @return Tv Returns this TV.
      */
     protected function setChannels(array $channels) {
         $this->channels = $channels;
@@ -162,10 +212,21 @@ class TV extends AbstractModel {
     }
 
     /**
+     * Set the date.
+     *
+     * @param string $date The date.
+     * @return Tv Returns this TV.
+     */
+    public function setDate($date) {
+        $this->date = $date;
+        return $this;
+    }
+
+    /**
      * Set the generator info name.
      *
      * @param string $generatorInfoName The generator info name.
-     * @return TV Returns this TV.
+     * @return Tv Returns this TV.
      */
     public function setGeneratorInfoName($generatorInfoName) {
         $this->generatorInfoName = $generatorInfoName;
@@ -176,7 +237,7 @@ class TV extends AbstractModel {
      * Set the generator info URL.
      *
      * @param string $generatorInfoURL The generator info URL.
-     * @return TV Returns this TV.
+     * @return Tv Returns this TV.
      */
     public function setGeneratorInfoURL($generatorInfoURL) {
         $this->generatorInfoURL = $generatorInfoURL;
@@ -187,7 +248,7 @@ class TV extends AbstractModel {
      * Set the programmes.
      *
      * @param Programme[] $programmes The programmes.
-     * @return TV Returns this TV.
+     * @return Tv Returns this TV.
      */
     protected function setProgrammes(array $programmes) {
         $this->programmes = $programmes;
@@ -198,7 +259,7 @@ class TV extends AbstractModel {
      * Set the source data URL.
      *
      * @param string $sourceDataURL The source data URL.
-     * @return TV Returns this TV.
+     * @return Tv Returns this TV.
      */
     public function setSourceDataURL($sourceDataURL) {
         $this->sourceDataURL = $sourceDataURL;
@@ -206,10 +267,21 @@ class TV extends AbstractModel {
     }
 
     /**
+     * Set the source info name.
+     *
+     * @param string $sourceInfoName The source info name.
+     * @return Tv Returns this TV.
+     */
+    public function setSourceInfoName($sourceInfoName) {
+        $this->sourceInfoName = $sourceInfoName;
+        return $this;
+    }
+
+    /**
      * Set the source info URL.
      *
      * @param string $sourceInfoURL The source info URL.
-     * @return TV Returns this TV.
+     * @return Tv Returns this TV.
      */
     public function setSourceInfoURL($sourceInfoURL) {
         $this->sourceInfoURL = $sourceInfoURL;
