@@ -75,7 +75,7 @@ class CreditsTest extends AbstractTestCase {
      */
     public function testAddCommentator() {
 
-        // Set an Commentator mock.
+        // Set a Commentator mock.
         $commentator = new Commentator();
 
         $obj = new Credits();
@@ -93,7 +93,7 @@ class CreditsTest extends AbstractTestCase {
      */
     public function testAddComposer() {
 
-        // Set an Composer mock.
+        // Set a Composer mock.
         $composer = new Composer();
 
         $obj = new Credits();
@@ -111,7 +111,7 @@ class CreditsTest extends AbstractTestCase {
      */
     public function testAddDirector() {
 
-        // Set an Director mock.
+        // Set a Director mock.
         $director = new Director();
 
         $obj = new Credits();
@@ -147,7 +147,7 @@ class CreditsTest extends AbstractTestCase {
      */
     public function testAddGuest() {
 
-        // Set an Guest mock.
+        // Set a Guest mock.
         $guest = new Guest();
 
         $obj = new Credits();
@@ -165,7 +165,7 @@ class CreditsTest extends AbstractTestCase {
      */
     public function testAddPresenter() {
 
-        // Set an Presenter mock.
+        // Set a Presenter mock.
         $presenter = new Presenter();
 
         $obj = new Credits();
@@ -183,7 +183,7 @@ class CreditsTest extends AbstractTestCase {
      */
     public function testAddProducer() {
 
-        // Set an Producer mock.
+        // Set a Producer mock.
         $producer = new Producer();
 
         $obj = new Credits();
@@ -201,7 +201,7 @@ class CreditsTest extends AbstractTestCase {
      */
     public function testAddWriter() {
 
-        // Set an Writer mock.
+        // Set a Writer mock.
         $writer = new Writer();
 
         $obj = new Credits();

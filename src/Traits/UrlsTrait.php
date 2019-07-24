@@ -11,7 +11,6 @@
 
 namespace WBW\Library\XMLTV\Traits;
 
-use WBW\Library\XMLTV\Model\Channel;
 use WBW\Library\XMLTV\Model\Url;
 
 /**
@@ -29,7 +28,6 @@ trait UrlsTrait {
      */
     private $urls;
 
-
     /**
      * Add an URL.
      *
@@ -38,16 +36,6 @@ trait UrlsTrait {
     public function addUrl(Url $url) {
         $this->urls[] = $url;
         return $this;
-    }
-
-
-    /**
-     * Determines if this instance has URLs.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasURLs() {
-        return 1 <= count($this->urls);
     }
 
     /**
@@ -59,6 +47,14 @@ trait UrlsTrait {
         return $this->urls;
     }
 
+    /**
+     * Determines if this instance has URLs.
+     *
+     * @return bool Returns true in case of success, false otherwise.
+     */
+    public function hasURLs() {
+        return 1 <= count($this->urls);
+    }
 
     /**
      * Set the URLs.

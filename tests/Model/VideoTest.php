@@ -63,7 +63,7 @@ class VideoTest extends AbstractTestCase {
      */
     public function testSetColour() {
 
-        // Set an Colour mock.
+        // Set a Colour mock.
         $aspect = new Colour();
 
         $obj = new Video();
@@ -79,7 +79,7 @@ class VideoTest extends AbstractTestCase {
      */
     public function testSetQuality() {
 
-        // Set an Quality mock.
+        // Set a Quality mock.
         $aspect = new Quality();
 
         $obj = new Video();
