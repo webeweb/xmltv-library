@@ -15,7 +15,7 @@ use WBW\Library\XMLTV\Traits\ContentTrait;
 use WBW\Library\XMLTV\Traits\LangTrait;
 
 /**
- * Desc.
+ * Description.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Model

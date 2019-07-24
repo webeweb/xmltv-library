@@ -15,7 +15,7 @@ use WBW\Library\XMLTV\Model\SubTitle;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
- * Sub title test.
+ * Sub-title test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model

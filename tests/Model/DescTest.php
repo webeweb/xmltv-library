@@ -15,7 +15,7 @@ use WBW\Library\XMLTV\Model\Desc;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
- * Desc test.
+ * Description test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model
