@@ -55,8 +55,6 @@ class ChannelTest extends AbstractTestCase {
         $this->assertNull($obj->getId());
         $this->assertEquals([], $obj->getUrls());
         $this->assertFalse($obj->hasDisplayNames());
-        $this->assertFalse($obj->hasIcons());
-        $this->assertFalse($obj->hasUrls());
     }
 
     /**
