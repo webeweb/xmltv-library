@@ -13,8 +13,6 @@ namespace WBW\Library\XMLTV\Tests\Model;
 
 use WBW\Library\XMLTV\Model\Channel;
 use WBW\Library\XMLTV\Model\DisplayName;
-use WBW\Library\XMLTV\Model\Icon;
-use WBW\Library\XMLTV\Model\Url;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
@@ -41,42 +39,6 @@ class ChannelTest extends AbstractTestCase {
         $this->assertCount(1, $obj->getDisplayNames());
         $this->assertSame($icon, $obj->getDisplayNames()[0]);
         $this->assertTrue($obj->hasDisplayNames());
-    }
-
-    /**
-     * Tests the addIcon() method.
-     *
-     * @return void
-     */
-    public function testAddIcon() {
-
-        // Set a Icon mock.
-        $icon = new Icon();
-
-        $obj = new Channel();
-
-        $obj->addIcon($icon);
-        $this->assertCount(1, $obj->getIcons());
-        $this->assertSame($icon, $obj->getIcons()[0]);
-        $this->assertTrue($obj->hasIcons());
-    }
-
-    /**
-     * Tests the addUrl() method.
-     *
-     * @return void
-     */
-    public function testAddUrl() {
-
-        // Set a Url mock.
-        $icon = new Url();
-
-        $obj = new Channel();
-
-        $obj->addUrl($icon);
-        $this->assertCount(1, $obj->getUrls());
-        $this->assertSame($icon, $obj->getUrls()[0]);
-        $this->assertTrue($obj->hasUrls());
     }
 
     /**

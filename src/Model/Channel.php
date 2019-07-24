@@ -11,6 +11,9 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\IconsTrait;
+use WBW\Library\XMLTV\Traits\UrlsTrait;
+
 /**
  * Channel.
  *
@@ -18,6 +21,9 @@ namespace WBW\Library\XMLTV\Model;
  * @package WBW\Library\XMLTV\Model
  */
 class Channel extends AbstractModel {
+
+    use IconsTrait;
+    use UrlsTrait;
 
     /**
      * Display name.
@@ -27,25 +33,11 @@ class Channel extends AbstractModel {
     private $displayNames;
 
     /**
-     * Icons.
-     *
-     * @var Icon[]
-     */
-    private $icons;
-
-    /**
      * Id.
      *
      * @var string
      */
     private $id;
-
-    /**
-     * URLs.
-     *
-     * @var Url[]
-     */
-    private $urls;
 
     /**
      * Constructor.
@@ -64,28 +56,6 @@ class Channel extends AbstractModel {
      */
     public function addDisplayName(DisplayName $displayName) {
         $this->displayNames[] = $displayName;
-        return $this;
-    }
-
-    /**
-     * Add an icon.
-     *
-     * @param Icon $icon The icon.
-     * @return Channel Returns this channel.
-     */
-    public function addIcon(Icon $icon) {
-        $this->icons[] = $icon;
-        return $this;
-    }
-
-    /**
-     * Add an URL.
-     *
-     * @param Url $url The URL.
-     * @return Channel Returns this channel.
-     */
-    public function addUrl(Url $url) {
-        $this->urls[] = $url;
         return $this;
     }
 
@@ -117,39 +87,12 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Get the urls.
-     *
-     * @return Url[] Returns the urls.
-     */
-    public function getUrls() {
-        return $this->urls;
-    }
-
-    /**
      * Determines if this channel has display names.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasDisplayNames() {
         return 1 <= count($this->displayNames);
-    }
-
-    /**
-     * Determines if this channel has icons.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasIcons() {
-        return 1 <= count($this->icons);
-    }
-
-    /**
-     * Determines if this channel has URLs.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasURLs() {
-        return 1 <= count($this->urls);
     }
 
     /**
@@ -164,17 +107,6 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Set the icons.
-     *
-     * @param Icon[] $icons The icons.
-     * @return Channel Returns this channel.
-     */
-    protected function setIcons(array $icons) {
-        $this->icons = $icons;
-        return $this;
-    }
-
-    /**
      * Set the id.
      *
      * @param string $id The id.
@@ -182,17 +114,6 @@ class Channel extends AbstractModel {
      */
     public function setId($id) {
         $this->id = $id;
-        return $this;
-    }
-
-    /**
-     * Set the URLs.
-     *
-     * @param Url[] $urls The URLs.
-     * @return Channel Returns this channel.
-     */
-    protected function setUrls(array $urls) {
-        $this->urls = $urls;
         return $this;
     }
 }
