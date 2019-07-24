@@ -15,7 +15,7 @@ use WBW\Library\XMLTV\Model\EpisodeNum;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
- * Episode num test.
+ * Episode number test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model

@@ -15,7 +15,7 @@ use WBW\Library\XMLTV\Traits\ContentTrait;
 use WBW\Library\XMLTV\Traits\SystemTrait;
 
 /**
- * Episode num.
+ * Episode number.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Model
