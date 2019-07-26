@@ -117,15 +117,8 @@ class Parser {
 
         $model = new Audio();
 
-        $presentNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "present");
-        if (null !== $presentNode) {
-            $model->setPresent(static::parsePresent($presentNode));
-        }
-
-        $stereoNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "stereo");
-        if (null !== $stereoNode) {
-            $model->setStereo(static::parseStereo($stereoNode));
-        }
+        ParserHelper::parseChildNode($domNode, "present", $model);
+        ParserHelper::parseChildNode($domNode, "stereo", $model);
 
         return $model;
     }
@@ -156,20 +149,9 @@ class Parser {
         $model = new Channel();
         $model->setId(ParserHelper::getDOMAttributeValue($domNode, "id"));
 
-        $displayNameNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "display-name");
-        foreach ($displayNameNodes as $current) {
-            $model->addDisplayName(static::parseDisplayName($current));
-        }
-
-        $iconNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "icon");
-        foreach ($iconNodes as $current) {
-            $model->addIcon(static::parseIcon($current));
-        }
-
-        $urlNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "url");
-        foreach ($urlNodes as $current) {
-            $model->addUrl(static::parseUrl($current));
-        }
+        ParserHelper::parseChildNodes($domNode, "display-name", $model);
+        ParserHelper::parseChildNodes($domNode, "icon", $model);
+        ParserHelper::parseChildNodes($domNode, "url", $model);
 
         return $model;
     }
@@ -241,55 +223,16 @@ class Parser {
 
         $model = new Credits();
 
-        $actorNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "actor");
-        foreach ($actorNodes as $current) {
-            $model->addActor(static::parseActor($current));
-        }
-
-        $adapterNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "adapter");
-        foreach ($adapterNodes as $current) {
-            $model->addAdapter(static::parseAdapter($current));
-        }
-
-        $commentatorNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "commentator");
-        foreach ($commentatorNodes as $current) {
-            $model->addCommentator(static::parseCommentator($current));
-        }
-
-        $composerNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "composer");
-        foreach ($composerNodes as $current) {
-            $model->addComposer(static::parseComposer($current));
-        }
-
-        $directorNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "director");
-        foreach ($directorNodes as $current) {
-            $model->addDirector(static::parseDirector($current));
-        }
-
-        $editorNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "editor");
-        foreach ($editorNodes as $current) {
-            $model->addEditor(static::parseEditor($current));
-        }
-
-        $guestNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "guest");
-        foreach ($guestNodes as $current) {
-            $model->addGuest(static::parseGuest($current));
-        }
-
-        $presenterNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "presenter");
-        foreach ($presenterNodes as $current) {
-            $model->addPresenter(static::parsePresenter($current));
-        }
-
-        $producerNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "producer");
-        foreach ($producerNodes as $current) {
-            $model->addProducer(static::parseProducer($current));
-        }
-
-        $writerNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "writer");
-        foreach ($writerNodes as $current) {
-            $model->addWriter(static::parseWriter($current));
-        }
+        ParserHelper::parseChildNodes($domNode, "actor", $model);
+        ParserHelper::parseChildNodes($domNode, "adapter", $model);
+        ParserHelper::parseChildNodes($domNode, "commentator", $model);
+        ParserHelper::parseChildNodes($domNode, "composer", $model);
+        ParserHelper::parseChildNodes($domNode, "director", $model);
+        ParserHelper::parseChildNodes($domNode, "editor", $model);
+        ParserHelper::parseChildNodes($domNode, "guest", $model);
+        ParserHelper::parseChildNodes($domNode, "presenter", $model);
+        ParserHelper::parseChildNodes($domNode, "producer", $model);
+        ParserHelper::parseChildNodes($domNode, "writer", $model);
 
         return $model;
     }
@@ -572,50 +515,15 @@ class Parser {
         $model->setStart(ParserHelper::getDOMAttributeValue($domNode, "start"));
         $model->setStop(ParserHelper::getDOMAttributeValue($domNode, "stop"));
 
-        $categoryNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "category");
-        if (null !== $categoryNode) {
-            $model->setCategory(static::parseCategory($categoryNode));
-        }
-
-        $countryNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "country");
-        if (null !== $countryNode) {
-            $model->setCountry(static::parseCountry($countryNode));
-        }
-
-        $creditsNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "credits");
-        if (null !== $creditsNode) {
-            $model->setCredits(static::parseCredits($creditsNode));
-        }
-
-        $dateNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "date");
-        if (null !== $dateNode) {
-            $model->setDate(static::parseDate($dateNode));
-        }
-
-        $descNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "desc");
-        if (null !== $descNode) {
-            $model->setDesc(static::parseDesc($descNode));
-        }
-
-        $iconNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "icon");
-        if (null !== $iconNode) {
-            $model->setIcon(static::parseIcon($iconNode));
-        }
-
-        $lengthNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "length");
-        if (null !== $lengthNode) {
-            $model->setLength(static::parseLength($lengthNode));
-        }
-
-        $ratingNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "rating");
-        if (null !== $ratingNode) {
-            $model->setRating(static::parseRating($ratingNode));
-        }
-
-        $titleNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "title");
-        if (null !== $titleNode) {
-            $model->setTitle(static::parseTitle($titleNode));
-        }
+        ParserHelper::parseChildNode($domNode, "category", $model);
+        ParserHelper::parseChildNode($domNode, "country", $model);
+        ParserHelper::parseChildNode($domNode, "credits", $model);
+        ParserHelper::parseChildNode($domNode, "date", $model);
+        ParserHelper::parseChildNode($domNode, "desc", $model);
+        ParserHelper::parseChildNode($domNode, "icon", $model);
+        ParserHelper::parseChildNode($domNode, "length", $model);
+        ParserHelper::parseChildNode($domNode, "rating", $model);
+        ParserHelper::parseChildNode($domNode, "title", $model);
 
         return $model;
     }
@@ -645,15 +553,8 @@ class Parser {
         $model = new Rating();
         $model->setSystem(ParserHelper::getDOMAttributeValue($domNode, "system"));
 
-        $iconNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "icon");
-        foreach ($iconNodes as $current) {
-            $model->addIcon(static::parseIcon($current));
-        }
-
-        $valueNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "value");
-        if (null !== $valueNode) {
-            $model->setValue(static::parseValue($valueNode));
-        }
+        ParserHelper::parseChildNodes($domNode, "icon", $model);
+        ParserHelper::parseChildNode($domNode, "value", $model);
 
         return $model;
     }
@@ -685,15 +586,8 @@ class Parser {
 
         $model = new StarRating();
 
-        $iconNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "icon");
-        foreach ($iconNodes as $current) {
-            $model->addIcon(static::parseIcon($current));
-        }
-
-        $valueNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "value");
-        if (null !== $valueNode) {
-            $model->setValue(static::parseValue($valueNode));
-        }
+        ParserHelper::parseChildNodes($domNode, "icon", $model);
+        ParserHelper::parseChildNode($domNode, "value", $model);
 
         return $model;
     }
@@ -738,10 +632,7 @@ class Parser {
         $model = new Subtitles();
         $model->setType(ParserHelper::getDOMAttributeValue($domNode, "type"));
 
-        $languageNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "language");
-        if (null !== $languageNode) {
-            $model->setLanguage(static::parseLanguage($languageNode));
-        }
+        ParserHelper::parseChildNode($domNode, "language", $model);
 
         return $model;
     }
@@ -777,15 +668,8 @@ class Parser {
         $model->setSourceInfoName(ParserHelper::getDOMAttributeValue($domNode, "source-info-name"));
         $model->setSourceInfoURL(ParserHelper::getDOMAttributeValue($domNode, "source-info-url"));
 
-        $channelNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "channel");
-        foreach ($channelNodes as $current) {
-            $model->addChannel(static::parseChannel($current));
-        }
-
-        $programmeNodes = ParserHelper::getDOMNodesByName($domNode->childNodes, "programme");
-        foreach ($programmeNodes as $current) {
-            $model->addProgramme(static::parseProgramme($current));
-        }
+        ParserHelper::parseChildNodes($domNode, "channel", $model);
+        ParserHelper::parseChildNodes($domNode, "programme", $model);
 
         return $model;
     }
@@ -828,25 +712,10 @@ class Parser {
 
         $model = new Video();
 
-        $aspectNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "aspect");
-        if (null !== $aspectNode) {
-            $model->setAspect(static::parseAspect($aspectNode));
-        }
-
-        $colourNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "colour");
-        if (null !== $colourNode) {
-            $model->setColour(static::parseColour($colourNode));
-        }
-
-        $presentNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "present");
-        if (null !== $presentNode) {
-            $model->setPresent(static::parsePresent($presentNode));
-        }
-
-        $qualityNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "quality");
-        if (null !== $qualityNode) {
-            $model->setQuality(static::parseQuality($qualityNode));
-        }
+        ParserHelper::parseChildNode($domNode, "aspect", $model);
+        ParserHelper::parseChildNode($domNode, "colour", $model);
+        ParserHelper::parseChildNode($domNode, "present", $model);
+        ParserHelper::parseChildNode($domNode, "quality", $model);
 
         return $model;
     }
