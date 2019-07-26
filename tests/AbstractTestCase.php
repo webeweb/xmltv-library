@@ -39,6 +39,7 @@ abstract class AbstractTestCase extends TestCase {
         $filename = getcwd() . "/tests/Fixtures/xmltv.xml";
 
         // Set a DOM document mock.
-        $this->document = DOMDocument::load($filename);
+        $this->document = new DOMDocument;
+        $this->document->load($filename);
     }
 }
