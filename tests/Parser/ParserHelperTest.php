@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\IO;
+namespace WBW\Library\XMLTV\Tests\Parser;
 
-use WBW\Library\XMLTV\IO\ParserHelper;
+use WBW\Library\XMLTV\Parser\ParserHelper;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
  * Parser helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\IO
+ * @package WBW\Library\XMLTV\Tests\Parser
  */
 class ParserHelperTest extends AbstractTestCase {
 
@@ -34,7 +34,7 @@ class ParserHelperTest extends AbstractTestCase {
 
         $this->assertNull(ParserHelper::getDOMAttributeValue($displayNameNode, ""));
         $this->assertNull(ParserHelper::getDOMAttributeValue($tvNode, ""));
-        $this->assertEquals("https://github.com", ParserHelper::getDOMAttributeValue($tvNode, "generator-info-url"));
+        $this->assertEquals("date", ParserHelper::getDOMAttributeValue($tvNode, "date"));
     }
 
     /**
@@ -73,5 +73,16 @@ class ParserHelperTest extends AbstractTestCase {
     public function testGetDOMNodesByNameWithNull() {
 
         $this->assertEquals([], ParserHelper::getDOMNodesByName(null, "channel"));
+    }
+
+    /**
+     * Tests the getMethodName() method.
+     *
+     * @return void
+     */
+    public function testGetMethodeName() {
+
+        $this->assertEquals("addDisplayName", ParserHelper::getMethodName("add", "display-name"));
+        $this->assertEquals("setUrl", ParserHelper::getMethodName("set", "url"));
     }
 }

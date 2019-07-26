@@ -9,16 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\IO;
+namespace WBW\Library\XMLTV\Parser;
 
 use DOMNode;
 use DOMNodeList;
+use WBW\Library\XMLTV\Model\AbstractModel;
 
 /**
  * Parser helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\IO
+ * @package WBW\Library\XMLTV\Parser
  */
 class ParserHelper {
 
@@ -87,5 +88,62 @@ class ParserHelper {
         }
 
         return $domNodes;
+    }
+
+    /**
+     * Get a method name.
+     *
+     * @param string $type The type.
+     * @param string $attribute The attribute.
+     * @return string Returns the method name.
+     */
+    public static function getMethodName($type, $attribute) {
+
+        $method = "";
+
+        $parts = explode("-", $attribute);
+        foreach ($parts as $current) {
+            $method .= ucfirst($current);
+        }
+
+        return implode("", [$type, $method]);
+    }
+
+    /**
+     * Parses a child node.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function parseChildNode(DomNode $domNode, $nodeName, AbstractModel $model) {
+
+        $parser = static::getMethodName("parse", $nodeName);
+        $setter = static::getMethodName("set", $nodeName);
+
+        $node = static::getDOMNodeByName($domNode->childNodes, $nodeName);
+        if (null !== $node) {
+            $model->$setter(call_user_func_array(__NAMESPACE__ . "\\Parser::" . $parser, [$node]));
+        }
+    }
+
+    /**
+     * Parses the child nodes.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function parseChildNodes(DomNode $domNode, $nodeName, AbstractModel $model) {
+
+        $parser = static::getMethodName("parse", $nodeName);
+        $setter = static::getMethodName("add", $nodeName);
+
+        $nodes = static::getDOMNodesByName($domNode->childNodes, $nodeName);
+        foreach ($nodes as $current) {
+            $model->$setter(call_user_func_array(__NAMESPACE__ . "\\Parser::" . $parser, [$current]));
+        }
     }
 }
