@@ -1,51 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv source-info-url="https://info.github.com" source-data-url="https://data.github.com" generator-info-name="GitHub" generator-info-url="https://github.com">
-    <channel id="C10.api.github.com">
-        <display-name>Action</display-name>
-        <icon src="https://television.github.com/sites/tr_master/files/sheet_media/tv/500x500/10.png"/>
+<tv date="date" generator-info-name="generatorInfo" generator-info-url="generatorInfoURL" source-data-url="sourceDataURL" source-info-name="sourceInfoName" source-info-url="sourceInfoURL">
+    <channel id="channel-id">
+        <display-name>Display name</display-name>
+        <icon src="src" width="1920" height="1080"/>
+        <url>URL</url>
     </channel>
-    <programme start="20190711070900 +0200" stop="20190711084200 +0200" showview="" channel="C10.api.github.com">
-        <title>Les trois sergents de Fort Madras</title>
-        <desc lang="fr">En 1890, aux Indes, trois sergents britanniques, Frankie, Burt et John, croupissent dans la même cellule pour insubordination grave. Leurs chefs leur offrent une occasion de se racheter et le trio accepte de visiter
-            deux forts avancés en territoire indigène, alors que sévissent tout à la fois les prémices d'une révolte hindoue et les ravages de la typhoïde. Accompagnés d'un guide, Risk Gamal, les trois hommes affrontent toutes sortes de
-            catastrophes, une charge d'éléphants, des pluies diluviennes, des chasseurs de tête, la pire trahison, les geôles les plus sombres et même l'amour d'une prisonnière anglaise, survivante d'un massacre...
-        </desc>
+    <programme start="start" stop="stop" showview="showview" channel="channel-id">
+        <title lang="title-lang">Title</title>
+        <sub-title lang="sub-title-lang">Sub-title</sub-title>
+        <desc lang="desc-lang">Desc</desc>
         <credits>
-            <director>Umberto Lenzi</director>
-            <actor>Richard Harrison (Frankie Ross)</actor>
-            <actor>Wandisa Guida (Mary Stark)</actor>
-            <actor>Ugo Arden (Burt Wallace)</actor>
-            <actor>Nick Anderson (John Foster)</actor>
-            <actor>Aldo Sambrell (Risk Gamal)</actor>
-            <actor>Luz Márquez (Helen)</actor>
-            <actor>Andrea Bosic (le colonel McDonald)</actor>
-            <actor>Marco Tulli</actor>
-            <writer>Umberto Lenzi</writer>
-            <writer>Fulvio Gicca Palli</writer>
-            <writer>Víctor Andrés Catena</writer>
-            <composer>Giovanni Fusco</composer>
-            <guest>Ian Kennedy Martin</guest>
+            <actor role="role">Actor</actor>
+            <adapter>Adapter</adapter>
+            <commentator>Commentator</commentator>
+            <composer>Composer</composer>
+            <director>Director</director>
+            <editor>Editor</editor>
+            <guest>Guest</guest>
+            <presenter>Presenter</presenter>
+            <producer>Producer</producer>
+            <writer>Writer</writer>
         </credits>
-        <date>1964</date>
-        <category lang="fr">film d'aventures</category>
-        <length units="minutes">93</length>
-        <icon src="https://television.github.com/sites/tr_master/files/sheet_media/media/169_emi_867956.jpg"/>
-        <country>Espagne - Italie</country>
+        <date>1970</date>
+        <category lang="category-lang">Category</category>
+        <keyword lang="keyword-lang">Keyword</keyword>
+        <language lang="language-lang">Language</language>
+        <orig-language lang="orig-language-lang">Orig language</orig-language>
+        <length units="minutes">90</length>
+        <icon src="src" width="1920" height="1080"/>
+        <url>URL</url>
+        <country lang="country-lang">Country</country>
+        <episode-num system="episode-num-system">Episode num</episode-num>
         <video>
-            <aspect>16:9</aspect>
-            <quality>HDTV</quality>
+            <present>Present</present>
+            <colour>Colour</colour>
+            <aspect>Aspect</aspect>
+            <quality>Quality</quality>
         </video>
-        <rating system="CSA">
-            <value>Tout public</value>
-            <icon src="https://television.github.com/sites/tr_master/files/sheet_media/media/169_emi_867956.jpg"/>
+        <audio>
+            <present>Present</present>
+            <stereo>Stereo</stereo>
+        </audio>
+        <previously-shown channel="channel-id" start="previously-shown-start"/>
+        <premiere lang="premiere-lang">Premiere</premiere>
+        <last-chance lang="last-chance-lang">Last chance</last-chance>
+        <new/>
+        <subtitles type="subtitles-type">
+            <language lang="language-lang">Language</language>
+        </subtitles>
+        <rating system="rating-system">
+            <value>Value</value>
+            <icon src="src" width="1920" height="1080"/>
         </rating>
         <star-rating>
-            <value>1/5</value>
+            <value>Value</value>
+            <icon src="src" width="1920" height="1080"/>
         </star-rating>
-        <audio>
-            <stereo>bilingual</stereo>
-        </audio>
-        <previously-shown/>
+        <review type="review-type" source="source" reviewer="reviewer" lang="review-lang">Review</review>
     </programme>
 </tv>
