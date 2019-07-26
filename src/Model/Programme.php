@@ -811,7 +811,7 @@ class Programme extends AbstractModel {
     /**
      * Set the star ratings.
      *
-     * @param StarRating[] $staRatings The ratings.
+     * @param StarRating[] $starRatings The ratings.
      * @return Programme Returns this programme.
      */
     protected function setStarRatings(array $starRatings) {
