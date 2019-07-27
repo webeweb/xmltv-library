@@ -15,6 +15,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use DOMDocument;
+use WBW\Library\XMLTV\Parser\Parser;
 use WBW\Library\XMLTV\Traits\ChannelsTrait;
 use WBW\Library\XMLTV\Traits\ProgrammesTrait;
 
@@ -132,6 +134,20 @@ class Tv extends AbstractModel {
      */
     public function getSourceInfoURL() {
         return $this->sourceInfoURL;
+    }
+
+    /**
+     * Parses an XML.
+     *
+     * @param string $filename The filename.
+     * @return Tv Returns the TV.
+     */
+    public static function parseXML($filename) {
+
+        $document = new DOMDocument();
+        $document->load($filename);
+
+        return Parser::parseTv($document->documentElement);
     }
 
     /**
