@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use InvalidArgumentException;
 use WBW\Library\XMLTV\Traits\LangTrait;
 use WBW\Library\XMLTV\Traits\TypeTrait;
 
@@ -79,4 +80,18 @@ class Review extends AbstractModel {
         return $this;
     }
 
+    /**
+     * Set the type.
+     *
+     * @param string $type The type.
+     * @return Review Returns this review.
+     * @throws InvalidArgumentException Throws an oinvalid argument exception if the type is invalid.
+     */
+    public function setType($type) {
+        if (null !== $type && false === in_array($type, ["text", "url"])) {
+            throw new InvalidArgumentException(sprintf("The type \"%s\" is invalid", $type));
+        }
+        $this->type = $type;
+        return $this;
+    }
 }

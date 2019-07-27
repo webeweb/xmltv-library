@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
+use Exception;
+use InvalidArgumentException;
 use WBW\Library\XMLTV\Model\Review;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
@@ -61,5 +63,38 @@ class ReviewTest extends AbstractTestCase {
 
         $obj->setSource("source");
         $this->assertEquals("source", $obj->getSource());
+    }
+
+    /**
+     * Tests the setType() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testSetType() {
+
+        $obj = new Review();
+
+        $obj->setType("text");
+        $this->assertEquals("text", $obj->getType());
+    }
+
+    /**
+     * Tests the setType() method.
+     *
+     * @return void
+     */
+    public function testSetTypeWithInvaliArgumentException() {
+
+        $obj = new Review();
+
+        try {
+
+            $obj->setType("type");
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
+            $this->assertEquals("The type \"type\" is invalid", $ex->getMessage());
+        }
     }
 }
