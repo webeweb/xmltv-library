@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv date="date" generator-info-name="generatorInfo" generator-info-url="generatorInfoURL" source-data-url="sourceDataURL" source-info-name="sourceInfoName" source-info-url="sourceInfoURL">
+<tv date="date" generator-info-name="generator-info-name" generator-info-url="generator-info-url" source-data-url="source-data-url" source-info-name="source-info-name" source-info-url="source-info-url">
     <channel id="channel-id">
         <display-name>Display name</display-name>
         <icon src="src" width="1920" height="1080"/>

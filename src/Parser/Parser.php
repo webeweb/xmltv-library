@@ -511,19 +511,35 @@ class Parser {
 
         $model = new Programme();
         $model->setChannel(ParserHelper::getDOMAttributeValue($domNode, "channel"));
-        $model->setShowView(ParserHelper::getDOMAttributeValue($domNode, "show-view"));
+        $model->setClumpIdx(ParserHelper::getDOMAttributeValue($domNode, "clumpidx"));
+        $model->setShowView(ParserHelper::getDOMAttributeValue($domNode, "showview"));
+        $model->setPdcStart(ParserHelper::getDOMAttributeValue($domNode, "pdc-start"));
         $model->setStart(ParserHelper::getDOMAttributeValue($domNode, "start"));
         $model->setStop(ParserHelper::getDOMAttributeValue($domNode, "stop"));
+        $model->setVideoPlus(ParserHelper::getDOMAttributeValue($domNode, "videoplus"));
+        $model->setVpsStart(ParserHelper::getDOMAttributeValue($domNode, "vps-start"));
 
-        ParserHelper::parseChildNode($domNode, "category", $model);
-        ParserHelper::parseChildNode($domNode, "country", $model);
+        ParserHelper::parseChildNode($domNode, "audio", $model);
+        ParserHelper::parseChildNodes($domNode, "category", $model);
+        ParserHelper::parseChildNodes($domNode, "country", $model);
         ParserHelper::parseChildNode($domNode, "credits", $model);
         ParserHelper::parseChildNode($domNode, "date", $model);
-        ParserHelper::parseChildNode($domNode, "desc", $model);
-        ParserHelper::parseChildNode($domNode, "icon", $model);
+        ParserHelper::parseChildNodes($domNode, "episode-num", $model);
+        ParserHelper::parseChildNodes($domNode, "desc", $model);
+        ParserHelper::parseChildNodes($domNode, "icon", $model);
+        ParserHelper::parseChildNodes($domNode, "keyword", $model);
         ParserHelper::parseChildNode($domNode, "length", $model);
-        ParserHelper::parseChildNode($domNode, "rating", $model);
-        ParserHelper::parseChildNode($domNode, "title", $model);
+        ParserHelper::parseChildNode($domNode, "language", $model);
+        ParserHelper::parseChildNode($domNode, "last-chance", $model);
+        ParserHelper::parseChildNode($domNode, "premiere", $model);
+        ParserHelper::parseChildNode($domNode, "previously-shown", $model);
+        ParserHelper::parseChildNodes($domNode, "rating", $model);
+        ParserHelper::parseChildNodes($domNode, "review", $model);
+        ParserHelper::parseChildNodes($domNode, "sub-title", $model);
+        ParserHelper::parseChildNodes($domNode, "star-rating", $model);
+        ParserHelper::parseChildNodes($domNode, "title", $model);
+        ParserHelper::parseChildNodes($domNode, "url", $model);
+        ParserHelper::parseChildNode($domNode, "video", $model);
 
         return $model;
     }

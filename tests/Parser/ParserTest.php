@@ -40,6 +40,7 @@ use WBW\Library\XMLTV\Model\Present;
 use WBW\Library\XMLTV\Model\Presenter;
 use WBW\Library\XMLTV\Model\PreviouslyShown;
 use WBW\Library\XMLTV\Model\Producer;
+use WBW\Library\XMLTV\Model\Programme;
 use WBW\Library\XMLTV\Model\Quality;
 use WBW\Library\XMLTV\Model\Rating;
 use WBW\Library\XMLTV\Model\Review;
@@ -48,6 +49,7 @@ use WBW\Library\XMLTV\Model\Stereo;
 use WBW\Library\XMLTV\Model\SubTitle;
 use WBW\Library\XMLTV\Model\Subtitles;
 use WBW\Library\XMLTV\Model\Title;
+use WBW\Library\XMLTV\Model\Tv;
 use WBW\Library\XMLTV\Model\Url;
 use WBW\Library\XMLTV\Model\Value;
 use WBW\Library\XMLTV\Model\Video;
@@ -173,13 +175,8 @@ class ParserTest extends AbstractTestCase {
         $res = Parser::parseChannel($node);
         $this->assertInstanceOf(Channel::class, $res);
 
-        $this->assertCount(1, $res->getDisplayNames());
         $this->assertInstanceOf(DisplayName::class, $res->getDisplayNames()[0]);
-
-        $this->assertCount(1, $res->getIcons());
         $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
-
-        $this->assertCount(1, $res->getUrls());
         $this->assertInstanceOf(Url::class, $res->getUrls()[0]);
     }
 
@@ -274,34 +271,15 @@ class ParserTest extends AbstractTestCase {
         $res = Parser::parseCredits($node);
         $this->assertInstanceOf(Credits::class, $res);
 
-        $this->assertCount(1, $res->getActors());
         $this->assertInstanceOf(Actor::class, $res->getActors()[0]);
-
-        $this->assertCount(1, $res->getAdapters());
         $this->assertInstanceOf(Adapter::class, $res->getAdapters()[0]);
-
-        $this->assertCount(1, $res->getCommentators());
         $this->assertInstanceOf(Commentator::class, $res->getCommentators()[0]);
-
-        $this->assertCount(1, $res->getComposers());
         $this->assertInstanceOf(Composer::class, $res->getComposers()[0]);
-
-        $this->assertCount(1, $res->getDirectors());
         $this->assertInstanceOf(Director::class, $res->getDirectors()[0]);
-
-        $this->assertCount(1, $res->getEditors());
         $this->assertInstanceOf(Editor::class, $res->getEditors()[0]);
-
-        $this->assertCount(1, $res->getGuests());
         $this->assertInstanceOf(Guest::class, $res->getGuests()[0]);
-
-        $this->assertCount(1, $res->getPresenters());
         $this->assertInstanceOf(Presenter::class, $res->getPresenters()[0]);
-
-        $this->assertCount(1, $res->getProducers());
         $this->assertInstanceOf(Producer::class, $res->getProducers()[0]);
-
-        $this->assertCount(1, $res->getWriters());
         $this->assertInstanceOf(Writer::class, $res->getWriters()[0]);
     }
 
@@ -451,9 +429,9 @@ class ParserTest extends AbstractTestCase {
         $res = Parser::parseIcon($node);
         $this->assertInstanceOf(Icon::class, $res);
 
+        $this->assertEquals(1080, $res->getHeight());
         $this->assertEquals("src", $res->getSrc());
         $this->assertEquals(1920, $res->getWidth());
-        $this->assertEquals(1080, $res->getHeight());
     }
 
     /**
@@ -647,6 +625,52 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the parseProgramme() method.
+     *
+     * @return void
+     */
+    public function testParseProgramme() {
+
+        // tv > programme
+        $node = $this->document->documentElement
+            ->childNodes->item(3);
+
+        $res = Parser::parseProgramme($node);
+        $this->assertInstanceOf(Programme::class, $res);
+
+        $this->assertInstanceOf(Audio::class, $res->getAudio());
+        $this->assertInstanceOf(Category::class, $res->getCategories()[0]);
+        $this->assertEquals("channel-id", $res->getChannel());
+        $this->assertEquals("clumpidx", $res->getClumpIdx());
+        $this->assertCount(1, $res->getCountries());
+        $this->assertInstanceOf(Country::class, $res->getCountries()[0]);
+        $this->assertInstanceOf(Credits::class, $res->getCredits());
+        $this->assertInstanceOf(Date::class, $res->getDate());
+        $this->assertInstanceOf(Desc::class, $res->getDescs()[0]);
+        $this->assertInstanceOf(EpisodeNum::class, $res->getEpisodeNums()[0]);
+        $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
+        $this->assertInstanceOf(Keyword::class, $res->getKeywords()[0]);
+        $this->assertInstanceOf(Language::class, $res->getLanguage());
+        $this->assertInstanceOf(LastChance::class, $res->getLastChance());
+        $this->assertInstanceOf(Length::class, $res->getLength());
+        $this->assertEquals("pdc-start", $res->getPdcStart());
+        $this->assertInstanceOf(Premiere::class, $res->getPremiere());
+        $this->assertInstanceOf(PreviouslyShown::class, $res->getPreviouslyShown());
+        $this->assertInstanceOf(Rating::class, $res->getRatings()[0]);
+        $this->assertInstanceOf(Review::class, $res->getReviews()[0]);
+        $this->assertInstanceOf(StarRating::class, $res->getStarRatings()[0]);
+        $this->assertEquals("showview", $res->getShowView());
+        $this->assertEquals("start", $res->getStart());
+        $this->assertEquals("stop", $res->getStop());
+        $this->assertInstanceOf(SubTitle::class, $res->getSubTitles()[0]);
+        $this->assertInstanceOf(Title::class, $res->getTitles()[0]);
+        $this->assertInstanceOf(Url::class, $res->getUrls()[0]);
+        $this->assertInstanceOf(Video::class, $res->getVideo());
+        $this->assertEquals("videoplus", $res->getVideoPlus());
+        $this->assertEquals("vps-start", $res->getVpsStart());
+    }
+
+    /**
      * Tests the parseQuality() method.
      *
      * @return void
@@ -680,9 +704,7 @@ class ParserTest extends AbstractTestCase {
         $res = Parser::parseRating($node);
         $this->assertInstanceOf(Rating::class, $res);
 
-        $this->assertCount(1, $res->getIcons());
         $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
-
         $this->assertEquals("rating-system", $res->getSystem());
         $this->assertInstanceOf(Value::class, $res->getValue());
     }
@@ -723,9 +745,7 @@ class ParserTest extends AbstractTestCase {
         $res = Parser::parseStarRating($node);
         $this->assertInstanceOf(StarRating::class, $res);
 
-        $this->assertCount(1, $res->getIcons());
         $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
-
         $this->assertInstanceOf(Value::class, $res->getValue());
     }
 
@@ -784,6 +804,28 @@ class ParserTest extends AbstractTestCase {
 
         $this->assertInstanceOf(Language::class, $res->getLanguage());
         $this->assertEquals("subtitles-type", $res->getType());
+    }
+
+    /**
+     * Tests the parseTv() method.
+     *
+     * @return void
+     */
+    public function testParseTv() {
+
+        // tv
+        $node = $this->document->documentElement;
+
+        $res = Parser::parseTv($node);
+        $this->assertInstanceOf(Tv::class, $res);
+
+        $this->assertInstanceOf(Channel::class, $res->getChannels()[0]);
+        $this->assertEquals("generator-info-name", $res->getGeneratorInfoName());
+        $this->assertEquals("generator-info-url", $res->getGeneratorInfoURL());
+        $this->assertInstanceOf(Programme::class, $res->getProgrammes()[0]);
+        $this->assertEquals("source-data-url", $res->getSourceDataURL());
+        $this->assertEquals("source-info-name", $res->getSourceInfoName());
+        $this->assertEquals("source-info-url", $res->getSourceInfoURL());
     }
 
     /**
