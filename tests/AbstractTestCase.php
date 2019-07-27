@@ -11,7 +11,6 @@
 
 namespace WBW\Library\XMLTV\Tests;
 
-use DOMDocument;
 use PHPUnit\Framework\TestCase;
 
 /**
