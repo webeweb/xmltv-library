@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use InvalidArgumentException;
 use WBW\Library\XMLTV\Traits\LanguageTrait;
 use WBW\Library\XMLTV\Traits\TypeTrait;
 
@@ -24,4 +25,18 @@ class Subtitles extends AbstractModel {
 
     use LanguageTrait;
     use TypeTrait;
+
+    /**
+     * Set the type.
+     *
+     * @param string $type The type.
+     * @return Subtitles Returns this subtitles.
+     */
+    public function setType($type) {
+        if (null !== $type && false === in_array($type, ["deaf-signed", "onscreen", "teletext"])) {
+            throw new InvalidArgumentException(sprintf("The type \"%s\" is invalid", $type));
+        }
+        $this->type = $type;
+        return $this;
+    }
 }
