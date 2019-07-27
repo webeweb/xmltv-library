@@ -24,6 +24,7 @@
         <testsuite name="webeweb/xmltv-library">
             <directory suffix="Test.php">./tests</directory>
             <exclude>./tests/IO/ParserTest.php</exclude>
+            <exclude>./tests/Parser/ParserTest.php</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
