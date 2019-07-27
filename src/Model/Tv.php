@@ -15,6 +15,9 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\ChannelsTrait;
+use WBW\Library\XMLTV\Traits\ProgrammesTrait;
+
 /**
  * TV.
  *
@@ -23,12 +26,8 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Tv extends AbstractModel {
 
-    /**
-     * Channels.
-     *
-     * @var Channel[]
-     */
-    private $channels;
+    use ChannelsTrait;
+    use ProgrammesTrait;
 
     /**
      * Date.
@@ -50,13 +49,6 @@ class Tv extends AbstractModel {
      * @var string
      */
     private $generatorInfoURL;
-
-    /**
-     * Programmes.
-     *
-     * @var Programme[]
-     */
-    private $programmes;
 
     /**
      * Source data URL.
@@ -89,37 +81,6 @@ class Tv extends AbstractModel {
     }
 
     /**
-     * Add a channel.
-     *
-     * @param Channel $channel The channel.
-     * @return Tv Returns this TV.
-     */
-    public function addChannel(Channel $channel) {
-        $this->channels[] = $channel;
-        return $this;
-    }
-
-    /**
-     * Add a programme.
-     *
-     * @param Programme $programme The programme.
-     * @return Tv Returns this TV.
-     */
-    public function addProgramme(Programme $programme) {
-        $this->programmes[] = $programme;
-        return $this;
-    }
-
-    /**
-     * Get the channels.
-     *
-     * @return Channel[] Returns the channels.
-     */
-    public function getChannels() {
-        return $this->channels;
-    }
-
-    /**
      * Get the date.
      *
      * @return string Returns the date.
@@ -147,15 +108,6 @@ class Tv extends AbstractModel {
     }
 
     /**
-     * Get the programmes.
-     *
-     * @return Programme[] Returns the programmes.
-     */
-    public function getProgrammes() {
-        return $this->programmes;
-    }
-
-    /**
      * Get the source data URL.
      *
      * @return string Returns the source data URL.
@@ -180,35 +132,6 @@ class Tv extends AbstractModel {
      */
     public function getSourceInfoURL() {
         return $this->sourceInfoURL;
-    }
-
-    /**
-     * Determines if this TV has channels.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasChannels() {
-        return 1 <= count($this->channels);
-    }
-
-    /**
-     * Determines if this TV has programmes.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasProgrammes() {
-        return 1 <= count($this->programmes);
-    }
-
-    /**
-     * Set the channels.
-     *
-     * @param Channel[] $channels The channels.
-     * @return Tv Returns this TV.
-     */
-    protected function setChannels(array $channels) {
-        $this->channels = $channels;
-        return $this;
     }
 
     /**
@@ -241,17 +164,6 @@ class Tv extends AbstractModel {
      */
     public function setGeneratorInfoURL($generatorInfoURL) {
         $this->generatorInfoURL = $generatorInfoURL;
-        return $this;
-    }
-
-    /**
-     * Set the programmes.
-     *
-     * @param Programme[] $programmes The programmes.
-     * @return Tv Returns this TV.
-     */
-    protected function setProgrammes(array $programmes) {
-        $this->programmes = $programmes;
         return $this;
     }
 

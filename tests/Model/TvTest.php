@@ -11,8 +11,6 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
-use WBW\Library\XMLTV\Model\Channel;
-use WBW\Library\XMLTV\Model\Programme;
 use WBW\Library\XMLTV\Model\Tv;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
@@ -23,42 +21,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
  * @package WBW\Library\XMLTV\Tests\Model
  */
 class TvTest extends AbstractTestCase {
-
-    /**
-     * Tests the addChannel() method.
-     *
-     * @return void
-     */
-    public function testAddChannel() {
-
-        // Set a Channel mock.
-        $channel = new Channel();
-
-        $obj = new Tv();
-
-        $obj->addChannel($channel);
-        $this->assertCount(1, $obj->getChannels());
-        $this->assertSame($channel, $obj->getChannels()[0]);
-        $this->assertTrue($obj->hasChannels());
-    }
-
-    /**
-     * Tests the addProgramme() method.
-     *
-     * @return void
-     */
-    public function testAddProgramme() {
-
-        // Set a Programme mock.
-        $channel = new Programme();
-
-        $obj = new Tv();
-
-        $obj->addProgramme($channel);
-        $this->assertCount(1, $obj->getProgrammes());
-        $this->assertSame($channel, $obj->getProgrammes()[0]);
-        $this->assertTrue($obj->hasProgrammes());
-    }
 
     /**
      * Tests the __construct() method.
@@ -77,8 +39,6 @@ class TvTest extends AbstractTestCase {
         $this->assertNull($obj->getSourceDataURL());
         $this->assertNull($obj->getSourceInfoName());
         $this->assertNull($obj->getSourceInfoURL());
-        $this->assertFalse($obj->hasChannels());
-        $this->assertFalse($obj->hasProgrammes());
     }
 
     /**
