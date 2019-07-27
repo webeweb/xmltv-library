@@ -641,7 +641,7 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(Audio::class, $res->getAudio());
         $this->assertInstanceOf(Category::class, $res->getCategories()[0]);
         $this->assertEquals("channel-id", $res->getChannel());
-        $this->assertEquals("clumpidx", $res->getClumpIdx());
+        $this->assertTrue($res->getClumpIdx());
         $this->assertCount(1, $res->getCountries());
         $this->assertInstanceOf(Country::class, $res->getCountries()[0]);
         $this->assertInstanceOf(Credits::class, $res->getCredits());
