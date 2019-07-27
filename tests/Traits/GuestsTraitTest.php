@@ -30,7 +30,7 @@ class GuestsTraitTest extends AbstractTestCase {
      */
     public function testAddGuest() {
 
-        // Set an Guest mock.
+        // Set a Guest mock.
         $guest = new Guest();
 
         $obj = new TestGuestsTrait();

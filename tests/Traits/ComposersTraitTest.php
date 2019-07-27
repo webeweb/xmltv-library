@@ -30,7 +30,7 @@ class ComposersTraitTest extends AbstractTestCase {
      */
     public function testAddComposer() {
 
-        // Set an Composer mock.
+        // Set a Composer mock.
         $composer = new Composer();
 
         $obj = new TestComposersTrait();

@@ -30,7 +30,7 @@ class CommentatorsTraitTest extends AbstractTestCase {
      */
     public function testAddCommentator() {
 
-        // Set an Commentator mock.
+        // Set a Commentator mock.
         $commentator = new Commentator();
 
         $obj = new TestCommentatorsTrait();

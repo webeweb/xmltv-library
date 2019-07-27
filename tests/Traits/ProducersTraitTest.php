@@ -30,7 +30,7 @@ class ProducersTraitTest extends AbstractTestCase {
      */
     public function testAddProducer() {
 
-        // Set an Producer mock.
+        // Set a Producer mock.
         $producer = new Producer();
 
         $obj = new TestProducersTrait();

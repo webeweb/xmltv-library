@@ -30,7 +30,7 @@ class PresentersTraitTest extends AbstractTestCase {
      */
     public function testAddPresenter() {
 
-        // Set an Presenter mock.
+        // Set a Presenter mock.
         $presenter = new Presenter();
 
         $obj = new TestPresentersTrait();

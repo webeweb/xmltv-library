@@ -30,7 +30,7 @@ class DirectorsTraitTest extends AbstractTestCase {
      */
     public function testAddDirector() {
 
-        // Set an Director mock.
+        // Set a Director mock.
         $director = new Director();
 
         $obj = new TestDirectorsTrait();

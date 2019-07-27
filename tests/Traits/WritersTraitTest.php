@@ -30,7 +30,7 @@ class WritersTraitTest extends AbstractTestCase {
      */
     public function testAddWriter() {
 
-        // Set an Writer mock.
+        // Set a Writer mock.
         $writer = new Writer();
 
         $obj = new TestWritersTrait();
