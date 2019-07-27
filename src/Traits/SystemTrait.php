@@ -39,6 +39,7 @@ trait SystemTrait {
      * Set the system.
      *
      * @param string $system The system.
+     * @return SystemTrait Returns this system trait.
      */
     public function setSystem($system) {
         $this->system = $system;

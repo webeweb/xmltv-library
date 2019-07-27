@@ -39,6 +39,7 @@ trait ContentTrait {
      * Set the content.
      *
      * @param string $content The content.
+     * @return ContentTrait Returns this content trait.
      */
     public function setContent($content) {
         $this->content = $content;

@@ -32,6 +32,7 @@ trait DirectorsTrait {
      * Add an director.
      *
      * @param Director $director The director.
+     * @return DirectorsTrait Returns this directors trait.
      */
     public function addDirector(Director $director) {
         $this->directors[] = $director;
@@ -60,6 +61,7 @@ trait DirectorsTrait {
      * Set the directors.
      *
      * @param Director[] $directors The directors.
+     * @return DirectorsTrait Returns this directors trait.
      */
     protected function setDirectors(array $directors) {
         $this->directors = $directors;

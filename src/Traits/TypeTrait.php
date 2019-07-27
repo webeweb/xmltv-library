@@ -39,6 +39,7 @@ trait TypeTrait {
      * Set the type.
      *
      * @param string $type The type.
+     * @return TypeTrait Returns this type trait.
      */
     public function setType($type) {
         $this->type = $type;

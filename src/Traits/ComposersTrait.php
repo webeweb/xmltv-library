@@ -32,6 +32,7 @@ trait ComposersTrait {
      * Add an composer.
      *
      * @param Composer $composer The composer.
+     * @return ComposersTrait Returns this composers trait.
      */
     public function addComposer(Composer $composer) {
         $this->composers[] = $composer;
@@ -60,6 +61,7 @@ trait ComposersTrait {
      * Set the composers.
      *
      * @param Composer[] $composers The composers.
+     * @return ComposersTrait Returns this composers trait.
      */
     protected function setComposers(array $composers) {
         $this->composers = $composers;

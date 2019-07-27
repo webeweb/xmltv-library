@@ -32,6 +32,7 @@ trait ProducersTrait {
      * Add an producer.
      *
      * @param Producer $producer The producer.
+     * @return ProducersTrait Returns this producers trait.
      */
     public function addProducer(Producer $producer) {
         $this->producers[] = $producer;
@@ -60,6 +61,7 @@ trait ProducersTrait {
      * Set the producers.
      *
      * @param Producer[] $producers The producers.
+     * @return ProducersTrait Returns this producers trait.
      */
     protected function setProducers(array $producers) {
         $this->producers = $producers;

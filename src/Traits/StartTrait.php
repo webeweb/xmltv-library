@@ -39,6 +39,7 @@ trait StartTrait {
      * Set the start.
      *
      * @param string $start The start.
+     * @return StartTrait Returns this start trait.
      */
     public function setStart($start) {
         $this->start = $start;

@@ -32,6 +32,7 @@ trait EditorsTrait {
      * Add an editor.
      *
      * @param Editor $editor The editor.
+     * @return EditorsTrait Returns this editors trait.
      */
     public function addEditor(Editor $editor) {
         $this->editors[] = $editor;
@@ -60,6 +61,7 @@ trait EditorsTrait {
      * Set the editors.
      *
      * @param Editor[] $editors The editors.
+     * @return EditorsTrait Returns this editors trait.
      */
     protected function setEditors(array $editors) {
         $this->editors = $editors;

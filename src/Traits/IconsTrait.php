@@ -32,6 +32,7 @@ trait IconsTrait {
      * Add an icon.
      *
      * @param Icon $icon The icon.
+     * @return IconsTrait Returns this icons trait.
      */
     public function addIcon(Icon $icon) {
         $this->icons[] = $icon;
@@ -60,6 +61,7 @@ trait IconsTrait {
      * Set the icons.
      *
      * @param Icon[] $icons The icons.
+     * @return IconsTrait Returns this icons trait.
      */
     protected function setIcons(array $icons) {
         $this->icons = $icons;
