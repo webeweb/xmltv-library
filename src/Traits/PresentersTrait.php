@@ -32,7 +32,6 @@ trait PresentersTrait {
      * Add an presenter.
      *
      * @param Presenter $presenter The presenter.
-     * @return PresentersTrait Returns this presenters trait.
      */
     public function addPresenter(Presenter $presenter) {
         $this->presenters[] = $presenter;
@@ -61,7 +60,6 @@ trait PresentersTrait {
      * Set the presenters.
      *
      * @param Presenter[] $presenters The presenters.
-     * @return PresentersTrait Returns this presenters trait.
      */
     protected function setPresenters(array $presenters) {
         $this->presenters = $presenters;

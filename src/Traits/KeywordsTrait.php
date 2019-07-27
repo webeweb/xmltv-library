@@ -32,7 +32,6 @@ trait KeywordsTrait {
      * Add an keyword.
      *
      * @param Keyword $keyword The keyword.
-     * @return KeywordsTrait Returns this keywords trait.
      */
     public function addKeyword(Keyword $keyword) {
         $this->keywords[] = $keyword;
@@ -61,7 +60,6 @@ trait KeywordsTrait {
      * Set the keywords.
      *
      * @param Keyword[] $keywords The keywords.
-     * @return KeywordsTrait Returns this keywords trait.
      */
     protected function setKeywords(array $keywords) {
         $this->keywords = $keywords;

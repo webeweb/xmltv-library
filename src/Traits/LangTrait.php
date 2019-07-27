@@ -39,7 +39,6 @@ trait LangTrait {
      * Set the lang.
      *
      * @param string $lang The lang.
-     * @return LangTrait Returns this lang trait.
      */
     public function setLang($lang) {
         $this->lang = $lang;

@@ -32,7 +32,6 @@ trait CountriesTrait {
      * Add a country.
      *
      * @param Country $country The country.
-     * @return CountriesTrait Returns this countries trait.
      */
     public function addCountry(Country $country) {
         $this->countries[] = $country;
@@ -61,7 +60,6 @@ trait CountriesTrait {
      * Set the countries.
      *
      * @param Country[] $countries The countries.
-     * @return CountriesTrait Returns this countries trait.
      */
     protected function setCountries(array $countries) {
         $this->countries = $countries;

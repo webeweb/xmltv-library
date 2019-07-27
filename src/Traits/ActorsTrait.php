@@ -32,7 +32,6 @@ trait ActorsTrait {
      * Add an actor.
      *
      * @param Actor $actor The actor.
-     * @return ActorsTrait Returns this actors trait.
      */
     public function addActor(Actor $actor) {
         $this->actors[] = $actor;
@@ -61,7 +60,6 @@ trait ActorsTrait {
      * Set the actors.
      *
      * @param Actor[] $actors The actors.
-     * @return ActorsTrait Returns this actors trait.
      */
     protected function setActors(array $actors) {
         $this->actors = $actors;

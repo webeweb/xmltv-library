@@ -41,7 +41,6 @@ trait LanguageTrait {
      * Set the language.
      *
      * @param Language|null $language The language.
-     * @return LanguageTrait Returns this language trait.
      */
     public function setLanguage(Language $language = null) {
         $this->language = $language;

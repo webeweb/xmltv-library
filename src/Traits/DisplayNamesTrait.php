@@ -32,7 +32,6 @@ trait DisplayNamesTrait {
      * Add a display name.
      *
      * @param DisplayName $displayName The display name.
-     * @return DisplayNamesTrait Returns this display names trait.
      */
     public function addDisplayName(DisplayName $displayName) {
         $this->displayNames[] = $displayName;
@@ -61,7 +60,6 @@ trait DisplayNamesTrait {
      * Set the display names.
      *
      * @param DisplayName[] $displayNames The display names.
-     * @return DisplayNamesTrait Returns this display names trait.
      */
     protected function setDisplayNames(array $displayNames) {
         $this->displayNames = $displayNames;

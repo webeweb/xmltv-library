@@ -32,7 +32,6 @@ trait ChannelsTrait {
      * Add an channel.
      *
      * @param Channel $channel The channel.
-     * @return ChannelsTrait Returns this channels trait.
      */
     public function addChannel(Channel $channel) {
         $this->channels[] = $channel;
@@ -61,7 +60,6 @@ trait ChannelsTrait {
      * Set the channels.
      *
      * @param Channel[] $channels The channels.
-     * @return ChannelsTrait Returns this channels trait.
      */
     protected function setChannels(array $channels) {
         $this->channels = $channels;

@@ -32,7 +32,6 @@ trait ProgrammesTrait {
      * Add an programme.
      *
      * @param Programme $programme The programme.
-     * @return ProgrammesTrait Returns this programmes trait.
      */
     public function addProgramme(Programme $programme) {
         $this->programmes[] = $programme;
@@ -61,7 +60,6 @@ trait ProgrammesTrait {
      * Set the programmes.
      *
      * @param Programme[] $programmes The programmes.
-     * @return ProgrammesTrait Returns this programmes trait.
      */
     protected function setProgrammes(array $programmes) {
         $this->programmes = $programmes;

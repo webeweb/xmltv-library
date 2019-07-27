@@ -41,7 +41,6 @@ trait PresentTrait {
      * Set the present.
      *
      * @param Present|null $present The present.
-     * @return PresentTrait Returns this present trait.
      */
     public function setPresent(Present $present = null) {
         $this->present = $present;

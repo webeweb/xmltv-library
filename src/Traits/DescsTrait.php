@@ -32,7 +32,6 @@ trait DescsTrait {
      * Add an description.
      *
      * @param Desc $desc The description.
-     * @return DescsTrait Returns this descriptions trait.
      */
     public function addDesc(Desc $desc) {
         $this->descs[] = $desc;
@@ -61,7 +60,6 @@ trait DescsTrait {
      * Set the descriptions.
      *
      * @param Desc[] $descs The descriptions.
-     * @return DescsTrait Returns this descriptions trait.
      */
     protected function setDescs(array $descs) {
         $this->descs = $descs;

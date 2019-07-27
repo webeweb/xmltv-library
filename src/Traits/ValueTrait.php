@@ -41,7 +41,6 @@ trait ValueTrait {
      * Set the value.
      *
      * @param Value|null $value The value.
-     * @return ValueTrait Returns this value trait.
      */
     public function setValue(Value $value = null) {
         $this->value = $value;

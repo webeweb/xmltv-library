@@ -32,7 +32,6 @@ trait EpisodeNumsTrait {
      * Add an episode number.
      *
      * @param EpisodeNum $episodeNum The episode number.
-     * @return EpisodeNumsTrait Returns this episode numbers trait.
      */
     public function addEpisodeNum(EpisodeNum $episodeNum) {
         $this->episodeNums[] = $episodeNum;
@@ -61,7 +60,6 @@ trait EpisodeNumsTrait {
      * Set the episode numbers.
      *
      * @param EpisodeNum[] $episodeNums The episode numbers.
-     * @return EpisodeNumsTrait Returns this episode numbers trait.
      */
     protected function setEpisodeNums(array $episodeNums) {
         $this->episodeNums = $episodeNums;

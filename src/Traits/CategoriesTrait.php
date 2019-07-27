@@ -32,7 +32,6 @@ trait CategoriesTrait {
      * Add a category.
      *
      * @param Category $category The category.
-     * @return CategoriesTrait Returns this categories trait.
      */
     public function addCategory(Category $category) {
         $this->categories[] = $category;
@@ -61,7 +60,6 @@ trait CategoriesTrait {
      * Set the categories.
      *
      * @param Category[] $categories The categories.
-     * @return CategoriesTrait Returns this categories trait.
      */
     protected function setCategories(array $categories) {
         $this->categories = $categories;

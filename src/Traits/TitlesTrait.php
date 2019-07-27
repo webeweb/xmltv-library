@@ -32,7 +32,6 @@ trait TitlesTrait {
      * Add an title.
      *
      * @param Title $title The title.
-     * @return TitlesTrait Returns this titles trait.
      */
     public function addTitle(Title $title) {
         $this->titles[] = $title;
@@ -61,7 +60,6 @@ trait TitlesTrait {
      * Set the titles.
      *
      * @param Title[] $titles The titles.
-     * @return TitlesTrait Returns this titles trait.
      */
     protected function setTitles(array $titles) {
         $this->titles = $titles;

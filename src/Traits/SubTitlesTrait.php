@@ -32,7 +32,6 @@ trait SubTitlesTrait {
      * Add an sub-title.
      *
      * @param SubTitle $subTitle The sub-title.
-     * @return SubTitlesTrait Returns this sub-titles trait.
      */
     public function addSubTitle(SubTitle $subTitle) {
         $this->subTitles[] = $subTitle;
@@ -61,7 +60,6 @@ trait SubTitlesTrait {
      * Set the sub-titles.
      *
      * @param SubTitle[] $subTitles The sub-titles.
-     * @return SubTitlesTrait Returns this sub-titles trait.
      */
     protected function setSubTitles(array $subTitles) {
         $this->subTitles = $subTitles;

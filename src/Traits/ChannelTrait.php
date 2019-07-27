@@ -39,7 +39,6 @@ trait ChannelTrait {
      * Set the channel.
      *
      * @param string $channel The channel.
-     * @return ChannelTrait Returns this channel trait.
      */
     public function setChannel($channel) {
         $this->channel = $channel;

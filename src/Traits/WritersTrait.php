@@ -32,7 +32,6 @@ trait WritersTrait {
      * Add an writer.
      *
      * @param Writer $writer The writer.
-     * @return WritersTrait Returns this writers trait.
      */
     public function addWriter(Writer $writer) {
         $this->writers[] = $writer;
@@ -61,7 +60,6 @@ trait WritersTrait {
      * Set the writers.
      *
      * @param Writer[] $writers The writers.
-     * @return WritersTrait Returns this writers trait.
      */
     protected function setWriters(array $writers) {
         $this->writers = $writers;

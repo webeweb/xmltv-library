@@ -32,7 +32,6 @@ trait UrlsTrait {
      * Add an URL.
      *
      * @param Url $url The URL.
-     * @return UrlsTrait Returns this URLs trait.
      */
     public function addUrl(Url $url) {
         $this->urls[] = $url;
@@ -61,7 +60,6 @@ trait UrlsTrait {
      * Set the URLs.
      *
      * @param Url[] $urls The URLs.
-     * @return UrlsTrait Returns this URLs trait.
      */
     protected function setUrls(array $urls) {
         $this->urls = $urls;

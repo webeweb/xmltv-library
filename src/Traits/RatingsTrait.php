@@ -32,7 +32,6 @@ trait RatingsTrait {
      * Add an rating.
      *
      * @param Rating $rating The rating.
-     * @return RatingsTrait Returns this ratings trait.
      */
     public function addRating(Rating $rating) {
         $this->ratings[] = $rating;
@@ -61,7 +60,6 @@ trait RatingsTrait {
      * Set the ratings.
      *
      * @param Rating[] $ratings The ratings.
-     * @return RatingsTrait Returns this ratings trait.
      */
     protected function setRatings(array $ratings) {
         $this->ratings = $ratings;

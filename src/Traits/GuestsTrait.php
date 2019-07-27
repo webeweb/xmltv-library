@@ -32,7 +32,6 @@ trait GuestsTrait {
      * Add an guest.
      *
      * @param Guest $guest The guest.
-     * @return GuestsTrait Returns this guests trait.
      */
     public function addGuest(Guest $guest) {
         $this->guests[] = $guest;
@@ -61,7 +60,6 @@ trait GuestsTrait {
      * Set the guests.
      *
      * @param Guest[] $guests The guests.
-     * @return GuestsTrait Returns this guests trait.
      */
     protected function setGuests(array $guests) {
         $this->guests = $guests;
