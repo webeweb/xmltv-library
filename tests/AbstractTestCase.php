@@ -23,23 +23,4 @@ use PHPUnit\Framework\TestCase;
  */
 abstract class AbstractTestCase extends TestCase {
 
-    /**
-     * Document
-     *
-     * @var DOMDocument
-     */
-    protected $document;
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function setUp() {
-        parent::setUp();
-
-        $filename = getcwd() . "/tests/Fixtures/xmltv.xml";
-
-        // Set a DOM document mock.
-        $this->document = new DOMDocument;
-        $this->document->load($filename);
-    }
 }
