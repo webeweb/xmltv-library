@@ -12,23 +12,13 @@
 namespace WBW\Library\XMLTV\Tests\Model;
 
 use WBW\Library\XMLTV\Model\Audio;
-use WBW\Library\XMLTV\Model\Category;
-use WBW\Library\XMLTV\Model\Country;
 use WBW\Library\XMLTV\Model\Credits;
 use WBW\Library\XMLTV\Model\Date;
-use WBW\Library\XMLTV\Model\Desc;
-use WBW\Library\XMLTV\Model\EpisodeNum;
-use WBW\Library\XMLTV\Model\Keyword;
 use WBW\Library\XMLTV\Model\LastChance;
 use WBW\Library\XMLTV\Model\Length;
 use WBW\Library\XMLTV\Model\Premiere;
 use WBW\Library\XMLTV\Model\PreviouslyShown;
 use WBW\Library\XMLTV\Model\Programme;
-use WBW\Library\XMLTV\Model\Rating;
-use WBW\Library\XMLTV\Model\Review;
-use WBW\Library\XMLTV\Model\StarRating;
-use WBW\Library\XMLTV\Model\SubTitle;
-use WBW\Library\XMLTV\Model\Title;
 use WBW\Library\XMLTV\Model\Video;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
@@ -39,186 +29,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
  * @package WBW\Library\XMLTV\Tests\Model
  */
 class ProgrammeTest extends AbstractTestCase {
-
-    /**
-     * Tests the addCategory() method.
-     *
-     * @return void
-     */
-    public function testAddCategory() {
-
-        // Set a Category mock.
-        $category = new Category();
-
-        $obj = new Programme();
-
-        $obj->addCategory($category);
-        $this->assertCount(1, $obj->getCategories());
-        $this->assertSame($category, $obj->getCategories()[0]);
-        $this->assertTrue($obj->hasCategories());
-    }
-
-    /**
-     * Tests the addCountry() method.
-     *
-     * @return void
-     */
-    public function testAddCountry() {
-
-        // Set a Country mock.
-        $country = new Country();
-
-        $obj = new Programme();
-
-        $obj->addCountry($country);
-        $this->assertCount(1, $obj->getCountries());
-        $this->assertSame($country, $obj->getCountries()[0]);
-        $this->assertTrue($obj->hasCountries());
-    }
-
-    /**
-     * Tests the addDesc() method.
-     *
-     * @return void
-     */
-    public function testAddDesc() {
-
-        // Set a Desc mock.
-        $desc = new Desc();
-
-        $obj = new Programme();
-
-        $obj->addDesc($desc);
-        $this->assertCount(1, $obj->getDescs());
-        $this->assertSame($desc, $obj->getDescs()[0]);
-        $this->assertTrue($obj->hasDescs());
-    }
-
-    /**
-     * Tests the addEpisodeNum() method.
-     *
-     * @return void
-     */
-    public function testAddEpisodeNum() {
-
-        // Set an Episode num mock.
-        $episodeNum = new EpisodeNum();
-
-        $obj = new Programme();
-
-        $obj->addEpisodeNum($episodeNum);
-        $this->assertCount(1, $obj->getEpisodeNums());
-        $this->assertSame($episodeNum, $obj->getEpisodeNums()[0]);
-        $this->assertTrue($obj->hasEpisodeNums());
-    }
-
-    /**
-     * Tests the addKeyword() method.
-     *
-     * @return void
-     */
-    public function testAddKeyword() {
-
-        // Set a Keyword mock.
-        $keyword = new Keyword();
-
-        $obj = new Programme();
-
-        $obj->addKeyword($keyword);
-        $this->assertCount(1, $obj->getKeywords());
-        $this->assertSame($keyword, $obj->getKeywords()[0]);
-        $this->assertTrue($obj->hasKeywords());
-    }
-
-    /**
-     * Tests the addRating() method.
-     *
-     * @return void
-     */
-    public function testAddRating() {
-
-        // Set a Rating mock.
-        $rating = new Rating();
-
-        $obj = new Programme();
-
-        $obj->addRating($rating);
-        $this->assertCount(1, $obj->getRatings());
-        $this->assertSame($rating, $obj->getRatings()[0]);
-        $this->assertTrue($obj->hasRatings());
-    }
-
-    /**
-     * Tests the addReview() method.
-     *
-     * @return void
-     */
-    public function testAddReview() {
-
-        // Set a Review mock.
-        $review = new Review();
-
-        $obj = new Programme();
-
-        $obj->addReview($review);
-        $this->assertCount(1, $obj->getReviews());
-        $this->assertSame($review, $obj->getReviews()[0]);
-        $this->assertTrue($obj->hasReviews());
-    }
-
-    /**
-     * Tests the addStarRating() method.
-     *
-     * @return void
-     */
-    public function testAddStarRating() {
-
-        // Set a Star rating mock.
-        $starRating = new StarRating();
-
-        $obj = new Programme();
-
-        $obj->addStarRating($starRating);
-        $this->assertCount(1, $obj->getStarRatings());
-        $this->assertSame($starRating, $obj->getStarRatings()[0]);
-        $this->assertTrue($obj->hasStarRatings());
-    }
-
-    /**
-     * Tests the addSubTitle() method.
-     *
-     * @return void
-     */
-    public function testAddSubTitle() {
-
-        // Set a Sub-title mock.
-        $subTitle = new SubTitle();
-
-        $obj = new Programme();
-
-        $obj->addSubTitle($subTitle);
-        $this->assertCount(1, $obj->getSubTitles());
-        $this->assertSame($subTitle, $obj->getSubTitles()[0]);
-        $this->assertTrue($obj->hasSubTitles());
-    }
-
-    /**
-     * Tests the addTitle() method.
-     *
-     * @return void
-     */
-    public function testAddTitle() {
-
-        // Set a Title mock.
-        $title = new Title();
-
-        $obj = new Programme();
-
-        $obj->addTitle($title);
-        $this->assertCount(1, $obj->getTitles());
-        $this->assertSame($title, $obj->getTitles()[0]);
-        $this->assertTrue($obj->hasTitles());
-    }
 
     /**
      * Tests the __construct() method.
@@ -258,16 +68,6 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getVideo());
         $this->assertNull($obj->getVideoPlus());
         $this->assertNull($obj->getVpsStart());
-        $this->assertFalse($obj->hasCategories());
-        $this->assertFalse($obj->hasCountries());
-        $this->assertFalse($obj->hasDescs());
-        $this->assertFalse($obj->hasEpisodeNums());
-        $this->assertFalse($obj->hasKeywords());
-        $this->assertFalse($obj->hasRatings());
-        $this->assertFalse($obj->hasReviews());
-        $this->assertFalse($obj->hasStarRatings());
-        $this->assertFalse($obj->hasSubTitles());
-        $this->assertFalse($obj->hasTitles());
     }
 
     /**

@@ -11,9 +11,19 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\CategoriesTrait;
 use WBW\Library\XMLTV\Traits\ChannelTrait;
+use WBW\Library\XMLTV\Traits\CountriesTrait;
+use WBW\Library\XMLTV\Traits\DescsTrait;
+use WBW\Library\XMLTV\Traits\EpisodeNumsTrait;
 use WBW\Library\XMLTV\Traits\IconsTrait;
+use WBW\Library\XMLTV\Traits\KeywordsTrait;
 use WBW\Library\XMLTV\Traits\LanguageTrait;
+use WBW\Library\XMLTV\Traits\RatingsTrait;
+use WBW\Library\XMLTV\Traits\ReviewsTrait;
+use WBW\Library\XMLTV\Traits\StarRatingsTrait;
+use WBW\Library\XMLTV\Traits\SubTitlesTrait;
+use WBW\Library\XMLTV\Traits\TitlesTrait;
 use WBW\Library\XMLTV\Traits\UrlsTrait;
 
 /**
@@ -24,9 +34,19 @@ use WBW\Library\XMLTV\Traits\UrlsTrait;
  */
 class Programme extends AbstractModel {
 
+    use CategoriesTrait;
     use ChannelTrait;
+    use CountriesTrait;
+    use DescsTrait;
+    use EpisodeNumsTrait;
     use IconsTrait;
+    use KeywordsTrait;
     use LanguageTrait;
+    use RatingsTrait;
+    use ReviewsTrait;
+    use StarRatingsTrait;
+    use SubTitlesTrait;
+    use TitlesTrait;
     use UrlsTrait;
 
     /**
@@ -37,25 +57,11 @@ class Programme extends AbstractModel {
     private $audio;
 
     /**
-     * Categories.
-     *
-     * @var Category[]
-     */
-    private $categories;
-
-    /**
      * Clump Idx
      *
      * @var bool
      */
     private $clumpIdx;
-
-    /**
-     * Countries.
-     *
-     * @var Country[]
-     */
-    private $countries;
 
     /**
      * Credits.
@@ -70,27 +76,6 @@ class Programme extends AbstractModel {
      * @var Date
      */
     private $date;
-
-    /**
-     * Descriptions.
-     *
-     * @var Desc[]
-     */
-    private $descs;
-
-    /**
-     * Episode nums.
-     *
-     * @var EpisodeNum[]
-     */
-    private $episodeNums;
-
-    /**
-     * Keywords.
-     *
-     * @var Keyword[]
-     */
-    private $keywords;
 
     /**
      * Last chance.
@@ -128,26 +113,6 @@ class Programme extends AbstractModel {
     private $previouslyShown;
 
     /**
-     * Ratings.
-     *
-     * @var Rating[]
-     */
-    private $ratings;
-    /**
-     * Star ratings.
-     *
-     * @var StarRating[]
-     */
-    private $starRatings;
-
-    /**
-     * Reviews.
-     *
-     * @var Review[]
-     */
-    private $reviews;
-
-    /**
      * Show view.
      *
      * @var string
@@ -167,20 +132,6 @@ class Programme extends AbstractModel {
      * @var string
      */
     private $stop;
-
-    /**
-     * SubTitles.
-     *
-     * @var SubTitle[]
-     */
-    private $subTitles;
-
-    /**
-     * Titles.
-     *
-     * @var Title[]
-     */
-    private $titles;
 
     /**
      * Video.
@@ -222,115 +173,6 @@ class Programme extends AbstractModel {
     }
 
     /**
-     * Add a category.
-     *
-     * @param Category $category The category.
-     * @return Programme Returns this programme.
-     */
-    public function addCategory(Category $category) {
-        $this->categories[] = $category;
-        return $this;
-    }
-
-    /**
-     * Add a country.
-     *
-     * @param Country $country The country.
-     * @return Programme Returns this programme.
-     */
-    public function addCountry(Country $country) {
-        $this->countries[] = $country;
-        return $this;
-    }
-
-    /**
-     * Add a description.
-     *
-     * @param Desc $desc The description.
-     * @return Programme Returns this programme.
-     */
-    public function addDesc(Desc $desc) {
-        $this->descs[] = $desc;
-        return $this;
-    }
-
-    /**
-     * Add an episode num.
-     *
-     * @param EpisodeNum $episodeNum The episode num.
-     * @return Programme Returns this programme.
-     */
-    public function addEpisodeNum(EpisodeNum $episodeNum) {
-        $this->episodeNums[] = $episodeNum;
-        return $this;
-    }
-
-    /**
-     * Add a keyword.
-     *
-     * @param Keyword $keyword The keyword.
-     * @return Programme Returns this programme.
-     */
-    public function addKeyword(Keyword $keyword) {
-        $this->keywords[] = $keyword;
-        return $this;
-    }
-
-    /**
-     * Add a rating.
-     *
-     * @param Rating $rating The rating.
-     * @return Programme Returns this programme.
-     */
-    public function addRating(Rating $rating) {
-        $this->ratings[] = $rating;
-        return $this;
-    }
-    /**
-     * Add a star rating.
-     *
-     * @param StarRating $starRating The star rating.
-     * @return Programme Returns this programme.
-     */
-    public function addStarRating(StarRating $starRating) {
-        $this->starRatings[] = $starRating;
-        return $this;
-    }
-
-    /**
-     * Add a review.
-     *
-     * @param Review $review The review.
-     * @return Programme Returns this programme.
-     */
-    public function addReview(Review $review) {
-        $this->reviews[] = $review;
-        return $this;
-    }
-
-    /**
-     * Add a sub-title.
-     *
-     * @param SubTitle $subTitle The sub-title.
-     * @return Programme Returns this programme.
-     */
-    public function addSubTitle(SubTitle $subTitle) {
-        $this->subTitles[] = $subTitle;
-        return $this;
-    }
-
-    /**
-     * Add a title.
-     *
-     * @param Title $title The title.
-     * @return Programme Returns this programme.
-     */
-    public function addTitle(Title $title) {
-        $this->titles[] = $title;
-        return $this;
-    }
-
-    /**
      * Get the audio.
      *
      * @return Audio Returns the audio.
@@ -340,30 +182,12 @@ class Programme extends AbstractModel {
     }
 
     /**
-     * Get the categories.
-     *
-     * @return Category[] Returns the categories.
-     */
-    public function getCategories() {
-        return $this->categories;
-    }
-
-    /**
      * Get the clump idx.
      *
      * @return bool Returns the clump idx.
      */
     public function getClumpIdx() {
         return $this->clumpIdx;
-    }
-
-    /**
-     * Get the countries.
-     *
-     * @return Country[] Returns the countries.
-     */
-    public function getCountries() {
-        return $this->countries;
     }
 
     /**
@@ -382,33 +206,6 @@ class Programme extends AbstractModel {
      */
     public function getDate() {
         return $this->date;
-    }
-
-    /**
-     * Get the descriptions.
-     *
-     * @return Desc[] Returns the descriptions.
-     */
-    public function getDescs() {
-        return $this->descs;
-    }
-
-    /**
-     * Get the episode nums.
-     *
-     * @return EpisodeNum[] Returns the episode nums.
-     */
-    public function getEpisodeNums() {
-        return $this->episodeNums;
-    }
-
-    /**
-     * Get the keywords.
-     *
-     * @return Keyword[] Returns the keywords.
-     */
-    public function getKeywords() {
-        return $this->keywords;
     }
 
     /**
@@ -457,32 +254,6 @@ class Programme extends AbstractModel {
     }
 
     /**
-     * Get the ratings.
-     *
-     * @return Rating[] Returns the ratings.
-     */
-    public function getRatings() {
-        return $this->ratings;
-    }
-    /**
-     * Get the star ratings.
-     *
-     * @return StarRating[] Returns the star ratings.
-     */
-    public function getStarRatings() {
-        return $this->starRatings;
-    }
-
-    /**
-     * Get the reviews.
-     *
-     * @return Review[] Returns the reviews.
-     */
-    public function getReviews() {
-        return $this->reviews;
-    }
-
-    /**
      * Get the show view.
      *
      * @return string Returns the show view.
@@ -507,24 +278,6 @@ class Programme extends AbstractModel {
      */
     public function getStop() {
         return $this->stop;
-    }
-
-    /**
-     * Get the sub-titles.
-     *
-     * @return SubTitle[] Returns the sub-titles.
-     */
-    public function getSubTitles() {
-        return $this->subTitles;
-    }
-
-    /**
-     * Get the titles.
-     *
-     * @return Title[] Returns the titles.
-     */
-    public function getTitles() {
-        return $this->titles;
     }
 
     /**
@@ -555,96 +308,6 @@ class Programme extends AbstractModel {
     }
 
     /**
-     * Determines if this programme has categories.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasCategories() {
-        return 1 <= count($this->categories);
-    }
-
-    /**
-     * Determines if this programme has countries.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasCountries() {
-        return 1 <= count($this->countries);
-    }
-
-    /**
-     * Determines if this programme has descriptions.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasDescs() {
-        return 1 <= count($this->descs);
-    }
-
-    /**
-     * Determines if this programme has episode nums.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasEpisodeNums() {
-        return 1 <= count($this->episodeNums);
-    }
-
-    /**
-     * Determines if this programme has keywords.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasKeywords() {
-        return 1 <= count($this->keywords);
-    }
-
-    /**
-     * Determines if this programme has star ratings.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasStarRatings() {
-        return 1 <= count($this->starRatings);
-    }
-
-    /**
-     * Determines if this programme has ratings.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasRatings() {
-        return 1 <= count($this->ratings);
-    }
-
-    /**
-     * Determines if this programme has reviews.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasReviews() {
-        return 1 <= count($this->reviews);
-    }
-
-    /**
-     * Determines if this programme has sub-titles.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasSubTitles() {
-        return 1 <= count($this->subTitles);
-    }
-
-    /**
-     * Determines if this programme has titles.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasTitles() {
-        return 1 <= count($this->titles);
-    }
-
-    /**
      * Set the audio.
      *
      * @param Audio $audio The audio.
@@ -656,17 +319,6 @@ class Programme extends AbstractModel {
     }
 
     /**
-     * Set the categories.
-     *
-     * @param Category[] $categories The categories.
-     * @return Programme Returns this programme.
-     */
-    protected function setCategories(array $categories) {
-        $this->categories = $categories;
-        return $this;
-    }
-
-    /**
      * Set the clump idx.
      *
      * @param bool $clumpIdx The clump idx.
@@ -674,17 +326,6 @@ class Programme extends AbstractModel {
      */
     public function setClumpIdx($clumpIdx) {
         $this->clumpIdx = $clumpIdx;
-        return $this;
-    }
-
-    /**
-     * Set the countries.
-     *
-     * @param Country[] $countries The countries.
-     * @return Programme Returns this programme.
-     */
-    public function setCountries(array $countries) {
-        $this->countries = $countries;
         return $this;
     }
 
@@ -707,39 +348,6 @@ class Programme extends AbstractModel {
      */
     public function setDate(Date $date = null) {
         $this->date = $date;
-        return $this;
-    }
-
-    /**
-     * Set the descriptions.
-     *
-     * @param Desc[] $descs The descriptions.
-     * @return Programme Returns this programme.
-     */
-    protected function setDescs(array $descs) {
-        $this->descs = $descs;
-        return $this;
-    }
-
-    /**
-     * Set the episode nums.
-     *
-     * @param EpisodeNum[] $episodeNums The episode nums.
-     * @return Programme Returns this programme.
-     */
-    protected function setEpisodeNums(array $episodeNums) {
-        $this->episodeNums = $episodeNums;
-        return $this;
-    }
-
-    /**
-     * Set the keywords.
-     *
-     * @param Keyword[] $keywords The keywords.
-     * @return Programme Returns this programme.
-     */
-    protected function setKeywords(array $keywords) {
-        $this->keywords = $keywords;
         return $this;
     }
 
@@ -799,38 +407,6 @@ class Programme extends AbstractModel {
     }
 
     /**
-     * Set the ratings.
-     *
-     * @param Rating[] $ratings The ratings.
-     * @return Programme Returns this programme.
-     */
-    protected function setRatings(array $ratings) {
-        $this->ratings = $ratings;
-        return $this;
-    }
-    /**
-     * Set the star ratings.
-     *
-     * @param StarRating[] $starRatings The ratings.
-     * @return Programme Returns this programme.
-     */
-    protected function setStarRatings(array $starRatings) {
-        $this->starRatings = $starRatings;
-        return $this;
-    }
-
-    /**
-     * Set the reviews.
-     *
-     * @param Review[] $reviews The reviews.
-     * @return Programme Returns this programme.
-     */
-    protected function setReviews(array $reviews) {
-        $this->reviews = $reviews;
-        return $this;
-    }
-
-    /**
      * Set the show view.
      *
      * @param string $showView The show view.
@@ -860,28 +436,6 @@ class Programme extends AbstractModel {
      */
     public function setStop($stop) {
         $this->stop = $stop;
-        return $this;
-    }
-
-    /**
-     * Set the sub-titles.
-     *
-     * @param SubTitle[] $subTitles The sub-titles.
-     * @return Programme Returns this programme.
-     */
-    protected function setSubTitles(array $subTitles) {
-        $this->subTitles = $subTitles;
-        return $this;
-    }
-
-    /**
-     * Set the titles.
-     *
-     * @param Title[] $titles The titles.
-     * @return Programme Returns this programme.
-     */
-    protected function setTitles(array $titles) {
-        $this->titles = $titles;
         return $this;
     }
 
