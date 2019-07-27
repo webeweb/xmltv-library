@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use InvalidArgumentException;
 use WBW\Library\XMLTV\Traits\ContentTrait;
 
 /**
@@ -44,8 +45,12 @@ class Length extends AbstractModel {
      *
      * @param string $units The units.
      * @return Length Returns this length.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the units is invalid.
      */
     public function setUnits($units) {
+        if (null !== $units && false === in_array($units, ["hours", "minutes", "seconds"])) {
+            throw new InvalidArgumentException(sprintf("The units \"%s\" is invalid", $units));
+        }
         $this->units = $units;
         return $this;
     }

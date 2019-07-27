@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
+use Exception;
+use InvalidArgumentException;
 use WBW\Library\XMLTV\Model\Length;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
@@ -39,12 +41,32 @@ class LengthTest extends AbstractTestCase {
      * Tests the setUnits() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
     public function testSetUnits() {
 
         $obj = new Length();
 
-        $obj->setUnits("units");
-        $this->assertEquals("units", $obj->getUnits());
+        $obj->setUnits("hours");
+        $this->assertEquals("hours", $obj->getUnits());
+    }
+
+    /**
+     * Tests the setUnits() method.
+     *
+     * @return void
+     */
+    public function testSetUnitsWithInvaliArgumentException() {
+
+        $obj = new Length();
+
+        try {
+
+            $obj->setUnits("units");
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(InvalidArgumentException::class, $ex);
+            $this->assertEquals("The units \"units\" is invalid", $ex->getMessage());
+        }
     }
 }
