@@ -509,9 +509,12 @@ class Parser {
      */
     public static function parseProgramme(DOMNode $domNode) {
 
+        $newNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "new");
+
         $model = new Programme();
         $model->setChannel(ParserHelper::getDOMAttributeValue($domNode, "channel"));
         $model->setClumpIdx(ParserHelper::getDOMAttributeValue($domNode, "clumpidx"));
+        $model->setNew(null !== $newNode);
         $model->setShowView(ParserHelper::getDOMAttributeValue($domNode, "showview"));
         $model->setPdcStart(ParserHelper::getDOMAttributeValue($domNode, "pdc-start"));
         $model->setStart(ParserHelper::getDOMAttributeValue($domNode, "start"));

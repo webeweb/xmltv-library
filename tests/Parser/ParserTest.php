@@ -653,6 +653,7 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(Language::class, $res->getLanguage());
         $this->assertInstanceOf(LastChance::class, $res->getLastChance());
         $this->assertInstanceOf(Length::class, $res->getLength());
+        $this->assertTrue($res->getNew());
         $this->assertEquals("pdc-start", $res->getPdcStart());
         $this->assertInstanceOf(Premiere::class, $res->getPremiere());
         $this->assertInstanceOf(PreviouslyShown::class, $res->getPreviouslyShown());
@@ -727,7 +728,7 @@ class ParserTest extends AbstractTestCase {
         $this->assertEquals("review-lang", $res->getLang());
         $this->assertEquals("reviewer", $res->getReviewer());
         $this->assertEquals("source", $res->getSource());
-        $this->assertEquals("review-type", $res->getType());
+        $this->assertEquals("text", $res->getType());
     }
 
     /**
@@ -803,7 +804,26 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(Subtitles::class, $res);
 
         $this->assertInstanceOf(Language::class, $res->getLanguage());
-        $this->assertEquals("subtitles-type", $res->getType());
+        $this->assertEquals("deaf-signed", $res->getType());
+    }
+
+    /**
+     * Tests the parseTitle() method.
+     *
+     * @return void
+     */
+    public function testParseTitle() {
+
+        // tv > programme > title
+        $node = $this->document->documentElement
+            ->childNodes->item(3)
+            ->childNodes->item(1);
+
+        $res = Parser::parseTitle($node);
+        $this->assertInstanceOf(Title::class, $res);
+
+        $this->assertEquals("Title", $res->getContent());
+        $this->assertEquals("title-lang", $res->getLang());
     }
 
     /**
@@ -826,25 +846,6 @@ class ParserTest extends AbstractTestCase {
         $this->assertEquals("source-data-url", $res->getSourceDataURL());
         $this->assertEquals("source-info-name", $res->getSourceInfoName());
         $this->assertEquals("source-info-url", $res->getSourceInfoURL());
-    }
-
-    /**
-     * Tests the parseTitle() method.
-     *
-     * @return void
-     */
-    public function testParseTitle() {
-
-        // tv > programme > title
-        $node = $this->document->documentElement
-            ->childNodes->item(3)
-            ->childNodes->item(1);
-
-        $res = Parser::parseTitle($node);
-        $this->assertInstanceOf(Title::class, $res);
-
-        $this->assertEquals("Title", $res->getContent());
-        $this->assertEquals("title-lang", $res->getLang());
     }
 
     /**

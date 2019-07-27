@@ -46,7 +46,7 @@
         <premiere lang="premiere-lang">Premiere</premiere>
         <last-chance lang="last-chance-lang">Last chance</last-chance>
         <new/>
-        <subtitles type="subtitles-type">
+        <subtitles type="deaf-signed">
             <language lang="language-lang">Language</language>
         </subtitles>
         <rating system="rating-system">
@@ -57,6 +57,6 @@
             <value>Value</value>
             <icon src="src" width="1920" height="1080"/>
         </star-rating>
-        <review type="review-type" source="source" reviewer="reviewer" lang="review-lang">Review</review>
+        <review type="text" source="source" reviewer="reviewer" lang="review-lang">Review</review>
     </programme>
 </tv>
