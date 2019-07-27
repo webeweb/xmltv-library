@@ -12,7 +12,6 @@
 namespace WBW\Library\XMLTV\Tests\Model;
 
 use WBW\Library\XMLTV\Model\Channel;
-use WBW\Library\XMLTV\Model\DisplayName;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
@@ -22,24 +21,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
  * @package WBW\Library\XMLTV\Tests\Model
  */
 class ChannelTest extends AbstractTestCase {
-
-    /**
-     * Tests the addDisplayName() method.
-     *
-     * @return void
-     */
-    public function testAddDisplayName() {
-
-        // Set a Display name mock.
-        $icon = new DisplayName();
-
-        $obj = new Channel();
-
-        $obj->addDisplayName($icon);
-        $this->assertCount(1, $obj->getDisplayNames());
-        $this->assertSame($icon, $obj->getDisplayNames()[0]);
-        $this->assertTrue($obj->hasDisplayNames());
-    }
 
     /**
      * Tests the __construct() method.
@@ -54,7 +35,6 @@ class ChannelTest extends AbstractTestCase {
         $this->assertEquals([], $obj->getIcons());
         $this->assertNull($obj->getId());
         $this->assertEquals([], $obj->getUrls());
-        $this->assertFalse($obj->hasDisplayNames());
     }
 
     /**

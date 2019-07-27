@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Traits\DisplayNamesTrait;
 use WBW\Library\XMLTV\Traits\IconsTrait;
 use WBW\Library\XMLTV\Traits\UrlsTrait;
 
@@ -22,15 +23,9 @@ use WBW\Library\XMLTV\Traits\UrlsTrait;
  */
 class Channel extends AbstractModel {
 
+    use DisplayNamesTrait;
     use IconsTrait;
     use UrlsTrait;
-
-    /**
-     * Display name.
-     *
-     * @var DisplayName[]
-     */
-    private $displayNames;
 
     /**
      * Id.
@@ -49,61 +44,12 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Add a display name.
-     *
-     * @param DisplayName $displayName The display name.
-     * @return Channel Returns this channel.
-     */
-    public function addDisplayName(DisplayName $displayName) {
-        $this->displayNames[] = $displayName;
-        return $this;
-    }
-
-    /**
-     * Get the display names.
-     *
-     * @return DisplayName[] Returns the display names.
-     */
-    public function getDisplayNames() {
-        return $this->displayNames;
-    }
-
-    /**
-     * Get the icons.
-     *
-     * @return Icon[] Returns the icons.
-     */
-    public function getIcons() {
-        return $this->icons;
-    }
-
-    /**
      * Get the id.
      *
      * @return string Returns the id.
      */
     public function getId() {
         return $this->id;
-    }
-
-    /**
-     * Determines if this channel has display names.
-     *
-     * @return bool Returns true in case of success, false otherwise.
-     */
-    public function hasDisplayNames() {
-        return 1 <= count($this->displayNames);
-    }
-
-    /**
-     * Set the display names.
-     *
-     * @param DisplayName[] $displayNames The display names.
-     * @return Channel Returns this channel.
-     */
-    protected function setDisplayNames(array $displayNames) {
-        $this->displayNames = $displayNames;
-        return $this;
     }
 
     /**
