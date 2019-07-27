@@ -53,6 +53,7 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getLanguage());
         $this->assertNull($obj->getLastChance());
         $this->assertNull($obj->getLength());
+        $this->assertNull($obj->getNew());
         $this->assertNull($obj->getPremiere());
         $this->assertNull($obj->getPreviouslyShown());
         $this->assertNull($obj->getPdcStart());
@@ -161,6 +162,19 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj->setLength($length);
         $this->assertSame($length, $obj->getLength());
+    }
+
+    /**
+     * Tests the setNew() method.
+     *
+     * @return void
+     */
+    public function testSetNew() {
+
+        $obj = new Programme();
+
+        $obj->setNew(false);
+        $this->assertFalse($obj->getNew());
     }
 
     /**

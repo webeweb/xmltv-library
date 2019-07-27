@@ -92,6 +92,13 @@ class Programme extends AbstractModel {
     private $length;
 
     /**
+     * New.
+     *
+     * @var bool
+     */
+    private $new;
+
+    /**
      * PDC start.
      *
      * @var string
@@ -224,6 +231,15 @@ class Programme extends AbstractModel {
      */
     public function getLength() {
         return $this->length;
+    }
+
+    /**
+     * Get the new.
+     *
+     * @return bool Returns the new.
+     */
+    public function getNew() {
+        return $this->new;
     }
 
     /**
@@ -370,6 +386,17 @@ class Programme extends AbstractModel {
      */
     public function setLength(Length $length = null) {
         $this->length = $length;
+        return $this;
+    }
+
+    /**
+     * Set the new.
+     *
+     * @param bool $new The new.
+     * @return Programme Returns this programme.
+     */
+    public function setNew($new) {
+        $this->new = $new;
         return $this;
     }
 
