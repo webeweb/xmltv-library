@@ -59,11 +59,12 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getPdcStart());
         $this->assertEquals([], $obj->getRatings());
         $this->assertEquals([], $obj->getReviews());
-        $this->assertEquals([], $obj->getStarRatings());
+        $this->assertEquals([], $obj->getSecondaryTitles());
         $this->assertNull($obj->getShowView());
+        $this->assertEquals([], $obj->getStarRatings());
         $this->assertNull($obj->getStart());
         $this->assertNull($obj->getStop());
-        $this->assertEquals([], $obj->getSubTitles());
+        $this->assertEquals([], $obj->getSubtitles());
         $this->assertEquals([], $obj->getTitles());
         $this->assertEquals([], $obj->getUrls());
         $this->assertNull($obj->getVideo());
@@ -96,8 +97,8 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj = new Programme();
 
-        $obj->setClumpIdx(false);
-        $this->assertFalse($obj->getClumpIdx());
+        $obj->setClumpIdx("clumpidx");
+        $this->assertEquals("clumpidx", $obj->getClumpIdx());
     }
 
     /**

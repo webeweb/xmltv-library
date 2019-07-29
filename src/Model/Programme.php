@@ -21,8 +21,9 @@ use WBW\Library\XMLTV\Traits\KeywordsTrait;
 use WBW\Library\XMLTV\Traits\LanguageTrait;
 use WBW\Library\XMLTV\Traits\RatingsTrait;
 use WBW\Library\XMLTV\Traits\ReviewsTrait;
+use WBW\Library\XMLTV\Traits\SecondaryTitlesTrait;
 use WBW\Library\XMLTV\Traits\StarRatingsTrait;
-use WBW\Library\XMLTV\Traits\SubTitlesTrait;
+use WBW\Library\XMLTV\Traits\SubtitlesTrait;
 use WBW\Library\XMLTV\Traits\TitlesTrait;
 use WBW\Library\XMLTV\Traits\UrlsTrait;
 
@@ -45,7 +46,8 @@ class Programme extends AbstractModel {
     use RatingsTrait;
     use ReviewsTrait;
     use StarRatingsTrait;
-    use SubTitlesTrait;
+    use SecondaryTitlesTrait;
+    use SubtitlesTrait;
     use TitlesTrait;
     use UrlsTrait;
 
@@ -59,7 +61,7 @@ class Programme extends AbstractModel {
     /**
      * Clump Idx
      *
-     * @var bool
+     * @var string
      */
     private $clumpIdx;
 
@@ -173,8 +175,9 @@ class Programme extends AbstractModel {
         $this->setKeywords([]);
         $this->setRatings([]);
         $this->setReviews([]);
+        $this->setSecondaryTitles([]);
         $this->setStarRatings([]);
-        $this->setSubTitles([]);
+        $this->setSubtitles([]);
         $this->setTitles([]);
         $this->setUrls([]);
     }
@@ -191,7 +194,7 @@ class Programme extends AbstractModel {
     /**
      * Get the clump idx.
      *
-     * @return bool Returns the clump idx.
+     * @return string Returns the clump idx.
      */
     public function getClumpIdx() {
         return $this->clumpIdx;
@@ -337,7 +340,7 @@ class Programme extends AbstractModel {
     /**
      * Set the clump idx.
      *
-     * @param bool $clumpIdx The clump idx.
+     * @param string $clumpIdx The clump idx.
      * @return Programme Returns this programme.
      */
     public function setClumpIdx($clumpIdx) {
