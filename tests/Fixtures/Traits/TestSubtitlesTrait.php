@@ -11,22 +11,22 @@
 
 namespace WBW\Library\XMLTV\Tests\Fixtures\Traits;
 
-use WBW\Library\XMLTV\Traits\SubTitlesTrait;
+use WBW\Library\XMLTV\Traits\SubtitlesTrait;
 
 /**
- * Test sub-titles trait.
+ * Test subtitles trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Fixtures\Traits
  */
-class TestSubTitlesTrait {
+class TestSubtitlesTrait {
 
-    use SubTitlesTrait;
+    use SubtitlesTrait;
 
     /**
      * Constructor.
      */
     public function __construct() {
-        $this->setSubTitles([]);
+        $this->setSubtitles([]);
     }
 }
