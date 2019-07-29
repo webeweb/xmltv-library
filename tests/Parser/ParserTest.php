@@ -44,9 +44,9 @@ use WBW\Library\XMLTV\Model\Programme;
 use WBW\Library\XMLTV\Model\Quality;
 use WBW\Library\XMLTV\Model\Rating;
 use WBW\Library\XMLTV\Model\Review;
+use WBW\Library\XMLTV\Model\SecondaryTitle;
 use WBW\Library\XMLTV\Model\StarRating;
 use WBW\Library\XMLTV\Model\Stereo;
-use WBW\Library\XMLTV\Model\SubTitle;
 use WBW\Library\XMLTV\Model\Subtitles;
 use WBW\Library\XMLTV\Model\Title;
 use WBW\Library\XMLTV\Model\Tv;
@@ -641,7 +641,7 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(Audio::class, $res->getAudio());
         $this->assertInstanceOf(Category::class, $res->getCategories()[0]);
         $this->assertEquals("channel-id", $res->getChannel());
-        $this->assertTrue($res->getClumpIdx());
+        $this->assertEquals("clumpidx", $res->getClumpIdx());
         $this->assertCount(1, $res->getCountries());
         $this->assertInstanceOf(Country::class, $res->getCountries()[0]);
         $this->assertInstanceOf(Credits::class, $res->getCredits());
@@ -659,11 +659,12 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(PreviouslyShown::class, $res->getPreviouslyShown());
         $this->assertInstanceOf(Rating::class, $res->getRatings()[0]);
         $this->assertInstanceOf(Review::class, $res->getReviews()[0]);
+        $this->assertInstanceOf(SecondaryTitle::class, $res->getSecondaryTitles()[0]);
         $this->assertInstanceOf(StarRating::class, $res->getStarRatings()[0]);
         $this->assertEquals("showview", $res->getShowView());
         $this->assertEquals("start", $res->getStart());
         $this->assertEquals("stop", $res->getStop());
-        $this->assertInstanceOf(SubTitle::class, $res->getSubTitles()[0]);
+        $this->assertInstanceOf(Subtitles::class, $res->getSubtitles()[0]);
         $this->assertInstanceOf(Title::class, $res->getTitles()[0]);
         $this->assertInstanceOf(Url::class, $res->getUrls()[0]);
         $this->assertInstanceOf(Video::class, $res->getVideo());
@@ -732,6 +733,25 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the parseSecondaryTitle() method.
+     *
+     * @return void
+     */
+    public function testParseSecondaryTitle() {
+
+        // tv > programme > sub-title
+        $node = $this->document->documentElement
+            ->childNodes->item(3)
+            ->childNodes->item(3);
+
+        $res = Parser::parseSecondaryTitle($node);
+        $this->assertInstanceOf(SecondaryTitle::class, $res);
+
+        $this->assertEquals("Secondary title", $res->getContent());
+        $this->assertEquals("secondary-title-lang", $res->getLang());
+    }
+
+    /**
      * Tests the parseStarRating() method.
      *
      * @return void
@@ -767,25 +787,6 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(Stereo::class, $res);
 
         $this->assertEquals("Stereo", $res->getContent());
-    }
-
-    /**
-     * Tests the parseSubTitle() method.
-     *
-     * @return void
-     */
-    public function testParseSubTitle() {
-
-        // tv > programme > sub-title
-        $node = $this->document->documentElement
-            ->childNodes->item(3)
-            ->childNodes->item(3);
-
-        $res = Parser::parseSubTitle($node);
-        $this->assertInstanceOf(SubTitle::class, $res);
-
-        $this->assertEquals("Sub-title", $res->getContent());
-        $this->assertEquals("sub-title-lang", $res->getLang());
     }
 
     /**

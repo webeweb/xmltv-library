@@ -45,9 +45,9 @@ use WBW\Library\XMLTV\Model\Programme;
 use WBW\Library\XMLTV\Model\Quality;
 use WBW\Library\XMLTV\Model\Rating;
 use WBW\Library\XMLTV\Model\Review;
+use WBW\Library\XMLTV\Model\SecondaryTitle;
 use WBW\Library\XMLTV\Model\StarRating;
 use WBW\Library\XMLTV\Model\Stereo;
-use WBW\Library\XMLTV\Model\SubTitle;
 use WBW\Library\XMLTV\Model\Subtitles;
 use WBW\Library\XMLTV\Model\Title;
 use WBW\Library\XMLTV\Model\Tv;
@@ -296,7 +296,7 @@ class Parser {
     }
 
     /**
-     * Parses a editor node.
+     * Parses an editor node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Editor Returns the editor.
@@ -415,7 +415,7 @@ class Parser {
     }
 
     /**
-     * Parses a original language node.
+     * Parses an original language node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return OrigLanguage Returns the original language.
@@ -513,7 +513,7 @@ class Parser {
 
         $model = new Programme();
         $model->setChannel(ParserHelper::getDOMAttributeValue($domNode, "channel"));
-        $model->setClumpIdx(boolval(ParserHelper::getDOMAttributeValue($domNode, "clumpidx")));
+        $model->setClumpIdx(ParserHelper::getDOMAttributeValue($domNode, "clumpidx"));
         $model->setNew(null !== $newNode);
         $model->setShowView(ParserHelper::getDOMAttributeValue($domNode, "showview"));
         $model->setPdcStart(ParserHelper::getDOMAttributeValue($domNode, "pdc-start"));
@@ -539,6 +539,7 @@ class Parser {
         ParserHelper::parseChildNodes($domNode, "rating", $model);
         ParserHelper::parseChildNodes($domNode, "review", $model);
         ParserHelper::parseChildNodes($domNode, "sub-title", $model);
+        ParserHelper::parseChildNodes($domNode, "subtitles", $model);
         ParserHelper::parseChildNodes($domNode, "star-rating", $model);
         ParserHelper::parseChildNodes($domNode, "title", $model);
         ParserHelper::parseChildNodes($domNode, "url", $model);
@@ -596,6 +597,21 @@ class Parser {
     }
 
     /**
+     * Parses a sub-title node.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @return SecondaryTitle Returns the sub-title.
+     */
+    public static function parseSecondaryTitle(DOMNode $domNode) {
+
+        $model = new SecondaryTitle();
+        $model->setContent($domNode->textContent);
+        $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
+
+        return $model;
+    }
+
+    /**
      * Parses a star rating node.
      *
      * @param DOMNode $domNode The DOM node.
@@ -621,21 +637,6 @@ class Parser {
 
         $model = new Stereo();
         $model->setContent($domNode->textContent);
-
-        return $model;
-    }
-
-    /**
-     * Parses a sub-title node.
-     *
-     * @param DOMNode $domNode The DOM node.
-     * @return SubTitle Returns the sub-title.
-     */
-    public static function parseSubTitle(DOMNode $domNode) {
-
-        $model = new SubTitle();
-        $model->setContent($domNode->textContent);
-        $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
     }
@@ -689,6 +690,8 @@ class Parser {
 
         ParserHelper::parseChildNodes($domNode, "channel", $model);
         ParserHelper::parseChildNodes($domNode, "programme", $model);
+
+        $model->indexProgrammes();
 
         return $model;
     }

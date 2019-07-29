@@ -32,15 +32,11 @@ class ParserHelper {
      */
     public static function getDOMAttributeValue(DOMNode $domNode, $attributeName) {
 
-        $attributes = $domNode->attributes;
-        if (null === $attributes) {
+        if (null === $domNode->attributes || null === $domNode->attributes->getNamedItem($attributeName)) {
             return null;
         }
 
-        $attribute = $attributes->getNamedItem($attributeName);
-        if (null === $attribute) {
-            return null;
-        }
+        $attribute = $domNode->attributes->getNamedItem($attributeName);
 
         return $attribute->nodeValue;
     }
@@ -93,20 +89,22 @@ class ParserHelper {
     /**
      * Get a method name.
      *
-     * @param string $type The type.
-     * @param string $attribute The attribute.
+     * @param string $leftPart The left part.
+     * @param string $rightPart The right part.
      * @return string Returns the method name.
      */
-    public static function getMethodName($type, $attribute) {
+    public static function getMethodName($leftPart, $rightPart) {
 
         $method = "";
 
-        $parts = explode("-", $attribute);
+        $rightPart = str_replace("sub-title", "secondary-title", $rightPart);
+
+        $parts = explode("-", $rightPart);
         foreach ($parts as $current) {
             $method .= ucfirst($current);
         }
 
-        return implode("", [$type, $method]);
+        return implode("", [$leftPart, $method]);
     }
 
     /**
