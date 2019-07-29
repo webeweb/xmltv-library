@@ -53,4 +53,23 @@ class ChannelsTraitTest extends AbstractTestCase {
         $this->assertEquals([], $obj->getChannels());
         $this->assertFalse($obj->hasChannels());
     }
+
+    /**
+     * Tests the getChannelById() method.
+     *
+     * @return void
+     */
+    public function testGetChannelById() {
+
+        // Set a Channel mock.
+        $channel = new Channel();
+        $channel->setId("id");
+
+        $obj = new TestChannelsTrait();
+
+        $this->assertNull($obj->getChannelById("id"));
+
+        $obj->addChannel($channel);
+        $this->assertSame($channel, $obj->getChannelById("id"));
+    }
 }
