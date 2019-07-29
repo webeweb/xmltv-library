@@ -11,16 +11,16 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
-use WBW\Library\XMLTV\Model\SubTitle;
+use WBW\Library\XMLTV\Model\SecondaryTitle;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
- * Sub-title test.
+ * Secondary title test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model
  */
-class SubTitleTest extends AbstractTestCase {
+class SecondaryTitleTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,7 +29,7 @@ class SubTitleTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new SubTitle();
+        $obj = new SecondaryTitle();
 
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getLang());

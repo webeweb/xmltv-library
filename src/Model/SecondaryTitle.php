@@ -15,11 +15,11 @@ use WBW\Library\XMLTV\Traits\ContentTrait;
 use WBW\Library\XMLTV\Traits\LangTrait;
 
 /**
- * Sub-title.
+ * Secondary title.
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Model
  */
-class SubTitle extends AbstractModel {
+class SecondaryTitle extends AbstractModel {
 
     use ContentTrait;
     use LangTrait;
