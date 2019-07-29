@@ -29,7 +29,7 @@ trait DescsTrait {
     private $descs;
 
     /**
-     * Add an description.
+     * Add a description.
      *
      * @param Desc $desc The description.
      */

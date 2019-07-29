@@ -29,7 +29,7 @@ trait TitlesTrait {
     private $titles;
 
     /**
-     * Add an title.
+     * Add a title.
      *
      * @param Title $title The title.
      */

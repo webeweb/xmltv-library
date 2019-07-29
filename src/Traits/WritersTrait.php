@@ -29,7 +29,7 @@ trait WritersTrait {
     private $writers;
 
     /**
-     * Add an writer.
+     * Add a writer.
      *
      * @param Writer $writer The writer.
      */

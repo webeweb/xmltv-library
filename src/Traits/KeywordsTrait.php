@@ -29,7 +29,7 @@ trait KeywordsTrait {
     private $keywords;
 
     /**
-     * Add an keyword.
+     * Add a keyword.
      *
      * @param Keyword $keyword The keyword.
      */

@@ -29,7 +29,7 @@ trait GuestsTrait {
     private $guests;
 
     /**
-     * Add an guest.
+     * Add a guest.
      *
      * @param Guest $guest The guest.
      */

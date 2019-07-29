@@ -29,7 +29,7 @@ trait RatingsTrait {
     private $ratings;
 
     /**
-     * Add an rating.
+     * Add a rating.
      *
      * @param Rating $rating The rating.
      */

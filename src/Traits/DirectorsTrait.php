@@ -29,7 +29,7 @@ trait DirectorsTrait {
     private $directors;
 
     /**
-     * Add an director.
+     * Add a director.
      *
      * @param Director $director The director.
      */

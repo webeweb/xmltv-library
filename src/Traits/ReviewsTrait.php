@@ -29,7 +29,7 @@ trait ReviewsTrait {
     private $reviews;
 
     /**
-     * Add an review.
+     * Add a review.
      *
      * @param Review $review The review.
      */

@@ -29,7 +29,7 @@ trait ProgrammesTrait {
     private $programmes;
 
     /**
-     * Add an programme.
+     * Add a programme.
      *
      * @param Programme $programme The programme.
      */

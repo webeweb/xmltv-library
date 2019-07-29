@@ -29,13 +29,34 @@ trait ChannelsTrait {
     private $channels;
 
     /**
-     * Add an channel.
+     * Channels index.
+     *
+     * @var Channel[]
+     */
+    private $channelsIndex;
+
+    /**
+     * Add a channel.
      *
      * @param Channel $channel The channel.
      */
     public function addChannel(Channel $channel) {
         $this->channels[] = $channel;
-        return $this;
+        return $this->indexChannel($channel);
+    }
+
+    /**
+     * Get a channel by id.
+     *
+     * @param string $id The channel id.
+     * @return Channel|null Returns the channel.
+     */
+    public function getChannelById($id) {
+        $this->initChannelsIndex();
+        if (false === array_key_exists($id, $this->channelsIndex)) {
+            return null;
+        }
+        return $this->channelsIndex[$id];
     }
 
     /**
@@ -54,6 +75,28 @@ trait ChannelsTrait {
      */
     public function hasChannels() {
         return 1 <= count($this->channels);
+    }
+
+    /**
+     * Index a channel.
+     *
+     * @param Channel $channel The channel.
+     */
+    protected function indexChannel(Channel $channel) {
+        $this->initChannelsIndex();
+        $this->channelsIndex[$channel->getId()] = $channel;
+        return $this;
+    }
+
+    /**
+     * Initializes the channels index.
+     *
+     * @return void
+     */
+    protected function initChannelsIndex() {
+        if (null === $this->channelsIndex) {
+            $this->channelsIndex = [];
+        }
     }
 
     /**

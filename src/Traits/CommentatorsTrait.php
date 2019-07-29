@@ -29,7 +29,7 @@ trait CommentatorsTrait {
     private $commentators;
 
     /**
-     * Add an commentator.
+     * Add a commentator.
      *
      * @param Commentator $commentator The commentator.
      */

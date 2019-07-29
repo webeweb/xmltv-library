@@ -29,7 +29,7 @@ trait PresentersTrait {
     private $presenters;
 
     /**
-     * Add an presenter.
+     * Add a presenter.
      *
      * @param Presenter $presenter The presenter.
      */

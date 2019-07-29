@@ -29,7 +29,7 @@ trait ProducersTrait {
     private $producers;
 
     /**
-     * Add an producer.
+     * Add a producer.
      *
      * @param Producer $producer The producer.
      */

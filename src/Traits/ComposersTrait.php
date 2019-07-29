@@ -29,7 +29,7 @@ trait ComposersTrait {
     private $composers;
 
     /**
-     * Add an composer.
+     * Add a composer.
      *
      * @param Composer $composer The composer.
      */

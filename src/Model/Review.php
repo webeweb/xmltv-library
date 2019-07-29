@@ -85,7 +85,7 @@ class Review extends AbstractModel {
      *
      * @param string $type The type.
      * @return Review Returns this review.
-     * @throws InvalidArgumentException Throws an oinvalid argument exception if the type is invalid.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the type is invalid.
      */
     public function setType($type) {
         if (null !== $type && false === in_array($type, ["text", "url"])) {

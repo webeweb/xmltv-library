@@ -31,6 +31,7 @@ class Subtitles extends AbstractModel {
      *
      * @param string $type The type.
      * @return Subtitles Returns this subtitles.
+     * @throws InvalidArgumentException Throws an invalid argument exception if the type is invalid.
      */
     public function setType($type) {
         if (null !== $type && false === in_array($type, ["deaf-signed", "onscreen", "teletext"])) {
