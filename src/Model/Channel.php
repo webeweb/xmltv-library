@@ -13,6 +13,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\XMLTV\Traits\DisplayNamesTrait;
 use WBW\Library\XMLTV\Traits\IconsTrait;
+use WBW\Library\XMLTV\Traits\ProgrammesTrait;
 use WBW\Library\XMLTV\Traits\UrlsTrait;
 
 /**
@@ -25,6 +26,7 @@ class Channel extends AbstractModel {
 
     use DisplayNamesTrait;
     use IconsTrait;
+    use ProgrammesTrait;
     use UrlsTrait;
 
     /**
@@ -40,6 +42,7 @@ class Channel extends AbstractModel {
     public function __construct() {
         $this->setDisplayNames([]);
         $this->setIcons([]);
+        $this->setProgrammes([]);
         $this->setUrls([]);
     }
 
