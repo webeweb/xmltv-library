@@ -56,7 +56,7 @@ class SubtitlesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTypeWithInvaliArgumentException() {
+    public function testSetTypeWithInvalidArgumentException() {
 
         $obj = new Subtitles();
 

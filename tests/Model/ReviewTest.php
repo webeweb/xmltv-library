@@ -84,7 +84,7 @@ class ReviewTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTypeWithInvaliArgumentException() {
+    public function testSetTypeWithInvalidArgumentException() {
 
         $obj = new Review();
 
