@@ -55,21 +55,52 @@ class ChannelsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getChannelById() method.
+     * Tests the indexChannelsById() method.
      *
      * @return void
      */
-    public function testGetChannelById() {
+    public function testIndexChannelsById() {
 
-        // Set a Channel mock.
-        $channel = new Channel();
-        $channel->setId("id");
+        // Set the Channel mock.
+        $channel1 = new Channel();
+        $channel1->setId("1");
+        $channel2 = new Channel();
+        $channel2->setId("2");
+
+        $obj = new TestChannelsTrait();
+        $obj->addChannel($channel2);
+        $obj->addChannel($channel1);
+
+        $res = $obj->indexChannelsById();
+        $this->assertArrayHasKey("1", $res);
+        $this->assertArrayHasKey("2", $res);
+
+        $this->assertSame($channel1, $res["1"]);
+        $this->assertSame($channel2, $res["2"]);
+    }
+
+    /**
+     * Tests the sortChannels() method.
+     *
+     * @return void
+     */
+    public function testSortChannels() {
+
+        // Set the Channel mock.
+        $channel1 = new Channel();
+        $channel1->setId("1");
+        $channel2 = new Channel();
+        $channel2->setId("2");
 
         $obj = new TestChannelsTrait();
 
-        $this->assertNull($obj->getChannelById("id"));
+        $obj->addChannel($channel2);
+        $obj->addChannel($channel1);
+        $this->assertEquals("2", $obj->getChannels()[0]->getId());
+        $this->assertEquals("1", $obj->getChannels()[1]->getId());
 
-        $obj->addChannel($channel);
-        $this->assertSame($channel, $obj->getChannelById("id"));
+        $obj->sortChannels();
+        $this->assertEquals("1", $obj->getChannels()[0]->getId());
+        $this->assertEquals("2", $obj->getChannels()[1]->getId());
     }
 }
