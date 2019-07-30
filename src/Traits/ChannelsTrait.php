@@ -29,34 +29,13 @@ trait ChannelsTrait {
     private $channels;
 
     /**
-     * Channels index.
-     *
-     * @var Channel[]
-     */
-    private $channelsIndex;
-
-    /**
      * Add a channel.
      *
      * @param Channel $channel The channel.
      */
     public function addChannel(Channel $channel) {
         $this->channels[] = $channel;
-        return $this->indexChannel($channel);
-    }
-
-    /**
-     * Get a channel by id.
-     *
-     * @param string $id The channel id.
-     * @return Channel|null Returns the channel.
-     */
-    public function getChannelById($id) {
-        $this->initChannelsIndex();
-        if (false === array_key_exists($id, $this->channelsIndex)) {
-            return null;
-        }
-        return $this->channelsIndex[$id];
+        return $this;
     }
 
     /**
@@ -78,25 +57,22 @@ trait ChannelsTrait {
     }
 
     /**
-     * Index a channel.
+     * Indexes the channels by id.
      *
-     * @param Channel $channel The channel.
+     * @return Channel[] Returns the channels indexed by id.
      */
-    protected function indexChannel(Channel $channel) {
-        $this->initChannelsIndex();
-        $this->channelsIndex[$channel->getId()] = $channel;
-        return $this;
-    }
+    public function indexChannelsById() {
 
-    /**
-     * Initializes the channels index.
-     *
-     * @return void
-     */
-    protected function initChannelsIndex() {
-        if (null === $this->channelsIndex) {
-            $this->channelsIndex = [];
+        $index = [];
+
+        /** @var Channel $current */
+        foreach ($this->channels as $current) {
+            $index[$current->getId()] = $current;
         }
+
+        ksort($index);
+
+        return $index;
     }
 
     /**
@@ -106,6 +82,16 @@ trait ChannelsTrait {
      */
     protected function setChannels(array $channels) {
         $this->channels = $channels;
+        return $this;
+    }
+
+    /**
+     * Sort the channels.
+     */
+    public function sortChannels() {
+        usort($this->channels, function(Channel $a, Channel $b) {
+            return strcmp($a->getId(), $b->getId());
+        });
         return $this;
     }
 }
