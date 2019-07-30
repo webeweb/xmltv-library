@@ -33,5 +33,6 @@ class PreviouslyShownTest extends AbstractTestCase {
 
         $this->assertNull($obj->getChannel());
         $this->assertNull($obj->getStart());
+        $this->assertNull($obj->getStartDateTime());
     }
 }

@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Traits;
 
+use WBW\Library\XMLTV\Parser\ParserHelper;
+
 /**
  * Start trait.
  *
@@ -33,6 +35,15 @@ trait StartTrait {
      */
     public function getStart() {
         return $this->start;
+    }
+
+    /**
+     * Get the start into DateTime.
+     *
+     * @return DateTime|null Returns the start into DateTime in case of success, null otherwise.
+     */
+    public function getStartDateTime() {
+        return ParserHelper::parseDateTime($this->start);
     }
 
     /**

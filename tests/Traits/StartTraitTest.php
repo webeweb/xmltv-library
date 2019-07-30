@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Tests\Traits;
 
+use DateTime;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 use WBW\Library\XMLTV\Tests\Fixtures\Traits\TestStartTrait;
 
@@ -32,6 +33,7 @@ class StartTraitTest extends AbstractTestCase {
         $obj = new TestStartTrait();
 
         $this->assertNull($obj->getStart());
+        $this->assertNull($obj->getStartDateTime());
     }
 
     /**
@@ -43,7 +45,9 @@ class StartTraitTest extends AbstractTestCase {
 
         $obj = new TestStartTrait();
 
-        $obj->setStart("start");
-        $this->assertEquals("start", $obj->getStart());
+        $obj->setStart("20190730180000 +0200");
+        $this->assertEquals("20190730180000 +0200", $obj->getStart());
+
+        $this->assertInstanceOf(DateTime::class, $obj->getStartDateTime());
     }
 }
