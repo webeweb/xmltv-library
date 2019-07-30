@@ -135,20 +135,25 @@ class Tv extends AbstractModel {
     }
 
     /**
-     * Indexes the programmes.
+     * Indexes the programmes by channel.
      *
-     * @return void
+     * @return Tv Returns this TV.
      */
-    public function indexProgrammes() {
+    public function indexProgrammesByChannel() {
+
+        $this->sortChannels();
+        $this->sortProgrammes();
+
+        $channels = $this->indexChannelsById();
 
         /** @var Programme $current */
         foreach ($this->programmes as $current) {
-
-            $channel = $this->getChannelById($current->getChannel());
-            if (null !== $channel) {
-                $channel->addProgramme($current);
+            if (true === array_key_exists($current->getChannel(), $channels)) {
+                $channels[$current->getChannel()]->addProgramme($current);
             }
         }
+
+        return $this;
     }
 
     /**

@@ -691,7 +691,7 @@ class Parser {
         ParserHelper::parseChildNodes($domNode, "channel", $model);
         ParserHelper::parseChildNodes($domNode, "programme", $model);
 
-        $model->indexProgrammes();
+        $model->indexProgrammesByChannel();
 
         return $model;
     }
