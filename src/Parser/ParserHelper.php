@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Parser;
 
+use DateTime;
 use DOMNode;
 use DOMNodeList;
 use WBW\Library\XMLTV\Model\AbstractModel;
@@ -143,5 +144,19 @@ class ParserHelper {
         foreach ($nodes as $current) {
             $model->$setter(call_user_func_array(__NAMESPACE__ . "\\Parser::" . $parser, [$current]));
         }
+    }
+
+    /**
+     * Parses a date/time.
+     *
+     * @param string $dateTime The date/time.
+     * @return DateTime|null Returns the date/time in case of success, null otherwise.
+     */
+    public static function parseDateTime($dateTime) {
+        $result = DateTime::createFromFormat("YmdHis O", $dateTime);
+        if (false === $result) {
+            return null;
+        }
+        return $result;
     }
 }

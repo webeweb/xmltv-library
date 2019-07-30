@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Tests\Parser;
 
+use DateTime;
 use WBW\Library\XMLTV\Parser\ParserHelper;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
@@ -39,6 +40,8 @@ class ParserHelperTest extends AbstractTestCase {
 
     /**
      * Tests the getDOMNodeByName() method.
+     *
+     * @return void
      */
     public function testGetDOMNodeByName() {
 
@@ -80,9 +83,23 @@ class ParserHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetMethodeName() {
+    public function testGetMethodName() {
 
         $this->assertEquals("addDisplayName", ParserHelper::getMethodName("add", "display-name"));
         $this->assertEquals("setUrl", ParserHelper::getMethodName("set", "url"));
+    }
+
+    /**
+     * Tests the parseDateTime() method.
+     *
+     * @return void
+     */
+    public function testParseDateTime() {
+
+        $res = ParserHelper::parseDateTime("20190731180000 +0200");
+        $this->assertInstanceOf(DateTime::class, $res);
+        $this->assertEquals("2019-07-31 18:00:00", $res->format("Y-m-d H:i:s"));
+
+        $this->assertNull(ParserHelper::parseDateTime("exception"));
     }
 }
