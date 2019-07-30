@@ -53,4 +53,29 @@ class ProgrammesTraitTest extends AbstractTestCase {
         $this->assertEquals([], $obj->getProgrammes());
         $this->assertFalse($obj->hasProgrammes());
     }
+
+    /**
+     * Tests the sortProgrammes() method.
+     *
+     * @return void
+     */
+    public function testSortProgrammes() {
+
+        // Set the Programme mocks.
+        $programme1 = new Programme();
+        $programme1->setStart("1");
+        $programme2 = new Programme();
+        $programme2->setStart("2");
+
+        $obj = new TestProgrammesTrait();
+
+        $obj->addProgramme($programme2);
+        $obj->addProgramme($programme1);
+        $this->assertEquals("2", $obj->getProgrammes()[0]->getStart());
+        $this->assertEquals("1", $obj->getProgrammes()[1]->getStart());
+
+        $obj->sortProgrammes();
+        $this->assertEquals("1", $obj->getProgrammes()[0]->getStart());
+        $this->assertEquals("2", $obj->getProgrammes()[1]->getStart());
+    }
 }

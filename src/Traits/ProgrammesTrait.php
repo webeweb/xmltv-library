@@ -65,4 +65,14 @@ trait ProgrammesTrait {
         $this->programmes = $programmes;
         return $this;
     }
+
+    /**
+     * Sort the programmes.
+     */
+    public function sortProgrammes() {
+        usort($this->programmes, function(Programme $a, Programme $b) {
+            return strcmp($a->getStart(), $b->getStart());
+        });
+        return $this;
+    }
 }
