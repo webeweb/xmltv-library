@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Parser\ParserHelper;
 use WBW\Library\XMLTV\Traits\CategoriesTrait;
 use WBW\Library\XMLTV\Traits\ChannelTrait;
 use WBW\Library\XMLTV\Traits\CountriesTrait;
@@ -23,6 +24,7 @@ use WBW\Library\XMLTV\Traits\RatingsTrait;
 use WBW\Library\XMLTV\Traits\ReviewsTrait;
 use WBW\Library\XMLTV\Traits\SecondaryTitlesTrait;
 use WBW\Library\XMLTV\Traits\StarRatingsTrait;
+use WBW\Library\XMLTV\Traits\StartTrait;
 use WBW\Library\XMLTV\Traits\SubtitlesTrait;
 use WBW\Library\XMLTV\Traits\TitlesTrait;
 use WBW\Library\XMLTV\Traits\UrlsTrait;
@@ -47,6 +49,7 @@ class Programme extends AbstractModel {
     use ReviewsTrait;
     use StarRatingsTrait;
     use SecondaryTitlesTrait;
+    use StartTrait;
     use SubtitlesTrait;
     use TitlesTrait;
     use UrlsTrait;
@@ -127,13 +130,6 @@ class Programme extends AbstractModel {
      * @var string
      */
     private $showView;
-
-    /**
-     * Start.
-     *
-     * @var string
-     */
-    private $start;
 
     /**
      * Stop.
@@ -282,21 +278,21 @@ class Programme extends AbstractModel {
     }
 
     /**
-     * Get the start.
-     *
-     * @return string Returns the start.
-     */
-    public function getStart() {
-        return $this->start;
-    }
-
-    /**
      * Get the stop.
      *
      * @return string Returns the stop.
      */
     public function getStop() {
         return $this->stop;
+    }
+
+    /**
+     * Get the stop into DateTime.
+     *
+     * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
+     */
+    public function getStopDateTime() {
+        return ParserHelper::parseDateTime($this->stop);
     }
 
     /**
@@ -444,17 +440,6 @@ class Programme extends AbstractModel {
      */
     public function setShowView($showView) {
         $this->showView = $showView;
-        return $this;
-    }
-
-    /**
-     * Set the start.
-     *
-     * @param string $start The start.
-     * @return Programme Returns this programme.
-     */
-    public function setStart($start) {
-        $this->start = $start;
         return $this;
     }
 

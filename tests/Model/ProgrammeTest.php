@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
+use DateTime;
 use WBW\Library\XMLTV\Model\Audio;
 use WBW\Library\XMLTV\Model\Credits;
 use WBW\Library\XMLTV\Model\Date;
@@ -63,7 +64,9 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getShowView());
         $this->assertEquals([], $obj->getStarRatings());
         $this->assertNull($obj->getStart());
+        $this->assertNull($obj->getStartDateTime());
         $this->assertNull($obj->getStop());
+        $this->assertNull($obj->getStopDateTime());
         $this->assertEquals([], $obj->getSubtitles());
         $this->assertEquals([], $obj->getTitles());
         $this->assertEquals([], $obj->getUrls());
@@ -237,19 +240,6 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setStart() method.
-     *
-     * @return void
-     */
-    public function testSetStart() {
-
-        $obj = new Programme();
-
-        $obj->setStart("start");
-        $this->assertEquals("start", $obj->getStart());
-    }
-
-    /**
      * Tests the setStop() method.
      *
      * @return void
@@ -258,8 +248,10 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj = new Programme();
 
-        $obj->setStop("stop");
-        $this->assertEquals("stop", $obj->getStop());
+        $obj->setStop("20190730200000 +0200");
+        $this->assertEquals("20190730200000 +0200", $obj->getStop());
+
+        $this->assertInstanceOf(DateTime::class, $obj->getStopDateTime());
     }
 
     /**
