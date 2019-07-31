@@ -149,11 +149,11 @@ class ParserHelper {
     /**
      * Parses a date/time.
      *
-     * @param string $dateTime The date/time.
+     * @param string $value The date/time.
      * @return DateTime|null Returns the date/time in case of success, null otherwise.
      */
-    public static function parseDateTime($dateTime) {
-        $result = DateTime::createFromFormat("YmdHis O", $dateTime);
+    public static function parseDateTime($value) {
+        $result = DateTime::createFromFormat("YmdHis O", $value);
         if (false === $result) {
             return null;
         }
