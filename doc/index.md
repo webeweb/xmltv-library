@@ -131,7 +131,7 @@ foreach($tv->getChannels() as $channel) {
 
         /** @var Length $length */
         $length = $programme->getLength();
-        $length->getContent(); // int
+        $length->getContent(); // float
         $length->getUnits();
         
         /** @var Premiere $premiere */
