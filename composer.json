@@ -1,7 +1,7 @@
 {
     "name": "webeweb/xmltv-library",
     "type": "library",
-    "description": "",
+    "description": "Integrate XMLTV with your projects",
     "keywords": [
         "library",
         "webeweb"
