@@ -17,6 +17,7 @@ use WBW\Library\XMLTV\Model\Credits;
 use WBW\Library\XMLTV\Model\Date;
 use WBW\Library\XMLTV\Model\LastChance;
 use WBW\Library\XMLTV\Model\Length;
+use WBW\Library\XMLTV\Model\OrigLanguage;
 use WBW\Library\XMLTV\Model\Premiere;
 use WBW\Library\XMLTV\Model\PreviouslyShown;
 use WBW\Library\XMLTV\Model\Programme;
@@ -55,6 +56,7 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getLastChance());
         $this->assertNull($obj->getLength());
         $this->assertNull($obj->getNew());
+        $this->assertNull($obj->getOrigLanguage());
         $this->assertNull($obj->getPremiere());
         $this->assertNull($obj->getPreviouslyShown());
         $this->assertNull($obj->getPdcStart());
@@ -179,6 +181,22 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj->setNew(false);
         $this->assertFalse($obj->getNew());
+    }
+
+    /**
+     * Tests the setOrigLanguage() method.
+     *
+     * @return void
+     */
+    public function testSetOrigLanguage() {
+
+        // Set an Orig language mock.
+        $origLanguage = new OrigLanguage();
+
+        $obj = new Programme();
+
+        $obj->setOrigLanguage($origLanguage);
+        $this->assertSame($origLanguage, $obj->getOrigLanguage());
     }
 
     /**

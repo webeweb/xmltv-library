@@ -653,6 +653,7 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(Language::class, $res->getLanguage());
         $this->assertInstanceOf(LastChance::class, $res->getLastChance());
         $this->assertInstanceOf(Length::class, $res->getLength());
+        $this->assertInstanceOf(OrigLanguage::class, $res->getOrigLanguage());
         $this->assertTrue($res->getNew());
         $this->assertEquals("pdc-start", $res->getPdcStart());
         $this->assertInstanceOf(Premiere::class, $res->getPremiere());

@@ -535,6 +535,7 @@ class Parser {
         ParserHelper::parseChildNode($domNode, "language", $model);
         ParserHelper::parseChildNode($domNode, "last-chance", $model);
         ParserHelper::parseChildNode($domNode, "premiere", $model);
+        ParserHelper::parseChildNode($domNode, "orig-language", $model);
         ParserHelper::parseChildNode($domNode, "previously-shown", $model);
         ParserHelper::parseChildNodes($domNode, "rating", $model);
         ParserHelper::parseChildNodes($domNode, "review", $model);

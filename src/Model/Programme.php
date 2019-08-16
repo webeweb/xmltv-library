@@ -104,6 +104,13 @@ class Programme extends AbstractModel {
     private $new;
 
     /**
+     * Original language.
+     *
+     * @var OrigLanguage
+     */
+    private $origLanguage;
+
+    /**
      * PDC start.
      *
      * @var string
@@ -239,6 +246,15 @@ class Programme extends AbstractModel {
      */
     public function getNew() {
         return $this->new;
+    }
+
+    /**
+     * Get the original language.
+     *
+     * @return OrigLanguage Returns the original language.
+     */
+    public function getOrigLanguage() {
+        return $this->origLanguage;
     }
 
     /**
@@ -396,6 +412,17 @@ class Programme extends AbstractModel {
      */
     public function setNew($new) {
         $this->new = $new;
+        return $this;
+    }
+
+    /**
+     * Set the original language.
+     *
+     * @param OrigLanguage $origLanguage The original language.
+     * @return Programme Returns this programme.
+     */
+    public function setOrigLanguage($origLanguage) {
+        $this->origLanguage = $origLanguage;
         return $this;
     }
 
