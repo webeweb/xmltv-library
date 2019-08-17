@@ -2,7 +2,7 @@
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
 <tv date="date" generator-info-name="generator-info-name" generator-info-url="generator-info-url" source-data-url="source-data-url" source-info-name="source-info-name" source-info-url="source-info-url">
     <channel id="channel-id">
-        <display-name>Display name</display-name>
+        <display-name lang="display-name-lang">Display name</display-name>
         <icon src="src" width="1920" height="1080"/>
         <url>URL</url>
     </channel>

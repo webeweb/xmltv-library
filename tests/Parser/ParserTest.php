@@ -355,6 +355,7 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(DisplayName::class, $res);
 
         $this->assertEquals("Display name", $res->getContent());
+        $this->assertEquals("display-name-lang", $res->getLang());
     }
 
     /**
