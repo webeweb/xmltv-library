@@ -25,11 +25,45 @@ class Length extends AbstractModel {
     use ContentTrait;
 
     /**
+     * Units "hours".
+     *
+     * @var string
+     */
+    const UNITS_HOURS = "hours";
+
+    /**
+     * Units "minutes".
+     *
+     * @var string
+     */
+    const UNITS_MINUTES = "minutes";
+
+    /**
+     * Units "seconds".
+     *
+     * @var string
+     */
+    const UNITS_SECONDS = "seconds";
+
+    /**
      * Units.
      *
      * @var string
      */
     private $units;
+
+    /**
+     * Enumerate the units.
+     *
+     * @return string[] Returns the units enumeration.
+     */
+    public static function enumUnits() {
+        return [
+            self::UNITS_HOURS,
+            self::UNITS_MINUTES,
+            self::UNITS_SECONDS,
+        ];
+    }
 
     /**
      * Get the units.
@@ -48,7 +82,7 @@ class Length extends AbstractModel {
      * @throws InvalidArgumentException Throws an invalid argument exception if the units is invalid.
      */
     public function setUnits($units) {
-        if (null !== $units && false === in_array($units, ["hours", "minutes", "seconds"])) {
+        if (null !== $units && false === in_array($units, static::enumUnits())) {
             throw new InvalidArgumentException(sprintf("The units \"%s\" is invalid", $units));
         }
         $this->units = $units;

@@ -31,10 +31,29 @@ class LengthTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("hours", Length::UNITS_HOURS);
+        $this->assertEquals("minutes", Length::UNITS_MINUTES);
+        $this->assertEquals("seconds", Length::UNITS_SECONDS);
+
         $obj = new Length();
 
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getUnits());
+    }
+
+    /**
+     * Tests the enumUnits() method.
+     *
+     * @return void
+     */
+    public function testEnumUnits() {
+
+        $res = [
+            Length::UNITS_HOURS,
+            Length::UNITS_MINUTES,
+            Length::UNITS_SECONDS,
+        ];
+        $this->assertEquals($res, Length::enumUnits());
     }
 
     /**
