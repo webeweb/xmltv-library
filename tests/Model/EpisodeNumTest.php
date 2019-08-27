@@ -29,9 +29,26 @@ class EpisodeNumTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("onscreen", EpisodeNum::SYSTEM_ONSCREEN);
+        $this->assertEquals("xmltv_ns", EpisodeNum::SYSTEM_XMLTV_NS);
+
         $obj = new EpisodeNum();
 
         $this->assertNull($obj->getContent());
         $this->assertNull($obj->getSystem());
+    }
+
+    /**
+     * Tests the enumSystem() method.
+     *
+     * @return void
+     */
+    public function testEnumSystem() {
+
+        $res = [
+            EpisodeNum::SYSTEM_ONSCREEN,
+            EpisodeNum::SYSTEM_XMLTV_NS,
+        ];
+        $this->assertEquals($res, EpisodeNum::enumSystem());
     }
 }

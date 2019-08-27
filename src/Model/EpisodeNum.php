@@ -24,4 +24,30 @@ class EpisodeNum extends AbstractModel {
 
     use ContentTrait;
     use SystemTrait;
+
+    /**
+     * SYSTEM "onscreen".
+     *
+     * @var string
+     */
+    const SYSTEM_ONSCREEN = "onscreen";
+
+    /**
+     * System "deaf signed".
+     *
+     * @var string
+     */
+    const SYSTEM_XMLTV_NS = "xmltv_ns";
+
+    /**
+     * Enumerate the system.
+     *
+     * @return string[] Returns the system enumeration.
+     */
+    public static function enumSystem() {
+        return [
+            self::SYSTEM_ONSCREEN,
+            self::SYSTEM_XMLTV_NS,
+        ];
+    }
 }
