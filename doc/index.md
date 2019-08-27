@@ -1,11 +1,11 @@
 DOCUMENTATION
 =============
 
-Parse an XML file:
+Read an XML file:
 
 ```php
 /** @var Tv $tv */
-$tv = XMLTV::parseXML("/path/to/file.xml");
+$tv = Reader::readXML("/path/to/file.xml");
 
 /** @var Channel $channel */
 foreach($tv->getChannels() as $channel) {

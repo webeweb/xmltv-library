@@ -9,29 +9,53 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests;
+namespace WBW\Library\XMLTV\Tests\IO;
 
+use Exception;
+use Psr\Log\LoggerInterface;
+use WBW\Library\XMLTV\IO\Reader;
 use WBW\Library\XMLTV\Model\Channel;
 use WBW\Library\XMLTV\Model\Programme;
 use WBW\Library\XMLTV\Model\Tv;
-use WBW\Library\XMLTV\XMLTV;
+use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
- * XMLTV test.
+ * Reader test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests
+ * @package WBW\Library\XMLTV\Tests\IO
  */
-class XMLTVTest extends AbstractTestCase {
+class ReaderTest extends AbstractTestCase {
 
     /**
-     * Tests tha parseXML() method.
+     * Tests the loadXML() method.
+     *
+     * @return void
+     * @throws Exception Throws an exception if an error occurs.
+     */
+    public function testLoadXML() {
+
+        // Set a Logger mock.
+        $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
+
+        // Set an URL mock.
+        $url = "https://raw.githubusercontent.com/webeweb/xmltv-library/master/tests/Fixtures/xmltv.xml";
+
+        // Set a filename mock.
+        $filename = getcwd() . "/xmltv.xml";
+
+        $res = Reader::loadXML($url, $filename, $logger);
+        $this->assertInstanceOf(Tv::class, $res);
+    }
+
+    /**
+     * Tests tha readXML() method.
      *
      * @return void
      */
-    public function testParseXML() {
+    public function testReadXML() {
 
-        $res = XMLTV::parseXML($this->filename);
+        $res = Reader::readXML($this->filename);
         $this->assertInstanceOf(Tv::class, $res);
 
         $this->assertInstanceOf(Channel::class, $res->getChannels()[0]);
