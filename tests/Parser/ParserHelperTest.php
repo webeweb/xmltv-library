@@ -12,6 +12,7 @@
 namespace WBW\Library\XMLTV\Tests\Parser;
 
 use DateTime;
+use Psr\Log\LoggerInterface;
 use WBW\Library\XMLTV\Parser\ParserHelper;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
@@ -101,5 +102,22 @@ class ParserHelperTest extends AbstractTestCase {
         $this->assertEquals("2019-07-31 18:00:00", $res->format("Y-m-d H:i:s"));
 
         $this->assertNull(ParserHelper::parseDateTime("exception"));
+    }
+
+    /**
+     * Tests the setLogger() method.
+     *
+     * @return void
+     */
+    public function testSetLogger() {
+
+        // Set a Logger mock.
+        $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
+
+        ParserHelper::setLogger($logger);
+        $this->assertSame($logger, ParserHelper::getLogger());
+
+        // Unset the mock.
+        ParserHelper::setLogger(null);
     }
 }

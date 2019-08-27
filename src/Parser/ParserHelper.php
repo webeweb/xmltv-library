@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Parser;
 use DateTime;
 use DOMNode;
 use DOMNodeList;
+use Psr\Log\LoggerInterface;
 use WBW\Library\XMLTV\Model\AbstractModel;
 
 /**
@@ -23,6 +24,13 @@ use WBW\Library\XMLTV\Model\AbstractModel;
  * @package WBW\Library\XMLTV\Parser
  */
 class ParserHelper {
+
+    /**
+     * Logger.
+     *
+     * @var LoggerInterface
+     */
+    private static $logger;
 
     /**
      * Get a DOM attribute value.
@@ -88,6 +96,15 @@ class ParserHelper {
     }
 
     /**
+     * Get the logger.
+     *
+     * @return LoggerInterface Returns the logger.
+     */
+    public static function getLogger() {
+        return static::$logger;
+    }
+
+    /**
      * Get a method name.
      *
      * @param string $leftPart The left part.
@@ -106,6 +123,33 @@ class ParserHelper {
         }
 
         return implode("", [$leftPart, $method]);
+    }
+
+    /**
+     * Log an info.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @return void
+     */
+    public static function logInfo(DOMNode $domNode) {
+
+        if (null === static::getLogger()) {
+            return;
+        }
+
+        $context = [];
+
+        /** @var DOMNode $current */
+        foreach ($domNode->attributes as $current) {
+            $context["_attributes"][] = [$current->nodeName => $current->nodeValue];
+        }
+
+        /** @var DOMNode $current */
+        foreach ($domNode->childNodes as $current) {
+            $context["_children"][] = $current->nodeName;
+        }
+
+        static::$logger->info(sprintf("Parses a DOM node with name \"%s\"", $domNode->nodeName), $context);
     }
 
     /**
@@ -158,5 +202,15 @@ class ParserHelper {
             return null;
         }
         return $result;
+    }
+
+    /**
+     * Set the logger.
+     *
+     * @param LoggerInterface|null $logger The logger.
+     * @return void
+     */
+    public static function setLogger(LoggerInterface $logger = null) {
+        static::$logger = $logger;
     }
 }
