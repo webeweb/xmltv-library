@@ -31,10 +31,29 @@ class SubtitlesTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("deaf-signed", Subtitles::TYPE_DEAF_SIGNED);
+        $this->assertEquals("onscreen", Subtitles::TYPE_ONSCREEN);
+        $this->assertEquals("teletext", Subtitles::TYPE_TELETEXT);
+
         $obj = new Subtitles();
 
         $this->assertNull($obj->getLanguage());
         $this->assertNull($obj->getType());
+    }
+
+    /**
+     * Tests the enumType() method.
+     *
+     * @return void
+     */
+    public function testEnumType() {
+
+        $res = [
+            Subtitles::TYPE_DEAF_SIGNED,
+            Subtitles::TYPE_ONSCREEN,
+            Subtitles::TYPE_TELETEXT,
+        ];
+        $this->assertEquals($res, Subtitles::enumType());
     }
 
     /**

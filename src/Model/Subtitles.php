@@ -27,6 +27,40 @@ class Subtitles extends AbstractModel {
     use TypeTrait;
 
     /**
+     * Type "deaf signed".
+     *
+     * @var string
+     */
+    const TYPE_DEAF_SIGNED = "deaf-signed";
+
+    /**
+     * Type "onscreen".
+     *
+     * @var string
+     */
+    const TYPE_ONSCREEN = "onscreen";
+
+    /**
+     * Type "teletext".
+     *
+     * @var string
+     */
+    const TYPE_TELETEXT = "teletext";
+
+    /**
+     * Enumerate the type.
+     *
+     * @return array Returns the type enumeration
+     */
+    public static function enumType() {
+        return [
+            self::TYPE_DEAF_SIGNED,
+            self::TYPE_ONSCREEN,
+            self::TYPE_TELETEXT,
+        ];
+    }
+
+    /**
      * Set the type.
      *
      * @param string $type The type.
@@ -34,7 +68,7 @@ class Subtitles extends AbstractModel {
      * @throws InvalidArgumentException Throws an invalid argument exception if the type is invalid.
      */
     public function setType($type) {
-        if (null !== $type && false === in_array($type, ["deaf-signed", "onscreen", "teletext"])) {
+        if (null !== $type && false === in_array($type, static::enumType())) {
             throw new InvalidArgumentException(sprintf("The type \"%s\" is invalid", $type));
         }
         $this->type = $type;
