@@ -31,7 +31,7 @@
         <icon src="src" width="1920" height="1080"/>
         <url>URL</url>
         <country lang="country-lang">Country</country>
-        <episode-num system="episode-num-system">Episode num</episode-num>
+        <episode-num system="onscreen">Episode num</episode-num>
         <video>
             <present>Present</present>
             <colour>Colour</colour>

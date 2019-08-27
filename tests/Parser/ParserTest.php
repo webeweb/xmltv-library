@@ -393,7 +393,7 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(EpisodeNum::class, $res);
 
         $this->assertEquals("Episode num", $res->getContent());
-        $this->assertEquals("episode-num-system", $res->getSystem());
+        $this->assertEquals("onscreen", $res->getSystem());
     }
 
     /**
