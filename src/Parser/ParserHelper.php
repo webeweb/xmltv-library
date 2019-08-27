@@ -30,7 +30,7 @@ class ParserHelper {
      *
      * @var LoggerInterface
      */
-    private static $logger;
+    protected static $logger;
 
     /**
      * Get a DOM attribute value.
@@ -47,7 +47,7 @@ class ParserHelper {
 
         $attribute = $domNode->attributes->getNamedItem($attributeName);
 
-        return $attribute->nodeValue;
+        return trim($attribute->nodeValue);
     }
 
     /**
