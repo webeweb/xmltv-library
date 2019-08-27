@@ -29,8 +29,31 @@ class StereoTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("bilingual", Stereo::CONTENT_BILINGUAL);
+        $this->assertEquals("dolby", Stereo::CONTENT_DOLBY);
+        $this->assertEquals("dolby digital", Stereo::CONTENT_DOLBY_DIGITAL);
+        $this->assertEquals("mono", Stereo::CONTENT_MONO);
+        $this->assertEquals("stereo", Stereo::CONTENT_STEREO);
+
         $obj = new Stereo();
 
         $this->assertNull($obj->getContent());
+    }
+
+    /**
+     * Tests the enumContent() method.
+     *
+     * @return void
+     */
+    public function testEnumContent() {
+
+        $res = [
+            Stereo::CONTENT_BILINGUAL,
+            Stereo::CONTENT_DOLBY,
+            Stereo::CONTENT_DOLBY_DIGITAL,
+            Stereo::CONTENT_MONO,
+            Stereo::CONTENT_STEREO,
+        ];
+        $this->assertEquals($res, Stereo::enumContent());
     }
 }

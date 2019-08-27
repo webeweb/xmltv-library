@@ -22,4 +22,54 @@ use WBW\Library\XMLTV\Traits\ContentTrait;
 class Stereo extends AbstractModel {
 
     use ContentTrait;
+
+    /**
+     * Content "bilingual".
+     *
+     * @var string
+     */
+    const CONTENT_BILINGUAL = "bilingual";
+
+    /**
+     * Content "dolby".
+     *
+     * @var string
+     */
+    const CONTENT_DOLBY = "dolby";
+
+    /**
+     * Content "dolby digital".
+     *
+     * @var string
+     */
+    const CONTENT_DOLBY_DIGITAL = "dolby digital";
+
+    /**
+     * Content "mono".
+     *
+     * @var string
+     */
+    const CONTENT_MONO = "mono";
+
+    /**
+     * Content "stereo".
+     *
+     * @var string
+     */
+    const CONTENT_STEREO = "stereo";
+
+    /**
+     * Enumerate the content.
+     *
+     * @return string[] Returns the content enumeration.
+     */
+    public static function enumContent() {
+        return [
+            self::CONTENT_BILINGUAL,
+            self::CONTENT_DOLBY,
+            self::CONTENT_DOLBY_DIGITAL,
+            self::CONTENT_MONO,
+            self::CONTENT_STEREO,
+        ];
+    }
 }
