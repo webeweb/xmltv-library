@@ -27,6 +27,20 @@ class Review extends AbstractModel {
     use TypeTrait;
 
     /**
+     * Type "text".
+     *
+     * @var string
+     */
+    const TYPE_TEXT = "text";
+
+    /**
+     * Type "url".
+     *
+     * @var string
+     */
+    const TYPE_URL = "url";
+
+    /**
      * Reviewer.
      *
      * @var string
@@ -39,6 +53,18 @@ class Review extends AbstractModel {
      * @var string
      */
     private $source;
+
+    /**
+     * Enumerate the type.
+     *
+     * @return string[] Returns the type enumeration.
+     */
+    public static function enumType() {
+        return [
+            self::TYPE_TEXT,
+            self::TYPE_URL,
+        ];
+    }
 
     /**
      * Get the reviewer.
@@ -88,7 +114,7 @@ class Review extends AbstractModel {
      * @throws InvalidArgumentException Throws an invalid argument exception if the type is invalid.
      */
     public function setType($type) {
-        if (null !== $type && false === in_array($type, ["text", "url"])) {
+        if (null !== $type && false === in_array($type, static::enumType())) {
             throw new InvalidArgumentException(sprintf("The type \"%s\" is invalid", $type));
         }
         $this->type = $type;

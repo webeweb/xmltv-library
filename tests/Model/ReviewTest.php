@@ -31,12 +31,29 @@ class ReviewTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
+        $this->assertEquals("text", Review::TYPE_TEXT);
+        $this->assertEquals("url", Review::TYPE_URL);
+
         $obj = new Review();
 
         $this->assertNull($obj->getLang());
         $this->assertNull($obj->getReviewer());
         $this->assertNull($obj->getSource());
         $this->assertNull($obj->getType());
+    }
+
+    /**
+     * Tests the enumType() method.
+     *
+     * @return void
+     */
+    public function testEnumType() {
+
+        $res = [
+            Review::TYPE_TEXT,
+            Review::TYPE_URL,
+        ];
+        $this->assertEquals($res, Review::enumType());
     }
 
     /**
