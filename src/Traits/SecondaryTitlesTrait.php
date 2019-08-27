@@ -23,6 +23,7 @@ trait SecondaryTitlesTrait {
 
     /**
      * Secondary titles.
+     *
      * @var SecondaryTitle[]
      */
     private $secondaryTitles;

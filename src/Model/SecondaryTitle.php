@@ -16,7 +16,7 @@ use WBW\Library\XMLTV\Traits\LangTrait;
 
 /**
  * Secondary title.
- * 
+ *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Model
  */
