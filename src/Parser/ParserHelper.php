@@ -126,12 +126,12 @@ class ParserHelper {
     }
 
     /**
-     * Log an info.
+     * Log.
      *
      * @param DOMNode $domNode The DOM node.
      * @return void
      */
-    public static function logInfo(DOMNode $domNode) {
+    public static function log(DOMNode $domNode) {
 
         if (null === static::getLogger()) {
             return;
@@ -149,7 +149,7 @@ class ParserHelper {
             $context["_children"][] = $current->nodeName;
         }
 
-        static::$logger->info(sprintf("Parses a DOM node with name \"%s\"", $domNode->nodeName), $context);
+        static::$logger->debug(sprintf("Parses a DOM node with name \"%s\"", $domNode->nodeName), $context);
     }
 
     /**

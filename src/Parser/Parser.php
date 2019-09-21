@@ -72,7 +72,7 @@ class Parser {
      */
     public static function parseActor(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Actor();
         $model->setContent($domNode->textContent);
@@ -89,7 +89,7 @@ class Parser {
      */
     public static function parseAdapter(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Adapter();
         $model->setContent($domNode->textContent);
@@ -105,7 +105,7 @@ class Parser {
      */
     public static function parseAspect(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Aspect();
         $model->setContent($domNode->textContent);
@@ -121,7 +121,7 @@ class Parser {
      */
     public static function parseAudio(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Audio();
 
@@ -139,7 +139,7 @@ class Parser {
      */
     public static function parseCategory(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Category();
         $model->setContent($domNode->textContent);
@@ -156,7 +156,7 @@ class Parser {
      */
     public static function parseChannel(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Channel();
         $model->setId(ParserHelper::getDOMAttributeValue($domNode, "id"));
@@ -176,7 +176,7 @@ class Parser {
      */
     public static function parseColour(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Colour();
         $model->setContent($domNode->textContent);
@@ -192,7 +192,7 @@ class Parser {
      */
     public static function parseCommentator(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Commentator();
         $model->setContent($domNode->textContent);
@@ -208,7 +208,7 @@ class Parser {
      */
     public static function parseComposer(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Composer();
         $model->setContent($domNode->textContent);
@@ -224,7 +224,7 @@ class Parser {
      */
     public static function parseCountry(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Country();
         $model->setContent($domNode->textContent);
@@ -241,7 +241,7 @@ class Parser {
      */
     public static function parseCredits(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Credits();
 
@@ -267,7 +267,7 @@ class Parser {
      */
     public static function parseDate(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Date();
         $model->setContent($domNode->textContent);
@@ -283,7 +283,7 @@ class Parser {
      */
     public static function parseDesc(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Desc();
         $model->setContent($domNode->textContent);
@@ -300,7 +300,7 @@ class Parser {
      */
     public static function parseDirector(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Director();
         $model->setContent($domNode->textContent);
@@ -316,7 +316,7 @@ class Parser {
      */
     public static function parseDisplayName(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new DisplayName();
         $model->setContent($domNode->textContent);
@@ -333,7 +333,7 @@ class Parser {
      */
     public static function parseEditor(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Editor();
         $model->setContent($domNode->textContent);
@@ -349,7 +349,7 @@ class Parser {
      */
     public static function parseEpisodeNum(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new EpisodeNum();
         $model->setContent($domNode->textContent);
@@ -366,7 +366,7 @@ class Parser {
      */
     public static function parseGuest(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Guest();
         $model->setContent($domNode->textContent);
@@ -382,7 +382,7 @@ class Parser {
      */
     public static function parseIcon(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Icon();
         $model->setHeight(ParserHelper::getDOMAttributeValue($domNode, "height"));
@@ -400,7 +400,7 @@ class Parser {
      */
     public static function parseKeyword(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Keyword();
         $model->setContent($domNode->textContent);
@@ -417,7 +417,7 @@ class Parser {
      */
     public static function parseLanguage(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Language();
         $model->setContent($domNode->textContent);
@@ -434,7 +434,7 @@ class Parser {
      */
     public static function parseLastChance(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new LastChance();
         $model->setContent($domNode->textContent);
@@ -451,7 +451,7 @@ class Parser {
      */
     public static function parseLength(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Length();
         $model->setContent($domNode->textContent);
@@ -468,7 +468,7 @@ class Parser {
      */
     public static function parseOrigLanguage(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new OrigLanguage();
         $model->setContent($domNode->textContent);
@@ -485,7 +485,7 @@ class Parser {
      */
     public static function parsePremiere(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Premiere();
         $model->setContent($domNode->textContent);
@@ -502,7 +502,7 @@ class Parser {
      */
     public static function parsePresent(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Present();
         $model->setContent($domNode->textContent);
@@ -518,7 +518,7 @@ class Parser {
      */
     public static function parsePresenter(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Presenter();
         $model->setContent($domNode->textContent);
@@ -534,7 +534,7 @@ class Parser {
      */
     public static function parsePreviouslyShown(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new PreviouslyShown();
         $model->setChannel(ParserHelper::getDOMAttributeValue($domNode, "channel"));
@@ -551,7 +551,7 @@ class Parser {
      */
     public static function parseProducer(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Producer();
         $model->setContent($domNode->textContent);
@@ -567,7 +567,7 @@ class Parser {
      */
     public static function parseProgramme(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $newNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "new");
 
@@ -617,7 +617,7 @@ class Parser {
      */
     public static function parseQuality(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Quality();
         $model->setContent($domNode->textContent);
@@ -633,7 +633,7 @@ class Parser {
      */
     public static function parseRating(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Rating();
         $model->setSystem(ParserHelper::getDOMAttributeValue($domNode, "system"));
@@ -652,7 +652,7 @@ class Parser {
      */
     public static function parseReview(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Review();
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
@@ -671,7 +671,7 @@ class Parser {
      */
     public static function parseSecondaryTitle(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new SecondaryTitle();
         $model->setContent($domNode->textContent);
@@ -688,7 +688,7 @@ class Parser {
      */
     public static function parseStarRating(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new StarRating();
 
@@ -706,7 +706,7 @@ class Parser {
      */
     public static function parseStereo(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Stereo();
         $model->setContent($domNode->textContent);
@@ -722,7 +722,7 @@ class Parser {
      */
     public static function parseSubtitles(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Subtitles();
         $model->setType(ParserHelper::getDOMAttributeValue($domNode, "type"));
@@ -740,7 +740,7 @@ class Parser {
      */
     public static function parseTitle(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Title();
         $model->setContent($domNode->textContent);
@@ -757,7 +757,7 @@ class Parser {
      */
     public static function parseTv(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Tv();
         $model->setDate(ParserHelper::getDOMAttributeValue($domNode, "date"));
@@ -783,7 +783,7 @@ class Parser {
      */
     public static function parseUrl(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Url();
         $model->setContent($domNode->textContent);
@@ -799,7 +799,7 @@ class Parser {
      */
     public static function parseValue(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Value();
         $model->setContent($domNode->textContent);
@@ -815,7 +815,7 @@ class Parser {
      */
     public static function parseVideo(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Video();
 
@@ -835,7 +835,7 @@ class Parser {
      */
     public static function parseWriter(DOMNode $domNode) {
 
-        ParserHelper::logInfo($domNode);
+        ParserHelper::log($domNode);
 
         $model = new Writer();
         $model->setContent($domNode->textContent);
