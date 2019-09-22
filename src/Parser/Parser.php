@@ -75,7 +75,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Actor();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setRole(ParserHelper::getDOMAttributeValue($domNode, "role"));
 
         return $model;
@@ -92,7 +92,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Adapter();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -108,7 +108,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Aspect();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -142,7 +142,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Category();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -179,7 +179,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Colour();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -195,7 +195,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Commentator();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -211,7 +211,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Composer();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -227,7 +227,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Country();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -270,7 +270,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Date();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -286,7 +286,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Desc();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -303,7 +303,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Director();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -319,7 +319,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new DisplayName();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -336,7 +336,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Editor();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -352,7 +352,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new EpisodeNum();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setSystem(ParserHelper::getDOMAttributeValue($domNode, "system"));
 
         return $model;
@@ -369,7 +369,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Guest();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -403,7 +403,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Keyword();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -420,7 +420,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Language();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -437,7 +437,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new LastChance();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -454,7 +454,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Length();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setUnits(ParserHelper::getDOMAttributeValue($domNode, "units"));
 
         return $model;
@@ -471,7 +471,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new OrigLanguage();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -488,7 +488,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Premiere();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -505,7 +505,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Present();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -521,7 +521,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Presenter();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -554,7 +554,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Producer();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -620,7 +620,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Quality();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -674,7 +674,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new SecondaryTitle();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -709,7 +709,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Stereo();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -743,7 +743,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Title();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
         $model->setLang(ParserHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
@@ -786,7 +786,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Url();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -802,7 +802,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Value();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
@@ -838,7 +838,7 @@ class Parser {
         ParserHelper::log($domNode);
 
         $model = new Writer();
-        $model->setContent($domNode->textContent);
+        $model->setContent(trim($domNode->textContent));
 
         return $model;
     }
