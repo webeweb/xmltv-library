@@ -49,7 +49,7 @@ class ReaderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests tha readXML() method.
+     * Tests the readXML() method.
      *
      * @return void
      */
@@ -65,5 +65,16 @@ class ReaderTest extends AbstractTestCase {
         $this->assertEquals("source-data-url", $res->getSourceDataURL());
         $this->assertEquals("source-info-name", $res->getSourceInfoName());
         $this->assertEquals("source-info-url", $res->getSourceInfoURL());
+    }
+
+    /**
+     * Tests the statXML() method.
+     *
+     * @return void
+     */
+    public function testStatXML() {
+
+        $res = Reader::statXML($this->filename);
+        $this->assertCount(85, $res);
     }
 }

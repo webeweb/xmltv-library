@@ -18,6 +18,8 @@ use Psr\Log\LoggerInterface;
 use WBW\Library\XMLTV\Model\Tv;
 use WBW\Library\XMLTV\Parser\Parser;
 use WBW\Library\XMLTV\Parser\ParserHelper;
+use WBW\Library\XMLTV\Statistic\Statistic;
+use WBW\Library\XMLTV\Statistic\Statistics;
 
 /**
  * Reader.
@@ -69,5 +71,22 @@ class Reader {
         ParserHelper::setLogger($logger);
 
         return Parser::parseTv($document->documentElement);
+    }
+
+    /**
+     * Stat an XML file.
+     *
+     * @param string $filename The filename.
+     * @return Statistic[] Returns the statistics.
+     */
+    public static function statXML($filename) {
+
+        $document = new DOMDocument();
+        $document->load($filename);
+
+        $statistics = new Statistics();
+        $statistics->parse($document->documentElement);
+
+        return $statistics->getStatistics();
     }
 }
