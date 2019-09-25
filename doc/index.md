@@ -1,6 +1,13 @@
 DOCUMENTATION
 =============
 
+Load an XML file:
+
+```php
+/** @var Tv $tv */
+$tv = Reader::loadXML("http://path/to/file.xml");
+```
+
 Read an XML file:
 
 ```php
