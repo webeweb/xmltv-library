@@ -100,20 +100,47 @@ class Statistics {
             $statistic->setAttrName($domNode->nodeName);
         }
 
-        if (null !== $domNode->attributes) {
+        $this->parseAttributes($domNode);
+        $this->parseChildNodes($domNode);
 
-            /** @var DOMNode $current */
-            foreach ($domNode->attributes as $current) {
-                $this->parse($current, $domNode);
-            }
+        return $this;
+    }
+
+    /**
+     * Parse the attributes.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @return Statistics Returns this statistics.
+     */
+    protected function parseAttributes(DOMNode $domNode) {
+
+        if (null === $domNode->attributes) {
+            return $this;
         }
 
-        if (null !== $domNode->childNodes) {
+        /** @var DOMNode $current */
+        foreach ($domNode->attributes as $current) {
+            $this->parse($current, $domNode);
+        }
 
-            /** @var DOMNode $current */
-            foreach ($domNode->childNodes as $current) {
-                $this->parse($current);
-            }
+        return $this;
+    }
+
+    /**
+     * Parse the attributes.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @return Statistics Returns this statistics.
+     */
+    protected function parseChildNodes(DOMNode $domNode) {
+
+        if (null === $domNode->childNodes) {
+            return $this;
+        }
+
+        /** @var DOMNode $current */
+        foreach ($domNode->childNodes as $current) {
+            $this->parse($current);
         }
 
         return $this;
