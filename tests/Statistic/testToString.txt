@@ -19,10 +19,10 @@
  icon               height                     4        4        4        4.00
  url                                           2        3        3        3.00
  programme                                     1      776      776      776.00
- programme          start                      1       19       19       19.00
- programme          stop                       1       19       19       19.00
- programme          pdc-start                  1       19       19       19.00
- programme          vps-start                  1       19       19       19.00
+ programme          start                      1       20       20       20.00
+ programme          stop                       1       20       20       20.00
+ programme          pdc-start                  1       20       20       20.00
+ programme          vps-start                  1       20       20       20.00
  programme          showview                   1        8        8        8.00
  programme          videoplus                  1        9        9        9.00
  programme          channel                    1       10       10       10.00

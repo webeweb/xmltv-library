@@ -656,7 +656,7 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(Length::class, $res->getLength());
         $this->assertInstanceOf(OrigLanguage::class, $res->getOrigLanguage());
         $this->assertTrue($res->getNew());
-        $this->assertEquals("20190730200000 +100", $res->getPdcStart());
+        $this->assertEquals("20190730200000 +0100", $res->getPdcStart());
         $this->assertInstanceOf(Premiere::class, $res->getPremiere());
         $this->assertInstanceOf(PreviouslyShown::class, $res->getPreviouslyShown());
         $this->assertInstanceOf(Rating::class, $res->getRatings()[0]);
@@ -664,14 +664,14 @@ class ParserTest extends AbstractTestCase {
         $this->assertInstanceOf(SecondaryTitle::class, $res->getSecondaryTitles()[0]);
         $this->assertInstanceOf(StarRating::class, $res->getStarRatings()[0]);
         $this->assertEquals("showview", $res->getShowView());
-        $this->assertEquals("20190730200000 +200", $res->getStart());
-        $this->assertEquals("20190730220000 +200", $res->getStop());
+        $this->assertEquals("20190730200000 +0200", $res->getStart());
+        $this->assertEquals("20190730220000 +0200", $res->getStop());
         $this->assertInstanceOf(Subtitles::class, $res->getSubtitles()[0]);
         $this->assertInstanceOf(Title::class, $res->getTitles()[0]);
         $this->assertInstanceOf(Url::class, $res->getUrls()[0]);
         $this->assertInstanceOf(Video::class, $res->getVideo());
         $this->assertEquals("videoplus", $res->getVideoPlus());
-        $this->assertEquals("20190730200000 -100", $res->getVpsStart());
+        $this->assertEquals("20190730200000 -0100", $res->getVpsStart());
     }
 
     /**

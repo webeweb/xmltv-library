@@ -6,7 +6,7 @@
         <icon src="src" width="1920" height="1080"/>
         <url>URL</url>
     </channel>
-    <programme start="20190730200000 +200" stop="20190730220000 +200" pdc-start="20190730200000 +100" vps-start="20190730200000 -100" showview="showview" videoplus="videoplus" channel="channel-id" clumpidx="clumpidx">
+    <programme start="20190730200000 +0200" stop="20190730220000 +0200" pdc-start="20190730200000 +0100" vps-start="20190730200000 -0100" showview="showview" videoplus="videoplus" channel="channel-id" clumpidx="clumpidx">
         <title lang="title-lang">Title</title>
         <sub-title lang="secondary-title-lang">Secondary title</sub-title>
         <desc lang="desc-lang">Desc</desc>
