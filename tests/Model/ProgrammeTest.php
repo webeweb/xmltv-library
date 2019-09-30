@@ -60,6 +60,7 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getPremiere());
         $this->assertNull($obj->getPreviouslyShown());
         $this->assertNull($obj->getPdcStart());
+        $this->assertNull($obj->getPdcStartDateTime());
         $this->assertEquals([], $obj->getRatings());
         $this->assertEquals([], $obj->getReviews());
         $this->assertEquals([], $obj->getSecondaryTitles());
@@ -75,6 +76,7 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getVideo());
         $this->assertNull($obj->getVideoPlus());
         $this->assertNull($obj->getVpsStart());
+        $this->assertNull($obj->getVpsStartDateTime());
     }
 
     /**
@@ -208,8 +210,10 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj = new Programme();
 
-        $obj->setPdcStart("pdcStart");
-        $this->assertEquals("pdcStart", $obj->getPdcStart());
+        $obj->setPdcStart("20190930200000 +0200");
+        $this->assertEquals("20190930200000 +0200", $obj->getPdcStart());
+
+        $this->assertInstanceOf(DateTime::class, $obj->getPdcStartDateTime());
     }
 
     /**
@@ -258,6 +262,21 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the setStart() method.
+     *
+     * @return void
+     */
+    public function testSetStart() {
+
+        $obj = new Programme();
+
+        $obj->setStart("20190730200000 +0200");
+        $this->assertEquals("20190730200000 +0200", $obj->getStart());
+
+        $this->assertInstanceOf(DateTime::class, $obj->getStartDateTime());
+    }
+
+    /**
      * Tests the setStop() method.
      *
      * @return void
@@ -266,8 +285,8 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj = new Programme();
 
-        $obj->setStop("20190730200000 +0200");
-        $this->assertEquals("20190730200000 +0200", $obj->getStop());
+        $obj->setStop("20190730220000 +0200");
+        $this->assertEquals("20190730220000 +0200", $obj->getStop());
 
         $this->assertInstanceOf(DateTime::class, $obj->getStopDateTime());
     }
@@ -310,7 +329,9 @@ class ProgrammeTest extends AbstractTestCase {
 
         $obj = new Programme();
 
-        $obj->setVpsStart("vpsStart");
-        $this->assertEquals("vpsStart", $obj->getVpsStart());
+        $obj->setVpsStart("20190930200000 +0200");
+        $this->assertEquals("20190930200000 +0200", $obj->getVpsStart());
+
+        $this->assertInstanceOf(DateTime::class, $obj->getVpsStartDateTime());
     }
 }

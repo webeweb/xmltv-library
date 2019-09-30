@@ -267,6 +267,15 @@ class Programme extends AbstractModel {
     }
 
     /**
+     * Get the PDC start into DateTime.
+     *
+     * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
+     */
+    public function getPdcStartDateTime() {
+        return ParserHelper::parseDateTime($this->pdcStart);
+    }
+
+    /**
      * Get the premiere.
      *
      * @return Premiere Returns the premiere.
@@ -336,6 +345,15 @@ class Programme extends AbstractModel {
      */
     public function getVpsStart() {
         return $this->vpsStart;
+    }
+
+    /**
+     * Get the VPS start into DateTime.
+     *
+     * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
+     */
+    public function getVpsStartDateTime() {
+        return ParserHelper::parseDateTime($this->vpsStart);
     }
 
     /**
