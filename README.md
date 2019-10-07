@@ -1,5 +1,5 @@
 xmltv-library
-==============
+=============
 
 [![Build Status](https://img.shields.io/travis/com/webeweb/xmltv-library/master.svg?style=flat-square)](https://travis-ci.com/webeweb/xmltv-library)
 [![Coverage Status](https://img.shields.io/coveralls/webeweb/xmltv-library/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/xmltv-library?branch=master)
