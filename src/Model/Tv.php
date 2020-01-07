@@ -15,8 +15,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\ChannelsTrait;
-use WBW\Library\XMLTV\Traits\ProgrammesTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayChannelsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayProgrammesTrait;
 
 /**
  * TV.
@@ -26,8 +26,8 @@ use WBW\Library\XMLTV\Traits\ProgrammesTrait;
  */
 class Tv extends AbstractModel {
 
-    use ChannelsTrait;
-    use ProgrammesTrait;
+    use ArrayChannelsTrait;
+    use ArrayProgrammesTrait;
 
     /**
      * Date.

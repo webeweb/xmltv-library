@@ -12,8 +12,8 @@
 namespace WBW\Library\XMLTV\Model;
 
 use InvalidArgumentException;
-use WBW\Library\XMLTV\Traits\LanguageTrait;
-use WBW\Library\XMLTV\Traits\TypeTrait;
+use WBW\Library\Core\Model\Attribute\StringTypeTrait;
+use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
 
 /**
  * Subtitles.
@@ -24,7 +24,7 @@ use WBW\Library\XMLTV\Traits\TypeTrait;
 class Subtitles extends AbstractModel {
 
     use LanguageTrait;
-    use TypeTrait;
+    use StringTypeTrait;
 
     /**
      * Type "deaf signed".

@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\ContentTrait;
+use WBW\Library\Core\Model\Attribute\StringContentTrait;
 
 /**
  * Stereo.
@@ -21,7 +21,7 @@ use WBW\Library\XMLTV\Traits\ContentTrait;
  */
 class Stereo extends AbstractModel {
 
-    use ContentTrait;
+    use StringContentTrait;
 
     /**
      * Content "bilingual".

@@ -12,7 +12,7 @@
 namespace WBW\Library\XMLTV\Model;
 
 use InvalidArgumentException;
-use WBW\Library\XMLTV\Traits\ContentTrait;
+use WBW\Library\Core\Model\Attribute\StringContentTrait;
 
 /**
  * Length.
@@ -22,7 +22,7 @@ use WBW\Library\XMLTV\Traits\ContentTrait;
  */
 class Length extends AbstractModel {
 
-    use ContentTrait;
+    use StringContentTrait;
 
     /**
      * Units "hours".

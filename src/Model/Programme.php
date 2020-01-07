@@ -11,23 +11,23 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Model\Attribute\ArrayCategoriesTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayCountriesTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayDescsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayEpisodeNumsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayKeywordsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayRatingsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayReviewsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArraySecondaryTitlesTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayStarRatingsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArraySubtitlesTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayTitlesTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayUrlsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ChannelTrait;
+use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
+use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
 use WBW\Library\XMLTV\Parser\ParserHelper;
-use WBW\Library\XMLTV\Traits\CategoriesTrait;
-use WBW\Library\XMLTV\Traits\ChannelTrait;
-use WBW\Library\XMLTV\Traits\CountriesTrait;
-use WBW\Library\XMLTV\Traits\DescsTrait;
-use WBW\Library\XMLTV\Traits\EpisodeNumsTrait;
-use WBW\Library\XMLTV\Traits\IconsTrait;
-use WBW\Library\XMLTV\Traits\KeywordsTrait;
-use WBW\Library\XMLTV\Traits\LanguageTrait;
-use WBW\Library\XMLTV\Traits\RatingsTrait;
-use WBW\Library\XMLTV\Traits\ReviewsTrait;
-use WBW\Library\XMLTV\Traits\SecondaryTitlesTrait;
-use WBW\Library\XMLTV\Traits\StarRatingsTrait;
-use WBW\Library\XMLTV\Traits\StartTrait;
-use WBW\Library\XMLTV\Traits\SubtitlesTrait;
-use WBW\Library\XMLTV\Traits\TitlesTrait;
-use WBW\Library\XMLTV\Traits\UrlsTrait;
 
 /**
  * Programme.
@@ -37,22 +37,22 @@ use WBW\Library\XMLTV\Traits\UrlsTrait;
  */
 class Programme extends AbstractModel {
 
-    use CategoriesTrait;
+    use ArrayCategoriesTrait;
+    use ArrayCountriesTrait;
+    use ArrayDescsTrait;
+    use ArrayEpisodeNumsTrait;
+    use ArrayIconsTrait;
+    use ArrayKeywordsTrait;
+    use ArrayRatingsTrait;
+    use ArrayReviewsTrait;
+    use ArrayStarRatingsTrait;
+    use ArraySecondaryTitlesTrait;
+    use ArraySubtitlesTrait;
+    use ArrayTitlesTrait;
+    use ArrayUrlsTrait;
     use ChannelTrait;
-    use CountriesTrait;
-    use DescsTrait;
-    use EpisodeNumsTrait;
-    use IconsTrait;
-    use KeywordsTrait;
     use LanguageTrait;
-    use RatingsTrait;
-    use ReviewsTrait;
-    use StarRatingsTrait;
-    use SecondaryTitlesTrait;
-    use StartTrait;
-    use SubtitlesTrait;
-    use TitlesTrait;
-    use UrlsTrait;
+    use StringStartTrait;
 
     /**
      * Audio.

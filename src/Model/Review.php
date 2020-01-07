@@ -12,8 +12,8 @@
 namespace WBW\Library\XMLTV\Model;
 
 use InvalidArgumentException;
-use WBW\Library\XMLTV\Traits\LangTrait;
-use WBW\Library\XMLTV\Traits\TypeTrait;
+use WBW\Library\Core\Model\Attribute\StringLangTrait;
+use WBW\Library\Core\Model\Attribute\StringTypeTrait;
 
 /**
  * Review.
@@ -23,8 +23,8 @@ use WBW\Library\XMLTV\Traits\TypeTrait;
  */
 class Review extends AbstractModel {
 
-    use LangTrait;
-    use TypeTrait;
+    use StringLangTrait;
+    use StringTypeTrait;
 
     /**
      * Type "text".

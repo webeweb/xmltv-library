@@ -11,16 +11,16 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\ActorsTrait;
-use WBW\Library\XMLTV\Traits\AdaptersTrait;
-use WBW\Library\XMLTV\Traits\CommentatorsTrait;
-use WBW\Library\XMLTV\Traits\ComposersTrait;
-use WBW\Library\XMLTV\Traits\DirectorsTrait;
-use WBW\Library\XMLTV\Traits\EditorsTrait;
-use WBW\Library\XMLTV\Traits\GuestsTrait;
-use WBW\Library\XMLTV\Traits\PresentersTrait;
-use WBW\Library\XMLTV\Traits\ProducersTrait;
-use WBW\Library\XMLTV\Traits\WritersTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayActorsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayAdaptersTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayCommentatorsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayComposersTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayDirectorsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayEditorsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayGuestsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayPresentersTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayProducersTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayWritersTrait;
 
 /**
  * Credits.
@@ -30,16 +30,16 @@ use WBW\Library\XMLTV\Traits\WritersTrait;
  */
 class Credits extends AbstractModel {
 
-    use ActorsTrait;
-    use AdaptersTrait;
-    use CommentatorsTrait;
-    use ComposersTrait;
-    use DirectorsTrait;
-    use EditorsTrait;
-    use GuestsTrait;
-    use PresentersTrait;
-    use ProducersTrait;
-    use WritersTrait;
+    use ArrayActorsTrait;
+    use ArrayAdaptersTrait;
+    use ArrayCommentatorsTrait;
+    use ArrayComposersTrait;
+    use ArrayDirectorsTrait;
+    use ArrayEditorsTrait;
+    use ArrayGuestsTrait;
+    use ArrayPresentersTrait;
+    use ArrayProducersTrait;
+    use ArrayWritersTrait;
 
     /**
      * Constructor.

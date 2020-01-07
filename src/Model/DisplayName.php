@@ -11,8 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\ContentTrait;
-use WBW\Library\XMLTV\Traits\LangTrait;
+use WBW\Library\Core\Model\Attribute\StringContentTrait;
+use WBW\Library\Core\Model\Attribute\StringLangTrait;
 
 /**
  * Display name.
@@ -22,6 +22,6 @@ use WBW\Library\XMLTV\Traits\LangTrait;
  */
 class DisplayName extends AbstractModel {
 
-    use ContentTrait;
-    use LangTrait;
+    use StringContentTrait;
+    use StringLangTrait;
 }

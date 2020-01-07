@@ -11,8 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\IconsTrait;
-use WBW\Library\XMLTV\Traits\ValueTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ValueTrait;
 
 /**
  * Star rating.
@@ -22,7 +22,7 @@ use WBW\Library\XMLTV\Traits\ValueTrait;
  */
 class StarRating extends AbstractModel {
 
-    use IconsTrait;
+    use ArrayIconsTrait;
     use ValueTrait;
 
     /**

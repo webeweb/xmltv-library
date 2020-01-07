@@ -11,8 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\ContentTrait;
-use WBW\Library\XMLTV\Traits\SystemTrait;
+use WBW\Library\Core\Model\Attribute\StringContentTrait;
+use WBW\Library\XMLTV\Model\Attribute\StringSystemTrait;
 
 /**
  * Episode number.
@@ -22,8 +22,8 @@ use WBW\Library\XMLTV\Traits\SystemTrait;
  */
 class EpisodeNum extends AbstractModel {
 
-    use ContentTrait;
-    use SystemTrait;
+    use StringContentTrait;
+    use StringSystemTrait;
 
     /**
      * SYSTEM "onscreen".

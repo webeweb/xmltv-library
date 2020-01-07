@@ -11,10 +11,10 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\DisplayNamesTrait;
-use WBW\Library\XMLTV\Traits\IconsTrait;
-use WBW\Library\XMLTV\Traits\ProgrammesTrait;
-use WBW\Library\XMLTV\Traits\UrlsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayDisplayNamesTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayProgrammesTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayUrlsTrait;
 
 /**
  * Channel.
@@ -24,10 +24,10 @@ use WBW\Library\XMLTV\Traits\UrlsTrait;
  */
 class Channel extends AbstractModel {
 
-    use DisplayNamesTrait;
-    use IconsTrait;
-    use ProgrammesTrait;
-    use UrlsTrait;
+    use ArrayDisplayNamesTrait;
+    use ArrayIconsTrait;
+    use ArrayProgrammesTrait;
+    use ArrayUrlsTrait;
 
     /**
      * Id.

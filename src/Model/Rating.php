@@ -11,9 +11,9 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\IconsTrait;
-use WBW\Library\XMLTV\Traits\SystemTrait;
-use WBW\Library\XMLTV\Traits\ValueTrait;
+use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
+use WBW\Library\XMLTV\Model\Attribute\StringSystemTrait;
+use WBW\Library\XMLTV\Model\Attribute\ValueTrait;
 
 /**
  * Rating.
@@ -23,8 +23,8 @@ use WBW\Library\XMLTV\Traits\ValueTrait;
  */
 class Rating extends AbstractModel {
 
-    use IconsTrait;
-    use SystemTrait;
+    use ArrayIconsTrait;
+    use StringSystemTrait;
     use ValueTrait;
 
     /**

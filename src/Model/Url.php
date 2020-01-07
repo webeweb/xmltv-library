@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\ContentTrait;
+use WBW\Library\Core\Model\Attribute\StringContentTrait;
 
 /**
  * URL.
@@ -21,5 +21,5 @@ use WBW\Library\XMLTV\Traits\ContentTrait;
  */
 class Url extends AbstractModel {
 
-    use ContentTrait;
+    use StringContentTrait;
 }

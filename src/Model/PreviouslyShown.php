@@ -11,8 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\ChannelTrait;
-use WBW\Library\XMLTV\Traits\StartTrait;
+use WBW\Library\XMLTV\Model\Attribute\ChannelTrait;
+use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
 
 /**
  * Previously shown.
@@ -23,5 +23,5 @@ use WBW\Library\XMLTV\Traits\StartTrait;
 class PreviouslyShown extends AbstractModel {
 
     use ChannelTrait;
-    use StartTrait;
+    use StringStartTrait;
 }

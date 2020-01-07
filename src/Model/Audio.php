@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\PresentTrait;
+use WBW\Library\XMLTV\Model\Attribute\PresentTrait;
 
 /**
  * Audio.

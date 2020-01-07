@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Traits\ContentTrait;
+use WBW\Library\Core\Model\Attribute\StringContentTrait;
 
 /**
  * Abstract credit.
@@ -22,5 +22,5 @@ use WBW\Library\XMLTV\Traits\ContentTrait;
  */
 abstract class AbstractCredit extends AbstractModel {
 
-    use ContentTrait;
+    use StringContentTrait;
 }

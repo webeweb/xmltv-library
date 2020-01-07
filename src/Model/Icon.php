@@ -11,6 +11,9 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\Core\Model\Attribute\IntegerHeightTrait;
+use WBW\Library\Core\Model\Attribute\IntegerWidthTrait;
+
 /**
  * Icon.
  *
@@ -19,12 +22,8 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Icon extends AbstractModel {
 
-    /**
-     * Height.
-     *
-     * @var int
-     */
-    private $height;
+    use IntegerHeightTrait;
+    use IntegerWidthTrait;
 
     /**
      * Source.
@@ -32,22 +31,6 @@ class Icon extends AbstractModel {
      * @var string
      */
     private $src;
-
-    /**
-     * Width.
-     *
-     * @var int
-     */
-    private $width;
-
-    /**
-     * Get the height.
-     *
-     * @return int Returns the height.
-     */
-    public function getHeight() {
-        return $this->height;
-    }
 
     /**
      * Get the source.
@@ -59,26 +42,6 @@ class Icon extends AbstractModel {
     }
 
     /**
-     * Get the width.
-     *
-     * @return int Returns the width.
-     */
-    public function getWidth() {
-        return $this->width;
-    }
-
-    /**
-     * Set the height.
-     *
-     * @param int $height The height.
-     * @return Icon Returns this icon.
-     */
-    public function setHeight($height) {
-        $this->height = $height;
-        return $this;
-    }
-
-    /**
      * Set the source.
      *
      * @param string $src The source.
@@ -86,17 +49,6 @@ class Icon extends AbstractModel {
      */
     public function setSrc($src) {
         $this->src = $src;
-        return $this;
-    }
-
-    /**
-     * Set the width.
-     *
-     * @param int $width The width.
-     * @return Icon Returns this icon.
-     */
-    public function setWidth($width) {
-        $this->width = $width;
         return $this;
     }
 }
