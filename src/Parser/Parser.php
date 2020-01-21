@@ -569,7 +569,7 @@ class Parser {
 
         ParserHelper::log($domNode);
 
-        $newNode = ParserHelper::getDOMNodeByName($domNode->childNodes, "new");
+        $newNode = ParserHelper::getDOMNodeByName( "new", $domNode->childNodes);
 
         $model = new Programme();
         $model->setChannel(ParserHelper::getDOMAttributeValue($domNode, "channel"));

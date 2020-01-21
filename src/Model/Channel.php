@@ -40,6 +40,8 @@ class Channel extends AbstractModel {
      * Constructor.
      */
     public function __construct() {
+        parent::__construct();
+
         $this->setDisplayNames([]);
         $this->setIcons([]);
         $this->setProgrammes([]);

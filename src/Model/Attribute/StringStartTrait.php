@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model\Attribute;
 
+use DateTime;
 use WBW\Library\XMLTV\Parser\ParserHelper;
 
 /**

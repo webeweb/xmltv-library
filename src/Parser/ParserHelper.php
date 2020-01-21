@@ -53,13 +53,13 @@ class ParserHelper {
     /**
      * Get a DOM node by name.
      *
-     * @param DOMNodeList|null $domNodeList The DOM node list.
      * @param string $nodeName The node name.
+     * @param DOMNodeList|null $domNodeList The DOM node list.
      * @return DOMNode|null Returns the DOM node in case of success, null otherwise.
      */
-    public static function getDOMNodeByName(DOMNodeList $domNodeList = null, $nodeName) {
+    public static function getDOMNodeByName($nodeName, DOMNodeList $domNodeList = null) {
 
-        $domNodes = static::getDOMNodesByName($domNodeList, $nodeName);
+        $domNodes = static::getDOMNodesByName($nodeName, $domNodeList);
         if (1 !== count($domNodes)) {
             return null;
         }
@@ -70,11 +70,11 @@ class ParserHelper {
     /**
      * Get the DOM nodes by name.
      *
-     * @param DOMNodeList|null $domNodeList The DOM node list.
      * @param string $nodeName The node name.
+     * @param DOMNodeList|null $domNodeList The DOM node list.
      * @return DOMNode[] Returns the DOM nodes.
      */
-    public static function getDOMNodesByName(DOMNodeList $domNodeList = null, $nodeName) {
+    public static function getDOMNodesByName($nodeName, DOMNodeList $domNodeList = null) {
 
         if (null === $domNodeList) {
             return [];
@@ -165,7 +165,7 @@ class ParserHelper {
         $parser = static::getMethodName("parse", $nodeName);
         $setter = static::getMethodName("set", $nodeName);
 
-        $node = static::getDOMNodeByName($domNode->childNodes, $nodeName);
+        $node = static::getDOMNodeByName($nodeName, $domNode->childNodes);
         if (null !== $node) {
             $model->$setter(call_user_func_array(__NAMESPACE__ . "\\Parser::" . $parser, [$node]));
         }
@@ -184,7 +184,7 @@ class ParserHelper {
         $parser = static::getMethodName("parse", $nodeName);
         $setter = static::getMethodName("add", $nodeName);
 
-        $nodes = static::getDOMNodesByName($domNode->childNodes, $nodeName);
+        $nodes = static::getDOMNodesByName($nodeName, $domNode->childNodes);
         foreach ($nodes as $current) {
             $model->$setter(call_user_func_array(__NAMESPACE__ . "\\Parser::" . $parser, [$current]));
         }

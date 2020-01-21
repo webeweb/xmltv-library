@@ -42,19 +42,19 @@ class Statistics {
      */
     public function __toString() {
 
-        $strings = [
+        $output = [
             Statistic::HEADER_FORMAT,
             Statistic::TITLES_FORMAT,
             Statistic::HEADER_FORMAT,
         ];
 
         foreach ($this->getStatistics() as $current) {
-            $strings[] = $current->__toString();
+            $output[] = $current->__toString();
         }
 
-        $strings[] = Statistic::HEADER_FORMAT;
+        $output[] = Statistic::HEADER_FORMAT;
 
-        return implode("\n", $strings);
+        return implode("\n", $output);
     }
 
     /**

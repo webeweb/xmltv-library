@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use DateTime;
 use WBW\Library\XMLTV\Model\Attribute\ArrayCategoriesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayCountriesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayDescsTrait;
@@ -170,6 +171,8 @@ class Programme extends AbstractModel {
      * Constructor.
      */
     public function __construct() {
+        parent::__construct();
+
         $this->setCategories([]);
         $this->setCountries([]);
         $this->setDescs([]);

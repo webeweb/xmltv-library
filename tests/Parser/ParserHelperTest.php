@@ -48,11 +48,11 @@ class ParserHelperTest extends AbstractTestCase {
 
         $tvNode = $this->document->documentElement;
 
-        $res = ParserHelper::getDOMNodeByName($tvNode->childNodes, "channel");
+        $res = ParserHelper::getDOMNodeByName("channel", $tvNode->childNodes);
         $this->assertNotNull($res);
         $this->assertEquals("channel", $res->nodeName);
 
-        $this->assertNull(ParserHelper::getDOMNodeByName($tvNode->childNodes, "name"));;
+        $this->assertNull(ParserHelper::getDOMNodeByName("name", $tvNode->childNodes));
     }
 
     /**
@@ -64,7 +64,7 @@ class ParserHelperTest extends AbstractTestCase {
 
         $tvNode = $this->document->documentElement;
 
-        $res = ParserHelper::getDOMNodesByName($tvNode->childNodes, "channel");
+        $res = ParserHelper::getDOMNodesByName("channel", $tvNode->childNodes);
         $this->assertCount(1, $res);
         $this->assertEquals("channel", $res[0]->nodeName);
     }
@@ -76,7 +76,7 @@ class ParserHelperTest extends AbstractTestCase {
      */
     public function testGetDOMNodesByNameWithNull() {
 
-        $this->assertEquals([], ParserHelper::getDOMNodesByName(null, "channel"));
+        $this->assertEquals([], ParserHelper::getDOMNodesByName("channel", null));
     }
 
     /**

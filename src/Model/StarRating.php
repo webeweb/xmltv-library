@@ -29,6 +29,8 @@ class StarRating extends AbstractModel {
      * Constructor.
      */
     public function __construct() {
+        parent::__construct();
+
         $this->setIcons([]);
     }
 }
