@@ -12,15 +12,15 @@
 namespace WBW\Library\XMLTV\Tests\Model\Attribute;
 
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestChannelTrait;
+use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestStringChannelTrait;
 
 /**
- * Channel trait test.
+ * String channel trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model\Attribute
  */
-class ChannelTraitTest extends AbstractTestCase {
+class StringChannelTraitTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
@@ -29,7 +29,7 @@ class ChannelTraitTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new TestChannelTrait();
+        $obj = new TestStringChannelTrait();
 
         $this->assertNull($obj->getChannel());
     }
@@ -41,7 +41,7 @@ class ChannelTraitTest extends AbstractTestCase {
      */
     public function testSetChannel() {
 
-        $obj = new TestChannelTrait();
+        $obj = new TestStringChannelTrait();
 
         $obj->setChannel("channel");
         $this->assertEquals("channel", $obj->getChannel());

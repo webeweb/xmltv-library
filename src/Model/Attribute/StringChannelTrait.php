@@ -12,12 +12,12 @@
 namespace WBW\Library\XMLTV\Model\Attribute;
 
 /**
- * Channel trait.
+ * String channel trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Model\Attribute
  */
-trait ChannelTrait {
+trait StringChannelTrait {
 
     /**
      * Channel.

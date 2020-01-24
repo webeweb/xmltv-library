@@ -11,15 +11,15 @@
 
 namespace WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute;
 
-use WBW\Library\XMLTV\Model\Attribute\ChannelTrait;
+use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 
 /**
- * Test channel trait.
+ * Test string channel trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute
  */
-class TestChannelTrait {
+class TestStringChannelTrait {
 
-    use ChannelTrait;
+    use StringChannelTrait;
 }

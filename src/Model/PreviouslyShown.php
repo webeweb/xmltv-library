@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Model\Attribute\ChannelTrait;
+use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
 
 /**
@@ -22,7 +22,7 @@ use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
  */
 class PreviouslyShown extends AbstractModel {
 
-    use ChannelTrait;
+    use StringChannelTrait;
     use StringStartTrait;
 
     /**
@@ -30,7 +30,7 @@ class PreviouslyShown extends AbstractModel {
      */
     public function jsonSerialize() {
         return [
-            "channel" => static::serializeModel($this->getChannel()),
+            "channel" => $this->getChannel(),
             "start"   => $this->getStart(),
         ];
     }

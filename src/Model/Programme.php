@@ -25,7 +25,7 @@ use WBW\Library\XMLTV\Model\Attribute\ArrayStarRatingsTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArraySubtitlesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayTitlesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayUrlsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ChannelTrait;
+use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
 use WBW\Library\XMLTV\Parser\ParserHelper;
@@ -51,8 +51,8 @@ class Programme extends AbstractModel {
     use ArraySubtitlesTrait;
     use ArrayTitlesTrait;
     use ArrayUrlsTrait;
-    use ChannelTrait;
     use LanguageTrait;
+    use StringChannelTrait;
     use StringStartTrait;
 
     /**
@@ -366,7 +366,7 @@ class Programme extends AbstractModel {
         return [
             "audio"           => static::serializeModel($this->getAudio()),
             "categories"      => static::serializeArray($this->getCategories()),
-            "channel"         => static::serializeModel($this->getChannel()),
+            "channel"         => $this->getChannel(),
             "clumpIdx"        => $this->getClumpIdx(),
             "countries"       => static::serializeArray($this->getCountries()),
             "credits"         => static::serializeModel($this->getCredits()),
