@@ -22,4 +22,13 @@ use WBW\Library\Core\Model\Attribute\StringContentTrait;
 class Present extends AbstractModel {
 
     use StringContentTrait;
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "content" => $this->getContent(),
+        ];
+    }
 }

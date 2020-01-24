@@ -72,4 +72,13 @@ class Stereo extends AbstractModel {
             self::CONTENT_STEREO,
         ];
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "content" => $this->getContent(),
+        ];
+    }
 }

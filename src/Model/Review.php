@@ -85,6 +85,18 @@ class Review extends AbstractModel {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "lang"     => $this->getLang(),
+            "reviewer" => $this->getReviewer(),
+            "source"   => $this->getSource(),
+            "type"     => $this->getType(),
+        ];
+    }
+
+    /**
      * Set the reviewer.
      *
      * @param string $reviewer The reviewer.

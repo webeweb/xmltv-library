@@ -24,4 +24,14 @@ class PreviouslyShown extends AbstractModel {
 
     use ChannelTrait;
     use StringStartTrait;
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "channel" => static::serializeModel($this->getChannel()),
+            "start"   => $this->getStart(),
+        ];
+    }
 }

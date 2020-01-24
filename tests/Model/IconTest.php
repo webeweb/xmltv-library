@@ -37,6 +37,23 @@ class IconTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Icon();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(3, $res);
+
+        $this->assertArrayHasKey("height", $res);
+        $this->assertArrayHasKey("src", $res);
+        $this->assertArrayHasKey("width", $res);
+    }
+
+    /**
      * Tests the setHeight() method.
      *
      * @return void

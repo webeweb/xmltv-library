@@ -57,6 +57,22 @@ class SubtitlesTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Subtitles();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(2, $res);
+
+        $this->assertArrayHasKey("language", $res);
+        $this->assertArrayHasKey("type", $res);
+    }
+
+    /**
      * Tests the setType() method.
      *
      * @return void

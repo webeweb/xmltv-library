@@ -39,6 +39,24 @@ class ChannelTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Channel();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(4, $res);
+
+        $this->assertArrayHasKey("displayNames", $res);
+        $this->assertArrayHasKey("icons", $res);
+        $this->assertArrayHasKey("id", $res);
+        $this->assertArrayHasKey("urls", $res);
+    }
+
+    /**
      * Tests the setId() method.
      *
      * @return void

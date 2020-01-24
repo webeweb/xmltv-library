@@ -48,14 +48,14 @@ class Tv extends AbstractModel {
      *
      * @var string
      */
-    private $generatorInfoURL;
+    private $generatorInfoUrl;
 
     /**
      * Source data URL.
      *
      * @var string
      */
-    private $sourceDataURL;
+    private $sourceDataUrl;
 
     /**
      * Source info name.
@@ -69,7 +69,7 @@ class Tv extends AbstractModel {
      *
      * @var string
      */
-    private $sourceInfoURL;
+    private $sourceInfoUrl;
 
     /**
      * Constructor.
@@ -103,8 +103,8 @@ class Tv extends AbstractModel {
      *
      * @return string Returns the generator info URL.
      */
-    public function getGeneratorInfoURL() {
-        return $this->generatorInfoURL;
+    public function getGeneratorInfoUrl() {
+        return $this->generatorInfoUrl;
     }
 
     /**
@@ -112,8 +112,8 @@ class Tv extends AbstractModel {
      *
      * @return string Returns the source data URL.
      */
-    public function getSourceDataURL() {
-        return $this->sourceDataURL;
+    public function getSourceDataUrl() {
+        return $this->sourceDataUrl;
     }
 
     /**
@@ -130,8 +130,8 @@ class Tv extends AbstractModel {
      *
      * @return string Returns the source info URL.
      */
-    public function getSourceInfoURL() {
-        return $this->sourceInfoURL;
+    public function getSourceInfoUrl() {
+        return $this->sourceInfoUrl;
     }
 
     /**
@@ -154,6 +154,22 @@ class Tv extends AbstractModel {
         }
 
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "channels"          => static::serializeArray($this->getChannels()),
+            "date"              => $this->getDate(),
+            "generatorInfoName" => $this->getGeneratorInfoName(),
+            "generatorInfoUrl"  => $this->getGeneratorInfoUrl(),
+            "sourceDataUrl"     => $this->getSourceDataUrl(),
+            "sourceInfoName"    => $this->getSourceInfoName(),
+            "sourceInfoUrl"     => $this->getSourceInfoUrl(),
+            "programmes"        => static::serializeArray($this->getProgrammes()),
+        ];
     }
 
     /**
@@ -181,22 +197,22 @@ class Tv extends AbstractModel {
     /**
      * Set the generator info URL.
      *
-     * @param string $generatorInfoURL The generator info URL.
+     * @param string $generatorInfoUrl The generator info URL.
      * @return Tv Returns this TV.
      */
-    public function setGeneratorInfoURL($generatorInfoURL) {
-        $this->generatorInfoURL = $generatorInfoURL;
+    public function setGeneratorInfoUrl($generatorInfoUrl) {
+        $this->generatorInfoUrl = $generatorInfoUrl;
         return $this;
     }
 
     /**
      * Set the source data URL.
      *
-     * @param string $sourceDataURL The source data URL.
+     * @param string $sourceDataUrl The source data URL.
      * @return Tv Returns this TV.
      */
-    public function setSourceDataURL($sourceDataURL) {
-        $this->sourceDataURL = $sourceDataURL;
+    public function setSourceDataUrl($sourceDataUrl) {
+        $this->sourceDataUrl = $sourceDataUrl;
         return $this;
     }
 
@@ -214,11 +230,11 @@ class Tv extends AbstractModel {
     /**
      * Set the source info URL.
      *
-     * @param string $sourceInfoURL The source info URL.
+     * @param string $sourceInfoUrl The source info URL.
      * @return Tv Returns this TV.
      */
-    public function setSourceInfoURL($sourceInfoURL) {
-        $this->sourceInfoURL = $sourceInfoURL;
+    public function setSourceInfoUrl($sourceInfoUrl) {
+        $this->sourceInfoUrl = $sourceInfoUrl;
         return $this;
     }
 }

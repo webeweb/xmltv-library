@@ -57,4 +57,22 @@ class Credits extends AbstractModel {
         $this->setProducers([]);
         $this->setWriters([]);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "actors"       => static::serializeArray($this->getActors()),
+            "adapters"     => static::serializeArray($this->getAdapters()),
+            "commentators" => static::serializeArray($this->getCommentators()),
+            "composers"    => static::serializeArray($this->getComposers()),
+            "directors"    => static::serializeArray($this->getDirectors()),
+            "editors"      => static::serializeArray($this->getEditors()),
+            "guests"       => static::serializeArray($this->getGuests()),
+            "presenters"   => static::serializeArray($this->getPresenters()),
+            "producers"    => static::serializeArray($this->getProducers()),
+            "writers"      => static::serializeArray($this->getWriters()),
+        ];
+    }
 }

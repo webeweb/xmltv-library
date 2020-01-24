@@ -57,6 +57,24 @@ class ReviewTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Review();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(4, $res);
+
+        $this->assertArrayHasKey("lang", $res);
+        $this->assertArrayHasKey("reviewer", $res);
+        $this->assertArrayHasKey("source", $res);
+        $this->assertArrayHasKey("type", $res);
+    }
+
+    /**
      * Tests the setReviewer() method.
      *
      * @return void

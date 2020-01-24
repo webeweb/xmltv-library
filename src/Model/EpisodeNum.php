@@ -50,4 +50,14 @@ class EpisodeNum extends AbstractModel {
             self::SYSTEM_XMLTV_NS,
         ];
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "content" => $this->getContent(),
+            "system"  => $this->getSystem(),
+        ];
+    }
 }

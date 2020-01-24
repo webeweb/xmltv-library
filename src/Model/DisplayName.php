@@ -24,4 +24,14 @@ class DisplayName extends AbstractModel {
 
     use StringContentTrait;
     use StringLangTrait;
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "content" => $this->getContent(),
+            "lang"    => $this->getLang(),
+        ];
+    }
 }

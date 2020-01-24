@@ -35,4 +35,20 @@ class PreviouslyShownTest extends AbstractTestCase {
         $this->assertNull($obj->getStart());
         $this->assertNull($obj->getStartDateTime());
     }
+
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new PreviouslyShown();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(2, $res);
+
+        $this->assertArrayHasKey("channel", $res);
+        $this->assertArrayHasKey("start", $res);
+    }
 }

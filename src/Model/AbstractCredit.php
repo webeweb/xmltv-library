@@ -23,4 +23,13 @@ use WBW\Library\Core\Model\Attribute\StringContentTrait;
 abstract class AbstractCredit extends AbstractModel {
 
     use StringContentTrait;
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "content" => $this->getContent(),
+        ];
+    }
 }

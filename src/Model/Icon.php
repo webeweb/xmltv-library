@@ -42,6 +42,17 @@ class Icon extends AbstractModel {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "height" => $this->getHeight(),
+            "src"    => $this->getSrc(),
+            "width"  => $this->getWidth(),
+        ];
+    }
+
+    /**
      * Set the source.
      *
      * @param string $src The source.

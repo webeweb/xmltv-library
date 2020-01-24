@@ -80,6 +80,52 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Programme();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(32, $res);
+
+        $this->assertArrayHasKey("audio", $res);
+        $this->assertArrayHasKey("categories", $res);
+        $this->assertArrayHasKey("channel", $res);
+        $this->assertArrayHasKey("clumpIdx", $res);
+        $this->assertArrayHasKey("countries", $res);
+        $this->assertArrayHasKey("credits", $res);
+        $this->assertArrayHasKey("date", $res);
+        $this->assertArrayHasKey("descs", $res);
+        $this->assertArrayHasKey("episodeNums", $res);
+        $this->assertArrayHasKey("icons", $res);
+        $this->assertArrayHasKey("keywords", $res);
+        $this->assertArrayHasKey("language", $res);
+        $this->assertArrayHasKey("lastChance", $res);
+        $this->assertArrayHasKey("length", $res);
+        $this->assertArrayHasKey("new", $res);
+        $this->assertArrayHasKey("origLanguage", $res);
+        $this->assertArrayHasKey("premiere", $res);
+        $this->assertArrayHasKey("previouslyShown", $res);
+        $this->assertArrayHasKey("pdcStart", $res);
+        $this->assertArrayHasKey("ratings", $res);
+        $this->assertArrayHasKey("reviews", $res);
+        $this->assertArrayHasKey("secondaryTitles", $res);
+        $this->assertArrayHasKey("showView", $res);
+        $this->assertArrayHasKey("starRatings", $res);
+        $this->assertArrayHasKey("start", $res);
+        $this->assertArrayHasKey("stop", $res);
+        $this->assertArrayHasKey("subtitles", $res);
+        $this->assertArrayHasKey("titles", $res);
+        $this->assertArrayHasKey("urls", $res);
+        $this->assertArrayHasKey("video", $res);
+        $this->assertArrayHasKey("videoPlus", $res);
+        $this->assertArrayHasKey("vpsStart", $res);
+    }
+
+    /**
      * Tests the setAudio() method.
      *
      * @return void

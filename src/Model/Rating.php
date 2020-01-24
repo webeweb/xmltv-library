@@ -35,4 +35,15 @@ class Rating extends AbstractModel {
 
         $this->setIcons([]);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "icons"  => static::serializeArray($this->getIcons()),
+            "system" => $this->getSystem(),
+            "value"  => static::serializeModel($this->getValue()),
+        ];
+    }
 }

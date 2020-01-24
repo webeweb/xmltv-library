@@ -34,11 +34,33 @@ class TvTest extends AbstractTestCase {
         $this->assertEquals([], $obj->getChannels());
         $this->assertNull($obj->getDate());
         $this->assertNull($obj->getGeneratorInfoName());
-        $this->assertNull($obj->getGeneratorInfoURL());
+        $this->assertNull($obj->getGeneratorInfoUrl());
         $this->assertEquals([], $obj->getProgrammes());
-        $this->assertNull($obj->getSourceDataURL());
+        $this->assertNull($obj->getSourceDataUrl());
         $this->assertNull($obj->getSourceInfoName());
-        $this->assertNull($obj->getSourceInfoURL());
+        $this->assertNull($obj->getSourceInfoUrl());
+    }
+
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Tv();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(8, $res);
+
+        $this->assertArrayHasKey("channels", $res);
+        $this->assertArrayHasKey("date", $res);
+        $this->assertArrayHasKey("generatorInfoName", $res);
+        $this->assertArrayHasKey("generatorInfoUrl", $res);
+        $this->assertArrayHasKey("programmes", $res);
+        $this->assertArrayHasKey("sourceDataUrl", $res);
+        $this->assertArrayHasKey("sourceInfoName", $res);
+        $this->assertArrayHasKey("sourceInfoUrl", $res);
     }
 
     /**
@@ -76,8 +98,8 @@ class TvTest extends AbstractTestCase {
 
         $obj = new Tv();
 
-        $obj->setGeneratorInfoURL("generatorInfoURL");
-        $this->assertEquals("generatorInfoURL", $obj->getGeneratorInfoURL());
+        $obj->setGeneratorInfoUrl("generatorInfoUrl");
+        $this->assertEquals("generatorInfoUrl", $obj->getGeneratorInfoUrl());
     }
 
     /**
@@ -89,8 +111,8 @@ class TvTest extends AbstractTestCase {
 
         $obj = new Tv();
 
-        $obj->setSourceDataURL("sourceDataURL");
-        $this->assertEquals("sourceDataURL", $obj->getSourceDataURL());
+        $obj->setSourceDataUrl("sourceDataUrl");
+        $this->assertEquals("sourceDataUrl", $obj->getSourceDataUrl());
     }
 
     /**
@@ -115,7 +137,7 @@ class TvTest extends AbstractTestCase {
 
         $obj = new Tv();
 
-        $obj->setSourceInfoURL("sourceInfoURL");
-        $this->assertEquals("sourceInfoURL", $obj->getSourceInfoURL());
+        $obj->setSourceInfoUrl("sourceInfoUrl");
+        $this->assertEquals("sourceInfoUrl", $obj->getSourceInfoUrl());
     }
 }

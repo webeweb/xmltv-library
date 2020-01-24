@@ -762,10 +762,10 @@ class Parser {
         $model = new Tv();
         $model->setDate(ParserHelper::getDOMAttributeValue($domNode, "date"));
         $model->setGeneratorInfoName(ParserHelper::getDOMAttributeValue($domNode, "generator-info-name"));
-        $model->setGeneratorInfoURL(ParserHelper::getDOMAttributeValue($domNode, "generator-info-url"));
-        $model->setSourceDataURL(ParserHelper::getDOMAttributeValue($domNode, "source-data-url"));
+        $model->setGeneratorInfoUrl(ParserHelper::getDOMAttributeValue($domNode, "generator-info-url"));
+        $model->setSourceDataUrl(ParserHelper::getDOMAttributeValue($domNode, "source-data-url"));
         $model->setSourceInfoName(ParserHelper::getDOMAttributeValue($domNode, "source-info-name"));
-        $model->setSourceInfoURL(ParserHelper::getDOMAttributeValue($domNode, "source-info-url"));
+        $model->setSourceInfoUrl(ParserHelper::getDOMAttributeValue($domNode, "source-info-url"));
 
         ParserHelper::parseChildNodes($domNode, "channel", $model);
         ParserHelper::parseChildNodes($domNode, "programme", $model);

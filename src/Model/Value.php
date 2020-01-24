@@ -22,4 +22,13 @@ use WBW\Library\Core\Model\Attribute\StringContentTrait;
 class Value extends AbstractModel {
 
     use StringContentTrait;
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "content" => $this->getContent(),
+        ];
+    }
 }

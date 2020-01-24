@@ -72,6 +72,18 @@ class Video extends AbstractModel {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "aspect"  => static::serializeModel($this->getAspect()),
+            "colour"  => static::serializeModel($this->getColour()),
+            "quality" => static::serializeModel($this->getQuality()),
+            "present" => static::serializeModel($this->getPresent()),
+        ];
+    }
+
+    /**
      * Set the aspect.
      *
      * @param Aspect|null $aspect The aspect.

@@ -61,6 +61,16 @@ class Subtitles extends AbstractModel {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "language" => static::serializeModel($this->getLanguage()),
+            "type"     => $this->getType(),
+        ];
+    }
+
+    /**
      * Set the type.
      *
      * @param string $type The type.

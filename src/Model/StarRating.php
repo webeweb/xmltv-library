@@ -33,4 +33,14 @@ class StarRating extends AbstractModel {
 
         $this->setIcons([]);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "icons" => static::serializeArray($this->getIcons()),
+            "value" => static::serializeModel($this->getValue()),
+        ];
+    }
 }

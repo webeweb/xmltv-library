@@ -41,6 +41,24 @@ class VideoTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Video();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(4, $res);
+
+        $this->assertArrayHasKey("aspect", $res);
+        $this->assertArrayHasKey("colour", $res);
+        $this->assertArrayHasKey("present", $res);
+        $this->assertArrayHasKey("quality", $res);
+    }
+
+    /**
      * Tests the setAspect() method.
      *
      * @return void

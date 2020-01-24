@@ -75,6 +75,16 @@ class Length extends AbstractModel {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "content" => $this->getContent(),
+            "units"   => $this->getUnits(),
+        ];
+    }
+
+    /**
      * Set the units.
      *
      * @param string $units The units.

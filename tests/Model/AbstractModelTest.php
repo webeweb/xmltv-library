@@ -3,7 +3,7 @@
 /*
  * This file is part of the xmltv-library package.
  *
- * (c) 2019 WEBEWEB
+ * (c) 2020 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,39 +11,43 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
+use WBW\Library\XMLTV\Model\AbstractModel;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 use WBW\Library\XMLTV\Tests\Fixtures\Model\TestCredit;
 
 /**
- * Abstract credit test.
+ * Abstract model test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model
  */
-class AbstractCreditTest extends AbstractTestCase {
+class AbstractModelTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests the serializeArray() method.
      *
      * @return void
      */
-    public function testConstruct() {
+    public function testSerializeArray() {
 
-        $obj = new TestCredit();
+        $model = new TestCredit();
 
-        $this->assertNull($obj->getContent());
+        $res = AbstractModel::serializeArray([$model]);
+        $this->assertCount(1, $res);
+
+        $this->assertArrayHasKey("content", $res[0]);
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests the serializeModel() method.
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testSerializeModel() {
 
-        $obj = new TestCredit();
+        $model = new TestCredit();
 
-        $res = $obj->jsonSerialize();
+        $res = AbstractModel::serializeModel($model);
         $this->assertCount(1, $res);
 
         $this->assertArrayHasKey("content", $res);

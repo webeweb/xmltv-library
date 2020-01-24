@@ -58,6 +58,18 @@ class Channel extends AbstractModel {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "displayNames" => static::serializeArray($this->getDisplayNames()),
+            "icons"        => static::serializeArray($this->getIcons()),
+            "id"           => $this->getId(),
+            "urls"         => static::serializeArray($this->getUrls()),
+        ];
+    }
+
+    /**
      * Set the id.
      *
      * @param string $id The id.

@@ -37,6 +37,23 @@ class RatingTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Rating();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(3, $res);
+
+        $this->assertArrayHasKey("icons", $res);
+        $this->assertArrayHasKey("system", $res);
+        $this->assertArrayHasKey("value", $res);
+    }
+
+    /**
      * Tests the setSystem() method.
      *
      * @return void

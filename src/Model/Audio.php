@@ -40,6 +40,16 @@ class Audio extends AbstractModel {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+        return [
+            "present" => $this->getPresent(),
+            "stereo"  => $this->getStereo(),
+        ];
+    }
+
+    /**
      * Get the stereo.
      *
      * @param Stereo|null $stereo The stereo.

@@ -51,4 +51,20 @@ class EpisodeNumTest extends AbstractTestCase {
         ];
         $this->assertEquals($res, EpisodeNum::enumSystem());
     }
+
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new EpisodeNum();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(2, $res);
+
+        $this->assertArrayHasKey("content", $res);
+        $this->assertArrayHasKey("system", $res);
+    }
 }

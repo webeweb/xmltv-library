@@ -60,11 +60,11 @@ class ReaderTest extends AbstractTestCase {
 
         $this->assertInstanceOf(Channel::class, $res->getChannels()[0]);
         $this->assertEquals("generator-info-name", $res->getGeneratorInfoName());
-        $this->assertEquals("generator-info-url", $res->getGeneratorInfoURL());
+        $this->assertEquals("generator-info-url", $res->getGeneratorInfoUrl());
         $this->assertInstanceOf(Programme::class, $res->getProgrammes()[0]);
-        $this->assertEquals("source-data-url", $res->getSourceDataURL());
+        $this->assertEquals("source-data-url", $res->getSourceDataUrl());
         $this->assertEquals("source-info-name", $res->getSourceInfoName());
-        $this->assertEquals("source-info-url", $res->getSourceInfoURL());
+        $this->assertEquals("source-info-url", $res->getSourceInfoUrl());
     }
 
     /**

@@ -36,6 +36,17 @@ class Actor extends AbstractCredit {
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize() {
+
+        $output          = parent::jsonSerialize();
+        $output ["role"] = $this->getContent();
+
+        return $output;
+    }
+
+    /**
      * Set the role.
      *
      * @param string $role The role.

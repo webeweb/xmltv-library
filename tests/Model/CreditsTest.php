@@ -42,4 +42,28 @@ class CreditsTest extends AbstractTestCase {
         $this->assertEquals([], $obj->getProducers());
         $this->assertEquals([], $obj->getWriters());
     }
+
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Credits();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(10, $res);
+
+        $this->assertArrayHasKey("actors", $res);
+        $this->assertArrayHasKey("adapters", $res);
+        $this->assertArrayHasKey("commentators", $res);
+        $this->assertArrayHasKey("composers", $res);
+        $this->assertArrayHasKey("directors", $res);
+        $this->assertArrayHasKey("editors", $res);
+        $this->assertArrayHasKey("guests", $res);
+        $this->assertArrayHasKey("presenters", $res);
+        $this->assertArrayHasKey("producers", $res);
+        $this->assertArrayHasKey("writers", $res);
+    }
 }

@@ -56,4 +56,19 @@ class StereoTest extends AbstractTestCase {
         ];
         $this->assertEquals($res, Stereo::enumContent());
     }
+
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Stereo();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(1, $res);
+
+        $this->assertArrayHasKey("content", $res);
+    }
 }

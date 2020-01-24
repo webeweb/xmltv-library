@@ -33,4 +33,19 @@ class ColourTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Colour();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(1, $res);
+
+        $this->assertArrayHasKey("content", $res);
+    }
 }

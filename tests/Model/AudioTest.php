@@ -37,6 +37,22 @@ class AudioTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Audio();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(2, $res);
+
+        $this->assertArrayHasKey("present", $res);
+        $this->assertArrayHasKey("stereo", $res);
+    }
+
+    /**
      * Tests the setStereo() method.
      *
      * @return void

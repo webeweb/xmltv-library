@@ -36,6 +36,22 @@ class ActorTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new Actor();
+
+        $res = $obj->jsonSerialize();
+        $this->assertCount(2, $res);
+
+        $this->assertArrayHasKey("content", $res);
+        $this->assertArrayHasKey("role", $res);
+    }
+
+    /**
      * Tests the setRole() method.
      *
      * @return void
