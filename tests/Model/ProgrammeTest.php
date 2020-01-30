@@ -57,10 +57,10 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertNull($obj->getLength());
         $this->assertNull($obj->getNew());
         $this->assertNull($obj->getOrigLanguage());
-        $this->assertNull($obj->getPremiere());
-        $this->assertNull($obj->getPreviouslyShown());
         $this->assertNull($obj->getPdcStart());
         $this->assertNull($obj->getPdcStartDateTime());
+        $this->assertNull($obj->getPremiere());
+        $this->assertNull($obj->getPreviouslyShown());
         $this->assertEquals([], $obj->getRatings());
         $this->assertEquals([], $obj->getReviews());
         $this->assertEquals([], $obj->getSecondaryTitles());
@@ -107,9 +107,9 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertArrayHasKey("length", $res);
         $this->assertArrayHasKey("new", $res);
         $this->assertArrayHasKey("origLanguage", $res);
+        $this->assertArrayHasKey("pdcStart", $res);
         $this->assertArrayHasKey("premiere", $res);
         $this->assertArrayHasKey("previouslyShown", $res);
-        $this->assertArrayHasKey("pdcStart", $res);
         $this->assertArrayHasKey("ratings", $res);
         $this->assertArrayHasKey("reviews", $res);
         $this->assertArrayHasKey("secondaryTitles", $res);

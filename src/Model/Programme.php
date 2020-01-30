@@ -396,7 +396,6 @@ class Programme extends AbstractModel {
             "video"           => static::serializeModel($this->getVideo()),
             "videoPlus"       => $this->getVideoPlus(),
             "vpsStart"        => $this->getVpsStart(),
-
         ];
     }
 

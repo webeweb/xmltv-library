@@ -40,8 +40,8 @@ class Actor extends AbstractCredit {
      */
     public function jsonSerialize() {
 
-        $output          = parent::jsonSerialize();
-        $output ["role"] = $this->getContent();
+        $output         = parent::jsonSerialize();
+        $output["role"] = $this->getContent();
 
         return $output;
     }
