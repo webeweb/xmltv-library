@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Parser;
+namespace WBW\Library\XMLTV\Serializer;
 
 use DateTime;
 use DOMNode;
@@ -18,12 +18,12 @@ use Psr\Log\LoggerInterface;
 use WBW\Library\XMLTV\Model\AbstractModel;
 
 /**
- * Parser helper.
+ * XML deserializer helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Parser
+ * @package WBW\Library\XMLTV\Serializer
  */
-class ParserHelper {
+class XmlDeserializerHelper {
 
     /**
      * Logger.
@@ -31,6 +31,60 @@ class ParserHelper {
      * @var LoggerInterface
      */
     protected static $logger;
+
+    /**
+     * Deserializes a child node.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function deserializeChildNode(DomNode $domNode, $nodeName, AbstractModel $model) {
+
+        $serializer = static::getMethodName("deserialize", $nodeName);
+        $setter     = static::getMethodName("set", $nodeName);
+
+        $node = static::getDOMNodeByName($nodeName, $domNode->childNodes);
+        if (null !== $node) {
+            $model->$setter(call_user_func_array(__NAMESPACE__ . "\\XmlDeserializer::" . $serializer, [$node]));
+        }
+    }
+
+    /**
+     * Deserializes the child nodes.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function deserializeChildNodes(DomNode $domNode, $nodeName, AbstractModel $model) {
+
+        $serializer = static::getMethodName("deserialize", $nodeName);
+        $setter     = static::getMethodName("add", $nodeName);
+
+        $nodes = static::getDOMNodesByName($nodeName, $domNode->childNodes);
+        foreach ($nodes as $current) {
+            $model->$setter(call_user_func_array(__NAMESPACE__ . "\\XmlDeserializer::" . $serializer, [$current]));
+        }
+    }
+
+    /**
+     * Deserializes a date/time.
+     *
+     * @param string $value The date/time.
+     * @return DateTime|null Returns the date/time in case of success, null otherwise.
+     */
+    public static function deserializeDateTime($value) {
+
+        $dateTime = DateTime::createFromFormat("YmdHis O", $value);
+        if (false === $dateTime) {
+            return null;
+        }
+
+        return $dateTime;
+    }
 
     /**
      * Get a DOM attribute value.
@@ -149,61 +203,7 @@ class ParserHelper {
             $context["_children"][] = $current->nodeName;
         }
 
-        static::$logger->debug(sprintf("Parses a DOM node with name \"%s\"", $domNode->nodeName), $context);
-    }
-
-    /**
-     * Parses a child node.
-     *
-     * @param DOMNode $domNode The DOM node.
-     * @param string $nodeName The node name.
-     * @param AbstractModel $model The model.
-     * @return void
-     */
-    public static function parseChildNode(DomNode $domNode, $nodeName, AbstractModel $model) {
-
-        $parser = static::getMethodName("parse", $nodeName);
-        $setter = static::getMethodName("set", $nodeName);
-
-        $node = static::getDOMNodeByName($nodeName, $domNode->childNodes);
-        if (null !== $node) {
-            $model->$setter(call_user_func_array(__NAMESPACE__ . "\\Parser::" . $parser, [$node]));
-        }
-    }
-
-    /**
-     * Parses the child nodes.
-     *
-     * @param DOMNode $domNode The DOM node.
-     * @param string $nodeName The node name.
-     * @param AbstractModel $model The model.
-     * @return void
-     */
-    public static function parseChildNodes(DomNode $domNode, $nodeName, AbstractModel $model) {
-
-        $parser = static::getMethodName("parse", $nodeName);
-        $setter = static::getMethodName("add", $nodeName);
-
-        $nodes = static::getDOMNodesByName($nodeName, $domNode->childNodes);
-        foreach ($nodes as $current) {
-            $model->$setter(call_user_func_array(__NAMESPACE__ . "\\Parser::" . $parser, [$current]));
-        }
-    }
-
-    /**
-     * Parses a date/time.
-     *
-     * @param string $value The date/time.
-     * @return DateTime|null Returns the date/time in case of success, null otherwise.
-     */
-    public static function parseDateTime($value) {
-
-        $dateTime = DateTime::createFromFormat("YmdHis O", $value);
-        if (false === $dateTime) {
-            return null;
-        }
-
-        return $dateTime;
+        static::$logger->debug(sprintf("Deserialize a DOM node with name \"%s\"", $domNode->nodeName), $context);
     }
 
     /**

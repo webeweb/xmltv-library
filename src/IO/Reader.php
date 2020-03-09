@@ -16,8 +16,8 @@ use Exception;
 use GuzzleHttp\Client;
 use Psr\Log\LoggerInterface;
 use WBW\Library\XMLTV\Model\Tv;
-use WBW\Library\XMLTV\Parser\Parser;
-use WBW\Library\XMLTV\Parser\ParserHelper;
+use WBW\Library\XMLTV\Serializer\XmlDeserializer;
+use WBW\Library\XMLTV\Serializer\XmlDeserializerHelper;
 use WBW\Library\XMLTV\Statistic\Statistic;
 use WBW\Library\XMLTV\Statistic\Statistics;
 
@@ -68,9 +68,9 @@ class Reader {
         $document = new DOMDocument();
         $document->load($filename);
 
-        ParserHelper::setLogger($logger);
+        XmlDeserializerHelper::setLogger($logger);
 
-        return Parser::parseTv($document->documentElement);
+        return XmlDeserializer::deserializeTv($document->documentElement);
     }
 
     /**

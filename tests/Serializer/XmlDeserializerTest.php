@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Parser;
+namespace WBW\Library\XMLTV\Tests\Serializer;
 
 use WBW\Library\XMLTV\Model\Actor;
 use WBW\Library\XMLTV\Model\Adapter;
@@ -54,23 +54,23 @@ use WBW\Library\XMLTV\Model\Url;
 use WBW\Library\XMLTV\Model\Value;
 use WBW\Library\XMLTV\Model\Video;
 use WBW\Library\XMLTV\Model\Writer;
-use WBW\Library\XMLTV\Parser\Parser;
+use WBW\Library\XMLTV\Serializer\XmlDeserializer;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
- * Parser test.
+ * XML deserializer test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Parser
+ * @package WBW\Library\XMLTV\Tests\Serializer
  */
-class ParserTest extends AbstractTestCase {
+class XmlDeserializerTest extends AbstractTestCase {
 
     /**
-     * Tests the parseActor() method.
+     * Tests the deserializeActor() method.
      *
      * @return void
      */
-    public function testParseActor() {
+    public function testDeserializeActor() {
 
         // tv > programme > credits > actor
         $node = $this->document->documentElement
@@ -78,7 +78,7 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(1);
 
-        $res = Parser::parseActor($node);
+        $res = XmlDeserializer::deserializeActor($node);
         $this->assertInstanceOf(Actor::class, $res);
 
         $this->assertEquals("Actor", $res->getContent());
@@ -86,11 +86,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseAdapter() method.
+     * Tests the deserializeAdapter() method.
      *
      * @return void
      */
-    public function testParseAdapter() {
+    public function testDeserializeAdapter() {
 
         // tv > programme > credits > adapter
         $node = $this->document->documentElement
@@ -98,18 +98,18 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(3);
 
-        $res = Parser::parseAdapter($node);
+        $res = XmlDeserializer::deserializeAdapter($node);
         $this->assertInstanceOf(Adapter::class, $res);
 
         $this->assertEquals("Adapter", $res->getContent());
     }
 
     /**
-     * Tests the parseAspect() method.
+     * Tests the deserializeAspect() method.
      *
      * @return void
      */
-    public function testParseAspect() {
+    public function testDeserializeAspect() {
 
         // tv > programme > video > aspect
         $node = $this->document->documentElement
@@ -117,25 +117,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(29)
             ->childNodes->item(5);
 
-        $res = Parser::parseAspect($node);
+        $res = XmlDeserializer::deserializeAspect($node);
         $this->assertInstanceOf(Aspect::class, $res);
 
         $this->assertEquals("Aspect", $res->getContent());
     }
 
     /**
-     * Tests the parseAudio() method.
+     * Tests the deserializeAudio() method.
      *
      * @return void
      */
-    public function testParseAudio() {
+    public function testDeserializeAudio() {
 
         // tv > programme > audio
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(31);
 
-        $res = Parser::parseAudio($node);
+        $res = XmlDeserializer::deserializeAudio($node);
         $this->assertInstanceOf(Audio::class, $res);
 
         $this->assertInstanceOf(Present::class, $res->getPresent());
@@ -143,18 +143,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseCategory() method.
+     * Tests the deserializeCategory() method.
      *
      * @return void
      */
-    public function testParseCategory() {
+    public function testDeserializeCategory() {
 
         // tv > programme > category
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(11);
 
-        $res = Parser::parseCategory($node);
+        $res = XmlDeserializer::deserializeCategory($node);
         $this->assertInstanceOf(Category::class, $res);
 
         $this->assertEquals("Category", $res->getContent());
@@ -162,17 +162,17 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseChannel() method.
+     * Tests the deserializeChannel() method.
      *
      * @return void
      */
-    public function testParseChannel() {
+    public function testDeserializeChannel() {
 
         // tv > channel
         $node = $this->document->documentElement
             ->childNodes->item(1);
 
-        $res = Parser::parseChannel($node);
+        $res = XmlDeserializer::deserializeChannel($node);
         $this->assertInstanceOf(Channel::class, $res);
 
         $this->assertInstanceOf(DisplayName::class, $res->getDisplayNames()[0]);
@@ -181,11 +181,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseColour() method.
+     * Tests the deserializeColour() method.
      *
      * @return void
      */
-    public function testParseColour() {
+    public function testDeserializeColour() {
 
         // tv > programme > video > colour
         $node = $this->document->documentElement
@@ -193,18 +193,18 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(29)
             ->childNodes->item(3);
 
-        $res = Parser::parseColour($node);
+        $res = XmlDeserializer::deserializeColour($node);
         $this->assertInstanceOf(Colour::class, $res);
 
         $this->assertEquals("Colour", $res->getContent());
     }
 
     /**
-     * Tests the parseCommentator() method.
+     * Tests the deserializeCommentator() method.
      *
      * @return void
      */
-    public function testParseCommentator() {
+    public function testDeserializeCommentator() {
 
         // tv > programme > credits > commentator
         $node = $this->document->documentElement
@@ -212,18 +212,18 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(5);
 
-        $res = Parser::parseCommentator($node);
+        $res = XmlDeserializer::deserializeCommentator($node);
         $this->assertInstanceOf(Commentator::class, $res);
 
         $this->assertEquals("Commentator", $res->getContent());
     }
 
     /**
-     * Tests the parseComposer() method.
+     * Tests the deserializeComposer() method.
      *
      * @return void
      */
-    public function testParseComposer() {
+    public function testDeserializeComposer() {
 
         // tv > programme > credits > composer
         $node = $this->document->documentElement
@@ -231,25 +231,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(7);
 
-        $res = Parser::parseComposer($node);
+        $res = XmlDeserializer::deserializeComposer($node);
         $this->assertInstanceOf(Composer::class, $res);
 
         $this->assertEquals("Composer", $res->getContent());
     }
 
     /**
-     * Tests the parseCountry() method.
+     * Tests the deserializeCountry() method.
      *
      * @return void
      */
-    public function testParseCountry() {
+    public function testDeserializeCountry() {
 
         // tv > programme > country
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(25);
 
-        $res = Parser::parseCountry($node);
+        $res = XmlDeserializer::deserializeCountry($node);
         $this->assertInstanceOf(Country::class, $res);
 
         $this->assertEquals("Country", $res->getContent());
@@ -257,18 +257,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseCredits() method.
+     * Tests the deserializeCredits() method.
      *
      * @return void
      */
-    public function testParseCredits() {
+    public function testDeserializeCredits() {
 
         // tv > programme > credits
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7);
 
-        $res = Parser::parseCredits($node);
+        $res = XmlDeserializer::deserializeCredits($node);
         $this->assertInstanceOf(Credits::class, $res);
 
         $this->assertInstanceOf(Actor::class, $res->getActors()[0]);
@@ -284,36 +284,36 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDate() method.
+     * Tests the deserializeDate() method.
      *
      * @return void
      */
-    public function testParseDate() {
+    public function testDeserializeDate() {
 
         // tv > programme > date
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(9);
 
-        $res = Parser::parseDate($node);
+        $res = XmlDeserializer::deserializeDate($node);
         $this->assertInstanceOf(Date::class, $res);
 
         $this->assertEquals(1970, $res->getContent());
     }
 
     /**
-     * Tests the parseDesc() method.
+     * Tests the deserializeDesc() method.
      *
      * @return void
      */
-    public function testParseDesc() {
+    public function testDeserializeDesc() {
 
         // tv > programme > desc
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(5);
 
-        $res = Parser::parseDesc($node);
+        $res = XmlDeserializer::deserializeDesc($node);
         $this->assertInstanceOf(Desc::class, $res);
 
         $this->assertEquals("Desc", $res->getContent());
@@ -321,11 +321,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseDirector() method.
+     * Tests the deserializeDirector() method.
      *
      * @return void
      */
-    public function testParseDirector() {
+    public function testDeserializeDirector() {
 
         // tv > programme > credits > director
         $node = $this->document->documentElement
@@ -333,25 +333,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(9);
 
-        $res = Parser::parseDirector($node);
+        $res = XmlDeserializer::deserializeDirector($node);
         $this->assertInstanceOf(Director::class, $res);
 
         $this->assertEquals("Director", $res->getContent());
     }
 
     /**
-     * Tests the parseDisplayName() method.
+     * Tests the deserializeDisplayName() method.
      *
      * @return void
      */
-    public function testParseDisplayName() {
+    public function testDeserializeDisplayName() {
 
         // tv > channel > display-name
         $node = $this->document->documentElement
             ->childNodes->item(1)
             ->childNodes->item(1);
 
-        $res = Parser::parseDisplayName($node);
+        $res = XmlDeserializer::deserializeDisplayName($node);
         $this->assertInstanceOf(DisplayName::class, $res);
 
         $this->assertEquals("Display name", $res->getContent());
@@ -359,11 +359,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseEditor() method.
+     * Tests the deserializeEditor() method.
      *
      * @return void
      */
-    public function testParseEditor() {
+    public function testDeserializeEditor() {
 
         // tv > programme > credits > editor
         $node = $this->document->documentElement
@@ -371,25 +371,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(11);
 
-        $res = Parser::parseEditor($node);
+        $res = XmlDeserializer::deserializeEditor($node);
         $this->assertInstanceOf(Editor::class, $res);
 
         $this->assertEquals("Editor", $res->getContent());
     }
 
     /**
-     * Tests the parseEpisodeNum() method.
+     * Tests the deserializeEpisodeNum() method.
      *
      * @return void
      */
-    public function testParseEpisodeNum() {
+    public function testDeserializeEpisodeNum() {
 
         // tv > programme > episode-num
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(27);
 
-        $res = Parser::parseEpisodeNum($node);
+        $res = XmlDeserializer::deserializeEpisodeNum($node);
         $this->assertInstanceOf(EpisodeNum::class, $res);
 
         $this->assertEquals("Episode num", $res->getContent());
@@ -397,11 +397,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseGuest() method.
+     * Tests the deserializeGuest() method.
      *
      * @return void
      */
-    public function testParseGuest() {
+    public function testDeserializeGuest() {
 
         // tv > programme > credits > guest
         $node = $this->document->documentElement
@@ -409,25 +409,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(13);
 
-        $res = Parser::parseGuest($node);
+        $res = XmlDeserializer::deserializeGuest($node);
         $this->assertInstanceOf(Guest::class, $res);
 
         $this->assertEquals("Guest", $res->getContent());
     }
 
     /**
-     * Tests the parseIcon() method.
+     * Tests the deserializeIcon() method.
      *
      * @return void
      */
-    public function testParseIcon() {
+    public function testDeserializeIcon() {
 
         // tv > channel > icon
         $node = $this->document->documentElement
             ->childNodes->item(1)
             ->childNodes->item(3);
 
-        $res = Parser::parseIcon($node);
+        $res = XmlDeserializer::deserializeIcon($node);
         $this->assertInstanceOf(Icon::class, $res);
 
         $this->assertEquals(1080, $res->getHeight());
@@ -436,18 +436,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseKeyword() method.
+     * Tests the deserializeKeyword() method.
      *
      * @return void
      */
-    public function testParseKeyword() {
+    public function testDeserializeKeyword() {
 
         // tv > programme > keyword
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(13);
 
-        $res = Parser::parseKeyword($node);
+        $res = XmlDeserializer::deserializeKeyword($node);
         $this->assertInstanceOf(Keyword::class, $res);
 
         $this->assertEquals("Keyword", $res->getContent());
@@ -455,18 +455,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseLanguage() method.
+     * Tests the deserializeLanguage() method.
      *
      * @return void
      */
-    public function testParseLanguage() {
+    public function testDeserializeLanguage() {
 
         // tv > programme > language
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(15);
 
-        $res = Parser::parseLanguage($node);
+        $res = XmlDeserializer::deserializeLanguage($node);
         $this->assertInstanceOf(Language::class, $res);
 
         $this->assertEquals("Language", $res->getContent());
@@ -474,18 +474,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseLastChance() method.
+     * Tests the deserializeLastChance() method.
      *
      * @return void
      */
-    public function testParseLastChance() {
+    public function testDeserializeLastChance() {
 
         // tv > programme > last-chance
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(37);
 
-        $res = Parser::parseLastChance($node);
+        $res = XmlDeserializer::deserializeLastChance($node);
         $this->assertInstanceOf(LastChance::class, $res);
 
         $this->assertEquals("Last chance", $res->getContent());
@@ -493,18 +493,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseLength() method.
+     * Tests the deserializeLength() method.
      *
      * @return void
      */
-    public function testParseLength() {
+    public function testDeserializeLength() {
 
         // tv > programme > length
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(19);
 
-        $res = Parser::parseLength($node);
+        $res = XmlDeserializer::deserializeLength($node);
         $this->assertInstanceOf(Length::class, $res);
 
         $this->assertEquals(90, $res->getContent());
@@ -512,18 +512,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseOrigLanguage() method.
+     * Tests the deserializeOrigLanguage() method.
      *
      * @return void
      */
-    public function testParseOrigLanguage() {
+    public function testDeserializeOrigLanguage() {
 
         // tv > programme > orig-language
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(17);
 
-        $res = Parser::parseOrigLanguage($node);
+        $res = XmlDeserializer::deserializeOrigLanguage($node);
         $this->assertInstanceOf(OrigLanguage::class, $res);
 
         $this->assertEquals("Orig language", $res->getContent());
@@ -531,18 +531,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parsePremiere() method.
+     * Tests the deserializePremiere() method.
      *
      * @return void
      */
-    public function testParsePremiere() {
+    public function testDeserializePremiere() {
 
         // tv > programme > premiere
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(35);
 
-        $res = Parser::parsePremiere($node);
+        $res = XmlDeserializer::deserializePremiere($node);
         $this->assertInstanceOf(Premiere::class, $res);
 
         $this->assertEquals("Premiere", $res->getContent());
@@ -550,11 +550,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parsePresent() method.
+     * Tests the deserializePresent() method.
      *
      * @return void
      */
-    public function testParsePresent() {
+    public function testDeserializePresent() {
 
         // tv > programme > video > present
         $node = $this->document->documentElement
@@ -562,18 +562,18 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(29)
             ->childNodes->item(1);
 
-        $res = Parser::parsePresent($node);
+        $res = XmlDeserializer::deserializePresent($node);
         $this->assertInstanceOf(Present::class, $res);
 
         $this->assertEquals("Present", $res->getContent());
     }
 
     /**
-     * Tests the parsePresenter() method.
+     * Tests the deserializePresenter() method.
      *
      * @return void
      */
-    public function testParsePresenter() {
+    public function testDeserializePresenter() {
 
         // tv > programme > credits > presenter
         $node = $this->document->documentElement
@@ -581,25 +581,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(15);
 
-        $res = Parser::parsePresenter($node);
+        $res = XmlDeserializer::deserializePresenter($node);
         $this->assertInstanceOf(Presenter::class, $res);
 
         $this->assertEquals("Presenter", $res->getContent());
     }
 
     /**
-     * Tests the parsePreviouslyShown() method.
+     * Tests the deserializePreviouslyShown() method.
      *
      * @return void
      */
-    public function testParsePreviouslyShown() {
+    public function testDeserializePreviouslyShown() {
 
         // tv > programme > previously-shown
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(33);
 
-        $res = Parser::parsePreviouslyShown($node);
+        $res = XmlDeserializer::deserializePreviouslyShown($node);
         $this->assertInstanceOf(PreviouslyShown::class, $res);
 
         $this->assertEquals("channel-id", $res->getChannel());
@@ -607,11 +607,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseProducer() method.
+     * Tests the deserializeProducer() method.
      *
      * @return void
      */
-    public function testParseProducer() {
+    public function testDeserializeProducer() {
 
         // tv > programme > credits > producer
         $node = $this->document->documentElement
@@ -619,24 +619,24 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(17);
 
-        $res = Parser::parseProducer($node);
+        $res = XmlDeserializer::deserializeProducer($node);
         $this->assertInstanceOf(Producer::class, $res);
 
         $this->assertEquals("Producer", $res->getContent());
     }
 
     /**
-     * Tests the parseProgramme() method.
+     * Tests the deserializeProgramme() method.
      *
      * @return void
      */
-    public function testParseProgramme() {
+    public function testDeserializeProgramme() {
 
         // tv > programme
         $node = $this->document->documentElement
             ->childNodes->item(3);
 
-        $res = Parser::parseProgramme($node);
+        $res = XmlDeserializer::deserializeProgramme($node);
         $this->assertInstanceOf(Programme::class, $res);
 
         $this->assertInstanceOf(Audio::class, $res->getAudio());
@@ -675,11 +675,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseQuality() method.
+     * Tests the deserializeQuality() method.
      *
      * @return void
      */
-    public function testParseQuality() {
+    public function testDeserializeQuality() {
 
         // tv > programme > video > quality
         $node = $this->document->documentElement
@@ -687,25 +687,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(29)
             ->childNodes->item(7);
 
-        $res = Parser::parseQuality($node);
+        $res = XmlDeserializer::deserializeQuality($node);
         $this->assertInstanceOf(Quality::class, $res);
 
         $this->assertEquals("Quality", $res->getContent());
     }
 
     /**
-     * Tests the parseRating() method.
+     * Tests the deserializeRating() method.
      *
      * @return void
      */
-    public function testParseRating() {
+    public function testDeserializeRating() {
 
         // tv > programme > rating
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(43);
 
-        $res = Parser::parseRating($node);
+        $res = XmlDeserializer::deserializeRating($node);
         $this->assertInstanceOf(Rating::class, $res);
 
         $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
@@ -714,18 +714,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseReview() method.
+     * Tests the deserializeReview() method.
      *
      * @return void
      */
-    public function testParseReview() {
+    public function testDeserializeReview() {
 
         // tv > programme > review
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(47);
 
-        $res = Parser::parseReview($node);
+        $res = XmlDeserializer::deserializeReview($node);
         $this->assertInstanceOf(Review::class, $res);
 
         $this->assertEquals("review-lang", $res->getLang());
@@ -735,18 +735,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseSecondaryTitle() method.
+     * Tests the deserializeSecondaryTitle() method.
      *
      * @return void
      */
-    public function testParseSecondaryTitle() {
+    public function testDeserializeSecondaryTitle() {
 
         // tv > programme > sub-title
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(3);
 
-        $res = Parser::parseSecondaryTitle($node);
+        $res = XmlDeserializer::deserializeSecondaryTitle($node);
         $this->assertInstanceOf(SecondaryTitle::class, $res);
 
         $this->assertEquals("Secondary title", $res->getContent());
@@ -754,18 +754,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseStarRating() method.
+     * Tests the deserializeStarRating() method.
      *
      * @return void
      */
-    public function testParseStarRating() {
+    public function testDeserializeStarRating() {
 
         // tv > programme > star-rating
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(45);
 
-        $res = Parser::parseStarRating($node);
+        $res = XmlDeserializer::deserializeStarRating($node);
         $this->assertInstanceOf(StarRating::class, $res);
 
         $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
@@ -773,11 +773,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseStereo() method.
+     * Tests the deserializeStereo() method.
      *
      * @return void
      */
-    public function testParseStereo() {
+    public function testDeserializeStereo() {
 
         // tv > programme > audio > stereo
         $node = $this->document->documentElement
@@ -785,25 +785,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(31)
             ->childNodes->item(3);
 
-        $res = Parser::parseStereo($node);
+        $res = XmlDeserializer::deserializeStereo($node);
         $this->assertInstanceOf(Stereo::class, $res);
 
         $this->assertEquals("Stereo", $res->getContent());
     }
 
     /**
-     * Tests the parseSubtitles() method.
+     * Tests the deserializeSubtitles() method.
      *
      * @return void
      */
-    public function testParseSubtitles() {
+    public function testDeserializeSubtitles() {
 
         // tv > programme > subtitles
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(41);
 
-        $res = Parser::parseSubtitles($node);
+        $res = XmlDeserializer::deserializeSubtitles($node);
         $this->assertInstanceOf(Subtitles::class, $res);
 
         $this->assertInstanceOf(Language::class, $res->getLanguage());
@@ -811,18 +811,18 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseTitle() method.
+     * Tests the deserializeTitle() method.
      *
      * @return void
      */
-    public function testParseTitle() {
+    public function testDeserializeTitle() {
 
         // tv > programme > title
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(1);
 
-        $res = Parser::parseTitle($node);
+        $res = XmlDeserializer::deserializeTitle($node);
         $this->assertInstanceOf(Title::class, $res);
 
         $this->assertEquals("Title", $res->getContent());
@@ -830,16 +830,16 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseTv() method.
+     * Tests the deserializeTv() method.
      *
      * @return void
      */
-    public function testParseTv() {
+    public function testDeserializeTv() {
 
         // tv
         $node = $this->document->documentElement;
 
-        $res = Parser::parseTv($node);
+        $res = XmlDeserializer::deserializeTv($node);
         $this->assertInstanceOf(Tv::class, $res);
 
         $this->assertInstanceOf(Channel::class, $res->getChannels()[0]);
@@ -852,29 +852,29 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseUrl() method.
+     * Tests the deserializeUrl() method.
      *
      * @return void
      */
-    public function testParseUrl() {
+    public function testDeserializeUrl() {
 
         // tv > channel > url
         $node = $this->document->documentElement
             ->childNodes->item(1)
             ->childNodes->item(5);
 
-        $res = Parser::parseUrl($node);
+        $res = XmlDeserializer::deserializeUrl($node);
         $this->assertInstanceOf(Url::class, $res);
 
         $this->assertEquals("URL", $res->getContent());
     }
 
     /**
-     * Tests the parseValue() method.
+     * Tests the deserializeValue() method.
      *
      * @return void
      */
-    public function testParseValue() {
+    public function testDeserializeValue() {
 
         // tv > programme > rating > value
         $node = $this->document->documentElement
@@ -882,25 +882,25 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(43)
             ->childNodes->item(1);
 
-        $res = Parser::parseValue($node);
+        $res = XmlDeserializer::deserializeValue($node);
         $this->assertInstanceOf(Value::class, $res);
 
         $this->assertEquals("Value", $res->getContent());
     }
 
     /**
-     * Tests the parseVideo() method.
+     * Tests the deserializeVideo() method.
      *
      * @return void
      */
-    public function testParseVideo() {
+    public function testDeserializeVideo() {
 
         // tv > programme > video
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(29);
 
-        $res = Parser::parseVideo($node);
+        $res = XmlDeserializer::deserializeVideo($node);
         $this->assertInstanceOf(Video::class, $res);
 
         $this->assertInstanceOf(Aspect::class, $res->getAspect());
@@ -910,11 +910,11 @@ class ParserTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the parseWriter() method.
+     * Tests the deserializeWriter() method.
      *
      * @return void
      */
-    public function testParseWriter() {
+    public function testDeserializeWriter() {
 
         // tv > programme > credits > writer
         $node = $this->document->documentElement
@@ -922,7 +922,7 @@ class ParserTest extends AbstractTestCase {
             ->childNodes->item(7)
             ->childNodes->item(19);
 
-        $res = Parser::parseWriter($node);
+        $res = XmlDeserializer::deserializeWriter($node);
         $this->assertInstanceOf(Writer::class, $res);
 
         $this->assertEquals("Writer", $res->getContent());

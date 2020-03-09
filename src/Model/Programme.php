@@ -28,7 +28,7 @@ use WBW\Library\XMLTV\Model\Attribute\ArrayUrlsTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
-use WBW\Library\XMLTV\Parser\ParserHelper;
+use WBW\Library\XMLTV\Serializer\XmlDeserializerHelper;
 
 /**
  * Programme.
@@ -275,7 +275,7 @@ class Programme extends AbstractModel {
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
     public function getPdcStartDateTime() {
-        return ParserHelper::parseDateTime($this->pdcStart);
+        return XmlDeserializerHelper::deserializeDateTime($this->pdcStart);
     }
 
     /**
@@ -320,7 +320,7 @@ class Programme extends AbstractModel {
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
     public function getStopDateTime() {
-        return ParserHelper::parseDateTime($this->stop);
+        return XmlDeserializerHelper::deserializeDateTime($this->stop);
     }
 
     /**
@@ -356,7 +356,7 @@ class Programme extends AbstractModel {
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
     public function getVpsStartDateTime() {
-        return ParserHelper::parseDateTime($this->vpsStart);
+        return XmlDeserializerHelper::deserializeDateTime($this->vpsStart);
     }
 
     /**
