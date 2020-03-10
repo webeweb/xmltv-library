@@ -30,7 +30,7 @@ use WBW\Library\XMLTV\Statistic\Statistics;
 class Reader {
 
     /**
-     * Load an XML file.
+     * Get an XML file.
      *
      * @param string $url The URL.
      * @param string $filename The filename The filename.
@@ -38,7 +38,7 @@ class Reader {
      * @return Tv Returns the TV.
      * @throws Exception Throws an exception if an error occurs.
      */
-    public static function loadXML($url, $filename, LoggerInterface $logger = null) {
+    public static function getXML($url, $filename, LoggerInterface $logger = null) {
 
         $stream = fopen($filename, "w");
 

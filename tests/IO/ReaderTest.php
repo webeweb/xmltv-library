@@ -28,12 +28,12 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class ReaderTest extends AbstractTestCase {
 
     /**
-     * Tests the loadXML() method.
+     * Tests the getXML() method.
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoadXML() {
+    public function testGetXML() {
 
         // Set a Logger mock.
         $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
@@ -44,7 +44,7 @@ class ReaderTest extends AbstractTestCase {
         // Set a filename mock.
         $filename = getcwd() . "/xmltv.xml";
 
-        $res = Reader::loadXML($url, $filename, $logger);
+        $res = Reader::getXML($url, $filename, $logger);
         $this->assertInstanceOf(Tv::class, $res);
     }
 
