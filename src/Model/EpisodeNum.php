@@ -13,6 +13,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringSystemTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Episode number.
@@ -55,9 +56,6 @@ class EpisodeNum extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "content" => $this->getContent(),
-            "system"  => $this->getSystem(),
-        ];
+        return JsonSerializer::serializeEpisodeNum($this);
     }
 }

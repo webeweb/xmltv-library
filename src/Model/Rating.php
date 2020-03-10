@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringSystemTrait;
 use WBW\Library\XMLTV\Model\Attribute\ValueTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Rating.
@@ -40,10 +41,6 @@ class Rating extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "icons"  => static::serializeArray($this->getIcons()),
-            "system" => $this->getSystem(),
-            "value"  => static::serializeModel($this->getValue()),
-        ];
+        return JsonSerializer::serializeRating($this);
     }
 }

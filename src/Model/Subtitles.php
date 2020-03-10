@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use InvalidArgumentException;
 use WBW\Library\Core\Model\Attribute\StringTypeTrait;
 use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Subtitles.
@@ -64,10 +65,7 @@ class Subtitles extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "language" => static::serializeModel($this->getLanguage()),
-            "type"     => $this->getType(),
-        ];
+        return JsonSerializer::serializeSubtitles($this);
     }
 
     /**

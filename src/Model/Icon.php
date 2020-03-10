@@ -13,6 +13,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\Core\Model\Attribute\IntegerHeightTrait;
 use WBW\Library\Core\Model\Attribute\IntegerWidthTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Icon.
@@ -45,11 +46,7 @@ class Icon extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "height" => $this->getHeight(),
-            "src"    => $this->getSrc(),
-            "width"  => $this->getWidth(),
-        ];
+        return JsonSerializer::serializeIcon($this);
     }
 
     /**

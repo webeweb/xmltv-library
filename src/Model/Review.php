@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use InvalidArgumentException;
 use WBW\Library\Core\Model\Attribute\StringLangTrait;
 use WBW\Library\Core\Model\Attribute\StringTypeTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Review.
@@ -88,12 +89,7 @@ class Review extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "lang"     => $this->getLang(),
-            "reviewer" => $this->getReviewer(),
-            "source"   => $this->getSource(),
-            "type"     => $this->getType(),
-        ];
+        return JsonSerializer::serializeReview($this);
     }
 
     /**

@@ -21,6 +21,7 @@ use WBW\Library\XMLTV\Model\Attribute\ArrayGuestsTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayPresentersTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayProducersTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayWritersTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Credits.
@@ -62,17 +63,6 @@ class Credits extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "actors"       => static::serializeArray($this->getActors()),
-            "adapters"     => static::serializeArray($this->getAdapters()),
-            "commentators" => static::serializeArray($this->getCommentators()),
-            "composers"    => static::serializeArray($this->getComposers()),
-            "directors"    => static::serializeArray($this->getDirectors()),
-            "editors"      => static::serializeArray($this->getEditors()),
-            "guests"       => static::serializeArray($this->getGuests()),
-            "presenters"   => static::serializeArray($this->getPresenters()),
-            "producers"    => static::serializeArray($this->getProducers()),
-            "writers"      => static::serializeArray($this->getWriters()),
-        ];
+        return JsonSerializer::serializeCredits($this);
     }
 }

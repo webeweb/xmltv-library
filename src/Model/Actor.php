@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
+
 /**
  * Actor.
  *
@@ -39,11 +41,7 @@ class Actor extends AbstractCredit {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-
-        $output         = parent::jsonSerialize();
-        $output["role"] = $this->getContent();
-
-        return $output;
+        return JsonSerializer::serializeActor($this);
     }
 
     /**

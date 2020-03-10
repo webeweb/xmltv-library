@@ -12,6 +12,7 @@
 namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\XMLTV\Model\Attribute\PresentTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Audio.
@@ -43,10 +44,7 @@ class Audio extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "present" => $this->getPresent(),
-            "stereo"  => $this->getStereo(),
-        ];
+        return JsonSerializer::serializeAudio($this);
     }
 
     /**

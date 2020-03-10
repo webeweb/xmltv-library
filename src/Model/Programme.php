@@ -28,6 +28,7 @@ use WBW\Library\XMLTV\Model\Attribute\ArrayUrlsTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 use WBW\Library\XMLTV\Serializer\XmlDeserializerHelper;
 
 /**
@@ -363,40 +364,7 @@ class Programme extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "audio"           => static::serializeModel($this->getAudio()),
-            "categories"      => static::serializeArray($this->getCategories()),
-            "channel"         => $this->getChannel(),
-            "clumpIdx"        => $this->getClumpIdx(),
-            "countries"       => static::serializeArray($this->getCountries()),
-            "credits"         => static::serializeModel($this->getCredits()),
-            "date"            => static::serializeModel($this->getDate()),
-            "descs"           => static::serializeArray($this->getDescs()),
-            "episodeNums"     => static::serializeArray($this->getEpisodeNums()),
-            "icons"           => static::serializeArray($this->getIcons()),
-            "keywords"        => static::serializeArray($this->getKeywords()),
-            "language"        => static::serializeModel($this->getLanguage()),
-            "lastChance"      => static::serializeModel($this->getLastChance()),
-            "length"          => static::serializeModel($this->getLength()),
-            "new"             => $this->getNew(),
-            "origLanguage"    => static::serializeModel($this->getOrigLanguage()),
-            "pdcStart"        => $this->getPdcStart(),
-            "premiere"        => static::serializeModel($this->getPremiere()),
-            "previouslyShown" => static::serializeModel($this->getPreviouslyShown()),
-            "ratings"         => static::serializeArray($this->getRatings()),
-            "reviews"         => static::serializeArray($this->getReviews()),
-            "starRatings"     => static::serializeArray($this->getStarRatings()),
-            "start"           => $this->getStart(),
-            "secondaryTitles" => static::serializeArray($this->getSecondaryTitles()),
-            "showView"        => $this->getShowView(),
-            "stop"            => $this->getStop(),
-            "subtitles"       => static::serializeArray($this->getSubtitles()),
-            "titles"          => static::serializeArray($this->getTitles()),
-            "urls"            => static::serializeArray($this->getUrls()),
-            "video"           => static::serializeModel($this->getVideo()),
-            "videoPlus"       => $this->getVideoPlus(),
-            "vpsStart"        => $this->getVpsStart(),
-        ];
+        return JsonSerializer::serializeProgramme($this);
     }
 
     /**

@@ -13,6 +13,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
 use WBW\Library\Core\Model\Attribute\StringLangTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Language.
@@ -29,9 +30,6 @@ class Language extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "content" => $this->getContent(),
-            "lang"    => $this->getLang(),
-        ];
+        return JsonSerializer::serializeLanguage($this);
     }
 }

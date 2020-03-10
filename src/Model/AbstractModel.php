@@ -32,36 +32,4 @@ abstract class AbstractModel implements JsonSerializable {
     public function __construct() {
         // NOTHING TO DO.
     }
-
-    /**
-     * Serialize an array.
-     *
-     * @param AbstractModel[] $models The models.
-     * @return array Returns the serialized array.
-     */
-    public static function serializeArray(array $models) {
-
-        $output = [];
-
-        foreach ($models as $current) {
-            $output[] = static::serializeModel($current);
-        }
-
-        return $output;
-    }
-
-    /**
-     * Serialize a model.
-     *
-     * @param AbstractModel|null $model The model.
-     * @return array Returns the serialized model.
-     */
-    public static function serializeModel(AbstractModel $model = null) {
-
-        if (null === $model) {
-            return null;
-        }
-
-        return $model->jsonSerialize();
-    }
 }

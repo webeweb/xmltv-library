@@ -12,6 +12,7 @@
 namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * Aspect.
@@ -27,8 +28,6 @@ class Aspect extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "content" => $this->getContent(),
-        ];
+        return JsonSerializer::serializeAspect($this);
     }
 }

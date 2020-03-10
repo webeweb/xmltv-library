@@ -17,6 +17,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\XMLTV\Model\Attribute\ArrayChannelsTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayProgrammesTrait;
+use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
  * TV.
@@ -160,16 +161,7 @@ class Tv extends AbstractModel {
      * {@inheritDoc}
      */
     public function jsonSerialize() {
-        return [
-            "channels"          => static::serializeArray($this->getChannels()),
-            "date"              => $this->getDate(),
-            "generatorInfoName" => $this->getGeneratorInfoName(),
-            "generatorInfoUrl"  => $this->getGeneratorInfoUrl(),
-            "sourceDataUrl"     => $this->getSourceDataUrl(),
-            "sourceInfoName"    => $this->getSourceInfoName(),
-            "sourceInfoUrl"     => $this->getSourceInfoUrl(),
-            "programmes"        => static::serializeArray($this->getProgrammes()),
-        ];
+        return JsonSerializer::serializeTv($this);
     }
 
     /**
