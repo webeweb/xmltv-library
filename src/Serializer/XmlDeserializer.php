@@ -65,7 +65,7 @@ use WBW\Library\XMLTV\Model\Writer;
 class XmlDeserializer {
 
     /**
-     * Deserializes an actor node.
+     * Deserialize an actor node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Actor Returns the actor.
@@ -82,7 +82,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes an adapter node.
+     * Deserialize an adapter node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Adapter Returns the adapter.
@@ -98,7 +98,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes an aspect node.
+     * Deserialize an aspect node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Aspect Returns the aspect.
@@ -114,7 +114,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes an audio node.
+     * Deserialize an audio node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Audio Returns the audio.
@@ -132,7 +132,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a category node.
+     * Deserialize a category node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Category Returns the category.
@@ -149,7 +149,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a channel node.
+     * Deserialize a channel node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Channel Returns the channel.
@@ -169,7 +169,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a colour node.
+     * Deserialize a colour node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Colour Returns the colour.
@@ -185,7 +185,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a commentator node.
+     * Deserialize a commentator node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Commentator Returns the commentator.
@@ -201,7 +201,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a composer node.
+     * Deserialize a composer node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Composer Returns the composer.
@@ -217,7 +217,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a country node.
+     * Deserialize a country node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Country Returns the country.
@@ -234,7 +234,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a credits node.
+     * Deserialize a credits node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Credits Returns the credits.
@@ -260,7 +260,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a date node.
+     * Deserialize a date node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Date Returns the date.
@@ -276,7 +276,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a description node.
+     * Deserialize a description node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Desc Returns the description.
@@ -293,7 +293,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a director node.
+     * Deserialize a director node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Director Returns the director.
@@ -309,7 +309,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a display name node.
+     * Deserialize a display name node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return DisplayName Returns the display name.
@@ -326,7 +326,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes an editor node.
+     * Deserialize an editor node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Editor Returns the editor.
@@ -342,7 +342,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a episode number node.
+     * Deserialize a episode number node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return EpisodeNum Returns the episode number.
@@ -359,7 +359,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a guest node.
+     * Deserialize a guest node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Guest Returns the guest.
@@ -375,7 +375,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes an icon node.
+     * Deserialize an icon node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Icon Returns the icon.
@@ -393,7 +393,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a keyword node.
+     * Deserialize a keyword node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Keyword Returns the keyword.
@@ -410,7 +410,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a language node.
+     * Deserialize a language node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Language Returns the language.
@@ -427,7 +427,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a last chance node.
+     * Deserialize a last chance node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return LastChance Returns the last chance.
@@ -444,7 +444,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a length node.
+     * Deserialize a length node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Length Returns the length.
@@ -461,7 +461,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes an original language node.
+     * Deserialize an original language node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return OrigLanguage Returns the original language.
@@ -478,7 +478,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a premiere node.
+     * Deserialize a premiere node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Premiere Returns the premiere.
@@ -495,7 +495,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a present node.
+     * Deserialize a present node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Present Returns the present.
@@ -511,7 +511,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a presenter node.
+     * Deserialize a presenter node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Presenter Returns the presenter.
@@ -527,7 +527,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a previously shown node.
+     * Deserialize a previously shown node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return PreviouslyShown Returns the previously shown.
@@ -544,7 +544,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a producer node.
+     * Deserialize a producer node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Producer Returns the producer.
@@ -560,7 +560,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a programme node.
+     * Deserialize a programme node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Programme Returns the programme.
@@ -610,7 +610,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a quality node.
+     * Deserialize a quality node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Quality Returns the quality.
@@ -626,7 +626,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a rating node.
+     * Deserialize a rating node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Rating Returns the rating.
@@ -645,7 +645,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a review node.
+     * Deserialize a review node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Review Returns the review.
@@ -664,7 +664,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a sub-title node.
+     * Deserialize a sub-title node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return SecondaryTitle Returns the sub-title.
@@ -681,7 +681,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a star rating node.
+     * Deserialize a star rating node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return StarRating Returns the star rating.
@@ -699,7 +699,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a stereo node.
+     * Deserialize a stereo node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Stereo Returns the stereo.
@@ -715,7 +715,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a subtitles node.
+     * Deserialize a subtitles node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Subtitles Returns the subtitles.
@@ -733,7 +733,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a title node.
+     * Deserialize a title node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Title Returns the title.
@@ -750,7 +750,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a TV node.
+     * Deserialize a TV node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Tv Returns the TV.
@@ -776,7 +776,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes an URL node.
+     * Deserialize an URL node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Url Returns the URL.
@@ -792,7 +792,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a value node.
+     * Deserialize a value node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Value Returns the value.
@@ -808,7 +808,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a video node.
+     * Deserialize a video node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Video Returns the video.
@@ -828,7 +828,7 @@ class XmlDeserializer {
     }
 
     /**
-     * Deserializes a writer node.
+     * Deserialize a writer node.
      *
      * @param DOMNode $domNode The DOM node.
      * @return Writer Returns the writer.

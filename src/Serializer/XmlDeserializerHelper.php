@@ -33,7 +33,7 @@ class XmlDeserializerHelper {
     protected static $logger;
 
     /**
-     * Deserializes a child node.
+     * Deserialize a child node.
      *
      * @param DOMNode $domNode The DOM node.
      * @param string $nodeName The node name.
@@ -52,7 +52,7 @@ class XmlDeserializerHelper {
     }
 
     /**
-     * Deserializes the child nodes.
+     * Deserialize the child nodes.
      *
      * @param DOMNode $domNode The DOM node.
      * @param string $nodeName The node name.
@@ -71,7 +71,7 @@ class XmlDeserializerHelper {
     }
 
     /**
-     * Deserializes a date/time.
+     * Deserialize a date/time.
      *
      * @param string $value The date/time.
      * @return DateTime|null Returns the date/time in case of success, null otherwise.
