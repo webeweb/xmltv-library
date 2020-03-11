@@ -25,6 +25,20 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class XmlDeserializerHelperTest extends AbstractTestCase {
 
     /**
+     * Tests the deserializeDateTime() method.
+     *
+     * @return void
+     */
+    public function testDeserializeDateTime() {
+
+        $res = XmlDeserializerHelper::deserializeDateTime("20190731180000 +0200");
+        $this->assertInstanceOf(DateTime::class, $res);
+        $this->assertEquals("2019-07-31 18:00:00", $res->format("Y-m-d H:i:s"));
+
+        $this->assertNull(XmlDeserializerHelper::deserializeDateTime("exception"));
+    }
+
+    /**
      * Tests the getDOMAttributeValue() method.
      *
      * @return void
@@ -88,20 +102,6 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
 
         $this->assertEquals("addDisplayName", XmlDeserializerHelper::getMethodName("add", "display-name"));
         $this->assertEquals("setUrl", XmlDeserializerHelper::getMethodName("set", "url"));
-    }
-
-    /**
-     * Tests the deserializeDateTime() method.
-     *
-     * @return void
-     */
-    public function testDeserializeDateTime() {
-
-        $res = XmlDeserializerHelper::deserializeDateTime("20190731180000 +0200");
-        $this->assertInstanceOf(DateTime::class, $res);
-        $this->assertEquals("2019-07-31 18:00:00", $res->format("Y-m-d H:i:s"));
-
-        $this->assertNull(XmlDeserializerHelper::deserializeDateTime("exception"));
     }
 
     /**

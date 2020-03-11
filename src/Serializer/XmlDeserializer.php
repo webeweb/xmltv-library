@@ -569,7 +569,7 @@ class XmlDeserializer {
 
         XmlDeserializerHelper::log($domNode);
 
-        $newNode = XmlDeserializerHelper::getDOMNodeByName( "new", $domNode->childNodes);
+        $newNode = XmlDeserializerHelper::getDOMNodeByName("new", $domNode->childNodes);
 
         $model = new Programme();
         $model->setChannel(XmlDeserializerHelper::getDOMAttributeValue($domNode, "channel"));
