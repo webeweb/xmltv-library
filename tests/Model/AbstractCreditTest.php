@@ -42,6 +42,7 @@ class AbstractCreditTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new TestCredit();
+        $obj->setContent("content");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(1, $res);
