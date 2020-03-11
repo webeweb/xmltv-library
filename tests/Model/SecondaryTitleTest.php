@@ -43,11 +43,28 @@ class SecondaryTitleTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new SecondaryTitle();
+        $obj->setContent("content");
+        $obj->setLang("lang");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("lang", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new SecondaryTitle();
+        $obj->setContent("content");
+        $obj->setLang("lang");
+
+        $res = '<sub-title lang="lang">content</sub-title>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

@@ -33,4 +33,18 @@ class CommentatorTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Commentator();
+        $obj->setContent("content");
+
+        $res = '<commentator>content</commentator>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }

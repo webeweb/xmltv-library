@@ -33,4 +33,18 @@ class ProducerTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Producer();
+        $obj->setContent("content");
+
+        $res = '<producer>content</producer>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }

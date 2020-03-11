@@ -46,6 +46,10 @@ class ChannelTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Channel();
+        $obj->setId("id");
+        $obj->addDisplayName($this->displayName);
+        $obj->addIcon($this->icon);
+        $obj->addUrl($this->url);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(4, $res);
@@ -67,5 +71,22 @@ class ChannelTest extends AbstractTestCase {
 
         $obj->setId("id");
         $this->assertEquals("id", $obj->getId());
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Channel();
+        $obj->setId("id");
+        $obj->addDisplayName($this->displayName);
+        $obj->addIcon($this->icon);
+        $obj->addUrl($this->url);
+
+        $res = '<channel id="id"><display-name></display-name><icon/><url></url></channel>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

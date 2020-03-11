@@ -13,6 +13,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Colour.
@@ -29,5 +30,12 @@ class Colour extends AbstractModel {
      */
     public function jsonSerialize() {
         return JsonSerializer::serializeColour($this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeColour($this);
     }
 }

@@ -21,4 +21,10 @@ use WBW\Library\XMLTV\Model\AbstractCredit;
  */
 class TestCredit extends AbstractCredit {
 
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return "";
+    }
 }

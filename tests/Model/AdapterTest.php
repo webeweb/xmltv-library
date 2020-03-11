@@ -33,4 +33,18 @@ class AdapterTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Adapter();
+        $obj->setContent("content");
+
+        $res = '<adapter>content</adapter>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }

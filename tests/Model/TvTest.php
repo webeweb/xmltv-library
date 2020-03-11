@@ -49,6 +49,14 @@ class TvTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Tv();
+        $obj->setDate("date");
+        $obj->setGeneratorInfoName("generatorInfoName");
+        $obj->setGeneratorInfoURL("generatorInfoUrl");
+        $obj->setSourceDataUrl("sourceDataUrl");
+        $obj->setSourceInfoName("sourceInfoName");
+        $obj->setSourceInfoUrl("sourceInfoUrl");
+        $obj->addChannel($this->channel);
+        $obj->addProgramme($this->programme);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(8, $res);
@@ -139,5 +147,26 @@ class TvTest extends AbstractTestCase {
 
         $obj->setSourceInfoUrl("sourceInfoUrl");
         $this->assertEquals("sourceInfoUrl", $obj->getSourceInfoUrl());
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Tv();
+        $obj->setDate("date");
+        $obj->setGeneratorInfoName("generatorInfoName");
+        $obj->setGeneratorInfoURL("generatorInfoUrl");
+        $obj->setSourceDataUrl("sourceDataUrl");
+        $obj->setSourceInfoName("sourceInfoName");
+        $obj->setSourceInfoUrl("sourceInfoUrl");
+        $obj->addChannel($this->channel);
+        $obj->addProgramme($this->programme);
+
+        $res = '<tv date="date" generator-info-name="generatorInfoName" generator-info-url="generatorInfoUrl" source-data-url="sourceDataUrl" source-info-name="sourceInfoName" source-info-url="sourceInfoUrl"><channel></channel><programme></programme></tv>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

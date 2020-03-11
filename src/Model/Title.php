@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
 use WBW\Library\Core\Model\Attribute\StringLangTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Title.
@@ -31,5 +32,12 @@ class Title extends AbstractModel {
      */
     public function jsonSerialize() {
         return JsonSerializer::serializeTitle($this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeTitle($this);
     }
 }

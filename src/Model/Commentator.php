@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
+
 /**
  * Commentator.
  *
@@ -19,4 +21,10 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Commentator extends AbstractCredit {
 
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeCommentator($this);
+    }
 }

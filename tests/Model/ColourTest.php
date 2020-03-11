@@ -42,10 +42,25 @@ class ColourTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Colour();
+        $obj->setContent("content");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(1, $res);
 
         $this->assertArrayHasKey("content", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Colour();
+        $obj->setContent("content");
+
+        $res = '<colour>content</colour>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

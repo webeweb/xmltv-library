@@ -12,7 +12,6 @@
 namespace WBW\Library\XMLTV\Tests\Model;
 
 use WBW\Library\XMLTV\Model\Audio;
-use WBW\Library\XMLTV\Model\Stereo;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
@@ -44,6 +43,8 @@ class AudioTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Audio();
+        $obj->setPresent($this->present);
+        $obj->setStereo($this->stereo);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
@@ -59,12 +60,24 @@ class AudioTest extends AbstractTestCase {
      */
     public function testSetStereo() {
 
-        // Set a Stereo mock.
-        $stereo = new Stereo();
-
         $obj = new Audio();
 
-        $obj->setStereo($stereo);
-        $this->assertSame($stereo, $obj->getStereo());
+        $obj->setStereo($this->stereo);
+        $this->assertSame($this->stereo, $obj->getStereo());
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Audio();
+        $obj->setPresent($this->present);
+        $obj->setStereo($this->stereo);
+
+        $res = '<audio><present></present><stereo></stereo></audio>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

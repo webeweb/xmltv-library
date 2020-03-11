@@ -13,6 +13,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Present.
@@ -29,5 +30,12 @@ class Present extends AbstractModel {
      */
     public function jsonSerialize() {
         return JsonSerializer::serializePresent($this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializePresent($this);
     }
 }

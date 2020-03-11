@@ -11,9 +11,6 @@
 
 namespace WBW\Library\XMLTV\Tests\Model;
 
-use WBW\Library\XMLTV\Model\Aspect;
-use WBW\Library\XMLTV\Model\Colour;
-use WBW\Library\XMLTV\Model\Quality;
 use WBW\Library\XMLTV\Model\Video;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
@@ -48,6 +45,10 @@ class VideoTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Video();
+        $obj->setAspect($this->aspect);
+        $obj->setColour($this->colour);
+        $obj->setPresent($this->present);
+        $obj->setQuality($this->quality);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(4, $res);
@@ -65,13 +66,10 @@ class VideoTest extends AbstractTestCase {
      */
     public function testSetAspect() {
 
-        // Set an Aspect mock.
-        $aspect = new Aspect();
-
         $obj = new Video();
 
-        $obj->setAspect($aspect);
-        $this->assertSame($aspect, $obj->getAspect());
+        $obj->setAspect($this->aspect);
+        $this->assertSame($this->aspect, $obj->getAspect());
     }
 
     /**
@@ -81,13 +79,10 @@ class VideoTest extends AbstractTestCase {
      */
     public function testSetColour() {
 
-        // Set a Colour mock.
-        $aspect = new Colour();
-
         $obj = new Video();
 
-        $obj->setColour($aspect);
-        $this->assertSame($aspect, $obj->getColour());
+        $obj->setColour($this->colour);
+        $this->assertSame($this->colour, $obj->getColour());
     }
 
     /**
@@ -97,12 +92,26 @@ class VideoTest extends AbstractTestCase {
      */
     public function testSetQuality() {
 
-        // Set a Quality mock.
-        $aspect = new Quality();
-
         $obj = new Video();
 
-        $obj->setQuality($aspect);
-        $this->assertSame($aspect, $obj->getQuality());
+        $obj->setQuality($this->quality);
+        $this->assertSame($this->quality, $obj->getQuality());
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Video();
+        $obj->setAspect($this->aspect);
+        $obj->setColour($this->colour);
+        $obj->setPresent($this->present);
+        $obj->setQuality($this->quality);
+
+        $res = '<video><present></present><colour></colour><aspect></aspect><quality></quality></video>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

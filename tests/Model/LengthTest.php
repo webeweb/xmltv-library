@@ -64,6 +64,8 @@ class LengthTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Length();
+        $obj->setContent("content");
+        $obj->setUnits(Length::UNITS_HOURS);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
@@ -103,5 +105,20 @@ class LengthTest extends AbstractTestCase {
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The units \"units\" is invalid", $ex->getMessage());
         }
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Length();
+        $obj->setContent("content");
+        $obj->setUnits(Length::UNITS_HOURS);
+
+        $res = '<length units="hours">content</length>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

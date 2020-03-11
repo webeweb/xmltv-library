@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
+
 /**
  * Guest.
  *
@@ -19,4 +21,10 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Guest extends AbstractCredit {
 
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeGuest($this);
+    }
 }

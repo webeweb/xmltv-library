@@ -43,11 +43,28 @@ class OrigLanguageTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new OrigLanguage();
+        $obj->setContent("content");
+        $obj->setLang("lang");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("lang", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new OrigLanguage();
+        $obj->setContent("content");
+        $obj->setLang("lang");
+
+        $res = '<orig-language lang="lang">content</orig-language>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

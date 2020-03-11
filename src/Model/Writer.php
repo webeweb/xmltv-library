@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
+
 /**
  * Writer.
  *
@@ -19,4 +21,10 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Writer extends AbstractCredit {
 
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeWriter($this);
+    }
 }

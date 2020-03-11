@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
 use WBW\Library\Core\Model\Attribute\StringLangTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Keyword.
@@ -31,5 +32,12 @@ class Keyword extends AbstractModel {
      */
     public function jsonSerialize() {
         return JsonSerializer::serializeKeyword($this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeKeyword($this);
     }
 }

@@ -12,6 +12,7 @@
 namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Actor.
@@ -53,5 +54,12 @@ class Actor extends AbstractCredit {
     public function setRole($role) {
         $this->role = $role;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeActor($this);
     }
 }

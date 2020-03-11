@@ -25,11 +25,12 @@ use WBW\Library\XMLTV\Model\Attribute\ArrayStarRatingsTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArraySubtitlesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayTitlesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayUrlsTrait;
-use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
+use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
 use WBW\Library\XMLTV\Serializer\XmlDeserializerHelper;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Programme.
@@ -541,5 +542,12 @@ class Programme extends AbstractModel {
     public function setVpsStart($vpsStart) {
         $this->vpsStart = $vpsStart;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeProgramme($this);
     }
 }

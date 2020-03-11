@@ -43,11 +43,28 @@ class TitleTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Title();
+        $obj->setContent("content");
+        $obj->setLang("lang");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("lang", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Title();
+        $obj->setContent("content");
+        $obj->setLang("lang");
+
+        $res = '<title lang="lang">content</title>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

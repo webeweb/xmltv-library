@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
 use WBW\Library\Core\Model\Attribute\StringLangTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Secondary title.
@@ -31,5 +32,12 @@ class SecondaryTitle extends AbstractModel {
      */
     public function jsonSerialize() {
         return JsonSerializer::serializeSecondaryTitle($this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeSecondaryTitle($this);
     }
 }

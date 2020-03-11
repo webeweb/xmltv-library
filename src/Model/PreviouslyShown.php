@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Previously shown.
@@ -31,5 +32,12 @@ class PreviouslyShown extends AbstractModel {
      */
     public function jsonSerialize() {
         return JsonSerializer::serializePreviouslyShown($this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializePreviouslyShown($this);
     }
 }

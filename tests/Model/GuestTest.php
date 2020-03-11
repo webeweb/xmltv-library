@@ -33,4 +33,18 @@ class GuestTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Guest();
+        $obj->setContent("content");
+
+        $res = '<guest>content</guest>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }

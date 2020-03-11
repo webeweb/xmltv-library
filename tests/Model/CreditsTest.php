@@ -51,6 +51,16 @@ class CreditsTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Credits();
+        $obj->addActor($this->actor);
+        $obj->addAdapter($this->adapter);
+        $obj->addCommentator($this->commentator);
+        $obj->addComposer($this->composer);
+        $obj->addDirector($this->director);
+        $obj->addEditor($this->editor);
+        $obj->addGuest($this->guest);
+        $obj->addPresenter($this->presenter);
+        $obj->addProducer($this->producer);
+        $obj->addWriter($this->writer);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(10, $res);
@@ -65,5 +75,28 @@ class CreditsTest extends AbstractTestCase {
         $this->assertArrayHasKey("presenters", $res);
         $this->assertArrayHasKey("producers", $res);
         $this->assertArrayHasKey("writers", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Credits();
+        $obj->addActor($this->actor);
+        $obj->addAdapter($this->adapter);
+        $obj->addCommentator($this->commentator);
+        $obj->addComposer($this->composer);
+        $obj->addDirector($this->director);
+        $obj->addEditor($this->editor);
+        $obj->addGuest($this->guest);
+        $obj->addPresenter($this->presenter);
+        $obj->addProducer($this->producer);
+        $obj->addWriter($this->writer);
+
+        $res = '<credits><director></director><actor></actor><writer></writer><adapter></adapter><producer></producer><composer></composer><editor></editor><presenter></presenter><commentator></commentator><guest></guest></credits>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

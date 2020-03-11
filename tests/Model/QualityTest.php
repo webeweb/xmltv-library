@@ -42,10 +42,25 @@ class QualityTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Quality();
+        $obj->setContent("content");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(1, $res);
 
         $this->assertArrayHasKey("content", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Quality();
+        $obj->setContent("content");
+
+        $res = '<quality>content</quality>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

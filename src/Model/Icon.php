@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use WBW\Library\Core\Model\Attribute\IntegerHeightTrait;
 use WBW\Library\Core\Model\Attribute\IntegerWidthTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Icon.
@@ -58,5 +59,12 @@ class Icon extends AbstractModel {
     public function setSrc($src) {
         $this->src = $src;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeIcon($this);
     }
 }

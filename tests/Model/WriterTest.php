@@ -33,4 +33,18 @@ class WriterTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Writer();
+        $obj->setContent("content");
+
+        $res = '<writer>content</writer>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }

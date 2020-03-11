@@ -43,11 +43,28 @@ class KeywordTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Keyword();
+        $obj->setContent("content");
+        $obj->setLang("lang");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("lang", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Keyword();
+        $obj->setContent("content");
+        $obj->setLang("lang");
+
+        $res = '<keyword lang="lang">content</keyword>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

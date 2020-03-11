@@ -11,6 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
+
 /**
  * Presenter.
  *
@@ -19,4 +21,10 @@ namespace WBW\Library\XMLTV\Model;
  */
 class Presenter extends AbstractCredit {
 
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializePresenter($this);
+    }
 }

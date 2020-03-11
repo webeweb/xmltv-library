@@ -64,6 +64,8 @@ class SubtitlesTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Subtitles();
+        $obj->setLanguage($this->language);
+        $obj->setType(Subtitles::TYPE_DEAF_SIGNED);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
@@ -103,5 +105,20 @@ class SubtitlesTest extends AbstractTestCase {
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The type \"type\" is invalid", $ex->getMessage());
         }
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Subtitles();
+        $obj->setLanguage($this->language);
+        $obj->setType(Subtitles::TYPE_DEAF_SIGNED);
+
+        $res = '<subtitles type="deaf-signed"><language></language></subtitles>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

@@ -43,11 +43,28 @@ class CountryTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Country();
+        $obj->setContent("content");
+        $obj->setLang("lang");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("lang", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Country();
+        $obj->setContent("content");
+        $obj->setLang("lang");
+
+        $res = '<country lang="lang">content</country>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

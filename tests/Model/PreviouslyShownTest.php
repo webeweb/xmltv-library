@@ -44,11 +44,28 @@ class PreviouslyShownTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new PreviouslyShown();
+        $obj->setChannel("channel");
+        $obj->setStart("start");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("channel", $res);
         $this->assertArrayHasKey("start", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new PreviouslyShown();
+        $obj->setChannel("channel");
+        $obj->setStart("start");
+
+        $res = '<previously-shown channel="channel" start="start"/>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

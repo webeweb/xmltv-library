@@ -13,6 +13,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\XMLTV\Model\Attribute\PresentTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Video.
@@ -110,5 +111,12 @@ class Video extends AbstractModel {
     public function setQuality(Quality $quality = null) {
         $this->quality = $quality;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeVideo($this);
     }
 }

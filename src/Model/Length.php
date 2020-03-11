@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Model;
 use InvalidArgumentException;
 use WBW\Library\Core\Model\Attribute\StringContentTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Length.
@@ -95,5 +96,12 @@ class Length extends AbstractModel {
         }
         $this->units = $units;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeLength($this);
     }
 }

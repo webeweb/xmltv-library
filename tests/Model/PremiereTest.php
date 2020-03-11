@@ -43,11 +43,28 @@ class PremiereTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Premiere();
+        $obj->setContent("content");
+        $obj->setLang("lang");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("lang", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Premiere();
+        $obj->setContent("content");
+        $obj->setLang("lang");
+
+        $res = '<premiere lang="lang">content</premiere>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

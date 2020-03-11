@@ -43,6 +43,8 @@ class ActorTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Actor();
+        $obj->setContent("content");
+        $obj->setRole("role");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
@@ -62,5 +64,20 @@ class ActorTest extends AbstractTestCase {
 
         $obj->setRole("role");
         $this->assertEquals("role", $obj->getRole());
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Actor();
+        $obj->setContent("content");
+        $obj->setRole("role");
+
+        $res = '<actor role="role">content</actor>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

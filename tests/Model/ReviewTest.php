@@ -64,6 +64,10 @@ class ReviewTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Review();
+        $obj->setLang("lang");
+        $obj->setReviewer("reviewer");
+        $obj->setSource("source");
+        $obj->setType(Review::TYPE_TEXT);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(4, $res);
@@ -131,5 +135,22 @@ class ReviewTest extends AbstractTestCase {
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals("The type \"type\" is invalid", $ex->getMessage());
         }
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Review();
+        $obj->setLang("lang");
+        $obj->setReviewer("reviewer");
+        $obj->setSource("source");
+        $obj->setType(Review::TYPE_TEXT);
+
+        $res = '<review type="text" source="source" reviewer="reviewer" lang="lang"/>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

@@ -43,11 +43,28 @@ class StarRatingTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new StarRating();
+        $obj->setValue($this->value);
+        $obj->addIcon($this->icon);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("icons", $res);
         $this->assertArrayHasKey("value", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new StarRating();
+        $obj->setValue($this->value);
+        $obj->addIcon($this->icon);
+
+        $res = '<star-rating><value></value><icon/></star-rating>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

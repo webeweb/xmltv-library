@@ -44,6 +44,8 @@ class RatingTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Rating();
+        $obj->setValue($this->value);
+        $obj->addIcon($this->icon);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(3, $res);
@@ -64,5 +66,20 @@ class RatingTest extends AbstractTestCase {
 
         $obj->setSystem("system");
         $this->assertEquals("system", $obj->getSystem());
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Rating();
+        $obj->setValue($this->value);
+        $obj->addIcon($this->icon);
+
+        $res = '<rating><value></value><icon/></rating>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

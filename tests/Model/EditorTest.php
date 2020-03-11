@@ -33,4 +33,18 @@ class EditorTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Editor();
+        $obj->setContent("content");
+
+        $res = '<editor>content</editor>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }

@@ -22,6 +22,7 @@ use WBW\Library\XMLTV\Model\Attribute\ArrayPresentersTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayProducersTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayWritersTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Credits.
@@ -64,5 +65,12 @@ class Credits extends AbstractModel {
      */
     public function jsonSerialize() {
         return JsonSerializer::serializeCredits($this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeCredits($this);
     }
 }

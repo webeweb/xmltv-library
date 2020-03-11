@@ -60,11 +60,28 @@ class EpisodeNumTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new EpisodeNum();
+        $obj->setContent("content");
+        $obj->setSystem(EpisodeNum::SYSTEM_ONSCREEN);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("system", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new EpisodeNum();
+        $obj->setContent("content");
+        $obj->setSystem(EpisodeNum::SYSTEM_ONSCREEN);
+
+        $res = '<episode-num system="onscreen">content</episode-num>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

@@ -42,10 +42,25 @@ class ValueTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Value();
+        $obj->setContent("content");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(1, $res);
 
         $this->assertArrayHasKey("content", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Value();
+        $obj->setContent("content");
+
+        $res = '<value>content</value>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

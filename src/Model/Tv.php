@@ -18,6 +18,7 @@ namespace WBW\Library\XMLTV\Model;
 use WBW\Library\XMLTV\Model\Attribute\ArrayChannelsTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayProgrammesTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * TV.
@@ -228,5 +229,12 @@ class Tv extends AbstractModel {
     public function setSourceInfoUrl($sourceInfoUrl) {
         $this->sourceInfoUrl = $sourceInfoUrl;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeTv($this);
     }
 }

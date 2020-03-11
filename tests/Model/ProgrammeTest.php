@@ -87,6 +87,38 @@ class ProgrammeTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Programme();
+        $obj->setAudio($this->audio);
+        $obj->setChannel("channel");
+        $obj->setClumpIdx("clumpIdx");
+        $obj->setCredits($this->credits);
+        $obj->setDate($this->date);
+        $obj->setLanguage($this->language);
+        $obj->setLastChance($this->lastChance);
+        $obj->setLength($this->length);
+        $obj->setNew(true);
+        $obj->setOrigLanguage($this->origLanguage);
+        $obj->setPdcStart("pdcStart");
+        $obj->setPremiere($this->premiere);
+        $obj->setPreviouslyShown($this->previouslyShown);
+        $obj->setShowView("showView");
+        $obj->setStart("start");
+        $obj->setStop("stop");
+        $obj->setVideo($this->video);
+        $obj->setVideoPlus("videoPlus");
+        $obj->setVpsStart("vpsStart");
+        $obj->addCategory($this->category);
+        $obj->addCountry($this->country);
+        $obj->addDesc($this->desc);
+        $obj->addEpisodeNum($this->episodeNum);
+        $obj->addIcon($this->icon);
+        $obj->addKeyword($this->keyword);
+        $obj->addRating($this->rating);
+        $obj->addReview($this->review);
+        $obj->addSecondaryTitle($this->secondaryTitle);
+        $obj->addStarRating($this->starRating);
+        $obj->addSubtitles($this->subtitles);
+        $obj->addTitle($this->title);
+        $obj->addUrl($this->url);
 
         $res = $obj->jsonSerialize();
         $this->assertCount(32, $res);
@@ -379,5 +411,50 @@ class ProgrammeTest extends AbstractTestCase {
         $this->assertEquals("20190930200000 +0200", $obj->getVpsStart());
 
         $this->assertInstanceOf(DateTime::class, $obj->getVpsStartDateTime());
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Programme();
+        $obj->setAudio($this->audio);
+        $obj->setChannel("channel");
+        $obj->setClumpIdx("clumpIdx");
+        $obj->setCredits($this->credits);
+        $obj->setDate($this->date);
+        $obj->setLanguage($this->language);
+        $obj->setLastChance($this->lastChance);
+        $obj->setLength($this->length);
+        $obj->setNew(true);
+        $obj->setOrigLanguage($this->origLanguage);
+        $obj->setPdcStart("pdcStart");
+        $obj->setPremiere($this->premiere);
+        $obj->setPreviouslyShown($this->previouslyShown);
+        $obj->setShowView("showView");
+        $obj->setStart("start");
+        $obj->setStop("stop");
+        $obj->setVideo($this->video);
+        $obj->setVideoPlus("videoPlus");
+        $obj->setVpsStart("vpsStart");
+        $obj->addCategory($this->category);
+        $obj->addCountry($this->country);
+        $obj->addDesc($this->desc);
+        $obj->addEpisodeNum($this->episodeNum);
+        $obj->addIcon($this->icon);
+        $obj->addKeyword($this->keyword);
+        $obj->addRating($this->rating);
+        $obj->addReview($this->review);
+        $obj->addSecondaryTitle($this->secondaryTitle);
+        $obj->addStarRating($this->starRating);
+        $obj->addSubtitles($this->subtitles);
+        $obj->addTitle($this->title);
+        $obj->addUrl($this->url);
+
+        $res = '<programme start="start" stop="stop" pdc-start="pdcStart" vps-start="vpsStart" showview="showView" videoplus="videoPlus" channel="channel" clumpidx="clumpIdx"><title></title><sub-title></sub-title><desc></desc><credits></credits><date></date><category></category><keyword></keyword><language></language><orig-language></orig-language><length></length><icon/><url></url><country></country><episode-num></episode-num><video></video><audio></audio><previously-shown/><premiere></premiere><last-chance></last-chance><new/><subtitles></subtitles><rating></rating><star-rating></star-rating><review/></programme>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

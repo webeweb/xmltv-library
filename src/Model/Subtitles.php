@@ -15,6 +15,7 @@ use InvalidArgumentException;
 use WBW\Library\Core\Model\Attribute\StringTypeTrait;
 use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Subtitles.
@@ -81,5 +82,12 @@ class Subtitles extends AbstractModel {
         }
         $this->type = $type;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeSubtitles($this);
     }
 }

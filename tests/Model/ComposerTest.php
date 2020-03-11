@@ -33,4 +33,18 @@ class ComposerTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Composer();
+        $obj->setContent("content");
+
+        $res = '<composer>content</composer>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }

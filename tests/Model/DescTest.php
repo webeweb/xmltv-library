@@ -43,11 +43,28 @@ class DescTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Desc();
+        $obj->setContent("content");
+        $obj->setLang("lang");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
         $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("lang", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Desc();
+        $obj->setContent("content");
+        $obj->setLang("lang");
+
+        $res = '<desc lang="lang">content</desc>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

@@ -42,10 +42,25 @@ class DateTest extends AbstractTestCase {
     public function testJsonSerialize() {
 
         $obj = new Date();
+        $obj->setContent("content");
 
         $res = $obj->jsonSerialize();
         $this->assertCount(1, $res);
 
         $this->assertArrayHasKey("content", $res);
+    }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Date();
+        $obj->setContent("content");
+
+        $res = '<date>content</date>';
+        $this->assertEquals($res, $obj->xmlSerialize());
     }
 }

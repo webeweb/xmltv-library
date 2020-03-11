@@ -16,6 +16,7 @@ use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayProgrammesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayUrlsTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
  * Channel.
@@ -74,5 +75,12 @@ class Channel extends AbstractModel {
     public function setId($id) {
         $this->id = $id;
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function xmlSerialize() {
+        return XmlSerializer::serializeChannel($this);
     }
 }

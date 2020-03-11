@@ -48,4 +48,18 @@ class PresentTest extends AbstractTestCase {
 
         $this->assertArrayHasKey("content", $res);
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Present();
+        $obj->setContent("content");
+
+        $res = '<present>content</present>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }

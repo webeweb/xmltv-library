@@ -33,4 +33,18 @@ class DirectorTest extends AbstractTestCase {
 
         $this->assertNull($obj->getContent());
     }
+
+    /**
+     * Tests the xmlSerialize() method.
+     *
+     * @return void
+     */
+    public function testXmlSerialize() {
+
+        $obj = new Director();
+        $obj->setContent("content");
+
+        $res = '<director>content</director>';
+        $this->assertEquals($res, $obj->xmlSerialize());
+    }
 }
