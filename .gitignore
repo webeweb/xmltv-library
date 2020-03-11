@@ -2,4 +2,5 @@
 /composer.lock
 /vendor/*
 
-/xmltv.xml
+/ReaderTest.testGetXML.xml
+/WriterTest.testWriteXML.xml
