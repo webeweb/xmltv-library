@@ -11,16 +11,16 @@
         <sub-title lang="secondary-title-lang">Secondary title</sub-title>
         <desc lang="desc-lang">Desc</desc>
         <credits>
-            <actor role="role">Actor</actor>
-            <adapter>Adapter</adapter>
-            <commentator>Commentator</commentator>
-            <composer>Composer</composer>
             <director>Director</director>
-            <editor>Editor</editor>
-            <guest>Guest</guest>
-            <presenter>Presenter</presenter>
-            <producer>Producer</producer>
+            <actor role="role">Actor</actor>
             <writer>Writer</writer>
+            <adapter>Adapter</adapter>
+            <producer>Producer</producer>
+            <composer>Composer</composer>
+            <editor>Editor</editor>
+            <presenter>Presenter</presenter>
+            <commentator>Commentator</commentator>
+            <guest>Guest</guest>
         </credits>
         <date>1970</date>
         <category lang="category-lang">Category</category>
@@ -57,6 +57,6 @@
             <value>Value</value>
             <icon src="src" width="1920" height="1080"/>
         </star-rating>
-        <review type="text" source="source" reviewer="reviewer" lang="review-lang">Review</review>
+        <review type="text" source="source" reviewer="reviewer" lang="review-lang"/>
     </programme>
 </tv>
