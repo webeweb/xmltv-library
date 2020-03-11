@@ -30,6 +30,15 @@ use WBW\Library\XMLTV\Statistic\Statistics;
 class Reader {
 
     /**
+     * Get the DTD.
+     *
+     * @return string Returns the DTD.
+     */
+    public static function getDtd() {
+        return realpath(__DIR__ . "/../Resources/dtd/xmltv.dtd");
+    }
+
+    /**
      * Get an XML file.
      *
      * @param string $url The URL.
@@ -38,7 +47,7 @@ class Reader {
      * @return Tv Returns the TV.
      * @throws Exception Throws an exception if an error occurs.
      */
-    public static function getXML($url, $filename, LoggerInterface $logger = null) {
+    public static function getXml($url, $filename, LoggerInterface $logger = null) {
 
         $stream = fopen($filename, "w");
 
@@ -53,7 +62,7 @@ class Reader {
 
         $client->request("GET", $url);
 
-        return static::readXML($filename, $logger);
+        return static::readXml($filename, $logger);
     }
 
     /**
@@ -63,10 +72,11 @@ class Reader {
      * @param LoggerInterface $logger The logger.
      * @return Tv Returns the TV.
      */
-    public static function readXML($filename, LoggerInterface $logger = null) {
+    public static function readXml($filename, LoggerInterface $logger = null) {
 
         $document = new DOMDocument();
         $document->load($filename);
+        @$document->schemaValidate(Reader::getDtd());
 
         XmlDeserializerHelper::setLogger($logger);
 
@@ -79,7 +89,7 @@ class Reader {
      * @param string $filename The filename.
      * @return Statistic[] Returns the statistics.
      */
-    public static function statXML($filename) {
+    public static function statXml($filename) {
 
         $document = new DOMDocument();
         $document->load($filename);

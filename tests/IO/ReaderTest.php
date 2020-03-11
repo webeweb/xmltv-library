@@ -28,12 +28,33 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class ReaderTest extends AbstractTestCase {
 
     /**
-     * Tests the getXML() method.
+     * Output.
+     *
+     * @var string
+     */
+    private $output;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set an Output mock.
+        $this->output = getcwd() . "/ReaderTest.testGetXML.xml";
+
+        if (true === file_exists($this->output)) {
+            unlink($this->output);
+        }
+    }
+
+    /**
+     * Tests the getXml() method.
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testGetXML() {
+    public function testGetXml() {
 
         // Set a Logger mock.
         $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
@@ -41,21 +62,18 @@ class ReaderTest extends AbstractTestCase {
         // Set an URL mock.
         $url = "https://raw.githubusercontent.com/webeweb/xmltv-library/master/tests/Fixtures/xmltv.xml";
 
-        // Set a filename mock.
-        $filename = getcwd() . "/xmltv.xml";
-
-        $res = Reader::getXML($url, $filename, $logger);
+        $res = Reader::getXml($url, $this->output, $logger);
         $this->assertInstanceOf(Tv::class, $res);
     }
 
     /**
-     * Tests the readXML() method.
+     * Tests the readXml() method.
      *
      * @return void
      */
-    public function testReadXML() {
+    public function testReadXml() {
 
-        $res = Reader::readXML($this->filename);
+        $res = Reader::readXml($this->filename);
         $this->assertInstanceOf(Tv::class, $res);
 
         $this->assertInstanceOf(Channel::class, $res->getChannels()[0]);
@@ -68,13 +86,13 @@ class ReaderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the statXML() method.
+     * Tests the statXml() method.
      *
      * @return void
      */
-    public function testStatXML() {
+    public function testStatXml() {
 
-        $res = Reader::statXML($this->filename);
+        $res = Reader::statXml($this->filename);
         $this->assertCount(85, $res);
     }
 }
