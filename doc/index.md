@@ -1,18 +1,18 @@
 DOCUMENTATION
 =============
 
-Load an XML file:
+Get an XML file:
 
 ```php
 /** @var Tv $tv */
-$tv = Reader::loadXML("http://path/to/file.xml");
+$tv = Reader::getXml("http://path/to/file.xml");
 ```
 
 Read an XML file:
 
 ```php
 /** @var Tv $tv */
-$tv = Reader::readXML("/path/to/file.xml");
+$tv = Reader::readXml("/path/to/file.xml");
 
 /** @var Channel $channel */
 foreach($tv->getChannels() as $channel) {
@@ -257,4 +257,18 @@ foreach($tv->getChannels() as $channel) {
         }
     }
 }
+```
+
+Stat an XML file:
+
+```php
+/** @var Statistics $statistics */
+$statistics = Reader::statXml("/path/to/file.xml");
+```
+
+Write an XML file:
+
+```php
+/** @var Tv $tv */
+Writer::writeXml($tv ,"/path/to/file.xml");
 ```
