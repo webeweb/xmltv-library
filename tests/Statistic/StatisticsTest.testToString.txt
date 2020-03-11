@@ -1,9 +1,9 @@
 ------------------ --------------------- -------- -------- -------- -----------
  Node               Attribute             Count    Min      Max      Avg
 ------------------ --------------------- -------- -------- -------- -----------
- tv                                            1      828      828      828[\.,]00
+ tv                                            1      791      791      791[\.,]00
  tv                 date                       1        4        4        4[\.,]00
- #text                                       145        0       22        1[\.,]82
+ #text                                       144        0       22        2[\.,]14
  tv                 generator-info-name        1       19       19       19[\.,]00
  tv                 generator-info-url         1       18       18       18[\.,]00
  tv                 source-data-url            1       15       15       15[\.,]00
@@ -18,7 +18,7 @@
  icon               width                      4        4        4        4[\.,]00
  icon               height                     4        4        4        4[\.,]00
  url                                           2        3        3        3[\.,]00
- programme                                     1      776      776      776[\.,]00
+ programme                                     1      739      739      739[\.,]00
  programme          start                      1       20       20       20[\.,]00
  programme          stop                       1       20       20       20[\.,]00
  programme          pdc-start                  1       20       20       20[\.,]00
@@ -34,17 +34,17 @@
  desc                                          1        4        4        4[\.,]00
  desc               lang                       1        9        9        9[\.,]00
  credits                                       1      190      190      190[\.,]00
+ director                                      1        8        8        8[\.,]00
  actor                                         1        5        5        5[\.,]00
  actor              role                       1        4        4        4[\.,]00
- adapter                                       1        7        7        7[\.,]00
- commentator                                   1       11       11       11[\.,]00
- composer                                      1        8        8        8[\.,]00
- director                                      1        8        8        8[\.,]00
- editor                                        1        6        6        6[\.,]00
- guest                                         1        5        5        5[\.,]00
- presenter                                     1        9        9        9[\.,]00
- producer                                      1        8        8        8[\.,]00
  writer                                        1        6        6        6[\.,]00
+ adapter                                       1        7        7        7[\.,]00
+ producer                                      1        8        8        8[\.,]00
+ composer                                      1        8        8        8[\.,]00
+ editor                                        1        6        6        6[\.,]00
+ presenter                                     1        9        9        9[\.,]00
+ commentator                                   1       11       11       11[\.,]00
+ guest                                         1        5        5        5[\.,]00
  date                                          1        4        4        4[\.,]00
  category                                      1        8        8        8[\.,]00
  category           lang                       1       13       13       13[\.,]00
@@ -81,7 +81,7 @@
  rating             system                     1       13       13       13[\.,]00
  value                                         2        5        5        5[\.,]00
  star-rating                                   1        5        5        5[\.,]00
- review                                        1        6        6        6[\.,]00
+ review                                        1        0        0        0[\.,]00
  review             type                       1        4        4        4[\.,]00
  review             source                     1        6        6        6[\.,]00
  review             reviewer                   1        8        8        8[\.,]00
