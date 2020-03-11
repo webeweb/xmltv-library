@@ -76,7 +76,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(1);
+            ->childNodes->item(3);
 
         $res = XmlDeserializer::deserializeActor($node);
         $this->assertInstanceOf(Actor::class, $res);
@@ -96,7 +96,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(3);
+            ->childNodes->item(7);
 
         $res = XmlDeserializer::deserializeAdapter($node);
         $this->assertInstanceOf(Adapter::class, $res);
@@ -210,7 +210,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(5);
+            ->childNodes->item(17);
 
         $res = XmlDeserializer::deserializeCommentator($node);
         $this->assertInstanceOf(Commentator::class, $res);
@@ -229,7 +229,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(7);
+            ->childNodes->item(11);
 
         $res = XmlDeserializer::deserializeComposer($node);
         $this->assertInstanceOf(Composer::class, $res);
@@ -331,7 +331,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(9);
+            ->childNodes->item(1);
 
         $res = XmlDeserializer::deserializeDirector($node);
         $this->assertInstanceOf(Director::class, $res);
@@ -369,7 +369,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(11);
+            ->childNodes->item(13);
 
         $res = XmlDeserializer::deserializeEditor($node);
         $this->assertInstanceOf(Editor::class, $res);
@@ -407,7 +407,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(13);
+            ->childNodes->item(19);
 
         $res = XmlDeserializer::deserializeGuest($node);
         $this->assertInstanceOf(Guest::class, $res);
@@ -617,7 +617,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(17);
+            ->childNodes->item(9);
 
         $res = XmlDeserializer::deserializeProducer($node);
         $this->assertInstanceOf(Producer::class, $res);
@@ -920,7 +920,7 @@ class XmlDeserializerTest extends AbstractTestCase {
         $node = $this->document->documentElement
             ->childNodes->item(3)
             ->childNodes->item(7)
-            ->childNodes->item(19);
+            ->childNodes->item(5);
 
         $res = XmlDeserializer::deserializeWriter($node);
         $this->assertInstanceOf(Writer::class, $res);
