@@ -108,8 +108,8 @@ class JsonSerializer {
      */
     public static function serializeAudio(Audio $model) {
         return [
-            "present" => $model->getPresent(),
-            "stereo"  => $model->getStereo(),
+            "present" => JsonSerializer::serializeModel($model->getPresent()),
+            "stereo"  => JsonSerializer::serializeModel($model->getStereo()),
         ];
     }
 
