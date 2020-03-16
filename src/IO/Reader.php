@@ -74,11 +74,13 @@ class Reader {
      */
     public static function readXml($filename, LoggerInterface $logger = null) {
 
+        XmlDeserializerHelper::setLogger($logger);
+
         $document = new DOMDocument();
         $document->load($filename);
-        @$document->schemaValidate(Reader::getDtd());
-
-        XmlDeserializerHelper::setLogger($logger);
+        if (false === @$document->schemaValidate(Reader::getDtd()) && null !== $logger) {
+            $logger->warning("Schema validation failed", ["_filename" => $filename]);
+        }
 
         return XmlDeserializer::deserializeTv($document->documentElement);
     }
