@@ -12,6 +12,7 @@
 namespace WBW\Library\XMLTV\IO;
 
 use DOMDocument;
+use Psr\Log\LoggerInterface;
 use WBW\Library\XMLTV\Model\Tv;
 
 /**
@@ -27,9 +28,10 @@ class Writer {
      *
      * @param Tv $tv The tv.
      * @param string $filename The filename.
+     * @param LoggerInterface $logger The logger.
      * @return int Returns the number of bytes written.
      */
-    public static function writeXml(Tv $tv, $filename) {
+    public static function writeXml(Tv $tv, $filename, LoggerInterface $logger = null) {
 
         $xml = [
             '<?xml version="1.0" encoding="utf-8"?>',
@@ -39,7 +41,9 @@ class Writer {
 
         $document = new DOMDocument();
         $document->loadXML(implode("", $xml));
-        @$document->schemaValidate(Reader::getDtd());
+        if (false === @$document->schemaValidate(Reader::getDtd()) && null !== $logger) {
+            $logger->warning("Schema validation failed");
+        }
 
         $document->formatOutput = true;
 
