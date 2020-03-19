@@ -185,6 +185,6 @@ class StatisticsTest extends AbstractTestCase {
         $obj->parse($node);
 
         $res = file_get_contents(__DIR__ . "/StatisticsTest.testToString.txt");
-        $this->assertRegExp("/${res}/", $obj->__toString() . "\n");
+        $this->assertRegExp("/{$res}/", $obj->__toString() . "\n");
     }
 }
