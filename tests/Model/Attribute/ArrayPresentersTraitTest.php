@@ -36,8 +36,8 @@ class ArrayPresentersTraitTest extends AbstractTestCase {
         $obj = new TestArrayPresentersTrait();
 
         $obj->addPresenter($presenter);
-        $this->assertCount(1, $obj->getPresenters());
         $this->assertSame($presenter, $obj->getPresenters()[0]);
+        $this->assertEquals(1, $obj->getNumberPresenters());
         $this->assertTrue($obj->hasPresenters());
     }
 
@@ -51,6 +51,7 @@ class ArrayPresentersTraitTest extends AbstractTestCase {
         $obj = new TestArrayPresentersTrait();
 
         $this->assertEquals([], $obj->getPresenters());
+        $this->assertEquals(0, $obj->getNumberPresenters());
         $this->assertFalse($obj->hasPresenters());
     }
 }
