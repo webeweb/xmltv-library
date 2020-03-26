@@ -36,8 +36,8 @@ class ArraySecondaryTitlesTraitTest extends AbstractTestCase {
         $obj = new TestArraySecondaryTitlesTrait();
 
         $obj->addSecondaryTitle($secondaryTitle);
-        $this->assertCount(1, $obj->getSecondaryTitles());
         $this->assertSame($secondaryTitle, $obj->getSecondaryTitles()[0]);
+        $this->assertEquals(1, $obj->getNumberSecondaryTitles());
         $this->assertTrue($obj->hasSecondaryTitles());
     }
 
@@ -51,6 +51,7 @@ class ArraySecondaryTitlesTraitTest extends AbstractTestCase {
         $obj = new TestArraySecondaryTitlesTrait();
 
         $this->assertEquals([], $obj->getSecondaryTitles());
+        $this->assertEquals(0, $obj->getNumberSecondaryTitles());
         $this->assertFalse($obj->hasSecondaryTitles());
     }
 }

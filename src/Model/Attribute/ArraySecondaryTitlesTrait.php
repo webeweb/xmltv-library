@@ -39,6 +39,15 @@ trait ArraySecondaryTitlesTrait {
     }
 
     /**
+     * Get the number of secondary titles.
+     *
+     * @return int Returns the number of secondary titles.
+     */
+    public function getNumberSecondaryTitles() {
+        return count($this->getSecondaryTitles());
+    }
+
+    /**
      * Get the secondary titles.
      *
      * @return SecondaryTitle[] Returns the secondary titles.
@@ -53,7 +62,7 @@ trait ArraySecondaryTitlesTrait {
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasSecondaryTitles() {
-        return 1 <= count($this->secondaryTitles);
+        return 1 <= $this->getNumberSecondaryTitles();
     }
 
     /**
