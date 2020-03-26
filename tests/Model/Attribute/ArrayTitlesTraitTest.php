@@ -36,8 +36,8 @@ class ArrayTitlesTraitTest extends AbstractTestCase {
         $obj = new TestArrayTitlesTrait();
 
         $obj->addTitle($title);
-        $this->assertCount(1, $obj->getTitles());
         $this->assertSame($title, $obj->getTitles()[0]);
+        $this->assertEquals(1, $obj->getNumberTitles());
         $this->assertTrue($obj->hasTitles());
     }
 
@@ -51,6 +51,7 @@ class ArrayTitlesTraitTest extends AbstractTestCase {
         $obj = new TestArrayTitlesTrait();
 
         $this->assertEquals([], $obj->getTitles());
+        $this->assertEquals(0, $obj->getNumberTitles());
         $this->assertFalse($obj->hasTitles());
     }
 }
