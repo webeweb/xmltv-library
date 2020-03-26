@@ -36,8 +36,8 @@ class ArrayDescsTraitTest extends AbstractTestCase {
         $obj = new TestArrayDescsTrait();
 
         $obj->addDesc($desc);
-        $this->assertCount(1, $obj->getDescs());
         $this->assertSame($desc, $obj->getDescs()[0]);
+        $this->assertEquals(1, $obj->getNumberDescs());
         $this->assertTrue($obj->hasDescs());
     }
 
@@ -51,6 +51,7 @@ class ArrayDescsTraitTest extends AbstractTestCase {
         $obj = new TestArrayDescsTrait();
 
         $this->assertEquals([], $obj->getDescs());
+        $this->assertEquals(0, $obj->getNumberDescs());
         $this->assertFalse($obj->hasDescs());
     }
 }

@@ -48,12 +48,21 @@ trait ArrayDescsTrait {
     }
 
     /**
+     * Get the number of descriptions.
+     *
+     * @return int Returns the number of descriptions.
+     */
+    public function getNumberDescs() {
+        return count($this->getDescs());
+    }
+
+    /**
      * Determines if this instance has descriptions.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasDescs() {
-        return 1 <= count($this->descs);
+        return 1 <= $this->getNumberDescs();
     }
 
     /**
