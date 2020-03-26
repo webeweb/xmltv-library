@@ -36,8 +36,8 @@ class ArrayKeywordsTraitTest extends AbstractTestCase {
         $obj = new TestArrayKeywordsTrait();
 
         $obj->addKeyword($keyword);
-        $this->assertCount(1, $obj->getKeywords());
         $this->assertSame($keyword, $obj->getKeywords()[0]);
+        $this->assertEquals(1, $obj->getNumberKeywords());
         $this->assertTrue($obj->hasKeywords());
     }
 
@@ -51,6 +51,7 @@ class ArrayKeywordsTraitTest extends AbstractTestCase {
         $obj = new TestArrayKeywordsTrait();
 
         $this->assertEquals([], $obj->getKeywords());
+        $this->assertEquals(0, $obj->getNumberKeywords());
         $this->assertFalse($obj->hasKeywords());
     }
 }

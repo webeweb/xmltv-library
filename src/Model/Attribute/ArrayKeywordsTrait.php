@@ -48,12 +48,21 @@ trait ArrayKeywordsTrait {
     }
 
     /**
+     * Get the number of keywords.
+     *
+     * @return int Returns the number of keywords.
+     */
+    public function getNumberKeywords() {
+        return count($this->getKeywords());
+    }
+
+    /**
      * Determines if this instance has keywords.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasKeywords() {
-        return 1 <= count($this->keywords);
+        return 1 <= $this->getNumberKeywords();
     }
 
     /**
