@@ -48,12 +48,21 @@ trait ArrayAdaptersTrait {
     }
 
     /**
+     * Get the number of adapters.
+     *
+     * @return int Returns the number of adapters.
+     */
+    public function getNumberAdapters() {
+        return count($this->getAdapters());
+    }
+
+    /**
      * Determines if this instance has adapters.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasAdapters() {
-        return 1 <= count($this->adapters);
+        return 1 <= $this->getNumberAdapters();
     }
 
     /**

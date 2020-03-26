@@ -36,8 +36,8 @@ class ArrayAdaptersTraitTest extends AbstractTestCase {
         $obj = new TestArrayAdaptersTrait();
 
         $obj->addAdapter($adapter);
-        $this->assertCount(1, $obj->getAdapters());
         $this->assertSame($adapter, $obj->getAdapters()[0]);
+        $this->assertEquals(1, $obj->getNumberAdapters());
         $this->assertTrue($obj->hasAdapters());
     }
 
@@ -51,6 +51,7 @@ class ArrayAdaptersTraitTest extends AbstractTestCase {
         $obj = new TestArrayAdaptersTrait();
 
         $this->assertEquals([], $obj->getAdapters());
+        $this->assertEquals(0, $obj->getNumberAdapters());
         $this->assertFalse($obj->hasAdapters());
     }
 }
