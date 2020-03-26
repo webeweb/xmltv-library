@@ -36,8 +36,8 @@ class ArrayCountriesTraitTest extends AbstractTestCase {
         $obj = new TestArrayCountriesTrait();
 
         $obj->addCountry($country);
-        $this->assertCount(1, $obj->getCountries());
         $this->assertSame($country, $obj->getCountries()[0]);
+        $this->assertEquals(1, $obj->getNumberCountries());
         $this->assertTrue($obj->hasCountries());
     }
 
@@ -51,6 +51,7 @@ class ArrayCountriesTraitTest extends AbstractTestCase {
         $obj = new TestArrayCountriesTrait();
 
         $this->assertEquals([], $obj->getCountries());
+        $this->assertEquals(0, $obj->getNumberCountries());
         $this->assertFalse($obj->hasCountries());
     }
 }

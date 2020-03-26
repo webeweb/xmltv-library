@@ -48,12 +48,21 @@ trait ArrayCountriesTrait {
     }
 
     /**
+     * Get the number of countries.
+     *
+     * @return int Returns the number of countries.
+     */
+    public function getNumberCountries() {
+        return count($this->getCountries());
+    }
+
+    /**
      * Determines if this programme has countries.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasCountries() {
-        return 1 <= count($this->countries);
+        return 1 <= $this->getNumberCountries();
     }
 
     /**
