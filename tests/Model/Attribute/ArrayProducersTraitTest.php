@@ -36,8 +36,8 @@ class ArrayProducersTraitTest extends AbstractTestCase {
         $obj = new TestArrayProducersTrait();
 
         $obj->addProducer($producer);
-        $this->assertCount(1, $obj->getProducers());
         $this->assertSame($producer, $obj->getProducers()[0]);
+        $this->assertEquals(1, $obj->getNumberProducers());
         $this->assertTrue($obj->hasProducers());
     }
 
@@ -51,6 +51,7 @@ class ArrayProducersTraitTest extends AbstractTestCase {
         $obj = new TestArrayProducersTrait();
 
         $this->assertEquals([], $obj->getProducers());
+        $this->assertEquals(0, $obj->getNumberProducers());
         $this->assertFalse($obj->hasProducers());
     }
 }
