@@ -36,8 +36,8 @@ class ArrayEpisodeNumsTraitTest extends AbstractTestCase {
         $obj = new TestArrayEpisodeNumsTrait();
 
         $obj->addEpisodeNum($episodeNum);
-        $this->assertCount(1, $obj->getEpisodeNums());
         $this->assertSame($episodeNum, $obj->getEpisodeNums()[0]);
+        $this->assertEquals(1, $obj->getNumberEpisodeNums());
         $this->assertTrue($obj->hasEpisodeNums());
     }
 
@@ -51,6 +51,7 @@ class ArrayEpisodeNumsTraitTest extends AbstractTestCase {
         $obj = new TestArrayEpisodeNumsTrait();
 
         $this->assertEquals([], $obj->getEpisodeNums());
+        $this->assertEquals(0, $obj->getNumberEpisodeNums());
         $this->assertFalse($obj->hasEpisodeNums());
     }
 }

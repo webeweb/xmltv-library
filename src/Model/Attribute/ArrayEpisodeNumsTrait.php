@@ -48,12 +48,21 @@ trait ArrayEpisodeNumsTrait {
     }
 
     /**
+     * Get the number of episode nums.
+     *
+     * @return int Returns the number of episode nums.
+     */
+    public function getNumberEpisodeNums() {
+        return count($this->getEpisodeNums());
+    }
+
+    /**
      * Determines if this instance has episode numbers.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasEpisodeNums() {
-        return 1 <= count($this->episodeNums);
+        return 1 <= $this->getNumberEpisodeNums();
     }
 
     /**
