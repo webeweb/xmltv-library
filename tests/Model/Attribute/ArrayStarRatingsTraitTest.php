@@ -36,8 +36,8 @@ class ArrayStarRatingsTraitTest extends AbstractTestCase {
         $obj = new TestArrayStarRatingsTrait();
 
         $obj->addStarRating($starRating);
-        $this->assertCount(1, $obj->getStarRatings());
         $this->assertSame($starRating, $obj->getStarRatings()[0]);
+        $this->assertEquals(1, $obj->getNumberStarRatings());
         $this->assertTrue($obj->hasStarRatings());
     }
 
@@ -51,6 +51,7 @@ class ArrayStarRatingsTraitTest extends AbstractTestCase {
         $obj = new TestArrayStarRatingsTrait();
 
         $this->assertEquals([], $obj->getStarRatings());
+        $this->assertEquals(0, $obj->getNumberStarRatings());
         $this->assertFalse($obj->hasStarRatings());
     }
 }

@@ -39,6 +39,15 @@ trait ArrayStarRatingsTrait {
     }
 
     /**
+     * Get the number of star ratings.
+     *
+     * @return int Returns the number of star ratings.
+     */
+    public function getNumberStarRatings() {
+        return count($this->getStarRatings());
+    }
+
+    /**
      * Get the star ratings.
      *
      * @return StarRating[] Returns the star ratings.
@@ -53,7 +62,7 @@ trait ArrayStarRatingsTrait {
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasStarRatings() {
-        return 1 <= count($this->starRatings);
+        return 1 <= $this->getNumberStarRatings();
     }
 
     /**
