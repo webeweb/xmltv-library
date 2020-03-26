@@ -36,8 +36,8 @@ class ArrayWritersTraitTest extends AbstractTestCase {
         $obj = new TestArrayWritersTrait();
 
         $obj->addWriter($writer);
-        $this->assertCount(1, $obj->getWriters());
         $this->assertSame($writer, $obj->getWriters()[0]);
+        $this->assertEquals(1, $obj->getNumberWriters());
         $this->assertTrue($obj->hasWriters());
     }
 
@@ -51,6 +51,7 @@ class ArrayWritersTraitTest extends AbstractTestCase {
         $obj = new TestArrayWritersTrait();
 
         $this->assertEquals([], $obj->getWriters());
+        $this->assertEquals(0, $obj->getNumberWriters());
         $this->assertFalse($obj->hasWriters());
     }
 }

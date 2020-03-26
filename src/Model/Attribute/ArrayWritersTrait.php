@@ -39,6 +39,15 @@ trait ArrayWritersTrait {
     }
 
     /**
+     * Get the number of writers.
+     *
+     * @return int Returns the number of writers.
+     */
+    public function getNumberWriters() {
+        return count($this->getWriters());
+    }
+
+    /**
      * Get the writers.
      *
      * @return Writer[] Returns the writers.
@@ -53,7 +62,7 @@ trait ArrayWritersTrait {
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasWriters() {
-        return 1 <= count($this->writers);
+        return 1 <= $this->getNumberWriters();
     }
 
     /**
