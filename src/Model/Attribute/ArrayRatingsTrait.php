@@ -39,6 +39,15 @@ trait ArrayRatingsTrait {
     }
 
     /**
+     * Get the number of ratings.
+     *
+     * @return int Returns the number of ratings.
+     */
+    public function getNumberRatings() {
+        return count($this->getRatings());
+    }
+
+    /**
      * Get the ratings.
      *
      * @return Rating[] Returns the ratings.
@@ -53,7 +62,7 @@ trait ArrayRatingsTrait {
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasRatings() {
-        return 1 <= count($this->ratings);
+        return 1 <= $this->getNumberRatings();
     }
 
     /**
