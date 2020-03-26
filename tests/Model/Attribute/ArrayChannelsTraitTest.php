@@ -36,8 +36,8 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
         $obj = new TestArrayChannelsTrait();
 
         $obj->addChannel($channel);
-        $this->assertCount(1, $obj->getChannels());
         $this->assertSame($channel, $obj->getChannels()[0]);
+        $this->assertEquals(1, $obj->getNumberChannels());
         $this->assertTrue($obj->hasChannels());
     }
 
@@ -51,6 +51,7 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
         $obj = new TestArrayChannelsTrait();
 
         $this->assertEquals([], $obj->getChannels());
+        $this->assertEquals(0, $obj->getNumberChannels());
         $this->assertFalse($obj->hasChannels());
     }
 

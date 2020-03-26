@@ -48,12 +48,21 @@ trait ArrayChannelsTrait {
     }
 
     /**
+     * Get the number of channels.
+     *
+     * @return int Returns the number of channels.
+     */
+    public function getNumberChannels() {
+        return count($this->getChannels());
+    }
+
+    /**
      * Determines if this instance has channels.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasChannels() {
-        return 1 <= count($this->channels);
+        return 1 <= $this->getNumberChannels();
     }
 
     /**
