@@ -36,8 +36,8 @@ class ArrayGuestsTraitTest extends AbstractTestCase {
         $obj = new TestArrayGuestsTrait();
 
         $obj->addGuest($guest);
-        $this->assertCount(1, $obj->getGuests());
         $this->assertSame($guest, $obj->getGuests()[0]);
+        $this->assertEquals(1, $obj->getNumberGuests());
         $this->assertTrue($obj->hasGuests());
     }
 
@@ -51,6 +51,7 @@ class ArrayGuestsTraitTest extends AbstractTestCase {
         $obj = new TestArrayGuestsTrait();
 
         $this->assertEquals([], $obj->getGuests());
+        $this->assertEquals(0, $obj->getNumberGuests());
         $this->assertFalse($obj->hasGuests());
     }
 }

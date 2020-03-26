@@ -48,12 +48,21 @@ trait ArrayGuestsTrait {
     }
 
     /**
+     * Get the number of guests.
+     *
+     * @return int Returns the number of guests.
+     */
+    public function getNumberGuests() {
+        return count($this->getGuests());
+    }
+
+    /**
      * Determines if this instance has guests.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasGuests() {
-        return 1 <= count($this->guests);
+        return 1 <= $this->getNumberGuests();
     }
 
     /**
