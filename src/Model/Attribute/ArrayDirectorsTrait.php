@@ -48,12 +48,21 @@ trait ArrayDirectorsTrait {
     }
 
     /**
+     * Get the number of directors.
+     *
+     * @return int Returns the number of directors.
+     */
+    public function getNumberDirectors() {
+        return count($this->getDirectors());
+    }
+
+    /**
      * Determines if this instance has directors.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasDirectors() {
-        return 1 <= count($this->directors);
+        return 1 <= $this->getNumberDirectors();
     }
 
     /**

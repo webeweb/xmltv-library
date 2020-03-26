@@ -36,8 +36,8 @@ class ArrayDirectorsTraitTest extends AbstractTestCase {
         $obj = new TestArrayDirectorsTrait();
 
         $obj->addDirector($director);
-        $this->assertCount(1, $obj->getDirectors());
         $this->assertSame($director, $obj->getDirectors()[0]);
+        $this->assertEquals(1, $obj->getNumberDirectors());
         $this->assertTrue($obj->hasDirectors());
     }
 
@@ -51,6 +51,7 @@ class ArrayDirectorsTraitTest extends AbstractTestCase {
         $obj = new TestArrayDirectorsTrait();
 
         $this->assertEquals([], $obj->getDirectors());
+        $this->assertEquals(0, $obj->getNumberDirectors());
         $this->assertFalse($obj->hasDirectors());
     }
 }
