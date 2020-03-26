@@ -39,9 +39,18 @@ trait ArrayUrlsTrait {
     }
 
     /**
-     * Get the urls.
+     * Get the number of URLs.
      *
-     * @return Url[] Returns the urls.
+     * @return int Returns the number of URLs.
+     */
+    public function getNumberUrls() {
+        return count($this->getUrls());
+    }
+
+    /**
+     * Get the URLs.
+     *
+     * @return Url[] Returns the URLs.
      */
     public function getUrls() {
         return $this->urls;
@@ -52,8 +61,8 @@ trait ArrayUrlsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasURLs() {
-        return 1 <= count($this->urls);
+    public function hasUrls() {
+        return 1 <= $this->getNumberUrls();
     }
 
     /**

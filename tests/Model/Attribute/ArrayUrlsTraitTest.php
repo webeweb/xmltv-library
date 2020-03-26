@@ -36,8 +36,8 @@ class ArrayUrlsTraitTest extends AbstractTestCase {
         $obj = new TestArrayUrlsTrait();
 
         $obj->addUrl($url);
-        $this->assertCount(1, $obj->getUrls());
         $this->assertSame($url, $obj->getUrls()[0]);
+        $this->assertEquals(1, $obj->getNumberUrls());
         $this->assertTrue($obj->hasUrls());
     }
 
@@ -51,6 +51,7 @@ class ArrayUrlsTraitTest extends AbstractTestCase {
         $obj = new TestArrayUrlsTrait();
 
         $this->assertEquals([], $obj->getUrls());
+        $this->assertEquals(0, $obj->getNumberUrls());
         $this->assertFalse($obj->hasUrls());
     }
 }
