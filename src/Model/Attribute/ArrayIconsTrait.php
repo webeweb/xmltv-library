@@ -48,12 +48,21 @@ trait ArrayIconsTrait {
     }
 
     /**
+     * Get the number of icons.
+     *
+     * @return int Returns the number of icons.
+     */
+    public function getNumberIcons() {
+        return count($this->getIcons());
+    }
+
+    /**
      * Determines if this instance has icons.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasIcons() {
-        return 1 <= count($this->icons);
+        return 1 <= $this->getNumberIcons();
     }
 
     /**

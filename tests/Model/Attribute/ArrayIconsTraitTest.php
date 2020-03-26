@@ -36,8 +36,8 @@ class ArrayIconsTraitTest extends AbstractTestCase {
         $obj = new TestArrayIconsTrait();
 
         $obj->addIcon($icon);
-        $this->assertCount(1, $obj->getIcons());
         $this->assertSame($icon, $obj->getIcons()[0]);
+        $this->assertEquals(1, $obj->getNumberIcons());
         $this->assertTrue($obj->hasIcons());
     }
 
@@ -51,6 +51,7 @@ class ArrayIconsTraitTest extends AbstractTestCase {
         $obj = new TestArrayIconsTrait();
 
         $this->assertEquals([], $obj->getIcons());
+        $this->assertEquals(0, $obj->getNumberIcons());
         $this->assertFalse($obj->hasIcons());
     }
 }
