@@ -36,8 +36,8 @@ class ArrayCommentatorsTraitTest extends AbstractTestCase {
         $obj = new TestArrayCommentatorsTrait();
 
         $obj->addCommentator($commentator);
-        $this->assertCount(1, $obj->getCommentators());
         $this->assertSame($commentator, $obj->getCommentators()[0]);
+        $this->assertEquals(1, $obj->getNumberCommentators());
         $this->assertTrue($obj->hasCommentators());
     }
 
@@ -51,6 +51,7 @@ class ArrayCommentatorsTraitTest extends AbstractTestCase {
         $obj = new TestArrayCommentatorsTrait();
 
         $this->assertEquals([], $obj->getCommentators());
+        $this->assertEquals(0, $obj->getNumberCommentators());
         $this->assertFalse($obj->hasCommentators());
     }
 }

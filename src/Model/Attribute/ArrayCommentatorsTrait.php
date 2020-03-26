@@ -48,12 +48,21 @@ trait ArrayCommentatorsTrait {
     }
 
     /**
+     * Get the number of commentators.
+     *
+     * @return int Returns the number of commentators.
+     */
+    public function getNumberCommentators() {
+        return count($this->getCommentators());
+    }
+
+    /**
      * Determines if this instance has commentators.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasCommentators() {
-        return 1 <= count($this->commentators);
+        return 1 <= $this->getNumberCommentators();
     }
 
     /**
