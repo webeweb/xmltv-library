@@ -36,8 +36,8 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
         $obj = new TestArrayProgrammesTrait();
 
         $obj->addProgramme($programme);
-        $this->assertCount(1, $obj->getProgrammes());
         $this->assertSame($programme, $obj->getProgrammes()[0]);
+        $this->assertEquals(1, $obj->getNumberProgrammes());
         $this->assertTrue($obj->hasProgrammes());
     }
 
@@ -51,6 +51,7 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
         $obj = new TestArrayProgrammesTrait();
 
         $this->assertEquals([], $obj->getProgrammes());
+        $this->assertEquals(0, $obj->getNumberProgrammes());
         $this->assertFalse($obj->hasProgrammes());
     }
 
