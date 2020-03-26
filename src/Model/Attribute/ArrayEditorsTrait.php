@@ -48,12 +48,21 @@ trait ArrayEditorsTrait {
     }
 
     /**
+     * Get the number of editors.
+     *
+     * @return int Returns the number of editors.
+     */
+    public function getNumberEditors() {
+        return count($this->getEditors());
+    }
+
+    /**
      * Determines if this instance has editors.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasEditors() {
-        return 1 <= count($this->editors);
+        return 1 <= $this->getNumberEditors();
     }
 
     /**

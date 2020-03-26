@@ -36,8 +36,8 @@ class ArrayEditorsTraitTest extends AbstractTestCase {
         $obj = new TestArrayEditorsTrait();
 
         $obj->addEditor($editor);
-        $this->assertCount(1, $obj->getEditors());
         $this->assertSame($editor, $obj->getEditors()[0]);
+        $this->assertEquals(1, $obj->getNumberEditors());
         $this->assertTrue($obj->hasEditors());
     }
 
@@ -51,6 +51,7 @@ class ArrayEditorsTraitTest extends AbstractTestCase {
         $obj = new TestArrayEditorsTrait();
 
         $this->assertEquals([], $obj->getEditors());
+        $this->assertEquals(0, $obj->getNumberEditors());
         $this->assertFalse($obj->hasEditors());
     }
 }
