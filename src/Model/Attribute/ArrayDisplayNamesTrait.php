@@ -48,12 +48,21 @@ trait ArrayDisplayNamesTrait {
     }
 
     /**
+     * Get the number of display names.
+     *
+     * @return int Returns the number of display names.
+     */
+    public function getNumberDisplayNames() {
+        return count($this->getDisplayNames());
+    }
+
+    /**
      * Determines if this channel has display names.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasDisplayNames() {
-        return 1 <= count($this->displayNames);
+        return 1 <= $this->getNumberDisplayNames();
     }
 
     /**

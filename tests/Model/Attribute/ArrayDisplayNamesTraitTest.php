@@ -36,8 +36,8 @@ class ArrayDisplayNamesTraitTest extends AbstractTestCase {
         $obj = new TestArrayDisplayNamesTrait();
 
         $obj->addDisplayName($displayName);
-        $this->assertCount(1, $obj->getDisplayNames());
         $this->assertSame($displayName, $obj->getDisplayNames()[0]);
+        $this->assertEquals(1, $obj->getNumberDisplayNames());
         $this->assertTrue($obj->hasDisplayNames());
     }
 
@@ -51,6 +51,7 @@ class ArrayDisplayNamesTraitTest extends AbstractTestCase {
         $obj = new TestArrayDisplayNamesTrait();
 
         $this->assertEquals([], $obj->getDisplayNames());
+        $this->assertEquals(0, $obj->getNumberDisplayNames());
         $this->assertFalse($obj->hasDisplayNames());
     }
 }
