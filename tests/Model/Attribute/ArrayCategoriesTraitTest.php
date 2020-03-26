@@ -36,8 +36,8 @@ class ArrayCategoriesTraitTest extends AbstractTestCase {
         $obj = new TestArrayCategoriesTrait();
 
         $obj->addCategory($category);
-        $this->assertCount(1, $obj->getCategories());
         $this->assertSame($category, $obj->getCategories()[0]);
+        $this->assertEquals(1, $obj->getNumberCategories());
         $this->assertTrue($obj->hasCategories());
     }
 
@@ -51,6 +51,7 @@ class ArrayCategoriesTraitTest extends AbstractTestCase {
         $obj = new TestArrayCategoriesTrait();
 
         $this->assertEquals([], $obj->getCategories());
+        $this->assertEquals(0, $obj->getNumberCategories());
         $this->assertFalse($obj->hasCategories());
     }
 }

@@ -48,12 +48,21 @@ trait ArrayCategoriesTrait {
     }
 
     /**
+     * Get the number of categories.
+     *
+     * @return int Returns the number of categories.
+     */
+    public function getNumberCategories() {
+        return count($this->getCategories());
+    }
+
+    /**
      * Determines if this programme has categories.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasCategories() {
-        return 1 <= count($this->categories);
+        return 1 <= $this->getNumberCategories();
     }
 
     /**
