@@ -36,8 +36,8 @@ class ArrayComposersTraitTest extends AbstractTestCase {
         $obj = new TestArrayComposersTrait();
 
         $obj->addComposer($composer);
-        $this->assertCount(1, $obj->getComposers());
         $this->assertSame($composer, $obj->getComposers()[0]);
+        $this->assertEquals(1, $obj->getNumberComposers());
         $this->assertTrue($obj->hasComposers());
     }
 
@@ -51,6 +51,7 @@ class ArrayComposersTraitTest extends AbstractTestCase {
         $obj = new TestArrayComposersTrait();
 
         $this->assertEquals([], $obj->getComposers());
+        $this->assertEquals(0, $obj->getNumberComposers());
         $this->assertFalse($obj->hasComposers());
     }
 }

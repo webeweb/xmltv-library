@@ -48,12 +48,21 @@ trait ArrayComposersTrait {
     }
 
     /**
+     * Get the number of composers.
+     *
+     * @return int Returns the number of composers.
+     */
+    public function getNumberComposers() {
+        return count($this->getComposers());
+    }
+
+    /**
      * Determines if this instance has composers.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasComposers() {
-        return 1 <= count($this->composers);
+        return 1 <= $this->getNumberComposers();
     }
 
     /**
