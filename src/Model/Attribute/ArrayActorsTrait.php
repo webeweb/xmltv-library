@@ -48,12 +48,21 @@ trait ArrayActorsTrait {
     }
 
     /**
+     * Get the number of actors.
+     *
+     * @return int Returns the number of actors.
+     */
+    public function getNumberActors() {
+        return count($this->getActors());
+    }
+
+    /**
      * Determines if this instance has actors.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
     public function hasActors() {
-        return 1 <= count($this->actors);
+        return 1 <= $this->getNumberActors();
     }
 
     /**

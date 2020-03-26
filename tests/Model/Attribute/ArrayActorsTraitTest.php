@@ -36,8 +36,8 @@ class ArrayActorsTraitTest extends AbstractTestCase {
         $obj = new TestArrayActorsTrait();
 
         $obj->addActor($actor);
-        $this->assertCount(1, $obj->getActors());
         $this->assertSame($actor, $obj->getActors()[0]);
+        $this->assertEquals(1, $obj->getNumberActors());
         $this->assertTrue($obj->hasActors());
     }
 
@@ -51,6 +51,7 @@ class ArrayActorsTraitTest extends AbstractTestCase {
         $obj = new TestArrayActorsTrait();
 
         $this->assertEquals([], $obj->getActors());
+        $this->assertEquals(0, $obj->getNumberActors());
         $this->assertFalse($obj->hasActors());
     }
 }
