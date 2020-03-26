@@ -36,8 +36,8 @@ class ArraySubtitlesTraitTest extends AbstractTestCase {
         $obj = new TestArraySubtitlesTrait();
 
         $obj->addSubtitles($subtitles);
-        $this->assertCount(1, $obj->getSubtitles());
         $this->assertSame($subtitles, $obj->getSubtitles()[0]);
+        $this->assertEquals(1, $obj->getNumberSubtitles());
         $this->assertTrue($obj->hasSubtitles());
     }
 
@@ -51,6 +51,7 @@ class ArraySubtitlesTraitTest extends AbstractTestCase {
         $obj = new TestArraySubtitlesTrait();
 
         $this->assertEquals([], $obj->getSubtitles());
+        $this->assertEquals(0, $obj->getNumberSubtitles());
         $this->assertFalse($obj->hasSubtitles());
     }
 }
