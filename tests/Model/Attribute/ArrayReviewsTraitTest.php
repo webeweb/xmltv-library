@@ -36,8 +36,8 @@ class ArrayReviewsTraitTest extends AbstractTestCase {
         $obj = new TestArrayReviewsTrait();
 
         $obj->addReview($review);
-        $this->assertCount(1, $obj->getReviews());
         $this->assertSame($review, $obj->getReviews()[0]);
+        $this->assertEquals(1, $obj->getNumberReviews());
         $this->assertTrue($obj->hasReviews());
     }
 
@@ -51,6 +51,7 @@ class ArrayReviewsTraitTest extends AbstractTestCase {
         $obj = new TestArrayReviewsTrait();
 
         $this->assertEquals([], $obj->getReviews());
+        $this->assertEquals(0, $obj->getNumberReviews());
         $this->assertFalse($obj->hasReviews());
     }
 }
