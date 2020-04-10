@@ -51,27 +51,6 @@ class StatisticTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals(" %-' 16s   %-' 19s   % 6d   % 6d   % 6d   %' 9.2f", Statistic::CONTENT_FORMAT);
-        $this->assertEquals("------------------ --------------------- -------- -------- -------- -----------", Statistic::HEADER_FORMAT);
-        $this->assertEquals(" Node               Attribute             Count    Min      Max      Avg", Statistic::TITLES_FORMAT);
-
-        $obj = new Statistic();
-
-        $this->assertNull($obj->getAttrName());
-        $this->assertEquals(0, $obj->getAvg());
-        $this->assertEquals(0, $obj->getCount());
-        $this->assertEquals(0, $obj->getMax());
-        $this->assertNull($obj->getMin());
-        $this->assertNull($obj->getNodeName());
-    }
-
-    /**
      * Tests the setAttrName() method.
      *
      * @return void
@@ -147,6 +126,27 @@ class StatisticTest extends AbstractTestCase {
 
         $obj->setNodeName("nodeName");
         $this->assertEquals("nodeName", $obj->getNodeName());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals(" %-' 16s   %-' 19s   % 6d   % 6d   % 6d   %' 9.2f", Statistic::CONTENT_FORMAT);
+        $this->assertEquals("------------------ --------------------- -------- -------- -------- -----------", Statistic::HEADER_FORMAT);
+        $this->assertEquals(" Node               Attribute             Count    Min      Max      Avg", Statistic::TITLES_FORMAT);
+
+        $obj = new Statistic();
+
+        $this->assertNull($obj->getAttrName());
+        $this->assertEquals(0, $obj->getAvg());
+        $this->assertEquals(0, $obj->getCount());
+        $this->assertEquals(0, $obj->getMax());
+        $this->assertNull($obj->getMin());
+        $this->assertNull($obj->getNodeName());
     }
 
 }

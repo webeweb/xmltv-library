@@ -24,18 +24,6 @@ use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestPresentTrait;
 class PresentTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestPresentTrait();
-
-        $this->assertNull($obj->getPresent());
-    }
-
-    /**
      * Tests the setPresent() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class PresentTraitTest extends AbstractTestCase {
 
         $obj->setPresent($present);
         $this->assertSame($present, $obj->getPresent());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestPresentTrait();
+
+        $this->assertNull($obj->getPresent());
     }
 }

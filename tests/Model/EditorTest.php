@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class EditorTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Editor();
-
-        $this->assertNull($obj->getContent());
-    }
-
-    /**
      * Tests the xmlSerialize() method.
      *
      * @return void
@@ -46,5 +34,17 @@ class EditorTest extends AbstractTestCase {
 
         $res = '<editor>content</editor>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Editor();
+
+        $this->assertNull($obj->getContent());
     }
 }

@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class PresentTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Present();
-
-        $this->assertNull($obj->getContent());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -61,5 +49,17 @@ class PresentTest extends AbstractTestCase {
 
         $res = '<present>content</present>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Present();
+
+        $this->assertNull($obj->getContent());
     }
 }

@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\Fixtures\Model\TestCredit;
 class AbstractCreditTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestCredit();
-
-        $this->assertNull($obj->getContent());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -48,5 +36,17 @@ class AbstractCreditTest extends AbstractTestCase {
         $this->assertCount(1, $res);
 
         $this->assertArrayHasKey("content", $res);
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestCredit();
+
+        $this->assertNull($obj->getContent());
     }
 }

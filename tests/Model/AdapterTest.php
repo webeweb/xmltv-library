@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class AdapterTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Adapter();
-
-        $this->assertNull($obj->getContent());
-    }
-
-    /**
      * Tests the xmlSerialize() method.
      *
      * @return void
@@ -46,5 +34,17 @@ class AdapterTest extends AbstractTestCase {
 
         $res = '<adapter>content</adapter>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Adapter();
+
+        $this->assertNull($obj->getContent());
     }
 }

@@ -24,19 +24,6 @@ use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestStringStartTrait;
 class StringStartTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestStringStartTrait();
-
-        $this->assertNull($obj->getStart());
-        $this->assertNull($obj->getStartDateTime());
-    }
-
-    /**
      * Tests the setStart() method.
      *
      * @return void
@@ -49,5 +36,18 @@ class StringStartTraitTest extends AbstractTestCase {
         $this->assertEquals("20190730180000 +0200", $obj->getStart());
 
         $this->assertInstanceOf(DateTime::class, $obj->getStartDateTime());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestStringStartTrait();
+
+        $this->assertNull($obj->getStart());
+        $this->assertNull($obj->getStartDateTime());
     }
 }

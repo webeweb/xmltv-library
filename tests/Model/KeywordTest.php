@@ -23,19 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class KeywordTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Keyword();
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getLang());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -66,5 +53,18 @@ class KeywordTest extends AbstractTestCase {
 
         $res = '<keyword lang="lang">content</keyword>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Keyword();
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getLang());
     }
 }

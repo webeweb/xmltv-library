@@ -23,27 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class CreditsTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Credits();
-
-        $this->assertEquals([], $obj->getActors());
-        $this->assertEquals([], $obj->getAdapters());
-        $this->assertEquals([], $obj->getCommentators());
-        $this->assertEquals([], $obj->getComposers());
-        $this->assertEquals([], $obj->getDirectors());
-        $this->assertEquals([], $obj->getEditors());
-        $this->assertEquals([], $obj->getGuests());
-        $this->assertEquals([], $obj->getPresenters());
-        $this->assertEquals([], $obj->getProducers());
-        $this->assertEquals([], $obj->getWriters());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -98,5 +77,26 @@ class CreditsTest extends AbstractTestCase {
 
         $res = '<credits><director></director><actor></actor><writer></writer><adapter></adapter><producer></producer><composer></composer><editor></editor><presenter></presenter><commentator></commentator><guest></guest></credits>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Credits();
+
+        $this->assertEquals([], $obj->getActors());
+        $this->assertEquals([], $obj->getAdapters());
+        $this->assertEquals([], $obj->getCommentators());
+        $this->assertEquals([], $obj->getComposers());
+        $this->assertEquals([], $obj->getDirectors());
+        $this->assertEquals([], $obj->getEditors());
+        $this->assertEquals([], $obj->getGuests());
+        $this->assertEquals([], $obj->getPresenters());
+        $this->assertEquals([], $obj->getProducers());
+        $this->assertEquals([], $obj->getWriters());
     }
 }

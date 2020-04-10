@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestStringSystemTrait;
 class StringSystemTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestStringSystemTrait();
-
-        $this->assertNull($obj->getSystem());
-    }
-
-    /**
      * Tests the setSystem() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class StringSystemTraitTest extends AbstractTestCase {
 
         $obj->setSystem("system");
         $this->assertEquals("system", $obj->getSystem());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestStringSystemTrait();
+
+        $this->assertNull($obj->getSystem());
     }
 }

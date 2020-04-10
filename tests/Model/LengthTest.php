@@ -25,23 +25,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class LengthTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("hours", Length::UNITS_HOURS);
-        $this->assertEquals("minutes", Length::UNITS_MINUTES);
-        $this->assertEquals("seconds", Length::UNITS_SECONDS);
-
-        $obj = new Length();
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getUnits());
-    }
-
-    /**
      * Tests the enumUnits() method.
      *
      * @return void
@@ -120,5 +103,22 @@ class LengthTest extends AbstractTestCase {
 
         $res = '<length units="hours">content</length>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("hours", Length::UNITS_HOURS);
+        $this->assertEquals("minutes", Length::UNITS_MINUTES);
+        $this->assertEquals("seconds", Length::UNITS_SECONDS);
+
+        $obj = new Length();
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getUnits());
     }
 }

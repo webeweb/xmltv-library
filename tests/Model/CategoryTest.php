@@ -23,19 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class CategoryTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Category();
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getLang());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -66,5 +53,18 @@ class CategoryTest extends AbstractTestCase {
 
         $res = '<category lang="lang">content</category>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Category();
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getLang());
     }
 }

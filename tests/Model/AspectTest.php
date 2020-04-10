@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class AspectTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Aspect();
-
-        $this->assertNull($obj->getContent());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -62,5 +50,17 @@ class AspectTest extends AbstractTestCase {
 
         $res = '<aspect>content</aspect>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Aspect();
+
+        $this->assertNull($obj->getContent());
     }
 }

@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestStringChannelTrait;
 class StringChannelTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestStringChannelTrait();
-
-        $this->assertNull($obj->getChannel());
-    }
-
-    /**
      * Tests the setChannel() method.
      *
      * @return void
@@ -45,5 +33,17 @@ class StringChannelTraitTest extends AbstractTestCase {
 
         $obj->setChannel("channel");
         $this->assertEquals("channel", $obj->getChannel());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestStringChannelTrait();
+
+        $this->assertNull($obj->getChannel());
     }
 }

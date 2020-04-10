@@ -23,20 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class RatingTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Rating();
-
-        $this->assertEquals([], $obj->getIcons());
-        $this->assertNull($obj->getSystem());
-        $this->assertNull($obj->getValue());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -81,5 +67,19 @@ class RatingTest extends AbstractTestCase {
 
         $res = '<rating><value></value><icon/></rating>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Rating();
+
+        $this->assertEquals([], $obj->getIcons());
+        $this->assertNull($obj->getSystem());
+        $this->assertNull($obj->getValue());
     }
 }

@@ -23,19 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class DisplayNameTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new DisplayName();
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getLang());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -66,5 +53,18 @@ class DisplayNameTest extends AbstractTestCase {
 
         $res = '<display-name lang="lang">content</display-name>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new DisplayName();
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getLang());
     }
 }

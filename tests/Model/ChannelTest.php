@@ -23,22 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class ChannelTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Channel();
-
-        $this->assertEquals([], $obj->getDisplayNames());
-        $this->assertEquals([], $obj->getIcons());
-        $this->assertNull($obj->getId());
-        $this->assertEquals([], $obj->getProgrammes());
-        $this->assertEquals([], $obj->getUrls());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -88,5 +72,21 @@ class ChannelTest extends AbstractTestCase {
 
         $res = '<channel id="id"><display-name></display-name><icon/><url></url></channel>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Channel();
+
+        $this->assertEquals([], $obj->getDisplayNames());
+        $this->assertEquals([], $obj->getIcons());
+        $this->assertNull($obj->getId());
+        $this->assertEquals([], $obj->getProgrammes());
+        $this->assertEquals([], $obj->getUrls());
     }
 }

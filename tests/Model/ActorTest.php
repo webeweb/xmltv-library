@@ -23,19 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class ActorTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Actor();
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getRole());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -79,5 +66,18 @@ class ActorTest extends AbstractTestCase {
 
         $res = '<actor role="role">content</actor>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Actor();
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getRole());
     }
 }

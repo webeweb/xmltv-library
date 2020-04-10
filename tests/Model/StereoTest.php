@@ -23,24 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class StereoTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("bilingual", Stereo::CONTENT_BILINGUAL);
-        $this->assertEquals("dolby", Stereo::CONTENT_DOLBY);
-        $this->assertEquals("dolby digital", Stereo::CONTENT_DOLBY_DIGITAL);
-        $this->assertEquals("mono", Stereo::CONTENT_MONO);
-        $this->assertEquals("stereo", Stereo::CONTENT_STEREO);
-
-        $obj = new Stereo();
-
-        $this->assertNull($obj->getContent());
-    }
-
-    /**
      * Tests the enumContent() method.
      *
      * @return void
@@ -85,5 +67,23 @@ class StereoTest extends AbstractTestCase {
 
         $res = '<stereo>content</stereo>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("bilingual", Stereo::CONTENT_BILINGUAL);
+        $this->assertEquals("dolby", Stereo::CONTENT_DOLBY);
+        $this->assertEquals("dolby digital", Stereo::CONTENT_DOLBY_DIGITAL);
+        $this->assertEquals("mono", Stereo::CONTENT_MONO);
+        $this->assertEquals("stereo", Stereo::CONTENT_STEREO);
+
+        $obj = new Stereo();
+
+        $this->assertNull($obj->getContent());
     }
 }

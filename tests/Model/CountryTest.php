@@ -23,19 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class CountryTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Country();
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getLang());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -66,5 +53,18 @@ class CountryTest extends AbstractTestCase {
 
         $res = '<country lang="lang">content</country>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Country();
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getLang());
     }
 }

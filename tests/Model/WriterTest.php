@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class WriterTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Writer();
-
-        $this->assertNull($obj->getContent());
-    }
-
-    /**
      * Tests the xmlSerialize() method.
      *
      * @return void
@@ -46,5 +34,17 @@ class WriterTest extends AbstractTestCase {
 
         $res = '<writer>content</writer>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Writer();
+
+        $this->assertNull($obj->getContent());
     }
 }

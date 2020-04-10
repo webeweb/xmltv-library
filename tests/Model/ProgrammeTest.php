@@ -33,53 +33,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class ProgrammeTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Programme();
-
-        $this->assertNull($obj->getAudio());
-        $this->assertEquals([], $obj->getCategories());
-        $this->assertNull($obj->getChannel());
-        $this->assertNull($obj->getClumpIdx());
-        $this->assertEquals([], $obj->getCountries());
-        $this->assertNull($obj->getCredits());
-        $this->assertNull($obj->getDate());
-        $this->assertEquals([], $obj->getDescs());
-        $this->assertEquals([], $obj->getEpisodeNums());
-        $this->assertEquals([], $obj->getIcons());
-        $this->assertEquals([], $obj->getKeywords());
-        $this->assertNull($obj->getLanguage());
-        $this->assertNull($obj->getLastChance());
-        $this->assertNull($obj->getLength());
-        $this->assertNull($obj->getNew());
-        $this->assertNull($obj->getOrigLanguage());
-        $this->assertNull($obj->getPdcStart());
-        $this->assertNull($obj->getPdcStartDateTime());
-        $this->assertNull($obj->getPremiere());
-        $this->assertNull($obj->getPreviouslyShown());
-        $this->assertEquals([], $obj->getRatings());
-        $this->assertEquals([], $obj->getReviews());
-        $this->assertEquals([], $obj->getSecondaryTitles());
-        $this->assertNull($obj->getShowView());
-        $this->assertEquals([], $obj->getStarRatings());
-        $this->assertNull($obj->getStart());
-        $this->assertNull($obj->getStartDateTime());
-        $this->assertNull($obj->getStop());
-        $this->assertNull($obj->getStopDateTime());
-        $this->assertEquals([], $obj->getSubtitles());
-        $this->assertEquals([], $obj->getTitles());
-        $this->assertEquals([], $obj->getUrls());
-        $this->assertNull($obj->getVideo());
-        $this->assertNull($obj->getVideoPlus());
-        $this->assertNull($obj->getVpsStart());
-        $this->assertNull($obj->getVpsStartDateTime());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -456,5 +409,52 @@ class ProgrammeTest extends AbstractTestCase {
 
         $res = '<programme start="start" stop="stop" pdc-start="pdcStart" vps-start="vpsStart" showview="showView" videoplus="videoPlus" channel="channel" clumpidx="clumpIdx"><title></title><sub-title></sub-title><desc></desc><credits></credits><date></date><category></category><keyword></keyword><language></language><orig-language></orig-language><length></length><icon/><url></url><country></country><episode-num></episode-num><video></video><audio></audio><previously-shown/><premiere></premiere><last-chance></last-chance><new/><subtitles></subtitles><rating></rating><star-rating></star-rating><review/></programme>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Programme();
+
+        $this->assertNull($obj->getAudio());
+        $this->assertEquals([], $obj->getCategories());
+        $this->assertNull($obj->getChannel());
+        $this->assertNull($obj->getClumpIdx());
+        $this->assertEquals([], $obj->getCountries());
+        $this->assertNull($obj->getCredits());
+        $this->assertNull($obj->getDate());
+        $this->assertEquals([], $obj->getDescs());
+        $this->assertEquals([], $obj->getEpisodeNums());
+        $this->assertEquals([], $obj->getIcons());
+        $this->assertEquals([], $obj->getKeywords());
+        $this->assertNull($obj->getLanguage());
+        $this->assertNull($obj->getLastChance());
+        $this->assertNull($obj->getLength());
+        $this->assertNull($obj->getNew());
+        $this->assertNull($obj->getOrigLanguage());
+        $this->assertNull($obj->getPdcStart());
+        $this->assertNull($obj->getPdcStartDateTime());
+        $this->assertNull($obj->getPremiere());
+        $this->assertNull($obj->getPreviouslyShown());
+        $this->assertEquals([], $obj->getRatings());
+        $this->assertEquals([], $obj->getReviews());
+        $this->assertEquals([], $obj->getSecondaryTitles());
+        $this->assertNull($obj->getShowView());
+        $this->assertEquals([], $obj->getStarRatings());
+        $this->assertNull($obj->getStart());
+        $this->assertNull($obj->getStartDateTime());
+        $this->assertNull($obj->getStop());
+        $this->assertNull($obj->getStopDateTime());
+        $this->assertEquals([], $obj->getSubtitles());
+        $this->assertEquals([], $obj->getTitles());
+        $this->assertEquals([], $obj->getUrls());
+        $this->assertNull($obj->getVideo());
+        $this->assertNull($obj->getVideoPlus());
+        $this->assertNull($obj->getVpsStart());
+        $this->assertNull($obj->getVpsStartDateTime());
     }
 }

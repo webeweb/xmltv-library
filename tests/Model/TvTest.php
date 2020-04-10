@@ -23,25 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class TvTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Tv();
-
-        $this->assertEquals([], $obj->getChannels());
-        $this->assertNull($obj->getDate());
-        $this->assertNull($obj->getGeneratorInfoName());
-        $this->assertNull($obj->getGeneratorInfoUrl());
-        $this->assertEquals([], $obj->getProgrammes());
-        $this->assertNull($obj->getSourceDataUrl());
-        $this->assertNull($obj->getSourceInfoName());
-        $this->assertNull($obj->getSourceInfoUrl());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -168,5 +149,24 @@ class TvTest extends AbstractTestCase {
 
         $res = '<tv date="date" generator-info-name="generatorInfoName" generator-info-url="generatorInfoUrl" source-data-url="sourceDataUrl" source-info-name="sourceInfoName" source-info-url="sourceInfoUrl"><channel></channel><programme></programme></tv>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Tv();
+
+        $this->assertEquals([], $obj->getChannels());
+        $this->assertNull($obj->getDate());
+        $this->assertNull($obj->getGeneratorInfoName());
+        $this->assertNull($obj->getGeneratorInfoUrl());
+        $this->assertEquals([], $obj->getProgrammes());
+        $this->assertNull($obj->getSourceDataUrl());
+        $this->assertNull($obj->getSourceInfoName());
+        $this->assertNull($obj->getSourceInfoUrl());
     }
 }

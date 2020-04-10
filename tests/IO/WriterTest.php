@@ -57,6 +57,6 @@ class WriterTest extends AbstractTestCase {
         Writer::writeXml($tv, $this->output);
         $this->assertFileExists($this->output);
 
-        $this->assertEquals(preg_replace("/\ {4}/", "  ",file_get_contents($this->filename)), file_get_contents($this->output));
+        $this->assertEquals(preg_replace("/\ {4}/", "  ", file_get_contents($this->filename)), file_get_contents($this->output));
     }
 }

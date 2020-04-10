@@ -23,18 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class ColourTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Colour();
-
-        $this->assertNull($obj->getContent());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -62,5 +50,17 @@ class ColourTest extends AbstractTestCase {
 
         $res = '<colour>content</colour>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Colour();
+
+        $this->assertNull($obj->getContent());
     }
 }

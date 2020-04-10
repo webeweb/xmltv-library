@@ -25,18 +25,6 @@ use WBW\Library\XMLTV\Tests\Fixtures\Statistic\TestStatistics;
 class StatisticsTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Statistics();
-
-        $this->assertEquals([], $obj->getStatistics());
-    }
-
-    /**
      * Tests the getStatistic() method.
      *
      * @return void
@@ -186,5 +174,17 @@ class StatisticsTest extends AbstractTestCase {
 
         $res = file_get_contents(__DIR__ . "/StatisticsTest.testToString.txt");
         $this->assertRegExp("/{$res}/", $obj->__toString() . "\n");
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Statistics();
+
+        $this->assertEquals([], $obj->getStatistics());
     }
 }

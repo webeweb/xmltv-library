@@ -23,20 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class IconTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Icon();
-
-        $this->assertNull($obj->getHeight());
-        $this->assertNull($obj->getSrc());
-        $this->assertNull($obj->getWidth());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -109,5 +95,19 @@ class IconTest extends AbstractTestCase {
 
         $res = '<icon src="src" width="1920" height="1080"/>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Icon();
+
+        $this->assertNull($obj->getHeight());
+        $this->assertNull($obj->getSrc());
+        $this->assertNull($obj->getWidth());
     }
 }

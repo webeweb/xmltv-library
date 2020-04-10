@@ -23,21 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class VideoTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Video();
-
-        $this->assertNull($obj->getAspect());
-        $this->assertNull($obj->getColour());
-        $this->assertNull($obj->getPresent());
-        $this->assertNull($obj->getQuality());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -113,5 +98,20 @@ class VideoTest extends AbstractTestCase {
 
         $res = '<video><present></present><colour></colour><aspect></aspect><quality></quality></video>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Video();
+
+        $this->assertNull($obj->getAspect());
+        $this->assertNull($obj->getColour());
+        $this->assertNull($obj->getPresent());
+        $this->assertNull($obj->getQuality());
     }
 }

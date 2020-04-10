@@ -25,24 +25,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class ReviewTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("text", Review::TYPE_TEXT);
-        $this->assertEquals("url", Review::TYPE_URL);
-
-        $obj = new Review();
-
-        $this->assertNull($obj->getLang());
-        $this->assertNull($obj->getReviewer());
-        $this->assertNull($obj->getSource());
-        $this->assertNull($obj->getType());
-    }
-
-    /**
      * Tests the enumType() method.
      *
      * @return void
@@ -152,5 +134,23 @@ class ReviewTest extends AbstractTestCase {
 
         $res = '<review type="text" source="source" reviewer="reviewer" lang="lang"/>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("text", Review::TYPE_TEXT);
+        $this->assertEquals("url", Review::TYPE_URL);
+
+        $obj = new Review();
+
+        $this->assertNull($obj->getLang());
+        $this->assertNull($obj->getReviewer());
+        $this->assertNull($obj->getSource());
+        $this->assertNull($obj->getType());
     }
 }

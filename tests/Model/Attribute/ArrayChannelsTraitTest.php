@@ -42,20 +42,6 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestArrayChannelsTrait();
-
-        $this->assertEquals([], $obj->getChannels());
-        $this->assertEquals(0, $obj->getNumberChannels());
-        $this->assertFalse($obj->hasChannels());
-    }
-
-    /**
      * Tests the indexChannelsById() method.
      *
      * @return void
@@ -103,5 +89,19 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
         $obj->sortChannels();
         $this->assertEquals("1", $obj->getChannels()[0]->getId());
         $this->assertEquals("2", $obj->getChannels()[1]->getId());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestArrayChannelsTrait();
+
+        $this->assertEquals([], $obj->getChannels());
+        $this->assertEquals(0, $obj->getNumberChannels());
+        $this->assertFalse($obj->hasChannels());
     }
 }

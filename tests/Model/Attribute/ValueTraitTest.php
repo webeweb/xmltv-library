@@ -24,18 +24,6 @@ use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestValueTrait;
 class ValueTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestValueTrait();
-
-        $this->assertNull($obj->getValue());
-    }
-
-    /**
      * Tests the setValue() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class ValueTraitTest extends AbstractTestCase {
 
         $obj->setValue($value);
         $this->assertSame($value, $obj->getValue());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestValueTrait();
+
+        $this->assertNull($obj->getValue());
     }
 }

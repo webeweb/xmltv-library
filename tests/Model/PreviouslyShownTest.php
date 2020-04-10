@@ -23,20 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class PreviouslyShownTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new PreviouslyShown();
-
-        $this->assertNull($obj->getChannel());
-        $this->assertNull($obj->getStart());
-        $this->assertNull($obj->getStartDateTime());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -67,5 +53,19 @@ class PreviouslyShownTest extends AbstractTestCase {
 
         $res = '<previously-shown channel="channel" start="start"/>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new PreviouslyShown();
+
+        $this->assertNull($obj->getChannel());
+        $this->assertNull($obj->getStart());
+        $this->assertNull($obj->getStartDateTime());
     }
 }

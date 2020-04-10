@@ -25,23 +25,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class SubtitlesTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("deaf-signed", Subtitles::TYPE_DEAF_SIGNED);
-        $this->assertEquals("onscreen", Subtitles::TYPE_ONSCREEN);
-        $this->assertEquals("teletext", Subtitles::TYPE_TELETEXT);
-
-        $obj = new Subtitles();
-
-        $this->assertNull($obj->getLanguage());
-        $this->assertNull($obj->getType());
-    }
-
-    /**
      * Tests the enumType() method.
      *
      * @return void
@@ -120,5 +103,22 @@ class SubtitlesTest extends AbstractTestCase {
 
         $res = '<subtitles type="deaf-signed"><language></language></subtitles>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("deaf-signed", Subtitles::TYPE_DEAF_SIGNED);
+        $this->assertEquals("onscreen", Subtitles::TYPE_ONSCREEN);
+        $this->assertEquals("teletext", Subtitles::TYPE_TELETEXT);
+
+        $obj = new Subtitles();
+
+        $this->assertNull($obj->getLanguage());
+        $this->assertNull($obj->getType());
     }
 }

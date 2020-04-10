@@ -42,20 +42,6 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestArrayProgrammesTrait();
-
-        $this->assertEquals([], $obj->getProgrammes());
-        $this->assertEquals(0, $obj->getNumberProgrammes());
-        $this->assertFalse($obj->hasProgrammes());
-    }
-
-    /**
      * Tests the sortProgrammes() method.
      *
      * @return void
@@ -78,5 +64,19 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
         $obj->sortProgrammes();
         $this->assertEquals("1", $obj->getProgrammes()[0]->getStart());
         $this->assertEquals("2", $obj->getProgrammes()[1]->getStart());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestArrayProgrammesTrait();
+
+        $this->assertEquals([], $obj->getProgrammes());
+        $this->assertEquals(0, $obj->getNumberProgrammes());
+        $this->assertFalse($obj->hasProgrammes());
     }
 }

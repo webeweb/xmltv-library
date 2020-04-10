@@ -24,18 +24,6 @@ use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestLanguageTrait;
 class LanguageTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestLanguageTrait();
-
-        $this->assertNull($obj->getLanguage());
-    }
-
-    /**
      * Tests the setLanguage() method.
      *
      * @return void
@@ -49,5 +37,17 @@ class LanguageTraitTest extends AbstractTestCase {
 
         $obj->setLanguage($language);
         $this->assertSame($language, $obj->getLanguage());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestLanguageTrait();
+
+        $this->assertNull($obj->getLanguage());
     }
 }

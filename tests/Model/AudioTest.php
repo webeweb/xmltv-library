@@ -23,19 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class AudioTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new Audio();
-
-        $this->assertNull($obj->getPresent());
-        $this->assertNull($obj->getStereo());
-    }
-
-    /**
      * Tests the jsonSerialize() method.
      *
      * @return void
@@ -79,5 +66,18 @@ class AudioTest extends AbstractTestCase {
 
         $res = '<audio><present></present><stereo></stereo></audio>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new Audio();
+
+        $this->assertNull($obj->getPresent());
+        $this->assertNull($obj->getStereo());
     }
 }

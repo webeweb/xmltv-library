@@ -23,22 +23,6 @@ use WBW\Library\XMLTV\Tests\AbstractTestCase;
 class EpisodeNumTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("onscreen", EpisodeNum::SYSTEM_ONSCREEN);
-        $this->assertEquals("xmltv_ns", EpisodeNum::SYSTEM_XMLTV_NS);
-
-        $obj = new EpisodeNum();
-
-        $this->assertNull($obj->getContent());
-        $this->assertNull($obj->getSystem());
-    }
-
-    /**
      * Tests the enumSystem() method.
      *
      * @return void
@@ -83,5 +67,21 @@ class EpisodeNumTest extends AbstractTestCase {
 
         $res = '<episode-num system="onscreen">content</episode-num>';
         $this->assertEquals($res, $obj->xmlSerialize());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("onscreen", EpisodeNum::SYSTEM_ONSCREEN);
+        $this->assertEquals("xmltv_ns", EpisodeNum::SYSTEM_XMLTV_NS);
+
+        $obj = new EpisodeNum();
+
+        $this->assertNull($obj->getContent());
+        $this->assertNull($obj->getSystem());
     }
 }
