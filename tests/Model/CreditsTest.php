@@ -86,6 +86,8 @@ class CreditsTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("credits", Credits::DOM_NODE_NAME);
+
         $obj = new Credits();
 
         $this->assertEquals([], $obj->getActors());

@@ -32,6 +32,13 @@ class Channel extends AbstractModel {
     use ArrayUrlsTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "channel";
+
+    /**
      * Id.
      *
      * @var string

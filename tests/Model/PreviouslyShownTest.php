@@ -62,6 +62,8 @@ class PreviouslyShownTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("previously-shown", PreviouslyShown::DOM_NODE_NAME);
+
         $obj = new PreviouslyShown();
 
         $this->assertNull($obj->getChannel());

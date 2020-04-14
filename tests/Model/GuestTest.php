@@ -43,6 +43,8 @@ class GuestTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("guest", Guest::DOM_NODE_NAME);
+
         $obj = new Guest();
 
         $this->assertNull($obj->getContent());

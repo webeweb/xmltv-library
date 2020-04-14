@@ -62,6 +62,8 @@ class StarRatingTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("star-rating", StarRating::DOM_NODE_NAME);
+
         $obj = new StarRating();
 
         $this->assertEquals([], $obj->getIcons());

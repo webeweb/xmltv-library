@@ -43,6 +43,8 @@ class ComposerTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("composer", Composer::DOM_NODE_NAME);
+
         $obj = new Composer();
 
         $this->assertNull($obj->getContent());

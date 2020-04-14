@@ -44,6 +44,13 @@ class Credits extends AbstractModel {
     use ArrayWritersTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "credits";
+
+    /**
      * Constructor.
      */
     public function __construct() {

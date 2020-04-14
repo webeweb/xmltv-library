@@ -43,6 +43,8 @@ class DirectorTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("director", Director::DOM_NODE_NAME);
+
         $obj = new Director();
 
         $this->assertNull($obj->getContent());

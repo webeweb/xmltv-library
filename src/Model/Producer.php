@@ -22,6 +22,13 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
 class Producer extends AbstractCredit {
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "producer";
+
+    /**
      * {@inheritDoc}
      */
     public function xmlSerialize() {

@@ -28,6 +28,13 @@ class SecondaryTitle extends AbstractModel {
     use StringLangTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "sub-title";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

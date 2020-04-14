@@ -62,6 +62,8 @@ class DisplayNameTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("display-name", DisplayName::DOM_NODE_NAME);
+
         $obj = new DisplayName();
 
         $this->assertNull($obj->getContent());

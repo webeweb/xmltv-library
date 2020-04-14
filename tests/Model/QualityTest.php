@@ -59,6 +59,8 @@ class QualityTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("quality", Quality::DOM_NODE_NAME);
+
         $obj = new Quality();
 
         $this->assertNull($obj->getContent());

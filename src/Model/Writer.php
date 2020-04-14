@@ -22,6 +22,13 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
 class Writer extends AbstractCredit {
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "writer";
+
+    /**
      * {@inheritDoc}
      */
     public function xmlSerialize() {

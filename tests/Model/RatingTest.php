@@ -76,6 +76,8 @@ class RatingTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("rating", Rating::DOM_NODE_NAME);
+
         $obj = new Rating();
 
         $this->assertEquals([], $obj->getIcons());

@@ -112,6 +112,7 @@ class SubtitlesTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("subtitles", Subtitles::DOM_NODE_NAME);
         $this->assertEquals("deaf-signed", Subtitles::TYPE_DEAF_SIGNED);
         $this->assertEquals("onscreen", Subtitles::TYPE_ONSCREEN);
         $this->assertEquals("teletext", Subtitles::TYPE_TELETEXT);

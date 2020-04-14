@@ -28,6 +28,13 @@ class StarRating extends AbstractModel {
     use ValueTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "star-rating";
+
+    /**
      * Constructor.
      */
     public function __construct() {

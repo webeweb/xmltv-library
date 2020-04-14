@@ -107,6 +107,8 @@ class VideoTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("video", Video::DOM_NODE_NAME);
+
         $obj = new Video();
 
         $this->assertNull($obj->getAspect());

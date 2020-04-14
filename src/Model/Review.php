@@ -29,6 +29,13 @@ class Review extends AbstractModel {
     use StringTypeTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "review";
+
+    /**
      * Type "text".
      *
      * @var string

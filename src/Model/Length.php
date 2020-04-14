@@ -27,6 +27,13 @@ class Length extends AbstractModel {
     use StringContentTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "length";
+
+    /**
      * Units "hours".
      *
      * @var string

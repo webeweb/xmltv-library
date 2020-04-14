@@ -418,6 +418,8 @@ class ProgrammeTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("programme", Programme::DOM_NODE_NAME);
+
         $obj = new Programme();
 
         $this->assertNull($obj->getAudio());

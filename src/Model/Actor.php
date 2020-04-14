@@ -23,6 +23,13 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
 class Actor extends AbstractCredit {
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "actor";
+
+    /**
      * Role.
      *
      * @var string

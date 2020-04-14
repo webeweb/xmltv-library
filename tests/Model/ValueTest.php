@@ -59,6 +59,8 @@ class ValueTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("value", Value::DOM_NODE_NAME);
+
         $obj = new Value();
 
         $this->assertNull($obj->getContent());

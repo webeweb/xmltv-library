@@ -76,6 +76,7 @@ class EpisodeNumTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("episode-num", EpisodeNum::DOM_NODE_NAME);
         $this->assertEquals("onscreen", EpisodeNum::SYSTEM_ONSCREEN);
         $this->assertEquals("xmltv_ns", EpisodeNum::SYSTEM_XMLTV_NS);
 

@@ -62,6 +62,8 @@ class OrigLanguageTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("orig-language", OrigLanguage::DOM_NODE_NAME);
+
         $obj = new OrigLanguage();
 
         $this->assertNull($obj->getContent());

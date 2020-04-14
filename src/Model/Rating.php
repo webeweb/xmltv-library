@@ -30,6 +30,13 @@ class Rating extends AbstractModel {
     use ValueTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "rating";
+
+    /**
      * Constructor.
      */
     public function __construct() {

@@ -28,6 +28,13 @@ class Language extends AbstractModel {
     use StringLangTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "language";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

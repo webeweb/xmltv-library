@@ -28,6 +28,13 @@ class Icon extends AbstractModel {
     use IntegerWidthTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "icon";
+
+    /**
      * Source.
      *
      * @var string

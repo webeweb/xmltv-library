@@ -58,6 +58,8 @@ class PresentTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("present", Present::DOM_NODE_NAME);
+
         $obj = new Present();
 
         $this->assertNull($obj->getContent());

@@ -26,6 +26,13 @@ class Colour extends AbstractModel {
     use StringContentTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "colour";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

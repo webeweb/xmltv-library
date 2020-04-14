@@ -43,6 +43,8 @@ class AdapterTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("adapter", Adapter::DOM_NODE_NAME);
+
         $obj = new Adapter();
 
         $this->assertNull($obj->getContent());

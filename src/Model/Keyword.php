@@ -28,6 +28,13 @@ class Keyword extends AbstractModel {
     use StringLangTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "keyword";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

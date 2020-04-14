@@ -62,6 +62,8 @@ class CategoryTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("category", Category::DOM_NODE_NAME);
+
         $obj = new Category();
 
         $this->assertNull($obj->getContent());

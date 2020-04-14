@@ -59,6 +59,8 @@ class DateTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("date", Date::DOM_NODE_NAME);
+
         $obj = new Date();
 
         $this->assertNull($obj->getContent());

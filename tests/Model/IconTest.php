@@ -104,6 +104,8 @@ class IconTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("icon", Icon::DOM_NODE_NAME);
+
         $obj = new Icon();
 
         $this->assertNull($obj->getHeight());

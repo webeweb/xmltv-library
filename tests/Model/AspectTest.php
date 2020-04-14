@@ -59,6 +59,8 @@ class AspectTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("aspect", Aspect::DOM_NODE_NAME);
+
         $obj = new Aspect();
 
         $this->assertNull($obj->getContent());

@@ -81,6 +81,8 @@ class ChannelTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("channel", Channel::DOM_NODE_NAME);
+
         $obj = new Channel();
 
         $this->assertEquals([], $obj->getDisplayNames());

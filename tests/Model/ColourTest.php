@@ -59,6 +59,8 @@ class ColourTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("colour", Colour::DOM_NODE_NAME);
+
         $obj = new Colour();
 
         $this->assertNull($obj->getContent());

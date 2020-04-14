@@ -43,6 +43,8 @@ class CommentatorTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("commentator", Commentator::DOM_NODE_NAME);
+
         $obj = new Commentator();
 
         $this->assertNull($obj->getContent());

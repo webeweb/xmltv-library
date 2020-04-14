@@ -112,6 +112,7 @@ class LengthTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("length", Length::DOM_NODE_NAME);
         $this->assertEquals("hours", Length::UNITS_HOURS);
         $this->assertEquals("minutes", Length::UNITS_MINUTES);
         $this->assertEquals("seconds", Length::UNITS_SECONDS);

@@ -26,6 +26,13 @@ class Audio extends AbstractModel {
     use PresentTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "audio";
+
+    /**
      * Stereo.
      *
      * @var Stereo

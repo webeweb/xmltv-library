@@ -75,6 +75,8 @@ class ActorTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("actor", Actor::DOM_NODE_NAME);
+
         $obj = new Actor();
 
         $this->assertNull($obj->getContent());

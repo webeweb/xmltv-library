@@ -75,6 +75,8 @@ class AudioTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("audio", Audio::DOM_NODE_NAME);
+
         $obj = new Audio();
 
         $this->assertNull($obj->getPresent());

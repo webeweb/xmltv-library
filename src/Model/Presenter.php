@@ -22,6 +22,13 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
 class Presenter extends AbstractCredit {
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "presenter";
+
+    /**
      * {@inheritDoc}
      */
     public function xmlSerialize() {

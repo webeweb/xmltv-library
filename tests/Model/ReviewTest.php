@@ -143,6 +143,7 @@ class ReviewTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("review", Review::DOM_NODE_NAME);
         $this->assertEquals("text", Review::TYPE_TEXT);
         $this->assertEquals("url", Review::TYPE_URL);
 

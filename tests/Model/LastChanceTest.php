@@ -62,6 +62,8 @@ class LastChanceTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("last-chance", LastChance::DOM_NODE_NAME);
+
         $obj = new LastChance();
 
         $this->assertNull($obj->getContent());

@@ -22,6 +22,13 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
 class Editor extends AbstractCredit {
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "editor";
+
+    /**
      * {@inheritDoc}
      */
     public function xmlSerialize() {

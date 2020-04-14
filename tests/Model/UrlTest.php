@@ -59,6 +59,8 @@ class UrlTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("url", Url::DOM_NODE_NAME);
+
         $obj = new Url();
 
         $this->assertNull($obj->getContent());

@@ -26,6 +26,13 @@ class Present extends AbstractModel {
     use StringContentTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "present";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

@@ -62,6 +62,8 @@ class TitleTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("title", Title::DOM_NODE_NAME);
+
         $obj = new Title();
 
         $this->assertNull($obj->getContent());

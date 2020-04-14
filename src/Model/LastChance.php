@@ -28,6 +28,13 @@ class LastChance extends AbstractModel {
     use StringLangTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "last-chance";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

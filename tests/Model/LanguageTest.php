@@ -62,6 +62,8 @@ class LanguageTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("language", Language::DOM_NODE_NAME);
+
         $obj = new Language();
 
         $this->assertNull($obj->getContent());

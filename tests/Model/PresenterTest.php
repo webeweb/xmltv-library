@@ -43,9 +43,10 @@ class PresenterTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("presenter", Presenter::DOM_NODE_NAME);
+
         $obj = new Presenter();
 
         $this->assertNull($obj->getContent());
     }
-
 }

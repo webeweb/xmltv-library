@@ -62,6 +62,8 @@ class DescTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("desc", Desc::DOM_NODE_NAME);
+
         $obj = new Desc();
 
         $this->assertNull($obj->getContent());

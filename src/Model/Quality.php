@@ -26,6 +26,13 @@ class Quality extends AbstractModel {
     use StringContentTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "quality";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

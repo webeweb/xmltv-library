@@ -43,6 +43,8 @@ class EditorTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("editor", Editor::DOM_NODE_NAME);
+
         $obj = new Editor();
 
         $this->assertNull($obj->getContent());

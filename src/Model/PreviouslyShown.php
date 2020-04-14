@@ -28,6 +28,13 @@ class PreviouslyShown extends AbstractModel {
     use StringStartTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "previously-shown";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

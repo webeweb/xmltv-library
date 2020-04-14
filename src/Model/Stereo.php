@@ -61,6 +61,13 @@ class Stereo extends AbstractModel {
     const CONTENT_STEREO = "stereo";
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "stereo";
+
+    /**
      * Enumerate the content.
      *
      * @return string[] Returns the content enumeration.

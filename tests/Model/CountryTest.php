@@ -62,6 +62,8 @@ class CountryTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("country", Country::DOM_NODE_NAME);
+
         $obj = new Country();
 
         $this->assertNull($obj->getContent());

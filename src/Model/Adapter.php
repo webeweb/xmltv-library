@@ -22,6 +22,13 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
 class Adapter extends AbstractCredit {
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "adapter";
+
+    /**
      * {@inheritDoc}
      */
     public function xmlSerialize() {

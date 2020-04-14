@@ -62,6 +62,8 @@ class SecondaryTitleTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("sub-title", SecondaryTitle::DOM_NODE_NAME);
+
         $obj = new SecondaryTitle();
 
         $this->assertNull($obj->getContent());

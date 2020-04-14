@@ -26,6 +26,13 @@ class Url extends AbstractModel {
     use StringContentTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "url";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

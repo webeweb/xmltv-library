@@ -32,6 +32,13 @@ class Tv extends AbstractModel {
     use ArrayProgrammesTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "tv";
+
+    /**
      * Date.
      *
      * @var string

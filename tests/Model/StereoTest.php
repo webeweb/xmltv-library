@@ -76,6 +76,7 @@ class StereoTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("stereo", Stereo::DOM_NODE_NAME);
         $this->assertEquals("bilingual", Stereo::CONTENT_BILINGUAL);
         $this->assertEquals("dolby", Stereo::CONTENT_DOLBY);
         $this->assertEquals("dolby digital", Stereo::CONTENT_DOLBY_DIGITAL);

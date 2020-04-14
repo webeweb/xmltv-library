@@ -29,6 +29,13 @@ class Subtitles extends AbstractModel {
     use StringTypeTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "subtitles";
+
+    /**
      * Type "deaf signed".
      *
      * @var string

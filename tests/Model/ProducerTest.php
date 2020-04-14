@@ -43,6 +43,8 @@ class ProducerTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("producer", Producer::DOM_NODE_NAME);
+
         $obj = new Producer();
 
         $this->assertNull($obj->getContent());

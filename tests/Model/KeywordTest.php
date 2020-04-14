@@ -62,6 +62,8 @@ class KeywordTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("keyword", Keyword::DOM_NODE_NAME);
+
         $obj = new Keyword();
 
         $this->assertNull($obj->getContent());

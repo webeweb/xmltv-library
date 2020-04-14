@@ -28,6 +28,13 @@ class Premiere extends AbstractModel {
     use StringLangTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "premiere";
+
+    /**
      * {@inheritDoc}
      */
     public function jsonSerialize() {

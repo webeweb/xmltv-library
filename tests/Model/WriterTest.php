@@ -43,6 +43,8 @@ class WriterTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("writer", Writer::DOM_NODE_NAME);
+
         $obj = new Writer();
 
         $this->assertNull($obj->getContent());

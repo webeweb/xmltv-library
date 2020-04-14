@@ -158,6 +158,8 @@ class TvTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("tv", Tv::DOM_NODE_NAME);
+
         $obj = new Tv();
 
         $this->assertEquals([], $obj->getChannels());

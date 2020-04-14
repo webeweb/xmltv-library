@@ -28,6 +28,13 @@ class EpisodeNum extends AbstractModel {
     use StringSystemTrait;
 
     /**
+     * DOM node name.
+     *
+     * @var string
+     */
+    const DOM_NODE_NAME = "episode-num";
+
+    /**
      * SYSTEM "onscreen".
      *
      * @var string

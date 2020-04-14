@@ -62,6 +62,8 @@ class PremiereTest extends AbstractTestCase {
      */
     public function test__construct() {
 
+        $this->assertEquals("premiere", Premiere::DOM_NODE_NAME);
+
         $obj = new Premiere();
 
         $this->assertNull($obj->getContent());
