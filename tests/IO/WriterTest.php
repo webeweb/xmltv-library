@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Tests\IO;
 
+use Psr\Log\LoggerInterface;
 use WBW\Library\XMLTV\IO\Reader;
 use WBW\Library\XMLTV\IO\Writer;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
@@ -51,10 +52,13 @@ class WriterTest extends AbstractTestCase {
      */
     public function testWriteXml() {
 
+        // Set a Logger mock.
+        $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
+
         // Set a Tv mock.
         $tv = Reader::readXml($this->filename);
 
-        Writer::writeXml($tv, $this->output);
+        Writer::writeXml($tv, $this->output, $logger);
         $this->assertFileExists($this->output);
 
         $this->assertEquals(preg_replace("/\ {4}/", "  ", file_get_contents($this->filename)), file_get_contents($this->output));
