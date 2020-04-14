@@ -148,5 +148,4 @@ class StatisticTest extends AbstractTestCase {
         $this->assertNull($obj->getMin());
         $this->assertNull($obj->getNodeName());
     }
-
 }
