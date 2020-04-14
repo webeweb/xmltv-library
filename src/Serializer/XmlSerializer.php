@@ -72,7 +72,7 @@ class XmlSerializer {
      * @return String Returns the serialized actor.
      */
     public static function serializeActor(Actor $model) {
-        return StringHelper::domNode("actor", $model->getContent(), [
+        return StringHelper::domNode(Actor::DOM_NODE_NAME, $model->getContent(), [
             "role" => $model->getRole(),
         ]);
     }
@@ -84,7 +84,7 @@ class XmlSerializer {
      * @return String Returns the serialized adapter.
      */
     public static function serializeAdapter(Adapter $model) {
-        return StringHelper::domNode("adapter", $model->getContent());
+        return StringHelper::domNode(Adapter::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -111,7 +111,7 @@ class XmlSerializer {
      * @return String Returns the serialized aspect.
      */
     public static function serializeAspect(Aspect $model) {
-        return StringHelper::domNode("aspect", $model->getContent());
+        return StringHelper::domNode(Aspect::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -127,7 +127,7 @@ class XmlSerializer {
             $model->getStereo(),
         ]);
 
-        return StringHelper::domNode("audio", $content);
+        return StringHelper::domNode(Audio::DOM_NODE_NAME, $content);
     }
 
     /**
@@ -137,7 +137,7 @@ class XmlSerializer {
      * @return String Returns the serialized category.
      */
     public static function serializeCategory(Category $model) {
-        return StringHelper::domNode("category", $model->getContent(), [
+        return StringHelper::domNode(Category::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -156,7 +156,7 @@ class XmlSerializer {
             XmlSerializer::serializeArray($model->getUrls()),
         ];
 
-        return StringHelper::domNode("channel", implode("", $content), [
+        return StringHelper::domNode(Channel::DOM_NODE_NAME, implode("", $content), [
             "id" => $model->getId(),
         ]);
     }
@@ -168,7 +168,7 @@ class XmlSerializer {
      * @return String Returns the serialized colour.
      */
     public static function serializeColour(Colour $model) {
-        return StringHelper::domNode("colour", $model->getContent());
+        return StringHelper::domNode(Colour::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -178,7 +178,7 @@ class XmlSerializer {
      * @return String Returns the serialized commentator.
      */
     public static function serializeCommentator(Commentator $model) {
-        return StringHelper::domNode("commentator", $model->getContent());
+        return StringHelper::domNode(Commentator::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -188,7 +188,7 @@ class XmlSerializer {
      * @return String Returns the serialized composer.
      */
     public static function serializeComposer(Composer $model) {
-        return StringHelper::domNode("composer", $model->getContent());
+        return StringHelper::domNode(Composer::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -198,7 +198,7 @@ class XmlSerializer {
      * @return String Returns the serialized country.
      */
     public static function serializeCountry(Country $model) {
-        return StringHelper::domNode("country", $model->getContent(), [
+        return StringHelper::domNode(Country::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -224,7 +224,7 @@ class XmlSerializer {
             XmlSerializer::serializeArray($model->getGuests()),
         ];
 
-        return StringHelper::domNode("credits", implode("", $content));
+        return StringHelper::domNode(Credits::DOM_NODE_NAME, implode("", $content));
     }
 
     /**
@@ -234,7 +234,7 @@ class XmlSerializer {
      * @return String Returns the serialized date.
      */
     public static function serializeDate(Date $model) {
-        return StringHelper::domNode("date", $model->getContent());
+        return StringHelper::domNode(Date::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -244,7 +244,7 @@ class XmlSerializer {
      * @return String Returns the serialized description.
      */
     public static function serializeDesc(Desc $model) {
-        return StringHelper::domNode("desc", $model->getContent(), [
+        return StringHelper::domNode(Desc::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -256,7 +256,7 @@ class XmlSerializer {
      * @return String Returns the serialized director.
      */
     public static function serializeDirector(Director $model) {
-        return StringHelper::domNode("director", $model->getContent());
+        return StringHelper::domNode(Director::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -266,7 +266,7 @@ class XmlSerializer {
      * @return String Returns the serialized display name.
      */
     public static function serializeDisplayName(DisplayName $model) {
-        return StringHelper::domNode("display-name", $model->getContent(), [
+        return StringHelper::domNode(DisplayName::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -278,7 +278,7 @@ class XmlSerializer {
      * @return String Returns the serialized editor.
      */
     public static function serializeEditor(Editor $model) {
-        return StringHelper::domNode("editor", $model->getContent());
+        return StringHelper::domNode(Editor::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -288,7 +288,7 @@ class XmlSerializer {
      * @return String Returns the serialized episode number.
      */
     public static function serializeEpisodeNum(EpisodeNum $model) {
-        return StringHelper::domNode("episode-num", $model->getContent(), [
+        return StringHelper::domNode(EpisodeNum::DOM_NODE_NAME, $model->getContent(), [
             "system" => $model->getSystem(),
         ]);
     }
@@ -300,7 +300,7 @@ class XmlSerializer {
      * @return String Returns the serialized guest.
      */
     public static function serializeGuest(Guest $model) {
-        return StringHelper::domNode("guest", $model->getContent());
+        return StringHelper::domNode(Guest::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -310,7 +310,7 @@ class XmlSerializer {
      * @return String Returns the serialized icon.
      */
     public static function serializeIcon(Icon $model) {
-        return StringHelper::domNode("icon", null, [
+        return StringHelper::domNode(Icon::DOM_NODE_NAME, null, [
             "src"    => $model->getSrc(),
             "width"  => $model->getWidth(),
             "height" => $model->getHeight(),
@@ -324,7 +324,7 @@ class XmlSerializer {
      * @return String Returns the serialized keyword.
      */
     public static function serializeKeyword(Keyword $model) {
-        return StringHelper::domNode("keyword", $model->getContent(), [
+        return StringHelper::domNode(Keyword::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -336,7 +336,7 @@ class XmlSerializer {
      * @return String Returns the serialized language.
      */
     public static function serializeLanguage(Language $model) {
-        return StringHelper::domNode("language", $model->getContent(), [
+        return StringHelper::domNode(Language::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -348,7 +348,7 @@ class XmlSerializer {
      * @return String Returns the serialized last chance.
      */
     public static function serializeLastChance(LastChance $model) {
-        return StringHelper::domNode("last-chance", $model->getContent(), [
+        return StringHelper::domNode(LastChance::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -360,7 +360,7 @@ class XmlSerializer {
      * @return String Returns the serialized length.
      */
     public static function serializeLength(Length $model) {
-        return StringHelper::domNode("length", $model->getContent(), [
+        return StringHelper::domNode(Length::DOM_NODE_NAME, $model->getContent(), [
             "units" => $model->getUnits(),
         ]);
     }
@@ -387,7 +387,7 @@ class XmlSerializer {
      * @return String Returns the serialized original language.
      */
     public static function serializeOrigLanguage(OrigLanguage $model) {
-        return StringHelper::domNode("orig-language", $model->getContent(), [
+        return StringHelper::domNode(OrigLanguage::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -399,7 +399,7 @@ class XmlSerializer {
      * @return String Returns the serialized premiere.
      */
     public static function serializePremiere(Premiere $model) {
-        return StringHelper::domNode("premiere", $model->getContent(), [
+        return StringHelper::domNode(Premiere::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -411,7 +411,7 @@ class XmlSerializer {
      * @return String Returns the serialized present.
      */
     public static function serializePresent(Present $model) {
-        return StringHelper::domNode("present", $model->getContent());
+        return StringHelper::domNode(Present::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -421,7 +421,7 @@ class XmlSerializer {
      * @return String Returns the serialized presenter.
      */
     public static function serializePresenter(Presenter $model) {
-        return StringHelper::domNode("presenter", $model->getContent());
+        return StringHelper::domNode(Presenter::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -431,7 +431,7 @@ class XmlSerializer {
      * @return String Returns the serialized previously shown.
      */
     public static function serializePreviouslyShown(PreviouslyShown $model) {
-        return StringHelper::domNode("previously-shown", null, [
+        return StringHelper::domNode(PreviouslyShown::DOM_NODE_NAME, null, [
             "channel" => $model->getChannel(),
             "start"   => $model->getStart(),
         ], true);
@@ -444,7 +444,7 @@ class XmlSerializer {
      * @return String Returns the serialized producer.
      */
     public static function serializeProducer(Producer $model) {
-        return StringHelper::domNode("producer", $model->getContent());
+        return StringHelper::domNode(Producer::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -482,7 +482,7 @@ class XmlSerializer {
             XmlSerializer::serializeArray($model->getReviews()),
         ];
 
-        return StringHelper::domNode("programme", implode("", $content), [
+        return StringHelper::domNode(Programme::DOM_NODE_NAME, implode("", $content), [
             "start"     => $model->getStart(),
             "stop"      => $model->getStop(),
             "pdc-start" => $model->getPdcStart(),
@@ -501,7 +501,7 @@ class XmlSerializer {
      * @return String Returns the serialized quality.
      */
     public static function serializeQuality(Quality $model) {
-        return StringHelper::domNode("quality", $model->getContent());
+        return StringHelper::domNode(Quality::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -517,7 +517,7 @@ class XmlSerializer {
             XmlSerializer::serializeArray($model->getIcons()),
         ];
 
-        return StringHelper::domNode("rating", implode("", $content), [
+        return StringHelper::domNode(Rating::DOM_NODE_NAME, implode("", $content), [
             "system" => $model->getSystem(),
         ]);
     }
@@ -529,7 +529,7 @@ class XmlSerializer {
      * @return String Returns the serialized review.
      */
     public static function serializeReview(Review $model) {
-        return StringHelper::domNode("review", null, [
+        return StringHelper::domNode(Review::DOM_NODE_NAME, null, [
             "type"     => $model->getType(),
             "source"   => $model->getSource(),
             "reviewer" => $model->getReviewer(),
@@ -544,7 +544,7 @@ class XmlSerializer {
      * @return String Returns the serialized secondary title.
      */
     public static function serializeSecondaryTitle(SecondaryTitle $model) {
-        return StringHelper::domNode("sub-title", $model->getContent(), [
+        return StringHelper::domNode(SecondaryTitle::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -562,7 +562,7 @@ class XmlSerializer {
             XmlSerializer::serializeArray($model->getIcons()),
         ];
 
-        return StringHelper::domNode("star-rating", implode("", $content));
+        return StringHelper::domNode(StarRating::DOM_NODE_NAME, implode("", $content));
     }
 
     /**
@@ -572,7 +572,7 @@ class XmlSerializer {
      * @return String Returns the serialized stereo.
      */
     public static function serializeStereo(Stereo $model) {
-        return StringHelper::domNode("stereo", $model->getContent());
+        return StringHelper::domNode(Stereo::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -585,7 +585,7 @@ class XmlSerializer {
 
         $content = XmlSerializer::serializeModel($model->getLanguage());
 
-        return StringHelper::domNode("subtitles", $content, [
+        return StringHelper::domNode(Subtitles::DOM_NODE_NAME, $content, [
             "type" => $model->getType(),
         ]);
     }
@@ -597,7 +597,7 @@ class XmlSerializer {
      * @return String Returns the serialized title.
      */
     public static function serializeTitle(Title $model) {
-        return StringHelper::domNode("title", $model->getContent(), [
+        return StringHelper::domNode(Title::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
     }
@@ -615,7 +615,7 @@ class XmlSerializer {
             XmlSerializer::serializeArray($model->getProgrammes()),
         ];
 
-        return StringHelper::domNode("tv", implode("", $content), [
+        return StringHelper::domNode(Tv::DOM_NODE_NAME, implode("", $content), [
             "date"                => $model->getDate(),
             "generator-info-name" => $model->getGeneratorInfoName(),
             "generator-info-url"  => $model->getGeneratorInfoUrl(),
@@ -632,7 +632,7 @@ class XmlSerializer {
      * @return String Returns the serialized URL.
      */
     public static function serializeUrl(Url $model) {
-        return StringHelper::domNode("url", $model->getContent());
+        return StringHelper::domNode(Url::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -642,7 +642,7 @@ class XmlSerializer {
      * @return String Returns the serialized value.
      */
     public static function serializeValue(Value $model) {
-        return StringHelper::domNode("value", $model->getContent());
+        return StringHelper::domNode(Value::DOM_NODE_NAME, $model->getContent());
     }
 
     /**
@@ -660,7 +660,7 @@ class XmlSerializer {
             $model->getQuality(),
         ]);
 
-        return StringHelper::domNode("video", $content);
+        return StringHelper::domNode(Video::DOM_NODE_NAME, $content);
     }
 
     /**
@@ -670,6 +670,6 @@ class XmlSerializer {
      * @return String Returns the serialized writer.
      */
     public static function serializeWriter(Writer $model) {
-        return StringHelper::domNode("writer", $model->getContent());
+        return StringHelper::domNode(Writer::DOM_NODE_NAME, $model->getContent());
     }
 }

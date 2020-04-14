@@ -125,8 +125,8 @@ class XmlDeserializer {
 
         $model = new Audio();
 
-        XmlDeserializerHelper::deserializeChildNode($domNode, "present", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "stereo", $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Stereo::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -161,9 +161,9 @@ class XmlDeserializer {
         $model = new Channel();
         $model->setId(XmlDeserializerHelper::getDOMAttributeValue($domNode, "id"));
 
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "display-name", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "icon", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "url", $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, DisplayName::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -245,16 +245,16 @@ class XmlDeserializer {
 
         $model = new Credits();
 
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "actor", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "adapter", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "commentator", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "composer", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "director", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "editor", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "guest", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "presenter", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "producer", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "writer", $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Actor::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Adapter::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Commentator::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Composer::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Director::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Editor::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Guest::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Presenter::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Producer::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Writer::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -582,29 +582,29 @@ class XmlDeserializer {
         $model->setVideoPlus(XmlDeserializerHelper::getDOMAttributeValue($domNode, "videoplus"));
         $model->setVpsStart(XmlDeserializerHelper::getDOMAttributeValue($domNode, "vps-start"));
 
-        XmlDeserializerHelper::deserializeChildNode($domNode, "audio", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "category", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "country", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "credits", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "date", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "episode-num", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "desc", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "icon", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "keyword", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "length", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "language", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "last-chance", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "premiere", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "orig-language", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "previously-shown", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "rating", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "review", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "sub-title", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "subtitles", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "star-rating", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "title", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "url", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "video", $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Audio::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Category::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Country::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Credits::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Date::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, EpisodeNum::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Desc::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Keyword::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Length::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, LastChance::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Premiere::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, OrigLanguage::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, PreviouslyShown::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Rating::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Review::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, SecondaryTitle::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Subtitles::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, StarRating::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Title::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Video::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -638,8 +638,8 @@ class XmlDeserializer {
         $model = new Rating();
         $model->setSystem(XmlDeserializerHelper::getDOMAttributeValue($domNode, "system"));
 
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "icon", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "value", $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -692,8 +692,8 @@ class XmlDeserializer {
 
         $model = new StarRating();
 
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "icon", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "value", $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -727,7 +727,7 @@ class XmlDeserializer {
         $model = new Subtitles();
         $model->setType(XmlDeserializerHelper::getDOMAttributeValue($domNode, "type"));
 
-        XmlDeserializerHelper::deserializeChildNode($domNode, "language", $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -767,8 +767,8 @@ class XmlDeserializer {
         $model->setSourceInfoName(XmlDeserializerHelper::getDOMAttributeValue($domNode, "source-info-name"));
         $model->setSourceInfoUrl(XmlDeserializerHelper::getDOMAttributeValue($domNode, "source-info-url"));
 
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "channel", $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, "programme", $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Channel::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNodes($domNode, Programme::DOM_NODE_NAME, $model);
 
         $model->indexProgrammesByChannel();
 
@@ -819,10 +819,10 @@ class XmlDeserializer {
 
         $model = new Video();
 
-        XmlDeserializerHelper::deserializeChildNode($domNode, "aspect", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "colour", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "present", $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, "quality", $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Aspect::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Colour::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
+        XmlDeserializerHelper::deserializeChildNode($domNode, Quality::DOM_NODE_NAME, $model);
 
         return $model;
     }

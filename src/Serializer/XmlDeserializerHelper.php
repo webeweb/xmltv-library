@@ -16,6 +16,7 @@ use DOMNode;
 use DOMNodeList;
 use Psr\Log\LoggerInterface;
 use WBW\Library\XMLTV\Model\AbstractModel;
+use WBW\Library\XMLTV\Model\SecondaryTitle;
 
 /**
  * XML deserializer helper.
@@ -169,7 +170,7 @@ class XmlDeserializerHelper {
 
         $method = "";
 
-        $rightPart = str_replace("sub-title", "secondary-title", $rightPart);
+        $rightPart = str_replace(SecondaryTitle::DOM_NODE_NAME, "secondary-title", $rightPart);
 
         $parts = explode("-", $rightPart);
         foreach ($parts as $current) {
