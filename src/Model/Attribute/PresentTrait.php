@@ -46,5 +46,4 @@ trait PresentTrait {
         $this->present = $present;
         return $this;
     }
-
 }

@@ -46,5 +46,4 @@ trait LanguageTrait {
         $this->language = $language;
         return $this;
     }
-
 }
