@@ -34,9 +34,9 @@ class IconTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(3, $res);
 
-        $this->assertArrayHasKey("height", $res);
         $this->assertArrayHasKey("src", $res);
         $this->assertArrayHasKey("width", $res);
+        $this->assertArrayHasKey("height", $res);
     }
 
     /**

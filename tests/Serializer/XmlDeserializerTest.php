@@ -81,8 +81,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeActor($node);
         $this->assertInstanceOf(Actor::class, $res);
 
-        $this->assertEquals("Actor", $res->getContent());
         $this->assertEquals("role", $res->getRole());
+        $this->assertEquals("Actor", $res->getContent());
     }
 
     /**
@@ -157,8 +157,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeCategory($node);
         $this->assertInstanceOf(Category::class, $res);
 
-        $this->assertEquals("Category", $res->getContent());
         $this->assertEquals("category-lang", $res->getLang());
+        $this->assertEquals("Category", $res->getContent());
     }
 
     /**
@@ -252,8 +252,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeCountry($node);
         $this->assertInstanceOf(Country::class, $res);
 
-        $this->assertEquals("Country", $res->getContent());
         $this->assertEquals("country-lang", $res->getLang());
+        $this->assertEquals("Country", $res->getContent());
     }
 
     /**
@@ -271,16 +271,16 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeCredits($node);
         $this->assertInstanceOf(Credits::class, $res);
 
-        $this->assertInstanceOf(Actor::class, $res->getActors()[0]);
-        $this->assertInstanceOf(Adapter::class, $res->getAdapters()[0]);
-        $this->assertInstanceOf(Commentator::class, $res->getCommentators()[0]);
-        $this->assertInstanceOf(Composer::class, $res->getComposers()[0]);
         $this->assertInstanceOf(Director::class, $res->getDirectors()[0]);
-        $this->assertInstanceOf(Editor::class, $res->getEditors()[0]);
-        $this->assertInstanceOf(Guest::class, $res->getGuests()[0]);
-        $this->assertInstanceOf(Presenter::class, $res->getPresenters()[0]);
-        $this->assertInstanceOf(Producer::class, $res->getProducers()[0]);
+        $this->assertInstanceOf(Actor::class, $res->getActors()[0]);
         $this->assertInstanceOf(Writer::class, $res->getWriters()[0]);
+        $this->assertInstanceOf(Adapter::class, $res->getAdapters()[0]);
+        $this->assertInstanceOf(Producer::class, $res->getProducers()[0]);
+        $this->assertInstanceOf(Composer::class, $res->getComposers()[0]);
+        $this->assertInstanceOf(Editor::class, $res->getEditors()[0]);
+        $this->assertInstanceOf(Presenter::class, $res->getPresenters()[0]);
+        $this->assertInstanceOf(Commentator::class, $res->getCommentators()[0]);
+        $this->assertInstanceOf(Guest::class, $res->getGuests()[0]);
     }
 
     /**
@@ -316,8 +316,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeDesc($node);
         $this->assertInstanceOf(Desc::class, $res);
 
-        $this->assertEquals("Desc", $res->getContent());
         $this->assertEquals("desc-lang", $res->getLang());
+        $this->assertEquals("Desc", $res->getContent());
     }
 
     /**
@@ -354,8 +354,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeDisplayName($node);
         $this->assertInstanceOf(DisplayName::class, $res);
 
-        $this->assertEquals("Display name", $res->getContent());
         $this->assertEquals("display-name-lang", $res->getLang());
+        $this->assertEquals("Display name", $res->getContent());
     }
 
     /**
@@ -392,8 +392,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeEpisodeNum($node);
         $this->assertInstanceOf(EpisodeNum::class, $res);
 
-        $this->assertEquals("Episode num", $res->getContent());
         $this->assertEquals("onscreen", $res->getSystem());
+        $this->assertEquals("Episode num", $res->getContent());
     }
 
     /**
@@ -430,9 +430,9 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeIcon($node);
         $this->assertInstanceOf(Icon::class, $res);
 
-        $this->assertEquals(1080, $res->getHeight());
         $this->assertEquals("src", $res->getSrc());
         $this->assertEquals(1920, $res->getWidth());
+        $this->assertEquals(1080, $res->getHeight());
     }
 
     /**
@@ -450,8 +450,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeKeyword($node);
         $this->assertInstanceOf(Keyword::class, $res);
 
-        $this->assertEquals("Keyword", $res->getContent());
         $this->assertEquals("keyword-lang", $res->getLang());
+        $this->assertEquals("Keyword", $res->getContent());
     }
 
     /**
@@ -469,8 +469,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeLanguage($node);
         $this->assertInstanceOf(Language::class, $res);
 
-        $this->assertEquals("Language", $res->getContent());
         $this->assertEquals("language-lang", $res->getLang());
+        $this->assertEquals("Language", $res->getContent());
     }
 
     /**
@@ -488,8 +488,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeLastChance($node);
         $this->assertInstanceOf(LastChance::class, $res);
 
-        $this->assertEquals("Last chance", $res->getContent());
         $this->assertEquals("last-chance-lang", $res->getLang());
+        $this->assertEquals("Last chance", $res->getContent());
     }
 
     /**
@@ -507,8 +507,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeLength($node);
         $this->assertInstanceOf(Length::class, $res);
 
-        $this->assertEquals(90, $res->getContent());
         $this->assertEquals("minutes", $res->getUnits());
+        $this->assertEquals(90, $res->getContent());
     }
 
     /**
@@ -526,8 +526,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeOrigLanguage($node);
         $this->assertInstanceOf(OrigLanguage::class, $res);
 
-        $this->assertEquals("Orig language", $res->getContent());
         $this->assertEquals("orig-language-lang", $res->getLang());
+        $this->assertEquals("Orig language", $res->getContent());
     }
 
     /**
@@ -545,8 +545,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializePremiere($node);
         $this->assertInstanceOf(Premiere::class, $res);
 
-        $this->assertEquals("Premiere", $res->getContent());
         $this->assertEquals("premiere-lang", $res->getLang());
+        $this->assertEquals("Premiere", $res->getContent());
     }
 
     /**
@@ -639,39 +639,39 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeProgramme($node);
         $this->assertInstanceOf(Programme::class, $res);
 
-        $this->assertInstanceOf(Audio::class, $res->getAudio());
-        $this->assertInstanceOf(Category::class, $res->getCategories()[0]);
-        $this->assertEquals("channel-id", $res->getChannel());
-        $this->assertEquals("clumpidx", $res->getClumpIdx());
-        $this->assertCount(1, $res->getCountries());
-        $this->assertInstanceOf(Country::class, $res->getCountries()[0]);
-        $this->assertInstanceOf(Credits::class, $res->getCredits());
-        $this->assertInstanceOf(Date::class, $res->getDate());
-        $this->assertInstanceOf(Desc::class, $res->getDescs()[0]);
-        $this->assertInstanceOf(EpisodeNum::class, $res->getEpisodeNums()[0]);
-        $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
-        $this->assertInstanceOf(Keyword::class, $res->getKeywords()[0]);
-        $this->assertInstanceOf(Language::class, $res->getLanguage());
-        $this->assertInstanceOf(LastChance::class, $res->getLastChance());
-        $this->assertInstanceOf(Length::class, $res->getLength());
-        $this->assertInstanceOf(OrigLanguage::class, $res->getOrigLanguage());
-        $this->assertTrue($res->getNew());
-        $this->assertEquals("20190730200000 +0100", $res->getPdcStart());
-        $this->assertInstanceOf(Premiere::class, $res->getPremiere());
-        $this->assertInstanceOf(PreviouslyShown::class, $res->getPreviouslyShown());
-        $this->assertInstanceOf(Rating::class, $res->getRatings()[0]);
-        $this->assertInstanceOf(Review::class, $res->getReviews()[0]);
-        $this->assertInstanceOf(SecondaryTitle::class, $res->getSecondaryTitles()[0]);
-        $this->assertInstanceOf(StarRating::class, $res->getStarRatings()[0]);
-        $this->assertEquals("showview", $res->getShowView());
         $this->assertEquals("20190730200000 +0200", $res->getStart());
         $this->assertEquals("20190730220000 +0200", $res->getStop());
-        $this->assertInstanceOf(Subtitles::class, $res->getSubtitles()[0]);
-        $this->assertInstanceOf(Title::class, $res->getTitles()[0]);
-        $this->assertInstanceOf(Url::class, $res->getUrls()[0]);
-        $this->assertInstanceOf(Video::class, $res->getVideo());
-        $this->assertEquals("videoplus", $res->getVideoPlus());
+        $this->assertEquals("20190730200000 +0100", $res->getPdcStart());
         $this->assertEquals("20190730200000 -0100", $res->getVpsStart());
+        $this->assertEquals("showview", $res->getShowView());
+        $this->assertEquals("videoplus", $res->getVideoPlus());
+        $this->assertEquals("channel-id", $res->getChannel());
+        $this->assertEquals("clumpidx", $res->getClumpIdx());
+        $this->assertInstanceOf(Title::class, $res->getTitles()[0]);
+        $this->assertInstanceOf(SecondaryTitle::class, $res->getSecondaryTitles()[0]);
+        $this->assertInstanceOf(Desc::class, $res->getDescs()[0]);
+        $this->assertInstanceOf(Credits::class, $res->getCredits());
+        $this->assertInstanceOf(Date::class, $res->getDate());
+        $this->assertInstanceOf(Category::class, $res->getCategories()[0]);
+        $this->assertInstanceOf(Keyword::class, $res->getKeywords()[0]);
+        $this->assertInstanceOf(Language::class, $res->getLanguage());
+        $this->assertInstanceOf(OrigLanguage::class, $res->getOrigLanguage());
+        $this->assertInstanceOf(Length::class, $res->getLength());
+        $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
+        $this->assertInstanceOf(Url::class, $res->getUrls()[0]);
+        $this->assertCount(1, $res->getCountries());
+        $this->assertInstanceOf(Country::class, $res->getCountries()[0]);
+        $this->assertInstanceOf(EpisodeNum::class, $res->getEpisodeNums()[0]);
+        $this->assertInstanceOf(Video::class, $res->getVideo());
+        $this->assertInstanceOf(Audio::class, $res->getAudio());
+        $this->assertInstanceOf(PreviouslyShown::class, $res->getPreviouslyShown());
+        $this->assertInstanceOf(Premiere::class, $res->getPremiere());
+        $this->assertInstanceOf(LastChance::class, $res->getLastChance());
+        $this->assertTrue($res->getNew());
+        $this->assertInstanceOf(Subtitles::class, $res->getSubtitles()[0]);
+        $this->assertInstanceOf(Rating::class, $res->getRatings()[0]);
+        $this->assertInstanceOf(StarRating::class, $res->getStarRatings()[0]);
+        $this->assertInstanceOf(Review::class, $res->getReviews()[0]);
     }
 
     /**
@@ -708,9 +708,9 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeRating($node);
         $this->assertInstanceOf(Rating::class, $res);
 
-        $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
         $this->assertEquals("rating-system", $res->getSystem());
         $this->assertInstanceOf(Value::class, $res->getValue());
+        $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
     }
 
     /**
@@ -728,10 +728,10 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeReview($node);
         $this->assertInstanceOf(Review::class, $res);
 
-        $this->assertEquals("review-lang", $res->getLang());
-        $this->assertEquals("reviewer", $res->getReviewer());
-        $this->assertEquals("source", $res->getSource());
         $this->assertEquals("text", $res->getType());
+        $this->assertEquals("source", $res->getSource());
+        $this->assertEquals("reviewer", $res->getReviewer());
+        $this->assertEquals("review-lang", $res->getLang());
     }
 
     /**
@@ -749,8 +749,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeSecondaryTitle($node);
         $this->assertInstanceOf(SecondaryTitle::class, $res);
 
-        $this->assertEquals("Secondary title", $res->getContent());
         $this->assertEquals("secondary-title-lang", $res->getLang());
+        $this->assertEquals("Secondary title", $res->getContent());
     }
 
     /**
@@ -768,8 +768,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeStarRating($node);
         $this->assertInstanceOf(StarRating::class, $res);
 
-        $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
         $this->assertInstanceOf(Value::class, $res->getValue());
+        $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
     }
 
     /**
@@ -806,8 +806,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeSubtitles($node);
         $this->assertInstanceOf(Subtitles::class, $res);
 
-        $this->assertInstanceOf(Language::class, $res->getLanguage());
         $this->assertEquals("deaf-signed", $res->getType());
+        $this->assertInstanceOf(Language::class, $res->getLanguage());
     }
 
     /**
@@ -825,8 +825,8 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeTitle($node);
         $this->assertInstanceOf(Title::class, $res);
 
-        $this->assertEquals("Title", $res->getContent());
         $this->assertEquals("title-lang", $res->getLang());
+        $this->assertEquals("Title", $res->getContent());
     }
 
     /**
@@ -842,13 +842,14 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeTv($node);
         $this->assertInstanceOf(Tv::class, $res);
 
-        $this->assertInstanceOf(Channel::class, $res->getChannels()[0]);
+        $this->assertEquals("date", $res->getDate());
         $this->assertEquals("generator-info-name", $res->getGeneratorInfoName());
         $this->assertEquals("generator-info-url", $res->getGeneratorInfoUrl());
-        $this->assertInstanceOf(Programme::class, $res->getProgrammes()[0]);
         $this->assertEquals("source-data-url", $res->getSourceDataUrl());
         $this->assertEquals("source-info-name", $res->getSourceInfoName());
         $this->assertEquals("source-info-url", $res->getSourceInfoUrl());
+        $this->assertInstanceOf(Channel::class, $res->getChannels()[0]);
+        $this->assertInstanceOf(Programme::class, $res->getProgrammes()[0]);
     }
 
     /**
@@ -903,9 +904,9 @@ class XmlDeserializerTest extends AbstractTestCase {
         $res = XmlDeserializer::deserializeVideo($node);
         $this->assertInstanceOf(Video::class, $res);
 
-        $this->assertInstanceOf(Aspect::class, $res->getAspect());
-        $this->assertInstanceOf(Colour::class, $res->getColour());
         $this->assertInstanceOf(Present::class, $res->getPresent());
+        $this->assertInstanceOf(Colour::class, $res->getColour());
+        $this->assertInstanceOf(Aspect::class, $res->getAspect());
         $this->assertInstanceOf(Quality::class, $res->getQuality());
     }
 

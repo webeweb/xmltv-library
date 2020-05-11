@@ -44,16 +44,16 @@ class CreditsTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(10, $res);
 
-        $this->assertArrayHasKey("actors", $res);
-        $this->assertArrayHasKey("adapters", $res);
-        $this->assertArrayHasKey("commentators", $res);
-        $this->assertArrayHasKey("composers", $res);
         $this->assertArrayHasKey("directors", $res);
-        $this->assertArrayHasKey("editors", $res);
-        $this->assertArrayHasKey("guests", $res);
-        $this->assertArrayHasKey("presenters", $res);
-        $this->assertArrayHasKey("producers", $res);
+        $this->assertArrayHasKey("actors", $res);
         $this->assertArrayHasKey("writers", $res);
+        $this->assertArrayHasKey("adapters", $res);
+        $this->assertArrayHasKey("producers", $res);
+        $this->assertArrayHasKey("composers", $res);
+        $this->assertArrayHasKey("editors", $res);
+        $this->assertArrayHasKey("presenters", $res);
+        $this->assertArrayHasKey("commentators", $res);
+        $this->assertArrayHasKey("guests", $res);
     }
 
     /**

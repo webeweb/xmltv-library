@@ -54,10 +54,10 @@ class ReviewTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(4, $res);
 
-        $this->assertArrayHasKey("lang", $res);
-        $this->assertArrayHasKey("reviewer", $res);
-        $this->assertArrayHasKey("source", $res);
         $this->assertArrayHasKey("type", $res);
+        $this->assertArrayHasKey("source", $res);
+        $this->assertArrayHasKey("reviewer", $res);
+        $this->assertArrayHasKey("lang", $res);
     }
 
     /**

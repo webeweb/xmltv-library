@@ -36,9 +36,9 @@ class RatingTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(3, $res);
 
-        $this->assertArrayHasKey("icons", $res);
         $this->assertArrayHasKey("system", $res);
         $this->assertArrayHasKey("value", $res);
+        $this->assertArrayHasKey("icons", $res);
     }
 
     /**

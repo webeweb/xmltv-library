@@ -38,9 +38,9 @@ class VideoTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(4, $res);
 
-        $this->assertArrayHasKey("aspect", $res);
-        $this->assertArrayHasKey("colour", $res);
         $this->assertArrayHasKey("present", $res);
+        $this->assertArrayHasKey("colour", $res);
+        $this->assertArrayHasKey("aspect", $res);
         $this->assertArrayHasKey("quality", $res);
     }
 

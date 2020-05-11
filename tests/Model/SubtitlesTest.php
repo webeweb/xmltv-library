@@ -53,8 +53,8 @@ class SubtitlesTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
-        $this->assertArrayHasKey("language", $res);
         $this->assertArrayHasKey("type", $res);
+        $this->assertArrayHasKey("language", $res);
     }
 
     /**

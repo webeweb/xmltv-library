@@ -42,14 +42,14 @@ class TvTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(8, $res);
 
-        $this->assertArrayHasKey("channels", $res);
         $this->assertArrayHasKey("date", $res);
         $this->assertArrayHasKey("generatorInfoName", $res);
         $this->assertArrayHasKey("generatorInfoUrl", $res);
-        $this->assertArrayHasKey("programmes", $res);
         $this->assertArrayHasKey("sourceDataUrl", $res);
         $this->assertArrayHasKey("sourceInfoName", $res);
         $this->assertArrayHasKey("sourceInfoUrl", $res);
+        $this->assertArrayHasKey("channels", $res);
+        $this->assertArrayHasKey("programmes", $res);
     }
 
     /**

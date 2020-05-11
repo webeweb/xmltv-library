@@ -38,9 +38,9 @@ class ChannelTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(4, $res);
 
+        $this->assertArrayHasKey("id", $res);
         $this->assertArrayHasKey("displayNames", $res);
         $this->assertArrayHasKey("icons", $res);
-        $this->assertArrayHasKey("id", $res);
         $this->assertArrayHasKey("urls", $res);
     }
 

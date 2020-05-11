@@ -53,8 +53,8 @@ class LengthTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
-        $this->assertArrayHasKey("content", $res);
         $this->assertArrayHasKey("units", $res);
+        $this->assertArrayHasKey("content", $res);
     }
 
     /**

@@ -36,8 +36,8 @@ class StarRatingTest extends AbstractTestCase {
         $res = $obj->jsonSerialize();
         $this->assertCount(2, $res);
 
-        $this->assertArrayHasKey("icons", $res);
         $this->assertArrayHasKey("value", $res);
+        $this->assertArrayHasKey("icons", $res);
     }
 
     /**
