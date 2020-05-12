@@ -13,16 +13,16 @@ namespace WBW\Library\XMLTV\Tests\Serializer;
 
 use DateTime;
 use Psr\Log\LoggerInterface;
-use WBW\Library\XMLTV\Serializer\XmlDeserializerHelper;
+use WBW\Library\XMLTV\Serializer\SerializerHelper;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
 
 /**
- * XML deserializer helper test.
+ * Serializer helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Serializer
  */
-class XmlDeserializerHelperTest extends AbstractTestCase {
+class SerializerHelperTest extends AbstractTestCase {
 
     /**
      * Tests the deserializeDateTime() method.
@@ -31,11 +31,11 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
      */
     public function testDeserializeDateTime() {
 
-        $res = XmlDeserializerHelper::deserializeDateTime("20190731180000 +0200");
+        $res = SerializerHelper::deserializeDateTime("20190731180000 +0200");
         $this->assertInstanceOf(DateTime::class, $res);
         $this->assertEquals("2019-07-31 18:00:00", $res->format("Y-m-d H:i:s"));
 
-        $this->assertNull(XmlDeserializerHelper::deserializeDateTime("exception"));
+        $this->assertNull(SerializerHelper::deserializeDateTime("exception"));
     }
 
     /**
@@ -45,12 +45,12 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
      */
     public function testGetDOMAttributeValue() {
 
-        $tvNode          = $this->document->documentElement;
-        $displayNameNode = $tvNode->childNodes->item(1)->childNodes->item(1);
+        $tvNode = $this->document->documentElement;
+        $dnNode = $tvNode->childNodes->item(1)->childNodes->item(1);
 
-        $this->assertNull(XmlDeserializerHelper::getDOMAttributeValue($displayNameNode, ""));
-        $this->assertNull(XmlDeserializerHelper::getDOMAttributeValue($tvNode, ""));
-        $this->assertEquals("date", XmlDeserializerHelper::getDOMAttributeValue($tvNode, "date"));
+        $this->assertNull(SerializerHelper::getDOMAttributeValue($dnNode, ""));
+        $this->assertNull(SerializerHelper::getDOMAttributeValue($tvNode, ""));
+        $this->assertEquals("date", SerializerHelper::getDOMAttributeValue($tvNode, "date"));
     }
 
     /**
@@ -62,11 +62,11 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
 
         $tvNode = $this->document->documentElement;
 
-        $res = XmlDeserializerHelper::getDOMNodeByName("channel", $tvNode->childNodes);
+        $res = SerializerHelper::getDOMNodeByName("channel", $tvNode->childNodes);
         $this->assertNotNull($res);
         $this->assertEquals("channel", $res->nodeName);
 
-        $this->assertNull(XmlDeserializerHelper::getDOMNodeByName("name", $tvNode->childNodes));
+        $this->assertNull(SerializerHelper::getDOMNodeByName("name", $tvNode->childNodes));
     }
 
     /**
@@ -78,7 +78,7 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
 
         $tvNode = $this->document->documentElement;
 
-        $res = XmlDeserializerHelper::getDOMNodesByName("channel", $tvNode->childNodes);
+        $res = SerializerHelper::getDOMNodesByName("channel", $tvNode->childNodes);
         $this->assertCount(1, $res);
         $this->assertEquals("channel", $res[0]->nodeName);
     }
@@ -90,7 +90,7 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
      */
     public function testGetDOMNodesByNameWithNull() {
 
-        $this->assertEquals([], XmlDeserializerHelper::getDOMNodesByName("channel", null));
+        $this->assertEquals([], SerializerHelper::getDOMNodesByName("channel", null));
     }
 
     /**
@@ -100,8 +100,8 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
      */
     public function testGetMethodName() {
 
-        $this->assertEquals("addDisplayName", XmlDeserializerHelper::getMethodName("add", "display-name"));
-        $this->assertEquals("setUrl", XmlDeserializerHelper::getMethodName("set", "url"));
+        $this->assertEquals("addDisplayName", SerializerHelper::getMethodName("add", "display-name"));
+        $this->assertEquals("setUrl", SerializerHelper::getMethodName("set", "url"));
     }
 
     /**
@@ -114,10 +114,10 @@ class XmlDeserializerHelperTest extends AbstractTestCase {
         // Set a Logger mock.
         $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
 
-        XmlDeserializerHelper::setLogger($logger);
-        $this->assertSame($logger, XmlDeserializerHelper::getLogger());
+        SerializerHelper::setLogger($logger);
+        $this->assertSame($logger, SerializerHelper::getLogger());
 
         // Unset the mock.
-        XmlDeserializerHelper::setLogger(null);
+        SerializerHelper::setLogger(null);
     }
 }

@@ -72,10 +72,10 @@ class XmlDeserializer {
      */
     public static function deserializeActor(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Actor();
-        $model->setRole(XmlDeserializerHelper::getDOMAttributeValue($domNode, "role"));
+        $model->setRole(SerializerHelper::getDOMAttributeValue($domNode, "role"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -89,7 +89,7 @@ class XmlDeserializer {
      */
     public static function deserializeAdapter(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Adapter();
         $model->setContent(trim($domNode->textContent));
@@ -105,7 +105,7 @@ class XmlDeserializer {
      */
     public static function deserializeAspect(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Aspect();
         $model->setContent(trim($domNode->textContent));
@@ -121,12 +121,12 @@ class XmlDeserializer {
      */
     public static function deserializeAudio(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Audio();
 
-        XmlDeserializerHelper::deserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Stereo::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Stereo::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -139,10 +139,10 @@ class XmlDeserializer {
      */
     public static function deserializeCategory(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Category();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -156,14 +156,14 @@ class XmlDeserializer {
      */
     public static function deserializeChannel(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Channel();
-        $model->setId(XmlDeserializerHelper::getDOMAttributeValue($domNode, "id"));
+        $model->setId(SerializerHelper::getDOMAttributeValue($domNode, "id"));
 
-        XmlDeserializerHelper::deserializeChildNodes($domNode, DisplayName::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, DisplayName::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -176,7 +176,7 @@ class XmlDeserializer {
      */
     public static function deserializeColour(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Colour();
         $model->setContent(trim($domNode->textContent));
@@ -192,7 +192,7 @@ class XmlDeserializer {
      */
     public static function deserializeCommentator(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Commentator();
         $model->setContent(trim($domNode->textContent));
@@ -208,7 +208,7 @@ class XmlDeserializer {
      */
     public static function deserializeComposer(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Composer();
         $model->setContent(trim($domNode->textContent));
@@ -224,10 +224,10 @@ class XmlDeserializer {
      */
     public static function deserializeCountry(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Country();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -241,20 +241,20 @@ class XmlDeserializer {
      */
     public static function deserializeCredits(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Credits();
 
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Director::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Actor::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Writer::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Adapter::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Producer::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Composer::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Editor::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Presenter::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Commentator::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Guest::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Director::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Actor::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Writer::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Adapter::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Producer::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Composer::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Editor::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Presenter::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Commentator::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Guest::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -267,7 +267,7 @@ class XmlDeserializer {
      */
     public static function deserializeDate(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Date();
         $model->setContent(trim($domNode->textContent));
@@ -283,10 +283,10 @@ class XmlDeserializer {
      */
     public static function deserializeDesc(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Desc();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -300,7 +300,7 @@ class XmlDeserializer {
      */
     public static function deserializeDirector(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Director();
         $model->setContent(trim($domNode->textContent));
@@ -316,10 +316,10 @@ class XmlDeserializer {
      */
     public static function deserializeDisplayName(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new DisplayName();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -333,7 +333,7 @@ class XmlDeserializer {
      */
     public static function deserializeEditor(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Editor();
         $model->setContent(trim($domNode->textContent));
@@ -349,10 +349,10 @@ class XmlDeserializer {
      */
     public static function deserializeEpisodeNum(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new EpisodeNum();
-        $model->setSystem(XmlDeserializerHelper::getDOMAttributeValue($domNode, "system"));
+        $model->setSystem(SerializerHelper::getDOMAttributeValue($domNode, "system"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -366,7 +366,7 @@ class XmlDeserializer {
      */
     public static function deserializeGuest(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Guest();
         $model->setContent(trim($domNode->textContent));
@@ -382,12 +382,12 @@ class XmlDeserializer {
      */
     public static function deserializeIcon(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Icon();
-        $model->setSrc(XmlDeserializerHelper::getDOMAttributeValue($domNode, "src"));
-        $model->setWidth(XmlDeserializerHelper::getDOMAttributeValue($domNode, "width"));
-        $model->setHeight(XmlDeserializerHelper::getDOMAttributeValue($domNode, "height"));
+        $model->setSrc(SerializerHelper::getDOMAttributeValue($domNode, "src"));
+        $model->setWidth(SerializerHelper::getDOMAttributeValue($domNode, "width"));
+        $model->setHeight(SerializerHelper::getDOMAttributeValue($domNode, "height"));
 
         return $model;
     }
@@ -400,10 +400,10 @@ class XmlDeserializer {
      */
     public static function deserializeKeyword(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Keyword();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -417,10 +417,10 @@ class XmlDeserializer {
      */
     public static function deserializeLanguage(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Language();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -434,10 +434,10 @@ class XmlDeserializer {
      */
     public static function deserializeLastChance(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new LastChance();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -451,10 +451,10 @@ class XmlDeserializer {
      */
     public static function deserializeLength(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Length();
-        $model->setUnits(XmlDeserializerHelper::getDOMAttributeValue($domNode, "units"));
+        $model->setUnits(SerializerHelper::getDOMAttributeValue($domNode, "units"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -468,10 +468,10 @@ class XmlDeserializer {
      */
     public static function deserializeOrigLanguage(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new OrigLanguage();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -485,10 +485,10 @@ class XmlDeserializer {
      */
     public static function deserializePremiere(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Premiere();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -502,7 +502,7 @@ class XmlDeserializer {
      */
     public static function deserializePresent(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Present();
         $model->setContent(trim($domNode->textContent));
@@ -518,7 +518,7 @@ class XmlDeserializer {
      */
     public static function deserializePresenter(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Presenter();
         $model->setContent(trim($domNode->textContent));
@@ -534,11 +534,11 @@ class XmlDeserializer {
      */
     public static function deserializePreviouslyShown(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new PreviouslyShown();
-        $model->setChannel(XmlDeserializerHelper::getDOMAttributeValue($domNode, "channel"));
-        $model->setStart(XmlDeserializerHelper::getDOMAttributeValue($domNode, "start"));
+        $model->setChannel(SerializerHelper::getDOMAttributeValue($domNode, "channel"));
+        $model->setStart(SerializerHelper::getDOMAttributeValue($domNode, "start"));
 
         return $model;
     }
@@ -551,7 +551,7 @@ class XmlDeserializer {
      */
     public static function deserializeProducer(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Producer();
         $model->setContent(trim($domNode->textContent));
@@ -567,43 +567,43 @@ class XmlDeserializer {
      */
     public static function deserializeProgramme(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
-        $newNode = XmlDeserializerHelper::getDOMNodeByName("new", $domNode->childNodes);
+        $newNode = SerializerHelper::getDOMNodeByName("new", $domNode->childNodes);
 
         $model = new Programme();
-        $model->setStart(XmlDeserializerHelper::getDOMAttributeValue($domNode, "start"));
-        $model->setStop(XmlDeserializerHelper::getDOMAttributeValue($domNode, "stop"));
-        $model->setPdcStart(XmlDeserializerHelper::getDOMAttributeValue($domNode, "pdc-start"));
-        $model->setVpsStart(XmlDeserializerHelper::getDOMAttributeValue($domNode, "vps-start"));
-        $model->setShowView(XmlDeserializerHelper::getDOMAttributeValue($domNode, "showview"));
-        $model->setVideoPlus(XmlDeserializerHelper::getDOMAttributeValue($domNode, "videoplus"));
-        $model->setChannel(XmlDeserializerHelper::getDOMAttributeValue($domNode, "channel"));
-        $model->setClumpIdx(XmlDeserializerHelper::getDOMAttributeValue($domNode, "clumpidx"));
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Title::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, SecondaryTitle::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Desc::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Credits::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Date::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Category::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Keyword::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, OrigLanguage::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Length::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Country::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, EpisodeNum::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Video::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Audio::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, PreviouslyShown::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Premiere::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, LastChance::DOM_NODE_NAME, $model);
+        $model->setStart(SerializerHelper::getDOMAttributeValue($domNode, "start"));
+        $model->setStop(SerializerHelper::getDOMAttributeValue($domNode, "stop"));
+        $model->setPdcStart(SerializerHelper::getDOMAttributeValue($domNode, "pdc-start"));
+        $model->setVpsStart(SerializerHelper::getDOMAttributeValue($domNode, "vps-start"));
+        $model->setShowView(SerializerHelper::getDOMAttributeValue($domNode, "showview"));
+        $model->setVideoPlus(SerializerHelper::getDOMAttributeValue($domNode, "videoplus"));
+        $model->setChannel(SerializerHelper::getDOMAttributeValue($domNode, "channel"));
+        $model->setClumpIdx(SerializerHelper::getDOMAttributeValue($domNode, "clumpidx"));
+        SerializerHelper::deserializeChildNodes($domNode, Title::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, SecondaryTitle::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Desc::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Credits::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Date::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Category::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Keyword::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, OrigLanguage::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Length::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Country::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, EpisodeNum::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Video::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Audio::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, PreviouslyShown::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Premiere::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, LastChance::DOM_NODE_NAME, $model);
         $model->setNew(null !== $newNode);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Subtitles::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Rating::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, StarRating::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Review::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Subtitles::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Rating::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, StarRating::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Review::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -616,7 +616,7 @@ class XmlDeserializer {
      */
     public static function deserializeQuality(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Quality();
         $model->setContent(trim($domNode->textContent));
@@ -632,12 +632,12 @@ class XmlDeserializer {
      */
     public static function deserializeRating(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Rating();
-        $model->setSystem(XmlDeserializerHelper::getDOMAttributeValue($domNode, "system"));
-        XmlDeserializerHelper::deserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        $model->setSystem(SerializerHelper::getDOMAttributeValue($domNode, "system"));
+        SerializerHelper::deserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -650,13 +650,13 @@ class XmlDeserializer {
      */
     public static function deserializeReview(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Review();
-        $model->setType(XmlDeserializerHelper::getDOMAttributeValue($domNode, "type"));
-        $model->setSource(XmlDeserializerHelper::getDOMAttributeValue($domNode, "source"));
-        $model->setReviewer(XmlDeserializerHelper::getDOMAttributeValue($domNode, "reviewer"));
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setType(SerializerHelper::getDOMAttributeValue($domNode, "type"));
+        $model->setSource(SerializerHelper::getDOMAttributeValue($domNode, "source"));
+        $model->setReviewer(SerializerHelper::getDOMAttributeValue($domNode, "reviewer"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
 
         return $model;
     }
@@ -669,10 +669,10 @@ class XmlDeserializer {
      */
     public static function deserializeSecondaryTitle(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new SecondaryTitle();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -686,11 +686,11 @@ class XmlDeserializer {
      */
     public static function deserializeStarRating(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new StarRating();
-        XmlDeserializerHelper::deserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -703,7 +703,7 @@ class XmlDeserializer {
      */
     public static function deserializeStereo(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Stereo();
         $model->setContent(trim($domNode->textContent));
@@ -719,11 +719,11 @@ class XmlDeserializer {
      */
     public static function deserializeSubtitles(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Subtitles();
-        $model->setType(XmlDeserializerHelper::getDOMAttributeValue($domNode, "type"));
-        XmlDeserializerHelper::deserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
+        $model->setType(SerializerHelper::getDOMAttributeValue($domNode, "type"));
+        SerializerHelper::deserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -736,10 +736,10 @@ class XmlDeserializer {
      */
     public static function deserializeTitle(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Title();
-        $model->setLang(XmlDeserializerHelper::getDOMAttributeValue($domNode, "lang"));
+        $model->setLang(SerializerHelper::getDOMAttributeValue($domNode, "lang"));
         $model->setContent(trim($domNode->textContent));
 
         return $model;
@@ -753,17 +753,17 @@ class XmlDeserializer {
      */
     public static function deserializeTv(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Tv();
-        $model->setDate(XmlDeserializerHelper::getDOMAttributeValue($domNode, "date"));
-        $model->setGeneratorInfoName(XmlDeserializerHelper::getDOMAttributeValue($domNode, "generator-info-name"));
-        $model->setGeneratorInfoUrl(XmlDeserializerHelper::getDOMAttributeValue($domNode, "generator-info-url"));
-        $model->setSourceDataUrl(XmlDeserializerHelper::getDOMAttributeValue($domNode, "source-data-url"));
-        $model->setSourceInfoName(XmlDeserializerHelper::getDOMAttributeValue($domNode, "source-info-name"));
-        $model->setSourceInfoUrl(XmlDeserializerHelper::getDOMAttributeValue($domNode, "source-info-url"));
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Channel::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNodes($domNode, Programme::DOM_NODE_NAME, $model);
+        $model->setDate(SerializerHelper::getDOMAttributeValue($domNode, "date"));
+        $model->setGeneratorInfoName(SerializerHelper::getDOMAttributeValue($domNode, "generator-info-name"));
+        $model->setGeneratorInfoUrl(SerializerHelper::getDOMAttributeValue($domNode, "generator-info-url"));
+        $model->setSourceDataUrl(SerializerHelper::getDOMAttributeValue($domNode, "source-data-url"));
+        $model->setSourceInfoName(SerializerHelper::getDOMAttributeValue($domNode, "source-info-name"));
+        $model->setSourceInfoUrl(SerializerHelper::getDOMAttributeValue($domNode, "source-info-url"));
+        SerializerHelper::deserializeChildNodes($domNode, Channel::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNodes($domNode, Programme::DOM_NODE_NAME, $model);
 
         $model->indexProgrammesByChannel();
 
@@ -778,7 +778,7 @@ class XmlDeserializer {
      */
     public static function deserializeUrl(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Url();
         $model->setContent(trim($domNode->textContent));
@@ -794,7 +794,7 @@ class XmlDeserializer {
      */
     public static function deserializeValue(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Value();
         $model->setContent(trim($domNode->textContent));
@@ -810,14 +810,14 @@ class XmlDeserializer {
      */
     public static function deserializeVideo(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Video();
 
-        XmlDeserializerHelper::deserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Colour::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Aspect::DOM_NODE_NAME, $model);
-        XmlDeserializerHelper::deserializeChildNode($domNode, Quality::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Colour::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Aspect::DOM_NODE_NAME, $model);
+        SerializerHelper::deserializeChildNode($domNode, Quality::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -830,7 +830,7 @@ class XmlDeserializer {
      */
     public static function deserializeWriter(DOMNode $domNode) {
 
-        XmlDeserializerHelper::log($domNode);
+        SerializerHelper::log($domNode);
 
         $model = new Writer();
         $model->setContent(trim($domNode->textContent));

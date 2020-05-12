@@ -29,7 +29,7 @@ use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
 use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
-use WBW\Library\XMLTV\Serializer\XmlDeserializerHelper;
+use WBW\Library\XMLTV\Serializer\SerializerHelper;
 use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
 /**
@@ -284,7 +284,7 @@ class Programme extends AbstractModel {
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
     public function getPdcStartDateTime() {
-        return XmlDeserializerHelper::deserializeDateTime($this->pdcStart);
+        return SerializerHelper::deserializeDateTime($this->pdcStart);
     }
 
     /**
@@ -329,7 +329,7 @@ class Programme extends AbstractModel {
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
     public function getStopDateTime() {
-        return XmlDeserializerHelper::deserializeDateTime($this->stop);
+        return SerializerHelper::deserializeDateTime($this->stop);
     }
 
     /**
@@ -365,7 +365,7 @@ class Programme extends AbstractModel {
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
     public function getVpsStartDateTime() {
-        return XmlDeserializerHelper::deserializeDateTime($this->vpsStart);
+        return SerializerHelper::deserializeDateTime($this->vpsStart);
     }
 
     /**

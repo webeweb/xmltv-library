@@ -19,12 +19,12 @@ use WBW\Library\XMLTV\Model\AbstractModel;
 use WBW\Library\XMLTV\Model\SecondaryTitle;
 
 /**
- * XML deserializer helper.
+ * Serializer helper.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Serializer
  */
-class XmlDeserializerHelper {
+class SerializerHelper {
 
     /**
      * Logger.
@@ -43,12 +43,12 @@ class XmlDeserializerHelper {
      */
     public static function deserializeChildNode(DomNode $domNode, $nodeName, AbstractModel $model) {
 
-        $serializer = static::getMethodName("deserialize", $nodeName);
-        $setter     = static::getMethodName("set", $nodeName);
+        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . static::getMethodName("deserialize", $nodeName);
+        $set = static::getMethodName("set", $nodeName);
 
         $node = static::getDOMNodeByName($nodeName, $domNode->childNodes);
         if (null !== $node) {
-            $model->$setter(call_user_func_array(__NAMESPACE__ . "\\XmlDeserializer::" . $serializer, [$node]));
+            $model->$set(call_user_func_array($fct, [$node]));
         }
     }
 
@@ -62,12 +62,12 @@ class XmlDeserializerHelper {
      */
     public static function deserializeChildNodes(DomNode $domNode, $nodeName, AbstractModel $model) {
 
-        $serializer = static::getMethodName("deserialize", $nodeName);
-        $setter     = static::getMethodName("add", $nodeName);
+        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . static::getMethodName("deserialize", $nodeName);
+        $add = static::getMethodName("add", $nodeName);
 
         $nodes = static::getDOMNodesByName($nodeName, $domNode->childNodes);
         foreach ($nodes as $current) {
-            $model->$setter(call_user_func_array(__NAMESPACE__ . "\\XmlDeserializer::" . $serializer, [$current]));
+            $model->$add(call_user_func_array($fct, [$current]));
         }
     }
 
@@ -162,22 +162,22 @@ class XmlDeserializerHelper {
     /**
      * Get a method name.
      *
-     * @param string $leftPart The left part.
-     * @param string $rightPart The right part.
+     * @param string $action The action.
+     * @param string $attribute The attribute.
      * @return string Returns the method name.
      */
-    public static function getMethodName($leftPart, $rightPart) {
+    public static function getMethodName($action, $attribute) {
 
         $method = "";
 
-        $rightPart = str_replace(SecondaryTitle::DOM_NODE_NAME, "secondary-title", $rightPart);
+        $attribute = str_replace(SecondaryTitle::DOM_NODE_NAME, "secondary-title", $attribute);
 
-        $parts = explode("-", $rightPart);
+        $parts = explode("-", $attribute);
         foreach ($parts as $current) {
             $method .= ucfirst($current);
         }
 
-        return implode("", [$leftPart, $method]);
+        return implode("", [$action, $method]);
     }
 
     /**

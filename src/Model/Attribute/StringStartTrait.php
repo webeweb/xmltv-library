@@ -12,7 +12,7 @@
 namespace WBW\Library\XMLTV\Model\Attribute;
 
 use DateTime;
-use WBW\Library\XMLTV\Serializer\XmlDeserializerHelper;
+use WBW\Library\XMLTV\Serializer\SerializerHelper;
 
 /**
  * String start trait.
@@ -44,7 +44,7 @@ trait StringStartTrait {
      * @return DateTime|null Returns the start into DateTime in case of success, null otherwise.
      */
     public function getStartDateTime() {
-        return XmlDeserializerHelper::deserializeDateTime($this->start);
+        return SerializerHelper::deserializeDateTime($this->start);
     }
 
     /**
