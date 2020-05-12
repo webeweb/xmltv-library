@@ -603,10 +603,10 @@ class XmlSerializer {
     }
 
     /**
-     * Serialize a tv.
+     * Serialize a TV.
      *
-     * @param Tv $model The tv.
-     * @return string Returns the serialized tv.
+     * @param Tv $model The TV.
+     * @return string Returns the serialized TV.
      */
     public static function serializeTv(Tv $model) {
 

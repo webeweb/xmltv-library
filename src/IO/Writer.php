@@ -26,7 +26,7 @@ class Writer {
     /**
      * Write XML.
      *
-     * @param Tv $tv The tv.
+     * @param Tv $tv The TV.
      * @param string $filename The filename.
      * @param LoggerInterface $logger The logger.
      * @return int Returns the number of bytes written.
