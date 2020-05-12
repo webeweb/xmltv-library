@@ -63,12 +63,7 @@ class JsonSerializer {
      * @return array Returns the serialized actor.
      */
     public static function serializeActor(Actor $model) {
-
-        $output = JsonSerializer::serializeCredit($model);
-
-        $output["role"] = $model->getRole();
-
-        return $output;
+        return array_merge(["role" => $model->getRole()], JsonSerializer::serializeCredit($model));
     }
 
     /**
@@ -238,9 +233,9 @@ class JsonSerializer {
     }
 
     /**
-     * Serialize an episode num.
+     * Serialize an episode number.
      *
-     * @param EpisodeNum $model The episode num.
+     * @param EpisodeNum $model The episode number.
      * @return array Returns the serialized episode num.
      */
     public static function serializeEpisodeNum(EpisodeNum $model) {
@@ -445,9 +440,9 @@ class JsonSerializer {
      */
     public static function serializeRating(Rating $model) {
         return [
-            "icons"  => JsonSerializer::serializeArray($model->getIcons()),
             "system" => $model->getSystem(),
             "value"  => JsonSerializer::serializeModel($model->getValue()),
+            "icons"  => JsonSerializer::serializeArray($model->getIcons()),
         ];
     }
 
@@ -531,10 +526,10 @@ class JsonSerializer {
     }
 
     /**
-     * Serialize a tv.
+     * Serialize a TV.
      *
-     * @param Tv $model The tv.
-     * @return array Returns the serialized tv.
+     * @param Tv $model The TV.
+     * @return array Returns the serialized TV.
      */
     public static function serializeTv(Tv $model) {
         return [
