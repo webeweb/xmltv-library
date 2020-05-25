@@ -5,14 +5,14 @@ Get an XML file:
 
 ```php
 /** @var Tv $tv */
-$tv = Reader::getXml("http://path/to/file.xml");
+$tv = XmlProvider::getXml("http://path/to/file.xml");
 ```
 
 Read an XML file:
 
 ```php
 /** @var Tv $tv */
-$tv = Reader::readXml("/path/to/file.xml");
+$tv = XmlProvider::readXml("/path/to/file.xml");
 
 /** @var Channel $channel */
 foreach($tv->getChannels() as $channel) {
@@ -263,12 +263,12 @@ Stat an XML file:
 
 ```php
 /** @var Statistics $statistics */
-$statistics = Reader::statXml("/path/to/file.xml");
+$statistics = XmlProvider::statXml("/path/to/file.xml");
 ```
 
 Write an XML file:
 
 ```php
 /** @var Tv $tv */
-Writer::writeXml($tv ,"/path/to/file.xml");
+XmlProvider::writeXml($tv ,"/path/to/file.xml");
 ```
