@@ -15,6 +15,7 @@ use DOMDocument;
 use Exception;
 use GuzzleHttp\Client;
 use Psr\Log\LoggerInterface;
+use RuntimeException;
 use WBW\Library\XMLTV\Model\Tv;
 use WBW\Library\XMLTV\Serializer\SerializerHelper;
 use WBW\Library\XMLTV\Serializer\XmlDeserializer;
@@ -71,13 +72,16 @@ class XmlProvider {
      * @param string $filename The filename.
      * @param LoggerInterface $logger The logger.
      * @return Tv Returns the TV.
+     * @throws RuntimeException Throws a runtime exception if an error occurs.
      */
     public static function readXml($filename, LoggerInterface $logger = null) {
 
         SerializerHelper::setLogger($logger);
 
         $document = new DOMDocument();
-        $document->load($filename);
+        if (false === @$document->load($filename)) {
+            throw new RuntimeException(libxml_get_last_error()->message);
+        }
         if (false === @$document->schemaValidate(static::getDtd()) && null !== $logger) {
             $logger->warning("Schema validation failed", ["_filename" => $filename]);
         }
@@ -90,11 +94,14 @@ class XmlProvider {
      *
      * @param string $filename The filename.
      * @return Statistic[] Returns the statistics.
+     * @throws RuntimeException Throws a runtime exception if an error occurs.
      */
     public static function statXml($filename) {
 
         $document = new DOMDocument();
-        $document->load($filename);
+        if (false === @$document->load($filename)) {
+            throw new RuntimeException(libxml_get_last_error()->message);
+        }
 
         $statistics = new Statistics();
         $statistics->parse($document->documentElement);
