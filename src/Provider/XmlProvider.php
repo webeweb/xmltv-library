@@ -80,7 +80,7 @@ class XmlProvider {
 
         $document = new DOMDocument();
         if (false === @$document->load($filename)) {
-            throw new RuntimeException(libxml_get_last_error()->message);
+            throw new RuntimeException(libxml_get_last_error()->message, 500);
         }
         if (false === @$document->schemaValidate(static::getDtd()) && null !== $logger) {
             $logger->warning("Schema validation failed", ["_filename" => $filename]);
@@ -100,7 +100,7 @@ class XmlProvider {
 
         $document = new DOMDocument();
         if (false === @$document->load($filename)) {
-            throw new RuntimeException(libxml_get_last_error()->message);
+            throw new RuntimeException(libxml_get_last_error()->message, 500);
         }
 
         $statistics = new Statistics();
