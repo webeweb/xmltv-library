@@ -86,7 +86,7 @@ class SubtitlesTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
-            $this->assertEquals("The type \"type\" is invalid", $ex->getMessage());
+            $this->assertEquals('The type "type" is invalid', $ex->getMessage());
         }
     }
 

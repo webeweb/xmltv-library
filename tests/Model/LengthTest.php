@@ -86,7 +86,7 @@ class LengthTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
-            $this->assertEquals("The units \"units\" is invalid", $ex->getMessage());
+            $this->assertEquals('The units "units" is invalid', $ex->getMessage());
         }
     }
 

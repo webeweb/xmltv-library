@@ -85,7 +85,7 @@ class Subtitles extends AbstractModel {
      */
     public function setType($type) {
         if (null !== $type && false === in_array($type, static::enumType())) {
-            throw new InvalidArgumentException(sprintf("The type \"%s\" is invalid", $type));
+            throw new InvalidArgumentException(sprintf('The type "%s" is invalid', $type));
         }
         $this->type = $type;
         return $this;

@@ -204,7 +204,7 @@ class SerializerHelper {
             $context["_children"][] = $current->nodeName;
         }
 
-        static::$logger->debug(sprintf("Deserialize a DOM node with name \"%s\"", $domNode->nodeName), $context);
+        static::$logger->debug(sprintf('Deserialize a DOM node with name "%s"', $domNode->nodeName), $context);
     }
 
     /**

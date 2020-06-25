@@ -99,7 +99,7 @@ class Length extends AbstractModel {
      */
     public function setUnits($units) {
         if (null !== $units && false === in_array($units, static::enumUnits())) {
-            throw new InvalidArgumentException(sprintf("The units \"%s\" is invalid", $units));
+            throw new InvalidArgumentException(sprintf('The units "%s" is invalid', $units));
         }
         $this->units = $units;
         return $this;
