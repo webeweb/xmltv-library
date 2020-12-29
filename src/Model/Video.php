@@ -35,55 +35,55 @@ class Video extends AbstractModel {
     /**
      * Aspect.
      *
-     * @var Aspect
+     * @var Aspect|null
      */
     private $aspect;
 
     /**
      * Colour.
      *
-     * @var Colour
+     * @var Colour|null
      */
     private $colour;
 
     /**
      * Quality.
      *
-     * @var Quality
+     * @var Quality|null
      */
     private $quality;
 
     /**
      * Get the aspect.
      *
-     * @return Aspect Returns the aspect.
+     * @return Aspect|null Returns the aspect.
      */
-    public function getAspect() {
+    public function getAspect(): ?Aspect {
         return $this->aspect;
     }
 
     /**
      * Get the colour.
      *
-     * @return Colour Returns the colour.
+     * @return Colour|null Returns the colour.
      */
-    public function getColour() {
+    public function getColour(): ?Colour {
         return $this->colour;
     }
 
     /**
      * Get the quality.
      *
-     * @return Quality Returns the quality.
+     * @return Quality|null Returns the quality.
      */
-    public function getQuality() {
+    public function getQuality(): ?Quality {
         return $this->quality;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeVideo($this);
     }
 
@@ -93,7 +93,7 @@ class Video extends AbstractModel {
      * @param Aspect|null $aspect The aspect.
      * @return Video Returns this video.
      */
-    public function setAspect(Aspect $aspect = null) {
+    public function setAspect(?Aspect $aspect) {
         $this->aspect = $aspect;
         return $this;
     }
@@ -104,7 +104,7 @@ class Video extends AbstractModel {
      * @param Colour|null $colour The colour.
      * @return Video Returns this video.
      */
-    public function setColour(Colour $colour = null) {
+    public function setColour(?Colour $colour): ?Video {
         $this->colour = $colour;
         return $this;
     }
@@ -115,7 +115,7 @@ class Video extends AbstractModel {
      * @param Quality|null $quality The quality.
      * @return Video Returns this video.
      */
-    public function setQuality(Quality $quality = null) {
+    public function setQuality(?Quality $quality): ?Video {
         $this->quality = $quality;
         return $this;
     }
@@ -123,7 +123,7 @@ class Video extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeVideo($this);
     }
 }

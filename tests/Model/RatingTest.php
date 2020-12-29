@@ -27,7 +27,7 @@ class RatingTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Rating();
         $obj->setValue($this->value);
@@ -46,7 +46,7 @@ class RatingTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSystem() {
+    public function testSetSystem(): void {
 
         $obj = new Rating();
 
@@ -59,7 +59,7 @@ class RatingTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Rating();
         $obj->setValue($this->value);
@@ -74,7 +74,7 @@ class RatingTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("rating", Rating::DOM_NODE_NAME);
 

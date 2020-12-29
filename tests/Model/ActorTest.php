@@ -27,7 +27,7 @@ class ActorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Actor();
         $obj->setContent("content");
@@ -45,7 +45,7 @@ class ActorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRole() {
+    public function testSetRole(): void {
 
         $obj = new Actor();
 
@@ -58,7 +58,7 @@ class ActorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Actor();
         $obj->setContent("content");
@@ -73,7 +73,7 @@ class ActorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("actor", Actor::DOM_NODE_NAME);
 

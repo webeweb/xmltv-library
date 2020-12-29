@@ -43,7 +43,7 @@ trait ArrayEditorsTrait {
      *
      * @return Editor[] Returns the editors.
      */
-    public function getEditors() {
+    public function getEditors(): array {
         return $this->editors;
     }
 
@@ -52,7 +52,7 @@ trait ArrayEditorsTrait {
      *
      * @return int Returns the number of editors.
      */
-    public function getNumberEditors() {
+    public function getNumberEditors(): int {
         return count($this->getEditors());
     }
 
@@ -61,7 +61,7 @@ trait ArrayEditorsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasEditors() {
+    public function hasEditors(): bool {
         return 1 <= $this->getNumberEditors();
     }
 

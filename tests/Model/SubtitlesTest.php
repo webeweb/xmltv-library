@@ -29,7 +29,7 @@ class SubtitlesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumType() {
+    public function testEnumType(): void {
 
         $res = [
             Subtitles::TYPE_DEAF_SIGNED,
@@ -44,7 +44,7 @@ class SubtitlesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Subtitles();
         $obj->setLanguage($this->language);
@@ -63,7 +63,7 @@ class SubtitlesTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetType() {
+    public function testSetType(): void {
 
         $obj = new Subtitles();
 
@@ -76,7 +76,7 @@ class SubtitlesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTypeWithInvalidArgumentException() {
+    public function testSetTypeWithInvalidArgumentException(): void {
 
         $obj = new Subtitles();
 
@@ -95,7 +95,7 @@ class SubtitlesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Subtitles();
         $obj->setLanguage($this->language);
@@ -110,7 +110,7 @@ class SubtitlesTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("subtitles", Subtitles::DOM_NODE_NAME);
         $this->assertEquals("deaf-signed", Subtitles::TYPE_DEAF_SIGNED);

@@ -28,7 +28,7 @@ class ArrayAdaptersTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddAdapter() {
+    public function testAddAdapter(): void {
 
         // Set an Adapter mock.
         $adapter = new Adapter();
@@ -46,7 +46,7 @@ class ArrayAdaptersTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayAdaptersTrait();
 

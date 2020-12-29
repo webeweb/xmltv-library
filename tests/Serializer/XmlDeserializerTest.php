@@ -70,7 +70,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeActor() {
+    public function testDeserializeActor(): void {
 
         // tv > programme > credits > actor
         $node = $this->document->documentElement
@@ -90,7 +90,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeAdapter() {
+    public function testDeserializeAdapter(): void {
 
         // tv > programme > credits > adapter
         $node = $this->document->documentElement
@@ -109,7 +109,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeAspect() {
+    public function testDeserializeAspect(): void {
 
         // tv > programme > video > aspect
         $node = $this->document->documentElement
@@ -128,7 +128,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeAudio() {
+    public function testDeserializeAudio(): void {
 
         // tv > programme > audio
         $node = $this->document->documentElement
@@ -147,7 +147,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeCategory() {
+    public function testDeserializeCategory(): void {
 
         // tv > programme > category
         $node = $this->document->documentElement
@@ -166,7 +166,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeChannel() {
+    public function testDeserializeChannel(): void {
 
         // tv > channel
         $node = $this->document->documentElement
@@ -185,7 +185,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeColour() {
+    public function testDeserializeColour(): void {
 
         // tv > programme > video > colour
         $node = $this->document->documentElement
@@ -204,7 +204,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeCommentator() {
+    public function testDeserializeCommentator(): void {
 
         // tv > programme > credits > commentator
         $node = $this->document->documentElement
@@ -223,7 +223,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeComposer() {
+    public function testDeserializeComposer(): void {
 
         // tv > programme > credits > composer
         $node = $this->document->documentElement
@@ -242,7 +242,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeCountry() {
+    public function testDeserializeCountry(): void {
 
         // tv > programme > country
         $node = $this->document->documentElement
@@ -261,7 +261,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeCredits() {
+    public function testDeserializeCredits(): void {
 
         // tv > programme > credits
         $node = $this->document->documentElement
@@ -288,7 +288,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDate() {
+    public function testDeserializeDate(): void {
 
         // tv > programme > date
         $node = $this->document->documentElement
@@ -306,7 +306,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDesc() {
+    public function testDeserializeDesc(): void {
 
         // tv > programme > desc
         $node = $this->document->documentElement
@@ -325,7 +325,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDirector() {
+    public function testDeserializeDirector(): void {
 
         // tv > programme > credits > director
         $node = $this->document->documentElement
@@ -344,7 +344,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDisplayName() {
+    public function testDeserializeDisplayName(): void {
 
         // tv > channel > display-name
         $node = $this->document->documentElement
@@ -363,7 +363,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeEditor() {
+    public function testDeserializeEditor(): void {
 
         // tv > programme > credits > editor
         $node = $this->document->documentElement
@@ -382,7 +382,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeEpisodeNum() {
+    public function testDeserializeEpisodeNum(): void {
 
         // tv > programme > episode-num
         $node = $this->document->documentElement
@@ -401,7 +401,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeGuest() {
+    public function testDeserializeGuest(): void {
 
         // tv > programme > credits > guest
         $node = $this->document->documentElement
@@ -420,7 +420,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeIcon() {
+    public function testDeserializeIcon(): void {
 
         // tv > channel > icon
         $node = $this->document->documentElement
@@ -440,7 +440,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeKeyword() {
+    public function testDeserializeKeyword(): void {
 
         // tv > programme > keyword
         $node = $this->document->documentElement
@@ -459,7 +459,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeLanguage() {
+    public function testDeserializeLanguage(): void {
 
         // tv > programme > language
         $node = $this->document->documentElement
@@ -478,7 +478,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeLastChance() {
+    public function testDeserializeLastChance(): void {
 
         // tv > programme > last-chance
         $node = $this->document->documentElement
@@ -497,7 +497,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeLength() {
+    public function testDeserializeLength(): void {
 
         // tv > programme > length
         $node = $this->document->documentElement
@@ -516,7 +516,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeOrigLanguage() {
+    public function testDeserializeOrigLanguage(): void {
 
         // tv > programme > orig-language
         $node = $this->document->documentElement
@@ -535,7 +535,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePremiere() {
+    public function testDeserializePremiere(): void {
 
         // tv > programme > premiere
         $node = $this->document->documentElement
@@ -554,7 +554,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePresent() {
+    public function testDeserializePresent(): void {
 
         // tv > programme > video > present
         $node = $this->document->documentElement
@@ -573,7 +573,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePresenter() {
+    public function testDeserializePresenter(): void {
 
         // tv > programme > credits > presenter
         $node = $this->document->documentElement
@@ -592,7 +592,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePreviouslyShown() {
+    public function testDeserializePreviouslyShown(): void {
 
         // tv > programme > previously-shown
         $node = $this->document->documentElement
@@ -611,7 +611,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeProducer() {
+    public function testDeserializeProducer(): void {
 
         // tv > programme > credits > producer
         $node = $this->document->documentElement
@@ -630,7 +630,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeProgramme() {
+    public function testDeserializeProgramme(): void {
 
         // tv > programme
         $node = $this->document->documentElement
@@ -679,7 +679,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeQuality() {
+    public function testDeserializeQuality(): void {
 
         // tv > programme > video > quality
         $node = $this->document->documentElement
@@ -698,7 +698,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeRating() {
+    public function testDeserializeRating(): void {
 
         // tv > programme > rating
         $node = $this->document->documentElement
@@ -718,7 +718,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeReview() {
+    public function testDeserializeReview(): void {
 
         // tv > programme > review
         $node = $this->document->documentElement
@@ -739,7 +739,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeSecondaryTitle() {
+    public function testDeserializeSecondaryTitle(): void {
 
         // tv > programme > sub-title
         $node = $this->document->documentElement
@@ -758,7 +758,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeStarRating() {
+    public function testDeserializeStarRating(): void {
 
         // tv > programme > star-rating
         $node = $this->document->documentElement
@@ -777,7 +777,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeStereo() {
+    public function testDeserializeStereo(): void {
 
         // tv > programme > audio > stereo
         $node = $this->document->documentElement
@@ -796,7 +796,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeSubtitles() {
+    public function testDeserializeSubtitles(): void {
 
         // tv > programme > subtitles
         $node = $this->document->documentElement
@@ -815,7 +815,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeTitle() {
+    public function testDeserializeTitle(): void {
 
         // tv > programme > title
         $node = $this->document->documentElement
@@ -834,7 +834,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeTv() {
+    public function testDeserializeTv(): void {
 
         // tv
         $node = $this->document->documentElement;
@@ -857,7 +857,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeUrl() {
+    public function testDeserializeUrl(): void {
 
         // tv > channel > url
         $node = $this->document->documentElement
@@ -875,7 +875,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeValue() {
+    public function testDeserializeValue(): void {
 
         // tv > programme > rating > value
         $node = $this->document->documentElement
@@ -894,7 +894,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeVideo() {
+    public function testDeserializeVideo(): void {
 
         // tv > programme > video
         $node = $this->document->documentElement
@@ -915,7 +915,7 @@ class XmlDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeWriter() {
+    public function testDeserializeWriter(): void {
 
         // tv > programme > credits > writer
         $node = $this->document->documentElement

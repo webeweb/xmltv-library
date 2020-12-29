@@ -28,7 +28,7 @@ class ArrayEditorsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddEditor() {
+    public function testAddEditor(): void {
 
         // Set an Editor mock.
         $editor = new Editor();
@@ -46,7 +46,7 @@ class ArrayEditorsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayEditorsTrait();
 

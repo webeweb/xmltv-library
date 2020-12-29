@@ -28,7 +28,7 @@ class LanguageTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetLanguage() {
+    public function testSetLanguage(): void {
 
         // Set a Language mock.
         $language = new Language();
@@ -44,7 +44,7 @@ class LanguageTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestLanguageTrait();
 

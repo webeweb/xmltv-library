@@ -62,7 +62,7 @@ class JsonSerializer {
      * @param Actor $model The actor.
      * @return array Returns the serialized actor.
      */
-    public static function serializeActor(Actor $model) {
+    public static function serializeActor(Actor $model): array {
         return array_merge(["role" => $model->getRole()], JsonSerializer::serializeCredit($model));
     }
 
@@ -72,7 +72,7 @@ class JsonSerializer {
      * @param AbstractModel[] $models The models.
      * @return array Returns the serialized array.
      */
-    protected static function serializeArray(array $models) {
+    protected static function serializeArray(array $models): array {
 
         $output = [];
 
@@ -89,7 +89,7 @@ class JsonSerializer {
      * @param Aspect $model The aspect.
      * @return array Returns the serialized aspect.
      */
-    public static function serializeAspect(Aspect $model) {
+    public static function serializeAspect(Aspect $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -101,7 +101,7 @@ class JsonSerializer {
      * @param Audio $model The audio.
      * @return array Returns the serialized audio.
      */
-    public static function serializeAudio(Audio $model) {
+    public static function serializeAudio(Audio $model): array {
         return [
             "present" => JsonSerializer::serializeModel($model->getPresent()),
             "stereo"  => JsonSerializer::serializeModel($model->getStereo()),
@@ -114,7 +114,7 @@ class JsonSerializer {
      * @param Category $model The category.
      * @return array Returns the serialized category.
      */
-    public static function serializeCategory(Category $model) {
+    public static function serializeCategory(Category $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -127,7 +127,7 @@ class JsonSerializer {
      * @param Channel $model The channel.
      * @return array Returns the serialized channel.
      */
-    public static function serializeChannel(Channel $model) {
+    public static function serializeChannel(Channel $model): array {
         return [
             "id"           => $model->getId(),
             "displayNames" => JsonSerializer::serializeArray($model->getDisplayNames()),
@@ -142,7 +142,7 @@ class JsonSerializer {
      * @param Colour $model The colour.
      * @return array Returns the serialized colour.
      */
-    public static function serializeColour(Colour $model) {
+    public static function serializeColour(Colour $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -154,7 +154,7 @@ class JsonSerializer {
      * @param Country $model The country.
      * @return array Returns the serialized country.
      */
-    public static function serializeCountry(Country $model) {
+    public static function serializeCountry(Country $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -167,7 +167,7 @@ class JsonSerializer {
      * @param AbstractCredit $model The credit.
      * @return array Returns the serialized credit.
      */
-    public static function serializeCredit(AbstractCredit $model) {
+    public static function serializeCredit(AbstractCredit $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -179,7 +179,7 @@ class JsonSerializer {
      * @param Credits $model The credits.
      * @return array Returns the serialized credits.
      */
-    public static function serializeCredits(Credits $model) {
+    public static function serializeCredits(Credits $model): array {
         return [
             "directors"    => static::serializeArray($model->getDirectors()),
             "actors"       => static::serializeArray($model->getActors()),
@@ -200,7 +200,7 @@ class JsonSerializer {
      * @param Date $model The date.
      * @return array Returns the serialized date.
      */
-    public static function serializeDate(Date $model) {
+    public static function serializeDate(Date $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -212,7 +212,7 @@ class JsonSerializer {
      * @param Desc $model The desc.
      * @return array Returns the serialized desc.
      */
-    public static function serializeDesc(Desc $model) {
+    public static function serializeDesc(Desc $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -225,7 +225,7 @@ class JsonSerializer {
      * @param DisplayName $model The display name.
      * @return array Returns the serialized display name.
      */
-    public static function serializeDisplayName(DisplayName $model) {
+    public static function serializeDisplayName(DisplayName $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -238,7 +238,7 @@ class JsonSerializer {
      * @param EpisodeNum $model The episode number.
      * @return array Returns the serialized episode num.
      */
-    public static function serializeEpisodeNum(EpisodeNum $model) {
+    public static function serializeEpisodeNum(EpisodeNum $model): array {
         return [
             "system"  => $model->getSystem(),
             "content" => $model->getContent(),
@@ -251,7 +251,7 @@ class JsonSerializer {
      * @param Icon $model The icon.
      * @return array Returns the serialized icon.
      */
-    public static function serializeIcon(Icon $model) {
+    public static function serializeIcon(Icon $model): array {
         return [
             "src"    => $model->getSrc(),
             "width"  => $model->getWidth(),
@@ -265,7 +265,7 @@ class JsonSerializer {
      * @param Keyword $model The keyword.
      * @return array Returns the serialized keyword.
      */
-    public static function serializeKeyword(Keyword $model) {
+    public static function serializeKeyword(Keyword $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -278,7 +278,7 @@ class JsonSerializer {
      * @param Language $model The language.
      * @return array Returns the serialized language.
      */
-    public static function serializeLanguage(Language $model) {
+    public static function serializeLanguage(Language $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -291,7 +291,7 @@ class JsonSerializer {
      * @param LastChance $model The last chance.
      * @return array Returns the serialized last chance.
      */
-    public static function serializeLastChance(LastChance $model) {
+    public static function serializeLastChance(LastChance $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -304,7 +304,7 @@ class JsonSerializer {
      * @param Length $model The length.
      * @return array Returns the serialized length.
      */
-    public static function serializeLength(Length $model) {
+    public static function serializeLength(Length $model): array {
         return [
             "units"   => $model->getUnits(),
             "content" => $model->getContent(),
@@ -317,10 +317,10 @@ class JsonSerializer {
      * @param AbstractModel|null $model The model.
      * @return array Returns the serialized model.
      */
-    protected static function serializeModel(AbstractModel $model = null) {
+    protected static function serializeModel(?AbstractModel $model): array {
 
         if (null === $model) {
-            return null;
+            return [];
         }
 
         return $model->jsonSerialize();
@@ -332,7 +332,7 @@ class JsonSerializer {
      * @param OrigLanguage $model The original language.
      * @return array Returns the serialized original language.
      */
-    public static function serializeOrigLanguage(OrigLanguage $model) {
+    public static function serializeOrigLanguage(OrigLanguage $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -345,7 +345,7 @@ class JsonSerializer {
      * @param Premiere $model The premiere.
      * @return array Returns the serialized premiere.
      */
-    public static function serializePremiere(Premiere $model) {
+    public static function serializePremiere(Premiere $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -358,7 +358,7 @@ class JsonSerializer {
      * @param Present $model The present.
      * @return array Returns the serialized present.
      */
-    public static function serializePresent(Present $model) {
+    public static function serializePresent(Present $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -370,7 +370,7 @@ class JsonSerializer {
      * @param PreviouslyShown $model The previously shown.
      * @return array Returns the serialized previously shown.
      */
-    public static function serializePreviouslyShown(PreviouslyShown $model) {
+    public static function serializePreviouslyShown(PreviouslyShown $model): array {
         return [
             "channel" => $model->getChannel(),
             "start"   => $model->getStart(),
@@ -383,7 +383,7 @@ class JsonSerializer {
      * @param Programme $model The programme.
      * @return array Returns the serialized programme.
      */
-    public static function serializeProgramme(Programme $model) {
+    public static function serializeProgramme(Programme $model): array {
         return [
             "start"           => $model->getStart(),
             "stop"            => $model->getStop(),
@@ -426,7 +426,7 @@ class JsonSerializer {
      * @param Quality $model The quality.
      * @return array Returns the serialized quality.
      */
-    public static function serializeQuality(Quality $model) {
+    public static function serializeQuality(Quality $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -438,7 +438,7 @@ class JsonSerializer {
      * @param Rating $model The rating.
      * @return array Returns the serialized rating.
      */
-    public static function serializeRating(Rating $model) {
+    public static function serializeRating(Rating $model): array {
         return [
             "system" => $model->getSystem(),
             "value"  => JsonSerializer::serializeModel($model->getValue()),
@@ -452,7 +452,7 @@ class JsonSerializer {
      * @param Review $model The review.
      * @return array Returns the serialized review.
      */
-    public static function serializeReview(Review $model) {
+    public static function serializeReview(Review $model): array {
         return [
             "type"     => $model->getType(),
             "source"   => $model->getSource(),
@@ -467,7 +467,7 @@ class JsonSerializer {
      * @param SecondaryTitle $model The secondary title.
      * @return array Returns the serialized secondary title.
      */
-    public static function serializeSecondaryTitle(SecondaryTitle $model) {
+    public static function serializeSecondaryTitle(SecondaryTitle $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -480,7 +480,7 @@ class JsonSerializer {
      * @param StarRating $model The star rating.
      * @return array Returns the serialized star rating.
      */
-    public static function serializeStarRating(StarRating $model) {
+    public static function serializeStarRating(StarRating $model): array {
         return [
             "value" => JsonSerializer::serializeModel($model->getValue()),
             "icons" => JsonSerializer::serializeArray($model->getIcons()),
@@ -493,7 +493,7 @@ class JsonSerializer {
      * @param Stereo $model The stereo.
      * @return array Returns the serialized stereo.
      */
-    public static function serializeStereo(Stereo $model) {
+    public static function serializeStereo(Stereo $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -505,7 +505,7 @@ class JsonSerializer {
      * @param Subtitles $model The subtitles.
      * @return array Returns the serialized subtitles.
      */
-    public static function serializeSubtitles(Subtitles $model) {
+    public static function serializeSubtitles(Subtitles $model): array {
         return [
             "type"     => $model->getType(),
             "language" => JsonSerializer::serializeModel($model->getLanguage()),
@@ -518,7 +518,7 @@ class JsonSerializer {
      * @param Title $model The title.
      * @return array Returns the serialized title.
      */
-    public static function serializeTitle(Title $model) {
+    public static function serializeTitle(Title $model): array {
         return [
             "lang"    => $model->getLang(),
             "content" => $model->getContent(),
@@ -531,7 +531,7 @@ class JsonSerializer {
      * @param Tv $model The TV.
      * @return array Returns the serialized TV.
      */
-    public static function serializeTv(Tv $model) {
+    public static function serializeTv(Tv $model): array {
         return [
             "date"              => $model->getDate(),
             "generatorInfoName" => $model->getGeneratorInfoName(),
@@ -550,7 +550,7 @@ class JsonSerializer {
      * @param Url $model The URL.
      * @return array Returns the serialized URL.
      */
-    public static function serializeUrl(Url $model) {
+    public static function serializeUrl(Url $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -562,7 +562,7 @@ class JsonSerializer {
      * @param Value $model The value.
      * @return array Returns the serialized value.
      */
-    public static function serializeValue(Value $model) {
+    public static function serializeValue(Value $model): array {
         return [
             "content" => $model->getContent(),
         ];
@@ -574,7 +574,7 @@ class JsonSerializer {
      * @param Video $model The video.
      * @return array Returns the serialized video.
      */
-    public static function serializeVideo(Video $model) {
+    public static function serializeVideo(Video $model): array {
         return [
             "present" => JsonSerializer::serializeModel($model->getPresent()),
             "colour"  => JsonSerializer::serializeModel($model->getColour()),

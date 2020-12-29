@@ -27,7 +27,7 @@ class IconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Icon();
 
@@ -44,7 +44,7 @@ class IconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetHeight() {
+    public function testSetHeight(): void {
 
         $obj = new Icon();
 
@@ -57,7 +57,7 @@ class IconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSrc() {
+    public function testSetSrc(): void {
 
         $obj = new Icon();
 
@@ -70,7 +70,7 @@ class IconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetWidth() {
+    public function testSetWidth(): void {
 
         $obj = new Icon();
         $obj->setHeight("1080");
@@ -86,7 +86,7 @@ class IconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Icon();
         $obj->setHeight("1080");
@@ -102,7 +102,7 @@ class IconTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("icon", Icon::DOM_NODE_NAME);
 

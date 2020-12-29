@@ -43,7 +43,7 @@ trait ArrayChannelsTrait {
      *
      * @return Channel[] Returns the channels.
      */
-    public function getChannels() {
+    public function getChannels(): array {
         return $this->channels;
     }
 
@@ -52,7 +52,7 @@ trait ArrayChannelsTrait {
      *
      * @return int Returns the number of channels.
      */
-    public function getNumberChannels() {
+    public function getNumberChannels(): int {
         return count($this->getChannels());
     }
 
@@ -61,7 +61,7 @@ trait ArrayChannelsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasChannels() {
+    public function hasChannels(): bool {
         return 1 <= $this->getNumberChannels();
     }
 
@@ -70,7 +70,7 @@ trait ArrayChannelsTrait {
      *
      * @return Channel[] Returns the channels indexed by id.
      */
-    public function indexChannelsById() {
+    public function indexChannelsById(): array {
 
         $index = [];
 

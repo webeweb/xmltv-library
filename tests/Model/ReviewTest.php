@@ -29,7 +29,7 @@ class ReviewTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumType() {
+    public function testEnumType(): void {
 
         $res = [
             Review::TYPE_TEXT,
@@ -43,7 +43,7 @@ class ReviewTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Review();
         $obj->setLang("lang");
@@ -65,7 +65,7 @@ class ReviewTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetReviewer() {
+    public function testSetReviewer(): void {
 
         $obj = new Review();
 
@@ -78,7 +78,7 @@ class ReviewTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSource() {
+    public function testSetSource(): void {
 
         $obj = new Review();
 
@@ -92,7 +92,7 @@ class ReviewTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetType() {
+    public function testSetType(): void {
 
         $obj = new Review();
 
@@ -105,7 +105,7 @@ class ReviewTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetTypeWithInvalidArgumentException() {
+    public function testSetTypeWithInvalidArgumentException(): void {
 
         $obj = new Review();
 
@@ -124,7 +124,7 @@ class ReviewTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Review();
         $obj->setLang("lang");
@@ -141,7 +141,7 @@ class ReviewTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("review", Review::DOM_NODE_NAME);
         $this->assertEquals("text", Review::TYPE_TEXT);

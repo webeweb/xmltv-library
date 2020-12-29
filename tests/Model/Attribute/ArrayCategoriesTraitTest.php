@@ -28,7 +28,7 @@ class ArrayCategoriesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddCategory() {
+    public function testAddCategory(): void {
 
         // Set a Category mock.
         $category = new Category();
@@ -46,7 +46,7 @@ class ArrayCategoriesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayCategoriesTrait();
 

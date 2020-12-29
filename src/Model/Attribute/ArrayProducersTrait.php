@@ -43,7 +43,7 @@ trait ArrayProducersTrait {
      *
      * @return int Returns the number of producers.
      */
-    public function getNumberProducers() {
+    public function getNumberProducers(): int {
         return count($this->getProducers());
     }
 
@@ -52,7 +52,7 @@ trait ArrayProducersTrait {
      *
      * @return Producer[] Returns the producers.
      */
-    public function getProducers() {
+    public function getProducers(): array {
         return $this->producers;
     }
 
@@ -61,7 +61,7 @@ trait ArrayProducersTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasProducers() {
+    public function hasProducers(): bool {
         return 1 <= $this->getNumberProducers();
     }
 

@@ -25,16 +25,16 @@ trait StringStartTrait {
     /**
      * Start.
      *
-     * @var string
+     * @var string|null
      */
     private $start;
 
     /**
      * Get the start.
      *
-     * @return string Returns the start.
+     * @return string|null Returns the start.
      */
-    public function getStart() {
+    public function getStart(): ?string {
         return $this->start;
     }
 

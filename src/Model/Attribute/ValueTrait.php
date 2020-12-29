@@ -24,16 +24,16 @@ trait ValueTrait {
     /**
      * Value.
      *
-     * @var Value
+     * @var Value|null
      */
     private $value;
 
     /**
      * Get the value.
      *
-     * @return Value Returns the value.
+     * @return Value|null Returns the value.
      */
-    public function getValue() {
+    public function getValue(): ?Value {
         return $this->value;
     }
 
@@ -42,7 +42,7 @@ trait ValueTrait {
      *
      * @param Value|null $value The value.
      */
-    public function setValue(Value $value = null) {
+    public function setValue(?Value $value) {
         $this->value = $value;
         return $this;
     }

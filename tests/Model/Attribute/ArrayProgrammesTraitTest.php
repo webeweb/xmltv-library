@@ -28,7 +28,7 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddProgramme() {
+    public function testAddProgramme(): void {
 
         // Set a Programme mock.
         $programme = new Programme();
@@ -46,7 +46,7 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSortProgrammes() {
+    public function testSortProgrammes(): void {
 
         // Set the Programme mocks.
         $programme1 = new Programme();
@@ -71,7 +71,7 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayProgrammesTrait();
 

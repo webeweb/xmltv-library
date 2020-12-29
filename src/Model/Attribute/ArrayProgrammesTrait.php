@@ -43,7 +43,7 @@ trait ArrayProgrammesTrait {
      *
      * @return int Returns the number of programmes.
      */
-    public function getNumberProgrammes() {
+    public function getNumberProgrammes(): int {
         return count($this->getProgrammes());
     }
 
@@ -52,7 +52,7 @@ trait ArrayProgrammesTrait {
      *
      * @return Programme[] Returns the programmes.
      */
-    public function getProgrammes() {
+    public function getProgrammes(): array {
         return $this->programmes;
     }
 
@@ -61,7 +61,7 @@ trait ArrayProgrammesTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasProgrammes() {
+    public function hasProgrammes(): bool {
         return 1 <= $this->getNumberProgrammes();
     }
 

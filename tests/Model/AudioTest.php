@@ -27,7 +27,7 @@ class AudioTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Audio();
         $obj->setPresent($this->present);
@@ -45,7 +45,7 @@ class AudioTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetStereo() {
+    public function testSetStereo(): void {
 
         $obj = new Audio();
 
@@ -58,7 +58,7 @@ class AudioTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Audio();
         $obj->setPresent($this->present);
@@ -73,7 +73,7 @@ class AudioTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("audio", Audio::DOM_NODE_NAME);
 

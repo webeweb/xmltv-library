@@ -37,14 +37,14 @@ class SecondaryTitle extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeSecondaryTitle($this);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeSecondaryTitle($this);
     }
 }

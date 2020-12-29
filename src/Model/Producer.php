@@ -31,7 +31,7 @@ class Producer extends AbstractCredit {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeProducer($this);
     }
 }

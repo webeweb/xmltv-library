@@ -70,7 +70,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Actor Returns the actor.
      */
-    public static function deserializeActor(DOMNode $domNode) {
+    public static function deserializeActor(DOMNode $domNode): Actor {
 
         SerializerHelper::log($domNode);
 
@@ -87,7 +87,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Adapter Returns the adapter.
      */
-    public static function deserializeAdapter(DOMNode $domNode) {
+    public static function deserializeAdapter(DOMNode $domNode): Adapter {
 
         SerializerHelper::log($domNode);
 
@@ -103,7 +103,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Aspect Returns the aspect.
      */
-    public static function deserializeAspect(DOMNode $domNode) {
+    public static function deserializeAspect(DOMNode $domNode): Aspect {
 
         SerializerHelper::log($domNode);
 
@@ -119,7 +119,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Audio Returns the audio.
      */
-    public static function deserializeAudio(DOMNode $domNode) {
+    public static function deserializeAudio(DOMNode $domNode): Audio {
 
         SerializerHelper::log($domNode);
 
@@ -137,7 +137,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Category Returns the category.
      */
-    public static function deserializeCategory(DOMNode $domNode) {
+    public static function deserializeCategory(DOMNode $domNode): Category {
 
         SerializerHelper::log($domNode);
 
@@ -154,7 +154,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Channel Returns the channel.
      */
-    public static function deserializeChannel(DOMNode $domNode) {
+    public static function deserializeChannel(DOMNode $domNode): Channel {
 
         SerializerHelper::log($domNode);
 
@@ -174,7 +174,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Colour Returns the colour.
      */
-    public static function deserializeColour(DOMNode $domNode) {
+    public static function deserializeColour(DOMNode $domNode): Colour {
 
         SerializerHelper::log($domNode);
 
@@ -190,7 +190,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Commentator Returns the commentator.
      */
-    public static function deserializeCommentator(DOMNode $domNode) {
+    public static function deserializeCommentator(DOMNode $domNode): Commentator {
 
         SerializerHelper::log($domNode);
 
@@ -206,7 +206,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Composer Returns the composer.
      */
-    public static function deserializeComposer(DOMNode $domNode) {
+    public static function deserializeComposer(DOMNode $domNode): Composer {
 
         SerializerHelper::log($domNode);
 
@@ -222,7 +222,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Country Returns the country.
      */
-    public static function deserializeCountry(DOMNode $domNode) {
+    public static function deserializeCountry(DOMNode $domNode): Country {
 
         SerializerHelper::log($domNode);
 
@@ -239,7 +239,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Credits Returns the credits.
      */
-    public static function deserializeCredits(DOMNode $domNode) {
+    public static function deserializeCredits(DOMNode $domNode): Credits {
 
         SerializerHelper::log($domNode);
 
@@ -265,7 +265,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Date Returns the date.
      */
-    public static function deserializeDate(DOMNode $domNode) {
+    public static function deserializeDate(DOMNode $domNode): Date {
 
         SerializerHelper::log($domNode);
 
@@ -281,7 +281,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Desc Returns the description.
      */
-    public static function deserializeDesc(DOMNode $domNode) {
+    public static function deserializeDesc(DOMNode $domNode): Desc {
 
         SerializerHelper::log($domNode);
 
@@ -298,7 +298,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Director Returns the director.
      */
-    public static function deserializeDirector(DOMNode $domNode) {
+    public static function deserializeDirector(DOMNode $domNode): Director {
 
         SerializerHelper::log($domNode);
 
@@ -314,7 +314,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return DisplayName Returns the display name.
      */
-    public static function deserializeDisplayName(DOMNode $domNode) {
+    public static function deserializeDisplayName(DOMNode $domNode): DisplayName {
 
         SerializerHelper::log($domNode);
 
@@ -331,7 +331,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Editor Returns the editor.
      */
-    public static function deserializeEditor(DOMNode $domNode) {
+    public static function deserializeEditor(DOMNode $domNode): Editor {
 
         SerializerHelper::log($domNode);
 
@@ -347,7 +347,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return EpisodeNum Returns the episode number.
      */
-    public static function deserializeEpisodeNum(DOMNode $domNode) {
+    public static function deserializeEpisodeNum(DOMNode $domNode): EpisodeNum {
 
         SerializerHelper::log($domNode);
 
@@ -364,7 +364,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Guest Returns the guest.
      */
-    public static function deserializeGuest(DOMNode $domNode) {
+    public static function deserializeGuest(DOMNode $domNode): Guest {
 
         SerializerHelper::log($domNode);
 
@@ -380,7 +380,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Icon Returns the icon.
      */
-    public static function deserializeIcon(DOMNode $domNode) {
+    public static function deserializeIcon(DOMNode $domNode): Icon {
 
         SerializerHelper::log($domNode);
 
@@ -398,7 +398,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Keyword Returns the keyword.
      */
-    public static function deserializeKeyword(DOMNode $domNode) {
+    public static function deserializeKeyword(DOMNode $domNode): Keyword {
 
         SerializerHelper::log($domNode);
 
@@ -415,7 +415,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Language Returns the language.
      */
-    public static function deserializeLanguage(DOMNode $domNode) {
+    public static function deserializeLanguage(DOMNode $domNode): Language {
 
         SerializerHelper::log($domNode);
 
@@ -432,7 +432,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return LastChance Returns the last chance.
      */
-    public static function deserializeLastChance(DOMNode $domNode) {
+    public static function deserializeLastChance(DOMNode $domNode): LastChance {
 
         SerializerHelper::log($domNode);
 
@@ -449,7 +449,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Length Returns the length.
      */
-    public static function deserializeLength(DOMNode $domNode) {
+    public static function deserializeLength(DOMNode $domNode): Length {
 
         SerializerHelper::log($domNode);
 
@@ -466,7 +466,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return OrigLanguage Returns the original language.
      */
-    public static function deserializeOrigLanguage(DOMNode $domNode) {
+    public static function deserializeOrigLanguage(DOMNode $domNode): OrigLanguage {
 
         SerializerHelper::log($domNode);
 
@@ -483,7 +483,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Premiere Returns the premiere.
      */
-    public static function deserializePremiere(DOMNode $domNode) {
+    public static function deserializePremiere(DOMNode $domNode): Premiere {
 
         SerializerHelper::log($domNode);
 
@@ -500,7 +500,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Present Returns the present.
      */
-    public static function deserializePresent(DOMNode $domNode) {
+    public static function deserializePresent(DOMNode $domNode): Present {
 
         SerializerHelper::log($domNode);
 
@@ -516,7 +516,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Presenter Returns the presenter.
      */
-    public static function deserializePresenter(DOMNode $domNode) {
+    public static function deserializePresenter(DOMNode $domNode): Presenter {
 
         SerializerHelper::log($domNode);
 
@@ -532,7 +532,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return PreviouslyShown Returns the previously shown.
      */
-    public static function deserializePreviouslyShown(DOMNode $domNode) {
+    public static function deserializePreviouslyShown(DOMNode $domNode): PreviouslyShown {
 
         SerializerHelper::log($domNode);
 
@@ -549,7 +549,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Producer Returns the producer.
      */
-    public static function deserializeProducer(DOMNode $domNode) {
+    public static function deserializeProducer(DOMNode $domNode): Producer {
 
         SerializerHelper::log($domNode);
 
@@ -565,7 +565,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Programme Returns the programme.
      */
-    public static function deserializeProgramme(DOMNode $domNode) {
+    public static function deserializeProgramme(DOMNode $domNode): Programme {
 
         SerializerHelper::log($domNode);
 
@@ -614,7 +614,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Quality Returns the quality.
      */
-    public static function deserializeQuality(DOMNode $domNode) {
+    public static function deserializeQuality(DOMNode $domNode): Quality {
 
         SerializerHelper::log($domNode);
 
@@ -630,7 +630,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Rating Returns the rating.
      */
-    public static function deserializeRating(DOMNode $domNode) {
+    public static function deserializeRating(DOMNode $domNode): Rating {
 
         SerializerHelper::log($domNode);
 
@@ -648,7 +648,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Review Returns the review.
      */
-    public static function deserializeReview(DOMNode $domNode) {
+    public static function deserializeReview(DOMNode $domNode): Review {
 
         SerializerHelper::log($domNode);
 
@@ -667,7 +667,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return SecondaryTitle Returns the sub-title.
      */
-    public static function deserializeSecondaryTitle(DOMNode $domNode) {
+    public static function deserializeSecondaryTitle(DOMNode $domNode): SecondaryTitle {
 
         SerializerHelper::log($domNode);
 
@@ -684,7 +684,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return StarRating Returns the star rating.
      */
-    public static function deserializeStarRating(DOMNode $domNode) {
+    public static function deserializeStarRating(DOMNode $domNode): StarRating {
 
         SerializerHelper::log($domNode);
 
@@ -701,7 +701,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Stereo Returns the stereo.
      */
-    public static function deserializeStereo(DOMNode $domNode) {
+    public static function deserializeStereo(DOMNode $domNode): Stereo {
 
         SerializerHelper::log($domNode);
 
@@ -717,7 +717,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Subtitles Returns the subtitles.
      */
-    public static function deserializeSubtitles(DOMNode $domNode) {
+    public static function deserializeSubtitles(DOMNode $domNode): Subtitles {
 
         SerializerHelper::log($domNode);
 
@@ -734,7 +734,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Title Returns the title.
      */
-    public static function deserializeTitle(DOMNode $domNode) {
+    public static function deserializeTitle(DOMNode $domNode): Title {
 
         SerializerHelper::log($domNode);
 
@@ -751,7 +751,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Tv Returns the TV.
      */
-    public static function deserializeTv(DOMNode $domNode) {
+    public static function deserializeTv(DOMNode $domNode): Tv {
 
         SerializerHelper::log($domNode);
 
@@ -776,7 +776,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Url Returns the URL.
      */
-    public static function deserializeUrl(DOMNode $domNode) {
+    public static function deserializeUrl(DOMNode $domNode): Url {
 
         SerializerHelper::log($domNode);
 
@@ -792,7 +792,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Value Returns the value.
      */
-    public static function deserializeValue(DOMNode $domNode) {
+    public static function deserializeValue(DOMNode $domNode): Value {
 
         SerializerHelper::log($domNode);
 
@@ -808,7 +808,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Video Returns the video.
      */
-    public static function deserializeVideo(DOMNode $domNode) {
+    public static function deserializeVideo(DOMNode $domNode): Video {
 
         SerializerHelper::log($domNode);
 
@@ -828,7 +828,7 @@ class XmlDeserializer {
      * @param DOMNode $domNode The DOM node.
      * @return Writer Returns the writer.
      */
-    public static function deserializeWriter(DOMNode $domNode) {
+    public static function deserializeWriter(DOMNode $domNode): Writer {
 
         SerializerHelper::log($domNode);
 

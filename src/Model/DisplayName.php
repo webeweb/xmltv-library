@@ -37,14 +37,14 @@ class DisplayName extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeDisplayName($this);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeDisplayName($this);
     }
 }

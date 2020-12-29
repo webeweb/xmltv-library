@@ -52,14 +52,14 @@ class Review extends AbstractModel {
     /**
      * Reviewer.
      *
-     * @var string
+     * @var string|null
      */
     private $reviewer;
 
     /**
      * Source.
      *
-     * @var string
+     * @var string|null
      */
     private $source;
 
@@ -68,7 +68,7 @@ class Review extends AbstractModel {
      *
      * @return string[] Returns the type enumeration.
      */
-    public static function enumType() {
+    public static function enumType(): array {
         return [
             self::TYPE_TEXT,
             self::TYPE_URL,
@@ -78,35 +78,35 @@ class Review extends AbstractModel {
     /**
      * Get the reviewer.
      *
-     * @return string Returns the reviewer.
+     * @return string|null Returns the reviewer.
      */
-    public function getReviewer() {
+    public function getReviewer(): ?string {
         return $this->reviewer;
     }
 
     /**
      * Get the source.
      *
-     * @return string Returns the source.
+     * @return string|null Returns the source.
      */
-    public function getSource() {
+    public function getSource(): ?string {
         return $this->source;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeReview($this);
     }
 
     /**
      * Set the reviewer.
      *
-     * @param string $reviewer The reviewer.
+     * @param string|null $reviewer The reviewer.
      * @return Review Returns this review.
      */
-    public function setReviewer($reviewer) {
+    public function setReviewer(?string $reviewer): Review {
         $this->reviewer = $reviewer;
         return $this;
     }
@@ -114,10 +114,10 @@ class Review extends AbstractModel {
     /**
      * Set the source.
      *
-     * @param string $source The source.
+     * @param string|null $source The source.
      * @return Review Returns this review.
      */
-    public function setSource($source) {
+    public function setSource(?string $source): Review {
         $this->source = $source;
         return $this;
     }
@@ -125,11 +125,11 @@ class Review extends AbstractModel {
     /**
      * Set the type.
      *
-     * @param string $type The type.
+     * @param string|null $type The type.
      * @return Review Returns this review.
      * @throws InvalidArgumentException Throws an invalid argument exception if the type is invalid.
      */
-    public function setType($type) {
+    public function setType(?string $type): Review {
         if (null !== $type && false === in_array($type, static::enumType())) {
             throw new InvalidArgumentException(sprintf('The type "%s" is invalid', $type));
         }
@@ -140,7 +140,7 @@ class Review extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeReview($this);
     }
 }

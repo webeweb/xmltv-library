@@ -28,7 +28,7 @@ class ArrayWritersTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddWriter() {
+    public function testAddWriter(): void {
 
         // Set a Writer mock.
         $writer = new Writer();
@@ -46,7 +46,7 @@ class ArrayWritersTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayWritersTrait();
 

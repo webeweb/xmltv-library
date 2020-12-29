@@ -29,7 +29,7 @@ class LengthTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumUnits() {
+    public function testEnumUnits(): void {
 
         $res = [
             Length::UNITS_HOURS,
@@ -44,7 +44,7 @@ class LengthTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Length();
         $obj->setContent("content");
@@ -63,7 +63,7 @@ class LengthTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testSetUnits() {
+    public function testSetUnits(): void {
 
         $obj = new Length();
 
@@ -76,7 +76,7 @@ class LengthTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetUnitsWithInvaliArgumentException() {
+    public function testSetUnitsWithInvaliArgumentException(): void {
 
         $obj = new Length();
 
@@ -95,7 +95,7 @@ class LengthTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Length();
         $obj->setContent("content");
@@ -110,7 +110,7 @@ class LengthTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("length", Length::DOM_NODE_NAME);
         $this->assertEquals("hours", Length::UNITS_HOURS);

@@ -29,7 +29,7 @@ class SerializerHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDateTime() {
+    public function testDeserializeDateTime(): void {
 
         $res = SerializerHelper::deserializeDateTime("20190731180000 +0200");
         $this->assertInstanceOf(DateTime::class, $res);
@@ -43,7 +43,7 @@ class SerializerHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetDOMAttributeValue() {
+    public function testGetDOMAttributeValue(): void {
 
         $tvNode = $this->document->documentElement;
         $dnNode = $tvNode->childNodes->item(1)->childNodes->item(1);
@@ -58,7 +58,7 @@ class SerializerHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetDOMNodeByName() {
+    public function testGetDOMNodeByName(): void {
 
         $tvNode = $this->document->documentElement;
 
@@ -74,7 +74,7 @@ class SerializerHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetDOMNodesByName() {
+    public function testGetDOMNodesByName(): void {
 
         $tvNode = $this->document->documentElement;
 
@@ -88,7 +88,7 @@ class SerializerHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetDOMNodesByNameWithNull() {
+    public function testGetDOMNodesByNameWithNull(): void {
 
         $this->assertEquals([], SerializerHelper::getDOMNodesByName("channel", null));
     }
@@ -98,7 +98,7 @@ class SerializerHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetMethodName() {
+    public function testGetMethodName(): void {
 
         $this->assertEquals("addDisplayName", SerializerHelper::getMethodName("add", "display-name"));
         $this->assertEquals("setUrl", SerializerHelper::getMethodName("set", "url"));
@@ -109,7 +109,7 @@ class SerializerHelperTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetLogger() {
+    public function testSetLogger(): void {
 
         // Set a Logger mock.
         $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();

@@ -29,7 +29,7 @@ class StatisticsTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetStatistic() {
+    public function testGetStatistic(): void {
 
         $obj = new TestStatistics();
 
@@ -46,7 +46,7 @@ class StatisticsTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testParse() {
+    public function testParse(): void {
 
         // tv > programme > credits
         $node = $this->document->documentElement
@@ -164,7 +164,7 @@ class StatisticsTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testToString() {
+    public function testToString(): void {
 
         // tv
         $node = $this->document->documentElement;
@@ -181,7 +181,7 @@ class StatisticsTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new Statistics();
 

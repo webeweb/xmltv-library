@@ -37,14 +37,14 @@ class PreviouslyShown extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializePreviouslyShown($this);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializePreviouslyShown($this);
     }
 }

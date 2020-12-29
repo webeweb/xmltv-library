@@ -31,7 +31,7 @@ class Composer extends AbstractCredit {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeComposer($this);
     }
 }

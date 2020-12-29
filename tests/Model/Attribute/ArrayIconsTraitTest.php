@@ -28,7 +28,7 @@ class ArrayIconsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddIcon() {
+    public function testAddIcon(): void {
 
         // Set an Icon mock.
         $icon = new Icon();
@@ -46,7 +46,7 @@ class ArrayIconsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayIconsTrait();
 

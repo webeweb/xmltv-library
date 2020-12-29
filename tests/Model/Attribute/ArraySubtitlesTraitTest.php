@@ -28,7 +28,7 @@ class ArraySubtitlesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddSubtitles() {
+    public function testAddSubtitles(): void {
 
         // Set a Subtitles mock.
         $subtitles = new Subtitles();
@@ -46,7 +46,7 @@ class ArraySubtitlesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArraySubtitlesTrait();
 

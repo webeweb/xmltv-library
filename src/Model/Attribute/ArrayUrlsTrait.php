@@ -43,7 +43,7 @@ trait ArrayUrlsTrait {
      *
      * @return int Returns the number of URLs.
      */
-    public function getNumberUrls() {
+    public function getNumberUrls(): int {
         return count($this->getUrls());
     }
 
@@ -52,7 +52,7 @@ trait ArrayUrlsTrait {
      *
      * @return Url[] Returns the URLs.
      */
-    public function getUrls() {
+    public function getUrls(): array {
         return $this->urls;
     }
 
@@ -61,7 +61,7 @@ trait ArrayUrlsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasUrls() {
+    public function hasUrls(): bool {
         return 1 <= $this->getNumberUrls();
     }
 

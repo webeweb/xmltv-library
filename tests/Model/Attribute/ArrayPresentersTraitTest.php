@@ -28,7 +28,7 @@ class ArrayPresentersTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddPresenter() {
+    public function testAddPresenter(): void {
 
         // Set a Presenter mock.
         $presenter = new Presenter();
@@ -46,7 +46,7 @@ class ArrayPresentersTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayPresentersTrait();
 

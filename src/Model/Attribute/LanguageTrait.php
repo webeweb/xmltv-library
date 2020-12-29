@@ -24,16 +24,16 @@ trait LanguageTrait {
     /**
      * Language.
      *
-     * @var Language
+     * @var Language|null
      */
     private $language;
 
     /**
      * Get the language.
      *
-     * @return Language Returns the language.
+     * @return Language|null Returns the language.
      */
-    public function getLanguage() {
+    public function getLanguage(): ?Language {
         return $this->language;
     }
 
@@ -42,7 +42,7 @@ trait LanguageTrait {
      *
      * @param Language|null $language The language.
      */
-    public function setLanguage(Language $language = null) {
+    public function setLanguage(?Language $language) {
         $this->language = $language;
         return $this;
     }

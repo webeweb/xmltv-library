@@ -27,7 +27,7 @@ class EpisodeNumTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumSystem() {
+    public function testEnumSystem(): void {
 
         $res = [
             EpisodeNum::SYSTEM_ONSCREEN,
@@ -41,7 +41,7 @@ class EpisodeNumTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new EpisodeNum();
         $obj->setContent("content");
@@ -59,7 +59,7 @@ class EpisodeNumTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new EpisodeNum();
         $obj->setContent("content");
@@ -74,7 +74,7 @@ class EpisodeNumTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("episode-num", EpisodeNum::DOM_NODE_NAME);
         $this->assertEquals("onscreen", EpisodeNum::SYSTEM_ONSCREEN);

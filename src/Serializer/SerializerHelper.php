@@ -29,7 +29,7 @@ class SerializerHelper {
     /**
      * Logger.
      *
-     * @var LoggerInterface
+     * @var LoggerInterface|null
      */
     protected static $logger;
 
@@ -41,7 +41,7 @@ class SerializerHelper {
      * @param AbstractModel $model The model.
      * @return void
      */
-    public static function deserializeChildNode(DomNode $domNode, $nodeName, AbstractModel $model) {
+    public static function deserializeChildNode(DomNode $domNode, string $nodeName, AbstractModel $model): void {
 
         $fct = __NAMESPACE__ . "\\XmlDeserializer::" . static::getMethodName("deserialize", $nodeName);
         $set = static::getMethodName("set", $nodeName);
@@ -60,7 +60,7 @@ class SerializerHelper {
      * @param AbstractModel $model The model.
      * @return void
      */
-    public static function deserializeChildNodes(DomNode $domNode, $nodeName, AbstractModel $model) {
+    public static function deserializeChildNodes(DomNode $domNode, string $nodeName, AbstractModel $model): void {
 
         $fct = __NAMESPACE__ . "\\XmlDeserializer::" . static::getMethodName("deserialize", $nodeName);
         $add = static::getMethodName("add", $nodeName);
@@ -74,10 +74,10 @@ class SerializerHelper {
     /**
      * Deserialize a date/time.
      *
-     * @param string $value The date/time.
+     * @param string|null $value The date/time.
      * @return DateTime|null Returns the date/time in case of success, null otherwise.
      */
-    public static function deserializeDateTime($value) {
+    public static function deserializeDateTime(?string $value): ?DateTime {
 
         $dateTime = DateTime::createFromFormat("YmdHis O", $value);
         if (false === $dateTime) {
@@ -94,7 +94,7 @@ class SerializerHelper {
      * @param string $attributeName The attribute name.
      * @return string|null Returns the attribute value in case of success, null otherwise.
      */
-    public static function getDOMAttributeValue(DOMNode $domNode, $attributeName) {
+    public static function getDOMAttributeValue(DOMNode $domNode, string $attributeName): ?string {
 
         if (null === $domNode->attributes || null === $domNode->attributes->getNamedItem($attributeName)) {
             return null;
@@ -112,7 +112,7 @@ class SerializerHelper {
      * @param DOMNodeList|null $domNodeList The DOM node list.
      * @return DOMNode|null Returns the DOM node in case of success, null otherwise.
      */
-    public static function getDOMNodeByName($nodeName, DOMNodeList $domNodeList = null) {
+    public static function getDOMNodeByName(string $nodeName, DOMNodeList $domNodeList = null): ?DOMNode {
 
         $domNodes = static::getDOMNodesByName($nodeName, $domNodeList);
         if (1 !== count($domNodes)) {
@@ -129,7 +129,7 @@ class SerializerHelper {
      * @param DOMNodeList|null $domNodeList The DOM node list.
      * @return DOMNode[] Returns the DOM nodes.
      */
-    public static function getDOMNodesByName($nodeName, DOMNodeList $domNodeList = null) {
+    public static function getDOMNodesByName(string $nodeName, DOMNodeList $domNodeList = null): array {
 
         if (null === $domNodeList) {
             return [];
@@ -153,9 +153,9 @@ class SerializerHelper {
     /**
      * Get the logger.
      *
-     * @return LoggerInterface Returns the logger.
+     * @return LoggerInterface|null Returns the logger.
      */
-    public static function getLogger() {
+    public static function getLogger(): ?LoggerInterface {
         return static::$logger;
     }
 
@@ -166,7 +166,7 @@ class SerializerHelper {
      * @param string $attribute The attribute.
      * @return string Returns the method name.
      */
-    public static function getMethodName($action, $attribute) {
+    public static function getMethodName(string $action, string $attribute): string {
 
         $method = "";
 
@@ -186,7 +186,7 @@ class SerializerHelper {
      * @param DOMNode $domNode The DOM node.
      * @return void
      */
-    public static function log(DOMNode $domNode) {
+    public static function log(DOMNode $domNode): void {
 
         if (null === static::getLogger()) {
             return;
@@ -213,7 +213,7 @@ class SerializerHelper {
      * @param LoggerInterface|null $logger The logger.
      * @return void
      */
-    public static function setLogger(LoggerInterface $logger = null) {
+    public static function setLogger(?LoggerInterface $logger): void {
         static::$logger = $logger;
     }
 }

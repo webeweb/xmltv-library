@@ -43,7 +43,7 @@ trait ArrayEpisodeNumsTrait {
      *
      * @return EpisodeNum[] Returns the episode numbers.
      */
-    public function getEpisodeNums() {
+    public function getEpisodeNums(): array {
         return $this->episodeNums;
     }
 
@@ -52,7 +52,7 @@ trait ArrayEpisodeNumsTrait {
      *
      * @return int Returns the number of episode nums.
      */
-    public function getNumberEpisodeNums() {
+    public function getNumberEpisodeNums(): int {
         return count($this->getEpisodeNums());
     }
 
@@ -61,7 +61,7 @@ trait ArrayEpisodeNumsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasEpisodeNums() {
+    public function hasEpisodeNums(): bool {
         return 1 <= $this->getNumberEpisodeNums();
     }
 

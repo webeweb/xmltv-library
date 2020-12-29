@@ -43,7 +43,7 @@ trait ArrayDescsTrait {
      *
      * @return Desc[] Returns the descriptions.
      */
-    public function getDescs() {
+    public function getDescs(): array {
         return $this->descs;
     }
 
@@ -52,7 +52,7 @@ trait ArrayDescsTrait {
      *
      * @return int Returns the number of descriptions.
      */
-    public function getNumberDescs() {
+    public function getNumberDescs(): int {
         return count($this->getDescs());
     }
 
@@ -61,7 +61,7 @@ trait ArrayDescsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasDescs() {
+    public function hasDescs(): bool {
         return 1 <= $this->getNumberDescs();
     }
 

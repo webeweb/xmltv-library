@@ -27,7 +27,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Tv();
         $obj->setDate("date");
@@ -57,7 +57,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetDate() {
+    public function testSetDate(): void {
 
         $obj = new Tv();
 
@@ -70,7 +70,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetGeneratorInfoName() {
+    public function testSetGeneratorInfoName(): void {
 
         $obj = new Tv();
 
@@ -83,7 +83,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetGeneratorInfoURL() {
+    public function testSetGeneratorInfoURL(): void {
 
         $obj = new Tv();
 
@@ -96,7 +96,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSourceDataURL() {
+    public function testSetSourceDataURL(): void {
 
         $obj = new Tv();
 
@@ -109,7 +109,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSourceInfoName() {
+    public function testSetSourceInfoName(): void {
 
         $obj = new Tv();
 
@@ -122,7 +122,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetSourceInfoURL() {
+    public function testSetSourceInfoURL(): void {
 
         $obj = new Tv();
 
@@ -135,7 +135,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Tv();
         $obj->setDate("date");
@@ -156,7 +156,7 @@ class TvTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("tv", Tv::DOM_NODE_NAME);
 

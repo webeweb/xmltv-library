@@ -28,7 +28,7 @@ class ArrayProducersTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddProducer() {
+    public function testAddProducer(): void {
 
         // Set a Producer mock.
         $producer = new Producer();
@@ -46,7 +46,7 @@ class ArrayProducersTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayProducersTrait();
 

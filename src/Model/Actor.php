@@ -32,33 +32,33 @@ class Actor extends AbstractCredit {
     /**
      * Role.
      *
-     * @var string
+     * @var string|null
      */
     private $role;
 
     /**
      * Get the role.
      *
-     * @return string Returns the role.
+     * @return string|null Returns the role.
      */
-    public function getRole() {
+    public function getRole(): ?string {
         return $this->role;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeActor($this);
     }
 
     /**
      * Set the role.
      *
-     * @param string $role The role.
+     * @param string|null $role The role.
      * @return Actor Returns this actor.
      */
-    public function setRole($role) {
+    public function setRole(?string $role): Actor {
         $this->role = $role;
         return $this;
     }
@@ -66,7 +66,7 @@ class Actor extends AbstractCredit {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeActor($this);
     }
 }

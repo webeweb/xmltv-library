@@ -24,7 +24,7 @@ class TestCredit extends AbstractCredit {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return "";
     }
 }

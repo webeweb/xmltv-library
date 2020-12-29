@@ -28,7 +28,7 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddChannel() {
+    public function testAddChannel(): void {
 
         // Set a Channel mock.
         $channel = new Channel();
@@ -46,7 +46,7 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testIndexChannelsById() {
+    public function testIndexChannelsById(): void {
 
         // Set the Channel mock.
         $channel1 = new Channel();
@@ -71,7 +71,7 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSortChannels() {
+    public function testSortChannels(): void {
 
         // Set the Channel mock.
         $channel1 = new Channel();
@@ -96,7 +96,7 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayChannelsTrait();
 

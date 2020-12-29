@@ -27,7 +27,7 @@ class VideoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Video();
         $obj->setAspect($this->aspect);
@@ -49,7 +49,7 @@ class VideoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAspect() {
+    public function testSetAspect(): void {
 
         $obj = new Video();
 
@@ -62,7 +62,7 @@ class VideoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetColour() {
+    public function testSetColour(): void {
 
         $obj = new Video();
 
@@ -75,7 +75,7 @@ class VideoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetQuality() {
+    public function testSetQuality(): void {
 
         $obj = new Video();
 
@@ -88,7 +88,7 @@ class VideoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Video();
         $obj->setAspect($this->aspect);
@@ -105,7 +105,7 @@ class VideoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("video", Video::DOM_NODE_NAME);
 

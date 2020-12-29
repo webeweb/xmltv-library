@@ -27,7 +27,7 @@ class PresenterTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Presenter();
         $obj->setContent("content");
@@ -41,7 +41,7 @@ class PresenterTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("presenter", Presenter::DOM_NODE_NAME);
 

@@ -27,7 +27,7 @@ class DirectorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Director();
         $obj->setContent("content");
@@ -41,7 +41,7 @@ class DirectorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("director", Director::DOM_NODE_NAME);
 

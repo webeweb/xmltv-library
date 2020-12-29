@@ -44,7 +44,7 @@ class XmlProviderTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set an input mock.
@@ -59,7 +59,7 @@ class XmlProviderTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function tearDown() {
+    protected function tearDown(): void {
         parent::tearDown();
 
         if (true === file_exists($this->input)) {
@@ -77,7 +77,7 @@ class XmlProviderTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testGetXml() {
+    public function testGetXml(): void {
 
         // Set a Logger mock.
         $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
@@ -94,7 +94,7 @@ class XmlProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testReadXml() {
+    public function testReadXml(): void {
 
         $res = XmlProvider::readXml($this->filename);
         $this->assertInstanceOf(Tv::class, $res);
@@ -113,7 +113,7 @@ class XmlProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testStatXml() {
+    public function testStatXml(): void {
 
         $res = XmlProvider::statXml($this->filename);
         $this->assertCount(85, $res);
@@ -124,7 +124,7 @@ class XmlProviderTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testWriteXml() {
+    public function testWriteXml(): void {
 
         // Set a Logger mock.
         $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();

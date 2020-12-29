@@ -28,7 +28,7 @@ class ArrayDisplayNamesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddDisplayName() {
+    public function testAddDisplayName(): void {
 
         // Set a Display name mock.
         $displayName = new DisplayName();
@@ -46,7 +46,7 @@ class ArrayDisplayNamesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayDisplayNamesTrait();
 

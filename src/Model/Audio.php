@@ -35,23 +35,23 @@ class Audio extends AbstractModel {
     /**
      * Stereo.
      *
-     * @var Stereo
+     * @var Stereo|null
      */
     private $stereo;
 
     /**
      * Get the stereo.
      *
-     * @return Stereo Returns the stereo.
+     * @return Stereo|null Returns the stereo.
      */
-    public function getStereo() {
+    public function getStereo(): ?Stereo {
         return $this->stereo;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeAudio($this);
     }
 
@@ -61,7 +61,7 @@ class Audio extends AbstractModel {
      * @param Stereo|null $stereo The stereo.
      * @return Audio Returns this audio.
      */
-    public function setStereo(Stereo $stereo = null) {
+    public function setStereo(?Stereo $stereo): Audio {
         $this->stereo = $stereo;
         return $this;
     }
@@ -69,7 +69,7 @@ class Audio extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeAudio($this);
     }
 }

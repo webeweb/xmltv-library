@@ -28,7 +28,7 @@ class ArrayDescsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddDesc() {
+    public function testAddDesc(): void {
 
         // Set a Desc mock.
         $desc = new Desc();
@@ -46,7 +46,7 @@ class ArrayDescsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayDescsTrait();
 

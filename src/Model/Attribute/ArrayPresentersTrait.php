@@ -43,7 +43,7 @@ trait ArrayPresentersTrait {
      *
      * @return int Returns the number of presenters.
      */
-    public function getNumberPresenters() {
+    public function getNumberPresenters(): int {
         return count($this->getPresenters());
     }
 
@@ -52,7 +52,7 @@ trait ArrayPresentersTrait {
      *
      * @return Presenter[] Returns the presenters.
      */
-    public function getPresenters() {
+    public function getPresenters(): array {
         return $this->presenters;
     }
 
@@ -61,7 +61,7 @@ trait ArrayPresentersTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasPresenters() {
+    public function hasPresenters(): bool {
         return 1 <= $this->getNumberPresenters();
     }
 

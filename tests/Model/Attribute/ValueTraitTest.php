@@ -28,7 +28,7 @@ class ValueTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetValue() {
+    public function testSetValue(): void {
 
         // Set a Value mock.
         $value = new Value();
@@ -44,7 +44,7 @@ class ValueTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestValueTrait();
 

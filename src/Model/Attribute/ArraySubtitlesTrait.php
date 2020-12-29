@@ -43,7 +43,7 @@ trait ArraySubtitlesTrait {
      *
      * @return int Returns the number of subtitles.
      */
-    public function getNumberSubtitles() {
+    public function getNumberSubtitles(): int {
         return count($this->getSubtitles());
     }
 
@@ -52,7 +52,7 @@ trait ArraySubtitlesTrait {
      *
      * @return Subtitles[] Returns the subtitles.
      */
-    public function getSubtitles() {
+    public function getSubtitles(): array {
         return $this->subtitles;
     }
 
@@ -61,7 +61,7 @@ trait ArraySubtitlesTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasSubtitles() {
+    public function hasSubtitles(): bool {
         return 1 <= $this->getNumberSubtitles();
     }
 

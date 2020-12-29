@@ -43,7 +43,7 @@ trait ArrayCommentatorsTrait {
      *
      * @return Commentator[] Returns the commentators.
      */
-    public function getCommentators() {
+    public function getCommentators(): array {
         return $this->commentators;
     }
 
@@ -52,7 +52,7 @@ trait ArrayCommentatorsTrait {
      *
      * @return int Returns the number of commentators.
      */
-    public function getNumberCommentators() {
+    public function getNumberCommentators(): int {
         return count($this->getCommentators());
     }
 
@@ -61,7 +61,7 @@ trait ArrayCommentatorsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasCommentators() {
+    public function hasCommentators(): bool {
         return 1 <= $this->getNumberCommentators();
     }
 

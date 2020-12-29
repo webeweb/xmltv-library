@@ -27,7 +27,7 @@ class ChannelTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Channel();
         $obj->setId("id");
@@ -49,7 +49,7 @@ class ChannelTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetId() {
+    public function testSetId(): void {
 
         $obj = new Channel();
 
@@ -62,7 +62,7 @@ class ChannelTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Channel();
         $obj->setId("id");
@@ -79,7 +79,7 @@ class ChannelTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("channel", Channel::DOM_NODE_NAME);
 

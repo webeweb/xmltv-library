@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
+use WBW\Library\Core\Model\Attribute\StringIdTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayDisplayNamesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayProgrammesTrait;
@@ -30,6 +31,7 @@ class Channel extends AbstractModel {
     use ArrayIconsTrait;
     use ArrayProgrammesTrait;
     use ArrayUrlsTrait;
+    use StringIdTrait;
 
     /**
      * DOM node name.
@@ -37,13 +39,6 @@ class Channel extends AbstractModel {
      * @var string
      */
     const DOM_NODE_NAME = "channel";
-
-    /**
-     * Id.
-     *
-     * @var string
-     */
-    private $id;
 
     /**
      * Constructor.
@@ -58,36 +53,16 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Get the id.
-     *
-     * @return string Returns the id.
-     */
-    public function getId() {
-        return $this->id;
-    }
-
-    /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeChannel($this);
     }
 
     /**
-     * Set the id.
-     *
-     * @param string $id The id.
-     * @return Channel Returns this channel.
-     */
-    public function setId($id) {
-        $this->id = $id;
-        return $this;
-    }
-
-    /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeChannel($this);
     }
 }

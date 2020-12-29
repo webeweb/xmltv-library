@@ -22,25 +22,25 @@ trait StringChannelTrait {
     /**
      * Channel.
      *
-     * @var string
+     * @var string|null
      */
     private $channel;
 
     /**
      * Get the channel.
      *
-     * @return string Returns the channel.
+     * @return string|null Returns the channel.
      */
-    public function getChannel() {
+    public function getChannel(): ?string {
         return $this->channel;
     }
 
     /**
      * Set the channel.
      *
-     * @param string $channel The channel.
+     * @param string|null $channel The channel.
      */
-    public function setChannel($channel) {
+    public function setChannel(?string $channel) {
         $this->channel = $channel;
         return $this;
     }

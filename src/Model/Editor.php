@@ -31,7 +31,7 @@ class Editor extends AbstractCredit {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeEditor($this);
     }
 }

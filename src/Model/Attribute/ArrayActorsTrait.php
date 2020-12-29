@@ -43,7 +43,7 @@ trait ArrayActorsTrait {
      *
      * @return Actor[] Returns the actors.
      */
-    public function getActors() {
+    public function getActors(): array {
         return $this->actors;
     }
 
@@ -52,7 +52,7 @@ trait ArrayActorsTrait {
      *
      * @return int Returns the number of actors.
      */
-    public function getNumberActors() {
+    public function getNumberActors(): int {
         return count($this->getActors());
     }
 
@@ -61,7 +61,7 @@ trait ArrayActorsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasActors() {
+    public function hasActors(): bool {
         return 1 <= $this->getNumberActors();
     }
 

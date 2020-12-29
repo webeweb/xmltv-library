@@ -27,7 +27,7 @@ class StringChannelTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetChannel() {
+    public function testSetChannel(): void {
 
         $obj = new TestStringChannelTrait();
 
@@ -40,7 +40,7 @@ class StringChannelTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestStringChannelTrait();
 

@@ -28,7 +28,7 @@ class ArrayActorsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddActor() {
+    public function testAddActor(): void {
 
         // Set an Actor mock.
         $actor = new Actor();
@@ -46,7 +46,7 @@ class ArrayActorsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayActorsTrait();
 

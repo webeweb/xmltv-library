@@ -43,7 +43,7 @@ trait ArrayTitlesTrait {
      *
      * @return int Returns the number of titles.
      */
-    public function getNumberTitles() {
+    public function getNumberTitles(): int {
         return count($this->getTitles());
     }
 
@@ -52,7 +52,7 @@ trait ArrayTitlesTrait {
      *
      * @return Title[] Returns the titles.
      */
-    public function getTitles() {
+    public function getTitles(): array {
         return $this->titles;
     }
 
@@ -61,7 +61,7 @@ trait ArrayTitlesTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasTitles() {
+    public function hasTitles(): bool {
         return 1 <= $this->getNumberTitles();
     }
 

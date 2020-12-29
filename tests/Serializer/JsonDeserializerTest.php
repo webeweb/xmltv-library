@@ -69,7 +69,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set the TV mock.
@@ -81,7 +81,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeActor() {
+    public function testDeserializeActor(): void {
 
         // tv > programme > credits > actor
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getActors()[0]);
@@ -98,7 +98,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeAdapter() {
+    public function testDeserializeAdapter(): void {
 
         // tv > programme > credits > adapter
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getAdapters()[0]);
@@ -114,7 +114,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeAspect() {
+    public function testDeserializeAspect(): void {
 
         // tv > programme > video > aspect
         $data = json_encode($this->tv->getProgrammes()[0]->getVideo()->getAspect());
@@ -130,7 +130,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeAudio() {
+    public function testDeserializeAudio(): void {
 
         // tv > programme > audio
         $data = json_encode($this->tv->getProgrammes()[0]->getAudio());
@@ -147,7 +147,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeCategory() {
+    public function testDeserializeCategory(): void {
 
         // tv > programme > category
         $data = json_encode($this->tv->getProgrammes()[0]->getCategories()[0]);
@@ -164,7 +164,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeChannel() {
+    public function testDeserializeChannel(): void {
 
         // tv > channel
         $data = json_encode($this->tv->getChannels()[0]);
@@ -182,7 +182,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeColour() {
+    public function testDeserializeColour(): void {
 
         // tv > programme > video > colour
         $data = json_encode($this->tv->getProgrammes()[0]->getVideo()->getColour());
@@ -198,7 +198,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeCommentator() {
+    public function testDeserializeCommentator(): void {
 
         // tv > programme > credits > commentator
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getCommentators()[0]);
@@ -214,7 +214,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeComposer() {
+    public function testDeserializeComposer(): void {
 
         // tv > programme > credits > composer
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getComposers()[0]);
@@ -230,7 +230,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeCountry() {
+    public function testDeserializeCountry(): void {
 
         // tv > programme > country
         $data = json_encode($this->tv->getProgrammes()[0]->getCountries()[0]);
@@ -247,7 +247,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeCredits() {
+    public function testDeserializeCredits(): void {
 
         // tv > programme > credits
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits());
@@ -272,7 +272,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDate() {
+    public function testDeserializeDate(): void {
 
         // tv > programme > date
         $data = json_encode($this->tv->getProgrammes()[0]->getDate());
@@ -288,7 +288,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDesc() {
+    public function testDeserializeDesc(): void {
 
         // tv > programme > desc
         $data = json_encode($this->tv->getProgrammes()[0]->getDescs()[0]);
@@ -305,7 +305,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDirector() {
+    public function testDeserializeDirector(): void {
 
         // tv > programme > credits > director
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getDirectors()[0]);
@@ -321,7 +321,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeDisplayName() {
+    public function testDeserializeDisplayName(): void {
 
         // tv > channel > display-name
         $data = json_encode($this->tv->getChannels()[0]->getDisplayNames()[0]);
@@ -338,7 +338,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeEditor() {
+    public function testDeserializeEditor(): void {
 
         // tv > programme > credits > editor
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getEditors()[0]);
@@ -354,7 +354,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeEpisodeNum() {
+    public function testDeserializeEpisodeNum(): void {
 
         // tv > programme > episode-num
         $data = json_encode($this->tv->getProgrammes()[0]->getEpisodeNums()[0]);
@@ -371,7 +371,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeGuest() {
+    public function testDeserializeGuest(): void {
 
         // tv > programme > credits > guest
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getGuests()[0]);
@@ -387,7 +387,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeIcon() {
+    public function testDeserializeIcon(): void {
 
         // tv > channel > icon
         $data = json_encode($this->tv->getChannels()[0]->getIcons()[0]);
@@ -405,7 +405,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeKeyword() {
+    public function testDeserializeKeyword(): void {
 
         // tv > programme > keyword
         $data = json_encode($this->tv->getProgrammes()[0]->getKeywords()[0]);
@@ -422,7 +422,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeLanguage() {
+    public function testDeserializeLanguage(): void {
 
         // tv > programme > language
         $data = json_encode($this->tv->getProgrammes()[0]->getLanguage());
@@ -439,7 +439,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeLastChance() {
+    public function testDeserializeLastChance(): void {
 
         // tv > programme > last-chance
         $data = json_encode($this->tv->getProgrammes()[0]->getLastChance());
@@ -456,7 +456,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeLength() {
+    public function testDeserializeLength(): void {
 
         // tv > programme > length
         $data = json_encode($this->tv->getProgrammes()[0]->getLength());
@@ -473,7 +473,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeOrigLanguage() {
+    public function testDeserializeOrigLanguage(): void {
 
         // tv > programme > orig-language
         $data = json_encode($this->tv->getProgrammes()[0]->getOrigLanguage());
@@ -490,7 +490,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePremiere() {
+    public function testDeserializePremiere(): void {
 
         // tv > programme > premiere
         $data = json_encode($this->tv->getProgrammes()[0]->getPremiere());
@@ -507,7 +507,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePresent() {
+    public function testDeserializePresent(): void {
 
         // tv > programme > video > present
         $data = json_encode($this->tv->getProgrammes()[0]->getAudio()->getPresent());
@@ -523,7 +523,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePresenter() {
+    public function testDeserializePresenter(): void {
 
         // tv > programme > credits > presenter
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getPresenters()[0]);
@@ -539,7 +539,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializePreviouslyShown() {
+    public function testDeserializePreviouslyShown(): void {
 
         // tv > programme > previously-shown
         $data = json_encode($this->tv->getProgrammes()[0]->getPreviouslyShown());
@@ -556,7 +556,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeProducer() {
+    public function testDeserializeProducer(): void {
 
         // tv > programme > credits > producer
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getProducers()[0]);
@@ -572,7 +572,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeProgramme() {
+    public function testDeserializeProgramme(): void {
 
         // tv > programme
         $data = json_encode($this->tv->getProgrammes()[0]);
@@ -620,7 +620,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeQuality() {
+    public function testDeserializeQuality(): void {
 
         // tv > programme > video > quality
         $data = json_encode($this->tv->getProgrammes()[0]->getVideo()->getQuality());
@@ -636,7 +636,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeRating() {
+    public function testDeserializeRating(): void {
 
         // tv > programme > rating
         $data = json_encode($this->tv->getProgrammes()[0]->getRatings()[0]);
@@ -654,7 +654,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeReview() {
+    public function testDeserializeReview(): void {
 
         // tv > programme > review
         $data = json_encode($this->tv->getProgrammes()[0]->getReviews()[0]);
@@ -673,7 +673,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeSecondaryTitle() {
+    public function testDeserializeSecondaryTitle(): void {
 
         // tv > programme > sub-title
         $data = json_encode($this->tv->getProgrammes()[0]->getSecondaryTitles()[0]);
@@ -690,7 +690,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeStarRating() {
+    public function testDeserializeStarRating(): void {
 
         // tv > programme > star-rating
         $data = json_encode($this->tv->getProgrammes()[0]->getStarRatings()[0]);
@@ -707,7 +707,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeStereo() {
+    public function testDeserializeStereo(): void {
 
         // tv > programme > audio > stereo
         $data = json_encode($this->tv->getProgrammes()[0]->getAudio()->getStereo());
@@ -723,7 +723,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeSubtitles() {
+    public function testDeserializeSubtitles(): void {
 
         // tv > programme > subtitles
         $data = json_encode($this->tv->getProgrammes()[0]->getSubtitles()[0]);
@@ -740,7 +740,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeTitle() {
+    public function testDeserializeTitle(): void {
 
         // tv > programme > title
         $data = json_encode($this->tv->getProgrammes()[0]->getTitles()[0]);
@@ -757,7 +757,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeTv() {
+    public function testDeserializeTv(): void {
 
         // tv
         $data = json_encode($this->tv);
@@ -780,7 +780,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeUrl() {
+    public function testDeserializeUrl(): void {
 
         // tv > channel > url
         $data = json_encode($this->tv->getChannels()[0]->getUrls()[0]);
@@ -796,7 +796,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeValue() {
+    public function testDeserializeValue(): void {
 
         // tv > programme > rating > value
         $data = json_encode($this->tv->getProgrammes()[0]->getRatings()[0]->getValue());
@@ -812,7 +812,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeVideo() {
+    public function testDeserializeVideo(): void {
 
         // tv > programme > video
         $data = json_encode($this->tv->getProgrammes()[0]->getVideo());
@@ -831,7 +831,7 @@ class JsonDeserializerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testDeserializeWriter() {
+    public function testDeserializeWriter(): void {
 
         // tv > programme > credits > writer
         $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getWriters()[0]);

@@ -69,9 +69,9 @@ class XmlSerializer {
      * Serialize an actor.
      *
      * @param Actor $model The actor.
-     * @return String Returns the serialized actor.
+     * @return string Returns the serialized actor.
      */
-    public static function serializeActor(Actor $model) {
+    public static function serializeActor(Actor $model): string {
         return StringHelper::domNode(Actor::DOM_NODE_NAME, $model->getContent(), [
             "role" => $model->getRole(),
         ]);
@@ -81,9 +81,9 @@ class XmlSerializer {
      * Serialize an adapter.
      *
      * @param Adapter $model The adapter.
-     * @return String Returns the serialized adapter.
+     * @return string Returns the serialized adapter.
      */
-    public static function serializeAdapter(Adapter $model) {
+    public static function serializeAdapter(Adapter $model): string {
         return StringHelper::domNode(Adapter::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -91,9 +91,9 @@ class XmlSerializer {
      * Serialize an array.
      *
      * @param AbstractModel[] $models The models.
-     * @return String Returns the serialized array.
+     * @return string Returns the serialized array.
      */
-    protected static function serializeArray(array $models) {
+    protected static function serializeArray(array $models): string {
 
         $output = [];
 
@@ -108,9 +108,9 @@ class XmlSerializer {
      * Serialize an aspect.
      *
      * @param Aspect $model The aspect.
-     * @return String Returns the serialized aspect.
+     * @return string Returns the serialized aspect.
      */
-    public static function serializeAspect(Aspect $model) {
+    public static function serializeAspect(Aspect $model): string {
         return StringHelper::domNode(Aspect::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -120,7 +120,7 @@ class XmlSerializer {
      * @param Audio $model The audio.
      * @return string Returns the serialized audio.
      */
-    public static function serializeAudio(Audio $model) {
+    public static function serializeAudio(Audio $model): string {
 
         $content = XmlSerializer::serializeArray([
             $model->getPresent(),
@@ -134,9 +134,9 @@ class XmlSerializer {
      * Serialize a category.
      *
      * @param Category $model The category.
-     * @return String Returns the serialized category.
+     * @return string Returns the serialized category.
      */
-    public static function serializeCategory(Category $model) {
+    public static function serializeCategory(Category $model): string {
         return StringHelper::domNode(Category::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -148,7 +148,7 @@ class XmlSerializer {
      * @param Channel $model The channel.
      * @return string Returns the serialized channel.
      */
-    public static function serializeChannel(Channel $model) {
+    public static function serializeChannel(Channel $model): string {
 
         $content = [
             XmlSerializer::serializeArray($model->getDisplayNames()),
@@ -165,9 +165,9 @@ class XmlSerializer {
      * Serialize a colour.
      *
      * @param Colour $model The colour.
-     * @return String Returns the serialized colour.
+     * @return string Returns the serialized colour.
      */
-    public static function serializeColour(Colour $model) {
+    public static function serializeColour(Colour $model): string {
         return StringHelper::domNode(Colour::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -175,9 +175,9 @@ class XmlSerializer {
      * Serialize a commentator.
      *
      * @param Commentator $model The commentator.
-     * @return String Returns the serialized commentator.
+     * @return string Returns the serialized commentator.
      */
-    public static function serializeCommentator(Commentator $model) {
+    public static function serializeCommentator(Commentator $model): string {
         return StringHelper::domNode(Commentator::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -185,9 +185,9 @@ class XmlSerializer {
      * Serialize a composer.
      *
      * @param Composer $model The composer.
-     * @return String Returns the serialized composer.
+     * @return string Returns the serialized composer.
      */
-    public static function serializeComposer(Composer $model) {
+    public static function serializeComposer(Composer $model): string {
         return StringHelper::domNode(Composer::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -195,9 +195,9 @@ class XmlSerializer {
      * Serialize a country.
      *
      * @param Country $model The country.
-     * @return String Returns the serialized country.
+     * @return string Returns the serialized country.
      */
-    public static function serializeCountry(Country $model) {
+    public static function serializeCountry(Country $model): string {
         return StringHelper::domNode(Country::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -209,7 +209,7 @@ class XmlSerializer {
      * @param Credits $model The credits.
      * @return string Returns the serialized credits.
      */
-    public static function serializeCredits(Credits $model) {
+    public static function serializeCredits(Credits $model): string {
 
         $content = [
             XmlSerializer::serializeArray($model->getDirectors()),
@@ -231,9 +231,9 @@ class XmlSerializer {
      * Serialize a date.
      *
      * @param Date $model The date.
-     * @return String Returns the serialized date.
+     * @return string Returns the serialized date.
      */
-    public static function serializeDate(Date $model) {
+    public static function serializeDate(Date $model): string {
         return StringHelper::domNode(Date::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -241,9 +241,9 @@ class XmlSerializer {
      * Serialize a description.
      *
      * @param Desc $model The description.
-     * @return String Returns the serialized description.
+     * @return string Returns the serialized description.
      */
-    public static function serializeDesc(Desc $model) {
+    public static function serializeDesc(Desc $model): string {
         return StringHelper::domNode(Desc::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -253,9 +253,9 @@ class XmlSerializer {
      * Serialize a director.
      *
      * @param Director $model The director.
-     * @return String Returns the serialized director.
+     * @return string Returns the serialized director.
      */
-    public static function serializeDirector(Director $model) {
+    public static function serializeDirector(Director $model): string {
         return StringHelper::domNode(Director::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -263,9 +263,9 @@ class XmlSerializer {
      * Serialize a display name.
      *
      * @param DisplayName $model The display name.
-     * @return String Returns the serialized display name.
+     * @return string Returns the serialized display name.
      */
-    public static function serializeDisplayName(DisplayName $model) {
+    public static function serializeDisplayName(DisplayName $model): string {
         return StringHelper::domNode(DisplayName::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -275,9 +275,9 @@ class XmlSerializer {
      * Serialize an editor.
      *
      * @param Editor $model The editor.
-     * @return String Returns the serialized editor.
+     * @return string Returns the serialized editor.
      */
-    public static function serializeEditor(Editor $model) {
+    public static function serializeEditor(Editor $model): string {
         return StringHelper::domNode(Editor::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -285,9 +285,9 @@ class XmlSerializer {
      * Serialize a episode number.
      *
      * @param EpisodeNum $model The episode number.
-     * @return String Returns the serialized episode number.
+     * @return string Returns the serialized episode number.
      */
-    public static function serializeEpisodeNum(EpisodeNum $model) {
+    public static function serializeEpisodeNum(EpisodeNum $model): string {
         return StringHelper::domNode(EpisodeNum::DOM_NODE_NAME, $model->getContent(), [
             "system" => $model->getSystem(),
         ]);
@@ -297,9 +297,9 @@ class XmlSerializer {
      * Serialize a guest.
      *
      * @param Guest $model The guest.
-     * @return String Returns the serialized guest.
+     * @return string Returns the serialized guest.
      */
-    public static function serializeGuest(Guest $model) {
+    public static function serializeGuest(Guest $model): string {
         return StringHelper::domNode(Guest::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -307,9 +307,9 @@ class XmlSerializer {
      * Serialize an icon.
      *
      * @param Icon $model The icon.
-     * @return String Returns the serialized icon.
+     * @return string Returns the serialized icon.
      */
-    public static function serializeIcon(Icon $model) {
+    public static function serializeIcon(Icon $model): string {
         return StringHelper::domNode(Icon::DOM_NODE_NAME, null, [
             "src"    => $model->getSrc(),
             "width"  => $model->getWidth(),
@@ -321,9 +321,9 @@ class XmlSerializer {
      * Serialize a keyword.
      *
      * @param Keyword $model The keyword.
-     * @return String Returns the serialized keyword.
+     * @return string Returns the serialized keyword.
      */
-    public static function serializeKeyword(Keyword $model) {
+    public static function serializeKeyword(Keyword $model): string {
         return StringHelper::domNode(Keyword::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -333,9 +333,9 @@ class XmlSerializer {
      * Serialize a language.
      *
      * @param Language $model The language.
-     * @return String Returns the serialized language.
+     * @return string Returns the serialized language.
      */
-    public static function serializeLanguage(Language $model) {
+    public static function serializeLanguage(Language $model): string {
         return StringHelper::domNode(Language::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -345,9 +345,9 @@ class XmlSerializer {
      * Serialize a last chance.
      *
      * @param LastChance $model The last chance.
-     * @return String Returns the serialized last chance.
+     * @return string Returns the serialized last chance.
      */
-    public static function serializeLastChance(LastChance $model) {
+    public static function serializeLastChance(LastChance $model): string {
         return StringHelper::domNode(LastChance::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -357,9 +357,9 @@ class XmlSerializer {
      * Serialize a length.
      *
      * @param Length $model The length.
-     * @return String Returns the serialized length.
+     * @return string Returns the serialized length.
      */
-    public static function serializeLength(Length $model) {
+    public static function serializeLength(Length $model): string {
         return StringHelper::domNode(Length::DOM_NODE_NAME, $model->getContent(), [
             "units" => $model->getUnits(),
         ]);
@@ -371,7 +371,7 @@ class XmlSerializer {
      * @param AbstractModel|null $model The model.
      * @return string Returns the serialized model.
      */
-    protected static function serializeModel(AbstractModel $model = null) {
+    protected static function serializeModel(?AbstractModel $model): string {
 
         if (null === $model) {
             return "";
@@ -384,9 +384,9 @@ class XmlSerializer {
      * Serialize a original language.
      *
      * @param OrigLanguage $model The original language.
-     * @return String Returns the serialized original language.
+     * @return string Returns the serialized original language.
      */
-    public static function serializeOrigLanguage(OrigLanguage $model) {
+    public static function serializeOrigLanguage(OrigLanguage $model): string {
         return StringHelper::domNode(OrigLanguage::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -396,9 +396,9 @@ class XmlSerializer {
      * Serialize a premiere.
      *
      * @param Premiere $model The premiere.
-     * @return String Returns the serialized premiere.
+     * @return string Returns the serialized premiere.
      */
-    public static function serializePremiere(Premiere $model) {
+    public static function serializePremiere(Premiere $model): string {
         return StringHelper::domNode(Premiere::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -408,9 +408,9 @@ class XmlSerializer {
      * Serialize a present.
      *
      * @param Present $model The present.
-     * @return String Returns the serialized present.
+     * @return string Returns the serialized present.
      */
-    public static function serializePresent(Present $model) {
+    public static function serializePresent(Present $model): string {
         return StringHelper::domNode(Present::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -418,9 +418,9 @@ class XmlSerializer {
      * Serialize a presenter.
      *
      * @param Presenter $model The presenter.
-     * @return String Returns the serialized presenter.
+     * @return string Returns the serialized presenter.
      */
-    public static function serializePresenter(Presenter $model) {
+    public static function serializePresenter(Presenter $model): string {
         return StringHelper::domNode(Presenter::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -428,9 +428,9 @@ class XmlSerializer {
      * Serialize a previously shown.
      *
      * @param PreviouslyShown $model The previously shown.
-     * @return String Returns the serialized previously shown.
+     * @return string Returns the serialized previously shown.
      */
-    public static function serializePreviouslyShown(PreviouslyShown $model) {
+    public static function serializePreviouslyShown(PreviouslyShown $model): string {
         return StringHelper::domNode(PreviouslyShown::DOM_NODE_NAME, null, [
             "channel" => $model->getChannel(),
             "start"   => $model->getStart(),
@@ -441,9 +441,9 @@ class XmlSerializer {
      * Serialize a producer.
      *
      * @param Producer $model The producer.
-     * @return String Returns the serialized producer.
+     * @return string Returns the serialized producer.
      */
-    public static function serializeProducer(Producer $model) {
+    public static function serializeProducer(Producer $model): string {
         return StringHelper::domNode(Producer::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -453,7 +453,7 @@ class XmlSerializer {
      * @param Programme $model The programme.
      * @return string Returns the serialized programme.
      */
-    public static function serializeProgramme(Programme $model) {
+    public static function serializeProgramme(Programme $model): string {
 
         $content = [
             XmlSerializer::serializeArray($model->getTitles()),
@@ -498,9 +498,9 @@ class XmlSerializer {
      * Serialize a quality.
      *
      * @param Quality $model The quality.
-     * @return String Returns the serialized quality.
+     * @return string Returns the serialized quality.
      */
-    public static function serializeQuality(Quality $model) {
+    public static function serializeQuality(Quality $model): string {
         return StringHelper::domNode(Quality::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -510,7 +510,7 @@ class XmlSerializer {
      * @param Rating $model The rating.
      * @return string Returns the serialized rating.
      */
-    public static function serializeRating(Rating $model) {
+    public static function serializeRating(Rating $model): string {
 
         $content = [
             XmlSerializer::serializeModel($model->getValue()),
@@ -526,9 +526,9 @@ class XmlSerializer {
      * Serialize a review.
      *
      * @param Review $model The review.
-     * @return String Returns the serialized review.
+     * @return string Returns the serialized review.
      */
-    public static function serializeReview(Review $model) {
+    public static function serializeReview(Review $model): string {
         return StringHelper::domNode(Review::DOM_NODE_NAME, null, [
             "type"     => $model->getType(),
             "source"   => $model->getSource(),
@@ -541,9 +541,9 @@ class XmlSerializer {
      * Serialize a secondary title.
      *
      * @param SecondaryTitle $model The secondary title.
-     * @return String Returns the serialized secondary title.
+     * @return string Returns the serialized secondary title.
      */
-    public static function serializeSecondaryTitle(SecondaryTitle $model) {
+    public static function serializeSecondaryTitle(SecondaryTitle $model): string {
         return StringHelper::domNode(SecondaryTitle::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -555,7 +555,7 @@ class XmlSerializer {
      * @param StarRating $model The star rating.
      * @return string Returns the serialized star rating.
      */
-    public static function serializeStarRating(StarRating $model) {
+    public static function serializeStarRating(StarRating $model): string {
 
         $content = [
             XmlSerializer::serializeModel($model->getValue()),
@@ -569,9 +569,9 @@ class XmlSerializer {
      * Serialize a stereo.
      *
      * @param Stereo $model The stereo.
-     * @return String Returns the serialized stereo.
+     * @return string Returns the serialized stereo.
      */
-    public static function serializeStereo(Stereo $model) {
+    public static function serializeStereo(Stereo $model): string {
         return StringHelper::domNode(Stereo::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -581,7 +581,7 @@ class XmlSerializer {
      * @param Subtitles $model The subtitles.
      * @return string Returns the serialized subtitles.
      */
-    public static function serializeSubtitles(Subtitles $model) {
+    public static function serializeSubtitles(Subtitles $model): string {
 
         $content = XmlSerializer::serializeModel($model->getLanguage());
 
@@ -594,9 +594,9 @@ class XmlSerializer {
      * Serialize a title.
      *
      * @param Title $model The title.
-     * @return String Returns the serialized title.
+     * @return string Returns the serialized title.
      */
-    public static function serializeTitle(Title $model) {
+    public static function serializeTitle(Title $model): string {
         return StringHelper::domNode(Title::DOM_NODE_NAME, $model->getContent(), [
             "lang" => $model->getLang(),
         ]);
@@ -608,7 +608,7 @@ class XmlSerializer {
      * @param Tv $model The TV.
      * @return string Returns the serialized TV.
      */
-    public static function serializeTv(Tv $model) {
+    public static function serializeTv(Tv $model): string {
 
         $content = [
             XmlSerializer::serializeArray($model->getChannels()),
@@ -629,9 +629,9 @@ class XmlSerializer {
      * Serialize an URL.
      *
      * @param Url $model The URL.
-     * @return String Returns the serialized URL.
+     * @return string Returns the serialized URL.
      */
-    public static function serializeUrl(Url $model) {
+    public static function serializeUrl(Url $model): string {
         return StringHelper::domNode(Url::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -639,9 +639,9 @@ class XmlSerializer {
      * Serialize a value.
      *
      * @param Value $model The value.
-     * @return String Returns the serialized value.
+     * @return string Returns the serialized value.
      */
-    public static function serializeValue(Value $model) {
+    public static function serializeValue(Value $model): string {
         return StringHelper::domNode(Value::DOM_NODE_NAME, $model->getContent());
     }
 
@@ -651,7 +651,7 @@ class XmlSerializer {
      * @param Video $model The video.
      * @return string Returns the serialized video.
      */
-    public static function serializeVideo(Video $model) {
+    public static function serializeVideo(Video $model): string {
 
         $content = XmlSerializer::serializeArray([
             $model->getPresent(),
@@ -667,9 +667,9 @@ class XmlSerializer {
      * Serialize a writer.
      *
      * @param Writer $model The writer.
-     * @return String Returns the serialized writer.
+     * @return string Returns the serialized writer.
      */
-    public static function serializeWriter(Writer $model) {
+    public static function serializeWriter(Writer $model): string {
         return StringHelper::domNode(Writer::DOM_NODE_NAME, $model->getContent());
     }
 }

@@ -67,112 +67,112 @@ class Programme extends AbstractModel {
     /**
      * Audio.
      *
-     * @var Audio
+     * @var Audio|null
      */
     private $audio;
 
     /**
      * Clump Idx
      *
-     * @var string
+     * @var string|null
      */
     private $clumpIdx;
 
     /**
      * Credits.
      *
-     * @var Credits
+     * @var Credits|null
      */
     private $credits;
 
     /**
      * Date.
      *
-     * @var Date
+     * @var Date|null
      */
     private $date;
 
     /**
      * Last chance.
      *
-     * @var LastChance
+     * @var LastChance|null
      */
     private $lastChance;
 
     /**
      * Length.
      *
-     * @var Length
+     * @var Length|null
      */
     private $length;
 
     /**
      * New.
      *
-     * @var bool
+     * @var bool|null
      */
     private $new;
 
     /**
      * Original language.
      *
-     * @var OrigLanguage
+     * @var OrigLanguage|null
      */
     private $origLanguage;
 
     /**
      * PDC start.
      *
-     * @var string
+     * @var string|null
      */
     private $pdcStart;
 
     /**
      * Premiere.
      *
-     * @var Premiere
+     * @var Premiere|null
      */
     private $premiere;
 
     /**
      * Previously shown.
      *
-     * @var PreviouslyShown
+     * @var PreviouslyShown|null
      */
     private $previouslyShown;
 
     /**
      * Show view.
      *
-     * @var string
+     * @var string|null
      */
     private $showView;
 
     /**
      * Stop.
      *
-     * @var string
+     * @var string|null
      */
     private $stop;
 
     /**
      * Video.
      *
-     * @var Video
+     * @var Video|null
      */
     private $video;
 
     /**
      * Video plus.
      *
-     * @var string
+     * @var string|null
      */
     private $videoPlus;
 
     /**
      * VPS start.
      *
-     * @var string
+     * @var string|null
      */
     private $vpsStart;
 
@@ -200,81 +200,81 @@ class Programme extends AbstractModel {
     /**
      * Get the audio.
      *
-     * @return Audio Returns the audio.
+     * @return Audio|null Returns the audio.
      */
-    public function getAudio() {
+    public function getAudio(): ?Audio {
         return $this->audio;
     }
 
     /**
      * Get the clump idx.
      *
-     * @return string Returns the clump idx.
+     * @return string|null Returns the clump idx.
      */
-    public function getClumpIdx() {
+    public function getClumpIdx(): ?string {
         return $this->clumpIdx;
     }
 
     /**
      * Get the credits.
      *
-     * @return Credits Returns the credits.
+     * @return Credits|null Returns the credits.
      */
-    public function getCredits() {
+    public function getCredits(): ?Credits {
         return $this->credits;
     }
 
     /**
      * Get the date.
      *
-     * @return Date Returns the date.
+     * @return Date|null Returns the date.
      */
-    public function getDate() {
+    public function getDate(): ?Date {
         return $this->date;
     }
 
     /**
      * Get the last chance.
      *
-     * @return LastChance Returns the last chance.
+     * @return LastChance|null Returns the last chance.
      */
-    public function getLastChance() {
+    public function getLastChance(): ?LastChance {
         return $this->lastChance;
     }
 
     /**
      * Get the length.
      *
-     * @return Length Returns the length.
+     * @return Length|null Returns the length.
      */
-    public function getLength() {
+    public function getLength(): ?Length {
         return $this->length;
     }
 
     /**
      * Get the new.
      *
-     * @return bool Returns the new.
+     * @return bool|null Returns the new.
      */
-    public function getNew() {
+    public function getNew(): ?bool {
         return $this->new;
     }
 
     /**
      * Get the original language.
      *
-     * @return OrigLanguage Returns the original language.
+     * @return OrigLanguage|null Returns the original language.
      */
-    public function getOrigLanguage() {
+    public function getOrigLanguage(): ?OrigLanguage {
         return $this->origLanguage;
     }
 
     /**
      * Get the PDC start.
      *
-     * @return string Returns the PDC start.
+     * @return string|null Returns the PDC start.
      */
-    public function getPdcStart() {
+    public function getPdcStart(): ?string {
         return $this->pdcStart;
     }
 
@@ -283,43 +283,43 @@ class Programme extends AbstractModel {
      *
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
-    public function getPdcStartDateTime() {
+    public function getPdcStartDateTime(): ?DateTime {
         return SerializerHelper::deserializeDateTime($this->pdcStart);
     }
 
     /**
      * Get the premiere.
      *
-     * @return Premiere Returns the premiere.
+     * @return Premiere|null Returns the premiere.
      */
-    public function getPremiere() {
+    public function getPremiere(): ?Premiere {
         return $this->premiere;
     }
 
     /**
      * Get the previously shown.
      *
-     * @return PreviouslyShown Returns the previously shown.
+     * @return PreviouslyShown|null Returns the previously shown.
      */
-    public function getPreviouslyShown() {
+    public function getPreviouslyShown(): ?PreviouslyShown {
         return $this->previouslyShown;
     }
 
     /**
      * Get the show view.
      *
-     * @return string Returns the show view.
+     * @return string|null Returns the show view.
      */
-    public function getShowView() {
+    public function getShowView(): ?string {
         return $this->showView;
     }
 
     /**
      * Get the stop.
      *
-     * @return string Returns the stop.
+     * @return string|null Returns the stop.
      */
-    public function getStop() {
+    public function getStop(): ?string {
         return $this->stop;
     }
 
@@ -328,34 +328,34 @@ class Programme extends AbstractModel {
      *
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
-    public function getStopDateTime() {
+    public function getStopDateTime(): ?DateTime {
         return SerializerHelper::deserializeDateTime($this->stop);
     }
 
     /**
      * Get the video.
      *
-     * @return Video Returns the video.
+     * @return Video|null Returns the video.
      */
-    public function getVideo() {
+    public function getVideo(): ?Video {
         return $this->video;
     }
 
     /**
      * Get the video plus.
      *
-     * @return string Returns the video plus.
+     * @return string|null Returns the video plus.
      */
-    public function getVideoPlus() {
+    public function getVideoPlus(): ?string {
         return $this->videoPlus;
     }
 
     /**
      * Get the VPS start.
      *
-     * @return string Returns the VPS start.
+     * @return string|null Returns the VPS start.
      */
-    public function getVpsStart() {
+    public function getVpsStart(): ?string {
         return $this->vpsStart;
     }
 
@@ -364,24 +364,24 @@ class Programme extends AbstractModel {
      *
      * @return DateTime|null Returns the stop into DateTime in case of success, null otherwise.
      */
-    public function getVpsStartDateTime() {
+    public function getVpsStartDateTime(): ?DateTime {
         return SerializerHelper::deserializeDateTime($this->vpsStart);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeProgramme($this);
     }
 
     /**
      * Set the audio.
      *
-     * @param Audio $audio The audio.
+     * @param Audio|null $audio The audio.
      * @return Programme Returns this programme.
      */
-    public function setAudio($audio) {
+    public function setAudio(?Audio $audio): Programme {
         $this->audio = $audio;
         return $this;
     }
@@ -389,10 +389,10 @@ class Programme extends AbstractModel {
     /**
      * Set the clump idx.
      *
-     * @param string $clumpIdx The clump idx.
+     * @param string|null $clumpIdx The clump idx.
      * @return Programme Returns this programme.
      */
-    public function setClumpIdx($clumpIdx) {
+    public function setClumpIdx(?string $clumpIdx): Programme {
         $this->clumpIdx = $clumpIdx;
         return $this;
     }
@@ -403,7 +403,7 @@ class Programme extends AbstractModel {
      * @param Credits|null $credits The credits.
      * @return Programme Returns this programme.
      */
-    public function setCredits(Credits $credits = null) {
+    public function setCredits(?Credits $credits): Programme {
         $this->credits = $credits;
         return $this;
     }
@@ -414,7 +414,7 @@ class Programme extends AbstractModel {
      * @param Date|null $date The date.
      * @return Programme Returns this programme.
      */
-    public function setDate(Date $date = null) {
+    public function setDate(?Date $date): Programme {
         $this->date = $date;
         return $this;
     }
@@ -422,10 +422,10 @@ class Programme extends AbstractModel {
     /**
      * Set the last chance.
      *
-     * @param LastChance $lastChance The last chance.
+     * @param LastChance|null $lastChance The last chance.
      * @return Programme Returns this instance.
      */
-    public function setLastChance($lastChance) {
+    public function setLastChance(?LastChance $lastChance): Programme {
         $this->lastChance = $lastChance;
         return $this;
     }
@@ -436,7 +436,7 @@ class Programme extends AbstractModel {
      * @param Length|null $length The length.
      * @return Programme Returns this programme.
      */
-    public function setLength(Length $length = null) {
+    public function setLength(?Length $length): Programme {
         $this->length = $length;
         return $this;
     }
@@ -444,10 +444,10 @@ class Programme extends AbstractModel {
     /**
      * Set the new.
      *
-     * @param bool $new The new.
+     * @param bool|null $new The new.
      * @return Programme Returns this programme.
      */
-    public function setNew($new) {
+    public function setNew(?bool $new): Programme {
         $this->new = $new;
         return $this;
     }
@@ -458,7 +458,7 @@ class Programme extends AbstractModel {
      * @param OrigLanguage $origLanguage The original language.
      * @return Programme Returns this programme.
      */
-    public function setOrigLanguage($origLanguage) {
+    public function setOrigLanguage(?OrigLanguage $origLanguage): Programme {
         $this->origLanguage = $origLanguage;
         return $this;
     }
@@ -466,10 +466,10 @@ class Programme extends AbstractModel {
     /**
      * Set the PDC start.
      *
-     * @param string $pdcStart The PDC start.
+     * @param string|null $pdcStart The PDC start.
      * @return Programme Returns this programme.
      */
-    public function setPdcStart($pdcStart) {
+    public function setPdcStart(?string $pdcStart): Programme {
         $this->pdcStart = $pdcStart;
         return $this;
     }
@@ -477,10 +477,10 @@ class Programme extends AbstractModel {
     /**
      * Set the premiere.
      *
-     * @param Premiere $premiere The premiere.
+     * @param Premiere|null $premiere The premiere.
      * @return Programme Returns this programme.
      */
-    public function setPremiere($premiere) {
+    public function setPremiere(?Premiere $premiere): Programme {
         $this->premiere = $premiere;
         return $this;
     }
@@ -488,10 +488,10 @@ class Programme extends AbstractModel {
     /**
      * Set the previously shown.
      *
-     * @param PreviouslyShown $previouslyShown The previously shown.
+     * @param PreviouslyShown|null $previouslyShown The previously shown.
      * @return Programme Returns this programme.
      */
-    public function setPreviouslyShown($previouslyShown) {
+    public function setPreviouslyShown(?PreviouslyShown $previouslyShown): Programme {
         $this->previouslyShown = $previouslyShown;
         return $this;
     }
@@ -499,10 +499,10 @@ class Programme extends AbstractModel {
     /**
      * Set the show view.
      *
-     * @param string $showView The show view.
+     * @param string|null $showView The show view.
      * @return Programme Returns this programme.
      */
-    public function setShowView($showView) {
+    public function setShowView(?string $showView): Programme {
         $this->showView = $showView;
         return $this;
     }
@@ -510,10 +510,10 @@ class Programme extends AbstractModel {
     /**
      * Set the stop.
      *
-     * @param string $stop The stop.
+     * @param string|null $stop The stop.
      * @return Programme Returns this programme.
      */
-    public function setStop($stop) {
+    public function setStop(?string $stop): Programme {
         $this->stop = $stop;
         return $this;
     }
@@ -521,10 +521,10 @@ class Programme extends AbstractModel {
     /**
      * Set the video.
      *
-     * @param Video $video The video.
+     * @param Video|null $video The video.
      * @return Programme Returns this programme.
      */
-    public function setVideo($video) {
+    public function setVideo(?Video $video): Programme {
         $this->video = $video;
         return $this;
     }
@@ -532,10 +532,10 @@ class Programme extends AbstractModel {
     /**
      * Set the video plus.
      *
-     * @param string $videoPlus The video plus.
+     * @param string|null $videoPlus The video plus.
      * @return Programme Returns this programme.
      */
-    public function setVideoPlus($videoPlus) {
+    public function setVideoPlus(?string $videoPlus): Programme {
         $this->videoPlus = $videoPlus;
         return $this;
     }
@@ -543,10 +543,10 @@ class Programme extends AbstractModel {
     /**
      * Set the VPS start.
      *
-     * @param string $vpsStart The VPS start.
+     * @param string|null $vpsStart The VPS start.
      * @return Programme Returns this programme.
      */
-    public function setVpsStart($vpsStart) {
+    public function setVpsStart(?string $vpsStart): Programme {
         $this->vpsStart = $vpsStart;
         return $this;
     }
@@ -554,7 +554,7 @@ class Programme extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeProgramme($this);
     }
 }

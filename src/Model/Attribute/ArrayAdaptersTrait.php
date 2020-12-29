@@ -43,7 +43,7 @@ trait ArrayAdaptersTrait {
      *
      * @return Adapter[] Returns the adapters.
      */
-    public function getAdapters() {
+    public function getAdapters(): array {
         return $this->adapters;
     }
 
@@ -52,7 +52,7 @@ trait ArrayAdaptersTrait {
      *
      * @return int Returns the number of adapters.
      */
-    public function getNumberAdapters() {
+    public function getNumberAdapters(): int {
         return count($this->getAdapters());
     }
 
@@ -61,7 +61,7 @@ trait ArrayAdaptersTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasAdapters() {
+    public function hasAdapters(): bool {
         return 1 <= $this->getNumberAdapters();
     }
 

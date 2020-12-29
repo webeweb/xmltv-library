@@ -43,7 +43,7 @@ trait ArrayDisplayNamesTrait {
      *
      * @return DisplayName[] Returns the display names.
      */
-    public function getDisplayNames() {
+    public function getDisplayNames(): array {
         return $this->displayNames;
     }
 
@@ -52,7 +52,7 @@ trait ArrayDisplayNamesTrait {
      *
      * @return int Returns the number of display names.
      */
-    public function getNumberDisplayNames() {
+    public function getNumberDisplayNames(): int {
         return count($this->getDisplayNames());
     }
 
@@ -61,7 +61,7 @@ trait ArrayDisplayNamesTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasDisplayNames() {
+    public function hasDisplayNames(): bool {
         return 1 <= $this->getNumberDisplayNames();
     }
 

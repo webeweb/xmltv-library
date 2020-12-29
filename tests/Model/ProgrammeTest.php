@@ -37,7 +37,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Programme();
         $obj->setAudio($this->audio);
@@ -115,7 +115,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAudio() {
+    public function testSetAudio(): void {
 
         // Set an Audio mock.
         $audio = new Audio();
@@ -131,7 +131,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetClumpIdx() {
+    public function testSetClumpIdx(): void {
 
         $obj = new Programme();
 
@@ -144,7 +144,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCredits() {
+    public function testSetCredits(): void {
 
         // Set a Credits mock.
         $credits = new Credits();
@@ -160,7 +160,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetDate() {
+    public function testSetDate(): void {
 
         // Set a Date mock.
         $date = new Date();
@@ -176,7 +176,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetLastChance() {
+    public function testSetLastChance(): void {
 
         // Set a Last chance mock.
         $lastChance = new LastChance();
@@ -192,7 +192,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetLength() {
+    public function testSetLength(): void {
 
         // Set a Length mock.
         $length = new Length();
@@ -208,7 +208,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetNew() {
+    public function testSetNew(): void {
 
         $obj = new Programme();
 
@@ -221,7 +221,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetOrigLanguage() {
+    public function testSetOrigLanguage(): void {
 
         // Set an Orig language mock.
         $origLanguage = new OrigLanguage();
@@ -237,7 +237,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPdcStart() {
+    public function testSetPdcStart(): void {
 
         $obj = new Programme();
 
@@ -252,7 +252,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPremiere() {
+    public function testSetPremiere(): void {
 
         // Set a Premiere mock.
         $premiere = new Premiere();
@@ -268,7 +268,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPreviouslyShown() {
+    public function testSetPreviouslyShown(): void {
 
         // Set a Previously shown mock.
         $previouslyShown = new PreviouslyShown();
@@ -284,7 +284,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetShowView() {
+    public function testSetShowView(): void {
 
         $obj = new Programme();
 
@@ -297,7 +297,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetStart() {
+    public function testSetStart(): void {
 
         $obj = new Programme();
 
@@ -312,7 +312,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetStop() {
+    public function testSetStop(): void {
 
         $obj = new Programme();
 
@@ -327,7 +327,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetVideo() {
+    public function testSetVideo(): void {
 
         // Set a Video mock.
         $length = new Video();
@@ -343,7 +343,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetVideoPlus() {
+    public function testSetVideoPlus(): void {
 
         $obj = new Programme();
 
@@ -356,7 +356,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetVpsStart() {
+    public function testSetVpsStart(): void {
 
         $obj = new Programme();
 
@@ -371,7 +371,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Programme();
         $obj->setAudio($this->audio);
@@ -416,7 +416,7 @@ class ProgrammeTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("programme", Programme::DOM_NODE_NAME);
 

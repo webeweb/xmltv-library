@@ -28,7 +28,7 @@ class ArrayCommentatorsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddCommentator() {
+    public function testAddCommentator(): void {
 
         // Set a Commentator mock.
         $commentator = new Commentator();
@@ -46,7 +46,7 @@ class ArrayCommentatorsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayCommentatorsTrait();
 

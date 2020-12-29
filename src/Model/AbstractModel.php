@@ -38,5 +38,5 @@ abstract class AbstractModel implements JsonSerializable {
      *
      * @return string Returns the XML serialization.
      */
-    abstract public function xmlSerialize();
+    abstract public function xmlSerialize(): string;
 }

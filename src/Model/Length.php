@@ -57,7 +57,7 @@ class Length extends AbstractModel {
     /**
      * Units.
      *
-     * @var string
+     * @var string|null
      */
     private $units;
 
@@ -66,7 +66,7 @@ class Length extends AbstractModel {
      *
      * @return string[] Returns the units enumeration.
      */
-    public static function enumUnits() {
+    public static function enumUnits(): array {
         return [
             self::UNITS_HOURS,
             self::UNITS_MINUTES,
@@ -77,27 +77,27 @@ class Length extends AbstractModel {
     /**
      * Get the units.
      *
-     * @return string Returns the units.
+     * @return string|null Returns the units.
      */
-    public function getUnits() {
+    public function getUnits(): ?string {
         return $this->units;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeLength($this);
     }
 
     /**
      * Set the units.
      *
-     * @param string $units The units.
+     * @param string|null $units The units.
      * @return Length Returns this length.
      * @throws InvalidArgumentException Throws an invalid argument exception if the units is invalid.
      */
-    public function setUnits($units) {
+    public function setUnits(?string $units): Length {
         if (null !== $units && false === in_array($units, static::enumUnits())) {
             throw new InvalidArgumentException(sprintf('The units "%s" is invalid', $units));
         }
@@ -108,7 +108,7 @@ class Length extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeLength($this);
     }
 }

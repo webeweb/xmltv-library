@@ -28,7 +28,7 @@ class ArrayGuestsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddGuest() {
+    public function testAddGuest(): void {
 
         // Set a Guest mock.
         $guest = new Guest();
@@ -46,7 +46,7 @@ class ArrayGuestsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayGuestsTrait();
 

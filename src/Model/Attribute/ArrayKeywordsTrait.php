@@ -43,7 +43,7 @@ trait ArrayKeywordsTrait {
      *
      * @return Keyword[] Returns the keywords.
      */
-    public function getKeywords() {
+    public function getKeywords(): array {
         return $this->keywords;
     }
 
@@ -52,7 +52,7 @@ trait ArrayKeywordsTrait {
      *
      * @return int Returns the number of keywords.
      */
-    public function getNumberKeywords() {
+    public function getNumberKeywords(): int {
         return count($this->getKeywords());
     }
 
@@ -61,7 +61,7 @@ trait ArrayKeywordsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasKeywords() {
+    public function hasKeywords(): bool {
         return 1 <= $this->getNumberKeywords();
     }
 

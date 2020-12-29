@@ -41,42 +41,42 @@ class Tv extends AbstractModel {
     /**
      * Date.
      *
-     * @var string
+     * @var string|null
      */
     private $date;
 
     /**
      * Generator info name.
      *
-     * @var string
+     * @var string|null
      */
     private $generatorInfoName;
 
     /**
      * Generator info URL.
      *
-     * @var string
+     * @var string|null
      */
     private $generatorInfoUrl;
 
     /**
      * Source data URL.
      *
-     * @var string
+     * @var string|null
      */
     private $sourceDataUrl;
 
     /**
      * Source info name.
      *
-     * @var string
+     * @var string|null
      */
     private $sourceInfoName;
 
     /**
      * Source info URL.
      *
-     * @var string
+     * @var string|null
      */
     private $sourceInfoUrl;
 
@@ -92,54 +92,54 @@ class Tv extends AbstractModel {
     /**
      * Get the date.
      *
-     * @return string Returns the date.
+     * @return string|null Returns the date.
      */
-    public function getDate() {
+    public function getDate(): ?string {
         return $this->date;
     }
 
     /**
      * Get the generator info name.
      *
-     * @return string Returns the generator info name.
+     * @return string|null Returns the generator info name.
      */
-    public function getGeneratorInfoName() {
+    public function getGeneratorInfoName(): ?string {
         return $this->generatorInfoName;
     }
 
     /**
      * Get the generator info URL.
      *
-     * @return string Returns the generator info URL.
+     * @return string|null Returns the generator info URL.
      */
-    public function getGeneratorInfoUrl() {
+    public function getGeneratorInfoUrl(): ?string {
         return $this->generatorInfoUrl;
     }
 
     /**
      * Get the source data URL.
      *
-     * @return string Returns the source data URL.
+     * @return string|null Returns the source data URL.
      */
-    public function getSourceDataUrl() {
+    public function getSourceDataUrl(): ?string {
         return $this->sourceDataUrl;
     }
 
     /**
      * Get the source info name.
      *
-     * @return string Returns the source info name.
+     * @return string|null Returns the source info name.
      */
-    public function getSourceInfoName() {
+    public function getSourceInfoName(): ?string {
         return $this->sourceInfoName;
     }
 
     /**
      * Get the source info URL.
      *
-     * @return string Returns the source info URL.
+     * @return string|null Returns the source info URL.
      */
-    public function getSourceInfoUrl() {
+    public function getSourceInfoUrl(): ?string {
         return $this->sourceInfoUrl;
     }
 
@@ -148,7 +148,7 @@ class Tv extends AbstractModel {
      *
      * @return Tv Returns this TV.
      */
-    public function indexProgrammesByChannel() {
+    public function indexProgrammesByChannel(): Tv {
 
         $this->sortChannels();
         $this->sortProgrammes();
@@ -168,17 +168,17 @@ class Tv extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeTv($this);
     }
 
     /**
      * Set the date.
      *
-     * @param string $date The date.
+     * @param string|null $date The date.
      * @return Tv Returns this TV.
      */
-    public function setDate($date) {
+    public function setDate(?string $date): Tv {
         $this->date = $date;
         return $this;
     }
@@ -186,10 +186,10 @@ class Tv extends AbstractModel {
     /**
      * Set the generator info name.
      *
-     * @param string $generatorInfoName The generator info name.
+     * @param string|null $generatorInfoName The generator info name.
      * @return Tv Returns this TV.
      */
-    public function setGeneratorInfoName($generatorInfoName) {
+    public function setGeneratorInfoName(?string $generatorInfoName): Tv {
         $this->generatorInfoName = $generatorInfoName;
         return $this;
     }
@@ -197,10 +197,10 @@ class Tv extends AbstractModel {
     /**
      * Set the generator info URL.
      *
-     * @param string $generatorInfoUrl The generator info URL.
+     * @param string|null $generatorInfoUrl The generator info URL.
      * @return Tv Returns this TV.
      */
-    public function setGeneratorInfoUrl($generatorInfoUrl) {
+    public function setGeneratorInfoUrl(?string $generatorInfoUrl): Tv {
         $this->generatorInfoUrl = $generatorInfoUrl;
         return $this;
     }
@@ -208,10 +208,10 @@ class Tv extends AbstractModel {
     /**
      * Set the source data URL.
      *
-     * @param string $sourceDataUrl The source data URL.
+     * @param string|null $sourceDataUrl The source data URL.
      * @return Tv Returns this TV.
      */
-    public function setSourceDataUrl($sourceDataUrl) {
+    public function setSourceDataUrl(?string $sourceDataUrl): Tv {
         $this->sourceDataUrl = $sourceDataUrl;
         return $this;
     }
@@ -219,10 +219,10 @@ class Tv extends AbstractModel {
     /**
      * Set the source info name.
      *
-     * @param string $sourceInfoName The source info name.
+     * @param string|null $sourceInfoName The source info name.
      * @return Tv Returns this TV.
      */
-    public function setSourceInfoName($sourceInfoName) {
+    public function setSourceInfoName(?string $sourceInfoName): Tv {
         $this->sourceInfoName = $sourceInfoName;
         return $this;
     }
@@ -230,10 +230,10 @@ class Tv extends AbstractModel {
     /**
      * Set the source info URL.
      *
-     * @param string $sourceInfoUrl The source info URL.
+     * @param string|null $sourceInfoUrl The source info URL.
      * @return Tv Returns this TV.
      */
-    public function setSourceInfoUrl($sourceInfoUrl) {
+    public function setSourceInfoUrl(?string $sourceInfoUrl): Tv {
         $this->sourceInfoUrl = $sourceInfoUrl;
         return $this;
     }
@@ -241,7 +241,7 @@ class Tv extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeTv($this);
     }
 }

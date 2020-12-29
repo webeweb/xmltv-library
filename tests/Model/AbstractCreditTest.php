@@ -27,7 +27,7 @@ class AbstractCreditTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new TestCredit();
         $obj->setContent("content");
@@ -43,7 +43,7 @@ class AbstractCreditTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestCredit();
 

@@ -27,7 +27,7 @@ class EditorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Editor();
         $obj->setContent("content");
@@ -41,7 +41,7 @@ class EditorTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("editor", Editor::DOM_NODE_NAME);
 

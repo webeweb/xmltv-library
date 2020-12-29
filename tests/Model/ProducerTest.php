@@ -27,7 +27,7 @@ class ProducerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Producer();
         $obj->setContent("content");
@@ -41,7 +41,7 @@ class ProducerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("producer", Producer::DOM_NODE_NAME);
 

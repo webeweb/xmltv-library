@@ -22,25 +22,25 @@ trait StringSystemTrait {
     /**
      * System.
      *
-     * @var string
+     * @var string|null
      */
     private $system;
 
     /**
      * Get the system.
      *
-     * @return string Returns the system.
+     * @return string|null Returns the system.
      */
-    public function getSystem() {
+    public function getSystem(): ?string {
         return $this->system;
     }
 
     /**
      * Set the system.
      *
-     * @param string $system The system.
+     * @param string|null $system The system.
      */
-    public function setSystem($system) {
+    public function setSystem(?string $system) {
         $this->system = $system;
         return $this;
     }

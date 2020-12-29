@@ -43,7 +43,7 @@ trait ArrayComposersTrait {
      *
      * @return Composer[] Returns the composers.
      */
-    public function getComposers() {
+    public function getComposers(): array {
         return $this->composers;
     }
 
@@ -52,7 +52,7 @@ trait ArrayComposersTrait {
      *
      * @return int Returns the number of composers.
      */
-    public function getNumberComposers() {
+    public function getNumberComposers(): int {
         return count($this->getComposers());
     }
 
@@ -61,7 +61,7 @@ trait ArrayComposersTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasComposers() {
+    public function hasComposers(): bool {
         return 1 <= $this->getNumberComposers();
     }
 

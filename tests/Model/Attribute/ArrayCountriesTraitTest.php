@@ -28,7 +28,7 @@ class ArrayCountriesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddCountry() {
+    public function testAddCountry(): void {
 
         // Set a Country mock.
         $country = new Country();
@@ -46,7 +46,7 @@ class ArrayCountriesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayCountriesTrait();
 

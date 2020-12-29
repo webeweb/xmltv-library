@@ -53,7 +53,7 @@ class EpisodeNum extends AbstractModel {
      *
      * @return string[] Returns the system enumeration.
      */
-    public static function enumSystem() {
+    public static function enumSystem(): array {
         return [
             self::SYSTEM_ONSCREEN,
             self::SYSTEM_XMLTV_NS,
@@ -63,14 +63,14 @@ class EpisodeNum extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeEpisodeNum($this);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeEpisodeNum($this);
     }
 }

@@ -12,6 +12,7 @@
 namespace WBW\Library\XMLTV\Statistic;
 
 use DOMNode;
+use WBW\Library\Core\ThirdParty\Quadratus\Model\QGI\Statistiques;
 
 /**
  * Statistics.
@@ -40,7 +41,7 @@ class Statistics {
      *
      * @return string Returns a string representation of this statistics.
      */
-    public function __toString() {
+    public function __toString(): string {
 
         $output = [
             Statistic::HEADER_FORMAT,
@@ -63,7 +64,7 @@ class Statistics {
      * @param string $key The key.
      * @return Statistic Returns the statistic.
      */
-    protected function getStatistic($key) {
+    protected function getStatistic(string $key): Statistic {
         if (false === array_key_exists($key, $this->statistics)) {
             $this->statistics[$key] = new Statistic();
         }
@@ -75,7 +76,7 @@ class Statistics {
      *
      * @return Statistic[] Returns the statistics.
      */
-    public function getStatistics() {
+    public function getStatistics(): array {
         return $this->statistics;
     }
 
@@ -86,7 +87,7 @@ class Statistics {
      * @param DOMNode|null $parent The parent DOM node.
      * @return Statistics Returns this statistics.
      */
-    public function parse(DOMNode $domNode, DOMNode $parent = null) {
+    public function parse(DOMNode $domNode, DOMNode $parent = null): Statistics {
 
         $key = null === $parent ? $domNode->nodeName : implode(">", [$parent->nodeName, $domNode->nodeName]);
 
@@ -112,7 +113,7 @@ class Statistics {
      * @param DOMNode $domNode The DOM node.
      * @return Statistics Returns this statistics.
      */
-    protected function parseAttributes(DOMNode $domNode) {
+    protected function parseAttributes(DOMNode $domNode): Statistics {
 
         if (null === $domNode->attributes) {
             return $this;
@@ -132,7 +133,7 @@ class Statistics {
      * @param DOMNode $domNode The DOM node.
      * @return Statistics Returns this statistics.
      */
-    protected function parseChildNodes(DOMNode $domNode) {
+    protected function parseChildNodes(DOMNode $domNode): Statistics {
 
         if (null === $domNode->childNodes) {
             return $this;
@@ -152,7 +153,7 @@ class Statistics {
      * @param Statistic[] $statistics The statistics.
      * @return Statistics Returns this statistic.
      */
-    protected function setStatistics(array $statistics) {
+    protected function setStatistics(array $statistics): Statistics {
         $this->statistics = $statistics;
         return $this;
     }

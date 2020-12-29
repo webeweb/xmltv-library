@@ -43,7 +43,7 @@ trait ArrayDirectorsTrait {
      *
      * @return Director[] Returns the directors.
      */
-    public function getDirectors() {
+    public function getDirectors(): array {
         return $this->directors;
     }
 
@@ -52,7 +52,7 @@ trait ArrayDirectorsTrait {
      *
      * @return int Returns the number of directors.
      */
-    public function getNumberDirectors() {
+    public function getNumberDirectors(): int {
         return count($this->getDirectors());
     }
 
@@ -61,7 +61,7 @@ trait ArrayDirectorsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasDirectors() {
+    public function hasDirectors(): bool {
         return 1 <= $this->getNumberDirectors();
     }
 

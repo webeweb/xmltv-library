@@ -27,7 +27,7 @@ class ColourTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Colour();
         $obj->setContent("content");
@@ -43,7 +43,7 @@ class ColourTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Colour();
         $obj->setContent("content");
@@ -57,7 +57,7 @@ class ColourTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("colour", Colour::DOM_NODE_NAME);
 

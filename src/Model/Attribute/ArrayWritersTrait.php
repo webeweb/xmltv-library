@@ -43,7 +43,7 @@ trait ArrayWritersTrait {
      *
      * @return int Returns the number of writers.
      */
-    public function getNumberWriters() {
+    public function getNumberWriters(): int {
         return count($this->getWriters());
     }
 
@@ -52,7 +52,7 @@ trait ArrayWritersTrait {
      *
      * @return Writer[] Returns the writers.
      */
-    public function getWriters() {
+    public function getWriters(): array {
         return $this->writers;
     }
 
@@ -61,7 +61,7 @@ trait ArrayWritersTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasWriters() {
+    public function hasWriters(): bool {
         return 1 <= $this->getNumberWriters();
     }
 

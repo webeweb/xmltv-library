@@ -28,7 +28,7 @@ class StringStartTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetStart() {
+    public function testSetStart(): void {
 
         $obj = new TestStringStartTrait();
 
@@ -43,7 +43,7 @@ class StringStartTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestStringStartTrait();
 

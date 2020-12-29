@@ -50,35 +50,35 @@ class Statistic {
     /**
      * Average.
      *
-     * @var float
+     * @var float|null
      */
     private $avg;
 
     /**
      * Count.
      *
-     * @var int
+     * @var int|null
      */
     private $count;
 
     /**
      * Max.
      *
-     * @var int
+     * @var int|null
      */
     private $max;
 
     /**
      * Min.
      *
-     * @var int
+     * @var int|null
      */
     private $min;
 
     /**
      * Node name.
      *
-     * @var string
+     * @var string|null
      */
     private $nodeName;
 
@@ -96,7 +96,7 @@ class Statistic {
      *
      * @return string Returns a string representation of this statistic.
      */
-    public function __toString() {
+    public function __toString(): string {
 
         $args = [
             $this->getNodeName(),
@@ -113,10 +113,10 @@ class Statistic {
     /**
      * Add.
      *
-     * @param string $str The string.
+     * @param string|null $str The string.
      * @return Statistic Returns this statistic.
      */
-    public function add($str) {
+    public function add(?string $str): Statistic {
 
         ++$this->count;
 
@@ -144,27 +144,27 @@ class Statistic {
     /**
      * Get the attribute name.
      *
-     * @return string Returns the attribute name.
+     * @return string|null Returns the attribute name.
      */
-    public function getAttrName() {
+    public function getAttrName(): ?string {
         return $this->attrName;
     }
 
     /**
      * Get the average.
      *
-     * @return float Returns the average.
+     * @return float|null Returns the average.
      */
-    public function getAvg() {
+    public function getAvg(): ?float {
         return $this->avg;
     }
 
     /**
      * Get the count.
      *
-     * @return int Returns the count.
+     * @return int|null Returns the count.
      */
-    public function getCount() {
+    public function getCount(): ?int {
         return $this->count;
     }
 
@@ -180,28 +180,28 @@ class Statistic {
     /**
      * Get the min.
      *
-     * @return int Returns the min.
+     * @return int|null Returns the min.
      */
-    public function getMin() {
+    public function getMin(): ?int {
         return $this->min;
     }
 
     /**
      * Get the node name.
      *
-     * @return string Returns the node name.
+     * @return string|null Returns the node name.
      */
-    public function getNodeName() {
+    public function getNodeName(): ?string {
         return $this->nodeName;
     }
 
     /**
      * Set the attribute name.
      *
-     * @param string $attrName The attribute name.
+     * @param string|null $attrName The attribute name.
      * @return Statistic Returns this statistic.
      */
-    public function setAttrName($attrName) {
+    public function setAttrName(?string $attrName): Statistic {
         $this->attrName = $attrName;
         return $this;
     }
@@ -209,10 +209,10 @@ class Statistic {
     /**
      * Set the average.
      *
-     * @param float $avg The average.
+     * @param float|null $avg The average.
      * @return Statistic Returns this statistic.
      */
-    public function setAvg($avg) {
+    public function setAvg(?float $avg): Statistic {
         $this->avg = $avg;
         return $this;
     }
@@ -220,10 +220,10 @@ class Statistic {
     /**
      * Set the count.
      *
-     * @param int $count The count.
+     * @param int|null $count The count.
      * @return Statistic Returns this statistic.
      */
-    public function setCount($count) {
+    public function setCount(?int $count): Statistic {
         $this->count = $count;
         return $this;
     }
@@ -231,10 +231,10 @@ class Statistic {
     /**
      * Set the max.
      *
-     * @param int $max The max.
+     * @param int|null $max The max.
      * @return Statistic Returns this statistic.
      */
-    public function setMax($max) {
+    public function setMax(?int $max): Statistic {
         $this->max = $max;
         return $this;
     }
@@ -242,10 +242,10 @@ class Statistic {
     /**
      * Set the min.
      *
-     * @param int $min The min.
+     * @param int|null $min The min.
      * @return Statistic Returns this statistic.
      */
-    public function setMin($min) {
+    public function setMin(?int $min): Statistic {
         $this->min = $min;
         return $this;
     }
@@ -253,10 +253,10 @@ class Statistic {
     /**
      * Set the node name.
      *
-     * @param string $nodeName The node name.
+     * @param string|null $nodeName The node name.
      * @return Statistic Returns this statistic.
      */
-    public function setNodeName($nodeName) {
+    public function setNodeName(?string $nodeName): Statistic {
         $this->nodeName = $nodeName;
         return $this;
     }

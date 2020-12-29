@@ -28,7 +28,7 @@ class ArrayEpisodeNumsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddEpisodeNum() {
+    public function testAddEpisodeNum(): void {
 
         // Set an Episode number mock.
         $episodeNum = new EpisodeNum();
@@ -46,7 +46,7 @@ class ArrayEpisodeNumsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayEpisodeNumsTrait();
 

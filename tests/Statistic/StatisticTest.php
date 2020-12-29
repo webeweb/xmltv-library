@@ -27,7 +27,7 @@ class StatisticTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAdd() {
+    public function testAdd(): void {
 
         $obj = new Statistic();
 
@@ -55,7 +55,7 @@ class StatisticTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAttrName() {
+    public function testSetAttrName(): void {
 
         $obj = new Statistic();
 
@@ -68,7 +68,7 @@ class StatisticTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetAvg() {
+    public function testSetAvg(): void {
 
         $obj = new Statistic();
 
@@ -81,7 +81,7 @@ class StatisticTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetCount() {
+    public function testSetCount(): void {
 
         $obj = new Statistic();
 
@@ -94,7 +94,7 @@ class StatisticTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMax() {
+    public function testSetMax(): void {
 
         $obj = new Statistic();
 
@@ -107,7 +107,7 @@ class StatisticTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetMin() {
+    public function testSetMin(): void {
 
         $obj = new Statistic();
 
@@ -120,7 +120,7 @@ class StatisticTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetNodeName() {
+    public function testSetNodeName(): void {
 
         $obj = new Statistic();
 
@@ -133,7 +133,7 @@ class StatisticTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals(" %-' 16s   %-' 19s   % 6d   % 6d   % 6d   %' 9.2f", Statistic::CONTENT_FORMAT);
         $this->assertEquals("------------------ --------------------- -------- -------- -------- -----------", Statistic::HEADER_FORMAT);

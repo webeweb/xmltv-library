@@ -28,7 +28,7 @@ class ArrayUrlsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddUrl() {
+    public function testAddUrl(): void {
 
         // Set an URL mock.
         $url = new Url();
@@ -46,7 +46,7 @@ class ArrayUrlsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayUrlsTrait();
 

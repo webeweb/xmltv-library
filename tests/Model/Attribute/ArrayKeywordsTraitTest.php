@@ -28,7 +28,7 @@ class ArrayKeywordsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddKeyword() {
+    public function testAddKeyword(): void {
 
         // Set a Keyword mock.
         $keyword = new Keyword();
@@ -46,7 +46,7 @@ class ArrayKeywordsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayKeywordsTrait();
 

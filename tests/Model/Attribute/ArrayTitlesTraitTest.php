@@ -28,7 +28,7 @@ class ArrayTitlesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddTitle() {
+    public function testAddTitle(): void {
 
         // Set a Title mock.
         $title = new Title();
@@ -46,7 +46,7 @@ class ArrayTitlesTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayTitlesTrait();
 

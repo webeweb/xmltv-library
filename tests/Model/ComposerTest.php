@@ -27,7 +27,7 @@ class ComposerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Composer();
         $obj->setContent("content");
@@ -41,7 +41,7 @@ class ComposerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("composer", Composer::DOM_NODE_NAME);
 

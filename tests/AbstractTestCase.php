@@ -384,7 +384,7 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         $this->filename = getcwd() . "/tests/Fixtures/xmltv.xml";

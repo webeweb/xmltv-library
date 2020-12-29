@@ -43,7 +43,7 @@ trait ArrayCategoriesTrait {
      *
      * @return Category[] Returns the categories.
      */
-    public function getCategories() {
+    public function getCategories(): array {
         return $this->categories;
     }
 
@@ -52,7 +52,7 @@ trait ArrayCategoriesTrait {
      *
      * @return int Returns the number of categories.
      */
-    public function getNumberCategories() {
+    public function getNumberCategories(): int {
         return count($this->getCategories());
     }
 
@@ -61,7 +61,7 @@ trait ArrayCategoriesTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasCategories() {
+    public function hasCategories(): bool {
         return 1 <= $this->getNumberCategories();
     }
 

@@ -27,7 +27,7 @@ class StereoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testEnumContent() {
+    public function testEnumContent(): void {
 
         $res = [
             Stereo::CONTENT_BILINGUAL,
@@ -44,7 +44,7 @@ class StereoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new Stereo();
         $obj->setContent("content");
@@ -60,7 +60,7 @@ class StereoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new Stereo();
         $obj->setContent("content");
@@ -74,7 +74,7 @@ class StereoTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("stereo", Stereo::DOM_NODE_NAME);
         $this->assertEquals("bilingual", Stereo::CONTENT_BILINGUAL);

@@ -43,7 +43,7 @@ trait ArrayGuestsTrait {
      *
      * @return Guest[] Returns the guests.
      */
-    public function getGuests() {
+    public function getGuests(): array {
         return $this->guests;
     }
 
@@ -52,7 +52,7 @@ trait ArrayGuestsTrait {
      *
      * @return int Returns the number of guests.
      */
-    public function getNumberGuests() {
+    public function getNumberGuests(): int {
         return count($this->getGuests());
     }
 
@@ -61,7 +61,7 @@ trait ArrayGuestsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasGuests() {
+    public function hasGuests(): bool {
         return 1 <= $this->getNumberGuests();
     }
 

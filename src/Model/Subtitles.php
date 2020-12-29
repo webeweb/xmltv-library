@@ -72,18 +72,18 @@ class Subtitles extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeSubtitles($this);
     }
 
     /**
      * Set the type.
      *
-     * @param string $type The type.
+     * @param string|null $type The type.
      * @return Subtitles Returns this subtitles.
      * @throws InvalidArgumentException Throws an invalid argument exception if the type is invalid.
      */
-    public function setType($type) {
+    public function setType(?string $type): Subtitles {
         if (null !== $type && false === in_array($type, static::enumType())) {
             throw new InvalidArgumentException(sprintf('The type "%s" is invalid', $type));
         }
@@ -94,7 +94,7 @@ class Subtitles extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeSubtitles($this);
     }
 }

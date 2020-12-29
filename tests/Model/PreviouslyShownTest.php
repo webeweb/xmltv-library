@@ -27,7 +27,7 @@ class PreviouslyShownTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new PreviouslyShown();
         $obj->setChannel("channel");
@@ -45,7 +45,7 @@ class PreviouslyShownTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new PreviouslyShown();
         $obj->setChannel("channel");
@@ -60,7 +60,7 @@ class PreviouslyShownTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("previously-shown", PreviouslyShown::DOM_NODE_NAME);
 

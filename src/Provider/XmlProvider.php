@@ -35,7 +35,7 @@ class XmlProvider {
      *
      * @return string Returns the DTD.
      */
-    public static function getDtd() {
+    public static function getDtd(): string {
         return realpath(__DIR__ . "/../Resources/config/xmltv.config");
     }
 
@@ -48,7 +48,7 @@ class XmlProvider {
      * @return Tv Returns the TV.
      * @throws Exception Throws an exception if an error occurs.
      */
-    public static function getXml($url, $filename, LoggerInterface $logger = null) {
+    public static function getXml(string $url, string $filename, LoggerInterface $logger = null): Tv {
 
         $stream = fopen($filename, "w");
 
@@ -70,11 +70,11 @@ class XmlProvider {
      * Read an XML file.
      *
      * @param string $filename The filename.
-     * @param LoggerInterface $logger The logger.
+     * @param LoggerInterface|null $logger The logger.
      * @return Tv Returns the TV.
      * @throws RuntimeException Throws a runtime exception if an error occurs.
      */
-    public static function readXml($filename, LoggerInterface $logger = null) {
+    public static function readXml(string $filename, LoggerInterface $logger = null): Tv {
 
         SerializerHelper::setLogger($logger);
 
@@ -96,7 +96,7 @@ class XmlProvider {
      * @return Statistic[] Returns the statistics.
      * @throws RuntimeException Throws a runtime exception if an error occurs.
      */
-    public static function statXml($filename) {
+    public static function statXml(string $filename): array {
 
         $document = new DOMDocument();
         if (false === @$document->load($filename)) {
@@ -114,10 +114,10 @@ class XmlProvider {
      *
      * @param Tv $tv The TV.
      * @param string $filename The filename.
-     * @param LoggerInterface $logger The logger.
+     * @param LoggerInterface|null $logger The logger.
      * @return int Returns the number of bytes written.
      */
-    public static function writeXml(Tv $tv, $filename, LoggerInterface $logger = null) {
+    public static function writeXml(Tv $tv, string $filename, LoggerInterface $logger = null): int {
 
         $xml = [
             '<?xml version="1.0" encoding="utf-8"?>',

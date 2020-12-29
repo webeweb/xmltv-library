@@ -28,7 +28,7 @@ class ArrayDirectorsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddDirector() {
+    public function testAddDirector(): void {
 
         // Set a Director mock.
         $director = new Director();
@@ -46,7 +46,7 @@ class ArrayDirectorsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayDirectorsTrait();
 

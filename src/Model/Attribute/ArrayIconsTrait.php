@@ -43,7 +43,7 @@ trait ArrayIconsTrait {
      *
      * @return Icon[] Returns the icons.
      */
-    public function getIcons() {
+    public function getIcons(): array {
         return $this->icons;
     }
 
@@ -52,7 +52,7 @@ trait ArrayIconsTrait {
      *
      * @return int Returns the number of icons.
      */
-    public function getNumberIcons() {
+    public function getNumberIcons(): int {
         return count($this->getIcons());
     }
 
@@ -61,7 +61,7 @@ trait ArrayIconsTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasIcons() {
+    public function hasIcons(): bool {
         return 1 <= $this->getNumberIcons();
     }
 

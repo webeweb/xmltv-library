@@ -24,16 +24,16 @@ trait PresentTrait {
     /**
      * Present.
      *
-     * @var Present
+     * @var Present|null
      */
     private $present;
 
     /**
      * Get the present.
      *
-     * @return Present Returns the present.
+     * @return Present|null Returns the present.
      */
-    public function getPresent() {
+    public function getPresent(): ?Present {
         return $this->present;
     }
 
@@ -42,7 +42,7 @@ trait PresentTrait {
      *
      * @param Present|null $present The present.
      */
-    public function setPresent(Present $present = null) {
+    public function setPresent(?Present $present) {
         $this->present = $present;
         return $this;
     }

@@ -43,7 +43,7 @@ trait ArrayCountriesTrait {
      *
      * @return Country[] Returns the countries.
      */
-    public function getCountries() {
+    public function getCountries(): array {
         return $this->countries;
     }
 
@@ -52,7 +52,7 @@ trait ArrayCountriesTrait {
      *
      * @return int Returns the number of countries.
      */
-    public function getNumberCountries() {
+    public function getNumberCountries(): int {
         return count($this->getCountries());
     }
 
@@ -61,7 +61,7 @@ trait ArrayCountriesTrait {
      *
      * @return bool Returns true in case of success, false otherwise.
      */
-    public function hasCountries() {
+    public function hasCountries(): bool {
         return 1 <= $this->getNumberCountries();
     }
 

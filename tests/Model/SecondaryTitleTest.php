@@ -27,7 +27,7 @@ class SecondaryTitleTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testJsonSerialize() {
+    public function testJsonSerialize(): void {
 
         $obj = new SecondaryTitle();
         $obj->setContent("content");
@@ -45,7 +45,7 @@ class SecondaryTitleTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testXmlSerialize() {
+    public function testXmlSerialize(): void {
 
         $obj = new SecondaryTitle();
         $obj->setContent("content");
@@ -60,7 +60,7 @@ class SecondaryTitleTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("sub-title", SecondaryTitle::DOM_NODE_NAME);
 

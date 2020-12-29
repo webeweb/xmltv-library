@@ -28,7 +28,7 @@ class PresentTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetPresent() {
+    public function testSetPresent(): void {
 
         // Set a Present mock.
         $present = new Present();
@@ -44,7 +44,7 @@ class PresentTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestPresentTrait();
 

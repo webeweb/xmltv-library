@@ -37,33 +37,33 @@ class Icon extends AbstractModel {
     /**
      * Source.
      *
-     * @var string
+     * @var string|null
      */
     private $src;
 
     /**
      * Get the source.
      *
-     * @return string Returns the source.
+     * @return string|null Returns the source.
      */
-    public function getSrc() {
+    public function getSrc(): ?string {
         return $this->src;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         return JsonSerializer::serializeIcon($this);
     }
 
     /**
      * Set the source.
      *
-     * @param string $src The source.
+     * @param string|null $src The source.
      * @return Icon Returns this icon.
      */
-    public function setSrc($src) {
+    public function setSrc(?string $src): Icon {
         $this->src = $src;
         return $this;
     }
@@ -71,7 +71,7 @@ class Icon extends AbstractModel {
     /**
      * {@inheritDoc}
      */
-    public function xmlSerialize() {
+    public function xmlSerialize(): string {
         return XmlSerializer::serializeIcon($this);
     }
 }

@@ -28,7 +28,7 @@ class ArrayReviewsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddReview() {
+    public function testAddReview(): void {
 
         // Set a Review mock.
         $review = new Review();
@@ -46,7 +46,7 @@ class ArrayReviewsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayReviewsTrait();
 

@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Tests\Fixtures\Statistic;
 
+use WBW\Library\XMLTV\Statistic\Statistic;
 use WBW\Library\XMLTV\Statistic\Statistics;
 
 /**
@@ -24,7 +25,7 @@ class TestStatistics extends Statistics {
     /**
      * {@inheritDoc}
      */
-    public function getStatistic($key) {
+    public function getStatistic(string $key): Statistic {
         return parent::getStatistic($key);
     }
 }

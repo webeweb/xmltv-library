@@ -28,7 +28,7 @@ class ArrayStarRatingsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testAddStarRating() {
+    public function testAddStarRating(): void {
 
         // Set a Star rating mock.
         $starRating = new StarRating();
@@ -46,7 +46,7 @@ class ArrayStarRatingsTraitTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestArrayStarRatingsTrait();
 
