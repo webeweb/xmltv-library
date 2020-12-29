@@ -36,7 +36,7 @@ class XmlProvider {
      * @return string Returns the DTD.
      */
     public static function getDtd(): string {
-        return realpath(__DIR__ . "/../Resources/config/xmltv.config");
+        return realpath(__DIR__ . "/../Resources/config/xmltv.dtd");
     }
 
     /**
