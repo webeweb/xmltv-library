@@ -33,7 +33,7 @@ trait ArrayDescsTrait {
      *
      * @param Desc $desc The description.
      */
-    public function addDesc(Desc $desc) {
+    public function addDesc(Desc $desc): self {
         $this->descs[] = $desc;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayDescsTrait {
      *
      * @param Desc[] $descs The descriptions.
      */
-    protected function setDescs(array $descs) {
+    protected function setDescs(array $descs): self {
         $this->descs = $descs;
         return $this;
     }

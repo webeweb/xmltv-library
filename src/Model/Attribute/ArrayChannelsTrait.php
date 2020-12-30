@@ -33,7 +33,7 @@ trait ArrayChannelsTrait {
      *
      * @param Channel $channel The channel.
      */
-    public function addChannel(Channel $channel) {
+    public function addChannel(Channel $channel): self {
         $this->channels[] = $channel;
         return $this;
     }
@@ -89,7 +89,7 @@ trait ArrayChannelsTrait {
      *
      * @param Channel[] $channels The channels.
      */
-    protected function setChannels(array $channels) {
+    protected function setChannels(array $channels): self {
         $this->channels = $channels;
         return $this;
     }
@@ -97,8 +97,8 @@ trait ArrayChannelsTrait {
     /**
      * Sort the channels.
      */
-    public function sortChannels() {
-        usort($this->channels, function(Channel $a, Channel $b) {
+    public function sortChannels(): self {
+        usort($this->channels, function(Channel $a, Channel $b): int {
             return strcmp($a->getId(), $b->getId());
         });
         return $this;

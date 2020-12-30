@@ -30,7 +30,7 @@ abstract class AbstractModel implements JsonSerializable {
      * Constructor.
      */
     public function __construct() {
-        // NOTHING TO DO.
+        // NOTHING TO DO
     }
 
     /**

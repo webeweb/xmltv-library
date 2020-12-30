@@ -33,7 +33,7 @@ trait ArrayDirectorsTrait {
      *
      * @param Director $director The director.
      */
-    public function addDirector(Director $director) {
+    public function addDirector(Director $director): self {
         $this->directors[] = $director;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayDirectorsTrait {
      *
      * @param Director[] $directors The directors.
      */
-    protected function setDirectors(array $directors) {
+    protected function setDirectors(array $directors): self {
         $this->directors = $directors;
         return $this;
     }

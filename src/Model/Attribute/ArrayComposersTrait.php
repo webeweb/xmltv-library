@@ -33,7 +33,7 @@ trait ArrayComposersTrait {
      *
      * @param Composer $composer The composer.
      */
-    public function addComposer(Composer $composer) {
+    public function addComposer(Composer $composer): self {
         $this->composers[] = $composer;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayComposersTrait {
      *
      * @param Composer[] $composers The composers.
      */
-    protected function setComposers(array $composers) {
+    protected function setComposers(array $composers): self {
         $this->composers = $composers;
         return $this;
     }

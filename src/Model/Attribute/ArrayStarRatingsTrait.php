@@ -33,7 +33,7 @@ trait ArrayStarRatingsTrait {
      *
      * @param StarRating $starRating The star rating.
      */
-    public function addStarRating(StarRating $starRating) {
+    public function addStarRating(StarRating $starRating): self {
         $this->starRatings[] = $starRating;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayStarRatingsTrait {
      *
      * @param StarRating[] $starRatings The star ratings.
      */
-    protected function setStarRatings(array $starRatings) {
+    protected function setStarRatings(array $starRatings): self {
         $this->starRatings = $starRatings;
         return $this;
     }

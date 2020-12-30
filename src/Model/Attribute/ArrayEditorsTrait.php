@@ -33,7 +33,7 @@ trait ArrayEditorsTrait {
      *
      * @param Editor $editor The editor.
      */
-    public function addEditor(Editor $editor) {
+    public function addEditor(Editor $editor): self {
         $this->editors[] = $editor;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayEditorsTrait {
      *
      * @param Editor[] $editors The editors.
      */
-    protected function setEditors(array $editors) {
+    protected function setEditors(array $editors): self {
         $this->editors = $editors;
         return $this;
     }

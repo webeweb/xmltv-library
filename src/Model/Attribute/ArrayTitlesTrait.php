@@ -33,7 +33,7 @@ trait ArrayTitlesTrait {
      *
      * @param Title $title The title.
      */
-    public function addTitle(Title $title) {
+    public function addTitle(Title $title): self {
         $this->titles[] = $title;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayTitlesTrait {
      *
      * @param Title[] $titles The titles.
      */
-    protected function setTitles(array $titles) {
+    protected function setTitles(array $titles): self {
         $this->titles = $titles;
         return $this;
     }

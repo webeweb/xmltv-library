@@ -33,7 +33,7 @@ trait ArrayWritersTrait {
      *
      * @param Writer $writer The writer.
      */
-    public function addWriter(Writer $writer) {
+    public function addWriter(Writer $writer): self {
         $this->writers[] = $writer;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayWritersTrait {
      *
      * @param Writer[] $writers The writers.
      */
-    protected function setWriters(array $writers) {
+    protected function setWriters(array $writers): self {
         $this->writers = $writers;
         return $this;
     }

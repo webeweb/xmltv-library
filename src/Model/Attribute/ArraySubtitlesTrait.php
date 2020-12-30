@@ -33,7 +33,7 @@ trait ArraySubtitlesTrait {
      *
      * @param Subtitles $subtitles The subtitles.
      */
-    public function addSubtitles(Subtitles $subtitles) {
+    public function addSubtitles(Subtitles $subtitles): self {
         $this->subtitles[] = $subtitles;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArraySubtitlesTrait {
      *
      * @param Subtitles[] $subtitles The subtitles.
      */
-    protected function setSubtitles(array $subtitles) {
+    protected function setSubtitles(array $subtitles): self {
         $this->subtitles = $subtitles;
         return $this;
     }

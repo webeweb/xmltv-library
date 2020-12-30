@@ -33,7 +33,7 @@ trait ArraySecondaryTitlesTrait {
      *
      * @param SecondaryTitle $secondaryTitle The secondary title.
      */
-    public function addSecondaryTitle(SecondaryTitle $secondaryTitle) {
+    public function addSecondaryTitle(SecondaryTitle $secondaryTitle): self {
         $this->secondaryTitles[] = $secondaryTitle;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArraySecondaryTitlesTrait {
      *
      * @param SecondaryTitle[] $secondaryTitles The secondary titles.
      */
-    protected function setSecondaryTitles(array $secondaryTitles) {
+    protected function setSecondaryTitles(array $secondaryTitles): self {
         $this->secondaryTitles = $secondaryTitles;
         return $this;
     }

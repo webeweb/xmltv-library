@@ -33,7 +33,7 @@ trait ArrayIconsTrait {
      *
      * @param Icon $icon The icon.
      */
-    public function addIcon(Icon $icon) {
+    public function addIcon(Icon $icon): self {
         $this->icons[] = $icon;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayIconsTrait {
      *
      * @param Icon[] $icons The icons.
      */
-    protected function setIcons(array $icons) {
+    protected function setIcons(array $icons): self {
         $this->icons = $icons;
         return $this;
     }

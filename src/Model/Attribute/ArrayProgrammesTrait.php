@@ -33,7 +33,7 @@ trait ArrayProgrammesTrait {
      *
      * @param Programme $programme The programme.
      */
-    public function addProgramme(Programme $programme) {
+    public function addProgramme(Programme $programme): self{
         $this->programmes[] = $programme;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayProgrammesTrait {
      *
      * @param Programme[] $programmes The programmes.
      */
-    protected function setProgrammes(array $programmes) {
+    protected function setProgrammes(array $programmes): self{
         $this->programmes = $programmes;
         return $this;
     }
@@ -78,7 +78,7 @@ trait ArrayProgrammesTrait {
     /**
      * Sort the programmes.
      */
-    public function sortProgrammes() {
+    public function sortProgrammes(): self{
         usort($this->programmes, function(Programme $a, Programme $b) {
             return strcmp($a->getStart(), $b->getStart());
         });

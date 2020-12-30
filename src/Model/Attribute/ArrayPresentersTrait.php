@@ -33,7 +33,7 @@ trait ArrayPresentersTrait {
      *
      * @param Presenter $presenter The presenter.
      */
-    public function addPresenter(Presenter $presenter) {
+    public function addPresenter(Presenter $presenter): self {
         $this->presenters[] = $presenter;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayPresentersTrait {
      *
      * @param Presenter[] $presenters The presenters.
      */
-    protected function setPresenters(array $presenters) {
+    protected function setPresenters(array $presenters): self {
         $this->presenters = $presenters;
         return $this;
     }

@@ -40,7 +40,7 @@ trait StringSystemTrait {
      *
      * @param string|null $system The system.
      */
-    public function setSystem(?string $system) {
+    public function setSystem(?string $system): self {
         $this->system = $system;
         return $this;
     }

@@ -33,7 +33,7 @@ trait ArrayDisplayNamesTrait {
      *
      * @param DisplayName $displayName The display name.
      */
-    public function addDisplayName(DisplayName $displayName) {
+    public function addDisplayName(DisplayName $displayName): self {
         $this->displayNames[] = $displayName;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayDisplayNamesTrait {
      *
      * @param DisplayName[] $displayNames The display names.
      */
-    protected function setDisplayNames(array $displayNames) {
+    protected function setDisplayNames(array $displayNames): self {
         $this->displayNames = $displayNames;
         return $this;
     }

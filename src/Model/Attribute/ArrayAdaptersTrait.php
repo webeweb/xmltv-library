@@ -33,7 +33,7 @@ trait ArrayAdaptersTrait {
      *
      * @param Adapter $adapter The adapter.
      */
-    public function addAdapter(Adapter $adapter) {
+    public function addAdapter(Adapter $adapter): self {
         $this->adapters[] = $adapter;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayAdaptersTrait {
      *
      * @param Adapter[] $adapters The adapters.
      */
-    protected function setAdapters(array $adapters) {
+    protected function setAdapters(array $adapters): self {
         $this->adapters = $adapters;
         return $this;
     }

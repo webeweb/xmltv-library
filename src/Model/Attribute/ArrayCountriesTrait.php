@@ -33,7 +33,7 @@ trait ArrayCountriesTrait {
      *
      * @param Country $country The country.
      */
-    public function addCountry(Country $country) {
+    public function addCountry(Country $country): self {
         $this->countries[] = $country;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayCountriesTrait {
      *
      * @param Country[] $countries The countries.
      */
-    protected function setCountries(array $countries) {
+    protected function setCountries(array $countries): self {
         $this->countries = $countries;
         return $this;
     }

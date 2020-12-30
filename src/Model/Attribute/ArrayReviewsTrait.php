@@ -33,7 +33,7 @@ trait ArrayReviewsTrait {
      *
      * @param Review $review The review.
      */
-    public function addReview(Review $review) {
+    public function addReview(Review $review): self {
         $this->reviews[] = $review;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayReviewsTrait {
      *
      * @param Review[] $reviews The reviews.
      */
-    protected function setReviews(array $reviews) {
+    protected function setReviews(array $reviews): self {
         $this->reviews = $reviews;
         return $this;
     }

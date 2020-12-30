@@ -33,7 +33,7 @@ trait ArrayEpisodeNumsTrait {
      *
      * @param EpisodeNum $episodeNum The episode number.
      */
-    public function addEpisodeNum(EpisodeNum $episodeNum) {
+    public function addEpisodeNum(EpisodeNum $episodeNum): self {
         $this->episodeNums[] = $episodeNum;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayEpisodeNumsTrait {
      *
      * @param EpisodeNum[] $episodeNums The episode numbers.
      */
-    protected function setEpisodeNums(array $episodeNums) {
+    protected function setEpisodeNums(array $episodeNums): self {
         $this->episodeNums = $episodeNums;
         return $this;
     }

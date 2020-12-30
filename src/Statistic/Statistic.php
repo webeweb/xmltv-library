@@ -171,9 +171,9 @@ class Statistic {
     /**
      * Get the max.
      *
-     * @return int Returns the max.
+     * @return int|null Returns the max.
      */
-    public function getMax() {
+    public function getMax(): ?int {
         return $this->max;
     }
 

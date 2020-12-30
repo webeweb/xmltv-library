@@ -33,7 +33,7 @@ trait ArrayKeywordsTrait {
      *
      * @param Keyword $keyword The keyword.
      */
-    public function addKeyword(Keyword $keyword) {
+    public function addKeyword(Keyword $keyword): self {
         $this->keywords[] = $keyword;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayKeywordsTrait {
      *
      * @param Keyword[] $keywords The keywords.
      */
-    protected function setKeywords(array $keywords) {
+    protected function setKeywords(array $keywords): self {
         $this->keywords = $keywords;
         return $this;
     }

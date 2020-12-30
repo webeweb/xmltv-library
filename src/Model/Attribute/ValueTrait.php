@@ -42,7 +42,7 @@ trait ValueTrait {
      *
      * @param Value|null $value The value.
      */
-    public function setValue(?Value $value) {
+    public function setValue(?Value $value): self {
         $this->value = $value;
         return $this;
     }

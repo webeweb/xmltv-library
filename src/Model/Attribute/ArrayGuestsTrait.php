@@ -33,7 +33,7 @@ trait ArrayGuestsTrait {
      *
      * @param Guest $guest The guest.
      */
-    public function addGuest(Guest $guest) {
+    public function addGuest(Guest $guest): self {
         $this->guests[] = $guest;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayGuestsTrait {
      *
      * @param Guest[] $guests The guests.
      */
-    protected function setGuests(array $guests) {
+    protected function setGuests(array $guests): self {
         $this->guests = $guests;
         return $this;
     }

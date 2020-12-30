@@ -33,7 +33,7 @@ trait ArrayActorsTrait {
      *
      * @param Actor $actor The actor.
      */
-    public function addActor(Actor $actor) {
+    public function addActor(Actor $actor): self {
         $this->actors[] = $actor;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayActorsTrait {
      *
      * @param Actor[] $actors The actors.
      */
-    protected function setActors(array $actors) {
+    protected function setActors(array $actors): self {
         $this->actors = $actors;
         return $this;
     }

@@ -33,7 +33,7 @@ trait ArrayProducersTrait {
      *
      * @param Producer $producer The producer.
      */
-    public function addProducer(Producer $producer) {
+    public function addProducer(Producer $producer): self {
         $this->producers[] = $producer;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayProducersTrait {
      *
      * @param Producer[] $producers The producers.
      */
-    protected function setProducers(array $producers) {
+    protected function setProducers(array $producers): self {
         $this->producers = $producers;
         return $this;
     }

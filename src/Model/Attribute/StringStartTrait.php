@@ -43,7 +43,7 @@ trait StringStartTrait {
      *
      * @return DateTime|null Returns the start into DateTime in case of success, null otherwise.
      */
-    public function getStartDateTime() {
+    public function getStartDateTime(): ?DateTime {
         return SerializerHelper::deserializeDateTime($this->start);
     }
 
@@ -52,7 +52,7 @@ trait StringStartTrait {
      *
      * @param string $start The start.
      */
-    public function setStart($start) {
+    public function setStart($start): self {
         $this->start = $start;
         return $this;
     }

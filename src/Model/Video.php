@@ -93,7 +93,7 @@ class Video extends AbstractModel {
      * @param Aspect|null $aspect The aspect.
      * @return Video Returns this video.
      */
-    public function setAspect(?Aspect $aspect) {
+    public function setAspect(?Aspect $aspect): Video {
         $this->aspect = $aspect;
         return $this;
     }

@@ -33,7 +33,7 @@ trait ArrayCommentatorsTrait {
      *
      * @param Commentator $commentator The commentator.
      */
-    public function addCommentator(Commentator $commentator) {
+    public function addCommentator(Commentator $commentator): self {
         $this->commentators[] = $commentator;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayCommentatorsTrait {
      *
      * @param Commentator[] $commentators The commentators.
      */
-    protected function setCommentators(array $commentators) {
+    protected function setCommentators(array $commentators): self {
         $this->commentators = $commentators;
         return $this;
     }

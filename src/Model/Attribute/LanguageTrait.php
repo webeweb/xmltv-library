@@ -42,7 +42,7 @@ trait LanguageTrait {
      *
      * @param Language|null $language The language.
      */
-    public function setLanguage(?Language $language) {
+    public function setLanguage(?Language $language): self {
         $this->language = $language;
         return $this;
     }

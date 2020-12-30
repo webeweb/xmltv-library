@@ -42,7 +42,7 @@ trait PresentTrait {
      *
      * @param Present|null $present The present.
      */
-    public function setPresent(?Present $present) {
+    public function setPresent(?Present $present): self {
         $this->present = $present;
         return $this;
     }

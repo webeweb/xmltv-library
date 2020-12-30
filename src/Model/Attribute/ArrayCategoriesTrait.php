@@ -33,7 +33,7 @@ trait ArrayCategoriesTrait {
      *
      * @param Category $category The category.
      */
-    public function addCategory(Category $category) {
+    public function addCategory(Category $category): self {
         $this->categories[] = $category;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayCategoriesTrait {
      *
      * @param Category[] $categories The categories.
      */
-    protected function setCategories(array $categories) {
+    protected function setCategories(array $categories): self {
         $this->categories = $categories;
         return $this;
     }

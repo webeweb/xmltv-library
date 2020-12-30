@@ -72,7 +72,7 @@ class Stereo extends AbstractModel {
      *
      * @return string[] Returns the content enumeration.
      */
-    public static function enumContent() {
+    public static function enumContent(): array {
         return [
             self::CONTENT_BILINGUAL,
             self::CONTENT_DOLBY,

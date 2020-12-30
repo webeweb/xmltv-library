@@ -33,7 +33,7 @@ trait ArrayUrlsTrait {
      *
      * @param Url $url The URL.
      */
-    public function addUrl(Url $url) {
+    public function addUrl(Url $url): self {
         $this->urls[] = $url;
         return $this;
     }
@@ -70,7 +70,7 @@ trait ArrayUrlsTrait {
      *
      * @param Url[] $urls The URLs.
      */
-    protected function setUrls(array $urls) {
+    protected function setUrls(array $urls): self {
         $this->urls = $urls;
         return $this;
     }
