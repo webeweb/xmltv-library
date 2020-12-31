@@ -12,7 +12,6 @@
 namespace WBW\Library\XMLTV\Statistic;
 
 use DOMNode;
-use WBW\Library\Core\ThirdParty\Quadratus\Model\QGI\Statistiques;
 
 /**
  * Statistics.
