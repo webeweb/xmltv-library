@@ -1,4 +1,13 @@
 # .scrutinizer.yml
+builds:
+    nodes:
+        'php_7.1':
+            environment:
+                php: '7.1'
+        'php_7.2':
+            environment:
+                php: '7.2'
+
 checks:
     php:
         code_rating: true
