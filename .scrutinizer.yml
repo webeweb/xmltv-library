@@ -1,22 +1,6 @@
 # .scrutinizer.yml
 build:
-    environment:
-        php:
-            ini:
-                'xdebug.mode': "coverage"
-    dependencies:
-        override:
-            - COMPOSER_MEMORY_LIMIT=-1 composer update
-    project_setup:
-        before:
-            - wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.3/php-coveralls.phar -O coveralls.phar
-            - chmod +x coveralls.phar
-            - php coveralls.phar --version
-    tests:
-        before:
-            - mkdir -p build/logs
-        override:
-            - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
     nodes:
         '7.1':
             environment:
@@ -27,9 +11,31 @@ build:
         '7.3':
             environment:
                 php: '7.3'
-        '7.4':
-            environment:
-                php: '7.4'
+
+    environment:
+        php:
+            ini:
+                'xdebug.mode': "coverage"
+
+    dependencies:
+        override:
+            - COMPOSER_MEMORY_LIMIT=-1 composer update
+
+    project_setup:
+        before:
+            - wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.3/php-coveralls.phar -O coveralls.phar
+            - chmod +x coveralls.phar
+            - php coveralls.phar --version
+
+    tests:
+        before:
+            - mkdir -p build/logs
+        override:
+            - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+            coverage:
+                file: build/logs/clover.xml
+        after:
+            - php coveralls.phar -v
 
 checks:
     php:
