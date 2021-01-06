@@ -36,7 +36,7 @@ build:
                     file:   build/logs/clover.xml
                     format: clover
         after:
-            - php coveralls.phar -v
+            #- php coveralls.phar -v
 
 checks:
     php:
