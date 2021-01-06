@@ -31,9 +31,9 @@ build:
         before:
             - mkdir -p build/logs
         override:
-            - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-            coverage:
-                file: build/logs/clover.xml
+            -   command: vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+                coverage:
+                    file: build/logs/clover.xml
         after:
             - php coveralls.phar -v
 
