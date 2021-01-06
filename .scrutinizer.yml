@@ -1,5 +1,5 @@
 # .scrutinizer.yml
-builds:
+build:
     nodes:
         'php_7.1':
             environment:
