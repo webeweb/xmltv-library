@@ -23,7 +23,7 @@ build:
 
     project_setup:
         before:
-            - wget -c -nc --retry-connrefused --tries=0 wget https://scrutinizer-ci.com/ocular.phar -O coveralls.phar
+            - wget -c -nc --retry-connrefused --tries=0 https://scrutinizer-ci.com/ocular.phar -O coveralls.phar
             - chmod +x coveralls.phar
             - php coveralls.phar --version
 
