@@ -23,7 +23,7 @@ build:
 
     project_setup:
         before:
-            - wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.3/php-coveralls.phar -O coveralls.phar
+            - wget -c -nc --retry-connrefused --tries=0 wget https://scrutinizer-ci.com/ocular.phar -O coveralls.phar
             - chmod +x coveralls.phar
             - php coveralls.phar --version
 
@@ -36,7 +36,7 @@ build:
                     file:   build/logs/clover.xml
                     format: clover
         after:
-            #- php coveralls.phar -v
+            - php coveralls.phar code-coverage:upload --format=php-clover build/logs/clover.xml
 
 checks:
     php:
