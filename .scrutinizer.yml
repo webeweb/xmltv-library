@@ -20,12 +20,6 @@ build:
             ini:
                 'xdebug.mode': "coverage"
             pecl_extensions:
-                - curl
-                - gd
-                - gmp
-                - intl
-                - json
-                - pdo
                 - zip
 
     dependencies:
