@@ -19,10 +19,10 @@ build:
         php:
             ini:
                 'xdebug.mode': "coverage"
-            pecl_extensions:
-                - zip
 
     dependencies:
+        before:
+            - pecl install zip
         override:
             - COMPOSER_MEMORY_LIMIT=-1 composer update
 
@@ -31,7 +31,6 @@ build:
             - wget -c -nc --retry-connrefused --tries=0 https://scrutinizer-ci.com/ocular.phar -O coveralls.phar
             - chmod +x coveralls.phar
             - php coveralls.phar --version
-            - php -m
 
     tests:
         before:
