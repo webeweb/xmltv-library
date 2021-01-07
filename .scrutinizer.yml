@@ -4,19 +4,19 @@ build:
     nodes:
         '7.1':
             environment:
-                php: '7.1'
+                php: '7.1.33'
         '7.2':
             environment:
-                php: '7.2'
+                php: '7.2.34'
         '7.3':
             environment:
-                php: '7.3'
+                php: '7.3.26'
         '7.4':
             environment:
-                php: '7.4'
+                php: '7.4.14'
         '8.0':
             environment:
-                php: '8.0'
+                php: '8.0.1'
 
     environment:
         php:
