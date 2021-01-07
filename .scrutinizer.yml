@@ -2,21 +2,21 @@
 build:
 
     nodes:
-        '7.1':
+        'PHP: 7.1':
             environment:
-                php: '7.1.33'
-        '7.2':
+                php: 7.1.33
+        'PHP: 7.2':
             environment:
-                php: '7.2.34'
-        '7.3':
+                php: 7.2.34
+        'PHP: 7.3':
             environment:
-                php: '7.3.26'
-        '7.4':
+                php: 7.3.26
+        'PHP: 7.4':
             environment:
-                php: '7.4.14'
-        '8.0':
+                php: 7.4.14
+        'PHP: 8.0':
             environment:
-                php: '8.0.1'
+                php: 8.0.1
 
     environment:
         php:
@@ -25,6 +25,7 @@ build:
 
     dependencies:
         before:
+            - if [ "" == "$(php -m | grep xdebug)" ]; then pecl install xdebug; fi;
             - if [ "" == "$(php -m | grep zip)" ]; then pecl install zip; fi;
         override:
             - COMPOSER_MEMORY_LIMIT=-1 composer update
@@ -43,8 +44,6 @@ build:
                 coverage:
                     file:   build/logs/clover.xml
                     format: clover
-        after:
-            - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
 
 checks:
     php:
