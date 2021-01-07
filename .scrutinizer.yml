@@ -19,7 +19,7 @@ build:
         php:
             ini:
                 'xdebug.mode': "coverage"
-            pecl_extension:
+            pecl_extensions:
                 - curl
                 - gd
                 - gmp
