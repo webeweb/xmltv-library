@@ -25,7 +25,6 @@ build:
 
     dependencies:
         before:
-            - if [ "" == "$(php -m | grep xdebug)" ]; then pecl install xdebug; fi;
             - if [ "" == "$(php -m | grep zip)" ]; then pecl install zip; fi;
         override:
             - COMPOSER_MEMORY_LIMIT=-1 composer update
