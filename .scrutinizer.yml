@@ -14,6 +14,9 @@ build:
         '7.4':
             environment:
                 php: '7.4'
+        '8.0':
+            environment:
+                php: '8.0'
 
     environment:
         php:
@@ -28,9 +31,9 @@ build:
 
     project_setup:
         before:
-            - wget -c -nc --retry-connrefused --tries=0 https://scrutinizer-ci.com/ocular.phar -O coveralls.phar
-            - chmod +x coveralls.phar
-            - php coveralls.phar --version
+            - wget -c -nc --retry-connrefused --tries=0 https://scrutinizer-ci.com/ocular.phar -O ocular.phar
+            - chmod +x ocular.phar
+            - php ocular.phar --version
 
     tests:
         before:
@@ -41,7 +44,7 @@ build:
                     file:   build/logs/clover.xml
                     format: clover
         after:
-            - php coveralls.phar code-coverage:upload --format=php-clover --parent="$SCRUTINIZER_NODE_NAME" build/logs/clover.xml
+            - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
 
 checks:
     php:
