@@ -22,7 +22,7 @@ build:
 
     dependencies:
         before:
-            - pecl install zip
+            - if [ "" == "$(php -m | grep zip)" ]; then pecl install zip; fi;
         override:
             - COMPOSER_MEMORY_LIMIT=-1 composer update
 
@@ -41,7 +41,7 @@ build:
                     file:   build/logs/clover.xml
                     format: clover
         after:
-            #- php coveralls.phar code-coverage:upload --format=php-clover build/logs/clover.xml
+            - php coveralls.phar code-coverage:upload --format=php-clover --parent="$SCRUTINIZER_NODE_NAME" build/logs/clover.xml
 
 checks:
     php:
