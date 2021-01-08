@@ -1,40 +1,30 @@
 # .scrutinizer.yml
 build:
-
     nodes:
-        'PHP: 7.1':
+        'PHP7.1':
             environment:
-                php: 7.1.33
-        'PHP: 7.2':
+                php: 7.1.27
+        'PHP7.2':
             environment:
-                php: 7.2.34
-        'PHP: 7.3':
+                php: 7.2.15
+        'PHP7.3':
             environment:
-                php: 7.3.26
-        'PHP: 7.4':
+                php: 7.3.25
+        'PHP7.4':
             environment:
-                php: 7.4.14
-        'PHP: 8.0':
+                php: 7.4.13
+        'PHP8.0':
             environment:
-                php: 8.0.1
-
+                php: 8.0.0
     environment:
         php:
             ini:
                 'xdebug.mode': "coverage"
-
     dependencies:
         before:
             - if [ "" == "$(php -m | grep zip)" ]; then pecl install zip; fi;
         override:
             - COMPOSER_MEMORY_LIMIT=-1 composer update
-
-    project_setup:
-        before:
-            - wget -c -nc --retry-connrefused --tries=0 https://scrutinizer-ci.com/ocular.phar -O ocular.phar
-            - chmod +x ocular.phar
-            - php ocular.phar --version
-
     tests:
         before:
             - mkdir -p build/logs
