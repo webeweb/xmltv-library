@@ -69,315 +69,315 @@ abstract class AbstractTestCase extends TestCase {
     /**
      * Actor.
      *
-     * @var Actor
+     * @var Actor|null
      */
     protected $actor;
 
     /**
      * Adapter.
      *
-     * @var Adapter
+     * @var Adapter|null
      */
     protected $adapter;
 
     /**
      * Aspect.
      *
-     * @var Aspect
+     * @var Aspect|null
      */
     protected $aspect;
 
     /**
      * Audio.
      *
-     * @var Audio
+     * @var Audio|null
      */
     protected $audio;
 
     /**
      * Category.
      *
-     * @var Category
+     * @var Category|null
      */
     protected $category;
 
     /**
      * Channel.
      *
-     * @var Channel
+     * @var Channel|null
      */
     protected $channel;
 
     /**
      * Colour.
      *
-     * @var Colour
+     * @var Colour|null
      */
     protected $colour;
 
     /**
      * Commentator.
      *
-     * @var Commentator
+     * @var Commentator|null
      */
     protected $commentator;
 
     /**
      * Composer.
      *
-     * @var Composer
+     * @var Composer|null
      */
     protected $composer;
 
     /**
      * Country.
      *
-     * @var Country
+     * @var Country|null
      */
     protected $country;
 
     /**
      * Credits.
      *
-     * @var Credits
+     * @var Credits|null
      */
     protected $credits;
 
     /**
      * Date.
      *
-     * @var Date
+     * @var Date|null
      */
     protected $date;
 
     /**
      * Description.
      *
-     * @var Desc
+     * @var Desc|null
      */
     protected $desc;
 
     /**
      * Director.
      *
-     * @var Director
+     * @var Director|null
      */
     protected $director;
 
     /**
      * Display name.
      *
-     * @var DisplayName
+     * @var DisplayName|null
      */
     protected $displayName;
 
     /**
      * DOM Document.
      *
-     * @var DOMDocument
+     * @var DOMDocument|null
      */
     protected $document;
 
     /**
      * Editor.
      *
-     * @var Editor
+     * @var Editor|null
      */
     protected $editor;
 
     /**
      * Episode number.
      *
-     * @var EpisodeNum
+     * @var EpisodeNum|null
      */
     protected $episodeNum;
 
     /**
      * Filename.
      *
-     * @var string
+     * @var string|null
      */
     protected $filename;
 
     /**
      * Guest.
      *
-     * @var Guest
+     * @var Guest|null
      */
     protected $guest;
 
     /**
      * Icon.
      *
-     * @var Icon
+     * @var Icon|null
      */
     protected $icon;
 
     /**
      * Keyword.
      *
-     * @var Keyword
+     * @var Keyword|null
      */
     protected $keyword;
 
     /**
      * Language.
      *
-     * @var Language
+     * @var Language|null
      */
     protected $language;
 
     /**
      * Last chance.
      *
-     * @var LastChance
+     * @var LastChance|null
      */
     protected $lastChance;
 
     /**
      * Length.
      *
-     * @var Length
+     * @var Length|null
      */
     protected $length;
 
     /**
      * Original language.
      *
-     * @var OrigLanguage
+     * @var OrigLanguage|null
      */
     protected $origLanguage;
 
     /**
      * Premiere.
      *
-     * @var Premiere
+     * @var Premiere|null
      */
     protected $premiere;
 
     /**
      * Present.
      *
-     * @var Present
+     * @var Present|null
      */
     protected $present;
 
     /**
      * Presenter.
      *
-     * @var Presenter
+     * @var Presenter|null
      */
     protected $presenter;
 
     /**
      * Previously shown.
      *
-     * @var PreviouslyShown
+     * @var PreviouslyShown|null
      */
     protected $previouslyShown;
 
     /**
      * Producer.
      *
-     * @var Producer
+     * @var Producer|null
      */
     protected $producer;
 
     /**
      * Programme.
      *
-     * @var Programme
+     * @var Programme|null
      */
     protected $programme;
 
     /**
      * Quality.
      *
-     * @var Quality
+     * @var Quality|null
      */
     protected $quality;
 
     /**
      * Rating.
      *
-     * @var Rating
+     * @var Rating|null
      */
     protected $rating;
 
     /**
      * Review.
      *
-     * @var Review
+     * @var Review|null
      */
     protected $review;
 
     /**
      * Secondary title.
      *
-     * @var SecondaryTitle
+     * @var SecondaryTitle|null
      */
     protected $secondaryTitle;
 
     /**
      * Star rating.
      *
-     * @var StarRating
+     * @var StarRating|null
      */
     protected $starRating;
 
     /**
      * Stereo.
      *
-     * @var Stereo
+     * @var Stereo|null
      */
     protected $stereo;
 
     /**
      * Subtitles.
      *
-     * @var Subtitles
+     * @var Subtitles|null
      */
     protected $subtitles;
 
     /**
      * Title.
      *
-     * @var Title
+     * @var Title|null
      */
     protected $title;
 
     /**
      * Tv.
      *
-     * @var Tv
+     * @var Tv|null
      */
     protected $tv;
 
     /**
      * Url.
      *
-     * @var Url
+     * @var Url|null
      */
     protected $url;
 
     /**
      * Value.
      *
-     * @var Value
+     * @var Value|null
      */
     protected $value;
 
     /**
      * Video.
      *
-     * @var Video
+     * @var Video|null
      */
     protected $video;
 
     /**
      * Writer.
      *
-     * @var Writer
+     * @var Writer|null
      */
     protected $writer;
 

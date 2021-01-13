@@ -30,14 +30,14 @@ class XmlProviderTest extends AbstractTestCase {
     /**
      * Input.
      *
-     * @var string
+     * @var string|null
      */
     private $input;
 
     /**
      * Output.
      *
-     * @var string
+     * @var string|null
      */
     private $output;
 
