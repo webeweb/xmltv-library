@@ -74,11 +74,11 @@ class Stereo extends AbstractModel {
      */
     public static function enumContent(): array {
         return [
-            self::CONTENT_BILINGUAL,
-            self::CONTENT_DOLBY,
-            self::CONTENT_DOLBY_DIGITAL,
-            self::CONTENT_MONO,
-            self::CONTENT_STEREO,
+            Stereo::CONTENT_BILINGUAL,
+            Stereo::CONTENT_DOLBY,
+            Stereo::CONTENT_DOLBY_DIGITAL,
+            Stereo::CONTENT_MONO,
+            Stereo::CONTENT_STEREO,
         ];
     }
 

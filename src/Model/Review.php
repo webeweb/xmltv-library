@@ -70,8 +70,8 @@ class Review extends AbstractModel {
      */
     public static function enumType(): array {
         return [
-            self::TYPE_TEXT,
-            self::TYPE_URL,
+            Review::TYPE_TEXT,
+            Review::TYPE_URL,
         ];
     }
 
@@ -130,7 +130,7 @@ class Review extends AbstractModel {
      * @throws InvalidArgumentException Throws an invalid argument exception if the type is invalid.
      */
     public function setType(?string $type): Review {
-        if (null !== $type && false === in_array($type, static::enumType())) {
+        if (null !== $type && false === in_array($type, Review::enumType())) {
             throw new InvalidArgumentException(sprintf('The type "%s" is invalid', $type));
         }
         $this->type = $type;
