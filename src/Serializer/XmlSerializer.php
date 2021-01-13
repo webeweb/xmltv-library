@@ -98,7 +98,7 @@ class XmlSerializer {
         $output = [];
 
         foreach ($models as $current) {
-            $output[] = static::serializeModel($current);
+            $output[] = XmlSerializer::serializeModel($current);
         }
 
         return implode("", $output);
