@@ -94,6 +94,17 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeActor() method.
+     *
+     * @return void
+     */
+    public function testDeserializeActorWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeActor([]));
+    }
+
+    /**
+     * /**
      * Tests the deserializeAdapter() method.
      *
      * @return void
@@ -110,6 +121,17 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeAdapter() method.
+     *
+     * @return void
+     */
+    public function testDeserializeAdapterWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeAdapter([]));
+    }
+
+    /**
+     * /**
      * Tests the deserializeAspect() method.
      *
      * @return void
@@ -126,6 +148,17 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeAspect() method.
+     *
+     * @return void
+     */
+    public function testDeserializeAspectWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeAspect([]));
+    }
+
+    /**
+     * /**
      * Tests the deserializeAudio() method.
      *
      * @return void
@@ -143,6 +176,17 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeAudio() method.
+     *
+     * @return void
+     */
+    public function testDeserializeAudioWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeAudio([]));
+    }
+
+    /**
+     * /**
      * Tests the deserializeCategory() method.
      *
      * @return void
@@ -157,6 +201,16 @@ class JsonDeserializerTest extends AbstractTestCase {
 
         $this->assertEquals("category-lang", $res->getLang());
         $this->assertEquals("Category", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeCategory() method.
+     *
+     * @return void
+     */
+    public function testDeserializeCategoryWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeCategory([]));
     }
 
     /**
@@ -178,6 +232,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeChannel() method.
+     *
+     * @return void
+     */
+    public function testDeserializeChannelWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeChannel([]));
+    }
+
+    /**
      * Tests the deserializeColour() method.
      *
      * @return void
@@ -191,6 +255,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Colour::class, $res);
 
         $this->assertEquals("Colour", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeColour() method.
+     *
+     * @return void
+     */
+    public function testDeserializeColourWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeColour([]));
     }
 
     /**
@@ -210,6 +284,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeCommentator() method.
+     *
+     * @return void
+     */
+    public function testDeserializeCommentatorWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeCommentator([]));
+    }
+
+    /**
      * Tests the deserializeComposer() method.
      *
      * @return void
@@ -223,6 +307,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Composer::class, $res);
 
         $this->assertEquals("Composer", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeComposer() method.
+     *
+     * @return void
+     */
+    public function testDeserializeComposerWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeComposer([]));
     }
 
     /**
@@ -240,6 +334,16 @@ class JsonDeserializerTest extends AbstractTestCase {
 
         $this->assertEquals("country-lang", $res->getLang());
         $this->assertEquals("Country", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeCountry() method.
+     *
+     * @return void
+     */
+    public function testDeserializeCountryWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeCountry([]));
     }
 
     /**
@@ -268,6 +372,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeCredits() method.
+     *
+     * @return void
+     */
+    public function testDeserializeCreditsWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeCredits([]));
+    }
+
+    /**
      * Tests the deserializeDate() method.
      *
      * @return void
@@ -281,6 +395,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Date::class, $res);
 
         $this->assertEquals(1970, $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeDate() method.
+     *
+     * @return void
+     */
+    public function testDeserializeDateWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeDate([]));
     }
 
     /**
@@ -301,6 +425,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeDesc() method.
+     *
+     * @return void
+     */
+    public function testDeserializeDescWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeDesc([]));
+    }
+
+    /**
      * Tests the deserializeDirector() method.
      *
      * @return void
@@ -314,6 +448,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Director::class, $res);
 
         $this->assertEquals("Director", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeDirector() method.
+     *
+     * @return void
+     */
+    public function testDeserializeDirectorWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeDirector([]));
     }
 
     /**
@@ -334,6 +478,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeDisplayName() method.
+     *
+     * @return void
+     */
+    public function testDeserializeDisplayNameWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeDisplayName([]));
+    }
+
+    /**
      * Tests the deserializeEditor() method.
      *
      * @return void
@@ -347,6 +501,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Editor::class, $res);
 
         $this->assertEquals("Editor", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeEditor() method.
+     *
+     * @return void
+     */
+    public function testDeserializeEditorWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeEditor([]));
     }
 
     /**
@@ -367,6 +531,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeEpisodeNum() method.
+     *
+     * @return void
+     */
+    public function testDeserializeEpisodeNumWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeEpisodeNum([]));
+    }
+
+    /**
      * Tests the deserializeGuest() method.
      *
      * @return void
@@ -383,6 +557,17 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeGuest() method.
+     *
+     * @return void
+     */
+    public function testDeserializeGuestWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeGuest([]));
+    }
+
+    /**
+     * /**
      * Tests the deserializeIcon() method.
      *
      * @return void
@@ -398,6 +583,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertEquals("src", $res->getSrc());
         $this->assertEquals(1920, $res->getWidth());
         $this->assertEquals(1080, $res->getHeight());
+    }
+
+    /**
+     * Tests the deserializeIcon() method.
+     *
+     * @return void
+     */
+    public function testDeserializeIconWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeIcon([]));
     }
 
     /**
@@ -418,6 +613,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeKeyword() method.
+     *
+     * @return void
+     */
+    public function testDeserializeKeywordWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeKeyword([]));
+    }
+
+    /**
      * Tests the deserializeLanguage() method.
      *
      * @return void
@@ -432,6 +637,16 @@ class JsonDeserializerTest extends AbstractTestCase {
 
         $this->assertEquals("language-lang", $res->getLang());
         $this->assertEquals("Language", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeLanguage() method.
+     *
+     * @return void
+     */
+    public function testDeserializeLanguageWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeLanguage([]));
     }
 
     /**
@@ -452,6 +667,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeLastChance() method.
+     *
+     * @return void
+     */
+    public function testDeserializeLastChanceWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeLastChance([]));
+    }
+
+    /**
      * Tests the deserializeLength() method.
      *
      * @return void
@@ -466,6 +691,16 @@ class JsonDeserializerTest extends AbstractTestCase {
 
         $this->assertEquals("minutes", $res->getUnits());
         $this->assertEquals(90, $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeLength() method.
+     *
+     * @return void
+     */
+    public function testDeserializeLengthWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeLength([]));
     }
 
     /**
@@ -486,6 +721,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeOrigLanguage() method.
+     *
+     * @return void
+     */
+    public function testDeserializeOrigLanguageWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeOrigLanguage([]));
+    }
+
+    /**
      * Tests the deserializePremiere() method.
      *
      * @return void
@@ -500,6 +745,16 @@ class JsonDeserializerTest extends AbstractTestCase {
 
         $this->assertEquals("premiere-lang", $res->getLang());
         $this->assertEquals("Premiere", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializePremiere() method.
+     *
+     * @return void
+     */
+    public function testDeserializePremiereWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializePremiere([]));
     }
 
     /**
@@ -519,6 +774,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializePresent() method.
+     *
+     * @return void
+     */
+    public function testDeserializePresentWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializePresent([]));
+    }
+
+    /**
      * Tests the deserializePresenter() method.
      *
      * @return void
@@ -532,6 +797,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Presenter::class, $res);
 
         $this->assertEquals("Presenter", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializePresenter() method.
+     *
+     * @return void
+     */
+    public function testDeserializePresenterWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializePresenter([]));
     }
 
     /**
@@ -552,6 +827,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializePreviouslyShown() method.
+     *
+     * @return void
+     */
+    public function testDeserializePreviouslyShownWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializePreviouslyShown([]));
+    }
+
+    /**
      * Tests the deserializeProducer() method.
      *
      * @return void
@@ -565,6 +850,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Producer::class, $res);
 
         $this->assertEquals("Producer", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeProducer() method.
+     *
+     * @return void
+     */
+    public function testDeserializeProducerWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeProducer([]));
     }
 
     /**
@@ -616,6 +911,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeProgramme() method.
+     *
+     * @return void
+     */
+    public function testDeserializeProgrammeWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeProgramme([]));
+    }
+
+    /**
      * Tests the deserializeQuality() method.
      *
      * @return void
@@ -629,6 +934,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Quality::class, $res);
 
         $this->assertEquals("Quality", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeQuality() method.
+     *
+     * @return void
+     */
+    public function testDeserializeQualityWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeQuality([]));
     }
 
     /**
@@ -647,6 +962,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertEquals("rating-system", $res->getSystem());
         $this->assertInstanceOf(Value::class, $res->getValue());
         $this->assertInstanceOf(Icon::class, $res->getIcons()[0]);
+    }
+
+    /**
+     * Tests the deserializeRating() method.
+     *
+     * @return void
+     */
+    public function testDeserializeRatingWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeRating([]));
     }
 
     /**
@@ -669,6 +994,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeReview() method.
+     *
+     * @return void
+     */
+    public function testDeserializeReviewWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeReview([]));
+    }
+
+    /**
      * Tests the deserializeSecondaryTitle() method.
      *
      * @return void
@@ -683,6 +1018,16 @@ class JsonDeserializerTest extends AbstractTestCase {
 
         $this->assertEquals("secondary-title-lang", $res->getLang());
         $this->assertEquals("Secondary title", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeSecondaryTitle() method.
+     *
+     * @return void
+     */
+    public function testDeserializeSecondaryTitleWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeSecondaryTitle([]));
     }
 
     /**
@@ -703,6 +1048,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeStarRating() method.
+     *
+     * @return void
+     */
+    public function testDeserializeStarRatingWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeStarRating([]));
+    }
+
+    /**
      * Tests the deserializeStereo() method.
      *
      * @return void
@@ -716,6 +1071,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Stereo::class, $res);
 
         $this->assertEquals("Stereo", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeStereo() method.
+     *
+     * @return void
+     */
+    public function testDeserializeStereoWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeStereo([]));
     }
 
     /**
@@ -736,6 +1101,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeSubtitles() method.
+     *
+     * @return void
+     */
+    public function testDeserializeSubtitlesWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeSubtitles([]));
+    }
+
+    /**
      * Tests the deserializeTitle() method.
      *
      * @return void
@@ -750,6 +1125,16 @@ class JsonDeserializerTest extends AbstractTestCase {
 
         $this->assertEquals("title-lang", $res->getLang());
         $this->assertEquals("Title", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeTitle() method.
+     *
+     * @return void
+     */
+    public function testDeserializeTitleWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeTitle([]));
     }
 
     /**
@@ -776,6 +1161,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeTv() method.
+     *
+     * @return void
+     */
+    public function testDeserializeTvWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeTv([]));
+    }
+
+    /**
      * Tests the deserializeUrl() method.
      *
      * @return void
@@ -792,6 +1187,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeUrl() method.
+     *
+     * @return void
+     */
+    public function testDeserializeUrlWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeUrl([]));
+    }
+
+    /**
      * Tests the deserializeValue() method.
      *
      * @return void
@@ -805,6 +1210,16 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Value::class, $res);
 
         $this->assertEquals("Value", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeValue() method.
+     *
+     * @return void
+     */
+    public function testDeserializeValueWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeValue([]));
     }
 
     /**
@@ -827,6 +1242,16 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
+     * Tests the deserializeVideo() method.
+     *
+     * @return void
+     */
+    public function testDeserializeVideoWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeVideo([]));
+    }
+
+    /**
      * Tests the deserializeWriter() method.
      *
      * @return void
@@ -840,5 +1265,15 @@ class JsonDeserializerTest extends AbstractTestCase {
         $this->assertInstanceOf(Writer::class, $res);
 
         $this->assertEquals("Writer", $res->getContent());
+    }
+
+    /**
+     * Tests the deserializeWriter() method.
+     *
+     * @return void
+     */
+    public function testDeserializeWriterWithEmptyData(): void {
+
+        $this->assertNull(JsonDeserializer::deserializeWriter([]));
     }
 }
