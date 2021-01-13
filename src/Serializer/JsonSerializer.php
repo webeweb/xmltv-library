@@ -77,7 +77,7 @@ class JsonSerializer {
         $output = [];
 
         foreach ($models as $current) {
-            $output[] = static::serializeModel($current);
+            $output[] = JsonSerializer::serializeModel($current);
         }
 
         return $output;
@@ -181,16 +181,16 @@ class JsonSerializer {
      */
     public static function serializeCredits(Credits $model): array {
         return [
-            "directors"    => static::serializeArray($model->getDirectors()),
-            "actors"       => static::serializeArray($model->getActors()),
-            "writers"      => static::serializeArray($model->getWriters()),
-            "adapters"     => static::serializeArray($model->getAdapters()),
-            "producers"    => static::serializeArray($model->getProducers()),
-            "composers"    => static::serializeArray($model->getComposers()),
-            "editors"      => static::serializeArray($model->getEditors()),
-            "presenters"   => static::serializeArray($model->getPresenters()),
-            "commentators" => static::serializeArray($model->getCommentators()),
-            "guests"       => static::serializeArray($model->getGuests()),
+            "directors"    => JsonSerializer::serializeArray($model->getDirectors()),
+            "actors"       => JsonSerializer::serializeArray($model->getActors()),
+            "writers"      => JsonSerializer::serializeArray($model->getWriters()),
+            "adapters"     => JsonSerializer::serializeArray($model->getAdapters()),
+            "producers"    => JsonSerializer::serializeArray($model->getProducers()),
+            "composers"    => JsonSerializer::serializeArray($model->getComposers()),
+            "editors"      => JsonSerializer::serializeArray($model->getEditors()),
+            "presenters"   => JsonSerializer::serializeArray($model->getPresenters()),
+            "commentators" => JsonSerializer::serializeArray($model->getCommentators()),
+            "guests"       => JsonSerializer::serializeArray($model->getGuests()),
         ];
     }
 
