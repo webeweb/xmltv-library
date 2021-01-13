@@ -27,6 +27,13 @@ use WBW\Library\XMLTV\Model\SecondaryTitle;
 class SerializerHelper {
 
     /**
+     * Date/time format.
+     *
+     * @var string
+     */
+    const DATE_TIME_FORMAT = "YmdHis O";
+
+    /**
      * Logger.
      *
      * @var LoggerInterface|null
@@ -43,10 +50,10 @@ class SerializerHelper {
      */
     public static function deserializeChildNode(DomNode $domNode, string $nodeName, AbstractModel $model): void {
 
-        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . static::getMethodName("deserialize", $nodeName);
-        $set = static::getMethodName("set", $nodeName);
+        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
+        $set = SerializerHelper::getMethodName("set", $nodeName);
 
-        $node = static::getDOMNodeByName($nodeName, $domNode->childNodes);
+        $node = SerializerHelper::getDOMNodeByName($nodeName, $domNode->childNodes);
         if (null !== $node) {
             $model->$set(call_user_func_array($fct, [$node]));
         }
@@ -62,10 +69,10 @@ class SerializerHelper {
      */
     public static function deserializeChildNodes(DomNode $domNode, string $nodeName, AbstractModel $model): void {
 
-        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . static::getMethodName("deserialize", $nodeName);
-        $add = static::getMethodName("add", $nodeName);
+        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
+        $add = SerializerHelper::getMethodName("add", $nodeName);
 
-        $nodes = static::getDOMNodesByName($nodeName, $domNode->childNodes);
+        $nodes = SerializerHelper::getDOMNodesByName($nodeName, $domNode->childNodes);
         foreach ($nodes as $current) {
             $model->$add(call_user_func_array($fct, [$current]));
         }
@@ -79,7 +86,7 @@ class SerializerHelper {
      */
     public static function deserializeDateTime(?string $value): ?DateTime {
 
-        $dateTime = DateTime::createFromFormat("YmdHis O", $value);
+        $dateTime = DateTime::createFromFormat(SerializerHelper::DATE_TIME_FORMAT, $value);
         if (false === $dateTime) {
             return null;
         }
@@ -114,7 +121,7 @@ class SerializerHelper {
      */
     public static function getDOMNodeByName(string $nodeName, DOMNodeList $domNodeList = null): ?DOMNode {
 
-        $domNodes = static::getDOMNodesByName($nodeName, $domNodeList);
+        $domNodes = SerializerHelper::getDOMNodesByName($nodeName, $domNodeList);
         if (1 !== count($domNodes)) {
             return null;
         }
@@ -156,7 +163,7 @@ class SerializerHelper {
      * @return LoggerInterface|null Returns the logger.
      */
     public static function getLogger(): ?LoggerInterface {
-        return static::$logger;
+        return SerializerHelper::$logger;
     }
 
     /**
@@ -188,7 +195,7 @@ class SerializerHelper {
      */
     public static function log(DOMNode $domNode): void {
 
-        if (null === static::getLogger()) {
+        if (null === SerializerHelper::getLogger()) {
             return;
         }
 
@@ -204,7 +211,7 @@ class SerializerHelper {
             $context["_children"][] = $current->nodeName;
         }
 
-        static::$logger->debug(sprintf('Deserialize a DOM node with name "%s"', $domNode->nodeName), $context);
+        SerializerHelper::$logger->debug(sprintf('Deserialize a DOM node with name "%s"', $domNode->nodeName), $context);
     }
 
     /**
@@ -214,6 +221,6 @@ class SerializerHelper {
      * @return void
      */
     public static function setLogger(?LoggerInterface $logger): void {
-        static::$logger = $logger;
+        SerializerHelper::$logger = $logger;
     }
 }

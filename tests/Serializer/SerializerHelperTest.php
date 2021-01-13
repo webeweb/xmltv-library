@@ -120,4 +120,14 @@ class SerializerHelperTest extends AbstractTestCase {
         // Unset the mock.
         SerializerHelper::setLogger(null);
     }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct(): void {
+
+        $this->assertEquals("YmdHis O", SerializerHelper::DATE_TIME_FORMAT);
+    }
 }
