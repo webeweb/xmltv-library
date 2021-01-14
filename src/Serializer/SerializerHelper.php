@@ -264,33 +264,14 @@ class SerializerHelper {
     }
 
     /**
-     * Deserialize a child node.
+     * Deserialize an array.
      *
      * @param DOMNode $domNode The DOM node.
      * @param string $nodeName The node name.
      * @param AbstractModel $model The model.
      * @return void
      */
-    public static function xmlDeserializeChildNode(DomNode $domNode, string $nodeName, AbstractModel $model): void {
-
-        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
-        $set = SerializerHelper::getMethodName("set", $nodeName);
-
-        $node = SerializerHelper::getDOMNodeByName($nodeName, $domNode->childNodes);
-        if (null !== $node) {
-            $model->$set(call_user_func_array($fct, [$node]));
-        }
-    }
-
-    /**
-     * Deserialize the child nodes.
-     *
-     * @param DOMNode $domNode The DOM node.
-     * @param string $nodeName The node name.
-     * @param AbstractModel $model The model.
-     * @return void
-     */
-    public static function xmlDeserializeChildNodes(DomNode $domNode, string $nodeName, AbstractModel $model): void {
+    public static function xmlDeserializeArray(DomNode $domNode, string $nodeName, AbstractModel $model): void {
 
         $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
         $add = SerializerHelper::getMethodName("add", $nodeName);
@@ -298,6 +279,25 @@ class SerializerHelper {
         $nodes = SerializerHelper::getDOMNodesByName($nodeName, $domNode->childNodes);
         foreach ($nodes as $current) {
             $model->$add(call_user_func_array($fct, [$current]));
+        }
+    }
+
+    /**
+     * Deserialize a model.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function xmlDeserializeModel(DomNode $domNode, string $nodeName, AbstractModel $model): void {
+
+        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
+        $set = SerializerHelper::getMethodName("set", $nodeName);
+
+        $node = SerializerHelper::getDOMNodeByName($nodeName, $domNode->childNodes);
+        if (null !== $node) {
+            $model->$set(call_user_func_array($fct, [$node]));
         }
     }
 
