@@ -90,7 +90,7 @@ class SerializerHelperTest extends AbstractTestCase {
      */
     public function testGetDOMNodesByNameWithNull(): void {
 
-        $this->assertEquals([], SerializerHelper::getDOMNodesByName("channel", null));
+        $this->assertEquals([], SerializerHelper::getDOMNodesByName("channel"));
     }
 
     /**
