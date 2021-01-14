@@ -12,7 +12,6 @@
 namespace WBW\Library\XMLTV\Serializer;
 
 use WBW\Library\Core\Argument\Helper\ArrayHelper;
-use WBW\Library\XMLTV\Model\AbstractModel;
 use WBW\Library\XMLTV\Model\Actor;
 use WBW\Library\XMLTV\Model\Adapter;
 use WBW\Library\XMLTV\Model\Aspect;
@@ -95,27 +94,6 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserialize an array.
-     *
-     * @param array $array The array.
-     * @param string $nodeName The node name.
-     * @param AbstractModel $model The model.
-     * @return void
-     */
-    protected static function deserializeArray(array $array, string $nodeName, AbstractModel $model): void {
-
-        $fct = __NAMESPACE__ . "\\JsonDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
-        $add = SerializerHelper::getMethodName("add", $nodeName);
-
-        foreach ($array as $current) {
-            if (0 === count($current)) {
-                continue;
-            }
-            $model->$add(call_user_func($fct, $current));
-        }
-    }
-
-    /**
      * Deserialize an aspect.
      *
      * @param array $data The data.
@@ -138,8 +116,8 @@ class JsonDeserializer {
     public static function deserializeAudio(array $data): ?Audio {
 
         $model = new Audio();
-        JsonDeserializer::deserializeModel($data, Present::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, Stereo::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Present::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Stereo::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -169,9 +147,9 @@ class JsonDeserializer {
 
         $model = new Channel();
         $model->setId(ArrayHelper::get($data, "id"));
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "displayNames", []), DisplayName::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "urls", []), Url::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "displayNames", []), DisplayName::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "urls", []), Url::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -242,16 +220,16 @@ class JsonDeserializer {
     public static function deserializeCredits(array $data): ?Credits {
 
         $model = new Credits();
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "directors", []), Director::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "actors", []), Actor::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "writers", []), Writer::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "adapters", []), Adapter::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "producers", []), Producer::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "composers", []), Composer::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "editors", []), Editor::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "presenters", []), Presenter::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "commentators", []), Commentator::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "guests", []), Guest::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "directors", []), Director::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "actors", []), Actor::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "writers", []), Writer::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "adapters", []), Adapter::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "producers", []), Producer::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "composers", []), Composer::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "editors", []), Editor::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "presenters", []), Presenter::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "commentators", []), Commentator::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "guests", []), Guest::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -434,27 +412,6 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserialize an  model.
-     *
-     * @param array $array The array.
-     * @param string $nodeName The node name.
-     * @param AbstractModel $model The model.
-     * @return void
-     */
-    protected static function deserializeModel(array $array, string $nodeName, AbstractModel $model): void {
-
-        $data = ArrayHelper::get($array, $nodeName, []);
-        if (0 === count($data)) {
-            return;
-        }
-
-        $fct = __NAMESPACE__ . "\\JsonDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
-        $set = SerializerHelper::getMethodName("set", $nodeName);
-
-        $model->$set(call_user_func($fct, $data));
-    }
-
-    /**
      * Deserialize an original language.
      *
      * @param array $data The data.
@@ -558,30 +515,30 @@ class JsonDeserializer {
         $model->setVideoPlus(ArrayHelper::get($data, "videoPlus"));
         $model->setChannel(ArrayHelper::get($data, "channel"));
         $model->setClumpIdx(ArrayHelper::get($data, "clumpIdx"));
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "titles", []), Title::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "secondaryTitles", []), SecondaryTitle::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "descs", []), Desc::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "titles", []), Title::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "secondaryTitles", []), SecondaryTitle::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "descs", []), Desc::DOM_NODE_NAME, $model);
         $model->setCredits(JsonDeserializer::deserializeCredits($data));
-        JsonDeserializer::deserializeModel($data, Date::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "categories", []), Category::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "keywords", []), Keyword::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, Language::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, "origLanguage", $model);
-        JsonDeserializer::deserializeModel($data, Length::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "urls", []), Url::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "countries", []), Country::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "episodeNums", []), EpisodeNum::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, Video::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, Audio::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, "previouslyShown", $model);
-        JsonDeserializer::deserializeModel($data, Premiere::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, "lastChance", $model);
+        SerializerHelper::jsonDeserializeModel($data, Date::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "categories", []), Category::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "keywords", []), Keyword::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Language::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, "origLanguage", $model);
+        SerializerHelper::jsonDeserializeModel($data, Length::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "urls", []), Url::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "countries", []), Country::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "episodeNums", []), EpisodeNum::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Video::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Audio::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, "previouslyShown", $model);
+        SerializerHelper::jsonDeserializeModel($data, Premiere::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, "lastChance", $model);
         $model->setNew(ArrayHelper::get($data, "new"));
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "subtitles", []), Subtitles::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "ratings", []), Rating::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "starRatings", []), StarRating::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "reviews", []), Review::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "subtitles", []), Subtitles::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "ratings", []), Rating::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "starRatings", []), StarRating::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "reviews", []), Review::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -610,8 +567,8 @@ class JsonDeserializer {
 
         $model = new Rating();
         $model->setSystem(ArrayHelper::get($data, "system"));
-        JsonDeserializer::deserializeModel($data, Value::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Value::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -657,8 +614,8 @@ class JsonDeserializer {
     public static function deserializeStarRating(array $data): ?StarRating {
 
         $model = new StarRating();
-        JsonDeserializer::deserializeModel($data, Value::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Value::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -687,7 +644,7 @@ class JsonDeserializer {
 
         $model = new Subtitles();
         $model->setType(ArrayHelper::get($data, "type"));
-        JsonDeserializer::deserializeModel($data, Language::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Language::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -722,8 +679,8 @@ class JsonDeserializer {
         $model->setSourceDataUrl(ArrayHelper::get($data, "sourceDataUrl"));
         $model->setSourceInfoName(ArrayHelper::get($data, "sourceInfoName"));
         $model->setSourceInfoUrl(ArrayHelper::get($data, "sourceInfoUrl"));
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "channels", []), Channel::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeArray(ArrayHelper::get($data, "programmes", []), Programme::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "channels", []), Channel::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, "programmes", []), Programme::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -765,10 +722,10 @@ class JsonDeserializer {
     public static function deserializeVideo(array $data): ?Video {
 
         $model = new Video();
-        JsonDeserializer::deserializeModel($data, Present::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, Colour::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, Aspect::DOM_NODE_NAME, $model);
-        JsonDeserializer::deserializeModel($data, Quality::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Present::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Colour::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Aspect::DOM_NODE_NAME, $model);
+        SerializerHelper::jsonDeserializeModel($data, Quality::DOM_NODE_NAME, $model);
 
         return $model;
     }

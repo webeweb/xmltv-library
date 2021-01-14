@@ -12,7 +12,6 @@
 namespace WBW\Library\XMLTV\Serializer;
 
 use WBW\Library\XMLTV\Model\AbstractCredit;
-use WBW\Library\XMLTV\Model\AbstractModel;
 use WBW\Library\XMLTV\Model\Actor;
 use WBW\Library\XMLTV\Model\Aspect;
 use WBW\Library\XMLTV\Model\Audio;
@@ -67,23 +66,6 @@ class JsonSerializer {
     }
 
     /**
-     * Serialize an array.
-     *
-     * @param AbstractModel[] $models The models.
-     * @return array Returns the serialized array.
-     */
-    protected static function serializeArray(array $models): array {
-
-        $output = [];
-
-        foreach ($models as $current) {
-            $output[] = JsonSerializer::serializeModel($current);
-        }
-
-        return $output;
-    }
-
-    /**
      * Serialize an aspect.
      *
      * @param Aspect $model The aspect.
@@ -103,8 +85,8 @@ class JsonSerializer {
      */
     public static function serializeAudio(Audio $model): array {
         return [
-            "present" => JsonSerializer::serializeModel($model->getPresent()),
-            "stereo"  => JsonSerializer::serializeModel($model->getStereo()),
+            "present" => SerializerHelper::jsonSerializeModel($model->getPresent()),
+            "stereo"  => SerializerHelper::jsonSerializeModel($model->getStereo()),
         ];
     }
 
@@ -130,9 +112,9 @@ class JsonSerializer {
     public static function serializeChannel(Channel $model): array {
         return [
             "id"           => $model->getId(),
-            "displayNames" => JsonSerializer::serializeArray($model->getDisplayNames()),
-            "icons"        => JsonSerializer::serializeArray($model->getIcons()),
-            "urls"         => JsonSerializer::serializeArray($model->getUrls()),
+            "displayNames" => SerializerHelper::jsonSerializeArray($model->getDisplayNames()),
+            "icons"        => SerializerHelper::jsonSerializeArray($model->getIcons()),
+            "urls"         => SerializerHelper::jsonSerializeArray($model->getUrls()),
         ];
     }
 
@@ -181,16 +163,16 @@ class JsonSerializer {
      */
     public static function serializeCredits(Credits $model): array {
         return [
-            "directors"    => JsonSerializer::serializeArray($model->getDirectors()),
-            "actors"       => JsonSerializer::serializeArray($model->getActors()),
-            "writers"      => JsonSerializer::serializeArray($model->getWriters()),
-            "adapters"     => JsonSerializer::serializeArray($model->getAdapters()),
-            "producers"    => JsonSerializer::serializeArray($model->getProducers()),
-            "composers"    => JsonSerializer::serializeArray($model->getComposers()),
-            "editors"      => JsonSerializer::serializeArray($model->getEditors()),
-            "presenters"   => JsonSerializer::serializeArray($model->getPresenters()),
-            "commentators" => JsonSerializer::serializeArray($model->getCommentators()),
-            "guests"       => JsonSerializer::serializeArray($model->getGuests()),
+            "directors"    => SerializerHelper::jsonSerializeArray($model->getDirectors()),
+            "actors"       => SerializerHelper::jsonSerializeArray($model->getActors()),
+            "writers"      => SerializerHelper::jsonSerializeArray($model->getWriters()),
+            "adapters"     => SerializerHelper::jsonSerializeArray($model->getAdapters()),
+            "producers"    => SerializerHelper::jsonSerializeArray($model->getProducers()),
+            "composers"    => SerializerHelper::jsonSerializeArray($model->getComposers()),
+            "editors"      => SerializerHelper::jsonSerializeArray($model->getEditors()),
+            "presenters"   => SerializerHelper::jsonSerializeArray($model->getPresenters()),
+            "commentators" => SerializerHelper::jsonSerializeArray($model->getCommentators()),
+            "guests"       => SerializerHelper::jsonSerializeArray($model->getGuests()),
         ];
     }
 
@@ -312,21 +294,6 @@ class JsonSerializer {
     }
 
     /**
-     * Serialize a model.
-     *
-     * @param AbstractModel|null $model The model.
-     * @return array Returns the serialized model.
-     */
-    protected static function serializeModel(?AbstractModel $model): array {
-
-        if (null === $model) {
-            return [];
-        }
-
-        return $model->jsonSerialize();
-    }
-
-    /**
      * Serialize an original language.
      *
      * @param OrigLanguage $model The original language.
@@ -393,30 +360,30 @@ class JsonSerializer {
             "videoPlus"       => $model->getVideoPlus(),
             "channel"         => $model->getChannel(),
             "clumpIdx"        => $model->getClumpIdx(),
-            "titles"          => JsonSerializer::serializeArray($model->getTitles()),
-            "secondaryTitles" => JsonSerializer::serializeArray($model->getSecondaryTitles()),
-            "descs"           => JsonSerializer::serializeArray($model->getDescs()),
-            "credits"         => JsonSerializer::serializeModel($model->getCredits()),
-            "date"            => JsonSerializer::serializeModel($model->getDate()),
-            "categories"      => JsonSerializer::serializeArray($model->getCategories()),
-            "keywords"        => JsonSerializer::serializeArray($model->getKeywords()),
-            "language"        => JsonSerializer::serializeModel($model->getLanguage()),
-            "origLanguage"    => JsonSerializer::serializeModel($model->getOrigLanguage()),
-            "length"          => JsonSerializer::serializeModel($model->getLength()),
-            "icons"           => JsonSerializer::serializeArray($model->getIcons()),
-            "urls"            => JsonSerializer::serializeArray($model->getUrls()),
-            "countries"       => JsonSerializer::serializeArray($model->getCountries()),
-            "episodeNums"     => JsonSerializer::serializeArray($model->getEpisodeNums()),
-            "video"           => JsonSerializer::serializeModel($model->getVideo()),
-            "audio"           => JsonSerializer::serializeModel($model->getAudio()),
-            "previouslyShown" => JsonSerializer::serializeModel($model->getPreviouslyShown()),
-            "premiere"        => JsonSerializer::serializeModel($model->getPremiere()),
-            "lastChance"      => JsonSerializer::serializeModel($model->getLastChance()),
+            "titles"          => SerializerHelper::jsonSerializeArray($model->getTitles()),
+            "secondaryTitles" => SerializerHelper::jsonSerializeArray($model->getSecondaryTitles()),
+            "descs"           => SerializerHelper::jsonSerializeArray($model->getDescs()),
+            "credits"         => SerializerHelper::jsonSerializeModel($model->getCredits()),
+            "date"            => SerializerHelper::jsonSerializeModel($model->getDate()),
+            "categories"      => SerializerHelper::jsonSerializeArray($model->getCategories()),
+            "keywords"        => SerializerHelper::jsonSerializeArray($model->getKeywords()),
+            "language"        => SerializerHelper::jsonSerializeModel($model->getLanguage()),
+            "origLanguage"    => SerializerHelper::jsonSerializeModel($model->getOrigLanguage()),
+            "length"          => SerializerHelper::jsonSerializeModel($model->getLength()),
+            "icons"           => SerializerHelper::jsonSerializeArray($model->getIcons()),
+            "urls"            => SerializerHelper::jsonSerializeArray($model->getUrls()),
+            "countries"       => SerializerHelper::jsonSerializeArray($model->getCountries()),
+            "episodeNums"     => SerializerHelper::jsonSerializeArray($model->getEpisodeNums()),
+            "video"           => SerializerHelper::jsonSerializeModel($model->getVideo()),
+            "audio"           => SerializerHelper::jsonSerializeModel($model->getAudio()),
+            "previouslyShown" => SerializerHelper::jsonSerializeModel($model->getPreviouslyShown()),
+            "premiere"        => SerializerHelper::jsonSerializeModel($model->getPremiere()),
+            "lastChance"      => SerializerHelper::jsonSerializeModel($model->getLastChance()),
             "new"             => $model->getNew(),
-            "subtitles"       => JsonSerializer::serializeArray($model->getSubtitles()),
-            "ratings"         => JsonSerializer::serializeArray($model->getRatings()),
-            "starRatings"     => JsonSerializer::serializeArray($model->getStarRatings()),
-            "reviews"         => JsonSerializer::serializeArray($model->getReviews()),
+            "subtitles"       => SerializerHelper::jsonSerializeArray($model->getSubtitles()),
+            "ratings"         => SerializerHelper::jsonSerializeArray($model->getRatings()),
+            "starRatings"     => SerializerHelper::jsonSerializeArray($model->getStarRatings()),
+            "reviews"         => SerializerHelper::jsonSerializeArray($model->getReviews()),
         ];
     }
 
@@ -441,8 +408,8 @@ class JsonSerializer {
     public static function serializeRating(Rating $model): array {
         return [
             "system" => $model->getSystem(),
-            "value"  => JsonSerializer::serializeModel($model->getValue()),
-            "icons"  => JsonSerializer::serializeArray($model->getIcons()),
+            "value"  => SerializerHelper::jsonSerializeModel($model->getValue()),
+            "icons"  => SerializerHelper::jsonSerializeArray($model->getIcons()),
         ];
     }
 
@@ -482,8 +449,8 @@ class JsonSerializer {
      */
     public static function serializeStarRating(StarRating $model): array {
         return [
-            "value" => JsonSerializer::serializeModel($model->getValue()),
-            "icons" => JsonSerializer::serializeArray($model->getIcons()),
+            "value" => SerializerHelper::jsonSerializeModel($model->getValue()),
+            "icons" => SerializerHelper::jsonSerializeArray($model->getIcons()),
         ];
     }
 
@@ -508,7 +475,7 @@ class JsonSerializer {
     public static function serializeSubtitles(Subtitles $model): array {
         return [
             "type"     => $model->getType(),
-            "language" => JsonSerializer::serializeModel($model->getLanguage()),
+            "language" => SerializerHelper::jsonSerializeModel($model->getLanguage()),
         ];
     }
 
@@ -539,8 +506,8 @@ class JsonSerializer {
             "sourceDataUrl"     => $model->getSourceDataUrl(),
             "sourceInfoName"    => $model->getSourceInfoName(),
             "sourceInfoUrl"     => $model->getSourceInfoUrl(),
-            "channels"          => JsonSerializer::serializeArray($model->getChannels()),
-            "programmes"        => JsonSerializer::serializeArray($model->getProgrammes()),
+            "channels"          => SerializerHelper::jsonSerializeArray($model->getChannels()),
+            "programmes"        => SerializerHelper::jsonSerializeArray($model->getProgrammes()),
         ];
     }
 
@@ -576,10 +543,10 @@ class JsonSerializer {
      */
     public static function serializeVideo(Video $model): array {
         return [
-            "present" => JsonSerializer::serializeModel($model->getPresent()),
-            "colour"  => JsonSerializer::serializeModel($model->getColour()),
-            "aspect"  => JsonSerializer::serializeModel($model->getAspect()),
-            "quality" => JsonSerializer::serializeModel($model->getQuality()),
+            "present" => SerializerHelper::jsonSerializeModel($model->getPresent()),
+            "colour"  => SerializerHelper::jsonSerializeModel($model->getColour()),
+            "aspect"  => SerializerHelper::jsonSerializeModel($model->getAspect()),
+            "quality" => SerializerHelper::jsonSerializeModel($model->getQuality()),
         ];
     }
 }

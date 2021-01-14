@@ -15,6 +15,7 @@ use DateTime;
 use DOMNode;
 use DOMNodeList;
 use Psr\Log\LoggerInterface;
+use WBW\Library\Core\Argument\Helper\ArrayHelper;
 use WBW\Library\XMLTV\Model\AbstractModel;
 use WBW\Library\XMLTV\Model\SecondaryTitle;
 
@@ -39,44 +40,6 @@ class SerializerHelper {
      * @var LoggerInterface|null
      */
     protected static $logger;
-
-    /**
-     * Deserialize a child node.
-     *
-     * @param DOMNode $domNode The DOM node.
-     * @param string $nodeName The node name.
-     * @param AbstractModel $model The model.
-     * @return void
-     */
-    public static function deserializeChildNode(DomNode $domNode, string $nodeName, AbstractModel $model): void {
-
-        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
-        $set = SerializerHelper::getMethodName("set", $nodeName);
-
-        $node = SerializerHelper::getDOMNodeByName($nodeName, $domNode->childNodes);
-        if (null !== $node) {
-            $model->$set(call_user_func_array($fct, [$node]));
-        }
-    }
-
-    /**
-     * Deserialize the child nodes.
-     *
-     * @param DOMNode $domNode The DOM node.
-     * @param string $nodeName The node name.
-     * @param AbstractModel $model The model.
-     * @return void
-     */
-    public static function deserializeChildNodes(DomNode $domNode, string $nodeName, AbstractModel $model): void {
-
-        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
-        $add = SerializerHelper::getMethodName("add", $nodeName);
-
-        $nodes = SerializerHelper::getDOMNodesByName($nodeName, $domNode->childNodes);
-        foreach ($nodes as $current) {
-            $model->$add(call_user_func_array($fct, [$current]));
-        }
-    }
 
     /**
      * Deserialize a date/time.
@@ -188,6 +151,82 @@ class SerializerHelper {
     }
 
     /**
+     * Deserialize an array.
+     *
+     * @param array $array The array.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function jsonDeserializeArray(array $array, string $nodeName, AbstractModel $model): void {
+
+        $fct = __NAMESPACE__ . "\\JsonDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
+        $add = SerializerHelper::getMethodName("add", $nodeName);
+
+        foreach ($array as $current) {
+
+            if (0 === count($current)) {
+                continue;
+            }
+
+            $model->$add(call_user_func($fct, $current));
+        }
+    }
+
+    /**
+     * Deserialize an  model.
+     *
+     * @param array $array The array.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function jsonDeserializeModel(array $array, string $nodeName, AbstractModel $model): void {
+
+        $data = ArrayHelper::get($array, $nodeName, []);
+        if (0 === count($data)) {
+            return;
+        }
+
+        $fct = __NAMESPACE__ . "\\JsonDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
+        $set = SerializerHelper::getMethodName("set", $nodeName);
+
+        $model->$set(call_user_func($fct, $data));
+    }
+
+    /**
+     * Serialize an array.
+     *
+     * @param AbstractModel[] $models The models.
+     * @return array Returns the serialized array.
+     */
+    public static function jsonSerializeArray(array $models): array {
+
+        $output = [];
+
+        foreach ($models as $current) {
+            $output[] = SerializerHelper::jsonSerializeModel($current);
+        }
+
+        return $output;
+    }
+
+    /**
+     * Serialize a model.
+     *
+     * @param AbstractModel|null $model The model.
+     * @return array Returns the serialized model.
+     */
+    public static function jsonSerializeModel(?AbstractModel $model): array {
+
+        if (null === $model) {
+            return [];
+        }
+
+        return $model->jsonSerialize();
+    }
+
+    /**
      * Log.
      *
      * @param DOMNode $domNode The DOM node.
@@ -222,5 +261,75 @@ class SerializerHelper {
      */
     public static function setLogger(?LoggerInterface $logger): void {
         SerializerHelper::$logger = $logger;
+    }
+
+    /**
+     * Deserialize a child node.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function xmlDeserializeChildNode(DomNode $domNode, string $nodeName, AbstractModel $model): void {
+
+        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
+        $set = SerializerHelper::getMethodName("set", $nodeName);
+
+        $node = SerializerHelper::getDOMNodeByName($nodeName, $domNode->childNodes);
+        if (null !== $node) {
+            $model->$set(call_user_func_array($fct, [$node]));
+        }
+    }
+
+    /**
+     * Deserialize the child nodes.
+     *
+     * @param DOMNode $domNode The DOM node.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    public static function xmlDeserializeChildNodes(DomNode $domNode, string $nodeName, AbstractModel $model): void {
+
+        $fct = __NAMESPACE__ . "\\XmlDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
+        $add = SerializerHelper::getMethodName("add", $nodeName);
+
+        $nodes = SerializerHelper::getDOMNodesByName($nodeName, $domNode->childNodes);
+        foreach ($nodes as $current) {
+            $model->$add(call_user_func_array($fct, [$current]));
+        }
+    }
+
+    /**
+     * Serialize an array.
+     *
+     * @param AbstractModel[] $models The models.
+     * @return string Returns the serialized array.
+     */
+    public static function xmlSerializeArray(array $models): string {
+
+        $output = [];
+
+        foreach ($models as $current) {
+            $output[] = SerializerHelper::xmlSerializeModel($current);
+        }
+
+        return implode("", $output);
+    }
+
+    /**
+     * Serialize a model.
+     *
+     * @param AbstractModel|null $model The model.
+     * @return string Returns the serialized model.
+     */
+    public static function xmlSerializeModel(?AbstractModel $model): string {
+
+        if (null === $model) {
+            return "";
+        }
+
+        return $model->xmlSerialize();
     }
 }

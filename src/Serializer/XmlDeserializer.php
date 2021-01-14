@@ -125,8 +125,8 @@ class XmlDeserializer {
 
         $model = new Audio();
 
-        SerializerHelper::deserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Stereo::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Stereo::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -161,9 +161,9 @@ class XmlDeserializer {
         $model = new Channel();
         $model->setId(SerializerHelper::getDOMAttributeValue($domNode, "id"));
 
-        SerializerHelper::deserializeChildNodes($domNode, DisplayName::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, DisplayName::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -245,16 +245,16 @@ class XmlDeserializer {
 
         $model = new Credits();
 
-        SerializerHelper::deserializeChildNodes($domNode, Director::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Actor::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Writer::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Adapter::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Producer::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Composer::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Editor::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Presenter::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Commentator::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Guest::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Director::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Actor::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Writer::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Adapter::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Producer::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Composer::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Editor::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Presenter::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Commentator::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Guest::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -580,30 +580,30 @@ class XmlDeserializer {
         $model->setVideoPlus(SerializerHelper::getDOMAttributeValue($domNode, "videoplus"));
         $model->setChannel(SerializerHelper::getDOMAttributeValue($domNode, "channel"));
         $model->setClumpIdx(SerializerHelper::getDOMAttributeValue($domNode, "clumpidx"));
-        SerializerHelper::deserializeChildNodes($domNode, Title::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, SecondaryTitle::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Desc::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Credits::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Date::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Category::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Keyword::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, OrigLanguage::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Length::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Country::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, EpisodeNum::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Video::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Audio::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, PreviouslyShown::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Premiere::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, LastChance::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Title::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, SecondaryTitle::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Desc::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Credits::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Date::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Category::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Keyword::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, OrigLanguage::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Length::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Url::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Country::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, EpisodeNum::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Video::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Audio::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, PreviouslyShown::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Premiere::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, LastChance::DOM_NODE_NAME, $model);
         $model->setNew(null !== $newNode);
-        SerializerHelper::deserializeChildNodes($domNode, Subtitles::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Rating::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, StarRating::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Review::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Subtitles::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Rating::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, StarRating::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Review::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -636,8 +636,8 @@ class XmlDeserializer {
 
         $model = new Rating();
         $model->setSystem(SerializerHelper::getDOMAttributeValue($domNode, "system"));
-        SerializerHelper::deserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -689,8 +689,8 @@ class XmlDeserializer {
         SerializerHelper::log($domNode);
 
         $model = new StarRating();
-        SerializerHelper::deserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Value::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Icon::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -723,7 +723,7 @@ class XmlDeserializer {
 
         $model = new Subtitles();
         $model->setType(SerializerHelper::getDOMAttributeValue($domNode, "type"));
-        SerializerHelper::deserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Language::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -762,8 +762,8 @@ class XmlDeserializer {
         $model->setSourceDataUrl(SerializerHelper::getDOMAttributeValue($domNode, "source-data-url"));
         $model->setSourceInfoName(SerializerHelper::getDOMAttributeValue($domNode, "source-info-name"));
         $model->setSourceInfoUrl(SerializerHelper::getDOMAttributeValue($domNode, "source-info-url"));
-        SerializerHelper::deserializeChildNodes($domNode, Channel::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNodes($domNode, Programme::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Channel::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNodes($domNode, Programme::DOM_NODE_NAME, $model);
 
         $model->indexProgrammesByChannel();
 
@@ -814,10 +814,10 @@ class XmlDeserializer {
 
         $model = new Video();
 
-        SerializerHelper::deserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Colour::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Aspect::DOM_NODE_NAME, $model);
-        SerializerHelper::deserializeChildNode($domNode, Quality::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Present::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Colour::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Aspect::DOM_NODE_NAME, $model);
+        SerializerHelper::xmlDeserializeChildNode($domNode, Quality::DOM_NODE_NAME, $model);
 
         return $model;
     }
