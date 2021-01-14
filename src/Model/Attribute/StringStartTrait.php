@@ -50,9 +50,9 @@ trait StringStartTrait {
     /**
      * Set the start.
      *
-     * @param string $start The start.
+     * @param string|null $start The start.
      */
-    public function setStart($start): self {
+    public function setStart(?string $start): self {
         $this->start = $start;
         return $this;
     }

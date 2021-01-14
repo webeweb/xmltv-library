@@ -74,7 +74,6 @@ trait ArrayChannelsTrait {
 
         $index = [];
 
-        /** @var Channel $current */
         foreach ($this->channels as $current) {
             $index[$current->getId()] = $current;
         }

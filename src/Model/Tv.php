@@ -155,7 +155,6 @@ class Tv extends AbstractModel {
 
         $channels = $this->indexChannelsById();
 
-        /** @var Programme $current */
         foreach ($this->programmes as $current) {
             if (true === array_key_exists($current->getChannel(), $channels)) {
                 $channels[$current->getChannel()]->addProgramme($current);

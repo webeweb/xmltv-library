@@ -455,7 +455,7 @@ class Programme extends AbstractModel {
     /**
      * Set the original language.
      *
-     * @param OrigLanguage $origLanguage The original language.
+     * @param OrigLanguage|null $origLanguage The original language.
      * @return Programme Returns this programme.
      */
     public function setOrigLanguage(?OrigLanguage $origLanguage): Programme {

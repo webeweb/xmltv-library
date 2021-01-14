@@ -110,7 +110,7 @@ class JsonDeserializer {
      * @param AbstractModel $model The model.
      * @return void
      */
-    protected static function deserializeArray(array $array, $nodeName, AbstractModel $model): void {
+    protected static function deserializeArray(array $array, string $nodeName, AbstractModel $model): void {
 
         $fct = __NAMESPACE__ . "\\JsonDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
         $add = SerializerHelper::getMethodName("add", $nodeName);
