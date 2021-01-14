@@ -73,10 +73,6 @@ class JsonDeserializer {
      */
     public static function deserializeActor(array $data): ?Actor {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Actor();
         $model->setRole(ArrayHelper::get($data, "role"));
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -91,10 +87,6 @@ class JsonDeserializer {
      * @return Adapter|null Returns the adapter in case of success, null otherwise.
      */
     public static function deserializeAdapter(array $data): ?Adapter {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Adapter();
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -116,6 +108,9 @@ class JsonDeserializer {
         $add = SerializerHelper::getMethodName("add", $nodeName);
 
         foreach ($array as $current) {
+            if (0 === count($current)) {
+                continue;
+            }
             $model->$add(call_user_func($fct, $current));
         }
     }
@@ -127,10 +122,6 @@ class JsonDeserializer {
      * @return Aspect|null Returns the aspect in case of success, null otherwise.
      */
     public static function deserializeAspect(array $data): ?Aspect {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Aspect();
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -146,13 +137,9 @@ class JsonDeserializer {
      */
     public static function deserializeAudio(array $data): ?Audio {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Audio();
-        $model->setPresent(JsonDeserializer::deserializePresent(ArrayHelper::get($data, "present", [])));
-        $model->setStereo(JsonDeserializer::deserializeStereo(ArrayHelper::get($data, "stereo", [])));
+        JsonDeserializer::deserializeModel($data, Present::DOM_NODE_NAME, $model);
+        JsonDeserializer::deserializeModel($data, Stereo::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -164,10 +151,6 @@ class JsonDeserializer {
      * @return Category|null Returns the category in case of success, null otherwise.
      */
     public static function deserializeCategory(array $data): ?Category {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Category();
         $model->setLang(ArrayHelper::get($data, "lang"));
@@ -183,10 +166,6 @@ class JsonDeserializer {
      * @return Channel|null Returns the channel in case of success, null otherwise.
      */
     public static function deserializeChannel(array $data): ?Channel {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Channel();
         $model->setId(ArrayHelper::get($data, "id"));
@@ -205,10 +184,6 @@ class JsonDeserializer {
      */
     public static function deserializeColour(array $data): ?Colour {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Colour();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -222,10 +197,6 @@ class JsonDeserializer {
      * @return Commentator|null Returns the commentator in case of success, null otherwise.
      */
     public static function deserializeCommentator(array $data): ?Commentator {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Commentator();
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -241,10 +212,6 @@ class JsonDeserializer {
      */
     public static function deserializeComposer(array $data): ?Composer {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Composer();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -258,10 +225,6 @@ class JsonDeserializer {
      * @return Country|null Returns the country in case of success, null otherwise.
      */
     public static function deserializeCountry(array $data): ?Country {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Country();
         $model->setLang(ArrayHelper::get($data, "lang"));
@@ -277,10 +240,6 @@ class JsonDeserializer {
      * @return Credits|null Returns the credits in case of success, null otherwise.
      */
     public static function deserializeCredits(array $data): ?Credits {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Credits();
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "directors", []), Director::DOM_NODE_NAME, $model);
@@ -305,10 +264,6 @@ class JsonDeserializer {
      */
     public static function deserializeDate(array $data): ?Date {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Date();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -322,10 +277,6 @@ class JsonDeserializer {
      * @return Desc|null Returns the description in case of success, null otherwise.
      */
     public static function deserializeDesc(array $data): ?Desc {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Desc();
         $model->setLang(ArrayHelper::get($data, "lang"));
@@ -342,10 +293,6 @@ class JsonDeserializer {
      */
     public static function deserializeDirector(array $data): ?Director {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Director();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -359,10 +306,6 @@ class JsonDeserializer {
      * @return DisplayName|null Returns the display name in case of success, null otherwise.
      */
     public static function deserializeDisplayName(array $data): ?DisplayName {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new DisplayName();
         $model->setLang(ArrayHelper::get($data, "lang"));
@@ -379,10 +322,6 @@ class JsonDeserializer {
      */
     public static function deserializeEditor(array $data): ?Editor {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Editor();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -396,10 +335,6 @@ class JsonDeserializer {
      * @return EpisodeNum|null Returns the episode number in case of success, null otherwise.
      */
     public static function deserializeEpisodeNum(array $data): ?EpisodeNum {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new EpisodeNum();
         $model->setSystem(ArrayHelper::get($data, "system"));
@@ -416,10 +351,6 @@ class JsonDeserializer {
      */
     public static function deserializeGuest(array $data): ?Guest {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Guest();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -433,10 +364,6 @@ class JsonDeserializer {
      * @return Icon|null Returns the icon in case of success, null otherwise.
      */
     public static function deserializeIcon(array $data): ?Icon {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Icon();
         $model->setSrc(ArrayHelper::get($data, "src"));
@@ -454,10 +381,6 @@ class JsonDeserializer {
      */
     public static function deserializeKeyword(array $data): ?Keyword {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Keyword();
         $model->setLang(ArrayHelper::get($data, "lang"));
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -472,10 +395,6 @@ class JsonDeserializer {
      * @return Language|null Returns the language in case of success, null otherwise.
      */
     public static function deserializeLanguage(array $data): ?Language {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Language();
         $model->setLang(ArrayHelper::get($data, "lang"));
@@ -492,10 +411,6 @@ class JsonDeserializer {
      */
     public static function deserializeLastChance(array $data): ?LastChance {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new LastChance();
         $model->setLang(ArrayHelper::get($data, "lang"));
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -511,15 +426,32 @@ class JsonDeserializer {
      */
     public static function deserializeLength(array $data): ?Length {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Length();
         $model->setUnits(ArrayHelper::get($data, "units"));
         $model->setContent(ArrayHelper::get($data, "content"));
 
         return $model;
+    }
+
+    /**
+     * Deserialize an  model.
+     *
+     * @param array $array The array.
+     * @param string $nodeName The node name.
+     * @param AbstractModel $model The model.
+     * @return void
+     */
+    protected static function deserializeModel(array $array, string $nodeName, AbstractModel $model): void {
+
+        $data = ArrayHelper::get($array, $nodeName, []);
+        if (0 === count($data)) {
+            return;
+        }
+
+        $fct = __NAMESPACE__ . "\\JsonDeserializer::" . SerializerHelper::getMethodName("deserialize", $nodeName);
+        $set = SerializerHelper::getMethodName("set", $nodeName);
+
+        $model->$set(call_user_func($fct, $data));
     }
 
     /**
@@ -529,10 +461,6 @@ class JsonDeserializer {
      * @return OrigLanguage|null Returns the original language in case of success, null otherwise.
      */
     public static function deserializeOrigLanguage(array $data): ?OrigLanguage {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new OrigLanguage();
         $model->setLang(ArrayHelper::get($data, "lang"));
@@ -549,10 +477,6 @@ class JsonDeserializer {
      */
     public static function deserializePremiere(array $data): ?Premiere {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Premiere();
         $model->setLang(ArrayHelper::get($data, "lang"));
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -568,10 +492,6 @@ class JsonDeserializer {
      */
     public static function deserializePresent(array $data): ?Present {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Present();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -586,10 +506,6 @@ class JsonDeserializer {
      */
     public static function deserializePresenter(array $data): ?Presenter {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Presenter();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -603,10 +519,6 @@ class JsonDeserializer {
      * @return PreviouslyShown|null Returns the previously shown in case of success, null otherwise.
      */
     public static function deserializePreviouslyShown(array $data): ?PreviouslyShown {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new PreviouslyShown();
         $model->setChannel(ArrayHelper::get($data, "channel"));
@@ -623,10 +535,6 @@ class JsonDeserializer {
      */
     public static function deserializeProducer(array $data): ?Producer {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Producer();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -641,10 +549,6 @@ class JsonDeserializer {
      */
     public static function deserializeProgramme(array $data): ?Programme {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Programme();
         $model->setStart(ArrayHelper::get($data, "start"));
         $model->setStop(ArrayHelper::get($data, "stop"));
@@ -658,21 +562,21 @@ class JsonDeserializer {
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "secondaryTitles", []), SecondaryTitle::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "descs", []), Desc::DOM_NODE_NAME, $model);
         $model->setCredits(JsonDeserializer::deserializeCredits($data));
-        $model->setDate(JsonDeserializer::deserializeDate(ArrayHelper::get($data, "date", [])));
+        JsonDeserializer::deserializeModel($data, Date::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "categories", []), Category::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "keywords", []), Keyword::DOM_NODE_NAME, $model);
-        $model->setLanguage(JsonDeserializer::deserializeLanguage(ArrayHelper::get($data, "language", [])));
-        $model->setOrigLanguage(JsonDeserializer::deserializeOrigLanguage(ArrayHelper::get($data, "origLanguage", [])));
-        $model->setLength(JsonDeserializer::deserializeLength(ArrayHelper::get($data, "length", [])));
+        JsonDeserializer::deserializeModel($data, Language::DOM_NODE_NAME, $model);
+        JsonDeserializer::deserializeModel($data, "origLanguage", $model);
+        JsonDeserializer::deserializeModel($data, Length::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "urls", []), Url::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "countries", []), Country::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "episodeNums", []), EpisodeNum::DOM_NODE_NAME, $model);
-        $model->setVideo(JsonDeserializer::deserializeVideo(ArrayHelper::get($data, "video", [])));
-        $model->setAudio(JsonDeserializer::deserializeAudio(ArrayHelper::get($data, "audio", [])));
-        $model->setPreviouslyShown(JsonDeserializer::deserializePreviouslyShown(ArrayHelper::get($data, "previouslyShown", [])));
-        $model->setPremiere(JsonDeserializer::deserializePremiere(ArrayHelper::get($data, "premiere", [])));
-        $model->setLastChance(JsonDeserializer::deserializeLastChance(ArrayHelper::get($data, "lastChance", [])));
+        JsonDeserializer::deserializeModel($data, Video::DOM_NODE_NAME, $model);
+        JsonDeserializer::deserializeModel($data, Audio::DOM_NODE_NAME, $model);
+        JsonDeserializer::deserializeModel($data, "previouslyShown", $model);
+        JsonDeserializer::deserializeModel($data, Premiere::DOM_NODE_NAME, $model);
+        JsonDeserializer::deserializeModel($data, "lastChance", $model);
         $model->setNew(ArrayHelper::get($data, "new"));
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "subtitles", []), Subtitles::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "ratings", []), Rating::DOM_NODE_NAME, $model);
@@ -690,10 +594,6 @@ class JsonDeserializer {
      */
     public static function deserializeQuality(array $data): ?Quality {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Quality();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -708,13 +608,9 @@ class JsonDeserializer {
      */
     public static function deserializeRating(array $data): ?Rating {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Rating();
         $model->setSystem(ArrayHelper::get($data, "system"));
-        $model->setValue(JsonDeserializer::deserializeValue(ArrayHelper::get($data, "value", [])));
+        JsonDeserializer::deserializeModel($data, Value::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
 
         return $model;
@@ -727,10 +623,6 @@ class JsonDeserializer {
      * @return Review|null Returns the review in case of success, null otherwise.
      */
     public static function deserializeReview(array $data): ?Review {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Review();
         $model->setType(ArrayHelper::get($data, "type"));
@@ -749,10 +641,6 @@ class JsonDeserializer {
      */
     public static function deserializeSecondaryTitle(array $data): ?SecondaryTitle {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new SecondaryTitle();
         $model->setLang(ArrayHelper::get($data, "lang"));
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -768,12 +656,8 @@ class JsonDeserializer {
      */
     public static function deserializeStarRating(array $data): ?StarRating {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new StarRating();
-        $model->setValue(JsonDeserializer::deserializeValue($data));
+        JsonDeserializer::deserializeModel($data, Value::DOM_NODE_NAME, $model);
         JsonDeserializer::deserializeArray(ArrayHelper::get($data, "icons", []), Icon::DOM_NODE_NAME, $model);
 
         return $model;
@@ -786,10 +670,6 @@ class JsonDeserializer {
      * @return Stereo|null Returns the stereo in case of success, null otherwise.
      */
     public static function deserializeStereo(array $data): ?Stereo {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Stereo();
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -805,13 +685,9 @@ class JsonDeserializer {
      */
     public static function deserializeSubtitles(array $data): ?Subtitles {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Subtitles();
         $model->setType(ArrayHelper::get($data, "type"));
-        $model->setLanguage(JsonDeserializer::deserializeLanguage(ArrayHelper::get($data, "language", [])));
+        JsonDeserializer::deserializeModel($data, Language::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -823,10 +699,6 @@ class JsonDeserializer {
      * @return Title|null Returns the title in case of success, null otherwise.
      */
     public static function deserializeTitle(array $data): ?Title {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Title();
         $model->setLang(ArrayHelper::get($data, "lang"));
@@ -842,10 +714,6 @@ class JsonDeserializer {
      * @return Tv|null Returns the TV in case of success, null otherwise.
      */
     public static function deserializeTv(array $data): ?Tv {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Tv();
         $model->setDate(ArrayHelper::get($data, "date"));
@@ -868,10 +736,6 @@ class JsonDeserializer {
      */
     public static function deserializeUrl(array $data): ?Url {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Url();
         $model->setContent(ArrayHelper::get($data, "content"));
 
@@ -885,10 +749,6 @@ class JsonDeserializer {
      * @return Value|null Returns the value in case of success, null otherwise.
      */
     public static function deserializeValue(array $data): ?Value {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Value();
         $model->setContent(ArrayHelper::get($data, "content"));
@@ -904,15 +764,11 @@ class JsonDeserializer {
      */
     public static function deserializeVideo(array $data): ?Video {
 
-        if (0 === count($data)) {
-            return null;
-        }
-
         $model = new Video();
-        $model->setPresent(JsonDeserializer::deserializePresent(ArrayHelper::get($data, "present", [])));
-        $model->setColour(JsonDeserializer::deserializeColour(ArrayHelper::get($data, "colour", [])));
-        $model->setAspect(JsonDeserializer::deserializeAspect(ArrayHelper::get($data, "aspect", [])));
-        $model->setQuality(JsonDeserializer::deserializeQuality(ArrayHelper::get($data, "quality", [])));
+        JsonDeserializer::deserializeModel($data, Present::DOM_NODE_NAME, $model);
+        JsonDeserializer::deserializeModel($data, Colour::DOM_NODE_NAME, $model);
+        JsonDeserializer::deserializeModel($data, Aspect::DOM_NODE_NAME, $model);
+        JsonDeserializer::deserializeModel($data, Quality::DOM_NODE_NAME, $model);
 
         return $model;
     }
@@ -924,10 +780,6 @@ class JsonDeserializer {
      * @return Writer|null Returns the writer in case of success, null otherwise.
      */
     public static function deserializeWriter(array $data): ?Writer {
-
-        if (0 === count($data)) {
-            return null;
-        }
 
         $model = new Writer();
         $model->setContent(ArrayHelper::get($data, "content"));
