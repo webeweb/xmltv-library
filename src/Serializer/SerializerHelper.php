@@ -16,6 +16,7 @@ use DOMNode;
 use DOMNodeList;
 use Psr\Log\LoggerInterface;
 use WBW\Library\Core\Argument\Helper\ArrayHelper;
+use WBW\Library\Core\Argument\Helper\StringHelper;
 use WBW\Library\XMLTV\Model\AbstractModel;
 use WBW\Library\XMLTV\Model\SecondaryTitle;
 
@@ -55,6 +56,26 @@ class SerializerHelper {
         }
 
         return $dateTime;
+    }
+
+    /**
+     * Create a DOM node.
+     *
+     * @param string $name The name.
+     * @param string|null $value The value.
+     * @param array $attributes The attributes.
+     * @param bool $shortTag Short tag ?
+     * @return string Returns the DOM node.
+     */
+    public static function domNode(string $name, ?string $value, array $attributes = [], bool $shortTag = false): string {
+
+        $value = SerializerHelper::xmlSerializeValue($value);
+
+        foreach ($attributes as $k => $v) {
+            $attributes[$k] = SerializerHelper::xmlSerializeValue($v);
+        }
+
+        return StringHelper::domNode($name, $value, $attributes, $shortTag);
     }
 
     /**
@@ -331,5 +352,20 @@ class SerializerHelper {
         }
 
         return $model->xmlSerialize();
+    }
+
+    /**
+     * Serialize a value.
+     *
+     * @param string|null $value The value.
+     * @return string|null Returns the serialized value.
+     */
+    protected static function xmlSerializeValue(?string $value): ?string {
+
+        if (null === $value) {
+            return null;
+        }
+
+        return htmlentities($value, ENT_XML1 | ENT_QUOTES, "UTF-8");
     }
 }
