@@ -16,6 +16,10 @@ build:
         'PHP8.0':
             environment:
                 php: 8.0.0
+    environment:
+        php:
+            ini:
+                'xdebug.mode': "coverage"
     dependencies:
         before:
             - sed -i 's/zend_extension_ts/zend_extension/' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
