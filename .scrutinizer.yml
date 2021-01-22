@@ -18,8 +18,8 @@ build:
                 php: 8.0.0
     dependencies:
         before:
-            - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/pyrus.ini;
             - echo "extension=zip.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/pyrus.ini;
+            - echo "zend_extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/pyrus.ini;
         override:
             - COMPOSER_MEMORY_LIMIT=-1 composer update
     tests:
