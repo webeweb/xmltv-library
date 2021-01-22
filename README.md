@@ -1,8 +1,8 @@
 xmltv-library
 =============
 
-[![Build Status](https://img.shields.io/travis/com/webeweb/xmltv-library/master.svg?style=flat-square)](https://travis-ci.com/webeweb/xmltv-library)
-[![Coverage Status](https://img.shields.io/coveralls/webeweb/xmltv-library/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/xmltv-library?branch=master)
+[![Build Status](https://img.shields.io/scrutinizer/build/g/webeweb/xmltv-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/xmltv-library/build-status/master)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/webeweb/xmltv-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/xmltv-library/?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/xmltv-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/xmltv-library/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/xmltv-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/xmltv-library)
 [![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/xmltv-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/xmltv-library)
