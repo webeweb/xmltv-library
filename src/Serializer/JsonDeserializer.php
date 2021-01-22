@@ -518,7 +518,7 @@ class JsonDeserializer {
         SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, SerializerKeys::TITLES, []), Title::DOM_NODE_NAME, $model);
         SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, SerializerKeys::SECONDARY_TITLES, []), SecondaryTitle::DOM_NODE_NAME, $model);
         SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, SerializerKeys::DESCS, []), Desc::DOM_NODE_NAME, $model);
-        $model->setCredits(JsonDeserializer::deserializeCredits($data));
+        $model->setCredits(JsonDeserializer::deserializeCredits(ArrayHelper::get($data, SerializerKeys::CREDITS, [])));
         SerializerHelper::jsonDeserializeModel($data, SerializerKeys::DATE, $model);
         SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, SerializerKeys::CATEGORIES, []), Category::DOM_NODE_NAME, $model);
         SerializerHelper::jsonDeserializeArray(ArrayHelper::get($data, SerializerKeys::KEYWORDS, []), Keyword::DOM_NODE_NAME, $model);
