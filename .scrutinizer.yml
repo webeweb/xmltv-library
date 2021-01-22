@@ -18,7 +18,8 @@ build:
                 php: 8.0.0
     dependencies:
         before:
-            - if [ "" == "$(php -m | grep zip)" ]; then pecl install zip; fi;
+            - echo "extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
+            - echo "extension=zip.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini;
         override:
             - COMPOSER_MEMORY_LIMIT=-1 composer update
     tests:
