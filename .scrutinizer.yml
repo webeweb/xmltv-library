@@ -26,7 +26,7 @@ build:
         before:
             - mkdir -p build/logs
         override:
-            -   command: php -dxdebug.coverage_enable=1 -dxdebug.mode=coverage vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+            -   command: vendor/bin/phpunit --coverage-clover build/logs/clover.xml
                 coverage:
                     file:   build/logs/clover.xml
                     format: clover
