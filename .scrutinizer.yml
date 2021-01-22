@@ -18,8 +18,8 @@ build:
                 php: 8.0.0
     dependencies:
         before:
-            - echo "extension=zip.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/pyrus.ini;
-            - echo "zend_extension=xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/pyrus.ini;
+            - sed -i 's/zend_extension_ts/zend_extension/' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+            - if [ "" == "$(php -m | grep zip)" ]; then pecl install zip; fi;
         override:
             - COMPOSER_MEMORY_LIMIT=-1 composer update
     tests:
