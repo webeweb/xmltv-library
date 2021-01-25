@@ -26,7 +26,7 @@ trait ValueTrait {
      *
      * @var Value|null
      */
-    private $value;
+    protected $value;
 
     /**
      * Get the value.
@@ -41,6 +41,7 @@ trait ValueTrait {
      * Set the value.
      *
      * @param Value|null $value The value.
+     * @return self Returns this instance.
      */
     public function setValue(?Value $value): self {
         $this->value = $value;
