@@ -26,12 +26,13 @@ trait ArrayTitlesTrait {
      *
      * @var Title[]
      */
-    private $titles;
+    protected $titles;
 
     /**
      * Add a title.
      *
      * @param Title $title The title.
+     * @return self Returns this instance.
      */
     public function addTitle(Title $title): self {
         $this->titles[] = $title;
@@ -69,6 +70,7 @@ trait ArrayTitlesTrait {
      * Set the titles.
      *
      * @param Title[] $titles The titles.
+     * @return self Returns this instance.
      */
     protected function setTitles(array $titles): self {
         $this->titles = $titles;

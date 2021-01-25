@@ -26,12 +26,13 @@ trait ArrayPresentersTrait {
      *
      * @var Presenter[]
      */
-    private $presenters;
+    protected $presenters;
 
     /**
      * Add a presenter.
      *
      * @param Presenter $presenter The presenter.
+     * @return self Returns this instance.
      */
     public function addPresenter(Presenter $presenter): self {
         $this->presenters[] = $presenter;
@@ -69,6 +70,7 @@ trait ArrayPresentersTrait {
      * Set the presenters.
      *
      * @param Presenter[] $presenters The presenters.
+     * @return self Returns this instance.
      */
     protected function setPresenters(array $presenters): self {
         $this->presenters = $presenters;

@@ -26,7 +26,7 @@ trait PresentTrait {
      *
      * @var Present|null
      */
-    private $present;
+    protected $present;
 
     /**
      * Get the present.
@@ -41,6 +41,7 @@ trait PresentTrait {
      * Set the present.
      *
      * @param Present|null $present The present.
+     * @return self Returns this instance.
      */
     public function setPresent(?Present $present): self {
         $this->present = $present;

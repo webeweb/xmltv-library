@@ -26,12 +26,13 @@ trait ArrayCountriesTrait {
      *
      * @var Country[]
      */
-    private $countries;
+    protected $countries;
 
     /**
      * Add a country.
      *
      * @param Country $country The country.
+     * @return self Returns this instance.
      */
     public function addCountry(Country $country): self {
         $this->countries[] = $country;
@@ -69,6 +70,7 @@ trait ArrayCountriesTrait {
      * Set the countries.
      *
      * @param Country[] $countries The countries.
+     * @return self Returns this instance.
      */
     protected function setCountries(array $countries): self {
         $this->countries = $countries;

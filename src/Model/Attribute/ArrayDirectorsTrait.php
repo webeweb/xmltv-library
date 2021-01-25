@@ -26,12 +26,13 @@ trait ArrayDirectorsTrait {
      *
      * @var Director[]
      */
-    private $directors;
+    protected $directors;
 
     /**
      * Add a director.
      *
      * @param Director $director The director.
+     * @return self Returns this instance.
      */
     public function addDirector(Director $director): self {
         $this->directors[] = $director;
@@ -69,6 +70,7 @@ trait ArrayDirectorsTrait {
      * Set the directors.
      *
      * @param Director[] $directors The directors.
+     * @return self Returns this instance.
      */
     protected function setDirectors(array $directors): self {
         $this->directors = $directors;

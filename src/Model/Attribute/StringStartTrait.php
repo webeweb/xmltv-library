@@ -27,7 +27,7 @@ trait StringStartTrait {
      *
      * @var string|null
      */
-    private $start;
+    protected $start;
 
     /**
      * Get the start.
@@ -51,6 +51,7 @@ trait StringStartTrait {
      * Set the start.
      *
      * @param string|null $start The start.
+     * @return self Returns this instance.
      */
     public function setStart(?string $start): self {
         $this->start = $start;

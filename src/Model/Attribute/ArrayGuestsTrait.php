@@ -26,12 +26,13 @@ trait ArrayGuestsTrait {
      *
      * @var Guest[]
      */
-    private $guests;
+    protected $guests;
 
     /**
      * Add a guest.
      *
      * @param Guest $guest The guest.
+     * @return self Returns this instance.
      */
     public function addGuest(Guest $guest): self {
         $this->guests[] = $guest;
@@ -69,6 +70,7 @@ trait ArrayGuestsTrait {
      * Set the guests.
      *
      * @param Guest[] $guests The guests.
+     * @return self Returns this instance.
      */
     protected function setGuests(array $guests): self {
         $this->guests = $guests;

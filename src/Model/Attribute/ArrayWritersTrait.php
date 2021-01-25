@@ -26,12 +26,13 @@ trait ArrayWritersTrait {
      *
      * @var Writer[]
      */
-    private $writers;
+    protected $writers;
 
     /**
      * Add a writer.
      *
      * @param Writer $writer The writer.
+     * @return self Returns this instance.
      */
     public function addWriter(Writer $writer): self {
         $this->writers[] = $writer;
@@ -69,6 +70,7 @@ trait ArrayWritersTrait {
      * Set the writers.
      *
      * @param Writer[] $writers The writers.
+     * @return self Returns this instance.
      */
     protected function setWriters(array $writers): self {
         $this->writers = $writers;

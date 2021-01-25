@@ -26,12 +26,13 @@ trait ArrayProgrammesTrait {
      *
      * @var Programme[]
      */
-    private $programmes;
+    protected $programmes;
 
     /**
      * Add a programme.
      *
      * @param Programme $programme The programme.
+     * @return self Returns this instance.
      */
     public function addProgramme(Programme $programme): self {
         $this->programmes[] = $programme;
@@ -69,6 +70,7 @@ trait ArrayProgrammesTrait {
      * Set the programmes.
      *
      * @param Programme[] $programmes The programmes.
+     * @return self Returns this instance.
      */
     protected function setProgrammes(array $programmes): self {
         $this->programmes = $programmes;
@@ -77,6 +79,8 @@ trait ArrayProgrammesTrait {
 
     /**
      * Sort the programmes.
+     *
+     * @return self Returns this instance.
      */
     public function sortProgrammes(): self {
         usort($this->programmes, function(Programme $a, Programme $b) {

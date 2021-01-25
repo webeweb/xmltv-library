@@ -26,12 +26,13 @@ trait ArrayCommentatorsTrait {
      *
      * @var Commentator[]
      */
-    private $commentators;
+    protected $commentators;
 
     /**
      * Add a commentator.
      *
      * @param Commentator $commentator The commentator.
+     * @return self Returns this instance.
      */
     public function addCommentator(Commentator $commentator): self {
         $this->commentators[] = $commentator;
@@ -69,6 +70,7 @@ trait ArrayCommentatorsTrait {
      * Set the commentators.
      *
      * @param Commentator[] $commentators The commentators.
+     * @return self Returns this instance.
      */
     protected function setCommentators(array $commentators): self {
         $this->commentators = $commentators;

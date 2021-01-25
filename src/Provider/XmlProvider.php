@@ -14,6 +14,7 @@ namespace WBW\Library\XMLTV\Provider;
 use DOMDocument;
 use Exception;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
 use WBW\Library\XMLTV\Model\Tv;
@@ -46,6 +47,7 @@ class XmlProvider {
      * @param string $filename The filename The filename.
      * @param LoggerInterface|null $logger The logger.
      * @return Tv Returns the TV.
+     * @throws GuzzleException Throws a Guzzle exception if an error occurs.
      * @throws Exception Throws an exception if an error occurs.
      */
     public static function getXml(string $url, string $filename, LoggerInterface $logger = null): Tv {

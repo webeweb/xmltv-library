@@ -26,12 +26,13 @@ trait ArrayUrlsTrait {
      *
      * @var Url[]
      */
-    private $urls;
+    protected $urls;
 
     /**
      * Add an URL.
      *
      * @param Url $url The URL.
+     * @return self Returns this instance.
      */
     public function addUrl(Url $url): self {
         $this->urls[] = $url;
@@ -69,6 +70,7 @@ trait ArrayUrlsTrait {
      * Set the URLs.
      *
      * @param Url[] $urls The URLs.
+     * @return self Returns this instance.
      */
     protected function setUrls(array $urls): self {
         $this->urls = $urls;

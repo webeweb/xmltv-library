@@ -26,12 +26,13 @@ trait ArrayAdaptersTrait {
      *
      * @var Adapter[]
      */
-    private $adapters;
+    protected $adapters;
 
     /**
      * Add an adapter.
      *
      * @param Adapter $adapter The adapter.
+     * @return self Returns this instance.
      */
     public function addAdapter(Adapter $adapter): self {
         $this->adapters[] = $adapter;
@@ -69,6 +70,7 @@ trait ArrayAdaptersTrait {
      * Set the adapters.
      *
      * @param Adapter[] $adapters The adapters.
+     * @return self Returns this instance.
      */
     protected function setAdapters(array $adapters): self {
         $this->adapters = $adapters;

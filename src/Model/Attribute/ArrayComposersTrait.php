@@ -26,12 +26,13 @@ trait ArrayComposersTrait {
      *
      * @var Composer[]
      */
-    private $composers;
+    protected $composers;
 
     /**
      * Add a composer.
      *
      * @param Composer $composer The composer.
+     * @return self Returns this instance.
      */
     public function addComposer(Composer $composer): self {
         $this->composers[] = $composer;
@@ -69,6 +70,7 @@ trait ArrayComposersTrait {
      * Set the composers.
      *
      * @param Composer[] $composers The composers.
+     * @return self Returns this instance.
      */
     protected function setComposers(array $composers): self {
         $this->composers = $composers;

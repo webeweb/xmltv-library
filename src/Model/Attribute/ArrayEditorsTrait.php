@@ -26,12 +26,13 @@ trait ArrayEditorsTrait {
      *
      * @var Editor[]
      */
-    private $editors;
+    protected $editors;
 
     /**
      * Add an editor.
      *
      * @param Editor $editor The editor.
+     * @return self Returns this instance.
      */
     public function addEditor(Editor $editor): self {
         $this->editors[] = $editor;
@@ -69,6 +70,7 @@ trait ArrayEditorsTrait {
      * Set the editors.
      *
      * @param Editor[] $editors The editors.
+     * @return self Returns this instance.
      */
     protected function setEditors(array $editors): self {
         $this->editors = $editors;

@@ -26,12 +26,13 @@ trait ArrayProducersTrait {
      *
      * @var Producer[]
      */
-    private $producers;
+    protected $producers;
 
     /**
      * Add a producer.
      *
      * @param Producer $producer The producer.
+     * @return self Returns this instance.
      */
     public function addProducer(Producer $producer): self {
         $this->producers[] = $producer;
@@ -69,6 +70,7 @@ trait ArrayProducersTrait {
      * Set the producers.
      *
      * @param Producer[] $producers The producers.
+     * @return self Returns this instance.
      */
     protected function setProducers(array $producers): self {
         $this->producers = $producers;

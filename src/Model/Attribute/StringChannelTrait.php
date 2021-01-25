@@ -24,7 +24,7 @@ trait StringChannelTrait {
      *
      * @var string|null
      */
-    private $channel;
+    protected $channel;
 
     /**
      * Get the channel.
@@ -39,6 +39,7 @@ trait StringChannelTrait {
      * Set the channel.
      *
      * @param string|null $channel The channel.
+     * @return self Returns this instance.
      */
     public function setChannel(?string $channel): self {
         $this->channel = $channel;

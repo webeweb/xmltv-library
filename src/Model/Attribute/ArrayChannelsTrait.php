@@ -26,12 +26,13 @@ trait ArrayChannelsTrait {
      *
      * @var Channel[]
      */
-    private $channels;
+    protected $channels;
 
     /**
      * Add a channel.
      *
      * @param Channel $channel The channel.
+     * @return self Returns this instance.
      */
     public function addChannel(Channel $channel): self {
         $this->channels[] = $channel;
@@ -87,6 +88,7 @@ trait ArrayChannelsTrait {
      * Set the channels.
      *
      * @param Channel[] $channels The channels.
+     * @return self Returns this instance.
      */
     protected function setChannels(array $channels): self {
         $this->channels = $channels;
@@ -95,6 +97,8 @@ trait ArrayChannelsTrait {
 
     /**
      * Sort the channels.
+     *
+     * @return self Returns this instance.
      */
     public function sortChannels(): self {
         usort($this->channels, function(Channel $a, Channel $b): int {

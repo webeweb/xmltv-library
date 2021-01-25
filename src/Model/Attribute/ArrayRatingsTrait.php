@@ -26,12 +26,13 @@ trait ArrayRatingsTrait {
      *
      * @var Rating[]
      */
-    private $ratings;
+    protected $ratings;
 
     /**
      * Add a rating.
      *
      * @param Rating $rating The rating.
+     * @return self Returns this instance.
      */
     public function addRating(Rating $rating): self {
         $this->ratings[] = $rating;
@@ -69,6 +70,7 @@ trait ArrayRatingsTrait {
      * Set the ratings.
      *
      * @param Rating[] $ratings The ratings.
+     * @return self Returns this instance.
      */
     protected function setRatings(array $ratings): self {
         $this->ratings = $ratings;

@@ -26,7 +26,7 @@ trait LanguageTrait {
      *
      * @var Language|null
      */
-    private $language;
+    protected $language;
 
     /**
      * Get the language.
@@ -41,6 +41,7 @@ trait LanguageTrait {
      * Set the language.
      *
      * @param Language|null $language The language.
+     * @return self Returns this instance.
      */
     public function setLanguage(?Language $language): self {
         $this->language = $language;

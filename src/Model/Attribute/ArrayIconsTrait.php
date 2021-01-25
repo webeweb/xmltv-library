@@ -26,12 +26,13 @@ trait ArrayIconsTrait {
      *
      * @var Icon[]
      */
-    private $icons;
+    protected $icons;
 
     /**
      * Add an icon.
      *
      * @param Icon $icon The icon.
+     * @return self Returns this instance.
      */
     public function addIcon(Icon $icon): self {
         $this->icons[] = $icon;
@@ -69,6 +70,7 @@ trait ArrayIconsTrait {
      * Set the icons.
      *
      * @param Icon[] $icons The icons.
+     * @return self Returns this instance.
      */
     protected function setIcons(array $icons): self {
         $this->icons = $icons;

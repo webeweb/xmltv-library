@@ -26,12 +26,13 @@ trait ArrayDescsTrait {
      *
      * @var Desc[]
      */
-    private $descs;
+    protected $descs;
 
     /**
      * Add a description.
      *
      * @param Desc $desc The description.
+     * @return self Returns this instance.
      */
     public function addDesc(Desc $desc): self {
         $this->descs[] = $desc;
@@ -69,6 +70,7 @@ trait ArrayDescsTrait {
      * Set the descriptions.
      *
      * @param Desc[] $descs The descriptions.
+     * @return self Returns this instance.
      */
     protected function setDescs(array $descs): self {
         $this->descs = $descs;

@@ -26,12 +26,13 @@ trait ArraySubtitlesTrait {
      *
      * @var Subtitles[]
      */
-    private $subtitles;
+    protected $subtitles;
 
     /**
      * Add a subtitles.
      *
      * @param Subtitles $subtitles The subtitles.
+     * @return self Returns this instance.
      */
     public function addSubtitles(Subtitles $subtitles): self {
         $this->subtitles[] = $subtitles;
@@ -69,6 +70,7 @@ trait ArraySubtitlesTrait {
      * Set the subtitles.
      *
      * @param Subtitles[] $subtitles The subtitles.
+     * @return self Returns this instance.
      */
     protected function setSubtitles(array $subtitles): self {
         $this->subtitles = $subtitles;

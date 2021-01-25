@@ -26,12 +26,13 @@ trait ArrayKeywordsTrait {
      *
      * @var Keyword[]
      */
-    private $keywords;
+    protected $keywords;
 
     /**
      * Add a keyword.
      *
      * @param Keyword $keyword The keyword.
+     * @return self Returns this instance.
      */
     public function addKeyword(Keyword $keyword): self {
         $this->keywords[] = $keyword;
@@ -69,6 +70,7 @@ trait ArrayKeywordsTrait {
      * Set the keywords.
      *
      * @param Keyword[] $keywords The keywords.
+     * @return self Returns this instance.
      */
     protected function setKeywords(array $keywords): self {
         $this->keywords = $keywords;

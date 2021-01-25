@@ -26,12 +26,13 @@ trait ArrayEpisodeNumsTrait {
      *
      * @var EpisodeNum[]
      */
-    private $episodeNums;
+    protected $episodeNums;
 
     /**
      * Add an episode number.
      *
      * @param EpisodeNum $episodeNum The episode number.
+     * @return self Returns this instance.
      */
     public function addEpisodeNum(EpisodeNum $episodeNum): self {
         $this->episodeNums[] = $episodeNum;
@@ -69,6 +70,7 @@ trait ArrayEpisodeNumsTrait {
      * Set the episode numbers.
      *
      * @param EpisodeNum[] $episodeNums The episode numbers.
+     * @return self Returns this instance.
      */
     protected function setEpisodeNums(array $episodeNums): self {
         $this->episodeNums = $episodeNums;

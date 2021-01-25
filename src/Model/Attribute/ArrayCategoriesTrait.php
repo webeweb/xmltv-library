@@ -26,12 +26,13 @@ trait ArrayCategoriesTrait {
      *
      * @var Category[]
      */
-    private $categories;
+    protected $categories;
 
     /**
      * Add a category.
      *
      * @param Category $category The category.
+     * @return self Returns this instance.
      */
     public function addCategory(Category $category): self {
         $this->categories[] = $category;
@@ -69,6 +70,7 @@ trait ArrayCategoriesTrait {
      * Set the categories.
      *
      * @param Category[] $categories The categories.
+     * @return self Returns this instance.
      */
     protected function setCategories(array $categories): self {
         $this->categories = $categories;

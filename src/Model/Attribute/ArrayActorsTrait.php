@@ -26,12 +26,13 @@ trait ArrayActorsTrait {
      *
      * @var Actor[]
      */
-    private $actors;
+    protected $actors;
 
     /**
      * Add an actor.
      *
      * @param Actor $actor The actor.
+     * @return self Returns this instance.
      */
     public function addActor(Actor $actor): self {
         $this->actors[] = $actor;
@@ -69,6 +70,7 @@ trait ArrayActorsTrait {
      * Set the actors.
      *
      * @param Actor[] $actors The actors.
+     * @return self Returns this instance.
      */
     protected function setActors(array $actors): self {
         $this->actors = $actors;

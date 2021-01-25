@@ -24,7 +24,7 @@ trait StringSystemTrait {
      *
      * @var string|null
      */
-    private $system;
+    protected $system;
 
     /**
      * Get the system.
@@ -39,6 +39,7 @@ trait StringSystemTrait {
      * Set the system.
      *
      * @param string|null $system The system.
+     * @return self Returns this instance.
      */
     public function setSystem(?string $system): self {
         $this->system = $system;
