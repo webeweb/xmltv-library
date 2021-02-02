@@ -1,14 +1,12 @@
 # .github/workflows/travis.yml
-name: "Travis CI"
+name: "build"
 
-on:
-    push:
-    pull_request:
+on: [ push, release, pull_request ]
 
 jobs:
     build:
-
-        runs-on: "ubuntu-18.04"
+        name:    "PHP ${{ matrix.php-version }}"
+        runs-on: ubuntu-18.04
 
         strategy:
             matrix:
@@ -31,13 +29,28 @@ jobs:
                     coverage:    "xdebug"
 
             -   name: "Dependencies"
-                run:  |
-                      COMPOSER_MEMORY_LIMIT=-1 composer update
-                      wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.3/php-coveralls.phar -O coveralls.phar
-                      chmod +x coveralls.phar
-                      php coveralls.phar --version
+                run:  COMPOSER_MEMORY_LIMIT=-1 composer update
 
             -   name: "Tests"
                 run:  |
                       mkdir -p build/logs
                       vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+            -   name: ""
+                uses: coverallsapp/github-action@v1.1.2
+                    with:
+                        github-token: ${{ secrets.github_token }}
+                        flag-name:    PHP-${{ matrix.php-version }}
+                        parallel:     true
+
+    coverage:
+        name:    "Coverage"
+        runs-on: ubuntu-18.04
+        needs:   "build"
+
+        steps:
+            -   name: ""
+                uses: coverallsapp/github-action@v1.1.2
+                with:
+                    github-token:      ${{ secrets.github_token }}
+                    parallel-finished: true
