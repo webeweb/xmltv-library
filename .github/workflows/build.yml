@@ -4,6 +4,7 @@ name: "build"
 on: [ push, release, pull_request ]
 
 jobs:
+
     build:
         name:    "PHP ${{ matrix.php-version }}"
         runs-on: ubuntu-18.04
@@ -39,7 +40,7 @@ jobs:
                       php coveralls.phar --version
 
             -   name: "Tests"
-                run:  vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+                run:  vendor/bin/phpunit --coverage-clover build/logs/clover.xml --coverage-html build/logs
 
             -   name: "Coverage"
                 env:
@@ -47,6 +48,14 @@ jobs:
                     COVERALLS_FLAG_NAME:  php-${{ matrix.php-version }}
                     COVERALLS_PARALLEL:   true
                 run:  php coveralls.phar -v
+
+            -   name: "Artifact"
+                uses: actions/upload-artifact@v2
+                with:
+                    name: "coverage-${{ matrix.php-version }}"
+                    path: |
+                          build/logs/
+                          !build/logs/clover.xml
 
     coverage:
         name:    "Coverage"
@@ -86,5 +95,16 @@ jobs:
                       chmod +x phpmetrics.phar
                       php phpmetrics.phar --version
 
+            -   name: "Tests"
+                run:  vendor/bin/phpunit --log-junit build/logs/junit.xml
+
             -   name: "Metrics"
-                run:  php phpmetrics.phar --report-html=build/logs/ src/
+                run:  php phpmetrics.phar --report-html=build/logs/ src/ --git --junit=build/logs/junit.xml
+
+            -   name: "Artifact"
+                uses: actions/upload-artifact@v2
+                with:
+                    name: "metrics"
+                    path: |
+                          build/logs/
+                          !build/logs/junit.xml
