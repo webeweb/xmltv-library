@@ -46,7 +46,7 @@ jobs:
                     COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                     COVERALLS_FLAG_NAME:  php-${{ matrix.php-version }}
                     COVERALLS_PARALLEL:   true
-                run:  coveralls.phar -v
+                run:  php coveralls.phar -v
 
     coverage:
         name:    "Coverage"
