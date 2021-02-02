@@ -59,3 +59,32 @@ jobs:
                 with:
                     github-token:      ${{ secrets.github_token }}
                     parallel-finished: true
+
+    metrics:
+        name:    "Metrics"
+        runs-on: ubuntu-18.04
+        needs:   "build"
+
+        steps:
+            -   name: "Checkout"
+                uses: actions/checkout@v2
+
+            -   name: "Build environment"
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: "7.1"
+                    extensions:  "zip"
+                    coverage:    "xdebug"
+
+            -   name: "Dependencies"
+                run:  COMPOSER_MEMORY_LIMIT=-1 composer update
+
+            -   name: "Application"
+                run:  |
+                      mkdir -p build/logs
+                      wget -c -nc --retry-connrefused --tries=0 https://github.com/phpmetrics/PhpMetrics/releases/download/v2.7.3/phpmetrics.phar -O phpmetrics.phar
+                      chmod +x phpmetrics.phar
+                      php phpmetrics.phar --version
+
+            -   name: "Metrics"
+                run:  php phpmetrics.phar --report-html=build/logs/ src/
