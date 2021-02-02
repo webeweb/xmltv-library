@@ -28,10 +28,12 @@ jobs:
                 with:
                     php-version: "${{ matrix.php-version }}"
                     coverage:    "xdebug"
-                run: php -v
 
             -   name: "Dependencies"
-                run:  COMPOSER_MEMORY_LIMIT=-1 composer update
+                run:  |
+                      php --version
+                      composer --version
+                      COMPOSER_MEMORY_LIMIT=-1 composer update
 
             -   name: "Application"
                 run:  |
@@ -76,10 +78,12 @@ jobs:
                 with:
                     php-version: "7.1"
                     coverage:    "xdebug"
-                run: php -v
 
             -   name: "Dependencies"
-                run:  COMPOSER_MEMORY_LIMIT=-1 composer update
+                run:  |
+                      php --version
+                      composer --version
+                      COMPOSER_MEMORY_LIMIT=-1 composer update
 
             -   name: "Application"
                 run:  |
@@ -89,7 +93,7 @@ jobs:
                       php phpstan.phar --version
 
             -   name: "Analyses"
-                run: php phpstan.phar analyse src/ --error-format=github
+                run:  php phpstan.phar analyse src/ --error-format=github
 
     metrics:
         name:    "Metrics"
@@ -105,10 +109,12 @@ jobs:
                 with:
                     php-version: "7.1"
                     coverage:    "xdebug"
-                run: php -v
 
             -   name: "Dependencies"
-                run:  COMPOSER_MEMORY_LIMIT=-1 composer update
+                run:  |
+                      php --version
+                      composer --version
+                      COMPOSER_MEMORY_LIMIT=-1 composer update
 
             -   name: "Application"
                 run:  |
