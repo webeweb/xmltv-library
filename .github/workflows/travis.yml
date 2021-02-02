@@ -1,0 +1,39 @@
+# .github/workflows/travis.yml
+name: "Travis"
+
+on:
+    push:
+    pull_request:
+
+jobs:
+    build:
+
+        runs-on: "ubuntu-18.04"
+
+        strategy:
+            matrix:
+                php-version:
+                    - "7.1"
+                    - "7.2"
+                    - "7.3"
+                    - "7.4"
+                    - "8.0"
+
+        steps:
+            -   uses: actions/checkout@v2
+
+            -   name: "before_install"
+                uses: "shivammathur/setup-php@v2"
+                with:
+                    php:        "${{ matrix.php-version }}"
+                    extensions: "zip"
+                    coverage:   "xdebug"
+
+            -   name: "install"
+                run:  COMPOSER_MEMORY_LIMIT=-1 composer update
+
+            -   name: "before_script"
+                run:  mkdir - builds/logs
+
+            -   name: "script"
+                run:  vendor/bin/phpunit --coverage-clover build/logs/clover.xml
