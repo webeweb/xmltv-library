@@ -21,7 +21,8 @@ build:
             ini:
                 'xdebug.mode': "coverage"
     project_setup:
-        before: echo 'debug'
+        before:
+            - echo 'debug'
     dependencies:
         before:
             - sed -i 's/zend_extension_ts/zend_extension/' ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
