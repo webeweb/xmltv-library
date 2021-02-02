@@ -55,7 +55,7 @@ jobs:
             -   name: "Upload artifact"
                 uses: actions/upload-artifact@v2
                 with:
-                    name: "coverage-${{ matrix.php-version }}.zip"
+                    name: "coverage-${{ matrix.php-version }}"
                     path: build/logs.zip
 
     coverage:
@@ -108,5 +108,5 @@ jobs:
             -   name: "Upload artifact"
                 uses: actions/upload-artifact@v2
                 with:
-                    name: "metrics.zip"
+                    name: "metrics"
                     path: build/logs.zip
