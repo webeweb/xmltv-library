@@ -49,13 +49,14 @@ jobs:
                     COVERALLS_PARALLEL:   true
                 run:  php coveralls.phar -v
 
-            -   name: "Artifact"
+            -   name: "Compress artifact"
+                run:  zip -r build/logs.zip build/logs -x build/logs/clover.xml
+
+            -   name: "Upload artifact"
                 uses: actions/upload-artifact@v2
                 with:
-                    name: "coverage-${{ matrix.php-version }}"
-                    path: |
-                          build/logs/
-                          !build/logs/clover.xml
+                    name: "coverage-${{ matrix.php-version }}.zip"
+                    path: build/logs.zip
 
     coverage:
         name:    "Coverage"
@@ -101,10 +102,11 @@ jobs:
             -   name: "Metrics"
                 run:  php phpmetrics.phar --report-html=build/logs/ src/ --git --junit=build/logs/junit.xml
 
-            -   name: "Artifact"
+            -   name: "Compress artifact"
+                run:  zip -r build/logs.zip build/logs -x build/logs/junit.xml
+
+            -   name: "Upload artifact"
                 uses: actions/upload-artifact@v2
                 with:
-                    name: "metrics"
-                    path: |
-                          build/logs/
-                          !build/logs/junit.xml
+                    name: "metrics.zip"
+                    path: build/logs.zip
