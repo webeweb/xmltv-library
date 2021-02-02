@@ -38,10 +38,10 @@ jobs:
 
             -   name: ""
                 uses: coverallsapp/github-action@v1.1.2
-                    with:
-                        github-token: ${{ secrets.github_token }}
-                        flag-name:    PHP-${{ matrix.php-version }}
-                        parallel:     true
+                with:
+                    github-token: ${{ secrets.github_token }}
+                    flag-name:    PHP-${{ matrix.php-version }}
+                    parallel:     true
 
     coverage:
         name:    "Coverage"
