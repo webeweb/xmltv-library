@@ -25,15 +25,15 @@ jobs:
             -   name: "before_install"
                 uses: "shivammathur/setup-php@v2"
                 with:
-                    php:        "${{ matrix.php-version }}"
-                    extensions: "zip"
-                    coverage:   "xdebug"
+                    php-version: "${{ matrix.php-version }}"
+                    extensions:  "zip"
+                    coverage:    "xdebug"
 
             -   name: "install"
                 run:  COMPOSER_MEMORY_LIMIT=-1 composer update
 
             -   name: "before_script"
-                run:  mkdir - builds/logs
+                run:  mkdir -p build/logs
 
             -   name: "script"
                 run:  vendor/bin/phpunit --coverage-clover build/logs/clover.xml
