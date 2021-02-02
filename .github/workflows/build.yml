@@ -1,4 +1,4 @@
-# .github/workflows/travis.yml
+# .github/workflows/build.yml
 name: "build"
 
 on: [ push, release, pull_request ]
@@ -17,6 +17,7 @@ jobs:
                     - "7.3"
                     - "7.4"
                     - "8.0"
+                    - "8.1"
 
         steps:
             -   name: "Checkout"
@@ -26,8 +27,8 @@ jobs:
                 uses: shivammathur/setup-php@v2
                 with:
                     php-version: "${{ matrix.php-version }}"
-                    extensions:  "zip"
                     coverage:    "xdebug"
+                run: php -v
 
             -   name: "Dependencies"
                 run:  COMPOSER_MEMORY_LIMIT=-1 composer update
@@ -40,7 +41,7 @@ jobs:
                       php coveralls.phar --version
 
             -   name: "Tests"
-                run:  vendor/bin/phpunit --coverage-clover build/logs/clover.xml --coverage-html build/logs
+                run:  vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
             -   name: "Coverage"
                 env:
@@ -48,15 +49,6 @@ jobs:
                     COVERALLS_FLAG_NAME:  php-${{ matrix.php-version }}
                     COVERALLS_PARALLEL:   true
                 run:  php coveralls.phar -v
-
-            -   name: "Compress artifact"
-                run:  zip -r build/logs.zip build/logs -x build/logs/clover.xml
-
-            -   name: "Upload artifact"
-                uses: actions/upload-artifact@v2
-                with:
-                    name: "coverage-${{ matrix.php-version }}"
-                    path: build/logs.zip
 
     coverage:
         name:    "Coverage"
@@ -69,6 +61,35 @@ jobs:
                 with:
                     github-token:      ${{ secrets.github_token }}
                     parallel-finished: true
+
+    analysis:
+        name:    "Analysis"
+        runs-on: ubuntu-18.04
+        needs:   "build"
+
+        steps:
+            -   name: "Checkout"
+                uses: actions/checkout@v2
+
+            -   name: "Build environment"
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: "7.1"
+                    coverage:    "xdebug"
+                run: php -v
+
+            -   name: "Dependencies"
+                run:  COMPOSER_MEMORY_LIMIT=-1 composer update
+
+            -   name: "Application"
+                run:  |
+                      mkdir -p build/logs
+                      wget -c -nc --retry-connrefused --tries=0 https://github.com/phpstan/phpstan/releases/download/0.12.71/phpstan.phar -O phpstan.phar
+                      chmod +x phpstan.phar
+                      php phpstan.phar --version
+
+            -   name: "Analyses"
+                run: php phpstan.phar analyse src/ --error-format=github
 
     metrics:
         name:    "Metrics"
@@ -83,8 +104,8 @@ jobs:
                 uses: shivammathur/setup-php@v2
                 with:
                     php-version: "7.1"
-                    extensions:  "zip"
                     coverage:    "xdebug"
+                run: php -v
 
             -   name: "Dependencies"
                 run:  COMPOSER_MEMORY_LIMIT=-1 composer update
@@ -99,14 +120,16 @@ jobs:
             -   name: "Tests"
                 run:  vendor/bin/phpunit --log-junit build/logs/junit.xml
 
-            -   name: "Metrics"
-                run:  php phpmetrics.phar --report-html=build/logs/ src/ --git --junit=build/logs/junit.xml
+            -   name: "Calculates"
+                run:  php phpmetrics.phar --git --junit=build/logs/junit.xml --report-html=build/logs/ src/
 
             -   name: "Compress artifact"
-                run:  zip -r build/logs.zip build/logs -x build/logs/junit.xml
+                run:  |
+                      cd build/logs
+                      zip -r ../report.zip * -x junit.xml
 
             -   name: "Upload artifact"
                 uses: actions/upload-artifact@v2
                 with:
-                    name: "metrics"
-                    path: build/logs.zip
+                    name: "metrics.zip"
+                    path: build/report.zip
