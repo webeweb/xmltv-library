@@ -1,5 +1,5 @@
 # .github/workflows/travis.yml
-name: "Travis"
+name: "Travis CI"
 
 on:
     push:
@@ -20,20 +20,22 @@ jobs:
                     - "8.0"
 
         steps:
-            -   uses: actions/checkout@v2
+            -   name: "Checkout"
+                uses: actions/checkout@v2
 
-            -   name: "before_install"
-                uses: "shivammathur/setup-php@v2"
+            -   name: "Build environment"
+                uses: shivammathur/setup-php@v2
                 with:
                     php-version: "${{ matrix.php-version }}"
                     extensions:  "zip"
                     coverage:    "xdebug"
 
-            -   name: "install"
-                run:  COMPOSER_MEMORY_LIMIT=-1 composer update
+            -   name: "Dependencies"
+            -   run: COMPOSER_MEMORY_LIMIT=-1 composer update
+            -   run: wget -c -nc --retry-connrefused --tries=0 https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.3/php-coveralls.phar -O coveralls.phar
+            -   run: chmod +x coveralls.phar
+            -   run: php coveralls.phar --version
 
-            -   name: "before_script"
-                run:  mkdir -p build/logs
-
-            -   name: "script"
-                run:  vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+            -   name: "Tests"
+            -   run:  mkdir -p build/logs
+            -   run:  vendor/bin/phpunit --coverage-clover build/logs/clover.xml
