@@ -65,7 +65,7 @@ class XmlProvider {
 
         $client->request("GET", $url);
 
-        return XmlProvider::readXml($filename, $logger);
+        return static::readXml($filename, $logger);
     }
 
     /**
@@ -84,7 +84,7 @@ class XmlProvider {
         if (false === @$document->load($filename)) {
             throw new RuntimeException(libxml_get_last_error()->message, 500);
         }
-        if (false === @$document->schemaValidate(XmlProvider::getDtd()) && null !== $logger) {
+        if (false === @$document->schemaValidate(static::getDtd()) && null !== $logger) {
             $logger->warning("Schema validation failed", ["_filename" => $filename]);
         }
 
@@ -129,7 +129,7 @@ class XmlProvider {
 
         $document = new DOMDocument();
         $document->loadXML(implode("", $xml));
-        if (false === @$document->schemaValidate(XmlProvider::getDtd()) && null !== $logger) {
+        if (false === @$document->schemaValidate(static::getDtd()) && null !== $logger) {
             $logger->warning("Schema validation failed");
         }
 

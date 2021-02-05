@@ -62,7 +62,7 @@ class JsonSerializer {
      * @return array Returns the serialized actor.
      */
     public static function serializeActor(Actor $model): array {
-        return array_merge(JsonSerializer::serializeCredit($model), [
+        return array_merge(static::serializeCredit($model), [
             SerializerKeys::ROLE => $model->getRole(),
         ]);
     }

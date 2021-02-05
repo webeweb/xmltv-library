@@ -55,8 +55,8 @@ class EpisodeNum extends AbstractModel {
      */
     public static function enumSystem(): array {
         return [
-            EpisodeNum::SYSTEM_ONSCREEN,
-            EpisodeNum::SYSTEM_XMLTV_NS,
+            static::SYSTEM_ONSCREEN,
+            static::SYSTEM_XMLTV_NS,
         ];
     }
 

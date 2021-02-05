@@ -68,9 +68,9 @@ class Length extends AbstractModel {
      */
     public static function enumUnits(): array {
         return [
-            Length::UNITS_HOURS,
-            Length::UNITS_MINUTES,
-            Length::UNITS_SECONDS,
+            static::UNITS_HOURS,
+            static::UNITS_MINUTES,
+            static::UNITS_SECONDS,
         ];
     }
 
@@ -98,7 +98,7 @@ class Length extends AbstractModel {
      * @throws InvalidArgumentException Throws an invalid argument exception if the units is invalid.
      */
     public function setUnits(?string $units): Length {
-        if (null !== $units && false === in_array($units, Length::enumUnits())) {
+        if (null !== $units && false === in_array($units, static::enumUnits())) {
             throw new InvalidArgumentException(sprintf('The units "%s" is invalid', $units));
         }
         $this->units = $units;
