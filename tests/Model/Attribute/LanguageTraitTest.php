@@ -38,16 +38,4 @@ class LanguageTraitTest extends AbstractTestCase {
         $obj->setLanguage($language);
         $this->assertSame($language, $obj->getLanguage());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestLanguageTrait();
-
-        $this->assertNull($obj->getLanguage());
-    }
 }

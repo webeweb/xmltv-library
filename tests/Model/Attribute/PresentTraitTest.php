@@ -38,16 +38,4 @@ class PresentTraitTest extends AbstractTestCase {
         $obj->setPresent($present);
         $this->assertSame($present, $obj->getPresent());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestPresentTrait();
-
-        $this->assertNull($obj->getPresent());
-    }
 }

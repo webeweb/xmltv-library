@@ -38,16 +38,4 @@ class ValueTraitTest extends AbstractTestCase {
         $obj->setValue($value);
         $this->assertSame($value, $obj->getValue());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestValueTrait();
-
-        $this->assertNull($obj->getValue());
-    }
 }

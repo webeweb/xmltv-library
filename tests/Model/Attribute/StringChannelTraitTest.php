@@ -34,16 +34,4 @@ class StringChannelTraitTest extends AbstractTestCase {
         $obj->setChannel("channel");
         $this->assertEquals("channel", $obj->getChannel());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestStringChannelTrait();
-
-        $this->assertNull($obj->getChannel());
-    }
 }

@@ -37,17 +37,4 @@ class StringStartTraitTest extends AbstractTestCase {
 
         $this->assertInstanceOf(DateTime::class, $obj->getStartDateTime());
     }
-
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function test__construct(): void {
-
-        $obj = new TestStringStartTrait();
-
-        $this->assertNull($obj->getStart());
-        $this->assertNull($obj->getStartDateTime());
-    }
 }
