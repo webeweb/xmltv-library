@@ -50,7 +50,7 @@ class SerializerHelper {
      */
     public static function deserializeDateTime(?string $value): ?DateTime {
 
-        $dateTime = DateTime::createFromFormat(static::DATE_TIME_FORMAT, $value);
+        $dateTime = DateTime::createFromFormat(self::DATE_TIME_FORMAT, $value);
         if (false === $dateTime) {
             return null;
         }

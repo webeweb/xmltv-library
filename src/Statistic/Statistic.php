@@ -107,7 +107,7 @@ class Statistic {
             $this->getAvg(),
         ];
 
-        return vsprintf(static::CONTENT_FORMAT, $args);
+        return vsprintf(self::CONTENT_FORMAT, $args);
     }
 
     /**

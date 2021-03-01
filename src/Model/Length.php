@@ -68,9 +68,9 @@ class Length extends AbstractModel {
      */
     public static function enumUnits(): array {
         return [
-            static::UNITS_HOURS,
-            static::UNITS_MINUTES,
-            static::UNITS_SECONDS,
+            self::UNITS_HOURS,
+            self::UNITS_MINUTES,
+            self::UNITS_SECONDS,
         ];
     }
 

@@ -63,9 +63,9 @@ class Subtitles extends AbstractModel {
      */
     public static function enumType(): array {
         return [
-            static::TYPE_DEAF_SIGNED,
-            static::TYPE_ONSCREEN,
-            static::TYPE_TELETEXT,
+            self::TYPE_DEAF_SIGNED,
+            self::TYPE_ONSCREEN,
+            self::TYPE_TELETEXT,
         ];
     }
 

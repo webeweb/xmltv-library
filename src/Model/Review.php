@@ -70,8 +70,8 @@ class Review extends AbstractModel {
      */
     public static function enumType(): array {
         return [
-            static::TYPE_TEXT,
-            static::TYPE_URL,
+            self::TYPE_TEXT,
+            self::TYPE_URL,
         ];
     }
 
