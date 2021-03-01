@@ -13,15 +13,15 @@ namespace WBW\Library\XMLTV\Tests\Model\Attribute;
 
 use WBW\Library\XMLTV\Model\Value;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestValueTrait;
+use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestValueValueTrait;
 
 /**
- * Value trait test.
+ * Value value trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model\Attribute
  */
-class ValueTraitTest extends AbstractTestCase {
+class ValueValueTraitTest extends AbstractTestCase {
 
     /**
      * Tests the setValue() method.
@@ -33,7 +33,7 @@ class ValueTraitTest extends AbstractTestCase {
         // Set a Value mock.
         $value = new Value();
 
-        $obj = new TestValueTrait();
+        $obj = new TestValueValueTrait();
 
         $obj->setValue($value);
         $this->assertSame($value, $obj->getValue());

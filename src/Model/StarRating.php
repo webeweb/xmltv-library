@@ -12,7 +12,7 @@
 namespace WBW\Library\XMLTV\Model;
 
 use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ValueTrait;
+use WBW\Library\XMLTV\Model\Attribute\ValueValueTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
 use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
@@ -25,7 +25,7 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
 class StarRating extends AbstractModel {
 
     use ArrayIconsTrait;
-    use ValueTrait;
+    use ValueValueTrait;
 
     /**
      * DOM node name.
