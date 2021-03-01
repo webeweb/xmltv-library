@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\XMLTV\Model\Attribute\PresentTrait;
+use WBW\Library\XMLTV\Model\Attribute\PresentPresentTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
 use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
@@ -23,7 +23,7 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
  */
 class Video extends AbstractModel {
 
-    use PresentTrait;
+    use PresentPresentTrait;
 
     /**
      * DOM node name.

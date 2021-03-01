@@ -14,12 +14,12 @@ namespace WBW\Library\XMLTV\Model\Attribute;
 use WBW\Library\XMLTV\Model\Present;
 
 /**
- * Present trait.
+ * Present present trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Model\Attribute
  */
-trait PresentTrait {
+trait PresentPresentTrait {
 
     /**
      * Present.

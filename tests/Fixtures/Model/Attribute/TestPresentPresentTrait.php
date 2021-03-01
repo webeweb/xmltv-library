@@ -11,15 +11,15 @@
 
 namespace WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute;
 
-use WBW\Library\XMLTV\Model\Attribute\ValueTrait;
+use WBW\Library\XMLTV\Model\Attribute\PresentPresentTrait;
 
 /**
- * Test value trait.
+ * Test present present trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute
  */
-class TestValueTrait {
+class TestPresentPresentTrait {
 
-    use ValueTrait;
+    use PresentPresentTrait;
 }

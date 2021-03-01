@@ -13,15 +13,15 @@ namespace WBW\Library\XMLTV\Tests\Model\Attribute;
 
 use WBW\Library\XMLTV\Model\Present;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestPresentTrait;
+use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestPresentPresentTrait;
 
 /**
- * Present trait test.
+ * Present present trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model\Attribute
  */
-class PresentTraitTest extends AbstractTestCase {
+class PresentPresentTraitTest extends AbstractTestCase {
 
     /**
      * Tests the setPresent() method.
@@ -33,7 +33,7 @@ class PresentTraitTest extends AbstractTestCase {
         // Set a Present mock.
         $present = new Present();
 
-        $obj = new TestPresentTrait();
+        $obj = new TestPresentPresentTrait();
 
         $obj->setPresent($present);
         $this->assertSame($present, $obj->getPresent());
