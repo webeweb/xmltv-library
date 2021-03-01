@@ -11,15 +11,15 @@
 
 namespace WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute;
 
-use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
+use WBW\Library\XMLTV\Model\Attribute\LanguageLanguageTrait;
 
 /**
- * Test language trait.
+ * Test language language trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute
  */
-class TestLanguageTrait {
+class TestLanguageLanguageTrait {
 
-    use LanguageTrait;
+    use LanguageLanguageTrait;
 }

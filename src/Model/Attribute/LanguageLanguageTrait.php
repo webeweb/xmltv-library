@@ -14,12 +14,12 @@ namespace WBW\Library\XMLTV\Model\Attribute;
 use WBW\Library\XMLTV\Model\Language;
 
 /**
- * Language trait.
+ * Language language trait.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Model\Attribute
  */
-trait LanguageTrait {
+trait LanguageLanguageTrait {
 
     /**
      * Language.

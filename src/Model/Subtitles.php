@@ -13,7 +13,7 @@ namespace WBW\Library\XMLTV\Model;
 
 use InvalidArgumentException;
 use WBW\Library\Core\Model\Attribute\StringTypeTrait;
-use WBW\Library\XMLTV\Model\Attribute\LanguageTrait;
+use WBW\Library\XMLTV\Model\Attribute\LanguageLanguageTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
 use WBW\Library\XMLTV\Serializer\XmlSerializer;
 
@@ -25,7 +25,7 @@ use WBW\Library\XMLTV\Serializer\XmlSerializer;
  */
 class Subtitles extends AbstractModel {
 
-    use LanguageTrait;
+    use LanguageLanguageTrait;
     use StringTypeTrait;
 
     /**

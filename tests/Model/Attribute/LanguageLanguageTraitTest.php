@@ -13,15 +13,15 @@ namespace WBW\Library\XMLTV\Tests\Model\Attribute;
 
 use WBW\Library\XMLTV\Model\Language;
 use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestLanguageTrait;
+use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestLanguageLanguageTrait;
 
 /**
- * Language trait test.
+ * Language language trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Tests\Model\Attribute
  */
-class LanguageTraitTest extends AbstractTestCase {
+class LanguageLanguageTraitTest extends AbstractTestCase {
 
     /**
      * Tests the setLanguage() method.
@@ -33,7 +33,7 @@ class LanguageTraitTest extends AbstractTestCase {
         // Set a Language mock.
         $language = new Language();
 
-        $obj = new TestLanguageTrait();
+        $obj = new TestLanguageLanguageTrait();
 
         $obj->setLanguage($language);
         $this->assertSame($language, $obj->getLanguage());
