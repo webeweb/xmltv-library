@@ -11,8 +11,8 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\Core\Model\Attribute\IntegerHeightTrait;
-use WBW\Library\Core\Model\Attribute\IntegerWidthTrait;
+use WBW\Library\Traits\Integers\IntegerHeightTrait;
+use WBW\Library\Traits\Integers\IntegerWidthTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
 use WBW\Library\XMLTV\Serializer\XmlSerializer;
 

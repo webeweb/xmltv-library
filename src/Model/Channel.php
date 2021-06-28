@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\Core\Model\Attribute\StringIdTrait;
+use WBW\Library\Traits\Strings\StringIdTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayDisplayNamesTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
 use WBW\Library\XMLTV\Model\Attribute\ArrayProgrammesTrait;

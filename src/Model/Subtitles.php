@@ -12,7 +12,7 @@
 namespace WBW\Library\XMLTV\Model;
 
 use InvalidArgumentException;
-use WBW\Library\Core\Model\Attribute\StringTypeTrait;
+use WBW\Library\Traits\Strings\StringTypeTrait;
 use WBW\Library\XMLTV\Model\Attribute\LanguageLanguageTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
 use WBW\Library\XMLTV\Serializer\XmlSerializer;

@@ -12,8 +12,8 @@
 namespace WBW\Library\XMLTV\Model;
 
 use InvalidArgumentException;
-use WBW\Library\Core\Model\Attribute\StringLangTrait;
-use WBW\Library\Core\Model\Attribute\StringTypeTrait;
+use WBW\Library\Traits\Strings\StringLangTrait;
+use WBW\Library\Traits\Strings\StringTypeTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
 use WBW\Library\XMLTV\Serializer\XmlSerializer;
 

@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Model;
 
-use WBW\Library\Core\Model\Attribute\StringContentTrait;
+use WBW\Library\Traits\Strings\StringContentTrait;
 use WBW\Library\XMLTV\Serializer\JsonSerializer;
 
 /**
