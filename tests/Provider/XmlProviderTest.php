@@ -48,10 +48,10 @@ class XmlProviderTest extends AbstractTestCase {
         parent::setUp();
 
         // Set an input mock.
-        $this->input = getcwd() . "/XmlProvider.testGetXML.xml";
+        $this->input = __DIR__ . "/../XmlProvider.testGetXML.xml";
 
         // Set an output mock.
-        $this->output = getcwd() . "/XmlProvider.testWriteXML.xml";
+        $this->output = __DIR__ . "/../XmlProvider.testWriteXML.xml";
 
         $this->tearDown();
     }

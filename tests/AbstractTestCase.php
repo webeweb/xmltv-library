@@ -387,7 +387,7 @@ abstract class AbstractTestCase extends TestCase {
     protected function setUp(): void {
         parent::setUp();
 
-        $this->filename = getcwd() . "/tests/Fixtures/xmltv.xml";
+        $this->filename = realpath(__DIR__ . "/Fixtures/xmltv.xml");
 
         // Set a DOM document mock.
         $this->document = new DOMDocument;
