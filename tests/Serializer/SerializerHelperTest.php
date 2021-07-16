@@ -39,61 +39,6 @@ class SerializerHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getDOMAttributeValue() method.
-     *
-     * @return void
-     */
-    public function testGetDOMAttributeValue(): void {
-
-        $tvNode = $this->document->documentElement;
-        $dnNode = $tvNode->childNodes->item(1)->childNodes->item(1);
-
-        $this->assertNull(SerializerHelper::getDOMAttributeValue($dnNode, ""));
-        $this->assertNull(SerializerHelper::getDOMAttributeValue($tvNode, ""));
-        $this->assertEquals("date", SerializerHelper::getDOMAttributeValue($tvNode, "date"));
-    }
-
-    /**
-     * Tests the getDOMNodeByName() method.
-     *
-     * @return void
-     */
-    public function testGetDOMNodeByName(): void {
-
-        $tvNode = $this->document->documentElement;
-
-        $res = SerializerHelper::getDOMNodeByName("channel", $tvNode->childNodes);
-        $this->assertNotNull($res);
-        $this->assertEquals("channel", $res->nodeName);
-
-        $this->assertNull(SerializerHelper::getDOMNodeByName("name", $tvNode->childNodes));
-    }
-
-    /**
-     * Tests the getDOMNodesByName() method.
-     *
-     * @return void
-     */
-    public function testGetDOMNodesByName(): void {
-
-        $tvNode = $this->document->documentElement;
-
-        $res = SerializerHelper::getDOMNodesByName("channel", $tvNode->childNodes);
-        $this->assertCount(1, $res);
-        $this->assertEquals("channel", $res[0]->nodeName);
-    }
-
-    /**
-     * Tests the getDOMNodesByName() method.
-     *
-     * @return void
-     */
-    public function testGetDOMNodesByNameWithNull(): void {
-
-        $this->assertEquals([], SerializerHelper::getDOMNodesByName("channel"));
-    }
-
-    /**
      * Tests the getMethodName() method.
      *
      * @return void
@@ -102,23 +47,6 @@ class SerializerHelperTest extends AbstractTestCase {
 
         $this->assertEquals("addDisplayName", SerializerHelper::getMethodName("add", "display-name"));
         $this->assertEquals("setUrl", SerializerHelper::getMethodName("set", "url"));
-    }
-
-    /**
-     * Tests the setLogger() method.
-     *
-     * @return void
-     */
-    public function testSetLogger(): void {
-
-        // Set a Logger mock.
-        $logger = $this->getMockBuilder(LoggerInterface::class)->getMock();
-
-        SerializerHelper::setLogger($logger);
-        $this->assertSame($logger, SerializerHelper::getLogger());
-
-        // Unset the mock.
-        SerializerHelper::setLogger(null);
     }
 
     /**

@@ -11,6 +11,7 @@
 
 namespace WBW\Library\XMLTV\Serializer;
 
+use WBW\Library\Provider\Serializer\JsonSerializerHelper;
 use WBW\Library\XMLTV\Model\AbstractCredit;
 use WBW\Library\XMLTV\Model\Actor;
 use WBW\Library\XMLTV\Model\Aspect;
@@ -53,7 +54,7 @@ use WBW\Library\XMLTV\Model\Video;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Serializer
  */
-class JsonSerializer {
+class JsonSerializer extends JsonSerializerHelper {
 
     /**
      * Serialize an actor.
@@ -87,8 +88,8 @@ class JsonSerializer {
      */
     public static function serializeAudio(Audio $model): array {
         return [
-            SerializerKeys::PRESENT => SerializerHelper::jsonSerializeModel($model->getPresent()),
-            SerializerKeys::STEREO  => SerializerHelper::jsonSerializeModel($model->getStereo()),
+            SerializerKeys::PRESENT => static::jsonSerializeModel($model->getPresent()),
+            SerializerKeys::STEREO  => static::jsonSerializeModel($model->getStereo()),
         ];
     }
 
@@ -114,9 +115,9 @@ class JsonSerializer {
     public static function serializeChannel(Channel $model): array {
         return [
             SerializerKeys::ID            => $model->getId(),
-            SerializerKeys::DISPLAY_NAMES => SerializerHelper::jsonSerializeArray($model->getDisplayNames()),
-            SerializerKeys::ICONS         => SerializerHelper::jsonSerializeArray($model->getIcons()),
-            SerializerKeys::URLS          => SerializerHelper::jsonSerializeArray($model->getUrls()),
+            SerializerKeys::DISPLAY_NAMES => static::jsonSerializeArray($model->getDisplayNames()),
+            SerializerKeys::ICONS         => static::jsonSerializeArray($model->getIcons()),
+            SerializerKeys::URLS          => static::jsonSerializeArray($model->getUrls()),
         ];
     }
 
@@ -165,16 +166,16 @@ class JsonSerializer {
      */
     public static function serializeCredits(Credits $model): array {
         return [
-            SerializerKeys::DIRECTORS    => SerializerHelper::jsonSerializeArray($model->getDirectors()),
-            SerializerKeys::ACTORS       => SerializerHelper::jsonSerializeArray($model->getActors()),
-            SerializerKeys::WRITERS      => SerializerHelper::jsonSerializeArray($model->getWriters()),
-            SerializerKeys::ADAPTERS     => SerializerHelper::jsonSerializeArray($model->getAdapters()),
-            SerializerKeys::PRODUCERS    => SerializerHelper::jsonSerializeArray($model->getProducers()),
-            SerializerKeys::COMPOSERS    => SerializerHelper::jsonSerializeArray($model->getComposers()),
-            SerializerKeys::EDITORS      => SerializerHelper::jsonSerializeArray($model->getEditors()),
-            SerializerKeys::PRESENTERS   => SerializerHelper::jsonSerializeArray($model->getPresenters()),
-            SerializerKeys::COMMENTATORS => SerializerHelper::jsonSerializeArray($model->getCommentators()),
-            SerializerKeys::GUESTS       => SerializerHelper::jsonSerializeArray($model->getGuests()),
+            SerializerKeys::DIRECTORS    => static::jsonSerializeArray($model->getDirectors()),
+            SerializerKeys::ACTORS       => static::jsonSerializeArray($model->getActors()),
+            SerializerKeys::WRITERS      => static::jsonSerializeArray($model->getWriters()),
+            SerializerKeys::ADAPTERS     => static::jsonSerializeArray($model->getAdapters()),
+            SerializerKeys::PRODUCERS    => static::jsonSerializeArray($model->getProducers()),
+            SerializerKeys::COMPOSERS    => static::jsonSerializeArray($model->getComposers()),
+            SerializerKeys::EDITORS      => static::jsonSerializeArray($model->getEditors()),
+            SerializerKeys::PRESENTERS   => static::jsonSerializeArray($model->getPresenters()),
+            SerializerKeys::COMMENTATORS => static::jsonSerializeArray($model->getCommentators()),
+            SerializerKeys::GUESTS       => static::jsonSerializeArray($model->getGuests()),
         ];
     }
 
@@ -362,30 +363,30 @@ class JsonSerializer {
             SerializerKeys::VIDEO_PLUS       => $model->getVideoPlus(),
             SerializerKeys::CHANNEL          => $model->getChannel(),
             SerializerKeys::CLUMP_IDX        => $model->getClumpIdx(),
-            SerializerKeys::TITLES           => SerializerHelper::jsonSerializeArray($model->getTitles()),
-            SerializerKeys::SECONDARY_TITLES => SerializerHelper::jsonSerializeArray($model->getSecondaryTitles()),
-            SerializerKeys::DESCS            => SerializerHelper::jsonSerializeArray($model->getDescs()),
-            SerializerKeys::CREDITS          => SerializerHelper::jsonSerializeModel($model->getCredits()),
-            SerializerKeys::DATE             => SerializerHelper::jsonSerializeModel($model->getDate()),
-            SerializerKeys::CATEGORIES       => SerializerHelper::jsonSerializeArray($model->getCategories()),
-            SerializerKeys::KEYWORDS         => SerializerHelper::jsonSerializeArray($model->getKeywords()),
-            SerializerKeys::LANGUAGE         => SerializerHelper::jsonSerializeModel($model->getLanguage()),
-            SerializerKeys::ORIG_LANGUAGE    => SerializerHelper::jsonSerializeModel($model->getOrigLanguage()),
-            SerializerKeys::LENGTH           => SerializerHelper::jsonSerializeModel($model->getLength()),
-            SerializerKeys::ICONS            => SerializerHelper::jsonSerializeArray($model->getIcons()),
-            SerializerKeys::URLS             => SerializerHelper::jsonSerializeArray($model->getUrls()),
-            SerializerKeys::COUNTRIES        => SerializerHelper::jsonSerializeArray($model->getCountries()),
-            SerializerKeys::EPISODE_NUMS     => SerializerHelper::jsonSerializeArray($model->getEpisodeNums()),
-            SerializerKeys::VIDEO            => SerializerHelper::jsonSerializeModel($model->getVideo()),
-            SerializerKeys::AUDIO            => SerializerHelper::jsonSerializeModel($model->getAudio()),
-            SerializerKeys::PREVIOUSLY_SHOWN => SerializerHelper::jsonSerializeModel($model->getPreviouslyShown()),
-            SerializerKeys::PREMIERE         => SerializerHelper::jsonSerializeModel($model->getPremiere()),
-            SerializerKeys::LAST_CHANCE      => SerializerHelper::jsonSerializeModel($model->getLastChance()),
+            SerializerKeys::TITLES           => static::jsonSerializeArray($model->getTitles()),
+            SerializerKeys::SECONDARY_TITLES => static::jsonSerializeArray($model->getSecondaryTitles()),
+            SerializerKeys::DESCS            => static::jsonSerializeArray($model->getDescs()),
+            SerializerKeys::CREDITS          => static::jsonSerializeModel($model->getCredits()),
+            SerializerKeys::DATE             => static::jsonSerializeModel($model->getDate()),
+            SerializerKeys::CATEGORIES       => static::jsonSerializeArray($model->getCategories()),
+            SerializerKeys::KEYWORDS         => static::jsonSerializeArray($model->getKeywords()),
+            SerializerKeys::LANGUAGE         => static::jsonSerializeModel($model->getLanguage()),
+            SerializerKeys::ORIG_LANGUAGE    => static::jsonSerializeModel($model->getOrigLanguage()),
+            SerializerKeys::LENGTH           => static::jsonSerializeModel($model->getLength()),
+            SerializerKeys::ICONS            => static::jsonSerializeArray($model->getIcons()),
+            SerializerKeys::URLS             => static::jsonSerializeArray($model->getUrls()),
+            SerializerKeys::COUNTRIES        => static::jsonSerializeArray($model->getCountries()),
+            SerializerKeys::EPISODE_NUMS     => static::jsonSerializeArray($model->getEpisodeNums()),
+            SerializerKeys::VIDEO            => static::jsonSerializeModel($model->getVideo()),
+            SerializerKeys::AUDIO            => static::jsonSerializeModel($model->getAudio()),
+            SerializerKeys::PREVIOUSLY_SHOWN => static::jsonSerializeModel($model->getPreviouslyShown()),
+            SerializerKeys::PREMIERE         => static::jsonSerializeModel($model->getPremiere()),
+            SerializerKeys::LAST_CHANCE      => static::jsonSerializeModel($model->getLastChance()),
             SerializerKeys::NEW              => $model->getNew(),
-            SerializerKeys::SUBTITLES        => SerializerHelper::jsonSerializeArray($model->getSubtitles()),
-            SerializerKeys::RATINGS          => SerializerHelper::jsonSerializeArray($model->getRatings()),
-            SerializerKeys::STAR_RATINGS     => SerializerHelper::jsonSerializeArray($model->getStarRatings()),
-            SerializerKeys::REVIEWS          => SerializerHelper::jsonSerializeArray($model->getReviews()),
+            SerializerKeys::SUBTITLES        => static::jsonSerializeArray($model->getSubtitles()),
+            SerializerKeys::RATINGS          => static::jsonSerializeArray($model->getRatings()),
+            SerializerKeys::STAR_RATINGS     => static::jsonSerializeArray($model->getStarRatings()),
+            SerializerKeys::REVIEWS          => static::jsonSerializeArray($model->getReviews()),
         ];
     }
 
@@ -410,8 +411,8 @@ class JsonSerializer {
     public static function serializeRating(Rating $model): array {
         return [
             SerializerKeys::SYSTEM => $model->getSystem(),
-            SerializerKeys::VALUE  => SerializerHelper::jsonSerializeModel($model->getValue()),
-            SerializerKeys::ICONS  => SerializerHelper::jsonSerializeArray($model->getIcons()),
+            SerializerKeys::VALUE  => static::jsonSerializeModel($model->getValue()),
+            SerializerKeys::ICONS  => static::jsonSerializeArray($model->getIcons()),
         ];
     }
 
@@ -451,8 +452,8 @@ class JsonSerializer {
      */
     public static function serializeStarRating(StarRating $model): array {
         return [
-            SerializerKeys::VALUE => SerializerHelper::jsonSerializeModel($model->getValue()),
-            SerializerKeys::ICONS => SerializerHelper::jsonSerializeArray($model->getIcons()),
+            SerializerKeys::VALUE => static::jsonSerializeModel($model->getValue()),
+            SerializerKeys::ICONS => static::jsonSerializeArray($model->getIcons()),
         ];
     }
 
@@ -477,7 +478,7 @@ class JsonSerializer {
     public static function serializeSubtitles(Subtitles $model): array {
         return [
             SerializerKeys::TYPE     => $model->getType(),
-            SerializerKeys::LANGUAGE => SerializerHelper::jsonSerializeModel($model->getLanguage()),
+            SerializerKeys::LANGUAGE => static::jsonSerializeModel($model->getLanguage()),
         ];
     }
 
@@ -508,8 +509,8 @@ class JsonSerializer {
             SerializerKeys::SOURCE_DATA_URL     => $model->getSourceDataUrl(),
             SerializerKeys::SOURCE_INFO_NAME    => $model->getSourceInfoName(),
             SerializerKeys::SOURCE_INFO_URL     => $model->getSourceInfoUrl(),
-            SerializerKeys::CHANNELS            => SerializerHelper::jsonSerializeArray($model->getChannels()),
-            SerializerKeys::PROGRAMMES          => SerializerHelper::jsonSerializeArray($model->getProgrammes()),
+            SerializerKeys::CHANNELS            => static::jsonSerializeArray($model->getChannels()),
+            SerializerKeys::PROGRAMMES          => static::jsonSerializeArray($model->getProgrammes()),
         ];
     }
 
@@ -545,10 +546,10 @@ class JsonSerializer {
      */
     public static function serializeVideo(Video $model): array {
         return [
-            SerializerKeys::PRESENT => SerializerHelper::jsonSerializeModel($model->getPresent()),
-            SerializerKeys::COLOUR  => SerializerHelper::jsonSerializeModel($model->getColour()),
-            SerializerKeys::ASPECT  => SerializerHelper::jsonSerializeModel($model->getAspect()),
-            SerializerKeys::QUALITY => SerializerHelper::jsonSerializeModel($model->getQuality()),
+            SerializerKeys::PRESENT => static::jsonSerializeModel($model->getPresent()),
+            SerializerKeys::COLOUR  => static::jsonSerializeModel($model->getColour()),
+            SerializerKeys::ASPECT  => static::jsonSerializeModel($model->getAspect()),
+            SerializerKeys::QUALITY => static::jsonSerializeModel($model->getQuality()),
         ];
     }
 }

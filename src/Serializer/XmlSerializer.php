@@ -12,6 +12,7 @@
 namespace WBW\Library\XMLTV\Serializer;
 
 use WBW\Library\Core\Argument\Helper\StringHelper;
+use WBW\Library\Provider\Serializer\XmlSerializerHelper;
 use WBW\Library\XMLTV\Model\Actor;
 use WBW\Library\XMLTV\Model\Adapter;
 use WBW\Library\XMLTV\Model\Aspect;
@@ -62,7 +63,7 @@ use WBW\Library\XMLTV\Model\Writer;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\XMLTV\Serializer
  */
-class XmlSerializer {
+class XmlSerializer extends XmlSerializerHelper {
 
     /**
      * Serialize an actor.
@@ -104,7 +105,7 @@ class XmlSerializer {
      */
     public static function serializeAudio(Audio $model): string {
 
-        $content = SerializerHelper::xmlSerializeArray([
+        $content = static::xmlSerializeArray([
             $model->getPresent(),
             $model->getStereo(),
         ]);
@@ -133,9 +134,9 @@ class XmlSerializer {
     public static function serializeChannel(Channel $model): string {
 
         $content = [
-            SerializerHelper::xmlSerializeArray($model->getDisplayNames()),
-            SerializerHelper::xmlSerializeArray($model->getIcons()),
-            SerializerHelper::xmlSerializeArray($model->getUrls()),
+            static::xmlSerializeArray($model->getDisplayNames()),
+            static::xmlSerializeArray($model->getIcons()),
+            static::xmlSerializeArray($model->getUrls()),
         ];
 
         return StringHelper::domNode(Channel::DOM_NODE_NAME, implode("", $content), [
@@ -194,16 +195,16 @@ class XmlSerializer {
     public static function serializeCredits(Credits $model): string {
 
         $content = [
-            SerializerHelper::xmlSerializeArray($model->getDirectors()),
-            SerializerHelper::xmlSerializeArray($model->getActors()),
-            SerializerHelper::xmlSerializeArray($model->getWriters()),
-            SerializerHelper::xmlSerializeArray($model->getAdapters()),
-            SerializerHelper::xmlSerializeArray($model->getProducers()),
-            SerializerHelper::xmlSerializeArray($model->getComposers()),
-            SerializerHelper::xmlSerializeArray($model->getEditors()),
-            SerializerHelper::xmlSerializeArray($model->getPresenters()),
-            SerializerHelper::xmlSerializeArray($model->getCommentators()),
-            SerializerHelper::xmlSerializeArray($model->getGuests()),
+            static::xmlSerializeArray($model->getDirectors()),
+            static::xmlSerializeArray($model->getActors()),
+            static::xmlSerializeArray($model->getWriters()),
+            static::xmlSerializeArray($model->getAdapters()),
+            static::xmlSerializeArray($model->getProducers()),
+            static::xmlSerializeArray($model->getComposers()),
+            static::xmlSerializeArray($model->getEditors()),
+            static::xmlSerializeArray($model->getPresenters()),
+            static::xmlSerializeArray($model->getCommentators()),
+            static::xmlSerializeArray($model->getGuests()),
         ];
 
         return StringHelper::domNode(Credits::DOM_NODE_NAME, implode("", $content));
@@ -423,30 +424,30 @@ class XmlSerializer {
     public static function serializeProgramme(Programme $model): string {
 
         $content = [
-            SerializerHelper::xmlSerializeArray($model->getTitles()),
-            SerializerHelper::xmlSerializeArray($model->getSecondaryTitles()),
-            SerializerHelper::xmlSerializeArray($model->getDescs()),
-            SerializerHelper::xmlSerializeModel($model->getCredits()),
-            SerializerHelper::xmlSerializeModel($model->getDate()),
-            SerializerHelper::xmlSerializeArray($model->getCategories()),
-            SerializerHelper::xmlSerializeArray($model->getKeywords()),
-            SerializerHelper::xmlSerializeModel($model->getLanguage()),
-            SerializerHelper::xmlSerializeModel($model->getOrigLanguage()),
-            SerializerHelper::xmlSerializeModel($model->getLength()),
-            SerializerHelper::xmlSerializeArray($model->getIcons()),
-            SerializerHelper::xmlSerializeArray($model->getUrls()),
-            SerializerHelper::xmlSerializeArray($model->getCountries()),
-            SerializerHelper::xmlSerializeArray($model->getEpisodeNums()),
-            SerializerHelper::xmlSerializeModel($model->getVideo()),
-            SerializerHelper::xmlSerializeModel($model->getAudio()),
-            SerializerHelper::xmlSerializeModel($model->getPreviouslyShown()),
-            SerializerHelper::xmlSerializeModel($model->getPremiere()),
-            SerializerHelper::xmlSerializeModel($model->getLastChance()),
+            static::xmlSerializeArray($model->getTitles()),
+            static::xmlSerializeArray($model->getSecondaryTitles()),
+            static::xmlSerializeArray($model->getDescs()),
+            static::xmlSerializeModel($model->getCredits()),
+            static::xmlSerializeModel($model->getDate()),
+            static::xmlSerializeArray($model->getCategories()),
+            static::xmlSerializeArray($model->getKeywords()),
+            static::xmlSerializeModel($model->getLanguage()),
+            static::xmlSerializeModel($model->getOrigLanguage()),
+            static::xmlSerializeModel($model->getLength()),
+            static::xmlSerializeArray($model->getIcons()),
+            static::xmlSerializeArray($model->getUrls()),
+            static::xmlSerializeArray($model->getCountries()),
+            static::xmlSerializeArray($model->getEpisodeNums()),
+            static::xmlSerializeModel($model->getVideo()),
+            static::xmlSerializeModel($model->getAudio()),
+            static::xmlSerializeModel($model->getPreviouslyShown()),
+            static::xmlSerializeModel($model->getPremiere()),
+            static::xmlSerializeModel($model->getLastChance()),
             true === $model->getNew() ? "<new/>" : "",
-            SerializerHelper::xmlSerializeArray($model->getSubtitles()),
-            SerializerHelper::xmlSerializeArray($model->getRatings()),
-            SerializerHelper::xmlSerializeArray($model->getStarRatings()),
-            SerializerHelper::xmlSerializeArray($model->getReviews()),
+            static::xmlSerializeArray($model->getSubtitles()),
+            static::xmlSerializeArray($model->getRatings()),
+            static::xmlSerializeArray($model->getStarRatings()),
+            static::xmlSerializeArray($model->getReviews()),
         ];
 
         return StringHelper::domNode(Programme::DOM_NODE_NAME, implode("", $content), [
@@ -480,8 +481,8 @@ class XmlSerializer {
     public static function serializeRating(Rating $model): string {
 
         $content = [
-            SerializerHelper::xmlSerializeModel($model->getValue()),
-            SerializerHelper::xmlSerializeArray($model->getIcons()),
+            static::xmlSerializeModel($model->getValue()),
+            static::xmlSerializeArray($model->getIcons()),
         ];
 
         return StringHelper::domNode(Rating::DOM_NODE_NAME, implode("", $content), [
@@ -525,8 +526,8 @@ class XmlSerializer {
     public static function serializeStarRating(StarRating $model): string {
 
         $content = [
-            SerializerHelper::xmlSerializeModel($model->getValue()),
-            SerializerHelper::xmlSerializeArray($model->getIcons()),
+            static::xmlSerializeModel($model->getValue()),
+            static::xmlSerializeArray($model->getIcons()),
         ];
 
         return StringHelper::domNode(StarRating::DOM_NODE_NAME, implode("", $content));
@@ -550,7 +551,7 @@ class XmlSerializer {
      */
     public static function serializeSubtitles(Subtitles $model): string {
 
-        $content = SerializerHelper::xmlSerializeModel($model->getLanguage());
+        $content = static::xmlSerializeModel($model->getLanguage());
 
         return StringHelper::domNode(Subtitles::DOM_NODE_NAME, $content, [
             SerializerKeys::TYPE => $model->getType(),
@@ -578,8 +579,8 @@ class XmlSerializer {
     public static function serializeTv(Tv $model): string {
 
         $content = [
-            SerializerHelper::xmlSerializeArray($model->getChannels()),
-            SerializerHelper::xmlSerializeArray($model->getProgrammes()),
+            static::xmlSerializeArray($model->getChannels()),
+            static::xmlSerializeArray($model->getProgrammes()),
         ];
 
         return StringHelper::domNode(Tv::DOM_NODE_NAME, implode("", $content), [
@@ -620,7 +621,7 @@ class XmlSerializer {
      */
     public static function serializeVideo(Video $model): string {
 
-        $content = SerializerHelper::xmlSerializeArray([
+        $content = static::xmlSerializeArray([
             $model->getPresent(),
             $model->getColour(),
             $model->getAspect(),

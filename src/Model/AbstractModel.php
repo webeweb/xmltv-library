@@ -16,6 +16,7 @@
 namespace WBW\Library\XMLTV\Model;
 
 use JsonSerializable;
+use WBW\Library\Provider\Model\XmlSerializable;
 
 /**
  * Abstract model.
@@ -24,7 +25,7 @@ use JsonSerializable;
  * @package WBW\Library\XMLTV\Model
  * @abstract
  */
-abstract class AbstractModel implements JsonSerializable {
+abstract class AbstractModel implements JsonSerializable, XmlSerializable {
 
     /**
      * Constructor.
@@ -32,11 +33,4 @@ abstract class AbstractModel implements JsonSerializable {
     public function __construct() {
         // NOTHING TO DO
     }
-
-    /**
-     * XML serialize.
-     *
-     * @return string Returns the XML serialization.
-     */
-    abstract public function xmlSerialize(): string;
 }
