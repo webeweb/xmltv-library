@@ -1,9 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [1.0.3](https://github.com/webeweb/core-bundle/tree/v1.0.3) (2021-07-16)
 
 - Improve unit tests
+- Update dependencies
 
 ### [1.0.2](https://github.com/webeweb/core-bundle/tree/v1.0.2) (2021-06-28)
 
