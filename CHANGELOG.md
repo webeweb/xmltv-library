@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.0.4](https://github.com/webeweb/core-bundle/tree/v1.0.4) (2021-07-20)
+
+- Improve PHPDoc
+
 ### [1.0.3](https://github.com/webeweb/core-bundle/tree/v1.0.3) (2021-07-16)
 
 - Improve unit tests
