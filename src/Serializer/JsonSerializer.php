@@ -57,7 +57,7 @@ use WBW\Library\XMLTV\Model\Video;
 class JsonSerializer extends JsonSerializerHelper {
 
     /**
-     * Serialize an actor.
+     * Serializes an actor.
      *
      * @param Actor $model The actor.
      * @return array Returns the serialized actor.
@@ -69,7 +69,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize an aspect.
+     * Serializes an aspect.
      *
      * @param Aspect $model The aspect.
      * @return array Returns the serialized aspect.
@@ -81,7 +81,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize an audio.
+     * Serializes an audio.
      *
      * @param Audio $model The audio.
      * @return array Returns the serialized audio.
@@ -94,7 +94,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a category.
+     * Serializes a category.
      *
      * @param Category $model The category.
      * @return array Returns the serialized category.
@@ -107,7 +107,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a channel.
+     * Serializes a channel.
      *
      * @param Channel $model The channel.
      * @return array Returns the serialized channel.
@@ -122,7 +122,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a colour.
+     * Serializes a colour.
      *
      * @param Colour $model The colour.
      * @return array Returns the serialized colour.
@@ -134,7 +134,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a country.
+     * Serializes a country.
      *
      * @param Country $model The country.
      * @return array Returns the serialized country.
@@ -147,7 +147,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a credit.
+     * Serializes a credit.
      *
      * @param AbstractCredit $model The credit.
      * @return array Returns the serialized credit.
@@ -159,7 +159,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a credits.
+     * Serializes a credits.
      *
      * @param Credits $model The credits.
      * @return array Returns the serialized credits.
@@ -180,7 +180,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a date.
+     * Serializes a date.
      *
      * @param Date $model The date.
      * @return array Returns the serialized date.
@@ -192,7 +192,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a desc.
+     * Serializes a desc.
      *
      * @param Desc $model The desc.
      * @return array Returns the serialized desc.
@@ -205,7 +205,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a display name.
+     * Serializes a display name.
      *
      * @param DisplayName $model The display name.
      * @return array Returns the serialized display name.
@@ -218,7 +218,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize an episode number.
+     * Serializes an episode number.
      *
      * @param EpisodeNum $model The episode number.
      * @return array Returns the serialized episode num.
@@ -231,7 +231,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize an icon.
+     * Serializes an icon.
      *
      * @param Icon $model The icon.
      * @return array Returns the serialized icon.
@@ -245,7 +245,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a keyword.
+     * Serializes a keyword.
      *
      * @param Keyword $model The keyword.
      * @return array Returns the serialized keyword.
@@ -258,7 +258,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a language.
+     * Serializes a language.
      *
      * @param Language $model The language.
      * @return array Returns the serialized language.
@@ -271,7 +271,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a last chance.
+     * Serializes a last chance.
      *
      * @param LastChance $model The last chance.
      * @return array Returns the serialized last chance.
@@ -284,7 +284,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a length.
+     * Serializes a length.
      *
      * @param Length $model The length.
      * @return array Returns the serialized length.
@@ -297,7 +297,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize an original language.
+     * Serializes an original language.
      *
      * @param OrigLanguage $model The original language.
      * @return array Returns the serialized original language.
@@ -310,7 +310,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a premiere.
+     * Serializes a premiere.
      *
      * @param Premiere $model The premiere.
      * @return array Returns the serialized premiere.
@@ -323,7 +323,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a present.
+     * Serializes a present.
      *
      * @param Present $model The present.
      * @return array Returns the serialized present.
@@ -335,7 +335,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a previously shown.
+     * Serializes a previously shown.
      *
      * @param PreviouslyShown $model The previously shown.
      * @return array Returns the serialized previously shown.
@@ -348,7 +348,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a programme.
+     * Serializes a programme.
      *
      * @param Programme $model The programme.
      * @return array Returns the serialized programme.
@@ -391,7 +391,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a quality.
+     * Serializes a quality.
      *
      * @param Quality $model The quality.
      * @return array Returns the serialized quality.
@@ -403,7 +403,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a rating.
+     * Serializes a rating.
      *
      * @param Rating $model The rating.
      * @return array Returns the serialized rating.
@@ -417,7 +417,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a review.
+     * Serializes a review.
      *
      * @param Review $model The review.
      * @return array Returns the serialized review.
@@ -432,7 +432,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a secondary title.
+     * Serializes a secondary title.
      *
      * @param SecondaryTitle $model The secondary title.
      * @return array Returns the serialized secondary title.
@@ -445,7 +445,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a star rating.
+     * Serializes a star rating.
      *
      * @param StarRating $model The star rating.
      * @return array Returns the serialized star rating.
@@ -458,7 +458,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a stereo.
+     * Serializes a stereo.
      *
      * @param Stereo $model The stereo.
      * @return array Returns the serialized stereo.
@@ -470,7 +470,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a subtitles.
+     * Serializes a subtitles.
      *
      * @param Subtitles $model The subtitles.
      * @return array Returns the serialized subtitles.
@@ -483,7 +483,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a title.
+     * Serializes a title.
      *
      * @param Title $model The title.
      * @return array Returns the serialized title.
@@ -496,7 +496,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a TV.
+     * Serializes a TV.
      *
      * @param Tv $model The TV.
      * @return array Returns the serialized TV.
@@ -515,7 +515,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize an URL.
+     * Serializes an URL.
      *
      * @param Url $model The URL.
      * @return array Returns the serialized URL.
@@ -527,7 +527,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a value.
+     * Serializes a value.
      *
      * @param Value $model The value.
      * @return array Returns the serialized value.
@@ -539,7 +539,7 @@ class JsonSerializer extends JsonSerializerHelper {
     }
 
     /**
-     * Serialize a video.
+     * Serializes a video.
      *
      * @param Video $model The video.
      * @return array Returns the serialized video.
