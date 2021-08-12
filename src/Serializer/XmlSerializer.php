@@ -11,8 +11,8 @@
 
 namespace WBW\Library\XMLTV\Serializer;
 
-use WBW\Library\Core\Argument\Helper\StringHelper;
 use WBW\Library\Provider\Serializer\XmlSerializerHelper;
+use WBW\Library\Types\Helper\StringHelper;
 use WBW\Library\XMLTV\Model\Actor;
 use WBW\Library\XMLTV\Model\Adapter;
 use WBW\Library\XMLTV\Model\Aspect;
