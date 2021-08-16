@@ -11,7 +11,7 @@
 
 namespace WBW\Library\XMLTV\Serializer;
 
-use WBW\Library\Provider\Serializer\JsonSerializerHelper;
+use WBW\Library\Serializer\Helper\JsonSerializerHelper;
 use WBW\Library\XMLTV\Model\AbstractCredit;
 use WBW\Library\XMLTV\Model\Actor;
 use WBW\Library\XMLTV\Model\Aspect;

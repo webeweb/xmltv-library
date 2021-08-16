@@ -16,7 +16,7 @@
 namespace WBW\Library\XMLTV\Model;
 
 use JsonSerializable;
-use WBW\Library\Provider\Model\XmlSerializable;
+use WBW\Library\Serializer\Model\XmlSerializable;
 
 /**
  * Abstract model.

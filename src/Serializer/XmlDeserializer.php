@@ -12,7 +12,7 @@
 namespace WBW\Library\XMLTV\Serializer;
 
 use DOMNode;
-use WBW\Library\Provider\Serializer\XmlDeserializerHelper;
+use WBW\Library\Serializer\Helper\XmlDeserializerHelper;
 use WBW\Library\XMLTV\Model\Actor;
 use WBW\Library\XMLTV\Model\Adapter;
 use WBW\Library\XMLTV\Model\Aspect;

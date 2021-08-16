@@ -13,9 +13,9 @@ namespace WBW\Library\XMLTV\Serializer;
 
 use DateTime;
 use DOMNode;
-use WBW\Library\Provider\Serializer\SerializerHelper as BaseSerializerHelper;
-use WBW\Library\Provider\Serializer\XmlDeserializerHelper;
-use WBW\Library\Provider\Serializer\XmlSerializerHelper;
+use WBW\Library\Serializer\Helper\SerializerHelper as BaseSerializerHelper;
+use WBW\Library\Serializer\Helper\XmlDeserializerHelper;
+use WBW\Library\Serializer\Helper\XmlSerializerHelper;
 use WBW\Library\Types\Helper\ArrayHelper;
 use WBW\Library\Types\Helper\StringHelper;
 use WBW\Library\XMLTV\Model\AbstractModel;
