@@ -4,6 +4,9 @@ DOCUMENTATION
 Get an XML file:
 
 ```php
+use WBW\Library\XMLTV\Model\Tv;
+use WBW\Library\XMLTV\Provider\XmlProvider;
+
 /** @var Tv $tv */
 $tv = XmlProvider::getXml("http://path/to/file.xml");
 ```
@@ -11,6 +14,51 @@ $tv = XmlProvider::getXml("http://path/to/file.xml");
 Read an XML file:
 
 ```php
+use WBW\Library\XMLTV\Model\Actor;
+use WBW\Library\XMLTV\Model\Adapter;
+use WBW\Library\XMLTV\Model\Aspect;
+use WBW\Library\XMLTV\Model\Audio;
+use WBW\Library\XMLTV\Model\Category;
+use WBW\Library\XMLTV\Model\Channel;
+use WBW\Library\XMLTV\Model\Colour;
+use WBW\Library\XMLTV\Model\Commentator;
+use WBW\Library\XMLTV\Model\Composer;
+use WBW\Library\XMLTV\Model\Country;
+use WBW\Library\XMLTV\Model\Credits;
+use WBW\Library\XMLTV\Model\Date;
+use WBW\Library\XMLTV\Model\Desc;
+use WBW\Library\XMLTV\Model\Director;
+use WBW\Library\XMLTV\Model\DisplayName;
+use WBW\Library\XMLTV\Model\Editor;
+use WBW\Library\XMLTV\Model\EpisodeNum;
+use WBW\Library\XMLTV\Model\Guest;
+use WBW\Library\XMLTV\Model\Icon;
+use WBW\Library\XMLTV\Model\Keyword;
+use WBW\Library\XMLTV\Model\Language;
+use WBW\Library\XMLTV\Model\LastChance;
+use WBW\Library\XMLTV\Model\Length;
+use WBW\Library\XMLTV\Model\OrigLanguage;
+use WBW\Library\XMLTV\Model\Premiere;
+use WBW\Library\XMLTV\Model\Present;
+use WBW\Library\XMLTV\Model\Presenter;
+use WBW\Library\XMLTV\Model\PreviouslyShown;
+use WBW\Library\XMLTV\Model\Producer;
+use WBW\Library\XMLTV\Model\Programme;
+use WBW\Library\XMLTV\Model\Quality;
+use WBW\Library\XMLTV\Model\Rating;
+use WBW\Library\XMLTV\Model\Review;
+use WBW\Library\XMLTV\Model\SecondaryTitle;
+use WBW\Library\XMLTV\Model\StarRating;
+use WBW\Library\XMLTV\Model\Stereo;
+use WBW\Library\XMLTV\Model\Subtitles;
+use WBW\Library\XMLTV\Model\Title;
+use WBW\Library\XMLTV\Model\Tv;
+use WBW\Library\XMLTV\Model\Url;
+use WBW\Library\XMLTV\Model\Value;
+use WBW\Library\XMLTV\Model\Video;
+use WBW\Library\XMLTV\Model\Writer;
+use WBW\Library\XMLTV\Provider\XmlProvider;
+
 /** @var Tv $tv */
 $tv = XmlProvider::readXml("/path/to/file.xml");
 
@@ -262,6 +310,9 @@ foreach($tv->getChannels() as $channel) {
 Stat an XML file:
 
 ```php
+use WBW\Library\XMLTV\Provider\XmlProvider;
+use WBW\Library\XMLTV\Statistic\Statistics;
+
 /** @var Statistics $statistics */
 $statistics = XmlProvider::statXml("/path/to/file.xml");
 ```
@@ -269,6 +320,9 @@ $statistics = XmlProvider::statXml("/path/to/file.xml");
 Write an XML file:
 
 ```php
+use WBW\Library\XMLTV\Model\Tv;
+use WBW\Library\XMLTV\Provider\XmlProvider;
+
 /** @var Tv $tv */
 XmlProvider::writeXml($tv ,"/path/to/file.xml");
 ```
