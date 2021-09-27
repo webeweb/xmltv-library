@@ -17,6 +17,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
+use WBW\Library\Provider\Helper\GuzzleHelper;
 use WBW\Library\XMLTV\Model\Tv;
 use WBW\Library\XMLTV\Serializer\SerializerHelper;
 use WBW\Library\XMLTV\Serializer\XmlDeserializer;
@@ -52,6 +53,7 @@ class XmlProvider {
      */
     public static function getXml(string $url, string $filename, LoggerInterface $logger = null): Tv {
 
+        $saveAs = GuzzleHelper::getStreamParameterName();
         $stream = fopen($filename, "w");
 
         $client = new Client([
@@ -59,7 +61,7 @@ class XmlProvider {
                 "Accept"     => "text/xml",
                 "User-Agent" => "webeweb/xmltv-library",
             ],
-            "save_to"     => $stream,
+            $saveAs       => $stream,
             "synchronous" => true,
         ]);
 
