@@ -53,7 +53,7 @@ class XmlProvider {
      */
     public static function getXml(string $url, string $filename, LoggerInterface $logger = null): Tv {
 
-        $saveAs = GuzzleHelper::getStreamParameterName();
+        $saveTo = GuzzleHelper::getStreamParameterName();
         $stream = fopen($filename, "w");
 
         $client = new Client([
@@ -61,7 +61,7 @@ class XmlProvider {
                 "Accept"     => "text/xml",
                 "User-Agent" => "webeweb/xmltv-library",
             ],
-            $saveAs       => $stream,
+            $saveTo       => $stream,
             "synchronous" => true,
         ]);
 
