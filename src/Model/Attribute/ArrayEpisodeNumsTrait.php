@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model\Attribute;
+namespace WBW\Library\XmlTv\Model\Attribute;
 
-use WBW\Library\XMLTV\Model\EpisodeNum;
+use WBW\Library\XmlTv\Model\EpisodeNum;
 
 /**
  * Array episode numbers trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model\Attribute
+ * @package WBW\Library\XmlTv\Model\Attribute
  */
 trait ArrayEpisodeNumsTrait {
 

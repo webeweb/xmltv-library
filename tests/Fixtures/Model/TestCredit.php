@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Fixtures\Model;
+namespace WBW\Library\XmlTv\Tests\Fixtures\Model;
 
-use WBW\Library\XMLTV\Model\AbstractCredit;
+use WBW\Library\XmlTv\Model\AbstractCredit;
 
 /**
  * Test credit.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Fixtures\Model
+ * @package WBW\Library\XmlTv\Tests\Fixtures\Model
  */
 class TestCredit extends AbstractCredit {
 

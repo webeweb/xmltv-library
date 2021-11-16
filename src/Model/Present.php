@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
 use WBW\Library\Traits\Strings\StringContentTrait;
-use WBW\Library\XMLTV\Serializer\JsonSerializer;
-use WBW\Library\XMLTV\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Serializer\JsonSerializer;
+use WBW\Library\XmlTv\Serializer\XmlSerializer;
 
 /**
  * Present.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  */
 class Present extends AbstractModel {
 

@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Model\Attribute;
+namespace WBW\Library\XmlTv\Tests\Model\Attribute;
 
-use WBW\Library\XMLTV\Model\Language;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestLanguageLanguageTrait;
+use WBW\Library\XmlTv\Model\Language;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestLanguageLanguageTrait;
 
 /**
  * Language language trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Model\Attribute
+ * @package WBW\Library\XmlTv\Tests\Model\Attribute
  */
 class LanguageLanguageTraitTest extends AbstractTestCase {
 

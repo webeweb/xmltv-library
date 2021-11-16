@@ -9,34 +9,34 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
 use DateTime;
-use WBW\Library\XMLTV\Model\Attribute\ArrayCategoriesTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayCountriesTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayDescsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayEpisodeNumsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayIconsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayKeywordsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayRatingsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayReviewsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArraySecondaryTitlesTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayStarRatingsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArraySubtitlesTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayTitlesTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayUrlsTrait;
-use WBW\Library\XMLTV\Model\Attribute\LanguageLanguageTrait;
-use WBW\Library\XMLTV\Model\Attribute\StringChannelTrait;
-use WBW\Library\XMLTV\Model\Attribute\StringStartTrait;
-use WBW\Library\XMLTV\Serializer\JsonSerializer;
-use WBW\Library\XMLTV\Serializer\SerializerHelper;
-use WBW\Library\XMLTV\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Model\Attribute\ArrayCategoriesTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayCountriesTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayDescsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayEpisodeNumsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayIconsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayKeywordsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayRatingsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayReviewsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArraySecondaryTitlesTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayStarRatingsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArraySubtitlesTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayTitlesTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayUrlsTrait;
+use WBW\Library\XmlTv\Model\Attribute\LanguageLanguageTrait;
+use WBW\Library\XmlTv\Model\Attribute\StringChannelTrait;
+use WBW\Library\XmlTv\Model\Attribute\StringStartTrait;
+use WBW\Library\XmlTv\Serializer\JsonSerializer;
+use WBW\Library\XmlTv\Serializer\SerializerHelper;
+use WBW\Library\XmlTv\Serializer\XmlSerializer;
 
 /**
  * Programme.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  */
 class Programme extends AbstractModel {
 

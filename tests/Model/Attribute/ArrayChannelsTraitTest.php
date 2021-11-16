@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Model\Attribute;
+namespace WBW\Library\XmlTv\Tests\Model\Attribute;
 
-use WBW\Library\XMLTV\Model\Channel;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestArrayChannelsTrait;
+use WBW\Library\XmlTv\Model\Channel;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayChannelsTrait;
 
 /**
  * Array channels trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Model\Attribute
+ * @package WBW\Library\XmlTv\Tests\Model\Attribute
  */
 class ArrayChannelsTraitTest extends AbstractTestCase {
 

@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Statistic;
+namespace WBW\Library\XmlTv\Tests\Statistic;
 
-use WBW\Library\XMLTV\Statistic\Statistic;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Statistic\Statistic;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
 /**
  * Statistic test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Statistic
+ * @package WBW\Library\XmlTv\Tests\Statistic
  */
 class StatisticTest extends AbstractTestCase {
 

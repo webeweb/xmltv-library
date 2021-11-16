@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
 use WBW\Library\Traits\Integers\IntegerHeightTrait;
 use WBW\Library\Traits\Integers\IntegerWidthTrait;
-use WBW\Library\XMLTV\Serializer\JsonSerializer;
-use WBW\Library\XMLTV\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Serializer\JsonSerializer;
+use WBW\Library\XmlTv\Serializer\XmlSerializer;
 
 /**
  * Icon.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  */
 class Icon extends AbstractModel {
 

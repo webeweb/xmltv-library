@@ -9,26 +9,26 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Model;
+namespace WBW\Library\XmlTv\Tests\Model;
 
 use DateTime;
-use WBW\Library\XMLTV\Model\Audio;
-use WBW\Library\XMLTV\Model\Credits;
-use WBW\Library\XMLTV\Model\Date;
-use WBW\Library\XMLTV\Model\LastChance;
-use WBW\Library\XMLTV\Model\Length;
-use WBW\Library\XMLTV\Model\OrigLanguage;
-use WBW\Library\XMLTV\Model\Premiere;
-use WBW\Library\XMLTV\Model\PreviouslyShown;
-use WBW\Library\XMLTV\Model\Programme;
-use WBW\Library\XMLTV\Model\Video;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Model\Audio;
+use WBW\Library\XmlTv\Model\Credits;
+use WBW\Library\XmlTv\Model\Date;
+use WBW\Library\XmlTv\Model\LastChance;
+use WBW\Library\XmlTv\Model\Length;
+use WBW\Library\XmlTv\Model\OrigLanguage;
+use WBW\Library\XmlTv\Model\Premiere;
+use WBW\Library\XmlTv\Model\PreviouslyShown;
+use WBW\Library\XmlTv\Model\Programme;
+use WBW\Library\XmlTv\Model\Video;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
 /**
  * Programme test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Model
+ * @package WBW\Library\XmlTv\Tests\Model
  */
 class ProgrammeTest extends AbstractTestCase {
 

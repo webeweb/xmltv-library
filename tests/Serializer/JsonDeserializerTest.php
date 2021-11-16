@@ -9,60 +9,60 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Serializer;
+namespace WBW\Library\XmlTv\Tests\Serializer;
 
-use WBW\Library\XMLTV\Model\Actor;
-use WBW\Library\XMLTV\Model\Adapter;
-use WBW\Library\XMLTV\Model\Aspect;
-use WBW\Library\XMLTV\Model\Audio;
-use WBW\Library\XMLTV\Model\Category;
-use WBW\Library\XMLTV\Model\Channel;
-use WBW\Library\XMLTV\Model\Colour;
-use WBW\Library\XMLTV\Model\Commentator;
-use WBW\Library\XMLTV\Model\Composer;
-use WBW\Library\XMLTV\Model\Country;
-use WBW\Library\XMLTV\Model\Credits;
-use WBW\Library\XMLTV\Model\Date;
-use WBW\Library\XMLTV\Model\Desc;
-use WBW\Library\XMLTV\Model\Director;
-use WBW\Library\XMLTV\Model\DisplayName;
-use WBW\Library\XMLTV\Model\Editor;
-use WBW\Library\XMLTV\Model\EpisodeNum;
-use WBW\Library\XMLTV\Model\Guest;
-use WBW\Library\XMLTV\Model\Icon;
-use WBW\Library\XMLTV\Model\Keyword;
-use WBW\Library\XMLTV\Model\Language;
-use WBW\Library\XMLTV\Model\LastChance;
-use WBW\Library\XMLTV\Model\Length;
-use WBW\Library\XMLTV\Model\OrigLanguage;
-use WBW\Library\XMLTV\Model\Premiere;
-use WBW\Library\XMLTV\Model\Present;
-use WBW\Library\XMLTV\Model\Presenter;
-use WBW\Library\XMLTV\Model\PreviouslyShown;
-use WBW\Library\XMLTV\Model\Producer;
-use WBW\Library\XMLTV\Model\Programme;
-use WBW\Library\XMLTV\Model\Quality;
-use WBW\Library\XMLTV\Model\Rating;
-use WBW\Library\XMLTV\Model\Review;
-use WBW\Library\XMLTV\Model\SecondaryTitle;
-use WBW\Library\XMLTV\Model\StarRating;
-use WBW\Library\XMLTV\Model\Stereo;
-use WBW\Library\XMLTV\Model\Subtitles;
-use WBW\Library\XMLTV\Model\Title;
-use WBW\Library\XMLTV\Model\Tv;
-use WBW\Library\XMLTV\Model\Url;
-use WBW\Library\XMLTV\Model\Value;
-use WBW\Library\XMLTV\Model\Video;
-use WBW\Library\XMLTV\Model\Writer;
-use WBW\Library\XMLTV\Serializer\JsonDeserializer;
-use WBW\Library\XMLTV\Serializer\XmlDeserializer;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Model\Actor;
+use WBW\Library\XmlTv\Model\Adapter;
+use WBW\Library\XmlTv\Model\Aspect;
+use WBW\Library\XmlTv\Model\Audio;
+use WBW\Library\XmlTv\Model\Category;
+use WBW\Library\XmlTv\Model\Channel;
+use WBW\Library\XmlTv\Model\Colour;
+use WBW\Library\XmlTv\Model\Commentator;
+use WBW\Library\XmlTv\Model\Composer;
+use WBW\Library\XmlTv\Model\Country;
+use WBW\Library\XmlTv\Model\Credits;
+use WBW\Library\XmlTv\Model\Date;
+use WBW\Library\XmlTv\Model\Desc;
+use WBW\Library\XmlTv\Model\Director;
+use WBW\Library\XmlTv\Model\DisplayName;
+use WBW\Library\XmlTv\Model\Editor;
+use WBW\Library\XmlTv\Model\EpisodeNum;
+use WBW\Library\XmlTv\Model\Guest;
+use WBW\Library\XmlTv\Model\Icon;
+use WBW\Library\XmlTv\Model\Keyword;
+use WBW\Library\XmlTv\Model\Language;
+use WBW\Library\XmlTv\Model\LastChance;
+use WBW\Library\XmlTv\Model\Length;
+use WBW\Library\XmlTv\Model\OrigLanguage;
+use WBW\Library\XmlTv\Model\Premiere;
+use WBW\Library\XmlTv\Model\Present;
+use WBW\Library\XmlTv\Model\Presenter;
+use WBW\Library\XmlTv\Model\PreviouslyShown;
+use WBW\Library\XmlTv\Model\Producer;
+use WBW\Library\XmlTv\Model\Programme;
+use WBW\Library\XmlTv\Model\Quality;
+use WBW\Library\XmlTv\Model\Rating;
+use WBW\Library\XmlTv\Model\Review;
+use WBW\Library\XmlTv\Model\SecondaryTitle;
+use WBW\Library\XmlTv\Model\StarRating;
+use WBW\Library\XmlTv\Model\Stereo;
+use WBW\Library\XmlTv\Model\Subtitles;
+use WBW\Library\XmlTv\Model\Title;
+use WBW\Library\XmlTv\Model\Tv;
+use WBW\Library\XmlTv\Model\Url;
+use WBW\Library\XmlTv\Model\Value;
+use WBW\Library\XmlTv\Model\Video;
+use WBW\Library\XmlTv\Model\Writer;
+use WBW\Library\XmlTv\Serializer\JsonDeserializer;
+use WBW\Library\XmlTv\Serializer\XmlDeserializer;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
 /**
  * JSON deserializer test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Serializer
+ * @package WBW\Library\XmlTv\Tests\Serializer
  */
 class JsonDeserializerTest extends AbstractTestCase {
 
@@ -84,9 +84,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeActor(): void {
 
         // tv > programme > credits > actor
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getActors()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getActors()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeActor(json_decode($data, true));
+        $res = JsonDeserializer::deserializeActor($data);
         $this->assertInstanceOf(Actor::class, $res);
 
         $this->assertEquals("role", $res->getRole());
@@ -102,9 +103,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeAdapter(): void {
 
         // tv > programme > credits > adapter
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getAdapters()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getAdapters()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeAdapter(json_decode($data, true));
+        $res = JsonDeserializer::deserializeAdapter($data);
         $this->assertInstanceOf(Adapter::class, $res);
 
         $this->assertEquals("Adapter", $res->getContent());
@@ -119,9 +121,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeAspect(): void {
 
         // tv > programme > video > aspect
-        $data = json_encode($this->tv->getProgrammes()[0]->getVideo()->getAspect());
+        $json = json_encode($this->tv->getProgrammes()[0]->getVideo()->getAspect());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeAspect(json_decode($data, true));
+        $res = JsonDeserializer::deserializeAspect($data);
         $this->assertInstanceOf(Aspect::class, $res);
 
         $this->assertEquals("Aspect", $res->getContent());
@@ -136,9 +139,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeAudio(): void {
 
         // tv > programme > audio
-        $data = json_encode($this->tv->getProgrammes()[0]->getAudio());
+        $json = json_encode($this->tv->getProgrammes()[0]->getAudio());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeAudio(json_decode($data, true));
+        $res = JsonDeserializer::deserializeAudio($data);
         $this->assertInstanceOf(Audio::class, $res);
 
         $this->assertInstanceOf(Present::class, $res->getPresent());
@@ -154,9 +158,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeCategory(): void {
 
         // tv > programme > category
-        $data = json_encode($this->tv->getProgrammes()[0]->getCategories()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCategories()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeCategory(json_decode($data, true));
+        $res = JsonDeserializer::deserializeCategory($data);
         $this->assertInstanceOf(Category::class, $res);
 
         $this->assertEquals("category-lang", $res->getLang());
@@ -171,9 +176,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeChannel(): void {
 
         // tv > channel
-        $data = json_encode($this->tv->getChannels()[0]);
+        $json = json_encode($this->tv->getChannels()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeChannel(json_decode($data, true));
+        $res = JsonDeserializer::deserializeChannel($data);
         $this->assertInstanceOf(Channel::class, $res);
 
         $this->assertInstanceOf(DisplayName::class, $res->getDisplayNames()[0]);
@@ -189,9 +195,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeColour(): void {
 
         // tv > programme > video > colour
-        $data = json_encode($this->tv->getProgrammes()[0]->getVideo()->getColour());
+        $json = json_encode($this->tv->getProgrammes()[0]->getVideo()->getColour());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeColour(json_decode($data, true));
+        $res = JsonDeserializer::deserializeColour($data);
         $this->assertInstanceOf(Colour::class, $res);
 
         $this->assertEquals("Colour", $res->getContent());
@@ -205,9 +212,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeCommentator(): void {
 
         // tv > programme > credits > commentator
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getCommentators()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getCommentators()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeCommentator(json_decode($data, true));
+        $res = JsonDeserializer::deserializeCommentator($data);
         $this->assertInstanceOf(Commentator::class, $res);
 
         $this->assertEquals("Commentator", $res->getContent());
@@ -221,9 +229,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeComposer(): void {
 
         // tv > programme > credits > composer
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getComposers()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getComposers()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeComposer(json_decode($data, true));
+        $res = JsonDeserializer::deserializeComposer($data);
         $this->assertInstanceOf(Composer::class, $res);
 
         $this->assertEquals("Composer", $res->getContent());
@@ -237,9 +246,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeCountry(): void {
 
         // tv > programme > country
-        $data = json_encode($this->tv->getProgrammes()[0]->getCountries()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCountries()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeCountry(json_decode($data, true));
+        $res = JsonDeserializer::deserializeCountry($data);
         $this->assertInstanceOf(Country::class, $res);
 
         $this->assertEquals("country-lang", $res->getLang());
@@ -254,9 +264,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeCredits(): void {
 
         // tv > programme > credits
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits());
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeCredits(json_decode($data, true));
+        $res = JsonDeserializer::deserializeCredits($data);
         $this->assertInstanceOf(Credits::class, $res);
 
         $this->assertInstanceOf(Director::class, $res->getDirectors()[0]);
@@ -279,9 +290,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeDate(): void {
 
         // tv > programme > date
-        $data = json_encode($this->tv->getProgrammes()[0]->getDate());
+        $json = json_encode($this->tv->getProgrammes()[0]->getDate());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeDate(json_decode($data, true));
+        $res = JsonDeserializer::deserializeDate($data);
         $this->assertInstanceOf(Date::class, $res);
 
         $this->assertEquals(1970, $res->getContent());
@@ -295,9 +307,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeDesc(): void {
 
         // tv > programme > desc
-        $data = json_encode($this->tv->getProgrammes()[0]->getDescs()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getDescs()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeDesc(json_decode($data, true));
+        $res = JsonDeserializer::deserializeDesc($data);
         $this->assertInstanceOf(Desc::class, $res);
 
         $this->assertEquals("desc-lang", $res->getLang());
@@ -312,9 +325,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeDirector(): void {
 
         // tv > programme > credits > director
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getDirectors()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getDirectors()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeDirector(json_decode($data, true));
+        $res = JsonDeserializer::deserializeDirector($data);
         $this->assertInstanceOf(Director::class, $res);
 
         $this->assertEquals("Director", $res->getContent());
@@ -328,9 +342,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeDisplayName(): void {
 
         // tv > channel > display-name
-        $data = json_encode($this->tv->getChannels()[0]->getDisplayNames()[0]);
+        $json = json_encode($this->tv->getChannels()[0]->getDisplayNames()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeDisplayName(json_decode($data, true));
+        $res = JsonDeserializer::deserializeDisplayName($data);
         $this->assertInstanceOf(DisplayName::class, $res);
 
         $this->assertEquals("display-name-lang", $res->getLang());
@@ -345,9 +360,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeEditor(): void {
 
         // tv > programme > credits > editor
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getEditors()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getEditors()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeEditor(json_decode($data, true));
+        $res = JsonDeserializer::deserializeEditor($data);
         $this->assertInstanceOf(Editor::class, $res);
 
         $this->assertEquals("Editor", $res->getContent());
@@ -361,9 +377,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeEpisodeNum(): void {
 
         // tv > programme > episode-num
-        $data = json_encode($this->tv->getProgrammes()[0]->getEpisodeNums()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getEpisodeNums()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeEpisodeNum(json_decode($data, true));
+        $res = JsonDeserializer::deserializeEpisodeNum($data);
         $this->assertInstanceOf(EpisodeNum::class, $res);
 
         $this->assertEquals("onscreen", $res->getSystem());
@@ -378,9 +395,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeGuest(): void {
 
         // tv > programme > credits > guest
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getGuests()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getGuests()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeGuest(json_decode($data, true));
+        $res = JsonDeserializer::deserializeGuest($data);
         $this->assertInstanceOf(Guest::class, $res);
 
         $this->assertEquals("Guest", $res->getContent());
@@ -395,9 +413,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeIcon(): void {
 
         // tv > channel > icon
-        $data = json_encode($this->tv->getChannels()[0]->getIcons()[0]);
+        $json = json_encode($this->tv->getChannels()[0]->getIcons()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeIcon(json_decode($data, true));
+        $res = JsonDeserializer::deserializeIcon($data);
         $this->assertInstanceOf(Icon::class, $res);
 
         $this->assertEquals("src", $res->getSrc());
@@ -413,9 +432,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeKeyword(): void {
 
         // tv > programme > keyword
-        $data = json_encode($this->tv->getProgrammes()[0]->getKeywords()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getKeywords()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeKeyword(json_decode($data, true));
+        $res = JsonDeserializer::deserializeKeyword($data);
         $this->assertInstanceOf(Keyword::class, $res);
 
         $this->assertEquals("keyword-lang", $res->getLang());
@@ -430,9 +450,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeLanguage(): void {
 
         // tv > programme > language
-        $data = json_encode($this->tv->getProgrammes()[0]->getLanguage());
+        $json = json_encode($this->tv->getProgrammes()[0]->getLanguage());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeLanguage(json_decode($data, true));
+        $res = JsonDeserializer::deserializeLanguage($data);
         $this->assertInstanceOf(Language::class, $res);
 
         $this->assertEquals("language-lang", $res->getLang());
@@ -447,9 +468,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeLastChance(): void {
 
         // tv > programme > last-chance
-        $data = json_encode($this->tv->getProgrammes()[0]->getLastChance());
+        $json = json_encode($this->tv->getProgrammes()[0]->getLastChance());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeLastChance(json_decode($data, true));
+        $res = JsonDeserializer::deserializeLastChance($data);
         $this->assertInstanceOf(LastChance::class, $res);
 
         $this->assertEquals("last-chance-lang", $res->getLang());
@@ -464,9 +486,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeLength(): void {
 
         // tv > programme > length
-        $data = json_encode($this->tv->getProgrammes()[0]->getLength());
+        $json = json_encode($this->tv->getProgrammes()[0]->getLength());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeLength(json_decode($data, true));
+        $res = JsonDeserializer::deserializeLength($data);
         $this->assertInstanceOf(Length::class, $res);
 
         $this->assertEquals("minutes", $res->getUnits());
@@ -481,9 +504,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeOrigLanguage(): void {
 
         // tv > programme > orig-language
-        $data = json_encode($this->tv->getProgrammes()[0]->getOrigLanguage());
+        $json = json_encode($this->tv->getProgrammes()[0]->getOrigLanguage());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeOrigLanguage(json_decode($data, true));
+        $res = JsonDeserializer::deserializeOrigLanguage($data);
         $this->assertInstanceOf(OrigLanguage::class, $res);
 
         $this->assertEquals("orig-language-lang", $res->getLang());
@@ -498,9 +522,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializePremiere(): void {
 
         // tv > programme > premiere
-        $data = json_encode($this->tv->getProgrammes()[0]->getPremiere());
+        $json = json_encode($this->tv->getProgrammes()[0]->getPremiere());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializePremiere(json_decode($data, true));
+        $res = JsonDeserializer::deserializePremiere($data);
         $this->assertInstanceOf(Premiere::class, $res);
 
         $this->assertEquals("premiere-lang", $res->getLang());
@@ -515,9 +540,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializePresent(): void {
 
         // tv > programme > video > present
-        $data = json_encode($this->tv->getProgrammes()[0]->getAudio()->getPresent());
+        $json = json_encode($this->tv->getProgrammes()[0]->getAudio()->getPresent());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializePresent(json_decode($data, true));
+        $res = JsonDeserializer::deserializePresent($data);
         $this->assertInstanceOf(Present::class, $res);
 
         $this->assertEquals("Present", $res->getContent());
@@ -531,9 +557,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializePresenter(): void {
 
         // tv > programme > credits > presenter
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getPresenters()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getPresenters()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializePresenter(json_decode($data, true));
+        $res = JsonDeserializer::deserializePresenter($data);
         $this->assertInstanceOf(Presenter::class, $res);
 
         $this->assertEquals("Presenter", $res->getContent());
@@ -547,9 +574,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializePreviouslyShown(): void {
 
         // tv > programme > previously-shown
-        $data = json_encode($this->tv->getProgrammes()[0]->getPreviouslyShown());
+        $json = json_encode($this->tv->getProgrammes()[0]->getPreviouslyShown());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializePreviouslyShown(json_decode($data, true));
+        $res = JsonDeserializer::deserializePreviouslyShown($data);
         $this->assertInstanceOf(PreviouslyShown::class, $res);
 
         $this->assertEquals("channel-id", $res->getChannel());
@@ -564,9 +592,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeProducer(): void {
 
         // tv > programme > credits > producer
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getProducers()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getProducers()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeProducer(json_decode($data, true));
+        $res = JsonDeserializer::deserializeProducer($data);
         $this->assertInstanceOf(Producer::class, $res);
 
         $this->assertEquals("Producer", $res->getContent());
@@ -580,9 +609,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeProgramme(): void {
 
         // tv > programme
-        $data = json_encode($this->tv->getProgrammes()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeProgramme(json_decode($data, true));
+        $res = JsonDeserializer::deserializeProgramme($data);
         $this->assertInstanceOf(Programme::class, $res);
 
         $this->assertEquals("20190730200000 +0200", $res->getStart());
@@ -628,9 +658,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeQuality(): void {
 
         // tv > programme > video > quality
-        $data = json_encode($this->tv->getProgrammes()[0]->getVideo()->getQuality());
+        $json = json_encode($this->tv->getProgrammes()[0]->getVideo()->getQuality());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeQuality(json_decode($data, true));
+        $res = JsonDeserializer::deserializeQuality($data);
         $this->assertInstanceOf(Quality::class, $res);
 
         $this->assertEquals("Quality", $res->getContent());
@@ -644,9 +675,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeRating(): void {
 
         // tv > programme > rating
-        $data = json_encode($this->tv->getProgrammes()[0]->getRatings()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getRatings()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeRating(json_decode($data, true));
+        $res = JsonDeserializer::deserializeRating($data);
         $this->assertInstanceOf(Rating::class, $res);
 
         $this->assertEquals("rating-system", $res->getSystem());
@@ -662,9 +694,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeReview(): void {
 
         // tv > programme > review
-        $data = json_encode($this->tv->getProgrammes()[0]->getReviews()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getReviews()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeReview(json_decode($data, true));
+        $res = JsonDeserializer::deserializeReview($data);
         $this->assertInstanceOf(Review::class, $res);
 
         $this->assertEquals("text", $res->getType());
@@ -681,9 +714,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeSecondaryTitle(): void {
 
         // tv > programme > sub-title
-        $data = json_encode($this->tv->getProgrammes()[0]->getSecondaryTitles()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getSecondaryTitles()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeSecondaryTitle(json_decode($data, true));
+        $res = JsonDeserializer::deserializeSecondaryTitle($data);
         $this->assertInstanceOf(SecondaryTitle::class, $res);
 
         $this->assertEquals("secondary-title-lang", $res->getLang());
@@ -698,9 +732,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeStarRating(): void {
 
         // tv > programme > star-rating
-        $data = json_encode($this->tv->getProgrammes()[0]->getStarRatings()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getStarRatings()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeStarRating(json_decode($data, true));
+        $res = JsonDeserializer::deserializeStarRating($data);
         $this->assertInstanceOf(StarRating::class, $res);
 
         $this->assertInstanceOf(Value::class, $res->getValue());
@@ -715,9 +750,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeStereo(): void {
 
         // tv > programme > audio > stereo
-        $data = json_encode($this->tv->getProgrammes()[0]->getAudio()->getStereo());
+        $json = json_encode($this->tv->getProgrammes()[0]->getAudio()->getStereo());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeStereo(json_decode($data, true));
+        $res = JsonDeserializer::deserializeStereo($data);
         $this->assertInstanceOf(Stereo::class, $res);
 
         $this->assertEquals("Stereo", $res->getContent());
@@ -731,9 +767,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeSubtitles(): void {
 
         // tv > programme > subtitles
-        $data = json_encode($this->tv->getProgrammes()[0]->getSubtitles()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getSubtitles()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeSubtitles(json_decode($data, true));
+        $res = JsonDeserializer::deserializeSubtitles($data);
         $this->assertInstanceOf(Subtitles::class, $res);
 
         $this->assertEquals("deaf-signed", $res->getType());
@@ -748,9 +785,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeTitle(): void {
 
         // tv > programme > title
-        $data = json_encode($this->tv->getProgrammes()[0]->getTitles()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getTitles()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeTitle(json_decode($data, true));
+        $res = JsonDeserializer::deserializeTitle($data);
         $this->assertInstanceOf(Title::class, $res);
 
         $this->assertEquals("title-lang", $res->getLang());
@@ -765,9 +803,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeTv(): void {
 
         // tv
-        $data = json_encode($this->tv);
+        $json = json_encode($this->tv);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeTv(json_decode($data, true));
+        $res = JsonDeserializer::deserializeTv($data);
         $this->assertInstanceOf(Tv::class, $res);
 
         $this->assertEquals("date", $res->getDate());
@@ -788,9 +827,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeUrl(): void {
 
         // tv > channel > url
-        $data = json_encode($this->tv->getChannels()[0]->getUrls()[0]);
+        $json = json_encode($this->tv->getChannels()[0]->getUrls()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeUrl(json_decode($data, true));
+        $res = JsonDeserializer::deserializeUrl($data);
         $this->assertInstanceOf(Url::class, $res);
 
         $this->assertEquals("URL", $res->getContent());
@@ -804,9 +844,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeValue(): void {
 
         // tv > programme > rating > value
-        $data = json_encode($this->tv->getProgrammes()[0]->getRatings()[0]->getValue());
+        $json = json_encode($this->tv->getProgrammes()[0]->getRatings()[0]->getValue());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeValue(json_decode($data, true));
+        $res = JsonDeserializer::deserializeValue($data);
         $this->assertInstanceOf(Value::class, $res);
 
         $this->assertEquals("Value", $res->getContent());
@@ -820,9 +861,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeVideo(): void {
 
         // tv > programme > video
-        $data = json_encode($this->tv->getProgrammes()[0]->getVideo());
+        $json = json_encode($this->tv->getProgrammes()[0]->getVideo());
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeVideo(json_decode($data, true));
+        $res = JsonDeserializer::deserializeVideo($data);
         $this->assertInstanceOf(Video::class, $res);
 
         $this->assertInstanceOf(Present::class, $res->getPresent());
@@ -839,9 +881,10 @@ class JsonDeserializerTest extends AbstractTestCase {
     public function testDeserializeWriter(): void {
 
         // tv > programme > credits > writer
-        $data = json_encode($this->tv->getProgrammes()[0]->getCredits()->getWriters()[0]);
+        $json = json_encode($this->tv->getProgrammes()[0]->getCredits()->getWriters()[0]);
+        $data = json_decode($json, true);
 
-        $res = JsonDeserializer::deserializeWriter(json_decode($data, true));
+        $res = JsonDeserializer::deserializeWriter($data);
         $this->assertInstanceOf(Writer::class, $res);
 
         $this->assertEquals("Writer", $res->getContent());

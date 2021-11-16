@@ -13,7 +13,7 @@
  * (c) 2019 All rights reserved.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
 use JsonSerializable;
 use WBW\Library\Serializer\Model\XmlSerializable;
@@ -22,7 +22,7 @@ use WBW\Library\Serializer\Model\XmlSerializable;
  * Abstract model.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  * @abstract
  */
 abstract class AbstractModel implements JsonSerializable, XmlSerializable {

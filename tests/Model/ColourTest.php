@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Model;
+namespace WBW\Library\XmlTv\Tests\Model;
 
-use WBW\Library\XMLTV\Model\Colour;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Model\Colour;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
 /**
  * Colour test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Model
+ * @package WBW\Library\XmlTv\Tests\Model
  */
 class ColourTest extends AbstractTestCase {
 

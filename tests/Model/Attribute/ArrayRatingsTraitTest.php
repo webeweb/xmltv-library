@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Model\Attribute;
+namespace WBW\Library\XmlTv\Tests\Model\Attribute;
 
-use WBW\Library\XMLTV\Model\Rating;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute\TestArrayRatingsTrait;
+use WBW\Library\XmlTv\Model\Rating;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayRatingsTrait;
 
 /**
  * Array ratings trait test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Model\Attribute
+ * @package WBW\Library\XmlTv\Tests\Model\Attribute
  */
 class ArrayRatingsTraitTest extends AbstractTestCase {
 

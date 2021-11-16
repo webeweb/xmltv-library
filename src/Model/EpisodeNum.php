@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
 use WBW\Library\Traits\Strings\StringContentTrait;
-use WBW\Library\XMLTV\Model\Attribute\StringSystemTrait;
-use WBW\Library\XMLTV\Serializer\JsonSerializer;
-use WBW\Library\XMLTV\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Model\Attribute\StringSystemTrait;
+use WBW\Library\XmlTv\Serializer\JsonSerializer;
+use WBW\Library\XmlTv\Serializer\XmlSerializer;
 
 /**
  * Episode number.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  */
 class EpisodeNum extends AbstractModel {
 

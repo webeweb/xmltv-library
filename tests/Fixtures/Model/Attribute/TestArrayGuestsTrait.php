@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute;
+namespace WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute;
 
-use WBW\Library\XMLTV\Model\Attribute\ArrayGuestsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayGuestsTrait;
 
 /**
  * Test array guests trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Fixtures\Model\Attribute
+ * @package WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute
  */
 class TestArrayGuestsTrait {
 

@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
 use InvalidArgumentException;
 use WBW\Library\Traits\Strings\StringLangTrait;
 use WBW\Library\Traits\Strings\StringTypeTrait;
-use WBW\Library\XMLTV\Serializer\JsonSerializer;
-use WBW\Library\XMLTV\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Serializer\JsonSerializer;
+use WBW\Library\XmlTv\Serializer\XmlSerializer;
 
 /**
  * Review.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  */
 class Review extends AbstractModel {
 

@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Serializer;
+namespace WBW\Library\XmlTv\Serializer;
 
 /**
  * Serializer keys interface.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Serializer
+ * @package WBW\Library\XmlTv\Serializer
  */
 interface SerializerKeys {
 

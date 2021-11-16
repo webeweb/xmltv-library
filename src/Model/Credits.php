@@ -9,26 +9,26 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\XMLTV\Model\Attribute\ArrayActorsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayAdaptersTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayCommentatorsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayComposersTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayDirectorsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayEditorsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayGuestsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayPresentersTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayProducersTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayWritersTrait;
-use WBW\Library\XMLTV\Serializer\JsonSerializer;
-use WBW\Library\XMLTV\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Model\Attribute\ArrayActorsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayAdaptersTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayCommentatorsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayComposersTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayDirectorsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayEditorsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayGuestsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayPresentersTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayProducersTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayWritersTrait;
+use WBW\Library\XmlTv\Serializer\JsonSerializer;
+use WBW\Library\XmlTv\Serializer\XmlSerializer;
 
 /**
  * Credits.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  */
 class Credits extends AbstractModel {
 

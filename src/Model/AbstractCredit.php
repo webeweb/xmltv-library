@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
 use WBW\Library\Traits\Strings\StringContentTrait;
-use WBW\Library\XMLTV\Serializer\JsonSerializer;
+use WBW\Library\XmlTv\Serializer\JsonSerializer;
 
 /**
  * Abstract credit.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  * @abstract
  */
 abstract class AbstractCredit extends AbstractModel {

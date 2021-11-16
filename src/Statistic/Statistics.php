@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Statistic;
+namespace WBW\Library\XmlTv\Statistic;
 
 use DOMNode;
 
@@ -17,7 +17,7 @@ use DOMNode;
  * Statistics.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Statistic
+ * @package WBW\Library\XmlTv\Statistic
  */
 class Statistics {
 

@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Statistic;
+namespace WBW\Library\XmlTv\Tests\Statistic;
 
-use WBW\Library\XMLTV\Statistic\Statistic;
-use WBW\Library\XMLTV\Statistic\Statistics;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
-use WBW\Library\XMLTV\Tests\Fixtures\Statistic\TestStatistics;
+use WBW\Library\XmlTv\Statistic\Statistic;
+use WBW\Library\XmlTv\Statistic\Statistics;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Tests\Fixtures\Statistic\TestStatistics;
 
 /**
  * Statistics test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Statistic
+ * @package WBW\Library\XmlTv\Tests\Statistic
  */
 class StatisticsTest extends AbstractTestCase {
 
@@ -173,7 +173,7 @@ class StatisticsTest extends AbstractTestCase {
         $obj->parse($node);
 
         $res = file_get_contents(__DIR__ . "/StatisticsTest.testToString.txt");
-        $this->assertRegExp("/{$res}/", $obj->__toString() . "\n");
+        $this->assertRegExp("/$res/", $obj->__toString() . "\n");
     }
 
     /**

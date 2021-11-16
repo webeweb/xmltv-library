@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Serializer;
+namespace WBW\Library\XmlTv\Serializer;
 
 use DateTime;
 use DOMNode;
@@ -18,14 +18,14 @@ use WBW\Library\Serializer\Helper\XmlDeserializerHelper;
 use WBW\Library\Serializer\Helper\XmlSerializerHelper;
 use WBW\Library\Types\Helper\ArrayHelper;
 use WBW\Library\Types\Helper\StringHelper;
-use WBW\Library\XMLTV\Model\AbstractModel;
-use WBW\Library\XMLTV\Model\SecondaryTitle;
+use WBW\Library\XmlTv\Model\AbstractModel;
+use WBW\Library\XmlTv\Model\SecondaryTitle;
 
 /**
  * Serializer helper.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Serializer
+ * @package WBW\Library\XmlTv\Serializer
  */
 class SerializerHelper extends BaseSerializerHelper {
 

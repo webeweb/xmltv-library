@@ -13,18 +13,18 @@
  * (c) 2019 All rights reserved.
  */
 
-namespace WBW\Library\XMLTV\Model;
+namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\XMLTV\Model\Attribute\ArrayChannelsTrait;
-use WBW\Library\XMLTV\Model\Attribute\ArrayProgrammesTrait;
-use WBW\Library\XMLTV\Serializer\JsonSerializer;
-use WBW\Library\XMLTV\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Model\Attribute\ArrayChannelsTrait;
+use WBW\Library\XmlTv\Model\Attribute\ArrayProgrammesTrait;
+use WBW\Library\XmlTv\Serializer\JsonSerializer;
+use WBW\Library\XmlTv\Serializer\XmlSerializer;
 
 /**
  * TV.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model
+ * @package WBW\Library\XmlTv\Model
  */
 class Tv extends AbstractModel {
 

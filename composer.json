@@ -36,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "WBW\\Library\\XMLTV\\": "src/"
+            "WBW\\Library\\XmlTv\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WBW\\Library\\XMLTV\\Tests\\": "tests/"
+            "WBW\\Library\\XmlTv\\Tests\\": "tests/"
         }
     },
     "support": {

@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Model\Attribute;
+namespace WBW\Library\XmlTv\Model\Attribute;
 
 use DateTime;
-use WBW\Library\XMLTV\Serializer\SerializerHelper;
+use WBW\Library\XmlTv\Serializer\SerializerHelper;
 
 /**
  * String start trait.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Model\Attribute
+ * @package WBW\Library\XmlTv\Model\Attribute
  */
 trait StringStartTrait {
 

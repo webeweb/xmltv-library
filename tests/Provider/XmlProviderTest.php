@@ -9,21 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Provider;
+namespace WBW\Library\XmlTv\Tests\Provider;
 
 use Exception;
 use Psr\Log\LoggerInterface;
-use WBW\Library\XMLTV\Model\Channel;
-use WBW\Library\XMLTV\Model\Programme;
-use WBW\Library\XMLTV\Model\Tv;
-use WBW\Library\XMLTV\Provider\XmlProvider;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Model\Channel;
+use WBW\Library\XmlTv\Model\Programme;
+use WBW\Library\XmlTv\Model\Tv;
+use WBW\Library\XmlTv\Provider\XmlProvider;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
 /**
  * XML provider test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Provider
+ * @package WBW\Library\XmlTv\Tests\Provider
  */
 class XmlProviderTest extends AbstractTestCase {
 

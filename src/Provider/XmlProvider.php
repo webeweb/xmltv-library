@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Provider;
+namespace WBW\Library\XmlTv\Provider;
 
 use DOMDocument;
 use Exception;
@@ -18,17 +18,17 @@ use GuzzleHttp\Exception\GuzzleException;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
 use WBW\Library\Provider\Helper\GuzzleHelper;
-use WBW\Library\XMLTV\Model\Tv;
-use WBW\Library\XMLTV\Serializer\SerializerHelper;
-use WBW\Library\XMLTV\Serializer\XmlDeserializer;
-use WBW\Library\XMLTV\Statistic\Statistic;
-use WBW\Library\XMLTV\Statistic\Statistics;
+use WBW\Library\XmlTv\Model\Tv;
+use WBW\Library\XmlTv\Serializer\SerializerHelper;
+use WBW\Library\XmlTv\Serializer\XmlDeserializer;
+use WBW\Library\XmlTv\Statistic\Statistic;
+use WBW\Library\XmlTv\Statistic\Statistics;
 
 /**
  * XML provider.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Provider
+ * @package WBW\Library\XmlTv\Provider
  */
 class XmlProvider {
 

@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Fixtures\Statistic;
+namespace WBW\Library\XmlTv\Tests\Fixtures\Statistic;
 
-use WBW\Library\XMLTV\Statistic\Statistic;
-use WBW\Library\XMLTV\Statistic\Statistics;
+use WBW\Library\XmlTv\Statistic\Statistic;
+use WBW\Library\XmlTv\Statistic\Statistics;
 
 /**
  * Test statistics.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Fixtures\Statistic
+ * @package WBW\Library\XmlTv\Tests\Fixtures\Statistic
  */
 class TestStatistics extends Statistics {
 

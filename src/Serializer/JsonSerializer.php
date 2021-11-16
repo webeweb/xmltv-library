@@ -9,50 +9,50 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Serializer;
+namespace WBW\Library\XmlTv\Serializer;
 
 use WBW\Library\Serializer\Helper\JsonSerializerHelper;
-use WBW\Library\XMLTV\Model\AbstractCredit;
-use WBW\Library\XMLTV\Model\Actor;
-use WBW\Library\XMLTV\Model\Aspect;
-use WBW\Library\XMLTV\Model\Audio;
-use WBW\Library\XMLTV\Model\Category;
-use WBW\Library\XMLTV\Model\Channel;
-use WBW\Library\XMLTV\Model\Colour;
-use WBW\Library\XMLTV\Model\Country;
-use WBW\Library\XMLTV\Model\Credits;
-use WBW\Library\XMLTV\Model\Date;
-use WBW\Library\XMLTV\Model\Desc;
-use WBW\Library\XMLTV\Model\DisplayName;
-use WBW\Library\XMLTV\Model\EpisodeNum;
-use WBW\Library\XMLTV\Model\Icon;
-use WBW\Library\XMLTV\Model\Keyword;
-use WBW\Library\XMLTV\Model\Language;
-use WBW\Library\XMLTV\Model\LastChance;
-use WBW\Library\XMLTV\Model\Length;
-use WBW\Library\XMLTV\Model\OrigLanguage;
-use WBW\Library\XMLTV\Model\Premiere;
-use WBW\Library\XMLTV\Model\Present;
-use WBW\Library\XMLTV\Model\PreviouslyShown;
-use WBW\Library\XMLTV\Model\Programme;
-use WBW\Library\XMLTV\Model\Quality;
-use WBW\Library\XMLTV\Model\Rating;
-use WBW\Library\XMLTV\Model\Review;
-use WBW\Library\XMLTV\Model\SecondaryTitle;
-use WBW\Library\XMLTV\Model\StarRating;
-use WBW\Library\XMLTV\Model\Stereo;
-use WBW\Library\XMLTV\Model\Subtitles;
-use WBW\Library\XMLTV\Model\Title;
-use WBW\Library\XMLTV\Model\Tv;
-use WBW\Library\XMLTV\Model\Url;
-use WBW\Library\XMLTV\Model\Value;
-use WBW\Library\XMLTV\Model\Video;
+use WBW\Library\XmlTv\Model\AbstractCredit;
+use WBW\Library\XmlTv\Model\Actor;
+use WBW\Library\XmlTv\Model\Aspect;
+use WBW\Library\XmlTv\Model\Audio;
+use WBW\Library\XmlTv\Model\Category;
+use WBW\Library\XmlTv\Model\Channel;
+use WBW\Library\XmlTv\Model\Colour;
+use WBW\Library\XmlTv\Model\Country;
+use WBW\Library\XmlTv\Model\Credits;
+use WBW\Library\XmlTv\Model\Date;
+use WBW\Library\XmlTv\Model\Desc;
+use WBW\Library\XmlTv\Model\DisplayName;
+use WBW\Library\XmlTv\Model\EpisodeNum;
+use WBW\Library\XmlTv\Model\Icon;
+use WBW\Library\XmlTv\Model\Keyword;
+use WBW\Library\XmlTv\Model\Language;
+use WBW\Library\XmlTv\Model\LastChance;
+use WBW\Library\XmlTv\Model\Length;
+use WBW\Library\XmlTv\Model\OrigLanguage;
+use WBW\Library\XmlTv\Model\Premiere;
+use WBW\Library\XmlTv\Model\Present;
+use WBW\Library\XmlTv\Model\PreviouslyShown;
+use WBW\Library\XmlTv\Model\Programme;
+use WBW\Library\XmlTv\Model\Quality;
+use WBW\Library\XmlTv\Model\Rating;
+use WBW\Library\XmlTv\Model\Review;
+use WBW\Library\XmlTv\Model\SecondaryTitle;
+use WBW\Library\XmlTv\Model\StarRating;
+use WBW\Library\XmlTv\Model\Stereo;
+use WBW\Library\XmlTv\Model\Subtitles;
+use WBW\Library\XmlTv\Model\Title;
+use WBW\Library\XmlTv\Model\Tv;
+use WBW\Library\XmlTv\Model\Url;
+use WBW\Library\XmlTv\Model\Value;
+use WBW\Library\XmlTv\Model\Video;
 
 /**
  * JSON serializer.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Serializer
+ * @package WBW\Library\XmlTv\Serializer
  */
 class JsonSerializer extends JsonSerializerHelper {
 

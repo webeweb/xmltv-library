@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Model;
+namespace WBW\Library\XmlTv\Tests\Model;
 
-use WBW\Library\XMLTV\Model\Rating;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Model\Rating;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
 /**
  * Rating test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Model
+ * @package WBW\Library\XmlTv\Tests\Model
  */
 class RatingTest extends AbstractTestCase {
 

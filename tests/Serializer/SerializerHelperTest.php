@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Library\XMLTV\Tests\Serializer;
+namespace WBW\Library\XmlTv\Tests\Serializer;
 
 use DateTime;
 use Psr\Log\LoggerInterface;
-use WBW\Library\XMLTV\Serializer\SerializerHelper;
-use WBW\Library\XMLTV\Tests\AbstractTestCase;
+use WBW\Library\XmlTv\Serializer\SerializerHelper;
+use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
 /**
  * Serializer helper test.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Library\XMLTV\Tests\Serializer
+ * @package WBW\Library\XmlTv\Tests\Serializer
  */
 class SerializerHelperTest extends AbstractTestCase {
 
