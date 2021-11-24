@@ -55,6 +55,7 @@ class Credits extends AbstractModel {
      */
     public function __construct() {
         parent::__construct();
+
         $this->setActors([]);
         $this->setAdapters([]);
         $this->setCommentators([]);

@@ -85,6 +85,7 @@ class Tv extends AbstractModel {
      */
     public function __construct() {
         parent::__construct();
+
         $this->setChannels([]);
         $this->setProgrammes([]);
     }
