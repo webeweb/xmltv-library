@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class StatisticTest extends AbstractTestCase {
 
     /**
-     * Tests the add() method.
+     * Tests add()
      *
      * @return void
      */
@@ -51,7 +51,7 @@ class StatisticTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setAttrName() method.
+     * Tests setAttrName()
      *
      * @return void
      */
@@ -64,7 +64,7 @@ class StatisticTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setAvg() method.
+     * Tests setAvg()
      *
      * @return void
      */
@@ -77,7 +77,7 @@ class StatisticTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCount() method.
+     * Tests setCount()
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class StatisticTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setMax() method.
+     * Tests setMax()
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class StatisticTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setMin() method.
+     * Tests setMin()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class StatisticTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setNodeName() method.
+     * Tests setNodeName()
      *
      * @return void
      */
@@ -129,7 +129,7 @@ class StatisticTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class IconTest extends AbstractTestCase {
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class IconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setHeight() method.
+     * Tests setHeight()
      *
      * @return void
      */
@@ -53,7 +53,7 @@ class IconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSrc() method.
+     * Tests setSrc()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class IconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setWidth() method.
+     * Tests setWidth()
      *
      * @return void
      */
@@ -82,7 +82,7 @@ class IconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the xmlSerialize() method.
+     * Tests xmlSerialize()
      *
      * @return void
      */
@@ -98,7 +98,7 @@ class IconTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

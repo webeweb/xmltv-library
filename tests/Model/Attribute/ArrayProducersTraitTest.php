@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayProducersTrait;
 class ArrayProducersTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addProducer() method.
+     * Tests addProducer()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayProducersTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

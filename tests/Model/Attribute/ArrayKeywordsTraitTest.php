@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayKeywordsTrait;
 class ArrayKeywordsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addKeyword() method.
+     * Tests addKeyword()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayKeywordsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArraySecondaryTitlesTra
 class ArraySecondaryTitlesTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addSecondaryTitle() method.
+     * Tests addSecondaryTitle()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArraySecondaryTitlesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayComposersTrait;
 class ArrayComposersTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addComposer() method.
+     * Tests addComposer()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayComposersTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

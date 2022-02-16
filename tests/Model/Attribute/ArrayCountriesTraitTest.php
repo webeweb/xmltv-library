@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayCountriesTrait;
 class ArrayCountriesTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addCountry() method.
+     * Tests addCountry()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayCountriesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

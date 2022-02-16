@@ -25,7 +25,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class LengthTest extends AbstractTestCase {
 
     /**
-     * Tests the enumUnits() method.
+     * Tests enumUnits()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class LengthTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class LengthTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setUnits() method.
+     * Tests setUnits()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -72,7 +72,7 @@ class LengthTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setUnits() method.
+     * Tests setUnits()
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class LengthTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the xmlSerialize() method.
+     * Tests xmlSerialize()
      *
      * @return void
      */
@@ -106,7 +106,7 @@ class LengthTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

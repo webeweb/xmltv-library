@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayDescsTrait;
 class ArrayDescsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addDesc() method.
+     * Tests addDesc()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayDescsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayDirectorsTrait;
 class ArrayDirectorsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addDirector() method.
+     * Tests addDirector()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayDirectorsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class VideoTest extends AbstractTestCase {
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -45,7 +45,7 @@ class VideoTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setAspect() method.
+     * Tests setAspect()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class VideoTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setColour() method.
+     * Tests setColour()
      *
      * @return void
      */
@@ -71,7 +71,7 @@ class VideoTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setQuality() method.
+     * Tests setQuality()
      *
      * @return void
      */
@@ -84,7 +84,7 @@ class VideoTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the xmlSerialize() method.
+     * Tests xmlSerialize()
      *
      * @return void
      */
@@ -101,7 +101,7 @@ class VideoTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

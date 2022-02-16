@@ -66,7 +66,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class XmlDeserializerTest extends AbstractTestCase {
 
     /**
-     * Tests the deserializeActor() method.
+     * Tests deserializeActor()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeAdapter() method.
+     * Tests deserializeAdapter()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeAspect() method.
+     * Tests deserializeAspect()
      *
      * @return void
      */
@@ -124,7 +124,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeAudio() method.
+     * Tests deserializeAudio()
      *
      * @return void
      */
@@ -143,7 +143,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeCategory() method.
+     * Tests deserializeCategory()
      *
      * @return void
      */
@@ -162,7 +162,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeChannel() method.
+     * Tests deserializeChannel()
      *
      * @return void
      */
@@ -181,7 +181,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeColour() method.
+     * Tests deserializeColour()
      *
      * @return void
      */
@@ -200,7 +200,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeCommentator() method.
+     * Tests deserializeCommentator()
      *
      * @return void
      */
@@ -219,7 +219,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeComposer() method.
+     * Tests deserializeComposer()
      *
      * @return void
      */
@@ -238,7 +238,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeCountry() method.
+     * Tests deserializeCountry()
      *
      * @return void
      */
@@ -257,7 +257,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeCredits() method.
+     * Tests deserializeCredits()
      *
      * @return void
      */
@@ -284,7 +284,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeDate() method.
+     * Tests deserializeDate()
      *
      * @return void
      */
@@ -302,7 +302,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeDesc() method.
+     * Tests deserializeDesc()
      *
      * @return void
      */
@@ -321,7 +321,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeDirector() method.
+     * Tests deserializeDirector()
      *
      * @return void
      */
@@ -340,7 +340,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeDisplayName() method.
+     * Tests deserializeDisplayName()
      *
      * @return void
      */
@@ -359,7 +359,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeEditor() method.
+     * Tests deserializeEditor()
      *
      * @return void
      */
@@ -378,7 +378,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeEpisodeNum() method.
+     * Tests deserializeEpisodeNum()
      *
      * @return void
      */
@@ -397,7 +397,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeGuest() method.
+     * Tests deserializeGuest()
      *
      * @return void
      */
@@ -416,7 +416,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeIcon() method.
+     * Tests deserializeIcon()
      *
      * @return void
      */
@@ -436,7 +436,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeKeyword() method.
+     * Tests deserializeKeyword()
      *
      * @return void
      */
@@ -455,7 +455,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeLanguage() method.
+     * Tests deserializeLanguage()
      *
      * @return void
      */
@@ -474,7 +474,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeLastChance() method.
+     * Tests deserializeLastChance()
      *
      * @return void
      */
@@ -493,7 +493,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeLength() method.
+     * Tests deserializeLength()
      *
      * @return void
      */
@@ -512,7 +512,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeOrigLanguage() method.
+     * Tests deserializeOrigLanguage()
      *
      * @return void
      */
@@ -531,7 +531,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializePremiere() method.
+     * Tests deserializePremiere()
      *
      * @return void
      */
@@ -550,7 +550,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializePresent() method.
+     * Tests deserializePresent()
      *
      * @return void
      */
@@ -569,7 +569,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializePresenter() method.
+     * Tests deserializePresenter()
      *
      * @return void
      */
@@ -588,7 +588,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializePreviouslyShown() method.
+     * Tests deserializePreviouslyShown()
      *
      * @return void
      */
@@ -607,7 +607,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeProducer() method.
+     * Tests deserializeProducer()
      *
      * @return void
      */
@@ -626,7 +626,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeProgramme() method.
+     * Tests deserializeProgramme()
      *
      * @return void
      */
@@ -675,7 +675,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeQuality() method.
+     * Tests deserializeQuality()
      *
      * @return void
      */
@@ -694,7 +694,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeRating() method.
+     * Tests deserializeRating()
      *
      * @return void
      */
@@ -714,7 +714,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeReview() method.
+     * Tests deserializeReview()
      *
      * @return void
      */
@@ -735,7 +735,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeSecondaryTitle() method.
+     * Tests deserializeSecondaryTitle()
      *
      * @return void
      */
@@ -754,7 +754,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeStarRating() method.
+     * Tests deserializeStarRating()
      *
      * @return void
      */
@@ -773,7 +773,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeStereo() method.
+     * Tests deserializeStereo()
      *
      * @return void
      */
@@ -792,7 +792,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeSubtitles() method.
+     * Tests deserializeSubtitles()
      *
      * @return void
      */
@@ -811,7 +811,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeTitle() method.
+     * Tests deserializeTitle()
      *
      * @return void
      */
@@ -830,7 +830,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeTv() method.
+     * Tests deserializeTv()
      *
      * @return void
      */
@@ -853,7 +853,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeUrl() method.
+     * Tests deserializeUrl()
      *
      * @return void
      */
@@ -871,7 +871,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeValue() method.
+     * Tests deserializeValue()
      *
      * @return void
      */
@@ -890,7 +890,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeVideo() method.
+     * Tests deserializeVideo()
      *
      * @return void
      */
@@ -911,7 +911,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the deserializeWriter() method.
+     * Tests deserializeWriter()
      *
      * @return void
      */

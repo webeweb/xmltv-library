@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class CreditsTest extends AbstractTestCase {
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class CreditsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the xmlSerialize() method.
+     * Tests xmlSerialize()
      *
      * @return void
      */
@@ -80,7 +80,7 @@ class CreditsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

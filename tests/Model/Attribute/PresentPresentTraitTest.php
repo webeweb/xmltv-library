@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestPresentPresentTrait;
 class PresentPresentTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setPresent() method.
+     * Tests setPresent()
      *
      * @return void
      */

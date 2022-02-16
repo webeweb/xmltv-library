@@ -25,7 +25,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class SerializerHelperTest extends AbstractTestCase {
 
     /**
-     * Tests the deserializeDateTime() method.
+     * Tests deserializeDateTime()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class SerializerHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getMethodName() method.
+     * Tests getMethodName()
      *
      * @return void
      */
@@ -50,7 +50,7 @@ class SerializerHelperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

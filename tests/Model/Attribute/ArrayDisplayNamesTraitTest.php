@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayDisplayNamesTrait;
 class ArrayDisplayNamesTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addDisplayName() method.
+     * Tests addDisplayName()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayDisplayNamesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

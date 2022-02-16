@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayProgrammesTrait;
 class ArrayProgrammesTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addProgramme() method.
+     * Tests addProgramme()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the sortProgrammes() method.
+     * Tests sortProgrammes()
      *
      * @return void
      */
@@ -67,7 +67,7 @@ class ArrayProgrammesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

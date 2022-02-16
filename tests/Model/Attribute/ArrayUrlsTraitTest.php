@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayUrlsTrait;
 class ArrayUrlsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addUrl() method.
+     * Tests addUrl()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayUrlsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

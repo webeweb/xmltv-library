@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayStarRatingsTrait;
 class ArrayStarRatingsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addStarRating() method.
+     * Tests addStarRating()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayStarRatingsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

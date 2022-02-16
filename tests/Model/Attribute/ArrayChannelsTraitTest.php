@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayChannelsTrait;
 class ArrayChannelsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addChannel() method.
+     * Tests addChannel()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the indexChannelsById() method.
+     * Tests indexChannelsById()
      *
      * @return void
      */
@@ -67,7 +67,7 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the sortChannels() method.
+     * Tests sortChannels()
      *
      * @return void
      */
@@ -92,7 +92,7 @@ class ArrayChannelsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

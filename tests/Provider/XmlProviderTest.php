@@ -72,7 +72,7 @@ class XmlProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getXml() method.
+     * Tests getXml()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -90,7 +90,7 @@ class XmlProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the readXml() method.
+     * Tests readXml()
      *
      * @return void
      */
@@ -109,7 +109,7 @@ class XmlProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the statXml() method.
+     * Tests statXml()
      *
      * @return void
      */
@@ -120,7 +120,7 @@ class XmlProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the writeXml() method.
+     * Tests writeXml()
      *
      * @return void
      */

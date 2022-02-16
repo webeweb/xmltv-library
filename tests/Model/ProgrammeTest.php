@@ -33,7 +33,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class ProgrammeTest extends AbstractTestCase {
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -111,7 +111,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setAudio() method.
+     * Tests setAudio()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setClumpIdx() method.
+     * Tests setClumpIdx()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setCredits() method.
+     * Tests setCredits()
      *
      * @return void
      */
@@ -156,7 +156,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setDate() method.
+     * Tests setDate()
      *
      * @return void
      */
@@ -172,7 +172,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setLastChance() method.
+     * Tests setLastChance()
      *
      * @return void
      */
@@ -188,7 +188,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setLength() method.
+     * Tests setLength()
      *
      * @return void
      */
@@ -204,7 +204,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setNew() method.
+     * Tests setNew()
      *
      * @return void
      */
@@ -217,7 +217,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setOrigLanguage() method.
+     * Tests setOrigLanguage()
      *
      * @return void
      */
@@ -233,7 +233,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setPdcStart() method.
+     * Tests setPdcStart()
      *
      * @return void
      */
@@ -248,7 +248,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setPremiere() method.
+     * Tests setPremiere()
      *
      * @return void
      */
@@ -264,7 +264,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setPreviouslyShown() method.
+     * Tests setPreviouslyShown()
      *
      * @return void
      */
@@ -280,7 +280,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setShowView() method.
+     * Tests setShowView()
      *
      * @return void
      */
@@ -293,7 +293,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setStart() method.
+     * Tests setStart()
      *
      * @return void
      */
@@ -308,7 +308,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setStop() method.
+     * Tests setStop()
      *
      * @return void
      */
@@ -323,7 +323,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setVideo() method.
+     * Tests setVideo()
      *
      * @return void
      */
@@ -339,7 +339,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setVideoPlus() method.
+     * Tests setVideoPlus()
      *
      * @return void
      */
@@ -352,7 +352,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setVpsStart() method.
+     * Tests setVpsStart()
      *
      * @return void
      */
@@ -367,7 +367,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the xmlSerialize() method.
+     * Tests xmlSerialize()
      *
      * @return void
      */
@@ -412,7 +412,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

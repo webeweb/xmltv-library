@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestStringStartTrait;
 class StringStartTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the setStart() method.
+     * Tests setStart()
      *
      * @return void
      */

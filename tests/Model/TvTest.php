@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class TvTest extends AbstractTestCase {
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -53,7 +53,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setDate() method.
+     * Tests setDate()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setGeneratorInfoName() method.
+     * Tests setGeneratorInfoName()
      *
      * @return void
      */
@@ -79,7 +79,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setGeneratorInfoURL() method.
+     * Tests setGeneratorInfoURL()
      *
      * @return void
      */
@@ -92,7 +92,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSourceDataURL() method.
+     * Tests setSourceDataURL()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSourceInfoName() method.
+     * Tests setSourceInfoName()
      *
      * @return void
      */
@@ -118,7 +118,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the setSourceInfoURL() method.
+     * Tests setSourceInfoURL()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the xmlSerialize() method.
+     * Tests xmlSerialize()
      *
      * @return void
      */
@@ -152,7 +152,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

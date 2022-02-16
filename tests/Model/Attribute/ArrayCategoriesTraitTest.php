@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayCategoriesTrait;
 class ArrayCategoriesTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addCategory() method.
+     * Tests addCategory()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayCategoriesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

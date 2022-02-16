@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayReviewsTrait;
 class ArrayReviewsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests the addReview() method.
+     * Tests addReview()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayReviewsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class StereoTest extends AbstractTestCase {
 
     /**
-     * Tests the enumContent() method.
+     * Tests enumContent()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class StereoTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class StereoTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the xmlSerialize() method.
+     * Tests xmlSerialize()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class StereoTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
