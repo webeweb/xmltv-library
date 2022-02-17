@@ -95,7 +95,6 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * /**
      * Tests deserializeAdapter()
      *
      * @return void
@@ -113,7 +112,6 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * /**
      * Tests deserializeAspect()
      *
      * @return void
@@ -131,7 +129,6 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * /**
      * Tests deserializeAudio()
      *
      * @return void
@@ -150,7 +147,6 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * /**
      * Tests deserializeCategory()
      *
      * @return void
@@ -405,7 +401,6 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * /**
      * Tests deserializeIcon()
      *
      * @return void
