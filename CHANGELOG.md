@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [1.2.0](https://github.com/webeweb/core-bundle/tree/v1.2.0) (2021-11-16)
 
 - Rename package
