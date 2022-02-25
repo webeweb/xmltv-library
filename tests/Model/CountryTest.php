@@ -17,7 +17,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 /**
  * Country test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Model
  */
 class CountryTest extends AbstractTestCase {

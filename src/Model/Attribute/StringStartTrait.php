@@ -17,7 +17,7 @@ use WBW\Library\XmlTv\Serializer\SerializerHelper;
 /**
  * String start trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model\Attribute
  */
 trait StringStartTrait {

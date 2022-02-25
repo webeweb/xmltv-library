@@ -19,7 +19,7 @@ use WBW\Library\XmlTv\Serializer\XmlSerializer;
 /**
  * Episode number.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model
  */
 class EpisodeNum extends AbstractModel {

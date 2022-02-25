@@ -16,7 +16,7 @@ use WBW\Library\XmlTv\Model\Attribute\StringSystemTrait;
 /**
  * Test string system trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute
  */
 class TestStringSystemTrait {

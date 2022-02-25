@@ -19,7 +19,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Statistic\TestStatistics;
 /**
  * Statistics test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Statistic
  */
 class StatisticsTest extends AbstractTestCase {

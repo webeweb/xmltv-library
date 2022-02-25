@@ -17,7 +17,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 /**
  * Last chance test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Model
  */
 class LastChanceTest extends AbstractTestCase {

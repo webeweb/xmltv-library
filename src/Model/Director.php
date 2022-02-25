@@ -16,7 +16,7 @@ use WBW\Library\XmlTv\Serializer\XmlSerializer;
 /**
  * Director.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model
  */
 class Director extends AbstractCredit {

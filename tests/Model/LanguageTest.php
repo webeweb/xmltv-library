@@ -17,7 +17,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 /**
  * Language test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Model
  */
 class LanguageTest extends AbstractTestCase {

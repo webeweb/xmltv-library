@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Serializer\XmlSerializer;
 /**
  * TV.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model
  */
 class Tv extends AbstractModel {

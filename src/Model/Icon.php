@@ -19,7 +19,7 @@ use WBW\Library\XmlTv\Serializer\XmlSerializer;
 /**
  * Icon.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model
  */
 class Icon extends AbstractModel {

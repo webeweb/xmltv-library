@@ -16,7 +16,7 @@ use WBW\Library\XmlTv\Model\Attribute\ArrayCountriesTrait;
 /**
  * Test array countries trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute
  */
 class TestArrayCountriesTrait {

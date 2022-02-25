@@ -17,7 +17,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 /**
  * Secondary title test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Model
  */
 class SecondaryTitleTest extends AbstractTestCase {

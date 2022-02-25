@@ -60,7 +60,7 @@ use WBW\Library\XmlTv\Model\Writer;
 /**
  * XML deserializer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Serializer
  */
 class XmlDeserializer extends XmlDeserializerHelper {

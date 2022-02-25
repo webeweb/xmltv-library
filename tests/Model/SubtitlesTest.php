@@ -19,7 +19,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 /**
  * Subtitles test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Model
  */
 class SubtitlesTest extends AbstractTestCase {

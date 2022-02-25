@@ -17,7 +17,7 @@ use WBW\Library\XmlTv\Statistic\Statistics;
 /**
  * Test statistics.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Fixtures\Statistic
  */
 class TestStatistics extends Statistics {

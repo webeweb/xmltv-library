@@ -27,7 +27,7 @@ use WBW\Library\XmlTv\Statistic\Statistics;
 /**
  * XML provider.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Provider
  */
 class XmlProvider {

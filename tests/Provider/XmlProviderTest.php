@@ -22,7 +22,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 /**
  * XML provider test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Provider
  */
 class XmlProviderTest extends AbstractTestCase {

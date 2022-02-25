@@ -18,7 +18,7 @@ use WBW\Library\XmlTv\Serializer\XmlSerializer;
 /**
  * URL.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model
  */
 class Url extends AbstractModel {

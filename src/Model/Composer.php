@@ -16,7 +16,7 @@ use WBW\Library\XmlTv\Serializer\XmlSerializer;
 /**
  * Composer.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model
  */
 class Composer extends AbstractCredit {

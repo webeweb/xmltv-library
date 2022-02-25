@@ -17,7 +17,7 @@ use WBW\Library\XmlTv\Serializer\XmlSerializer;
 /**
  * Actor.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model
  */
 class Actor extends AbstractCredit {

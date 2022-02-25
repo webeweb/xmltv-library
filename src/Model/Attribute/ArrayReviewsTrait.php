@@ -16,7 +16,7 @@ use WBW\Library\XmlTv\Model\Review;
 /**
  * Array reviews trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model\Attribute
  */
 trait ArrayReviewsTrait {

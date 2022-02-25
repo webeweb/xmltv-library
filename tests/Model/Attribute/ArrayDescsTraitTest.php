@@ -18,7 +18,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayDescsTrait;
 /**
  * Array descriptions trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Model\Attribute
  */
 class ArrayDescsTraitTest extends AbstractTestCase {

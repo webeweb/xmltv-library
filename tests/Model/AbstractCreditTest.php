@@ -17,7 +17,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\TestCredit;
 /**
  * Abstract credit test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Model
  */
 class AbstractCreditTest extends AbstractTestCase {

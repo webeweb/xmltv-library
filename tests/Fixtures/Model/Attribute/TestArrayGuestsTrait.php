@@ -16,7 +16,7 @@ use WBW\Library\XmlTv\Model\Attribute\ArrayGuestsTrait;
 /**
  * Test array guests trait.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute
  */
 class TestArrayGuestsTrait {

@@ -35,7 +35,7 @@ use WBW\Library\XmlTv\Serializer\XmlSerializer;
 /**
  * Programme.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Model
  */
 class Programme extends AbstractModel {

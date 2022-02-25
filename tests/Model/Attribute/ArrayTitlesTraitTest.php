@@ -18,7 +18,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\Attribute\TestArrayTitlesTrait;
 /**
  * Array titles trait test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Tests\Model\Attribute
  */
 class ArrayTitlesTraitTest extends AbstractTestCase {
