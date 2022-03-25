@@ -12,7 +12,6 @@
 namespace WBW\Library\XmlTv\Tests\Serializer;
 
 use DateTime;
-use Psr\Log\LoggerInterface;
 use WBW\Library\XmlTv\Serializer\SerializerHelper;
 use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
