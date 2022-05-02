@@ -85,9 +85,9 @@ class ChannelTest extends AbstractTestCase {
 
         $obj = new Channel();
 
+        $this->assertNull($obj->getId());
         $this->assertEquals([], $obj->getDisplayNames());
         $this->assertEquals([], $obj->getIcons());
-        $this->assertNull($obj->getId());
         $this->assertEquals([], $obj->getProgrammes());
         $this->assertEquals([], $obj->getUrls());
     }
