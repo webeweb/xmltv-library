@@ -166,7 +166,7 @@ class Tv extends AbstractModel {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeTv($this);
@@ -239,7 +239,7 @@ class Tv extends AbstractModel {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeTv($this);

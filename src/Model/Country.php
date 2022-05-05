@@ -35,14 +35,14 @@ class Country extends AbstractModel {
     const DOM_NODE_NAME = "country";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeCountry($this);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeCountry($this);

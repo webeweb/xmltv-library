@@ -84,7 +84,7 @@ class Length extends AbstractModel {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeLength($this);
@@ -106,7 +106,7 @@ class Length extends AbstractModel {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeLength($this);

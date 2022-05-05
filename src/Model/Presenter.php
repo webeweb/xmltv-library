@@ -29,7 +29,7 @@ class Presenter extends AbstractCredit {
     const DOM_NODE_NAME = "presenter";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializePresenter($this);

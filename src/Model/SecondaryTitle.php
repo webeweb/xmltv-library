@@ -35,14 +35,14 @@ class SecondaryTitle extends AbstractModel {
     const DOM_NODE_NAME = "sub-title";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeSecondaryTitle($this);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeSecondaryTitle($this);

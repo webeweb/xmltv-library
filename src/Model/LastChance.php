@@ -35,14 +35,14 @@ class LastChance extends AbstractModel {
     const DOM_NODE_NAME = "last-chance";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeLastChance($this);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeLastChance($this);

@@ -35,14 +35,14 @@ class Premiere extends AbstractModel {
     const DOM_NODE_NAME = "premiere";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializePremiere($this);
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializePremiere($this);

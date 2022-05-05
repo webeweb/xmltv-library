@@ -29,7 +29,7 @@ class Writer extends AbstractCredit {
     const DOM_NODE_NAME = "writer";
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeWriter($this);

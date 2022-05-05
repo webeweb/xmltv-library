@@ -51,7 +51,7 @@ class Icon extends AbstractModel {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeIcon($this);
@@ -69,7 +69,7 @@ class Icon extends AbstractModel {
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeIcon($this);

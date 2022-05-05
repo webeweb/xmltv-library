@@ -382,7 +382,7 @@ abstract class AbstractTestCase extends TestCase {
     protected $writer;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp(): void {
         parent::setUp();

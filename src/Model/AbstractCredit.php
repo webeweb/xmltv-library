@@ -26,7 +26,7 @@ abstract class AbstractCredit extends AbstractModel {
     use StringContentTrait;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeCredit($this);
