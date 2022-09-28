@@ -69,6 +69,7 @@ class Review extends AbstractModel {
      * @return string[] Returns the type enumeration.
      */
     public static function enumType(): array {
+
         return [
             self::TYPE_TEXT,
             self::TYPE_URL,

@@ -54,6 +54,7 @@ class EpisodeNum extends AbstractModel {
      * @return string[] Returns the system enumeration.
      */
     public static function enumSystem(): array {
+
         return [
             self::SYSTEM_ONSCREEN,
             self::SYSTEM_XMLTV_NS,

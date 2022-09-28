@@ -62,6 +62,7 @@ class Subtitles extends AbstractModel {
      * @return array Returns the type enumeration
      */
     public static function enumType(): array {
+
         return [
             self::TYPE_DEAF_SIGNED,
             self::TYPE_ONSCREEN,
