@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.3.1](https://github.com/webeweb/core-bundle/tree/v1.3.1) (2022-09-29)
+
+- Fix a possible issue with XML files containing accents
+
 ### [1.3.0](https://github.com/webeweb/core-bundle/tree/v1.3.0) (2022-09-29)
 
 - Improve code quality
