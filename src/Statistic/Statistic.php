@@ -120,7 +120,7 @@ class Statistic {
 
         ++$this->count;
 
-        $len = strlen($str);
+        $len = mb_strlen($str);
 
         if ($len < $this->getMin() || null === $this->getMin()) {
             $this->setMin($len);
