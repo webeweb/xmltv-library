@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### master
+### [1.3.0](https://github.com/webeweb/core-bundle/tree/v1.3.0) (2022-09-29)
 
 - Improve code quality
 - Improve PHPDoc
