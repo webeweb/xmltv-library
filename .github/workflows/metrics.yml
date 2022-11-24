@@ -44,7 +44,7 @@ jobs:
                       zip -r ../report.zip * -x junit.xml
 
             -   name: "Upload artifact"
-                uses: actions/upload-artifact@v3.1.1
+                uses: actions/upload-artifact@v3
                 with:
                     name: "metrics"
                     path: build/report.zip

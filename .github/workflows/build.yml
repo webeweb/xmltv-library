@@ -60,7 +60,7 @@ jobs:
 
         steps:
             -   name: "Coverage"
-                uses: coverallsapp/github-action@v1
+                uses: coverallsapp/github-action@v1.1.2
                 with:
                     github-token:      ${{ secrets.github_token }}
                     parallel-finished: true
