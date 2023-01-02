@@ -11,7 +11,6 @@
 
 namespace WBW\Library\XmlTv\Tests\Model;
 
-use Exception;
 use InvalidArgumentException;
 use Throwable;
 use WBW\Library\XmlTv\Model\Subtitles;
@@ -84,7 +83,7 @@ class SubtitlesTest extends AbstractTestCase {
         try {
 
             $obj->setType("type");
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals('The type "type" is invalid', $ex->getMessage());

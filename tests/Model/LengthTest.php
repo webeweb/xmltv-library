@@ -11,7 +11,6 @@
 
 namespace WBW\Library\XmlTv\Tests\Model;
 
-use Exception;
 use InvalidArgumentException;
 use Throwable;
 use WBW\Library\XmlTv\Model\Length;
@@ -84,7 +83,7 @@ class LengthTest extends AbstractTestCase {
         try {
 
             $obj->setUnits("units");
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(InvalidArgumentException::class, $ex);
             $this->assertEquals('The units "units" is invalid', $ex->getMessage());
