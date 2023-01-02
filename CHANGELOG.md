@@ -3,6 +3,7 @@ CHANGELOG
 
 ### [1.5.0](https://github.com/webeweb/core-bundle/tree/v1.5.0) (2023-01-02)
 
+- Improve code quality
 - Improve PHPDoc
 - Update LICENSE
 
