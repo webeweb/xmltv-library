@@ -13,6 +13,7 @@ namespace WBW\Library\XmlTv\Tests\Model;
 
 use Exception;
 use InvalidArgumentException;
+use Throwable;
 use WBW\Library\XmlTv\Model\Review;
 use WBW\Library\XmlTv\Tests\AbstractTestCase;
 
@@ -90,7 +91,7 @@ class ReviewTest extends AbstractTestCase {
      * Tests setType()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testSetType(): void {
 

@@ -11,8 +11,8 @@
 
 namespace WBW\Library\XmlTv\Tests\Provider;
 
-use Exception;
 use Psr\Log\LoggerInterface;
+use Throwable;
 use WBW\Library\XmlTv\Model\Channel;
 use WBW\Library\XmlTv\Model\Programme;
 use WBW\Library\XmlTv\Model\Tv;
@@ -75,7 +75,7 @@ class XmlProviderTest extends AbstractTestCase {
      * Tests getXml()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testGetXml(): void {
 
