@@ -1,7 +1,7 @@
 xmltv-library
 =============
 
-[![Build Status](https://img.shields.io/github/workflow/status/webeweb/xmltv-library/build?style=flat-square)](https://github.com/webeweb/xmltv-library/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/webeweb/xmltv-library/build.yml?style=flat-square)](https://github.com/webeweb/xmltv-library/actions)
 [![Coverage Status](https://img.shields.io/coveralls/github/webeweb/xmltv-library/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/xmltv-library?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/xmltv-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/xmltv-library/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/xmltv-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/xmltv-library)
