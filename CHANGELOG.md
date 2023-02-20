@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.6.0](https://github.com/webeweb/core-bundle/tree/v1.6.0) (2023-02-20)
+
+- Reorganize internal traits
+
 ### [1.5.0](https://github.com/webeweb/core-bundle/tree/v1.5.0) (2023-01-02)
 
 - Improve code quality
