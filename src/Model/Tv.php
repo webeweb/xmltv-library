@@ -15,10 +15,10 @@
 
 namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\XmlTv\Model\Attribute\ArrayChannelsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayProgrammesTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayChannelsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayProgrammesTrait;
 
 /**
  * TV.

@@ -12,12 +12,12 @@
 namespace WBW\Library\XmlTv\Model;
 
 use WBW\Library\Traits\Strings\StringIdTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayDisplayNamesTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayIconsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayProgrammesTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayUrlsTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayDisplayNamesTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayIconsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayProgrammesTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayUrlsTrait;
 
 /**
  * Channel.

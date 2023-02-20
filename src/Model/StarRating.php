@@ -11,10 +11,10 @@
 
 namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\XmlTv\Model\Attribute\ArrayIconsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ValueValueTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayIconsTrait;
+use WBW\Library\XmlTv\Traits\Objects\ValueValueTrait;
 
 /**
  * Star rating.

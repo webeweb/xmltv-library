@@ -11,9 +11,9 @@
 
 namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\XmlTv\Model\Attribute\PresentPresentTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Objects\PresentPresentTrait;
 
 /**
  * Video.

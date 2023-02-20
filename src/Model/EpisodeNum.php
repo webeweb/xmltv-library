@@ -12,9 +12,9 @@
 namespace WBW\Library\XmlTv\Model;
 
 use WBW\Library\Traits\Strings\StringContentTrait;
-use WBW\Library\XmlTv\Model\Attribute\StringSystemTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Strings\StringSystemTrait;
 
 /**
  * Episode number.

@@ -12,25 +12,25 @@
 namespace WBW\Library\XmlTv\Model;
 
 use DateTime;
-use WBW\Library\XmlTv\Model\Attribute\ArrayCategoriesTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayCountriesTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayDescsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayEpisodeNumsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayIconsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayKeywordsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayRatingsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayReviewsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArraySecondaryTitlesTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayStarRatingsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArraySubtitlesTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayTitlesTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayUrlsTrait;
-use WBW\Library\XmlTv\Model\Attribute\LanguageLanguageTrait;
-use WBW\Library\XmlTv\Model\Attribute\StringChannelTrait;
-use WBW\Library\XmlTv\Model\Attribute\StringStartTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\SerializerHelper;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayCategoriesTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayCountriesTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayDescsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayEpisodeNumsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayIconsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayKeywordsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayRatingsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayReviewsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArraySecondaryTitlesTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayStarRatingsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArraySubtitlesTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayTitlesTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayUrlsTrait;
+use WBW\Library\XmlTv\Traits\Objects\LanguageLanguageTrait;
+use WBW\Library\XmlTv\Traits\Strings\StringChannelTrait;
+use WBW\Library\XmlTv\Traits\Strings\StringStartTrait;
 
 /**
  * Programme.

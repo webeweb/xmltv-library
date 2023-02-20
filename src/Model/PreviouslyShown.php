@@ -11,10 +11,10 @@
 
 namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\XmlTv\Model\Attribute\StringChannelTrait;
-use WBW\Library\XmlTv\Model\Attribute\StringStartTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Strings\StringChannelTrait;
+use WBW\Library\XmlTv\Traits\Strings\StringStartTrait;
 
 /**
  * Previously shown.

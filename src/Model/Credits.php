@@ -11,18 +11,18 @@
 
 namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\XmlTv\Model\Attribute\ArrayActorsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayAdaptersTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayCommentatorsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayComposersTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayDirectorsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayEditorsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayGuestsTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayPresentersTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayProducersTrait;
-use WBW\Library\XmlTv\Model\Attribute\ArrayWritersTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayActorsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayAdaptersTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayCommentatorsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayComposersTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayDirectorsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayEditorsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayGuestsTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayPresentersTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayProducersTrait;
+use WBW\Library\XmlTv\Traits\Arrays\ArrayWritersTrait;
 
 /**
  * Credits.

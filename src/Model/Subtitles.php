@@ -13,9 +13,9 @@ namespace WBW\Library\XmlTv\Model;
 
 use InvalidArgumentException;
 use WBW\Library\Traits\Strings\StringTypeTrait;
-use WBW\Library\XmlTv\Model\Attribute\LanguageLanguageTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
+use WBW\Library\XmlTv\Traits\Objects\LanguageLanguageTrait;
 
 /**
  * Subtitles.
