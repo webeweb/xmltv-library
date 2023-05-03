@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [1.6.0](https://github.com/webeweb/core-bundle/tree/v1.6.0) (2023-02-20)
 
 - Reorganize internal traits
