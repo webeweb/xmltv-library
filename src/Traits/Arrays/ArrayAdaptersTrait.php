@@ -58,7 +58,7 @@ trait ArrayAdaptersTrait {
     }
 
     /**
-     * Determines if this instance has adapters.
+     * Determine if this instance has adapters.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

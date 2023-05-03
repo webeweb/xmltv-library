@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Arrays\TestArrayPresentersTrait;
 class ArrayPresentersTraitTest extends AbstractTestCase {
 
     /**
-     * Tests addPresenter()
+     * Test addPresenter()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayPresentersTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

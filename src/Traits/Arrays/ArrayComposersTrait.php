@@ -58,7 +58,7 @@ trait ArrayComposersTrait {
     }
 
     /**
-     * Determines if this instance has composers.
+     * Determine if this instance has composers.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

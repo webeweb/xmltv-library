@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Strings\TestStringSystemTrait;
 class StringSystemTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setSystem()
+     * Test setSystem()
      *
      * @return void
      */

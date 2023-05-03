@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Arrays\TestArrayEditorsTrait;
 class ArrayEditorsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests addEditor()
+     * Test addEditor()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayEditorsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

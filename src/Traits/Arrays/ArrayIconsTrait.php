@@ -58,7 +58,7 @@ trait ArrayIconsTrait {
     }
 
     /**
-     * Determines if this instance has icons.
+     * Determine if this instance has icons.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

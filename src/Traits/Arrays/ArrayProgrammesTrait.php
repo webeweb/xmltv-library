@@ -58,7 +58,7 @@ trait ArrayProgrammesTrait {
     }
 
     /**
-     * Determines if this instance has programmes.
+     * Determine if this instance has programmes.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

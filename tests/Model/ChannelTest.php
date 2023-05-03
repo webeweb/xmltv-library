@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class ChannelTest extends AbstractTestCase {
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -45,7 +45,7 @@ class ChannelTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setId()
+     * Test setId()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class ChannelTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class ChannelTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

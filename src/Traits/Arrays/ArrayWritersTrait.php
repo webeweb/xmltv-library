@@ -58,7 +58,7 @@ trait ArrayWritersTrait {
     }
 
     /**
-     * Determines if this instance has writers.
+     * Determine if this instance has writers.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

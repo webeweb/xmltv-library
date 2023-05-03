@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Arrays\TestArrayCommentatorsTrait;
 class ArrayCommentatorsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests addCommentator()
+     * Test addCommentator()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayCommentatorsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

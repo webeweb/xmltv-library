@@ -66,7 +66,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class XmlDeserializerTest extends AbstractTestCase {
 
     /**
-     * Tests deserializeActor()
+     * Test deserializeActor()
      *
      * @return void
      */
@@ -86,7 +86,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeAdapter()
+     * Test deserializeAdapter()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeAspect()
+     * Test deserializeAspect()
      *
      * @return void
      */
@@ -124,7 +124,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeAudio()
+     * Test deserializeAudio()
      *
      * @return void
      */
@@ -143,7 +143,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeCategory()
+     * Test deserializeCategory()
      *
      * @return void
      */
@@ -162,7 +162,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeChannel()
+     * Test deserializeChannel()
      *
      * @return void
      */
@@ -181,7 +181,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeColour()
+     * Test deserializeColour()
      *
      * @return void
      */
@@ -200,7 +200,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeCommentator()
+     * Test deserializeCommentator()
      *
      * @return void
      */
@@ -219,7 +219,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeComposer()
+     * Test deserializeComposer()
      *
      * @return void
      */
@@ -238,7 +238,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeCountry()
+     * Test deserializeCountry()
      *
      * @return void
      */
@@ -257,7 +257,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeCredits()
+     * Test deserializeCredits()
      *
      * @return void
      */
@@ -284,7 +284,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeDate()
+     * Test deserializeDate()
      *
      * @return void
      */
@@ -302,7 +302,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeDesc()
+     * Test deserializeDesc()
      *
      * @return void
      */
@@ -321,7 +321,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeDirector()
+     * Test deserializeDirector()
      *
      * @return void
      */
@@ -340,7 +340,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeDisplayName()
+     * Test deserializeDisplayName()
      *
      * @return void
      */
@@ -359,7 +359,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeEditor()
+     * Test deserializeEditor()
      *
      * @return void
      */
@@ -378,7 +378,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeEpisodeNum()
+     * Test deserializeEpisodeNum()
      *
      * @return void
      */
@@ -397,7 +397,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeGuest()
+     * Test deserializeGuest()
      *
      * @return void
      */
@@ -416,7 +416,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeIcon()
+     * Test deserializeIcon()
      *
      * @return void
      */
@@ -436,7 +436,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeKeyword()
+     * Test deserializeKeyword()
      *
      * @return void
      */
@@ -455,7 +455,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeLanguage()
+     * Test deserializeLanguage()
      *
      * @return void
      */
@@ -474,7 +474,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeLastChance()
+     * Test deserializeLastChance()
      *
      * @return void
      */
@@ -493,7 +493,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeLength()
+     * Test deserializeLength()
      *
      * @return void
      */
@@ -512,7 +512,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeOrigLanguage()
+     * Test deserializeOrigLanguage()
      *
      * @return void
      */
@@ -531,7 +531,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePremiere()
+     * Test deserializePremiere()
      *
      * @return void
      */
@@ -550,7 +550,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePresent()
+     * Test deserializePresent()
      *
      * @return void
      */
@@ -569,7 +569,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePresenter()
+     * Test deserializePresenter()
      *
      * @return void
      */
@@ -588,7 +588,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePreviouslyShown()
+     * Test deserializePreviouslyShown()
      *
      * @return void
      */
@@ -607,7 +607,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeProducer()
+     * Test deserializeProducer()
      *
      * @return void
      */
@@ -626,7 +626,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeProgramme()
+     * Test deserializeProgramme()
      *
      * @return void
      */
@@ -675,7 +675,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeQuality()
+     * Test deserializeQuality()
      *
      * @return void
      */
@@ -694,7 +694,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeRating()
+     * Test deserializeRating()
      *
      * @return void
      */
@@ -714,7 +714,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeReview()
+     * Test deserializeReview()
      *
      * @return void
      */
@@ -735,7 +735,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeSecondaryTitle()
+     * Test deserializeSecondaryTitle()
      *
      * @return void
      */
@@ -754,7 +754,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeStarRating()
+     * Test deserializeStarRating()
      *
      * @return void
      */
@@ -773,7 +773,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeStereo()
+     * Test deserializeStereo()
      *
      * @return void
      */
@@ -792,7 +792,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeSubtitles()
+     * Test deserializeSubtitles()
      *
      * @return void
      */
@@ -811,7 +811,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeTitle()
+     * Test deserializeTitle()
      *
      * @return void
      */
@@ -830,7 +830,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeTv()
+     * Test deserializeTv()
      *
      * @return void
      */
@@ -853,7 +853,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeUrl()
+     * Test deserializeUrl()
      *
      * @return void
      */
@@ -871,7 +871,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeValue()
+     * Test deserializeValue()
      *
      * @return void
      */
@@ -890,7 +890,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeVideo()
+     * Test deserializeVideo()
      *
      * @return void
      */
@@ -911,7 +911,7 @@ class XmlDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeWriter()
+     * Test deserializeWriter()
      *
      * @return void
      */

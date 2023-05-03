@@ -65,7 +65,7 @@ use WBW\Library\XmlTv\Model\Writer;
 class JsonDeserializer {
 
     /**
-     * Deserializes an actor.
+     * Deserialize an actor.
      *
      * @param array $data The data.
      * @return Actor Returns the actor.
@@ -80,7 +80,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes an adapter.
+     * Deserialize an adapter.
      *
      * @param array $data The data.
      * @return Adapter Returns the adapter.
@@ -94,7 +94,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes an aspect.
+     * Deserialize an aspect.
      *
      * @param array $data The data.
      * @return Aspect Returns the aspect.
@@ -108,7 +108,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes an audio.
+     * Deserialize an audio.
      *
      * @param array $data The data.
      * @return Audio Returns the audio.
@@ -123,7 +123,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a category.
+     * Deserialize a category.
      *
      * @param array $data The data.
      * @return Category Returns the category.
@@ -138,7 +138,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a channel.
+     * Deserialize a channel.
      *
      * @param array $data The data.
      * @return Channel Returns the channel.
@@ -155,7 +155,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a colour.
+     * Deserialize a colour.
      *
      * @param array $data The data.
      * @return Colour Returns the colour.
@@ -169,7 +169,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a commentator.
+     * Deserialize a commentator.
      *
      * @param array $data The data.
      * @return Commentator Returns the commentator.
@@ -183,7 +183,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a composer.
+     * Deserialize a composer.
      *
      * @param array $data The data.
      * @return Composer Returns the composer.
@@ -197,7 +197,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a country.
+     * Deserialize a country.
      *
      * @param array $data The data.
      * @return Country Returns the country.
@@ -235,7 +235,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a date.
+     * Deserialize a date.
      *
      * @param array $data The data.
      * @return Date Returns the date.
@@ -249,7 +249,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a description.
+     * Deserialize a description.
      *
      * @param array $data The data.
      * @return Desc Returns the description.
@@ -264,7 +264,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a director.
+     * Deserialize a director.
      *
      * @param array $data The data.
      * @return Director Returns the director.
@@ -278,7 +278,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a display name.
+     * Deserialize a display name.
      *
      * @param array $data The data.
      * @return DisplayName Returns the display name.
@@ -293,7 +293,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes an editor.
+     * Deserialize an editor.
      *
      * @param array $data The data.
      * @return Editor Returns the editor.
@@ -307,7 +307,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a episode number.
+     * Deserialize a episode number.
      *
      * @param array $data The data.
      * @return EpisodeNum Returns the episode number.
@@ -322,7 +322,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a guest.
+     * Deserialize a guest.
      *
      * @param array $data The data.
      * @return Guest Returns the guest.
@@ -336,7 +336,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a icon.
+     * Deserialize a icon.
      *
      * @param array $data The data.
      * @return Icon Returns the icon.
@@ -352,7 +352,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a keyword.
+     * Deserialize a keyword.
      *
      * @param array $data The data.
      * @return Keyword Returns the keyword.
@@ -367,7 +367,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a language.
+     * Deserialize a language.
      *
      * @param array $data The data.
      * @return Language Returns the language.
@@ -382,7 +382,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a last chance.
+     * Deserialize a last chance.
      *
      * @param array $data The data.
      * @return LastChance Returns the last chance.
@@ -397,7 +397,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a length.
+     * Deserialize a length.
      *
      * @param array $data The data.
      * @return Length Returns the length.
@@ -412,7 +412,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes an original language.
+     * Deserialize an original language.
      *
      * @param array $data The data.
      * @return OrigLanguage Returns the original language.
@@ -427,7 +427,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a premiere.
+     * Deserialize a premiere.
      *
      * @param array $data The data.
      * @return Premiere Returns the premiere.
@@ -442,7 +442,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a present.
+     * Deserialize a present.
      *
      * @param array $data The data.
      * @return Present Returns the present.
@@ -456,7 +456,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a presenter.
+     * Deserialize a presenter.
      *
      * @param array $data The data.
      * @return Presenter Returns the presenter.
@@ -470,7 +470,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a previously shown.
+     * Deserialize a previously shown.
      *
      * @param array $data The data.
      * @return PreviouslyShown Returns the previously shown.
@@ -485,7 +485,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a producer.
+     * Deserialize a producer.
      *
      * @param array $data The data.
      * @return Producer Returns the producer.
@@ -499,7 +499,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a programme.
+     * Deserialize a programme.
      *
      * @param array $data The data.
      * @return Programme Returns the programme.
@@ -544,7 +544,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a quality.
+     * Deserialize a quality.
      *
      * @param array $data The data.
      * @return Quality Returns the quality.
@@ -558,7 +558,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a rating.
+     * Deserialize a rating.
      *
      * @param array $data The data.
      * @return Rating Returns the rating.
@@ -574,7 +574,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a review.
+     * Deserialize a review.
      *
      * @param array $data The data.
      * @return Review Returns the review.
@@ -591,7 +591,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a secondary title.
+     * Deserialize a secondary title.
      *
      * @param array $data The data.
      * @return SecondaryTitle Returns the secondary title.
@@ -606,7 +606,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a star rating.
+     * Deserialize a star rating.
      *
      * @param array $data The data.
      * @return StarRating Returns the star rating.
@@ -621,7 +621,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a stereo.
+     * Deserialize a stereo.
      *
      * @param array $data The data.
      * @return Stereo Returns the stereo.
@@ -635,7 +635,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a subtitles.
+     * Deserialize a subtitles.
      *
      * @param array $data The data.
      * @return Subtitles Returns the subtitles.
@@ -650,7 +650,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a title.
+     * Deserialize a title.
      *
      * @param array $data The data.
      * @return Title Returns the title.
@@ -665,7 +665,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a TV.
+     * Deserialize a TV.
      *
      * @param array $data The data.
      * @return Tv Returns the TV.
@@ -686,7 +686,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a URL.
+     * Deserialize a URL.
      *
      * @param array $data The data.
      * @return Url Returns the URL.
@@ -700,7 +700,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a value.
+     * Deserialize a value.
      *
      * @param array $data The data.
      * @return Value Returns the value.
@@ -714,7 +714,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a video.
+     * Deserialize a video.
      *
      * @param array $data The data.
      * @return Video Returns the video.
@@ -731,7 +731,7 @@ class JsonDeserializer {
     }
 
     /**
-     * Deserializes a writer.
+     * Deserialize a writer.
      *
      * @param array $data The data.
      * @return Writer Returns the writer.

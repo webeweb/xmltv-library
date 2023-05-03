@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Objects\TestValueValueTrait;
 class ValueValueTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setValue()
+     * Test setValue()
      *
      * @return void
      */

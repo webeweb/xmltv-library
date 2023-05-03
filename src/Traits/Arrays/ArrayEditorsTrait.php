@@ -58,7 +58,7 @@ trait ArrayEditorsTrait {
     }
 
     /**
-     * Determines if this instance has editors.
+     * Determine if this instance has editors.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

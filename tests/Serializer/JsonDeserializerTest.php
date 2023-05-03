@@ -77,7 +77,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeActor()
+     * Test deserializeActor()
      *
      * @return void
      */
@@ -95,7 +95,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeAdapter()
+     * Test deserializeAdapter()
      *
      * @return void
      */
@@ -112,7 +112,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeAspect()
+     * Test deserializeAspect()
      *
      * @return void
      */
@@ -129,7 +129,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeAudio()
+     * Test deserializeAudio()
      *
      * @return void
      */
@@ -147,7 +147,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeCategory()
+     * Test deserializeCategory()
      *
      * @return void
      */
@@ -165,7 +165,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeChannel()
+     * Test deserializeChannel()
      *
      * @return void
      */
@@ -184,7 +184,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeColour()
+     * Test deserializeColour()
      *
      * @return void
      */
@@ -201,7 +201,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeCommentator()
+     * Test deserializeCommentator()
      *
      * @return void
      */
@@ -218,7 +218,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeComposer()
+     * Test deserializeComposer()
      *
      * @return void
      */
@@ -235,7 +235,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeCountry()
+     * Test deserializeCountry()
      *
      * @return void
      */
@@ -253,7 +253,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeCredits()
+     * Test deserializeCredits()
      *
      * @return void
      */
@@ -279,7 +279,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeDate()
+     * Test deserializeDate()
      *
      * @return void
      */
@@ -296,7 +296,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeDesc()
+     * Test deserializeDesc()
      *
      * @return void
      */
@@ -314,7 +314,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeDirector()
+     * Test deserializeDirector()
      *
      * @return void
      */
@@ -331,7 +331,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeDisplayName()
+     * Test deserializeDisplayName()
      *
      * @return void
      */
@@ -349,7 +349,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeEditor()
+     * Test deserializeEditor()
      *
      * @return void
      */
@@ -366,7 +366,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeEpisodeNum()
+     * Test deserializeEpisodeNum()
      *
      * @return void
      */
@@ -384,7 +384,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeGuest()
+     * Test deserializeGuest()
      *
      * @return void
      */
@@ -401,7 +401,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeIcon()
+     * Test deserializeIcon()
      *
      * @return void
      */
@@ -420,7 +420,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeKeyword()
+     * Test deserializeKeyword()
      *
      * @return void
      */
@@ -438,7 +438,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeLanguage()
+     * Test deserializeLanguage()
      *
      * @return void
      */
@@ -456,7 +456,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeLastChance()
+     * Test deserializeLastChance()
      *
      * @return void
      */
@@ -474,7 +474,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeLength()
+     * Test deserializeLength()
      *
      * @return void
      */
@@ -492,7 +492,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeOrigLanguage()
+     * Test deserializeOrigLanguage()
      *
      * @return void
      */
@@ -510,7 +510,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePremiere()
+     * Test deserializePremiere()
      *
      * @return void
      */
@@ -528,7 +528,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePresent()
+     * Test deserializePresent()
      *
      * @return void
      */
@@ -545,7 +545,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePresenter()
+     * Test deserializePresenter()
      *
      * @return void
      */
@@ -562,7 +562,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializePreviouslyShown()
+     * Test deserializePreviouslyShown()
      *
      * @return void
      */
@@ -580,7 +580,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeProducer()
+     * Test deserializeProducer()
      *
      * @return void
      */
@@ -597,7 +597,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeProgramme()
+     * Test deserializeProgramme()
      *
      * @return void
      */
@@ -646,7 +646,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeQuality()
+     * Test deserializeQuality()
      *
      * @return void
      */
@@ -663,7 +663,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeRating()
+     * Test deserializeRating()
      *
      * @return void
      */
@@ -682,7 +682,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeReview()
+     * Test deserializeReview()
      *
      * @return void
      */
@@ -702,7 +702,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeSecondaryTitle()
+     * Test deserializeSecondaryTitle()
      *
      * @return void
      */
@@ -720,7 +720,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeStarRating()
+     * Test deserializeStarRating()
      *
      * @return void
      */
@@ -738,7 +738,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeStereo()
+     * Test deserializeStereo()
      *
      * @return void
      */
@@ -755,7 +755,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeSubtitles()
+     * Test deserializeSubtitles()
      *
      * @return void
      */
@@ -773,7 +773,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeTitle()
+     * Test deserializeTitle()
      *
      * @return void
      */
@@ -791,7 +791,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeTv()
+     * Test deserializeTv()
      *
      * @return void
      */
@@ -815,7 +815,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeUrl()
+     * Test deserializeUrl()
      *
      * @return void
      */
@@ -832,7 +832,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeValue()
+     * Test deserializeValue()
      *
      * @return void
      */
@@ -849,7 +849,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeVideo()
+     * Test deserializeVideo()
      *
      * @return void
      */
@@ -869,7 +869,7 @@ class JsonDeserializerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests deserializeWriter()
+     * Test deserializeWriter()
      *
      * @return void
      */

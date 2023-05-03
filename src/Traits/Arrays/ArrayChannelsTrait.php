@@ -58,7 +58,7 @@ trait ArrayChannelsTrait {
     }
 
     /**
-     * Determines if this instance has channels.
+     * Determine if this instance has channels.
      *
      * @return bool Returns true in case of success, false otherwise.
      */
@@ -67,7 +67,7 @@ trait ArrayChannelsTrait {
     }
 
     /**
-     * Indexes the channels by id.
+     * Indexe the channels by id.
      *
      * @return Channel[] Returns the channels indexed by id.
      */

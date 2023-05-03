@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class ActorTest extends AbstractTestCase {
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class ActorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setRole()
+     * Test setRole()
      *
      * @return void
      */
@@ -54,7 +54,7 @@ class ActorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -69,7 +69,7 @@ class ActorTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

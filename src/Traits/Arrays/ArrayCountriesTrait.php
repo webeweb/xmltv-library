@@ -58,7 +58,7 @@ trait ArrayCountriesTrait {
     }
 
     /**
-     * Determines if this programme has countries.
+     * Determine if this programme has countries.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

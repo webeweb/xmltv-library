@@ -58,7 +58,7 @@ trait ArrayCategoriesTrait {
     }
 
     /**
-     * Determines if this programme has categories.
+     * Determine if this programme has categories.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

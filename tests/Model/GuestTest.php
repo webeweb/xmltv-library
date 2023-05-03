@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class GuestTest extends AbstractTestCase {
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -37,7 +37,7 @@ class GuestTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

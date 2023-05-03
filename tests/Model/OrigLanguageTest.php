@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class OrigLanguageTest extends AbstractTestCase {
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -41,7 +41,7 @@ class OrigLanguageTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -56,7 +56,7 @@ class OrigLanguageTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

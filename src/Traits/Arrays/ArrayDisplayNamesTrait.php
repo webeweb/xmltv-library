@@ -58,7 +58,7 @@ trait ArrayDisplayNamesTrait {
     }
 
     /**
-     * Determines if this channel has display names.
+     * Determine if this channel has display names.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

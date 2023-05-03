@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Arrays\TestArraySubtitlesTrait;
 class ArraySubtitlesTraitTest extends AbstractTestCase {
 
     /**
-     * Tests addSubtitles()
+     * Test addSubtitles()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArraySubtitlesTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

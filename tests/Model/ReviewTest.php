@@ -25,7 +25,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class ReviewTest extends AbstractTestCase {
 
     /**
-     * Tests enumType()
+     * Test enumType()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class ReviewTest extends AbstractTestCase {
     }
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -61,7 +61,7 @@ class ReviewTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setReviewer()
+     * Test setReviewer()
      *
      * @return void
      */
@@ -74,7 +74,7 @@ class ReviewTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSource()
+     * Test setSource()
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class ReviewTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setType()
+     * Test setType()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -101,7 +101,7 @@ class ReviewTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setType()
+     * Test setType()
      *
      * @return void
      */
@@ -120,7 +120,7 @@ class ReviewTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -137,7 +137,7 @@ class ReviewTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

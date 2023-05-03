@@ -58,7 +58,7 @@ trait ArraySubtitlesTrait {
     }
 
     /**
-     * Determines if this instance has subtitles.
+     * Determine if this instance has subtitles.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

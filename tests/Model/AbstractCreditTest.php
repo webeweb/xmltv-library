@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Model\TestCredit;
 class AbstractCreditTest extends AbstractTestCase {
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -39,7 +39,7 @@ class AbstractCreditTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

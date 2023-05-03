@@ -33,7 +33,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class ProgrammeTest extends AbstractTestCase {
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -111,7 +111,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setAudio()
+     * Test setAudio()
      *
      * @return void
      */
@@ -127,7 +127,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setClumpIdx()
+     * Test setClumpIdx()
      *
      * @return void
      */
@@ -140,7 +140,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setCredits()
+     * Test setCredits()
      *
      * @return void
      */
@@ -156,7 +156,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setDate()
+     * Test setDate()
      *
      * @return void
      */
@@ -172,7 +172,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setLastChance()
+     * Test setLastChance()
      *
      * @return void
      */
@@ -188,7 +188,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setLength()
+     * Test setLength()
      *
      * @return void
      */
@@ -204,7 +204,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setNew()
+     * Test setNew()
      *
      * @return void
      */
@@ -217,7 +217,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setOrigLanguage()
+     * Test setOrigLanguage()
      *
      * @return void
      */
@@ -233,7 +233,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setPdcStart()
+     * Test setPdcStart()
      *
      * @return void
      */
@@ -248,7 +248,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setPremiere()
+     * Test setPremiere()
      *
      * @return void
      */
@@ -264,7 +264,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setPreviouslyShown()
+     * Test setPreviouslyShown()
      *
      * @return void
      */
@@ -280,7 +280,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setShowView()
+     * Test setShowView()
      *
      * @return void
      */
@@ -293,7 +293,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setStart()
+     * Test setStart()
      *
      * @return void
      */
@@ -308,7 +308,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setStop()
+     * Test setStop()
      *
      * @return void
      */
@@ -323,7 +323,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setVideo()
+     * Test setVideo()
      *
      * @return void
      */
@@ -339,7 +339,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setVideoPlus()
+     * Test setVideoPlus()
      *
      * @return void
      */
@@ -352,7 +352,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setVpsStart()
+     * Test setVpsStart()
      *
      * @return void
      */
@@ -367,7 +367,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -412,7 +412,7 @@ class ProgrammeTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

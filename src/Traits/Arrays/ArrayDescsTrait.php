@@ -58,7 +58,7 @@ trait ArrayDescsTrait {
     }
 
     /**
-     * Determines if this instance has descriptions.
+     * Determine if this instance has descriptions.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

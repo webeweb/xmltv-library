@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Objects\TestLanguageLanguageTrait;
 class LanguageLanguageTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setLanguage()
+     * Test setLanguage()
      *
      * @return void
      */

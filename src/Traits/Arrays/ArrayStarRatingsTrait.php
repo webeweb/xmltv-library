@@ -58,7 +58,7 @@ trait ArrayStarRatingsTrait {
     }
 
     /**
-     * Determines if this instance has star ratings.
+     * Determine if this instance has star ratings.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

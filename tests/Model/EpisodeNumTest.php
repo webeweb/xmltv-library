@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class EpisodeNumTest extends AbstractTestCase {
 
     /**
-     * Tests enumSystem()
+     * Test enumSystem()
      *
      * @return void
      */
@@ -37,7 +37,7 @@ class EpisodeNumTest extends AbstractTestCase {
     }
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class EpisodeNumTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class EpisodeNumTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

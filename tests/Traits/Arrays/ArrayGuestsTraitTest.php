@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Arrays\TestArrayGuestsTrait;
 class ArrayGuestsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests addGuest()
+     * Test addGuest()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayGuestsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

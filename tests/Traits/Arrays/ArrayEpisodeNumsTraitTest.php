@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Arrays\TestArrayEpisodeNumsTrait;
 class ArrayEpisodeNumsTraitTest extends AbstractTestCase {
 
     /**
-     * Tests addEpisodeNum()
+     * Test addEpisodeNum()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayEpisodeNumsTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Arrays\TestArrayAdaptersTrait;
 class ArrayAdaptersTraitTest extends AbstractTestCase {
 
     /**
-     * Tests addAdapter()
+     * Test addAdapter()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayAdaptersTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

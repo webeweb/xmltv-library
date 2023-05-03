@@ -25,7 +25,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class SubtitlesTest extends AbstractTestCase {
 
     /**
-     * Tests enumType()
+     * Test enumType()
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class SubtitlesTest extends AbstractTestCase {
     }
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class SubtitlesTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setType()
+     * Test setType()
      *
      * @return void
      * @throws Throwable Throws an exception if an error occurs.
@@ -72,7 +72,7 @@ class SubtitlesTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setType()
+     * Test setType()
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class SubtitlesTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -106,7 +106,7 @@ class SubtitlesTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -58,7 +58,7 @@ trait ArrayUrlsTrait {
     }
 
     /**
-     * Determines if this instance has URLs.
+     * Determine if this instance has URLs.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

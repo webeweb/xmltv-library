@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class TvTest extends AbstractTestCase {
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -53,7 +53,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setDate()
+     * Test setDate()
      *
      * @return void
      */
@@ -66,7 +66,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setGeneratorInfoName()
+     * Test setGeneratorInfoName()
      *
      * @return void
      */
@@ -79,7 +79,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setGeneratorInfoURL()
+     * Test setGeneratorInfoURL()
      *
      * @return void
      */
@@ -92,7 +92,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSourceDataURL()
+     * Test setSourceDataURL()
      *
      * @return void
      */
@@ -105,7 +105,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSourceInfoName()
+     * Test setSourceInfoName()
      *
      * @return void
      */
@@ -118,7 +118,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSourceInfoURL()
+     * Test setSourceInfoURL()
      *
      * @return void
      */
@@ -131,7 +131,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -152,7 +152,7 @@ class TvTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

@@ -58,7 +58,7 @@ trait ArrayCommentatorsTrait {
     }
 
     /**
-     * Determines if this instance has commentators.
+     * Determine if this instance has commentators.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

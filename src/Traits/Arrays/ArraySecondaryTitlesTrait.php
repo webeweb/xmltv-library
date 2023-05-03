@@ -58,7 +58,7 @@ trait ArraySecondaryTitlesTrait {
     }
 
     /**
-     * Determines if this instance has secondary titles.
+     * Determine if this instance has secondary titles.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

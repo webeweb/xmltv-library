@@ -58,7 +58,7 @@ trait ArrayDirectorsTrait {
     }
 
     /**
-     * Determines if this instance has directors.
+     * Determine if this instance has directors.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

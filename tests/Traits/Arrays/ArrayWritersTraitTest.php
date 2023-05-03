@@ -24,7 +24,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Arrays\TestArrayWritersTrait;
 class ArrayWritersTraitTest extends AbstractTestCase {
 
     /**
-     * Tests addWriter()
+     * Test addWriter()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class ArrayWritersTraitTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

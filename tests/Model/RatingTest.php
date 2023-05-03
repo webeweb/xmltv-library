@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class RatingTest extends AbstractTestCase {
 
     /**
-     * Tests jsonSerialize()
+     * Test jsonSerialize()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class RatingTest extends AbstractTestCase {
     }
 
     /**
-     * Tests setSystem()
+     * Test setSystem()
      *
      * @return void
      */
@@ -55,7 +55,7 @@ class RatingTest extends AbstractTestCase {
     }
 
     /**
-     * Tests xmlSerialize()
+     * Test xmlSerialize()
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class RatingTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */

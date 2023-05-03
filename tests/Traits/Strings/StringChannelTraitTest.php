@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Traits\Strings\TestStringChannelTrait;
 class StringChannelTraitTest extends AbstractTestCase {
 
     /**
-     * Tests setChannel()
+     * Test setChannel()
      *
      * @return void
      */

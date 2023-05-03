@@ -37,7 +37,7 @@ class SerializerHelper extends BaseSerializerHelper {
     const DATE_TIME_FORMAT = "YmdHis O";
 
     /**
-     * Deserializes a date/time.
+     * Deserialize a date/time.
      *
      * @param string|null $value The date/time.
      * @return DateTime|null Returns the date/time in case of success, null otherwise.
@@ -94,7 +94,7 @@ class SerializerHelper extends BaseSerializerHelper {
     }
 
     /**
-     * Deserializes an array.
+     * Deserialize an array.
      *
      * @param array $array The array.
      * @param string $nodeName The node name.
@@ -117,7 +117,7 @@ class SerializerHelper extends BaseSerializerHelper {
     }
 
     /**
-     * Deserializes a model.
+     * Deserialize a model.
      *
      * @param array $array The array.
      * @param string $nodeName The node name.
@@ -138,7 +138,7 @@ class SerializerHelper extends BaseSerializerHelper {
     }
 
     /**
-     * Deserializes an array.
+     * Deserialize an array.
      *
      * @param DOMNode $domNode The DOM node.
      * @param string $nodeName The node name.
@@ -157,7 +157,7 @@ class SerializerHelper extends BaseSerializerHelper {
     }
 
     /**
-     * Deserializes a model.
+     * Deserialize a model.
      *
      * @param DOMNode $domNode The DOM node.
      * @param string $nodeName The node name.

@@ -58,7 +58,7 @@ trait ArrayKeywordsTrait {
     }
 
     /**
-     * Determines if this instance has keywords.
+     * Determine if this instance has keywords.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

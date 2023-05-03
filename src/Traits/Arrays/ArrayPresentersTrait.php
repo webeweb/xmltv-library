@@ -58,7 +58,7 @@ trait ArrayPresentersTrait {
     }
 
     /**
-     * Determines if this instance has presenters.
+     * Determine if this instance has presenters.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

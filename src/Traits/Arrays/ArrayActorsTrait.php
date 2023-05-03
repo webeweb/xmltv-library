@@ -58,7 +58,7 @@ trait ArrayActorsTrait {
     }
 
     /**
-     * Determines if this instance has actors.
+     * Determine if this instance has actors.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

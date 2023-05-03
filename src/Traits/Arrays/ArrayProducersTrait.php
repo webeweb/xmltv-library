@@ -58,7 +58,7 @@ trait ArrayProducersTrait {
     }
 
     /**
-     * Determines if this instance has producers.
+     * Determine if this instance has producers.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

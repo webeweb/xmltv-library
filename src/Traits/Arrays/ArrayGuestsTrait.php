@@ -58,7 +58,7 @@ trait ArrayGuestsTrait {
     }
 
     /**
-     * Determines if this instance has guests.
+     * Determine if this instance has guests.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

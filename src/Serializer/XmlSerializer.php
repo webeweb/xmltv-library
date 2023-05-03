@@ -66,7 +66,7 @@ use WBW\Library\XmlTv\Model\Writer;
 class XmlSerializer extends XmlSerializerHelper {
 
     /**
-     * Serializes an actor.
+     * Serialize an actor.
      *
      * @param Actor $model The actor.
      * @return string Returns the serialized actor.
@@ -78,7 +78,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes an adapter.
+     * Serialize an adapter.
      *
      * @param Adapter $model The adapter.
      * @return string Returns the serialized adapter.
@@ -88,7 +88,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes an aspect.
+     * Serialize an aspect.
      *
      * @param Aspect $model The aspect.
      * @return string Returns the serialized aspect.
@@ -98,7 +98,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes an audio.
+     * Serialize an audio.
      *
      * @param Audio $model The audio.
      * @return string Returns the serialized audio.
@@ -114,7 +114,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a category.
+     * Serialize a category.
      *
      * @param Category $model The category.
      * @return string Returns the serialized category.
@@ -126,7 +126,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a channel.
+     * Serialize a channel.
      *
      * @param Channel $model The channel.
      * @return string Returns the serialized channel.
@@ -145,7 +145,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a colour.
+     * Serialize a colour.
      *
      * @param Colour $model The colour.
      * @return string Returns the serialized colour.
@@ -155,7 +155,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a commentator.
+     * Serialize a commentator.
      *
      * @param Commentator $model The commentator.
      * @return string Returns the serialized commentator.
@@ -165,7 +165,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a composer.
+     * Serialize a composer.
      *
      * @param Composer $model The composer.
      * @return string Returns the serialized composer.
@@ -175,7 +175,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a country.
+     * Serialize a country.
      *
      * @param Country $model The country.
      * @return string Returns the serialized country.
@@ -187,7 +187,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a credits.
+     * Serialize a credits.
      *
      * @param Credits $model The credits.
      * @return string Returns the serialized credits.
@@ -211,7 +211,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a date.
+     * Serialize a date.
      *
      * @param Date $model The date.
      * @return string Returns the serialized date.
@@ -221,7 +221,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a description.
+     * Serialize a description.
      *
      * @param Desc $model The description.
      * @return string Returns the serialized description.
@@ -233,7 +233,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a director.
+     * Serialize a director.
      *
      * @param Director $model The director.
      * @return string Returns the serialized director.
@@ -243,7 +243,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a display name.
+     * Serialize a display name.
      *
      * @param DisplayName $model The display name.
      * @return string Returns the serialized display name.
@@ -255,7 +255,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes an editor.
+     * Serialize an editor.
      *
      * @param Editor $model The editor.
      * @return string Returns the serialized editor.
@@ -265,7 +265,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a episode number.
+     * Serialize a episode number.
      *
      * @param EpisodeNum $model The episode number.
      * @return string Returns the serialized episode number.
@@ -277,7 +277,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a guest.
+     * Serialize a guest.
      *
      * @param Guest $model The guest.
      * @return string Returns the serialized guest.
@@ -287,7 +287,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes an icon.
+     * Serialize an icon.
      *
      * @param Icon $model The icon.
      * @return string Returns the serialized icon.
@@ -301,7 +301,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a keyword.
+     * Serialize a keyword.
      *
      * @param Keyword $model The keyword.
      * @return string Returns the serialized keyword.
@@ -313,7 +313,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a language.
+     * Serialize a language.
      *
      * @param Language $model The language.
      * @return string Returns the serialized language.
@@ -325,7 +325,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a last chance.
+     * Serialize a last chance.
      *
      * @param LastChance $model The last chance.
      * @return string Returns the serialized last chance.
@@ -337,7 +337,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a length.
+     * Serialize a length.
      *
      * @param Length $model The length.
      * @return string Returns the serialized length.
@@ -349,7 +349,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a original language.
+     * Serialize a original language.
      *
      * @param OrigLanguage $model The original language.
      * @return string Returns the serialized original language.
@@ -361,7 +361,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a premiere.
+     * Serialize a premiere.
      *
      * @param Premiere $model The premiere.
      * @return string Returns the serialized premiere.
@@ -373,7 +373,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a present.
+     * Serialize a present.
      *
      * @param Present $model The present.
      * @return string Returns the serialized present.
@@ -383,7 +383,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a presenter.
+     * Serialize a presenter.
      *
      * @param Presenter $model The presenter.
      * @return string Returns the serialized presenter.
@@ -393,7 +393,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a previously shown.
+     * Serialize a previously shown.
      *
      * @param PreviouslyShown $model The previously shown.
      * @return string Returns the serialized previously shown.
@@ -406,7 +406,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a producer.
+     * Serialize a producer.
      *
      * @param Producer $model The producer.
      * @return string Returns the serialized producer.
@@ -416,7 +416,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a programme.
+     * Serialize a programme.
      *
      * @param Programme $model The programme.
      * @return string Returns the serialized programme.
@@ -463,7 +463,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a quality.
+     * Serialize a quality.
      *
      * @param Quality $model The quality.
      * @return string Returns the serialized quality.
@@ -473,7 +473,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a rating.
+     * Serialize a rating.
      *
      * @param Rating $model The rating.
      * @return string Returns the serialized rating.
@@ -491,7 +491,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a review.
+     * Serialize a review.
      *
      * @param Review $model The review.
      * @return string Returns the serialized review.
@@ -506,7 +506,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a secondary title.
+     * Serialize a secondary title.
      *
      * @param SecondaryTitle $model The secondary title.
      * @return string Returns the serialized secondary title.
@@ -518,7 +518,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a star rating.
+     * Serialize a star rating.
      *
      * @param StarRating $model The star rating.
      * @return string Returns the serialized star rating.
@@ -534,7 +534,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a stereo.
+     * Serialize a stereo.
      *
      * @param Stereo $model The stereo.
      * @return string Returns the serialized stereo.
@@ -544,7 +544,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a subtitles.
+     * Serialize a subtitles.
      *
      * @param Subtitles $model The subtitles.
      * @return string Returns the serialized subtitles.
@@ -559,7 +559,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a title.
+     * Serialize a title.
      *
      * @param Title $model The title.
      * @return string Returns the serialized title.
@@ -571,7 +571,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a TV.
+     * Serialize a TV.
      *
      * @param Tv $model The TV.
      * @return string Returns the serialized TV.
@@ -594,7 +594,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes an URL.
+     * Serialize an URL.
      *
      * @param Url $model The URL.
      * @return string Returns the serialized URL.
@@ -604,7 +604,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a value.
+     * Serialize a value.
      *
      * @param Value $model The value.
      * @return string Returns the serialized value.
@@ -614,7 +614,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a video.
+     * Serialize a video.
      *
      * @param Video $model The video.
      * @return string Returns the serialized video.
@@ -632,7 +632,7 @@ class XmlSerializer extends XmlSerializerHelper {
     }
 
     /**
-     * Serializes a writer.
+     * Serialize a writer.
      *
      * @param Writer $model The writer.
      * @return string Returns the serialized writer.

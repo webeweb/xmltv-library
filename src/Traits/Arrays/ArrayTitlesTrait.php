@@ -58,7 +58,7 @@ trait ArrayTitlesTrait {
     }
 
     /**
-     * Determines if this instance has titles.
+     * Determine if this instance has titles.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

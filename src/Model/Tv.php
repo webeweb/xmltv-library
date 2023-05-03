@@ -145,7 +145,7 @@ class Tv extends AbstractModel {
     }
 
     /**
-     * Indexes the programmes by channel.
+     * Indexe the programmes by channel.
      *
      * @return Tv Returns this TV.
      */

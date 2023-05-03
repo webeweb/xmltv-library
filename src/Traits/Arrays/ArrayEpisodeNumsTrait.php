@@ -58,7 +58,7 @@ trait ArrayEpisodeNumsTrait {
     }
 
     /**
-     * Determines if this instance has episode numbers.
+     * Determine if this instance has episode numbers.
      *
      * @return bool Returns true in case of success, false otherwise.
      */

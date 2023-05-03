@@ -25,7 +25,7 @@ use WBW\Library\XmlTv\Tests\Fixtures\Statistic\TestStatistics;
 class StatisticsTest extends AbstractTestCase {
 
     /**
-     * Tests getStatistic()
+     * Test getStatistic()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class StatisticsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests parse()
+     * Test parse()
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class StatisticsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __toString()
+     * Test __toString()
      *
      * @return void
      */
@@ -177,7 +177,7 @@ class StatisticsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests __construct()
+     * Test __construct()
      *
      * @return void
      */
