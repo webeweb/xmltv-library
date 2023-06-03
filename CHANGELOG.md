@@ -1,9 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [1.7.0](https://github.com/webeweb/core-bundle/tree/v1.7.0) (2023-06-03)
 
 - Improve PHPDoc
+- Update dependencies
 
 ### [1.6.0](https://github.com/webeweb/core-bundle/tree/v1.6.0) (2023-02-20)
 
