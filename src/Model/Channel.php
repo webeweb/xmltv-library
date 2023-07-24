@@ -53,14 +53,14 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeChannel($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeChannel($this);

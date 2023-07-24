@@ -33,14 +33,14 @@ class Date extends AbstractModel {
     const DOM_NODE_NAME = "date";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeDate($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeDate($this);

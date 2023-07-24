@@ -67,7 +67,7 @@ use WBW\Library\XmlTv\Tests\AbstractTestCase;
 class JsonDeserializerTest extends AbstractTestCase {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();

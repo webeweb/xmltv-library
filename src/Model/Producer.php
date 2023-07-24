@@ -29,7 +29,7 @@ class Producer extends AbstractCredit {
     const DOM_NODE_NAME = "producer";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeProducer($this);

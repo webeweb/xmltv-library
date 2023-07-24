@@ -29,7 +29,7 @@ class Composer extends AbstractCredit {
     const DOM_NODE_NAME = "composer";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeComposer($this);

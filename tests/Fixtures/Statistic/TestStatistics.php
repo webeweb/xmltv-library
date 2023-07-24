@@ -23,7 +23,7 @@ use WBW\Library\XmlTv\Statistic\Statistics;
 class TestStatistics extends Statistics {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getStatistic(string $key): Statistic {
         return parent::getStatistic($key);

@@ -46,14 +46,14 @@ class Rating extends AbstractModel {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeRating($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeRating($this);

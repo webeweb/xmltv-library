@@ -33,14 +33,14 @@ class Quality extends AbstractModel {
     const DOM_NODE_NAME = "quality";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeQuality($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeQuality($this);

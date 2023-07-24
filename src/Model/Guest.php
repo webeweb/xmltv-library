@@ -29,7 +29,7 @@ class Guest extends AbstractCredit {
     const DOM_NODE_NAME = "guest";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeGuest($this);

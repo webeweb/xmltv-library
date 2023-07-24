@@ -29,7 +29,7 @@ class Editor extends AbstractCredit {
     const DOM_NODE_NAME = "editor";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeEditor($this);

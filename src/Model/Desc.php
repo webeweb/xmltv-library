@@ -35,14 +35,14 @@ class Desc extends AbstractModel {
     const DOM_NODE_NAME = "desc";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeDesc($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeDesc($this);

@@ -71,7 +71,7 @@ class Subtitles extends AbstractModel {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeSubtitles($this);
@@ -93,7 +93,7 @@ class Subtitles extends AbstractModel {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeSubtitles($this);

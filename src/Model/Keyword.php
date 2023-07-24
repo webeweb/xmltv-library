@@ -35,14 +35,14 @@ class Keyword extends AbstractModel {
     const DOM_NODE_NAME = "keyword";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeKeyword($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeKeyword($this);

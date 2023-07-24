@@ -29,7 +29,7 @@ class Commentator extends AbstractCredit {
     const DOM_NODE_NAME = "commentator";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeCommentator($this);

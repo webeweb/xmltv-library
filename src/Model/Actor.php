@@ -46,7 +46,7 @@ class Actor extends AbstractCredit {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeActor($this);
@@ -64,7 +64,7 @@ class Actor extends AbstractCredit {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeActor($this);

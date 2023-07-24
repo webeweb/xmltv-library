@@ -22,7 +22,7 @@ use WBW\Library\XmlTv\Model\AbstractCredit;
 class TestCredit extends AbstractCredit {
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return "";

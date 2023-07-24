@@ -35,14 +35,14 @@ class DisplayName extends AbstractModel {
     const DOM_NODE_NAME = "display-name";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeDisplayName($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeDisplayName($this);

@@ -33,14 +33,14 @@ class Aspect extends AbstractModel {
     const DOM_NODE_NAME = "aspect";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeAspect($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeAspect($this);

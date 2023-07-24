@@ -29,7 +29,7 @@ class Adapter extends AbstractCredit {
     const DOM_NODE_NAME = "adapter";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeAdapter($this);

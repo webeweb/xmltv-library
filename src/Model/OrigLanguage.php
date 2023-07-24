@@ -35,14 +35,14 @@ class OrigLanguage extends AbstractModel {
     const DOM_NODE_NAME = "orig-language";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeOrigLanguage($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeOrigLanguage($this);

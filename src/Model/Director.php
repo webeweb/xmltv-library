@@ -29,7 +29,7 @@ class Director extends AbstractCredit {
     const DOM_NODE_NAME = "director";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeDirector($this);

@@ -35,14 +35,14 @@ class PreviouslyShown extends AbstractModel {
     const DOM_NODE_NAME = "previously-shown";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializePreviouslyShown($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializePreviouslyShown($this);

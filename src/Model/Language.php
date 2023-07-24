@@ -35,14 +35,14 @@ class Language extends AbstractModel {
     const DOM_NODE_NAME = "language";
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeLanguage($this);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function xmlSerialize(): string {
         return XmlSerializer::serializeLanguage($this);

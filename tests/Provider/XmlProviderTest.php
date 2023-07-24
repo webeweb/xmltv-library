@@ -42,7 +42,7 @@ class XmlProviderTest extends AbstractTestCase {
     private $output;
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function setUp(): void {
         parent::setUp();
@@ -57,7 +57,7 @@ class XmlProviderTest extends AbstractTestCase {
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function tearDown(): void {
         parent::tearDown();
