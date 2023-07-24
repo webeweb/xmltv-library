@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [1.7.0](https://github.com/webeweb/core-bundle/tree/v1.7.0) (2023-06-03)
 
 - Improve PHPDoc
