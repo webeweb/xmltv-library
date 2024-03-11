@@ -59,7 +59,7 @@ class Subtitles extends AbstractModel {
     /**
      * Enumerate the type.
      *
-     * @return array Returns the type enumeration
+     * @return string[] Returns the type enumeration
      */
     public static function enumType(): array {
 
@@ -72,6 +72,7 @@ class Subtitles extends AbstractModel {
 
     /**
      * {@inheritDoc}
+     * @return array<string,mixed> Returns this serialized instance.
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeSubtitles($this);
