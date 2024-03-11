@@ -101,9 +101,11 @@ trait ArrayChannelsTrait {
      * @return self Returns this instance.
      */
     public function sortChannels(): self {
+
         usort($this->channels, function(Channel $a, Channel $b): int {
             return strcmp($a->getId(), $b->getId());
         });
+
         return $this;
     }
 }
