@@ -57,7 +57,7 @@ class SerializerHelper extends BaseSerializerHelper {
      *
      * @param string $name The name.
      * @param string|null $value The value.
-     * @param array $attributes The attributes.
+     * @param array<string,string> $attributes The attributes.
      * @param bool $shortTag Short tag ?
      * @return string Returns the DOM node.
      */
@@ -96,7 +96,7 @@ class SerializerHelper extends BaseSerializerHelper {
     /**
      * Deserialize an array.
      *
-     * @param array $array The array.
+     * @param mixed[] $array The array.
      * @param string $nodeName The node name.
      * @param AbstractModel $model The model.
      * @return void
@@ -119,7 +119,7 @@ class SerializerHelper extends BaseSerializerHelper {
     /**
      * Deserialize a model.
      *
-     * @param array $array The array.
+     * @param array<string,mixed> $array The array.
      * @param string $nodeName The node name.
      * @param AbstractModel $model The model.
      * @return void
