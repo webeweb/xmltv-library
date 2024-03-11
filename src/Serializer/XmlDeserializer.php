@@ -387,8 +387,8 @@ class XmlDeserializer extends XmlDeserializerHelper {
 
         $model = new Icon();
         $model->setSrc(static::getDomNodeAttributeValue($domNode, SerializerKeys::SRC));
-        $model->setWidth(static::getDomNodeAttributeValue($domNode, SerializerKeys::WIDTH));
-        $model->setHeight(static::getDomNodeAttributeValue($domNode, SerializerKeys::HEIGHT));
+        $model->setWidth((int) static::getDomNodeAttributeValue($domNode, SerializerKeys::WIDTH));
+        $model->setHeight((int) static::getDomNodeAttributeValue($domNode, SerializerKeys::HEIGHT));
 
         return $model;
     }
