@@ -13,7 +13,6 @@ namespace WBW\Library\XmlTv\Provider;
 
 use DOMDocument;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
 use Throwable;
