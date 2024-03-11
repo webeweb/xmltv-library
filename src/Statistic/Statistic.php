@@ -131,7 +131,7 @@ class Statistic {
         }
 
         if (1 === $this->getCount()) {
-            $this->setAvg($len);
+            $this->setAvg((float) $len);
             return $this;
         }
 
