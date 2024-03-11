@@ -47,6 +47,7 @@ class Actor extends AbstractCredit {
 
     /**
      * {@inheritDoc}
+     * @return array<string,mixed> Returns this serialized instance.
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeActor($this);
