@@ -16,6 +16,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
+use Throwable;
 use WBW\Library\Provider\Helper\GuzzleHelper;
 use WBW\Library\XmlTv\Model\Tv;
 use WBW\Library\XmlTv\Serializer\SerializerHelper;
@@ -47,7 +48,6 @@ class XmlProvider {
      * @param string $filename The filename.
      * @param LoggerInterface|null $logger The logger.
      * @return Tv Returns the TV.
-     * @throws GuzzleException Throws a Guzzle exception if an error occurs.
      * @throws Throwable Throws an exception if an error occurs.
      */
     public static function getXml(string $url, string $filename, LoggerInterface $logger = null): Tv {
