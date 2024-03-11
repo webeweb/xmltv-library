@@ -60,7 +60,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize an actor.
      *
      * @param Actor $model The actor.
-     * @return array Returns the serialized actor.
+     * @return array<string,mixed> Returns the serialized actor.
      */
     public static function serializeActor(Actor $model): array {
 
@@ -73,7 +73,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize an aspect.
      *
      * @param Aspect $model The aspect.
-     * @return array Returns the serialized aspect.
+     * @return array<string,mixed> Returns the serialized aspect.
      */
     public static function serializeAspect(Aspect $model): array {
 
@@ -86,7 +86,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize an audio.
      *
      * @param Audio $model The audio.
-     * @return array Returns the serialized audio.
+     * @return array<string,mixed> Returns the serialized audio.
      */
     public static function serializeAudio(Audio $model): array {
 
@@ -100,7 +100,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a category.
      *
      * @param Category $model The category.
-     * @return array Returns the serialized category.
+     * @return array<string,mixed> Returns the serialized category.
      */
     public static function serializeCategory(Category $model): array {
 
@@ -114,7 +114,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a channel.
      *
      * @param Channel $model The channel.
-     * @return array Returns the serialized channel.
+     * @return array<string,mixed> Returns the serialized channel.
      */
     public static function serializeChannel(Channel $model): array {
 
@@ -130,7 +130,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a colour.
      *
      * @param Colour $model The colour.
-     * @return array Returns the serialized colour.
+     * @return array<string,mixed> Returns the serialized colour.
      */
     public static function serializeColour(Colour $model): array {
 
@@ -143,7 +143,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a country.
      *
      * @param Country $model The country.
-     * @return array Returns the serialized country.
+     * @return array<string,mixed> Returns the serialized country.
      */
     public static function serializeCountry(Country $model): array {
 
@@ -157,7 +157,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a credit.
      *
      * @param AbstractCredit $model The credit.
-     * @return array Returns the serialized credit.
+     * @return array<string,mixed> Returns the serialized credit.
      */
     public static function serializeCredit(AbstractCredit $model): array {
 
@@ -170,7 +170,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a credits.
      *
      * @param Credits $model The credits.
-     * @return array Returns the serialized credits.
+     * @return array<string,mixed> Returns the serialized credits.
      */
     public static function serializeCredits(Credits $model): array {
 
@@ -192,7 +192,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a date.
      *
      * @param Date $model The date.
-     * @return array Returns the serialized date.
+     * @return array<string,mixed> Returns the serialized date.
      */
     public static function serializeDate(Date $model): array {
 
@@ -205,7 +205,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a desc.
      *
      * @param Desc $model The desc.
-     * @return array Returns the serialized desc.
+     * @return array<string,mixed> Returns the serialized desc.
      */
     public static function serializeDesc(Desc $model): array {
 
@@ -219,7 +219,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a display name.
      *
      * @param DisplayName $model The display name.
-     * @return array Returns the serialized display name.
+     * @return array<string,mixed> Returns the serialized display name.
      */
     public static function serializeDisplayName(DisplayName $model): array {
 
@@ -233,7 +233,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize an episode number.
      *
      * @param EpisodeNum $model The episode number.
-     * @return array Returns the serialized episode num.
+     * @return array<string,mixed> Returns the serialized episode num.
      */
     public static function serializeEpisodeNum(EpisodeNum $model): array {
 
@@ -247,7 +247,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize an icon.
      *
      * @param Icon $model The icon.
-     * @return array Returns the serialized icon.
+     * @return array<string,mixed> Returns the serialized icon.
      */
     public static function serializeIcon(Icon $model): array {
 
@@ -262,7 +262,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a keyword.
      *
      * @param Keyword $model The keyword.
-     * @return array Returns the serialized keyword.
+     * @return array<string,mixed> Returns the serialized keyword.
      */
     public static function serializeKeyword(Keyword $model): array {
 
@@ -276,7 +276,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a language.
      *
      * @param Language $model The language.
-     * @return array Returns the serialized language.
+     * @return array<string,mixed> Returns the serialized language.
      */
     public static function serializeLanguage(Language $model): array {
 
@@ -290,7 +290,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a last chance.
      *
      * @param LastChance $model The last chance.
-     * @return array Returns the serialized last chance.
+     * @return array<string,mixed> Returns the serialized last chance.
      */
     public static function serializeLastChance(LastChance $model): array {
 
@@ -304,7 +304,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a length.
      *
      * @param Length $model The length.
-     * @return array Returns the serialized length.
+     * @return array<string,mixed> Returns the serialized length.
      */
     public static function serializeLength(Length $model): array {
 
@@ -318,7 +318,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize an original language.
      *
      * @param OrigLanguage $model The original language.
-     * @return array Returns the serialized original language.
+     * @return array<string,mixed> Returns the serialized original language.
      */
     public static function serializeOrigLanguage(OrigLanguage $model): array {
 
@@ -332,7 +332,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a premiere.
      *
      * @param Premiere $model The premiere.
-     * @return array Returns the serialized premiere.
+     * @return array<string,mixed> Returns the serialized premiere.
      */
     public static function serializePremiere(Premiere $model): array {
 
@@ -346,7 +346,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a present.
      *
      * @param Present $model The present.
-     * @return array Returns the serialized present.
+     * @return array<string,mixed> Returns the serialized present.
      */
     public static function serializePresent(Present $model): array {
 
@@ -359,7 +359,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a previously shown.
      *
      * @param PreviouslyShown $model The previously shown.
-     * @return array Returns the serialized previously shown.
+     * @return array<string,mixed> Returns the serialized previously shown.
      */
     public static function serializePreviouslyShown(PreviouslyShown $model): array {
 
@@ -373,7 +373,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a programme.
      *
      * @param Programme $model The programme.
-     * @return array Returns the serialized programme.
+     * @return array<string,mixed> Returns the serialized programme.
      */
     public static function serializeProgramme(Programme $model): array {
 
@@ -417,7 +417,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a quality.
      *
      * @param Quality $model The quality.
-     * @return array Returns the serialized quality.
+     * @return array<string,mixed> Returns the serialized quality.
      */
     public static function serializeQuality(Quality $model): array {
 
@@ -430,7 +430,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a rating.
      *
      * @param Rating $model The rating.
-     * @return array Returns the serialized rating.
+     * @return array<string,mixed> Returns the serialized rating.
      */
     public static function serializeRating(Rating $model): array {
 
@@ -445,7 +445,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a review.
      *
      * @param Review $model The review.
-     * @return array Returns the serialized review.
+     * @return array<string,mixed> Returns the serialized review.
      */
     public static function serializeReview(Review $model): array {
 
@@ -461,7 +461,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a secondary title.
      *
      * @param SecondaryTitle $model The secondary title.
-     * @return array Returns the serialized secondary title.
+     * @return array<string,mixed> Returns the serialized secondary title.
      */
     public static function serializeSecondaryTitle(SecondaryTitle $model): array {
 
@@ -475,7 +475,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a star rating.
      *
      * @param StarRating $model The star rating.
-     * @return array Returns the serialized star rating.
+     * @return array<string,mixed> Returns the serialized star rating.
      */
     public static function serializeStarRating(StarRating $model): array {
 
@@ -489,7 +489,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a stereo.
      *
      * @param Stereo $model The stereo.
-     * @return array Returns the serialized stereo.
+     * @return array<string,mixed> Returns the serialized stereo.
      */
     public static function serializeStereo(Stereo $model): array {
 
@@ -502,7 +502,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a subtitles.
      *
      * @param Subtitles $model The subtitles.
-     * @return array Returns the serialized subtitles.
+     * @return array<string,mixed> Returns the serialized subtitles.
      */
     public static function serializeSubtitles(Subtitles $model): array {
 
@@ -516,7 +516,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a title.
      *
      * @param Title $model The title.
-     * @return array Returns the serialized title.
+     * @return array<string,mixed> Returns the serialized title.
      */
     public static function serializeTitle(Title $model): array {
 
@@ -530,7 +530,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a TV.
      *
      * @param Tv $model The TV.
-     * @return array Returns the serialized TV.
+     * @return array<string,mixed> Returns the serialized TV.
      */
     public static function serializeTv(Tv $model): array {
 
@@ -550,7 +550,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize an URL.
      *
      * @param Url $model The URL.
-     * @return array Returns the serialized URL.
+     * @return array<string,mixed> Returns the serialized URL.
      */
     public static function serializeUrl(Url $model): array {
 
@@ -563,7 +563,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a value.
      *
      * @param Value $model The value.
-     * @return array Returns the serialized value.
+     * @return array<string,mixed> Returns the serialized value.
      */
     public static function serializeValue(Value $model): array {
 
@@ -576,7 +576,7 @@ class JsonSerializer extends JsonSerializerHelper {
      * Serialize a video.
      *
      * @param Video $model The video.
-     * @return array Returns the serialized video.
+     * @return array<string,mixed> Returns the serialized video.
      */
     public static function serializeVideo(Video $model): array {
 
