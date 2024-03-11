@@ -34,6 +34,7 @@ class Aspect extends AbstractModel {
 
     /**
      * {@inheritDoc}
+     * @return array<string,mixed> Returns this serialized instance.
      */
     public function jsonSerialize(): array {
         return JsonSerializer::serializeAspect($this);
