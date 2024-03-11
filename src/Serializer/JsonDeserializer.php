@@ -67,7 +67,7 @@ class JsonDeserializer {
     /**
      * Deserialize an actor.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Actor Returns the actor.
      */
     public static function deserializeActor(array $data): Actor {
@@ -82,7 +82,7 @@ class JsonDeserializer {
     /**
      * Deserialize an adapter.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Adapter Returns the adapter.
      */
     public static function deserializeAdapter(array $data): Adapter {
@@ -96,7 +96,7 @@ class JsonDeserializer {
     /**
      * Deserialize an aspect.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Aspect Returns the aspect.
      */
     public static function deserializeAspect(array $data): Aspect {
@@ -110,7 +110,7 @@ class JsonDeserializer {
     /**
      * Deserialize an audio.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Audio Returns the audio.
      */
     public static function deserializeAudio(array $data): Audio {
@@ -125,7 +125,7 @@ class JsonDeserializer {
     /**
      * Deserialize a category.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Category Returns the category.
      */
     public static function deserializeCategory(array $data): Category {
@@ -140,7 +140,7 @@ class JsonDeserializer {
     /**
      * Deserialize a channel.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Channel Returns the channel.
      */
     public static function deserializeChannel(array $data): Channel {
@@ -157,7 +157,7 @@ class JsonDeserializer {
     /**
      * Deserialize a colour.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Colour Returns the colour.
      */
     public static function deserializeColour(array $data): Colour {
@@ -171,7 +171,7 @@ class JsonDeserializer {
     /**
      * Deserialize a commentator.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Commentator Returns the commentator.
      */
     public static function deserializeCommentator(array $data): Commentator {
@@ -185,7 +185,7 @@ class JsonDeserializer {
     /**
      * Deserialize a composer.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Composer Returns the composer.
      */
     public static function deserializeComposer(array $data): Composer {
@@ -199,7 +199,7 @@ class JsonDeserializer {
     /**
      * Deserialize a country.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Country Returns the country.
      */
     public static function deserializeCountry(array $data): Country {
@@ -214,7 +214,7 @@ class JsonDeserializer {
     /**
      * Deserialize the credits.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Credits Returns the credits.
      */
     public static function deserializeCredits(array $data): Credits {
@@ -237,7 +237,7 @@ class JsonDeserializer {
     /**
      * Deserialize a date.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Date Returns the date.
      */
     public static function deserializeDate(array $data): Date {
@@ -251,7 +251,7 @@ class JsonDeserializer {
     /**
      * Deserialize a description.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Desc Returns the description.
      */
     public static function deserializeDesc(array $data): Desc {
@@ -266,7 +266,7 @@ class JsonDeserializer {
     /**
      * Deserialize a director.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Director Returns the director.
      */
     public static function deserializeDirector(array $data): Director {
@@ -280,7 +280,7 @@ class JsonDeserializer {
     /**
      * Deserialize a display name.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return DisplayName Returns the display name.
      */
     public static function deserializeDisplayName(array $data): DisplayName {
@@ -295,7 +295,7 @@ class JsonDeserializer {
     /**
      * Deserialize an editor.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Editor Returns the editor.
      */
     public static function deserializeEditor(array $data): Editor {
@@ -309,7 +309,7 @@ class JsonDeserializer {
     /**
      * Deserialize a episode number.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return EpisodeNum Returns the episode number.
      */
     public static function deserializeEpisodeNum(array $data): EpisodeNum {
@@ -324,7 +324,7 @@ class JsonDeserializer {
     /**
      * Deserialize a guest.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Guest Returns the guest.
      */
     public static function deserializeGuest(array $data): Guest {
@@ -338,7 +338,7 @@ class JsonDeserializer {
     /**
      * Deserialize a icon.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Icon Returns the icon.
      */
     public static function deserializeIcon(array $data): Icon {
@@ -354,7 +354,7 @@ class JsonDeserializer {
     /**
      * Deserialize a keyword.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Keyword Returns the keyword.
      */
     public static function deserializeKeyword(array $data): Keyword {
@@ -369,7 +369,7 @@ class JsonDeserializer {
     /**
      * Deserialize a language.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Language Returns the language.
      */
     public static function deserializeLanguage(array $data): Language {
@@ -384,7 +384,7 @@ class JsonDeserializer {
     /**
      * Deserialize a last chance.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return LastChance Returns the last chance.
      */
     public static function deserializeLastChance(array $data): LastChance {
@@ -399,7 +399,7 @@ class JsonDeserializer {
     /**
      * Deserialize a length.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Length Returns the length.
      */
     public static function deserializeLength(array $data): Length {
@@ -414,7 +414,7 @@ class JsonDeserializer {
     /**
      * Deserialize an original language.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return OrigLanguage Returns the original language.
      */
     public static function deserializeOrigLanguage(array $data): OrigLanguage {
@@ -429,7 +429,7 @@ class JsonDeserializer {
     /**
      * Deserialize a premiere.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Premiere Returns the premiere.
      */
     public static function deserializePremiere(array $data): Premiere {
@@ -444,7 +444,7 @@ class JsonDeserializer {
     /**
      * Deserialize a present.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Present Returns the present.
      */
     public static function deserializePresent(array $data): Present {
@@ -458,7 +458,7 @@ class JsonDeserializer {
     /**
      * Deserialize a presenter.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Presenter Returns the presenter.
      */
     public static function deserializePresenter(array $data): Presenter {
@@ -472,7 +472,7 @@ class JsonDeserializer {
     /**
      * Deserialize a previously shown.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return PreviouslyShown Returns the previously shown.
      */
     public static function deserializePreviouslyShown(array $data): PreviouslyShown {
@@ -487,7 +487,7 @@ class JsonDeserializer {
     /**
      * Deserialize a producer.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Producer Returns the producer.
      */
     public static function deserializeProducer(array $data): Producer {
@@ -501,7 +501,7 @@ class JsonDeserializer {
     /**
      * Deserialize a programme.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Programme Returns the programme.
      */
     public static function deserializeProgramme(array $data): Programme {
@@ -546,7 +546,7 @@ class JsonDeserializer {
     /**
      * Deserialize a quality.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Quality Returns the quality.
      */
     public static function deserializeQuality(array $data): Quality {
@@ -560,7 +560,7 @@ class JsonDeserializer {
     /**
      * Deserialize a rating.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Rating Returns the rating.
      */
     public static function deserializeRating(array $data): Rating {
@@ -576,7 +576,7 @@ class JsonDeserializer {
     /**
      * Deserialize a review.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Review Returns the review.
      */
     public static function deserializeReview(array $data): Review {
@@ -593,7 +593,7 @@ class JsonDeserializer {
     /**
      * Deserialize a secondary title.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return SecondaryTitle Returns the secondary title.
      */
     public static function deserializeSecondaryTitle(array $data): SecondaryTitle {
@@ -608,7 +608,7 @@ class JsonDeserializer {
     /**
      * Deserialize a star rating.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return StarRating Returns the star rating.
      */
     public static function deserializeStarRating(array $data): StarRating {
@@ -623,7 +623,7 @@ class JsonDeserializer {
     /**
      * Deserialize a stereo.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Stereo Returns the stereo.
      */
     public static function deserializeStereo(array $data): Stereo {
@@ -637,7 +637,7 @@ class JsonDeserializer {
     /**
      * Deserialize a subtitles.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Subtitles Returns the subtitles.
      */
     public static function deserializeSubtitles(array $data): Subtitles {
@@ -652,7 +652,7 @@ class JsonDeserializer {
     /**
      * Deserialize a title.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Title Returns the title.
      */
     public static function deserializeTitle(array $data): Title {
@@ -667,7 +667,7 @@ class JsonDeserializer {
     /**
      * Deserialize a TV.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Tv Returns the TV.
      */
     public static function deserializeTv(array $data): Tv {
@@ -688,7 +688,7 @@ class JsonDeserializer {
     /**
      * Deserialize a URL.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Url Returns the URL.
      */
     public static function deserializeUrl(array $data): Url {
@@ -702,7 +702,7 @@ class JsonDeserializer {
     /**
      * Deserialize a value.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Value Returns the value.
      */
     public static function deserializeValue(array $data): Value {
@@ -716,7 +716,7 @@ class JsonDeserializer {
     /**
      * Deserialize a video.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Video Returns the video.
      */
     public static function deserializeVideo(array $data): Video {
@@ -733,7 +733,7 @@ class JsonDeserializer {
     /**
      * Deserialize a writer.
      *
-     * @param array $data The data.
+     * @param array<string,mixed> $data The data.
      * @return Writer Returns the writer.
      */
     public static function deserializeWriter(array $data): Writer {
