@@ -73,9 +73,6 @@ class IconTest extends AbstractTestCase {
     public function testSetWidth(): void {
 
         $obj = new Icon();
-        $obj->setHeight("1080");
-        $obj->setSrc("src");
-        $obj->setWidth("1920");
 
         $obj->setWidth(1024);
         $this->assertEquals(1024, $obj->getWidth());
@@ -89,9 +86,9 @@ class IconTest extends AbstractTestCase {
     public function testXmlSerialize(): void {
 
         $obj = new Icon();
-        $obj->setHeight("1080");
         $obj->setSrc("src");
-        $obj->setWidth("1920");
+        $obj->setWidth(1920);
+        $obj->setHeight(1080);
 
         $res = '<icon src="src" width="1920" height="1080"/>';
         $this->assertEquals($res, $obj->xmlSerialize());
