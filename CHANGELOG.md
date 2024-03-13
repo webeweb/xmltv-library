@@ -3,6 +3,7 @@ CHANGELOG
 
 ### [1.8.0](https://github.com/webeweb/core-bundle/tree/v1.8.0) (2024-03-13)
 
+- Add PHP 8.3 support
 - Improve code quality
 - Improve PHPDoc
 - Update dependencies
