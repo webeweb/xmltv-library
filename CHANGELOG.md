@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.9.0](https://github.com/webeweb/core-bundle/tree/v1.9.0) (2024-03-16)
+
+- Add declare(strict_types = 1)
+
 ### [1.8.0](https://github.com/webeweb/core-bundle/tree/v1.8.0) (2024-03-13)
 
 - Add PHP 8.3 support
