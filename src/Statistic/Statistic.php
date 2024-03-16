@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 /*
  * This file is part of the xmltv-library package.
  *
@@ -120,7 +122,7 @@ class Statistic {
 
         ++$this->count;
 
-        $len = mb_strlen($str);
+        $len = null !== $str ? mb_strlen($str) : 0;
 
         if ($len < $this->getMin() || null === $this->getMin()) {
             $this->setMin($len);

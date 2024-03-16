@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 /*
  * This file is part of the xmltv-library package.
  *
@@ -72,6 +74,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized actor.
      */
     public static function serializeActor(Actor $model): string {
+
         return SerializerHelper::domNode(Actor::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::ROLE => $model->getRole(),
         ]);
@@ -120,6 +123,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized category.
      */
     public static function serializeCategory(Category $model): string {
+
         return SerializerHelper::domNode(Category::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -181,6 +185,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized country.
      */
     public static function serializeCountry(Country $model): string {
+
         return SerializerHelper::domNode(Country::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -227,6 +232,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized description.
      */
     public static function serializeDesc(Desc $model): string {
+
         return SerializerHelper::domNode(Desc::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -249,6 +255,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized display name.
      */
     public static function serializeDisplayName(DisplayName $model): string {
+
         return SerializerHelper::domNode(DisplayName::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -271,6 +278,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized episode number.
      */
     public static function serializeEpisodeNum(EpisodeNum $model): string {
+
         return SerializerHelper::domNode(EpisodeNum::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::SYSTEM => $model->getSystem(),
         ]);
@@ -293,10 +301,11 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized icon.
      */
     public static function serializeIcon(Icon $model): string {
+
         return StringHelper::domNode(Icon::DOM_NODE_NAME, null, [
             SerializerKeys::SRC    => $model->getSrc(),
-            SerializerKeys::WIDTH  => $model->getWidth(),
-            SerializerKeys::HEIGHT => $model->getHeight(),
+            SerializerKeys::WIDTH  => (string) $model->getWidth(),
+            SerializerKeys::HEIGHT => (string) $model->getHeight(),
         ], true);
     }
 
@@ -307,6 +316,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized keyword.
      */
     public static function serializeKeyword(Keyword $model): string {
+
         return StringHelper::domNode(Keyword::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -319,6 +329,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized language.
      */
     public static function serializeLanguage(Language $model): string {
+
         return SerializerHelper::domNode(Language::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -331,6 +342,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized last chance.
      */
     public static function serializeLastChance(LastChance $model): string {
+
         return SerializerHelper::domNode(LastChance::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -343,6 +355,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized length.
      */
     public static function serializeLength(Length $model): string {
+
         return SerializerHelper::domNode(Length::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::UNITS => $model->getUnits(),
         ]);
@@ -355,6 +368,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized original language.
      */
     public static function serializeOrigLanguage(OrigLanguage $model): string {
+
         return SerializerHelper::domNode(OrigLanguage::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -367,6 +381,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized premiere.
      */
     public static function serializePremiere(Premiere $model): string {
+
         return SerializerHelper::domNode(Premiere::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -399,6 +414,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized previously shown.
      */
     public static function serializePreviouslyShown(PreviouslyShown $model): string {
+
         return SerializerHelper::domNode(PreviouslyShown::DOM_NODE_NAME, null, [
             SerializerKeys::CHANNEL => $model->getChannel(),
             SerializerKeys::START   => $model->getStart(),
@@ -497,6 +513,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized review.
      */
     public static function serializeReview(Review $model): string {
+
         return SerializerHelper::domNode(Review::DOM_NODE_NAME, null, [
             SerializerKeys::TYPE     => $model->getType(),
             SerializerKeys::SOURCE   => $model->getSource(),
@@ -512,6 +529,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized secondary title.
      */
     public static function serializeSecondaryTitle(SecondaryTitle $model): string {
+
         return SerializerHelper::domNode(SecondaryTitle::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);
@@ -565,6 +583,7 @@ class XmlSerializer extends XmlSerializerHelper {
      * @return string Returns the serialized title.
      */
     public static function serializeTitle(Title $model): string {
+
         return SerializerHelper::domNode(Title::DOM_NODE_NAME, $model->getContent(), [
             SerializerKeys::LANG => $model->getLang(),
         ]);

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 /*
  * Disclaimer: This source code is protected by copyright law and by
  * international conventions.

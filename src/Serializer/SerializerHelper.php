@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 /*
  * This file is part of the xmltv-library package.
  *
@@ -43,6 +45,10 @@ class SerializerHelper extends BaseSerializerHelper {
      * @return DateTime|null Returns the date/time in case of success, null otherwise.
      */
     public static function deserializeDateTime(?string $value): ?DateTime {
+
+        if (null === $value) {
+            return null;
+        }
 
         $dateTime = DateTime::createFromFormat(self::DATE_TIME_FORMAT, $value);
         if (false === $dateTime) {
