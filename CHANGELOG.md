@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.10.0](https://github.com/webeweb/core-bundle/tree/v1.10.0) (2024-03-18)
+
+- Improve constants visibility
+
 ### [1.9.0](https://github.com/webeweb/core-bundle/tree/v1.9.0) (2024-03-16)
 
 - Add declare(strict_types = 1)
