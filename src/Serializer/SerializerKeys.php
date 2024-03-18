@@ -26,474 +26,474 @@ interface SerializerKeys {
      *
      * @var string
      */
-    const ACTORS = "actors";
+    public const ACTORS = "actors";
 
     /**
      * Serializer key "adapters".
      *
      * @var string
      */
-    const ADAPTERS = "adapters";
+    public const ADAPTERS = "adapters";
 
     /**
      * Serializer key "aspect".
      *
      * @var string
      */
-    const ASPECT = "aspect";
+    public const ASPECT = "aspect";
 
     /**
      * Serializer key "audio".
      *
      * @var string
      */
-    const AUDIO = "audio";
+    public const AUDIO = "audio";
 
     /**
      * Serializer key "categories".
      *
      * @var string
      */
-    const CATEGORIES = "categories";
+    public const CATEGORIES = "categories";
 
     /**
      * Serializer key "channel".
      *
      * @var string
      */
-    const CHANNEL = "channel";
+    public const CHANNEL = "channel";
 
     /**
      * Serializer key "channels".
      *
      * @var string
      */
-    const CHANNELS = "channels";
+    public const CHANNELS = "channels";
 
     /**
      * Serializer key "clump idx".
      *
      * @var string
      */
-    const CLUMP_IDX = "clumpIdx";
+    public const CLUMP_IDX = "clumpIdx";
 
     /**
      * Serializer key "colour".
      *
      * @var string
      */
-    const COLOUR = "colour";
+    public const COLOUR = "colour";
 
     /**
      * Serializer key "commentators".
      *
      * @var string
      */
-    const COMMENTATORS = "commentators";
+    public const COMMENTATORS = "commentators";
 
     /**
      * Serializer key "composers".
      *
      * @var string
      */
-    const COMPOSERS = "composers";
+    public const COMPOSERS = "composers";
 
     /**
      * Serializer key "content".
      *
      * @var string
      */
-    const CONTENT = "content";
+    public const CONTENT = "content";
 
     /**
      * Serializer key "countries".
      *
      * @var string
      */
-    const COUNTRIES = "countries";
+    public const COUNTRIES = "countries";
 
     /**
      * Serializer key "credits".
      *
      * @var string
      */
-    const CREDITS = "credits";
+    public const CREDITS = "credits";
 
     /**
      * Serializer key "date".
      *
      * @var string
      */
-    const DATE = "date";
+    public const DATE = "date";
 
     /**
      * Serializer key "descriptions".
      *
      * @var string
      */
-    const DESCS = "descs";
+    public const DESCS = "descs";
 
     /**
      * Serializer key "directors".
      *
      * @var string
      */
-    const DIRECTORS = "directors";
+    public const DIRECTORS = "directors";
 
     /**
      * Serializer key "display names".
      *
      * @var string
      */
-    const DISPLAY_NAMES = "displayNames";
+    public const DISPLAY_NAMES = "displayNames";
 
     /**
      * Serializer key "editors".
      *
      * @var string
      */
-    const EDITORS = "editors";
+    public const EDITORS = "editors";
 
     /**
      * Serializer key "episode numbers".
      *
      * @var string
      */
-    const EPISODE_NUMS = "episodeNums";
+    public const EPISODE_NUMS = "episodeNums";
 
     /**
      * Serializer key "generator info name".
      *
      * @var string
      */
-    const GENERATOR_INFO_NAME = "generatorInfoName";
+    public const GENERATOR_INFO_NAME = "generatorInfoName";
 
     /**
      * Serializer key "generator info URL".
      *
      * @var string
      */
-    const GENERATOR_INFO_URL = "generatorInfoUrl";
+    public const GENERATOR_INFO_URL = "generatorInfoUrl";
 
     /**
      * Serializer key "guests".
      *
      * @var string
      */
-    const GUESTS = "guests";
+    public const GUESTS = "guests";
 
     /**
      * Serializer key "height".
      *
      * @var string
      */
-    const HEIGHT = "height";
+    public const HEIGHT = "height";
 
     /**
      * Serializer key "icons".
      *
      * @var string
      */
-    const ICONS = "icons";
+    public const ICONS = "icons";
 
     /**
      * Serializer key "id".
      *
      * @var string
      */
-    const ID = "id";
+    public const ID = "id";
 
     /**
      * Serializer key "keywords".
      *
      * @var string
      */
-    const KEYWORDS = "keywords";
+    public const KEYWORDS = "keywords";
 
     /**
      * Serializer key "lang".
      *
      * @var string
      */
-    const LANG = "lang";
+    public const LANG = "lang";
 
     /**
      * Serializer key "language".
      *
      * @var string
      */
-    const LANGUAGE = "language";
+    public const LANGUAGE = "language";
 
     /**
      * Serializer key "last chance".
      *
      * @var string
      */
-    const LAST_CHANCE = "lastChance";
+    public const LAST_CHANCE = "lastChance";
 
     /**
      * Serializer key "length".
      *
      * @var string
      */
-    const LENGTH = "length";
+    public const LENGTH = "length";
 
     /**
      * Serializer key "new".
      *
      * @var string
      */
-    const NEW = "new";
+    public const NEW = "new";
 
     /**
      * Serializer key "original language".
      *
      * @var string
      */
-    const ORIG_LANGUAGE = "origLanguage";
+    public const ORIG_LANGUAGE = "origLanguage";
 
     /**
      * Serializer key "PDC start".
      *
      * @var string
      */
-    const PDC_START = "pdcStart";
+    public const PDC_START = "pdcStart";
 
     /**
      * Serializer key "premiere".
      *
      * @var string
      */
-    const PREMIERE = "premiere";
+    public const PREMIERE = "premiere";
 
     /**
      * Serializer key "present".
      *
      * @var string
      */
-    const PRESENT = "present";
+    public const PRESENT = "present";
 
     /**
      * Serializer key "presenters".
      *
      * @var string
      */
-    const PRESENTERS = "presenters";
+    public const PRESENTERS = "presenters";
 
     /**
      * Serializer key "previously shown".
      *
      * @var string
      */
-    const PREVIOUSLY_SHOWN = "previouslyShown";
+    public const PREVIOUSLY_SHOWN = "previouslyShown";
 
     /**
      * Serializer key "producers".
      *
      * @var string
      */
-    const PRODUCERS = "producers";
+    public const PRODUCERS = "producers";
 
     /**
      * Serializer key "programmes".
      *
      * @var string
      */
-    const PROGRAMMES = "programmes";
+    public const PROGRAMMES = "programmes";
 
     /**
      * Serializer key "quality".
      *
      * @var string
      */
-    const QUALITY = "quality";
+    public const QUALITY = "quality";
 
     /**
      * Serializer key "ratings".
      *
      * @var string
      */
-    const RATINGS = "ratings";
+    public const RATINGS = "ratings";
 
     /**
      * Serializer key "reviewer".
      *
      * @var string
      */
-    const REVIEWER = "reviewer";
+    public const REVIEWER = "reviewer";
 
     /**
      * Serializer key "reviews".
      *
      * @var string
      */
-    const REVIEWS = "reviews";
+    public const REVIEWS = "reviews";
 
     /**
      * Serializer key "role".
      *
      * @var string
      */
-    const ROLE = "role";
+    public const ROLE = "role";
 
     /**
      * Serializer key "secondary titles".
      *
      * @var string
      */
-    const SECONDARY_TITLES = "secondaryTitles";
+    public const SECONDARY_TITLES = "secondaryTitles";
 
     /**
      * Serializer key "Show view".
      *
      * @var string
      */
-    const SHOW_VIEW = "showView";
+    public const SHOW_VIEW = "showView";
 
     /**
      * Serializer key "source".
      *
      * @var string
      */
-    const SOURCE = "source";
+    public const SOURCE = "source";
 
     /**
      * Serializer key "source data URL".
      *
      * @var string
      */
-    const SOURCE_DATA_URL = "sourceDataUrl";
+    public const SOURCE_DATA_URL = "sourceDataUrl";
 
     /**
      * Serializer key "source info name".
      *
      * @var string
      */
-    const SOURCE_INFO_NAME = "sourceInfoName";
+    public const SOURCE_INFO_NAME = "sourceInfoName";
 
     /**
      * Serializer key "source info URL".
      *
      * @var string
      */
-    const SOURCE_INFO_URL = "sourceInfoUrl";
+    public const SOURCE_INFO_URL = "sourceInfoUrl";
 
     /**
      * Serializer key "src".
      *
      * @var string
      */
-    const SRC = "src";
+    public const SRC = "src";
 
     /**
      * Serializer key "start".
      *
      * @var string
      */
-    const START = "start";
+    public const START = "start";
 
     /**
      * Serializer key "star ratings".
      *
      * @var string
      */
-    const STAR_RATINGS = "starRatings";
+    public const STAR_RATINGS = "starRatings";
 
     /**
      * Serializer key "stereo".
      *
      * @var string
      */
-    const STEREO = "stereo";
+    public const STEREO = "stereo";
 
     /**
      * Serializer key "stop".
      *
      * @var string
      */
-    const STOP = "stop";
+    public const STOP = "stop";
 
     /**
      * Serializer key "subtitles".
      *
      * @var string
      */
-    const SUBTITLES = "subtitles";
+    public const SUBTITLES = "subtitles";
 
     /**
      * Serializer key "system".
      *
      * @var string
      */
-    const SYSTEM = "system";
+    public const SYSTEM = "system";
 
     /**
      * Serializer key "titles".
      *
      * @var string
      */
-    const TITLES = "titles";
+    public const TITLES = "titles";
 
     /**
      * Serializer key "type".
      *
      * @var string
      */
-    const TYPE = "type";
+    public const TYPE = "type";
 
     /**
      * Serializer key "units".
      *
      * @var string
      */
-    const UNITS = "units";
+    public const UNITS = "units";
 
     /**
      * Serializer key "URLs".
      *
      * @var string
      */
-    const URLS = "urls";
+    public const URLS = "urls";
 
     /**
      * Serializer key "value".
      *
      * @var string
      */
-    const VALUE = "value";
+    public const VALUE = "value";
 
     /**
      * Serializer key "video".
      *
      * @var string
      */
-    const VIDEO = "video";
+    public const VIDEO = "video";
 
     /**
      * Serializer key "video plus".
      *
      * @var string
      */
-    const VIDEO_PLUS = "videoPlus";
+    public const VIDEO_PLUS = "videoPlus";
 
     /**
      * Serializer key "VPS start".
      *
      * @var string
      */
-    const VPS_START = "vpsStart";
+    public const VPS_START = "vpsStart";
 
     /**
      * Serializer key "width".
      *
      * @var string
      */
-    const WIDTH = "width";
+    public const WIDTH = "width";
 
     /**
      * Serializer key "writers".
      *
      * @var string
      */
-    const WRITERS = "writers";
+    public const WRITERS = "writers";
 }

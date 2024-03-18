@@ -28,7 +28,7 @@ class Editor extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "editor";
+    public const DOM_NODE_NAME = "editor";
 
     /**
      * {@inheritDoc}

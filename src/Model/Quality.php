@@ -32,7 +32,7 @@ class Quality extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "quality";
+    public const DOM_NODE_NAME = "quality";
 
     /**
      * {@inheritDoc}

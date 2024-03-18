@@ -28,7 +28,7 @@ class Presenter extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "presenter";
+    public const DOM_NODE_NAME = "presenter";
 
     /**
      * {@inheritDoc}

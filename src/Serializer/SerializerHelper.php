@@ -36,7 +36,7 @@ class SerializerHelper extends BaseSerializerHelper {
      *
      * @var string
      */
-    const DATE_TIME_FORMAT = "YmdHis O";
+    public const DATE_TIME_FORMAT = "YmdHis O";
 
     /**
      * Deserialize a date/time.

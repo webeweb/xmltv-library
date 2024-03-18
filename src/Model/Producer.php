@@ -28,7 +28,7 @@ class Producer extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "producer";
+    public const DOM_NODE_NAME = "producer";
 
     /**
      * {@inheritDoc}

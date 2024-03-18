@@ -34,7 +34,7 @@ class SecondaryTitle extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "sub-title";
+    public const DOM_NODE_NAME = "sub-title";
 
     /**
      * {@inheritDoc}

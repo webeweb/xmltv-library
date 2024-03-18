@@ -35,28 +35,28 @@ class Subtitles extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "subtitles";
+    public const DOM_NODE_NAME = "subtitles";
 
     /**
      * Type "deaf signed".
      *
      * @var string
      */
-    const TYPE_DEAF_SIGNED = "deaf-signed";
+    public const TYPE_DEAF_SIGNED = "deaf-signed";
 
     /**
      * Type "onscreen".
      *
      * @var string
      */
-    const TYPE_ONSCREEN = "onscreen";
+    public const TYPE_ONSCREEN = "onscreen";
 
     /**
      * Type "teletext".
      *
      * @var string
      */
-    const TYPE_TELETEXT = "teletext";
+    public const TYPE_TELETEXT = "teletext";
 
     /**
      * Enumerate the type.

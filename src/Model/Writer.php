@@ -28,7 +28,7 @@ class Writer extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "writer";
+    public const DOM_NODE_NAME = "writer";
 
     /**
      * {@inheritDoc}

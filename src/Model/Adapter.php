@@ -28,7 +28,7 @@ class Adapter extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "adapter";
+    public const DOM_NODE_NAME = "adapter";
 
     /**
      * {@inheritDoc}

@@ -33,28 +33,28 @@ class Length extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "length";
+    public const DOM_NODE_NAME = "length";
 
     /**
      * Units "hours".
      *
      * @var string
      */
-    const UNITS_HOURS = "hours";
+    public const UNITS_HOURS = "hours";
 
     /**
      * Units "minutes".
      *
      * @var string
      */
-    const UNITS_MINUTES = "minutes";
+    public const UNITS_MINUTES = "minutes";
 
     /**
      * Units "seconds".
      *
      * @var string
      */
-    const UNITS_SECONDS = "seconds";
+    public const UNITS_SECONDS = "seconds";
 
     /**
      * Units.

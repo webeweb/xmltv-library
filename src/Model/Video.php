@@ -32,7 +32,7 @@ class Video extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "video";
+    public const DOM_NODE_NAME = "video";
 
     /**
      * Aspect.

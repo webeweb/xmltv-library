@@ -32,7 +32,7 @@ class Aspect extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "aspect";
+    public const DOM_NODE_NAME = "aspect";
 
     /**
      * {@inheritDoc}

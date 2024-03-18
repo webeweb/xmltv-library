@@ -32,7 +32,7 @@ class Colour extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "colour";
+    public const DOM_NODE_NAME = "colour";
 
     /**
      * {@inheritDoc}

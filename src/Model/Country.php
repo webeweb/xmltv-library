@@ -34,7 +34,7 @@ class Country extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "country";
+    public const DOM_NODE_NAME = "country";
 
     /**
      * {@inheritDoc}

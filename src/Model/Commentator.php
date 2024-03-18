@@ -28,7 +28,7 @@ class Commentator extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "commentator";
+    public const DOM_NODE_NAME = "commentator";
 
     /**
      * {@inheritDoc}

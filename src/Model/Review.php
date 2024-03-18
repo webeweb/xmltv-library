@@ -35,21 +35,21 @@ class Review extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "review";
+    public const DOM_NODE_NAME = "review";
 
     /**
      * Type "text".
      *
      * @var string
      */
-    const TYPE_TEXT = "text";
+    public const TYPE_TEXT = "text";
 
     /**
      * Type "url".
      *
      * @var string
      */
-    const TYPE_URL = "url";
+    public const TYPE_URL = "url";
 
     /**
      * Reviewer.

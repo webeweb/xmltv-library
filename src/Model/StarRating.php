@@ -34,7 +34,7 @@ class StarRating extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "star-rating";
+    public const DOM_NODE_NAME = "star-rating";
 
     /**
      * Constructor.

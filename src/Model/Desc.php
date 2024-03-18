@@ -34,7 +34,7 @@ class Desc extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "desc";
+    public const DOM_NODE_NAME = "desc";
 
     /**
      * {@inheritDoc}

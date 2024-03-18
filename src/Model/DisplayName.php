@@ -34,7 +34,7 @@ class DisplayName extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "display-name";
+    public const DOM_NODE_NAME = "display-name";
 
     /**
      * {@inheritDoc}

@@ -34,21 +34,21 @@ class EpisodeNum extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "episode-num";
+    public const DOM_NODE_NAME = "episode-num";
 
     /**
      * SYSTEM "onscreen".
      *
      * @var string
      */
-    const SYSTEM_ONSCREEN = "onscreen";
+    public const SYSTEM_ONSCREEN = "onscreen";
 
     /**
      * System "deaf signed".
      *
      * @var string
      */
-    const SYSTEM_XMLTV_NS = "xmltv_ns";
+    public const SYSTEM_XMLTV_NS = "xmltv_ns";
 
     /**
      * Enumerate the system.

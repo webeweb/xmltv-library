@@ -38,7 +38,7 @@ class Tv extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "tv";
+    public const DOM_NODE_NAME = "tv";
 
     /**
      * Date.

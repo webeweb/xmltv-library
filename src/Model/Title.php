@@ -34,7 +34,7 @@ class Title extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "title";
+    public const DOM_NODE_NAME = "title";
 
     /**
      * {@inheritDoc}

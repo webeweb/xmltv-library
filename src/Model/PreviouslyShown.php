@@ -34,7 +34,7 @@ class PreviouslyShown extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "previously-shown";
+    public const DOM_NODE_NAME = "previously-shown";
 
     /**
      * {@inheritDoc}

@@ -28,7 +28,7 @@ class Composer extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "composer";
+    public const DOM_NODE_NAME = "composer";
 
     /**
      * {@inheritDoc}

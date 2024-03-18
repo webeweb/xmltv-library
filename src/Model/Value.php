@@ -32,7 +32,7 @@ class Value extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "value";
+    public const DOM_NODE_NAME = "value";
 
     /**
      * {@inheritDoc}

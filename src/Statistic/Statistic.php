@@ -26,21 +26,21 @@ class Statistic {
      *
      * @var string
      */
-    const CONTENT_FORMAT = " %-' 16s   %-' 19s   % 6d   % 6d   % 6d   %' 9.2f";
+    public const CONTENT_FORMAT = " %-' 16s   %-' 19s   % 6d   % 6d   % 6d   %' 9.2f";
 
     /**
      * Header format.
      *
      * @var string
      */
-    const HEADER_FORMAT = "------------------ --------------------- -------- -------- -------- -----------";
+    public const HEADER_FORMAT = "------------------ --------------------- -------- -------- -------- -----------";
 
     /**
      * Titles format.
      *
      * @var string
      */
-    const TITLES_FORMAT = " Node               Attribute             Count    Min      Max      Avg";
+    public const TITLES_FORMAT = " Node               Attribute             Count    Min      Max      Avg";
 
     /**
      * Attribute name.

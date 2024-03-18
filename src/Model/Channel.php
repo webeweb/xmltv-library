@@ -40,7 +40,7 @@ class Channel extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "channel";
+    public const DOM_NODE_NAME = "channel";
 
     /**
      * Constructor.

@@ -32,42 +32,42 @@ class Stereo extends AbstractModel {
      *
      * @var string
      */
-    const CONTENT_BILINGUAL = "bilingual";
+    public const CONTENT_BILINGUAL = "bilingual";
 
     /**
      * Content "dolby".
      *
      * @var string
      */
-    const CONTENT_DOLBY = "dolby";
+    public const CONTENT_DOLBY = "dolby";
 
     /**
      * Content "dolby digital".
      *
      * @var string
      */
-    const CONTENT_DOLBY_DIGITAL = "dolby digital";
+    public const CONTENT_DOLBY_DIGITAL = "dolby digital";
 
     /**
      * Content "mono".
      *
      * @var string
      */
-    const CONTENT_MONO = "mono";
+    public const CONTENT_MONO = "mono";
 
     /**
      * Content "stereo".
      *
      * @var string
      */
-    const CONTENT_STEREO = "stereo";
+    public const CONTENT_STEREO = "stereo";
 
     /**
      * DOM node name.
      *
      * @var string
      */
-    const DOM_NODE_NAME = "stereo";
+    public const DOM_NODE_NAME = "stereo";
 
     /**
      * Enumerate the content.

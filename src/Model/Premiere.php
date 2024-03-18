@@ -34,7 +34,7 @@ class Premiere extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "premiere";
+    public const DOM_NODE_NAME = "premiere";
 
     /**
      * {@inheritDoc}

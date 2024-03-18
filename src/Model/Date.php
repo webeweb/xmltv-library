@@ -32,7 +32,7 @@ class Date extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "date";
+    public const DOM_NODE_NAME = "date";
 
     /**
      * {@inheritDoc}

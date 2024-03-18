@@ -34,7 +34,7 @@ class Icon extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "icon";
+    public const DOM_NODE_NAME = "icon";
 
     /**
      * Source.

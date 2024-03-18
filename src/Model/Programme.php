@@ -64,7 +64,7 @@ class Programme extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "programme";
+    public const DOM_NODE_NAME = "programme";
 
     /**
      * Audio.

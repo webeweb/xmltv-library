@@ -50,7 +50,7 @@ class Credits extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "credits";
+    public const DOM_NODE_NAME = "credits";
 
     /**
      * Constructor.

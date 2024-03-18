@@ -28,7 +28,7 @@ class Guest extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "guest";
+    public const DOM_NODE_NAME = "guest";
 
     /**
      * {@inheritDoc}

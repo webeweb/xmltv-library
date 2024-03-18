@@ -32,7 +32,7 @@ class Url extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "url";
+    public const DOM_NODE_NAME = "url";
 
     /**
      * {@inheritDoc}

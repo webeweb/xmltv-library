@@ -29,7 +29,7 @@ class Actor extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "actor";
+    public const DOM_NODE_NAME = "actor";
 
     /**
      * Role.

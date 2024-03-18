@@ -34,7 +34,7 @@ class OrigLanguage extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "orig-language";
+    public const DOM_NODE_NAME = "orig-language";
 
     /**
      * {@inheritDoc}

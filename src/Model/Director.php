@@ -28,7 +28,7 @@ class Director extends AbstractCredit {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "director";
+    public const DOM_NODE_NAME = "director";
 
     /**
      * {@inheritDoc}

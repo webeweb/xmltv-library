@@ -34,7 +34,7 @@ class Language extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "language";
+    public const DOM_NODE_NAME = "language";
 
     /**
      * {@inheritDoc}

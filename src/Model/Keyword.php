@@ -34,7 +34,7 @@ class Keyword extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "keyword";
+    public const DOM_NODE_NAME = "keyword";
 
     /**
      * {@inheritDoc}

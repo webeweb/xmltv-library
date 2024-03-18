@@ -34,7 +34,7 @@ class LastChance extends AbstractModel {
      *
      * @var string
      */
-    const DOM_NODE_NAME = "last-chance";
+    public const DOM_NODE_NAME = "last-chance";
 
     /**
      * {@inheritDoc}
