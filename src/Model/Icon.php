@@ -13,8 +13,8 @@ declare(strict_types = 1);
 
 namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\Traits\Integers\IntegerHeightTrait;
-use WBW\Library\Traits\Integers\IntegerWidthTrait;
+use WBW\Library\Common\Traits\Integers\IntegerHeightTrait;
+use WBW\Library\Common\Traits\Integers\IntegerWidthTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
 

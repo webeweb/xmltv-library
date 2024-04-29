@@ -13,7 +13,7 @@ declare(strict_types = 1);
 
 namespace WBW\Library\XmlTv\Serializer;
 
-use WBW\Library\Types\Helper\ArrayHelper;
+use WBW\Library\Common\Helper\ArrayHelper;
 use WBW\Library\XmlTv\Model\Actor;
 use WBW\Library\XmlTv\Model\Adapter;
 use WBW\Library\XmlTv\Model\Aspect;

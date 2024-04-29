@@ -18,7 +18,7 @@ declare(strict_types = 1);
 namespace WBW\Library\XmlTv\Model;
 
 use JsonSerializable;
-use WBW\Library\Serializer\Model\XmlSerializable;
+use WBW\Library\Common\Serializer\XmlSerializable;
 
 /**
  * Abstract model.

@@ -18,9 +18,8 @@ use GuzzleHttp\Client;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
 use Throwable;
-use WBW\Library\Provider\Helper\GuzzleHelper;
+use WBW\Library\Common\Provider\GuzzleHelper;
 use WBW\Library\XmlTv\Model\Tv;
-use WBW\Library\XmlTv\Serializer\SerializerHelper;
 use WBW\Library\XmlTv\Serializer\XmlDeserializer;
 use WBW\Library\XmlTv\Statistic\Statistic;
 use WBW\Library\XmlTv\Statistic\Statistics;
@@ -80,7 +79,7 @@ class XmlProvider {
      */
     public static function readXml(string $filename, LoggerInterface $logger = null): Tv {
 
-        SerializerHelper::setLogger($logger);
+        XmlDeserializer::setLogger($logger);
 
         $document = new DOMDocument();
         if (false === @$document->load($filename)) {

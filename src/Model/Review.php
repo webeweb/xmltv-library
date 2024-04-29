@@ -14,8 +14,8 @@ declare(strict_types = 1);
 namespace WBW\Library\XmlTv\Model;
 
 use InvalidArgumentException;
-use WBW\Library\Traits\Strings\StringLangTrait;
-use WBW\Library\Traits\Strings\StringTypeTrait;
+use WBW\Library\Common\Traits\Strings\StringLangTrait;
+use WBW\Library\Common\Traits\Strings\StringTypeTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
 

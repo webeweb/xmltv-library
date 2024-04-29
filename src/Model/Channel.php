@@ -13,7 +13,7 @@ declare(strict_types = 1);
 
 namespace WBW\Library\XmlTv\Model;
 
-use WBW\Library\Traits\Strings\StringIdTrait;
+use WBW\Library\Common\Traits\Strings\StringIdTrait;
 use WBW\Library\XmlTv\Serializer\JsonSerializer;
 use WBW\Library\XmlTv\Serializer\XmlSerializer;
 use WBW\Library\XmlTv\Traits\Arrays\ArrayDisplayNamesTrait;

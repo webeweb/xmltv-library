@@ -15,11 +15,10 @@ namespace WBW\Library\XmlTv\Serializer;
 
 use DateTime;
 use DOMNode;
-use WBW\Library\Serializer\Helper\SerializerHelper as BaseSerializerHelper;
-use WBW\Library\Serializer\Helper\XmlDeserializerHelper;
-use WBW\Library\Serializer\Helper\XmlSerializerHelper;
-use WBW\Library\Types\Helper\ArrayHelper;
-use WBW\Library\Types\Helper\StringHelper;
+use WBW\Library\Common\Helper\ArrayHelper;
+use WBW\Library\Common\Helper\StringHelper;
+use WBW\Library\Common\Serializer\XmlDeserializer as BaseXmlDeserializer;
+use WBW\Library\Common\Serializer\XmlSerializer as BaseXmlSerializer;
 use WBW\Library\XmlTv\Model\AbstractModel;
 use WBW\Library\XmlTv\Model\SecondaryTitle;
 
@@ -29,7 +28,7 @@ use WBW\Library\XmlTv\Model\SecondaryTitle;
  * @author webeweb <https://github.com/webeweb>
  * @package WBW\Library\XmlTv\Serializer
  */
-class SerializerHelper extends BaseSerializerHelper {
+class SerializerHelper {
 
     /**
      * Date/time format.
@@ -69,10 +68,10 @@ class SerializerHelper extends BaseSerializerHelper {
      */
     public static function domNode(string $name, ?string $value, array $attributes = [], bool $shortTag = false): string {
 
-        $value = XmlSerializerHelper::xmlSerializeValue($value);
+        $value = BaseXmlSerializer::serializeValue($value);
 
         foreach ($attributes as $k => $v) {
-            $attributes[$k] = XmlSerializerHelper::xmlSerializeValue($v);
+            $attributes[$k] = BaseXmlSerializer::serializeValue($v);
         }
 
         return StringHelper::domNode($name, $value, $attributes, $shortTag);
@@ -156,7 +155,7 @@ class SerializerHelper extends BaseSerializerHelper {
         $fct = __NAMESPACE__ . "\\XmlDeserializer::" . static::getMethodName("deserialize", $nodeName);
         $add = static::getMethodName("add", $nodeName);
 
-        $nodes = XmlDeserializerHelper::getDomNodesByName($nodeName, $domNode->childNodes);
+        $nodes = BaseXmlDeserializer::getDomNodesByName($nodeName, $domNode->childNodes);
         foreach ($nodes as $current) {
             $model->$add(call_user_func_array($fct, [$current]));
         }
@@ -175,7 +174,7 @@ class SerializerHelper extends BaseSerializerHelper {
         $fct = __NAMESPACE__ . "\\XmlDeserializer::" . static::getMethodName("deserialize", $nodeName);
         $set = static::getMethodName("set", $nodeName);
 
-        $node = XmlDeserializerHelper::getDomNodeByName($nodeName, $domNode->childNodes);
+        $node = BaseXmlDeserializer::getDomNodeByName($nodeName, $domNode->childNodes);
         if (null !== $node) {
             $model->$set(call_user_func_array($fct, [$node]));
         }
