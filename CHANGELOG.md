@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.11.0](https://github.com/webeweb/xmltv-library/tree/v1.11.0) (2024-04-29)
+
+- Update dependencies
+
 ### [1.10.0](https://github.com/webeweb/xmltv-library/tree/v1.10.0) (2024-03-18)
 
 - Improve constants visibility
