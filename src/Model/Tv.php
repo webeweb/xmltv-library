@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types = 1);
-
 /*
  * Disclaimer: This source code is protected by copyright law and by
  * international conventions.
@@ -14,6 +12,8 @@ declare(strict_types = 1);
  *
  * (c) 2019 All rights reserved.
  */
+
+declare(strict_types = 1);
 
 namespace WBW\Library\XmlTv\Model;
 
