@@ -112,7 +112,6 @@ class ReviewTest extends AbstractTestCase {
         $obj = new Review();
 
         try {
-
             $obj->setType("type");
         } catch (Throwable $ex) {
 

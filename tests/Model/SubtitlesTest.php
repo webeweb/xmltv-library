@@ -83,7 +83,6 @@ class SubtitlesTest extends AbstractTestCase {
         $obj = new Subtitles();
 
         try {
-
             $obj->setType("type");
         } catch (Throwable $ex) {
 

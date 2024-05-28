@@ -83,7 +83,6 @@ class LengthTest extends AbstractTestCase {
         $obj = new Length();
 
         try {
-
             $obj->setUnits("units");
         } catch (Throwable $ex) {
 
