@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.11.1](https://github.com/webeweb/xmltv-library/tree/v1.11.1) (2024-05-28)
+
+- Improve code quality
+
 ### [1.11.0](https://github.com/webeweb/xmltv-library/tree/v1.11.0) (2024-04-29)
 
 - Update dependencies
